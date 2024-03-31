@@ -1,6 +1,8 @@
-document.getElementById('hello').style.fontSize="100px"
-
+// document.getElementById('hello').style.fontSize="100px"
+console.log(firstName)
 var firstName = "Tanvir"
-var lastName = "Ahmed"
+let lastName = "Ahmed"
 let age = 15;
-const userIntro = "Hi , My name is " + firstName + lastName ;
+const yearOfBirth = 1998
+console.log(firstName)
+// const userIntro = "Hi , My name is " + firstName + lastName ;
