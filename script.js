@@ -1,5 +1,0 @@
-// alert("Hello World")
-// const bool = confirm("Hiii")
-// console.log(bool)
-const hello = prompt("Please enter your roll number : ")
-document.write(hello)
