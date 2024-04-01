@@ -35,4 +35,7 @@
 // charCodeAt()
 // split()
 
+const message = 'Hello, I am Tanvir'
+const isHere = message.includes(', a')
+console.log(isHere)
 
