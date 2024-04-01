@@ -35,7 +35,12 @@
 // charCodeAt()
 // split()
 
-const message = 'Hello, I am Tanvir'
-const isHere = message.includes(', a')
-console.log(isHere)
+//includes method
+// const message = 'Hello, I am Tanvir'
+// const isHere = message.includes(', a')
+// console.log(isHere)
 
+//indexof
+const message = 'Hello World i Am Tanvir ahmed'
+const isHere = message.indexOf('i')
+console.log(isHere)
