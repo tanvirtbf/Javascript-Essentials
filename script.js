@@ -4,6 +4,7 @@
 // trim()
 // trimStart()
 // trimEnd()
+// length
 
 // const names = 'Tanvir'
 // console.log(names[2]) //result : n
@@ -24,9 +25,9 @@
 // console.log(chaining)
 
 // Methods (With Argument)
-// includes()
-// indexOf()
-// replace()
+// includes() ans: true or false(is character exist or not)
+// indexOf()  ans: return the character index number and not match character return -1 value
+// replace()  
 // replaceAll()
 // concat()
 // padStart()
@@ -40,7 +41,19 @@
 // const isHere = message.includes(', a')
 // console.log(isHere)
 
-//indexof
-const message = 'Hello World i Am Tanvir ahmed'
-const isHere = message.indexOf('i')
-console.log(isHere)
+//indexof method
+// const message = 'Hello World i Am Tanvir ahmed'
+// const isHere = message.indexOf('ias')
+// console.log(isHere)
+
+//replace method
+// const message = 'Hello, I am Tanvir'.replace('e','E')
+// console.log(message)
+// console.log(message.replaceAll('a','A'))
+
+//concat method
+const messageOne = 'Hello'
+const messageTwo = 'I am'
+const messageThree = 'Tanvir'
+const finalMessage = messageOne.concat(' ',messageTwo, ' ' ,messageThree)
+console.log(finalMessage)
