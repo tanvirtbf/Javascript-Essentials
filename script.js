@@ -47,13 +47,13 @@
 // console.log(isHere)
 
 //replace method
-// const message = 'Hello, I am Tanvir'.replace('e','E')
-// console.log(message)
-// console.log(message.replaceAll('a','A'))
+const message = 'Hello, I am Tanvir'.replace('e','E')
+console.log(message)
+console.log(message.replaceAll('a','A'))
 
 //concat method
-const messageOne = 'Hello'
-const messageTwo = 'I am'
-const messageThree = 'Tanvir'
-const finalMessage = messageOne.concat(' ',messageTwo, ' ' ,messageThree)
-console.log(finalMessage)
+// const messageOne = 'Hello'
+// const messageTwo = 'I am'
+// const messageThree = 'Tanvir'
+// const finalMessage = messageOne.concat(' ',messageTwo, ' ' ,messageThree)
+// console.log(finalMessage)
