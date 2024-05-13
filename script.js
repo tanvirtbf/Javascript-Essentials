@@ -24,6 +24,9 @@
 // const chaining = '   hello world   '.trim().toUpperCase(); //chaining
 // console.log(chaining)
 
+const faltuMessage = '   Hi, I am Tanvir    '
+const finalMessage = 'Hi, I am Tanvir'
+
 // Methods (With Argument)
 // includes() ans: true or false(is character exist or not)
 // indexOf()  ans: return the character index number and not match character return -1 value
@@ -47,9 +50,9 @@
 // console.log(isHere)
 
 //replace method
-const message = 'Hello, I am Tanvir'.replace('e','E')
-console.log(message)
-console.log(message.replaceAll('a','A'))
+// const message = 'Hello, I am Tanvir'.replace('e','E')
+// console.log(message)
+// console.log(message.replaceAll('a','A'))
 
 //concat method
 // const messageOne = 'Hello'
@@ -57,3 +60,4 @@ console.log(message.replaceAll('a','A'))
 // const messageThree = 'Tanvir'
 // const finalMessage = messageOne.concat(' ',messageTwo, ' ' ,messageThree)
 // console.log(finalMessage)
+
