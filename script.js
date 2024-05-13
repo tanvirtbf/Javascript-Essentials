@@ -24,8 +24,24 @@
 // const chaining = '   hello world   '.trim().toUpperCase(); //chaining
 // console.log(chaining)
 
-const faltuMessage = '   Hi, I am Tanvir    '
-const finalMessage = 'Hi, I am Tanvir'
+// const faltuMessage = '   Hi, I am Tanvir    '
+// const finalMessage = 'Hi, I am Tanvir'.toUpperCase()
+// const a = 'Tanvir Sadia Maymuna Humaira'
+// console.log(a.toLowerCase())
+// console.log(a.includes('Sadia'))
+// console.log(a.indexOf('ra'))
+// const replacedA = a.replace('Sadia', 'Ayesha')
+// console.log(replacedA)
+// const nothingReplace = replacedA.replace('Khadiza','Hello')
+// console.log(nothingReplace)
+
+// const all = 'aaaaaa'
+// console.log(all.replaceAll('a','b'))
+
+const m = 'Hello'
+const n = ', I am '
+const final = m.concat(n,'Tanvir')
+console.log(final)
 
 // Methods (With Argument)
 // includes() ans: true or false(is character exist or not)
