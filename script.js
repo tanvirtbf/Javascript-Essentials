@@ -61,6 +61,7 @@
 // const isHere = message.includes(', a')
 // console.log(isHere)
 
+
 //indexof method
 // const message = 'Hello World i Am Tanvir ahmed'
 // const isHere = message.indexOf('ias')
