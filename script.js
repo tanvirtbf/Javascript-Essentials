@@ -83,4 +83,4 @@ const hello = 'hello world'
 console.log(hello.includes('llo',2)) //true
 
 //indexOf method
-console.log(hello.indexOf('hello',1)) // false
+console.log(hello.indexOf('hello',2)) // false
