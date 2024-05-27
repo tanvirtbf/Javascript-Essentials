@@ -79,8 +79,12 @@
 // console.log(finalMessage)
 
 //includes method 
-const hello = 'hello world'
-console.log(hello.includes('llo',2)) //true
+// const hello = 'hello world'
+// console.log(hello.includes('llo',2)) //true
 
 //indexOf method
-console.log(hello.indexOf('hello',2)) // false
+// console.log(hello.indexOf('hello',2)) // false
+
+const num = 123.321;
+console.log(Math.floor(num))
+console.log(Math.ceil(num))
