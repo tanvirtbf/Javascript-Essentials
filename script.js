@@ -38,11 +38,11 @@
 // const all = 'aaaaaa'
 // console.log(all.replaceAll('a','b'))
 
-const m = 'Hello'
-const n = ', I am '
-const wife = 'Sadia'
-const final = m.concat(n,'Tanvir ', 'My Wife Name is ', wife)
-console.log(final)
+// const m = 'Hello'
+// const n = ', I am '
+// const wife = 'Sadia'
+// const final = m.concat(n,'Tanvir ', 'My Wife Name is ', wife)
+// console.log(final)
 
 // Methods (With Argument)
 // includes() ans: true or false(is character exist or not)
@@ -78,3 +78,9 @@ console.log(final)
 // const finalMessage = messageOne.concat(' ',messageTwo, ' ' ,messageThree)
 // console.log(finalMessage)
 
+//includes method 
+const hello = 'hello world'
+console.log(hello.includes('llo',2)) //true
+
+//indexOf method
+console.log(hello.indexOf('hello',1)) // false
