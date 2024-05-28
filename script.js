@@ -101,3 +101,8 @@
 // console.log(result)
 
 // How to see variable address in dev tools
+const firstName = 'Tanvir'
+const userAge = 15
+const isGraduate = false
+const hasJob = false
+const isStudent = true
