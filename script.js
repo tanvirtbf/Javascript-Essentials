@@ -93,4 +93,9 @@
 
 // Ternary Operator
 debugger
-const userName = 5 > 2 ? 'Tanvir' : 'Ahmed'
+// const userName = 5 > 2 ? 'Tanvir' : 'Ahmed'
+
+const gender = 'F'
+
+const userMessage = `${gender === 'F' ? 'She' : 'He'} is a college student`
+console.log(userMessage)
