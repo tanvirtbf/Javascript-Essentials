@@ -111,28 +111,38 @@
 // const isUndefined = undefined
 
 //Objects => Non-premitive Data Type
+// const user1 = {
+//   firstName: 'Tanvir',
+//   'last Name': 'Ahmed',
+//   age: 25,
+//   'hasJob': true,
+// }
+// const user2 = {
+//   'firs tName': 'Sadia',
+//   'last Name': 'Ahmed',
+//   'age': 15,
+//   'has Job': false,
+// }
+// const pri1 = 'hello'
+// const pri2 = 'hello'
+// console.log(user1.firstName)
+// console.log(user1['lastName'])
+// console.log(user1['a'+'g'+'e'])
+// console.log(user2[`${ '' ? 'age' : 'hasJob'}`])
+// console.log(user2)
+// user2.age = 16 // value re-pain
+// user2['is-Student'] = 'student' // added a new property
 
-const user1 = {
-  firstName: 'Tanvir',
-  'last Name': 'Ahmed',
-  age: 25,
-  'hasJob': true,
+const obj = {
+  firstName : 'Tanvir',
+  'last Name' : 'Ahmed',
+  'my address' : {
+    town : 'Dhaka',
+    'elaka' : 'Sonir Akhra',
+    moreDetails : {
+      more: 'Polashpur',
+      age: 122,
+    }
+  }
 }
-const user2 = {
-  'firs tName': 'Sadia',
-  'last Name': 'Ahmed',
-  'age': 15,
-  'has Job': false,
-}
 
-const pri1 = 'hello'
-const pri2 = 'hello'
-
-console.log(user1.firstName)
-console.log(user1['lastName'])
-console.log(user1['a'+'g'+'e'])
-console.log(user2[`${ '' ? 'age' : 'hasJob'}`])
-console.log(user2)
-
-user2.age = 16 // value re-pain
-user2['is-Student'] = 'student' // added a new property
