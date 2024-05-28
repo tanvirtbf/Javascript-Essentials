@@ -112,18 +112,24 @@
 
 //Objects => Non-premitive Data Type
 
-const user = {
+const user1 = {
   firstName: 'Tanvir',
-  lastName: 'Ahmed',
+  'lastName': 'Ahmed',
   age: 25,
-  hasJob: true,
+  'hasJob': true,
 }
 const user2 = {
-  firstName: 'Tanvir',
-  lastName: 'Ahmed',
-  age: 25,
-  hasJob: true,
+  'firstName': 'Sadia',
+  'lastName': 'Ahmed',
+  'age': 15,
+  'hasJob': false,
 }
 
 const pri1 = 'hello'
 const pri2 = 'hello'
+
+console.log(user1.firstName)
+console.log(user1['lastName'])
+console.log(user1['a'+'g'+'e'])
+console.log(user2[`${ '' ? 'age' : 'hasJob'}`])
+console.log(user2)
