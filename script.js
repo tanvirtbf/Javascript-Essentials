@@ -47,7 +47,7 @@
 // Methods (With Argument)
 // includes() ans: true or false(is character exist or not)
 // indexOf()  ans: return the character index number and not match character return -1 value
-// replace()  
+// replace()
 // replaceAll()
 // concat()
 // padStart()
@@ -60,7 +60,6 @@
 // const message = 'Hello, I am Tanvir'
 // const isHere = message.includes(', a')
 // console.log(isHere)
-
 
 //indexof method
 // const message = 'Hello World i Am Tanvir ahmed'
@@ -79,7 +78,7 @@
 // const finalMessage = messageOne.concat(' ',messageTwo, ' ' ,messageThree)
 // console.log(finalMessage)
 
-//includes method 
+//includes method
 // const hello = 'hello world'
 // console.log(hello.includes('llo',2)) //true
 
@@ -91,3 +90,5 @@
 // console.log(Math.ceil(num))
 // console.log(Math.round(num))
 // console.log(Math.random())
+
+// Ternary Operator
