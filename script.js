@@ -92,3 +92,5 @@
 // console.log(Math.random())
 
 // Ternary Operator
+debugger
+const userName = 5 > 2 ? 'Tanvir' : 'Ahmed'
