@@ -97,5 +97,7 @@
 // const gender = 'F'
 // const userMessage = `${'' ? 'She' : 'He'} is a college student`
 // console.log(userMessage)
-const result = null ? 'Tanvir' : '' ? 12 : 1 ? 11 : 22
-console.log(result)
+// const result = null ? 'Tanvir' : '' ? 12 : 1 ? 11 : 22
+// console.log(result)
+
+// How to see variable address in dev tools
