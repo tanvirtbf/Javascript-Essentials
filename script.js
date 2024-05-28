@@ -109,3 +109,21 @@
 // const isStudent = true
 // const isNull = null
 // const isUndefined = undefined
+
+//Objects => Non-premitive Data Type
+
+const user = {
+  firstName: 'Tanvir',
+  lastName: 'Ahmed',
+  age: 25,
+  hasJob: true,
+}
+const user2 = {
+  firstName: 'Tanvir',
+  lastName: 'Ahmed',
+  age: 25,
+  hasJob: true,
+}
+
+const pri1 = 'hello'
+const pri2 = 'hello'
