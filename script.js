@@ -114,15 +114,15 @@
 
 const user1 = {
   firstName: 'Tanvir',
-  'lastName': 'Ahmed',
+  'last Name': 'Ahmed',
   age: 25,
   'hasJob': true,
 }
 const user2 = {
-  'firstName': 'Sadia',
-  'lastName': 'Ahmed',
+  'firs tName': 'Sadia',
+  'last Name': 'Ahmed',
   'age': 15,
-  'hasJob': false,
+  'has Job': false,
 }
 
 const pri1 = 'hello'
@@ -133,3 +133,6 @@ console.log(user1['lastName'])
 console.log(user1['a'+'g'+'e'])
 console.log(user2[`${ '' ? 'age' : 'hasJob'}`])
 console.log(user2)
+
+user2.age = 16 // value re-pain
+user2['is-Student'] = 'student' // added a new property
