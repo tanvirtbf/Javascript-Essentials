@@ -101,11 +101,11 @@
 // console.log(result)
 
 // How to see variable address in dev tools
-const firstName = 'Tanvir'
-const firstRule = 'Tanvir'
-const userAge = 15
-const isGraduate = false
-const hasJob = false
-const isStudent = true
-const isNull = null
-const isUndefined = undefined
+// const firstName = 'Tanvir'
+// const firstRule = 'Tanvir'
+// const userAge = 15
+// const isGraduate = false
+// const hasJob = false
+// const isStudent = true
+// const isNull = null
+// const isUndefined = undefined
