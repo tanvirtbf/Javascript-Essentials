@@ -132,16 +132,18 @@
 // console.log(user2)
 // user2.age = 16 // value re-pain
 // user2['is-Student'] = 'student' // added a new property
-// const obj = {
-//   firstName : 'Tanvir',
-//   'last Name' : 'Ahmed',
-//   'my address' : {
-//     town : 'Dhaka',
-//     'elaka' : 'Sonir Akhra',
-//     moreDetails : {
-//       more: 'Polashpur',
-//       age: 122,
-//     }
-//   }
-// }
 
+const obj = {
+  firstName : 'Tanvir',
+  'last Name' : 'Ahmed',
+  'my address' : {
+    town : 'Dhaka',
+    'elaka' : 'Sonir Akhra',
+    moreDetails : {
+      more: 'Polashpur',
+      age: 122,
+    }
+  }
+}
+
+Object.seal(obj)
