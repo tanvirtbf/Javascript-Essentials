@@ -157,3 +157,7 @@
 // console.log(typeof(obj))
 
 const fruits = ['Mango','Banana','Jackfruits','Grapes','Dates']
+
+for(let i = fruits.length; i<=100; i++){
+  fruits[i]=`Hello World ${i}`
+}
