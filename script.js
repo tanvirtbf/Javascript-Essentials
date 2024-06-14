@@ -158,6 +158,6 @@
 
 const fruits = ['Mango','Banana','Jackfruits','Grapes','Dates']
 
-for(let i = fruits.length; i<=100; i++){
-  fruits.push(`my number is ${i}`)
+for(let i = 0; i<=2; i++){
+  fruits.pop()
 }
