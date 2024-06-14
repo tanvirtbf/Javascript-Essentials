@@ -159,5 +159,7 @@
 const fruits = ['Mango','Banana','Jackfruits','Grapes','Dates']
 
 for(let i = 0; i<=2; i++){
-  fruits.pop()
+  fruits.unshift('hii')
 }
+console.log(fruits)
+
