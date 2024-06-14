@@ -180,5 +180,4 @@
 // console.log(userName)
 
 const user1 = {firstName:'Tanvir',lastName:'Ahmed'}
-let user2 = {}
-Object.assign(user2,user1)
+let user2 = {...user1}
