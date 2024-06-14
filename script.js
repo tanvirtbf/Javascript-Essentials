@@ -151,4 +151,9 @@
 
 // console.log('my addresss' in obj)
 
+// const arr = [1,2,3,4,5]
+// const obj = {names:'tanvir'}
+// console.log(typeof(arr))
+// console.log(typeof(obj))
 
+const fruits = ['Mango','Banana','Jackfruits','Grapes','Dates']
