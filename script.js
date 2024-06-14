@@ -167,4 +167,5 @@
 // console.log(fruits.includes('Mango'))
 // console.log(fruits.reverse())
 
-
+// const firstName = 'Tanvir'
+// let lastName = 'Tanvir'
