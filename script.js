@@ -169,3 +169,16 @@
 
 // const firstName = 'Tanvir'
 // let lastName = 'Tanvir'
+
+// const userName = {
+//   firstName : 'Tanvir',
+//   lastName : 'Ahmed',
+// }
+
+// let userName2 = userName
+// userName2.firstName = 'Sadia'
+// console.log(userName)
+
+const user1 = {firstName:'Tanvir',lastName:'Ahmed'}
+let user2 = {}
+Object.assign(user2,user1)
