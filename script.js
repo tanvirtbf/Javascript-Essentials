@@ -157,9 +157,7 @@
 // console.log(typeof(obj))
 
 const fruits = ['Mango','Banana','Jackfruits','Grapes','Dates']
-
-for(let i = 0; i<=2; i++){
-  fruits.unshift('hii')
-}
-console.log(fruits)
+const animals = ['Chal','Dal']
+const hello = [1,2,3]
+const newArray = fruits.concat(hello,animals)
 
