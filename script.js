@@ -157,7 +157,12 @@
 // console.log(typeof(obj))
 
 const fruits = ['Mango','Banana','Jackfruits','Grapes','Dates']
-const animals = ['Chal','Dal']
-const hello = [1,2,3]
-const newArray = fruits.concat(hello,animals)
 
+console.log(fruits.push('Chal','Dal'))
+console.log(fruits.pop())
+console.log(fruits.shift())
+console.log(fruits.unshift())
+console.log(fruits.concat(['hello','gelo']))
+console.log(fruits.indexOf('Banana'))
+console.log(fruits.includes('Mango'))
+console.log(fruits.reverse())
