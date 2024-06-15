@@ -230,10 +230,10 @@ const hello = {
 // console.log(hello)
 
 //Deep Copy using JSON technique
-let p1 = {...hello}
-p1 = JSON.stringify(p1)
-let copyHello = JSON.parse(p1)
-copyHello.address.city = 'New York'
-hello.address.country = 'USA'
-console.log(copyHello)
-console.log(hello)
+// let p1 = {...hello}
+// p1 = JSON.stringify(p1)
+// let copyHello = JSON.parse(p1)
+// copyHello.address.city = 'New York'
+// hello.address.country = 'USA'
+// console.log(copyHello)
+// console.log(hello)
