@@ -181,11 +181,12 @@
 // const user1 = {firstName:'Tanvir',lastName:'Ahmed'}
 // let user2 = {...user1}
 
-let fruits = ['Mango','Banana','Jackfruits','Grapes','Dates']
+// let fruits = ['Mango','Banana','Jackfruits','Grapes','Dates']
 // let allFruits = fruits
 // console.log(allFruits===fruits)
 // let allFruits = []
 // Object.assign(allFruits,fruits)
 // console.log(allFruits === fruits)
-let allFruits = [...fruits]
-console.log(allFruits===fruits)
+// let allFruits = [...fruits]
+// console.log(allFruits===fruits)
+
