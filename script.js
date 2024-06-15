@@ -210,3 +210,21 @@
 // namArrayCopy[5]='lamia'
 // console.log(namArray,namArrayCopy)
 
+
+//Deep Copy 
+const hello = {
+  firstName:'Tanvir',
+  lastName:'Ahmed',
+  address:{
+    country:'Bangladesh',
+    city:'Dhaka',
+  }
+}
+
+let copyHello = {...hello, address:{...hello.address}}
+console.log(copyHello===hello)
+
+copyHello.address.city = 'New York'
+hello.address.country = 'USA'
+console.log(copyHello)
+console.log(hello)
