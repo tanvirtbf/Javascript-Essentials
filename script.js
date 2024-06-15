@@ -196,11 +196,17 @@ let namObj = {
   lastName:'Ahmed',
   address:'Sonir Akhra'
 }
-let namObjCopy = namObj
-console.log(namObjCopy===namObj)
+// let namObjCopy = namObj
+// console.log(namObjCopy===namObj)
 
 // shallow copy with Object.assign
-let namArrayCopy = []
-Object.assign(namArrayCopy,namArray)
+// let namArrayCopy = []
+// Object.assign(namArrayCopy,namArray)
+// console.log(namArray===namArrayCopy)
+
+//shallow copy with spread operator
+let namArrayCopy = [...namArray]
 console.log(namArray===namArrayCopy)
+namArrayCopy[5]='lamia'
+console.log(namArray,namArrayCopy)
 
