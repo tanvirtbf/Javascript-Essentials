@@ -190,12 +190,12 @@
 // let allFruits = [...fruits]
 // console.log(allFruits===fruits)
 
-let namArray = ['tanvir','sadia','maymuna','humaira']
-let namObj = {
-  firstName:'Tanvir',
-  lastName:'Ahmed',
-  address:'Sonir Akhra'
-}
+// let namArray = ['tanvir','sadia','maymuna','humaira']
+// let namObj = {
+//   firstName:'Tanvir',
+//   lastName:'Ahmed',
+//   address:'Sonir Akhra'
+// }
 // let namObjCopy = namObj
 // console.log(namObjCopy===namObj)
 
@@ -205,8 +205,8 @@ let namObj = {
 // console.log(namArray===namArrayCopy)
 
 //shallow copy with spread operator
-let namArrayCopy = [...namArray]
-console.log(namArray===namArrayCopy)
-namArrayCopy[5]='lamia'
-console.log(namArray,namArrayCopy)
+// let namArrayCopy = [...namArray]
+// console.log(namArray===namArrayCopy)
+// namArrayCopy[5]='lamia'
+// console.log(namArray,namArrayCopy)
 
