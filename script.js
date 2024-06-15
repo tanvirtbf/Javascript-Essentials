@@ -190,3 +190,13 @@
 // let allFruits = [...fruits]
 // console.log(allFruits===fruits)
 
+let namArray = ['tanvir','sadia','maymuna','humaira']
+let namObj = {
+  firstName:'Tanvir',
+  lastName:'Ahmed',
+  address:'Sonir Akhra'
+}
+
+// shallow copy with Object.assign
+let namArrayCopy = namArray
+
