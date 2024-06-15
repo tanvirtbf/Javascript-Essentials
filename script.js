@@ -220,10 +220,19 @@ const hello = {
     city:'Dhaka',
   }
 }
+//Deep Copy using spreed operator
+// let copyHello = {...hello, address:{...hello.address}}
+// console.log(copyHello===hello)
 
-let copyHello = {...hello, address:{...hello.address}}
-console.log(copyHello===hello)
+// copyHello.address.city = 'New York'
+// hello.address.country = 'USA'
+// console.log(copyHello)
+// console.log(hello)
 
+//Deep Copy using JSON technique
+let p1 = {...hello}
+p1 = JSON.stringify(p1)
+let copyHello = JSON.parse(p1)
 copyHello.address.city = 'New York'
 hello.address.country = 'USA'
 console.log(copyHello)
