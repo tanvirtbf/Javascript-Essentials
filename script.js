@@ -199,4 +199,6 @@ let namObj = {
 
 // shallow copy with Object.assign
 let namArrayCopy = namArray
+namArray[2]='lamia'
+console.log(namArrayCopy)
 
