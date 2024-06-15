@@ -237,3 +237,5 @@ const hello = {
 // hello.address.country = 'USA'
 // console.log(copyHello)
 // console.log(hello)
+
+//Function
