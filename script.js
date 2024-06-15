@@ -196,9 +196,11 @@ let namObj = {
   lastName:'Ahmed',
   address:'Sonir Akhra'
 }
+let namObjCopy = namObj
+console.log(namObjCopy===namObj)
 
 // shallow copy with Object.assign
-let namArrayCopy = namArray
-namArray[2]='lamia'
-console.log(namArrayCopy)
+let namArrayCopy = []
+Object.assign(namArrayCopy,namArray)
+console.log(namArray===namArrayCopy)
 
