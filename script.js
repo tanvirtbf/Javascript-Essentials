@@ -240,5 +240,5 @@ const hello = {
 
 //Function
 function hello(){
-  
+  console.log('hello world')
 }
