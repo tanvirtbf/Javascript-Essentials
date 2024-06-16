@@ -239,3 +239,6 @@ const hello = {
 // console.log(hello)
 
 //Function
+function hello(){
+  
+}
