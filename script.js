@@ -246,7 +246,12 @@ const hello = {
 // const hellos = () => {
 //   console.log("Hello World!")
 // }
-function num (){
-  console.log("hello world")
+// function num (){
+//   console.log("hello world")
+// }
+// const numfun = num()
+
+// Return Keyword
+function testReturn(){
+  console.log('hello world')
 }
-const numfun = num()
