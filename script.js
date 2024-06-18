@@ -242,7 +242,11 @@ const hello = {
 // function hello(){
 //   console.log('hello world')
 // }
-// hello()
-const hellos = () => {
-  console.log("Hello World!")
+// hell o()
+// const hellos = () => {
+//   console.log("Hello World!")
+// }
+function num (){
+  console.log("hello world")
 }
+const numfun = num()
