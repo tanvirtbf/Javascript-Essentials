@@ -254,4 +254,7 @@ const hello = {
 // Return Keyword
 function testReturn(){
   console.log('hello world')
+  return 5 + 5
 }
+const funVal = testReturn()
+console.log(funVal)
