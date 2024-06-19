@@ -277,3 +277,90 @@ function hello(){
 	return a;
 }
 hello()
+
+// AST JSON for that code
+// {
+//   "type": "Program",
+//   "start": 0,
+//   "end": 49,
+//   "body": [
+//     {
+//       "type": "VariableDeclaration",
+//       "start": 0,
+//       "end": 10,
+//       "declarations": [
+//         {
+//           "type": "VariableDeclarator",
+//           "start": 4,
+//           "end": 10,
+//           "id": {
+//             "type": "Identifier",
+//             "start": 4,
+//             "end": 5,
+//             "name": "a"
+//           },
+//           "init": {
+//             "type": "Literal",
+//             "start": 8,
+//             "end": 10,
+//             "value": 99,
+//             "raw": "99"
+//           }
+//         }
+//       ],
+//       "kind": "let"
+//     },
+//     {
+//       "type": "FunctionDeclaration",
+//       "start": 11,
+//       "end": 41,
+//       "id": {
+//         "type": "Identifier",
+//         "start": 20,
+//         "end": 25,
+//         "name": "hello"
+//       },
+//       "expression": false,
+//       "generator": false,
+//       "async": false,
+//       "params": [],
+//       "body": {
+//         "type": "BlockStatement",
+//         "start": 27,
+//         "end": 41,
+//         "body": [
+//           {
+//             "type": "ReturnStatement",
+//             "start": 30,
+//             "end": 39,
+//             "argument": {
+//               "type": "Identifier",
+//               "start": 37,
+//               "end": 38,
+//               "name": "a"
+//             }
+//           }
+//         ]
+//       }
+//     },
+//     {
+//       "type": "ExpressionStatement",
+//       "start": 42,
+//       "end": 49,
+//       "expression": {
+//         "type": "CallExpression",
+//         "start": 42,
+//         "end": 49,
+//         "callee": {
+//           "type": "Identifier",
+//           "start": 42,
+//           "end": 47,
+//           "name": "hello"
+//         },
+//         "arguments": [],
+//         "optional": false
+//       }
+//     }
+//   ],
+//   "sourceType": "module"
+// }
