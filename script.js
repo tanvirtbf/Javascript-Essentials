@@ -272,3 +272,8 @@
 
 
 //Abstract Syntex Tree
+let a = 99
+function hello(){
+	return a;
+}
+hello()
