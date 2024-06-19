@@ -212,14 +212,14 @@
 
 
 //Deep Copy 
-const hello = {
-  firstName:'Tanvir',
-  lastName:'Ahmed',
-  address:{
-    country:'Bangladesh',
-    city:'Dhaka',
-  }
-}
+// const hello = {
+//   firstName:'Tanvir',
+//   lastName:'Ahmed',
+//   address:{
+//     country:'Bangladesh',
+//     city:'Dhaka',
+//   }
+// }
 //Deep Copy using spreed operator
 // let copyHello = {...hello, address:{...hello.address}}
 // console.log(copyHello===hello)
@@ -252,9 +252,11 @@ const hello = {
 // const numfun = num()
 
 // Return Keyword
-function testReturn(){
-  console.log('hello world')
-  return 5 + 5
-}
-const funVal = testReturn()
-console.log(funVal)
+// function testReturn(){
+//   console.log('hello world')
+//   return 5 + 5
+// }
+// const funVal = testReturn()
+// console.log(funVal)
+
+// Tokenization in Javascript 
