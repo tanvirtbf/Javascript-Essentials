@@ -383,3 +383,5 @@ hello(); // Lexical Position or Lexical context is line number 378
 // onk boro source code er moddhe onk lexical contaxt thake . prottekta lexical contaxt or prottekta particular code ke execute korar jonno javascript er ja ja dorkar tai holo oi particular code er jonno execution contaxt . line number 371 er jonno alada execution contaxt create hoy, line number 372 er jonno alada execution contaxt create hoy,line number 374-376  er jonno alada execution contaxt create hoy,evabe prottekta particular code er jonno alada alada execution contaxt create hoy
 
 // Globar Execution Contaxt (GEC)
+// GEC is two part 
+// 1. 
