@@ -260,3 +260,6 @@
 // console.log(funVal)
 
 // Tokenization in Javascript 
+var code = 'var x = 5 + 3;';
+var tokens = code.match(/(\b\w+\b|[^\s])/g);
+console.log(tokens); //  Answer : ["var", "x", "=", "5", "+", "3", ";"] -> Tokenization
