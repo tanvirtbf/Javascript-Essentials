@@ -272,11 +272,11 @@
 
 
 //Abstract Syntex Tree
-let a = 99
-function hello(){
-	return a;
-}
-hello()
+// let a = 99
+// function hello(){
+// 	return a;
+// }
+// hello()
 
 // AST JSON for that code
 // {
@@ -364,3 +364,5 @@ hello()
 //   ],
 //   "sourceType": "module"
 // }
+
+//Execution Contaxt start
