@@ -366,3 +366,15 @@
 // }
 
 //Execution Contaxt start
+
+//Lexical Position or Lexical Contaxt or Lexical Environment
+const a = 10; // Lexical Position or Lexical context is line number 369
+let b = 'Hello' // Lexical Position or Lexical context is line number 370
+
+function hello(){ // Lexical Position or Lexical context is line number 372-374
+  console.log('Hello World!')
+}
+
+let c = 11; // Lexical Position or Lexical context is line number 376
+
+hello(); // Lexical Position or Lexical context is line number 378
