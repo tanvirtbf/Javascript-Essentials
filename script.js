@@ -437,3 +437,6 @@ helloJerry()
               //Creation phase:
               //Execution phase: so on...
 
+//How Javascript Engine Managed execution contaxt tree ? Answer : Using Call Stack(last in first out)
+
+
