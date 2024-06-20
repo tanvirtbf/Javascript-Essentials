@@ -441,24 +441,24 @@
 
 
 //test 2 code
-console.log("Inside global execution context")
-var a = 5;
-function testMe(){
-  console.log("Inside testMe execution context")
-  var b = 10;
-  var user = {
-    name:'tanvir',
-    county:'Bangladesh',
-  }
-  function testAgain(){
-    console.log("Inside testAgain execution context")
-    console.log("Exiting testAgain execution context")
-  }
-  testAgain();
-  console.log("Exiting global execution context")
-}
-testMe();
-console.log("Exiting global execution context")
+// console.log("Inside global execution context")
+// var a = 5;
+// function testMe(){
+//   console.log("Inside testMe execution context")
+//   var b = 10;
+//   var user = {
+//     name:'tanvir',
+//     county:'Bangladesh',
+//   }
+//   function testAgain(){
+//     console.log("Inside testAgain execution context")
+//     console.log("Exiting testAgain execution context")
+//   }
+//   testAgain();
+//   console.log("Exiting global execution context")
+// }
+// testMe();
+// console.log("Exiting global execution context")
 
 // Now test 2 code Execution Context design:
 // GEC 
