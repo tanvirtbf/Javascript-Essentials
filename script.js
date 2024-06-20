@@ -368,16 +368,16 @@
 //Execution Contaxt start
 
 //Lexical Position or Lexical Contaxt or Lexical Environment
-const a = 10; // Lexical Position or Lexical context is line number 369
-let b = 'Hello' // Lexical Position or Lexical context is line number 370
+// const a = 10; // Lexical Position or Lexical context is line number 369
+// let b = 'Hello' // Lexical Position or Lexical context is line number 370
 
-function hello(){ // Lexical Position or Lexical context is line number 372-374
-  console.log('Hello World!')
-}
+// function hello(){ // Lexical Position or Lexical context is line number 372-374
+//   console.log('Hello World!')
+// }
 
-let c = 11; // Lexical Position or Lexical context is line number 376
+// let c = 11; // Lexical Position or Lexical context is line number 376
 
-hello(); // Lexical Position or Lexical context is line number 378
+// hello(); // Lexical Position or Lexical context is line number 378
 
 //Execution Contaxt understand by some text:
 // onk boro source code er moddhe onk lexical contaxt thake . prottekta lexical contaxt or prottekta particular code ke execute korar jonno javascript er ja ja dorkar tai holo oi particular code er jonno execution contaxt . line number 371 er jonno alada execution contaxt create hoy, line number 372 er jonno alada execution contaxt create hoy,line number 374-376  er jonno alada execution contaxt create hoy,evabe prottekta particular code er jonno alada alada execution contaxt create hoy
@@ -412,12 +412,12 @@ hello(); // Lexical Position or Lexical context is line number 378
 // 2. (jehetu hiTom function ke call kora hoy nai tai tokhono ei function er jonno kono execution contaxt hobe na . kintu hiddenly er jonno kichu kaj hoye thake ja amra function execution contaxt e dekhbo)
 
 // test 1 : 
-var jerry = "Hello Jerry"
-function helloJerry(){
-  let hi = 1;
-  console.log('Hello Jerry')
-}
-helloJerry()
+// var jerry = "Hello Jerry"
+// function helloJerry(){
+//   let hi = 1;
+//   console.log('Hello Jerry')
+// }
+// helloJerry()
 
 //GEC for test 1 =>
   //Creation phase :
@@ -439,4 +439,24 @@ helloJerry()
 
 //How Javascript Engine Managed execution contaxt tree ? Answer : Using Call Stack(last in first out)
 
+
+//test 2 code
+console.log("Inside global execution context")
+var a = 5;
+function testMe(){
+  console.log("Inside testMe execution context")
+  var b = 10;
+  var user = {
+    name:'tanvir',
+    county:'Bangladesh',
+  }
+  function testAgain(){
+    console.log("Inside testAgain execution context")
+    console.log("Exiting testAgain execution context")
+  }
+  testAgain();
+  console.log("Exiting global execution context")
+}
+testMe();
+console.log("Exiting global execution context")
 
