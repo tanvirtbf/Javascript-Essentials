@@ -460,3 +460,25 @@ function testMe(){
 testMe();
 console.log("Exiting global execution context")
 
+// Now test 2 code Execution Context design:
+// GEC 
+//   CP
+//     a:undefined
+//     testMe: function(){code...}
+//   EP 
+//     a:5 
+//     testMe: Execute 
+
+//     FEC 
+//       CP
+//         b: undefined
+//         user:undefined 
+//         testAgain: function(){code...}
+//       EP 
+//         b:10
+//         user:{name:'tanvir',...} 
+//         testAgain: Execute...
+
+//         FEC
+//           CP 
+//           EP
