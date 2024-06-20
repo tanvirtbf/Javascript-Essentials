@@ -386,3 +386,11 @@ hello(); // Lexical Position or Lexical context is line number 378
 //jokhon javascript first time load hoy tokhon by default ekta execution contaxt create kore jar nam holo Global Execution Contaxt(GEC)
 // GEC 2 ta special jinish amader dey(jodio 0 line code thake)
 // 1. window 2. this (window === this => true)
+
+// GEC er 2 ta phase thake 
+// 1. Creation phase 
+// 2. Execution phase
+
+// Creation phase eii 2 ta special object peye thaki, 1. window(global object) 2. this (point on window)
+
+// Global execution contaxt er creation phase e ki ki hobe ?
