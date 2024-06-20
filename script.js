@@ -394,10 +394,10 @@ hello(); // Lexical Position or Lexical context is line number 378
 // Creation phase eii 2 ta special object peye thaki, 1. window(global object) 2. this (point on window)
 
 // Global execution contaxt er creation phase e ki ki hobe ?
-var tom = 'Hello Tom'
-function hiTom(){
-  console.log(this.tom)
-}
+// var tom = 'Hello Tom'
+// function hiTom(){
+//   console.log(this.tom)
+// }
 // Global execution contaxt er creation phase e ja ja hobe....
 // 1. window (global object)
 // 2. this (window)
@@ -410,3 +410,30 @@ function hiTom(){
 // Global execution contaxt er creation phase sesh , akhn execution phase start hobe
 // 1. tom = "Hello Tom" (tom er vitor tar value assign kore deya hobe)
 // 2. (jehetu hiTom function ke call kora hoy nai tai tokhono ei function er jonno kono execution contaxt hobe na . kintu hiddenly er jonno kichu kaj hoye thake ja amra function execution contaxt e dekhbo)
+
+// test 1 : 
+var jerry = "Hello Jerry"
+function helloJerry(){
+  let hi = 1;
+  console.log('Hello Jerry')
+}
+helloJerry()
+
+//GEC for test 1 =>
+  //Creation phase :
+      //jerry : undefined
+      //helloJerry : function helloJerry(){clg()}
+  //Execution phase :
+      //jerry: "Hello Jerry"
+      //(in lexical position 420, execute a function . that's why create a new execution contaxt named function execution contaxt(FEC))
+
+      // FEC for Lexical position 420
+          //creation phase :
+            //hi=undefined
+          //execution phase:
+            //log() from console() (will create new execution contaxt FEC)
+            
+            // FEC for console.log()
+              //Creation phase:
+              //Execution phase: so on...
+
