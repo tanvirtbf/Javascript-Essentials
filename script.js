@@ -398,3 +398,15 @@ var tom = 'Hello Tom'
 function hiTom(){
   console.log(this.tom)
 }
+// Global execution contaxt er creation phase e ja ja hobe....
+// 1. window (global object)
+// 2. this (window)
+// 3. tom and hiTom memory allocated(sob variable , function er jonno memory allocated korbe)
+// 3. tom = undefined (jodi kono variable thake tahole sekhane undefined diye dibe)
+// 4. hiTom = function hiTom(){ 
+//              console.log(this.tom)
+//             } (jodi kono function thake tahole function er definition ta tule hiTom e set kore dibe)
+
+// Global execution contaxt er creation phase sesh , akhn execution phase start hobe
+// 1. tom = "Hello Tom" (tom er vitor tar value assign kore deya hobe)
+// 2. (jehetu hiTom function ke call kora hoy nai tai tokhono ei function er jonno kono execution contaxt hobe na . kintu hiddenly er jonno kichu kaj hoye thake ja amra function execution contaxt e dekhbo)
