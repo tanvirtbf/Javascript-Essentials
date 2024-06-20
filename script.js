@@ -482,3 +482,5 @@ console.log("Exiting global execution context")
 //         FEC
 //           CP 
 //           EP
+
+// Understand Stack and Heap Memory in video Tapas
