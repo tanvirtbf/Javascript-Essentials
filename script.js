@@ -495,3 +495,4 @@ const isGraduated = false
 const firstName2 = 'Tan'+'vir'
 const isMale = !!0
 const isFemale = true
+const isNull = null
