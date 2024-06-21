@@ -497,3 +497,4 @@ const isMale = !!0
 const isFemale = true
 const isNull = null
 const isUndefined = undefined
+const isEmptyString = ''
