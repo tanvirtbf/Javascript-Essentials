@@ -492,3 +492,5 @@ const lastName = 'Ahmed'
 const userAge = 15
 const isGraduated = false
 const firstName2 = 'Tanvir'
+const isMale = false
+const isFemale = true
