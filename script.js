@@ -493,5 +493,5 @@ const userAge = 15
 const isGraduated = false
 // const firstName2 = 'Tanvir'
 const firstName2 = 'Tan'+'vir'
-const isMale = false
+const isMale = !!0
 const isFemale = true
