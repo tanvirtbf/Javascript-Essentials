@@ -502,10 +502,10 @@
 
 // Execution Context Again
 //test code
-var name = 'Tanvir'
+// var name = 'Tanvir'
 
-function sayHi(){
-  console.log(this.name)
-}
+// function sayHi(){
+//   console.log(this.name)
+// }
 //NOW FEC (Function Execution Context)
-sayHi()
+// sayHi()
