@@ -507,3 +507,5 @@ var name = 'Tanvir'
 function sayHi(){
   console.log(this.name)
 }
+//NOW FEC (Function Execution Context)
+sayHi()
