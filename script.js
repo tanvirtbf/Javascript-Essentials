@@ -487,14 +487,23 @@
 
 //Visualiza variable address
 
-const firstName = 'Tanvir'
-const lastName = 'Ahmed'
-const userAge = 15
-const isGraduated = false
+// const firstName = 'Tanvir'
+// const lastName = 'Ahmed'
+// const userAge = 15
+// const isGraduated = false
 // const firstName2 = 'Tanvir'
-const firstName2 = 'Tan'+'vir'
-const isMale = !!0
-const isFemale = true
-const isNull = null
-const isUndefined = undefined
-const isEmptyString = ''
+// const firstName2 = 'Tan'+'vir'
+// const isMale = !!0
+// const isFemale = true
+// const isNull = null
+// const isUndefined = undefined
+// const isEmptyString = ''
+
+
+// Execution Context Again
+
+var name = 'Tanvir'
+
+function sayHi(){
+  console.log(this.name)
+}
