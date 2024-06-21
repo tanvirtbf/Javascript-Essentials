@@ -486,6 +486,9 @@
 // Understand Stack and Heap Memory in video Tapas 
 
 //Visualiza variable address
+
 const firstName = 'Tanvir'
+const lastName = 'Ahmed'
 const userAge = 15
 const isGraduated = false
+const firstName2 = 'Tanvir'
