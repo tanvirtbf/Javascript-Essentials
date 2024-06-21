@@ -509,3 +509,5 @@
 // }
 //NOW FEC (Function Execution Context)
 // sayHi()
+
+// Scope and Scope Chain
