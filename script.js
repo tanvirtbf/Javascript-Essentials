@@ -483,4 +483,6 @@
 //           CP 
 //           EP
 
-// Understand Stack and Heap Memory in video Tapas
+// Understand Stack and Heap Memory in video Tapas 
+
+//Visualiza variable address
