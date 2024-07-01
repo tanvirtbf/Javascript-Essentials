@@ -210,8 +210,7 @@
 // namArrayCopy[5]='lamia'
 // console.log(namArray,namArrayCopy)
 
-
-//Deep Copy 
+//Deep Copy
 // const hello = {
 //   firstName:'Tanvir',
 //   lastName:'Ahmed',
@@ -259,7 +258,7 @@
 // const funVal = testReturn()
 // console.log(funVal)
 
-// Tokenization in Javascript 
+// Tokenization in Javascript
 // var code = 'var x = 5 + 3;';
 // var tokens = code.match(/(\b\w+\b|[^\s])/g);
 // console.log(tokens); //  Answer : ["var", "x", "=", "5", "+", "3", ";"] -> Tokenization
@@ -269,7 +268,6 @@
 //   return a + 1;
 // }
 //Tokenization => "function(keyword)","hello(a function name)","(){ (function start)","let(a variable will be declared)","a(a variable name)","10(value of a)","return(keyword)","a+1(expresstion for return where it's called)","}(function end)"
-
 
 //Abstract Syntex Tree
 // let a = 99
@@ -387,8 +385,8 @@
 // GEC 2 ta special jinish amader dey(jodio 0 line code thake)
 // 1. window 2. this (window === this => true)
 
-// GEC er 2 ta phase thake 
-// 1. Creation phase 
+// GEC er 2 ta phase thake
+// 1. Creation phase
 // 2. Execution phase
 
 // Creation phase eii 2 ta special object peye thaki, 1. window(global object) 2. this (point on window)
@@ -403,7 +401,7 @@
 // 2. this (window)
 // 3. tom and hiTom memory allocated(sob variable , function er jonno memory allocated korbe)
 // 3. tom = undefined (jodi kono variable thake tahole sekhane undefined diye dibe)
-// 4. hiTom = function hiTom(){ 
+// 4. hiTom = function hiTom(){
 //              console.log(this.tom)
 //             } (jodi kono function thake tahole function er definition ta tule hiTom e set kore dibe)
 
@@ -411,7 +409,7 @@
 // 1. tom = "Hello Tom" (tom er vitor tar value assign kore deya hobe)
 // 2. (jehetu hiTom function ke call kora hoy nai tai tokhono ei function er jonno kono execution contaxt hobe na . kintu hiddenly er jonno kichu kaj hoye thake ja amra function execution contaxt e dekhbo)
 
-// test 1 : 
+// test 1 :
 // var jerry = "Hello Jerry"
 // function helloJerry(){
 //   let hi = 1;
@@ -420,25 +418,24 @@
 // helloJerry()
 
 //GEC for test 1 =>
-  //Creation phase :
-      //jerry : undefined
-      //helloJerry : function helloJerry(){clg()}
-  //Execution phase :
-      //jerry: "Hello Jerry"
-      //(in lexical position 420, execute a function . that's why create a new execution contaxt named function execution contaxt(FEC))
+//Creation phase :
+//jerry : undefined
+//helloJerry : function helloJerry(){clg()}
+//Execution phase :
+//jerry: "Hello Jerry"
+//(in lexical position 420, execute a function . that's why create a new execution contaxt named function execution contaxt(FEC))
 
-      // FEC for Lexical position 420
-          //creation phase :
-            //hi=undefined
-          //execution phase:
-            //log() from console() (will create new execution contaxt FEC)
-            
-            // FEC for console.log()
-              //Creation phase:
-              //Execution phase: so on...
+// FEC for Lexical position 420
+//creation phase :
+//hi=undefined
+//execution phase:
+//log() from console() (will create new execution contaxt FEC)
+
+// FEC for console.log()
+//Creation phase:
+//Execution phase: so on...
 
 //How Javascript Engine Managed execution contaxt tree ? Answer : Using Call Stack(last in first out)
-
 
 //test 2 code
 // console.log("Inside global execution context")
@@ -461,29 +458,29 @@
 // console.log("Exiting global execution context")
 
 // Now test 2 code Execution Context design:
-// GEC 
+// GEC
 //   CP
 //     a:undefined
 //     testMe: function(){code...}
-//   EP 
-//     a:5 
-//     testMe: Execute 
+//   EP
+//     a:5
+//     testMe: Execute
 
-//     FEC 
+//     FEC
 //       CP
 //         b: undefined
-//         user:undefined 
+//         user:undefined
 //         testAgain: function(){code...}
-//       EP 
+//       EP
 //         b:10
-//         user:{name:'tanvir',...} 
+//         user:{name:'tanvir',...}
 //         testAgain: Execute...
 
 //         FEC
-//           CP 
+//           CP
 //           EP
 
-// Understand Stack and Heap Memory in video Tapas 
+// Understand Stack and Heap Memory in video Tapas
 
 //Visualiza variable address
 
@@ -498,7 +495,6 @@
 // const isNull = null
 // const isUndefined = undefined
 // const isEmptyString = ''
-
 
 // Execution Context Again
 //test code
@@ -516,16 +512,15 @@
 //   console.log(hello)
 // }
 
-const userName = 'Tanvir'
-const userAge = 25
+const userName = "Tanvir";
+const userAge = 25;
 
-function add(){
+function add() {
   const x = 5;
   const y = 8;
-  console.log(x+y)
-  console.log(userName)
+  console.log(x + y);
+  console.log(userName);
 }
-console.log(x+y)
+console.log(x + y);
 add();
-console.log('Program Ended')
-
+console.log("Program Ended");
