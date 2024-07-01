@@ -511,7 +511,8 @@
 // sayHi()
 
 // Scope and Scope Chain
-var hello = 'Hello World'
-function sayHello(){
-  console.log(hello)
-}
+// var hello = 'Hello World'
+// function sayHello(){
+//   console.log(hello)
+// }
+
