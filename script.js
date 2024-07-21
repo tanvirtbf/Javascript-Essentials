@@ -544,4 +544,9 @@
 // console.log(history.go(4))
 
 //Inner Height Inner Width 
-console.log(innerHeight,innerWidth,outerHeight,outerWidth)
+// console.log(innerHeight,innerWidth,outerHeight,outerWidth)
+
+// ScrollBy
+// scrollBy(0,200);
+// scrollTo()
+// scroll
