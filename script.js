@@ -538,7 +538,10 @@
 // }, 10000)
 
 //History 
-console.log(history.forward())
-console.log(history.back())
-console.log(history.go(-2))
-console.log(history.go(4))
+// console.log(history.forward())
+// console.log(history.back())
+// console.log(history.go(-2))
+// console.log(history.go(4))
+
+//Inner Height Inner Width 
+console.log(innerHeight,innerWidth,outerHeight,outerWidth)
