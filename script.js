@@ -524,3 +524,11 @@
 // console.log(x + y);
 // add();
 // console.log("Program Ended");
+
+
+//Location
+console.log(window.location.pathname)
+console.log(window.location.href)
+setTimeout(()=>{
+  window.location.reload();
+}, 10000)
