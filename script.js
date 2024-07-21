@@ -525,10 +525,20 @@
 // add();
 // console.log("Program Ended");
 
+//Browser Object Mode 
+//1. Location = window.location OR location
+//2. History = window.history OR history
+
 
 //Location
-console.log(window.location.pathname)
-console.log(window.location.href)
-setTimeout(()=>{
-  window.location.reload();
-}, 10000)
+// console.log(window.location.pathname)
+// console.log(window.location.href)
+// setTimeout(()=>{
+//   window.location.reload();
+// }, 10000)
+
+//History 
+console.log(history.forward())
+console.log(history.back())
+console.log(history.go(-2))
+console.log(history.go(4))
