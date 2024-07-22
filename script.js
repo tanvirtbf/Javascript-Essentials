@@ -557,4 +557,15 @@
 // function sayHello() {
 //   document.children[0].children[1].children[4].innerText = "Hello World";
 // }
+
 // var hello = document.body.children[0].innerText = "Hello World@"
+// function changeImage(){
+//   document.body.children[4].src = '';
+//   document.children[0].children[1].children[4].alt = 'hello image';
+// }
+
+console.dir(document)
+
+//getElementsByTagName
+  const hello = document.getElementsByTagName('h2');
+  const hello2 = document.getElementsByTagName('img');
