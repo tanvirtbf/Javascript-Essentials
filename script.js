@@ -677,3 +677,12 @@
   // ol.forEach((li)=>{
   //   li.setAttribute('class','changeCSS')
   // })
+
+  //classList
+  ol.forEach((li)=>{
+    // li.classList.add('changeCSS')
+    li.classList.toggle('changeCSS')
+  })
+setTimeout(()=>{
+  document.body.children[0].classList.remove('hell');
+},2000)
