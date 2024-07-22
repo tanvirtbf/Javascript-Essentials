@@ -585,10 +585,15 @@
     './image/me3.jpg',
   ]
 
-  for(let i = 0; i<=2; i++){
-    img[i].src = allImages[i];
-    img[i].width = '300'
-  }
+  img.forEach((image,i)=>{
+    image.src = allImages[i]
+    image.width = 300
+  })
+
+  // for(let i = 0; i<=2; i++){
+  //   img[i].src = allImages[i];
+  //   img[i].width = '300'
+  // }
 
   // for(let i = 0; i<=2; i++){
   //   img[i].src = `./image/me${i+1}.jpg`
