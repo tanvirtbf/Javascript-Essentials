@@ -577,18 +577,18 @@
   // const hello = document.getElementById('ids')
 
 //querySelector
-  let img = document.querySelectorAll('img');
+  // let img = document.querySelectorAll('img');
 
-  let allImages = [
-    './image/me1.jpg',
-    './image/me2.jpg',
-    './image/me3.jpg',
-  ]
+  // let allImages = [
+  //   './image/me1.jpg',
+  //   './image/me2.jpg',
+  //   './image/me3.jpg',
+  // ]
 
-  img.forEach((image,i)=>{
-    image.src = allImages[i]
-    image.width = 300
-  })
+  // img.forEach((image,i)=>{
+  //   image.src = allImages[i]
+  //   image.width = 300
+  // })
 
   // for(let i = 0; i<=2; i++){
   //   img[i].src = allImages[i];
@@ -608,3 +608,10 @@
 
   // img[2].src = './image/me3.jpg'
   // img[2].width = '300'
+
+
+  // let ols = document.querySelector('.ol');
+  // let olHello = ols.querySelector('.hello')
+
+  //copy js path
+  // let hello = document.querySelector("body > ol:nth-child(3) > li:nth-child(2)")
