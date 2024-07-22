@@ -564,6 +564,8 @@
 //   document.children[0].children[1].children[4].alt = 'hello image';
 // }
 
+
+
 // console.dir(document)
 
 //getElementsByTagName
@@ -645,6 +647,7 @@
   // document.body.children[0].className = 'tanvirss'
 
   // Change Style 
+
   // let h1 = document.querySelector('.hell')
 
   // let ol = document.querySelectorAll('.ol li')
@@ -662,7 +665,7 @@
   // }
 
   // cssText
-  let ol = document.querySelectorAll('.ol li')
+  // let ol = document.querySelectorAll('.ol li')
 
   // ol.forEach((li)=>{
   //   li.style.cssText = 'font-size : 40px; background-color: pink; color: red; margin-bottom: 2px; padding: 4px; text-decoration: underline'
@@ -679,10 +682,25 @@
   // })
 
   //classList
-  ol.forEach((li)=>{
-    // li.classList.add('changeCSS')
-    li.classList.toggle('changeCSS')
-  })
-setTimeout(()=>{
-  document.body.children[0].classList.remove('hell');
-},2000)
+//   ol.forEach((li)=>{
+//     // li.classList.add('changeCSS')
+//     li.classList.toggle('changeCSS')
+//   })
+// setTimeout(()=>{
+//   document.body.children[0].classList.remove('hell');
+// },2000)
+
+
+// all css style change summary 
+let p = window.document.children[0].children[1];
+let allP = p.querySelectorAll('p');
+
+for(let i = 0; i<allP.length; i++){
+  allP[i].classList.add('helloP')
+  allP[i].classList.toggle('helloP')
+  allP[i].className = 'helloP'
+  allP[i].setAttribute('class','helloP underline')
+  allP[i].style.cssText = 'font-size: 40px; color: red;'
+  allP[i].className = 'helloP'
+  allP[i].style.color = 'red'
+}

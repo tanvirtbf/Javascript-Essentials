@@ -1,21 +1,11 @@
-/* [tanvir='ahmed']{
-  color: red;
-} */
- #heading{
-  color: blue;
-}
-.tanvirss{
-  color: green;
-}
-.hell{
+.helloP{
+  color:brown;
   background-color: aqua;
-} 
-
-.changeCSS {
-  font-size: 40px;
-  background-color: pink;
-  color: red;
-  margin-bottom: 2px;
-  padding: 4px;
-  text-decoration: underline
+}
+.underline{
+  text-decoration: underline;
+}
+.colorYello{
+  color: yellow;
+  font-size: 30px;
 }
