@@ -662,7 +662,7 @@
   // }
 
   // cssText
-  // let ol = document.querySelectorAll('.ol li')
+  let ol = document.querySelectorAll('.ol li')
 
   // ol.forEach((li)=>{
   //   li.style.cssText = 'font-size : 40px; background-color: pink; color: red; margin-bottom: 2px; padding: 4px; text-decoration: underline'
@@ -671,4 +671,9 @@
   //className
   // ol.forEach((li)=>{
   //   li.className = 'changeCSS'
+  // })
+
+  //setAttribute
+  // ol.forEach((li)=>{
+  //   li.setAttribute('class','changeCSS')
   // })
