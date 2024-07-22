@@ -647,7 +647,7 @@
   // Change Style 
   // let h1 = document.querySelector('.hell')
 
-  let ol = document.querySelectorAll('.ol li')
+  // let ol = document.querySelectorAll('.ol li')
 
   // ol.forEach((li)=>{
   //   li.style.color = 'yellow'
@@ -660,3 +660,15 @@
   // for(let i = 0; i<=ol.length; i++){
   //   ol[i].style.color = 'pink'
   // }
+
+  // cssText
+  // let ol = document.querySelectorAll('.ol li')
+
+  // ol.forEach((li)=>{
+  //   li.style.cssText = 'font-size : 40px; background-color: pink; color: red; margin-bottom: 2px; padding: 4px; text-decoration: underline'
+  // })
+
+  //className
+  // ol.forEach((li)=>{
+  //   li.className = 'changeCSS'
+  // })
