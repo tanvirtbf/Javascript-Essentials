@@ -579,11 +579,16 @@
 //querySelector
   let img = document.querySelectorAll('img');
 
-  img[0].src = './image/me1.jpg'
-  img[0].width = '300'
+  for(let i = 0; i<=2; i++){
+    img[i].src = `./image/me${i+1}.jpg`
+    img[i].width = '300'
+  }
 
-  img[1].src = './image/me2.jpg'
-  img[1].width = '300'
+  // img[0].src = './image/me1.jpg'
+  // img[0].width = '300'
 
-  img[2].src = './image/me3.jpg'
-  img[2].width = '300'
+  // img[1].src = './image/me2.jpg'
+  // img[1].width = '300'
+
+  // img[2].src = './image/me3.jpg'
+  // img[2].width = '300'
