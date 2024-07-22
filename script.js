@@ -564,8 +564,26 @@
 //   document.children[0].children[1].children[4].alt = 'hello image';
 // }
 
-console.dir(document)
+// console.dir(document)
 
 //getElementsByTagName
-  const hello = document.getElementsByTagName('h2');
-  const hello2 = document.getElementsByTagName('img');
+  // const hello = document.getElementsByTagName('h2');
+  // const hello2 = document.getElementsByTagName('img');
+
+//getElementsByClassName
+  // const hello = document.getElementsByClassName('hello')
+
+//getElementById
+  // const hello = document.getElementById('ids')
+
+//querySelector
+  let img = document.querySelectorAll('img');
+
+  img[0].src = './image/me1.jpg'
+  img[0].width = '300'
+
+  img[1].src = './image/me2.jpg'
+  img[1].width = '300'
+
+  img[2].src = './image/me3.jpg'
+  img[2].width = '300'
