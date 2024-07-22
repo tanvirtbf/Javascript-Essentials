@@ -525,10 +525,9 @@
 // add();
 // console.log("Program Ended");
 
-//Browser Object Mode 
+//Browser Object Mode
 //1. Location = window.location OR location
 //2. History = window.history OR history
-
 
 //Location
 // console.log(window.location.pathname)
@@ -537,13 +536,13 @@
 //   window.location.reload();
 // }, 10000)
 
-//History 
+//History
 // console.log(history.forward())
 // console.log(history.back())
 // console.log(history.go(-2))
 // console.log(history.go(4))
 
-//Inner Height Inner Width 
+//Inner Height Inner Width
 // console.log(innerHeight,innerWidth,outerHeight,outerWidth)
 
 // ScrollBy
@@ -555,3 +554,7 @@
 // print()
 
 // DOM - Document Object Model
+// function sayHello() {
+//   document.children[0].children[1].children[4].innerText = "Hello World";
+// }
+// var hello = document.body.children[0].innerText = "Hello World@"
