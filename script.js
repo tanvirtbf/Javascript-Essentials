@@ -642,4 +642,21 @@
   //   document.querySelector("[tanvir='ahmed']").id = 'heading'
   // }
 
-  document.body.children[0].className = 'tanvirss'
+  // document.body.children[0].className = 'tanvirss'
+
+  // Change Style 
+  // let h1 = document.querySelector('.hell')
+
+  let ol = document.querySelectorAll('.ol li')
+
+  // ol.forEach((li)=>{
+  //   li.style.color = 'yellow'
+  // })
+
+  // for(let li of ol){
+  //   li.style.color = 'yellowgreen'
+  // }
+
+  // for(let i = 0; i<=ol.length; i++){
+  //   ol[i].style.color = 'pink'
+  // }
