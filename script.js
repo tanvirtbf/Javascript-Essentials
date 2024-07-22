@@ -692,15 +692,24 @@
 
 
 // all css style change summary 
-let p = window.document.children[0].children[1];
-let allP = p.querySelectorAll('p');
+// let p = window.document.children[0].children[1];
+// let allP = p.querySelectorAll('p');
 
-for(let i = 0; i<allP.length; i++){
-  allP[i].classList.add('helloP')
-  allP[i].classList.toggle('helloP')
-  allP[i].className = 'helloP'
-  allP[i].setAttribute('class','helloP underline')
-  allP[i].style.cssText = 'font-size: 40px; color: red;'
-  allP[i].className = 'helloP'
-  allP[i].style.color = 'red'
-}
+// for(let i = 0; i<allP.length; i++){
+//   allP[i].classList.add('helloP')
+//   allP[i].classList.toggle('helloP')
+//   allP[i].className = 'helloP'
+//   allP[i].setAttribute('class','helloP underline')
+//   allP[i].style.cssText = 'font-size: 40px; color: red;'
+//   allP[i].className = 'helloP'
+//   allP[i].style.color = 'red'
+// }
+
+//Access Parent , Sibling and children element 
+
+// Access Parent 
+const li = document.querySelector('ul li:nth-child(3)')
+
+li.parentElement.parentElement // body 
+li.parentElement // ul
+li.parentElement.parentElement.parentElement // html
