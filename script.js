@@ -619,13 +619,21 @@
   // let text = document.querySelector('.inner')
 
   // Attribute Selector
-  let att = document.querySelector("[tanvir='ahmed']")
-  let att1 = document.querySelector("[tanvir='ahmed']").attributes
-  let att2 = document.querySelector("[tanvir='ahmed']").attributes.tanvir
-  let att3 = document.querySelector("[tanvir='ahmed']").attributes.tanvir.value
+  // let att = document.querySelector("[tanvir='ahmed']")
+  // let att1 = document.querySelector("[tanvir='ahmed']").attributes
+  // let att2 = document.querySelector("[tanvir='ahmed']").attributes.tanvir
+  // let att3 = document.querySelector("[tanvir='ahmed']").attributes.tanvir.value
 
-  let manualAtt = document.children[0].children[1].children[0].attributes.tanvir.value
-  console.log(manualAtt)
-  let manualAttBody = document.body.children[0].attributes.tanvir.value
-  console.log(manualAttBody)
-  
+  // let manualAtt = document.children[0].children[1].children[0].attributes.tanvir.value
+  // console.log(manualAtt)
+  // let manualAttBody = document.body.children[0].attributes.tanvir.value
+  // console.log(manualAttBody)
+
+  // let att = document.querySelector("[tanvir='ahmed']").getAttribute('class')
+
+  // function att(){
+  //   document.querySelector("[tanvir='ahmed']").setAttribute("id","heading")
+  // }
+  // function headings(){
+  //   window.document.children[0].children[1].children[0].setAttribute("id","heading")
+  // }
