@@ -637,3 +637,9 @@
   // function headings(){
   //   window.document.children[0].children[1].children[0].setAttribute("id","heading")
   // }
+
+  // function headings(){
+  //   document.querySelector("[tanvir='ahmed']").id = 'heading'
+  // }
+
+  document.body.children[0].className = 'tanvirss'
