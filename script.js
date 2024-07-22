@@ -552,4 +552,6 @@
 // scroll
 
 // print()
-print()
+// print()
+
+// DOM - Document Object Model
