@@ -708,7 +708,7 @@
 //Access Parent , Sibling and children element 
 
 // Access Parent 
-const li = document.querySelector('ul li:nth-child(3)')
+// const li = document.querySelector('ul li:nth-child(3)')
 
 // li.parentElement.parentElement // body 
 // li.parentElement // ul
@@ -716,4 +716,12 @@ const li = document.querySelector('ul li:nth-child(3)')
 
 // Access children
 // const body = document.body.children[0] // h1
+
+// Access Sibling
+const li3 = document.querySelector('ul li:nth-child(3)')
+li3.nextElementSibling.nextElementSibling // li5
+li3.nextElementSibling.nextElementSibling.nextElementSibling // null
+li3.previousElementSibling // li2
+li3.previousElementSibling.previousElementSibling //li1
+li3.previousElementSibling.previousElementSibling.previousElementSibling // null
 
