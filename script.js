@@ -832,15 +832,30 @@
 const container = document.body.querySelector(".container");
 
 let x = 1;
+let myHtml ;
 
 for (let i = 1; i <= 100; i++) {
-  let image = document.createElement("img");
-  container.appendChild(image);
-  image.src = `./image/me${x}.JPG`;
-  image.alt = `image${i}`;
+  myHtml = myHtml + `
+      <div class="divCon">
+        <img src='./image/me${x}.JPG' alt="">
+        <p class="para">${i}</p>
+      </div>
+    `;
+
+  // let div = document.createElement('div')
+  // let image = document.createElement("img");
+  // let paragraph = document.createElement('h4')
+  // container.appendChild(div)
+  // div.appendChild(image);
+  // div.appendChild(paragraph)
+  // div.classList.add('divCon')
+  // paragraph.innerHTML = `<i>Image ${i} </i>`
+  // image.src = `./image/me${x}.JPG`;
+  // image.alt = `image${i}`;
 
   x++;
   if (i % 3 == 0) {
     x = 1;
   }
 }
+container.innerHTML = myHtml
