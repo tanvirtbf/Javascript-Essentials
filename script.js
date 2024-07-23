@@ -644,6 +644,13 @@
 // document.body.children[0].className = 'tanvirss'
 
 // Change Style
+//1. element.style.color = 'red'
+//2. element.style.cssText = 'background-color: black; color: green; font-weight: 500;'
+//3. element.className = 'className'
+//4. element.setAttributes('class','className')
+//5. element.classList.add('className')
+  // element.classList.remove('classNamve)
+  // element.classList.toggle('className')
 
 // let h1 = document.querySelector('.hell')
 
@@ -818,7 +825,10 @@
 //   j++
 // }
 
+//Creatae Any Element 
+
 // Create Element -- document.createElement('div')
+
 // const container = document.querySelector('.container')
 // const para = document.createElement('p')
 // para.innerText = 'Hi, My name is Tanvir Ahmed'
@@ -870,4 +880,13 @@
 // container = null// remove in memory
 
 
+
+
+// Event Listener 
+//1. using onclick
+
+// onclick 
+function sayHi(){
+  console.log('clicked')
+}
 

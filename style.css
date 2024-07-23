@@ -4,19 +4,16 @@
   flex-wrap: wrap;
   gap: 8px;
 }
-img{
-  width: 60px;
-  height: 60px;
-}
-.para {
-  color: green;
-  font-weight: 500;
-  text-align: center;
-}
-.divCon{
+.card{
+  width: 70px;
+  height: 80px;
+  background-color: pink;
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-  border: 1px solid gray;
-  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  font-size: 36px;
+}
+h1{
+  background-color:brown;
 }
