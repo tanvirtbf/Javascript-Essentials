@@ -886,13 +886,15 @@
 //1. using onclick
 
 // onclick 
-function sayHi(){
-  console.log('clicked')
-}
-function sayHello(){
-  console.log('hello')
-}
-document.querySelector('h1').onclick = sayHi
-document.body.childNodes[1].setAttribute('onclick','console.log("helloooo")')
-document.body.childNodes[1].setAttribute('onclick','sayHello()')
+// function sayHi(){
+//   console.log('clicked')
+// }
+// function sayHello(){
+//   console.log('hello')
+// }
+// document.querySelector('h1').onclick = sayHi
+// document.body.childNodes[1].setAttribute('onclick','console.log("helloooo")')
+// document.body.childNodes[1].setAttribute('onclick','sayHello()')
+
+
 
