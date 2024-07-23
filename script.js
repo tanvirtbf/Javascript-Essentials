@@ -943,19 +943,31 @@
 // })
 
 // using clone node
-let container = document.querySelector('.container')
-let card = document.querySelector('.plusIcon')
-let x = 0;
+// let container = document.querySelector('.container')
+// let card = document.querySelector('.plusIcon')
+// let x = 0;
 
-card.addEventListener('click',()=>{
-  x++
-  let cloneCard = card.cloneNode(true)
-  cloneCard.childNodes[0].nodeValue = `${x}`
-  container.appendChild(cloneCard)
-  if(x>=1){
-    container.children[x].classList.add('card')
-    container.children[x].classList.remove('plusIcon')
-  }
+// card.addEventListener('click',()=>{
+//   x++
+//   let cloneCard = card.cloneNode(true)
+//   cloneCard.childNodes[0].nodeValue = `${x}`
+//   container.appendChild(cloneCard)
+//   if(x>=1){
+//     container.children[x].classList.add('card')
+//     container.children[x].classList.remove('plusIcon')
+//   }
+// })
+
+
+
+// Form Event and Event Object 
+let input = document.querySelector('input')
+let para = document.querySelector('p')
+
+input.addEventListener('input',(e)=>{
+  console.log(e.target.value)
+  para.innerText = e.target.value
 })
+
 
 
