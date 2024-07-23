@@ -763,11 +763,49 @@ let card = document.querySelector('.card')
 //   h1.childNodes[0].nodeValue = 'Append P is Here'
 //   h1.appendChild(document.querySelector('p'))
 // }
-function appendChangeDirectionNode(){
-  let newTextNode = document.createTextNode(h1.childNodes[0].nodeValue)
-  h1.childNodes[0].nodeValue = 'Append P is Here'
-  h1.appendChild(document.querySelector('p'))
-  h1.appendChild(newTextNode)
-  h1.childNodes[0].nodeValue = null
+// function appendChangeDirectionNode(){
+//   let newTextNode = document.createTextNode(h1.childNodes[0].nodeValue)
+//   h1.childNodes[0].nodeValue = 'Append P is Here'
+//   h1.appendChild(document.querySelector('p'))
+//   h1.appendChild(newTextNode)
+//   h1.childNodes[0].nodeValue = null
+// }
+
+// Clone Node 
+// container.appendChild(h1.cloneNode())
+function cloneNodeWithoutText(){
+  container.appendChild(h1.cloneNode())
 }
+function cloneNodeWithAllNode(){
+  container.appendChild(h1.cloneNode(true))
+}
+
+// difference between append and appendChild
+
+//1. append function return undefined but appendChild function return dom element
+//Example : 
+//container.append(h1) 
+// Ans : undefined
+//container.appendChild(h1)
+// Ans : <h1>'all node'</h1>
+
+//2. append function accept normal text for append but appendChild not accept any type of normal text, but appendChild accept child node . thats why first you create a text node using document.createTextNode('Hello World') then append
+// EXample: 
+//container.append('any text');
+// Ans : append Successfully in the last
+// container.appendChild('any text');
+// Ans : ERROR!
+// But the solution is first i am creating a text node for 'any text' then put it
+// Solution : 
+// let newTextNode = document.createTextNode('any text')
+// container.appendChild(newTextNode)
+// Ans : append successfully
+
+//3. append function appended multiple node at a time but appendChild function appended not able to multiple node at a time . its append only first node 
+//Example : 
+// container.append('hello world',h1)
+// Ans : append 2 at a time
+// let newText = document.createTextNode('hello world')
+// container.appendChild(newText,h1) 
+// Ans : append only first parameter , that's mean append only newText, not append h1
 
