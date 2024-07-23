@@ -737,11 +737,12 @@
 // document.children[0].children[1].children[1].childNodes[1].childNodes[0].nodeValue = 'Hello My Love!!'
 
 
-// Append & AppendChild
+// Append & AppendChild -- append , appendChild
 let h1 = document.querySelector('h1')
 let container = document.querySelector('.container')
 let card = document.querySelector('.card')
 
+// document.querySelector('body > .container').appendChild(document.querySelector('body > h1'))
 // function appendH1(){
 //   container.appendChild(h1)
 // }
@@ -753,3 +754,20 @@ let card = document.querySelector('.card')
 //   newCard.innerText = i+2
 //   container.appendChild(newCard)
 // }
+
+// function appendH1(){
+//   container.appendChild(h1)
+// }
+
+// function appendChangeNode(){
+//   h1.childNodes[0].nodeValue = 'Append P is Here'
+//   h1.appendChild(document.querySelector('p'))
+// }
+function appendChangeDirectionNode(){
+  let newTextNode = document.createTextNode(h1.childNodes[0].nodeValue)
+  h1.childNodes[0].nodeValue = 'Append P is Here'
+  h1.appendChild(document.querySelector('p'))
+  h1.appendChild(newTextNode)
+  h1.childNodes[0].nodeValue = null
+}
+
