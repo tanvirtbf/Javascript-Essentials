@@ -829,33 +829,44 @@
 // container.appendChild(para)
 
 // simple project using document.createElement
-const container = document.body.querySelector(".container");
 
+let container = document.body.querySelector(".container");
 let x = 1;
-let myHtml ;
+//let myHtml ;
 
 for (let i = 1; i <= 100; i++) {
-  myHtml = myHtml + `
-      <div class="divCon">
-        <img src='./image/me${x}.JPG' alt="">
-        <p class="para">${i}</p>
-      </div>
-    `;
+  // myHtml = myHtml + `
+  //     <div class="divCon">
+  //       <img src='./image/me${x}.JPG' alt="">
+  //       <p class="para">${i}</p>
+  //     </div>
+  //   `;
 
-  // let div = document.createElement('div')
-  // let image = document.createElement("img");
-  // let paragraph = document.createElement('h4')
-  // container.appendChild(div)
-  // div.appendChild(image);
-  // div.appendChild(paragraph)
-  // div.classList.add('divCon')
-  // paragraph.innerHTML = `<i>Image ${i} </i>`
-  // image.src = `./image/me${x}.JPG`;
-  // image.alt = `image${i}`;
+  let div = document.createElement('div')
+  let image = document.createElement("img");
+  let paragraph = document.createElement('h4')
+  container.appendChild(div)
+  div.appendChild(image);
+  div.appendChild(paragraph)
+  div.classList.add('divCon')
+  paragraph.innerHTML = `<i>Image ${i} </i>`
+  image.src = `./image/me${x}.JPG`;
+  image.alt = `image${i}`;
 
   x++;
   if (i % 3 == 0) {
     x = 1;
   }
 }
-container.innerHTML = myHtml
+//container.innerHTML = myHtml
+
+// Remove Element -- 2 Way 
+//1. OLD Way
+// container.parentElement.removeChild(container) // ui container remove but memory container not remove
+// container = null // remove in memory
+// //2. New Way
+// container.remove()// ui container remove but memory container not remove
+// container = null// remove in memory
+
+
+
