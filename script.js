@@ -896,5 +896,10 @@
 // document.body.childNodes[1].setAttribute('onclick','console.log("helloooo")')
 // document.body.childNodes[1].setAttribute('onclick','sayHello()')
 
-
-
+// ondblclick
+function sayHi(){
+  console.log("Hello World")
+}
+document.querySelector('h1').ondblclick = sayHi
+document.body.children[0].setAttribute('ondblclick','sayHi()')
+document.children[0].children[1].childNodes[1].setAttribute('ondblclick','console.log("Helloooooo")')
