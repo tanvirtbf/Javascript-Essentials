@@ -738,9 +738,9 @@
 
 
 // Append & AppendChild -- append , appendChild
-let h1 = document.querySelector('h1')
-let container = document.querySelector('.container')
-let card = document.querySelector('.card')
+// let h1 = document.querySelector('h1')
+// let container = document.querySelector('.container')
+// let card = document.querySelector('.card')
 
 // document.querySelector('body > .container').appendChild(document.querySelector('body > h1'))
 // function appendH1(){
@@ -773,14 +773,14 @@ let card = document.querySelector('.card')
 
 // Clone Node 
 // container.appendChild(h1.cloneNode())
-function cloneNodeWithoutText(){
-  container.appendChild(h1.cloneNode())
-}
-function cloneNodeWithAllNode(){
-  container.appendChild(h1.cloneNode(true))
-}
+// function cloneNodeWithoutText(){
+//   container.appendChild(h1.cloneNode())
+// }
+// function cloneNodeWithAllNode(){
+//   container.appendChild(h1.cloneNode(true))
+// }
 
-// difference between append and appendChild
+// difference between append and appendChild - 3 types of differences
 
 //1. append function return undefined but appendChild function return dom element
 //Example : 
@@ -809,3 +809,15 @@ function cloneNodeWithAllNode(){
 // container.appendChild(newText,h1) 
 // Ans : append only first parameter , that's mean append only newText, not append h1
 
+//Mini Project
+const container = document.querySelector('.container')
+const image = document.querySelector('.container > img')
+let j = 2
+for(let i = 1; i<100; i++){
+  if(i%3 == 0){
+    j = 1;
+  }
+  container.appendChild(image.cloneNode(true))
+  container.children[i].attributes[0].nodeValue = `./image/me${j}.jpg`
+  j++
+}
