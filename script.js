@@ -728,10 +728,20 @@
 // Node 
 
 //Text Node change
-let nodes = document.body.childNodes
-nodes = document.body.childNodes[2]
-nodes = document.body.childNodes[2].nodeValue
+// let nodes = document.body.childNodes
+// nodes = document.body.childNodes[2]
+// nodes = document.body.childNodes[2].nodeValue
 
-document.body.childNodes[2].nodeValue = 'Hii Tanvir!!'
+// document.body.childNodes[2].nodeValue = 'Hii Tanvir!!'
 
-document.children[0].children[1].children[1].childNodes[1].childNodes[0].nodeValue = 'Hello My Love!!'
+// document.children[0].children[1].children[1].childNodes[1].childNodes[0].nodeValue = 'Hello My Love!!'
+
+
+// Append & AppendChild
+let h1 = document.querySelector('h1')
+let container = document.querySelector('.container')
+let card = document.querySelector('.card')
+
+function appendH1(){
+  container.appendChild(h1)
+}
