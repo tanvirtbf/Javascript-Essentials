@@ -929,6 +929,7 @@ let container = document.querySelector('.container')
 let card = document.querySelector('.card')
 card.style.cssText = 'cursor:pointer'
 let x = 0
+
 card.addEventListener('click',()=>{
   x++
   let cardItem = document.createElement('div')
