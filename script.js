@@ -564,124 +564,121 @@
 //   document.children[0].children[1].children[4].alt = 'hello image';
 // }
 
-
-
 // console.dir(document)
 
 //getElementsByTagName
-  // const hello = document.getElementsByTagName('h2');
-  // const hello2 = document.getElementsByTagName('img');
+// const hello = document.getElementsByTagName('h2');
+// const hello2 = document.getElementsByTagName('img');
 
 //getElementsByClassName
-  // const hello = document.getElementsByClassName('hello')
+// const hello = document.getElementsByClassName('hello')
 
 //getElementById
-  // const hello = document.getElementById('ids')
+// const hello = document.getElementById('ids')
 
 //querySelector
-  // let img = document.querySelectorAll('img');
+// let img = document.querySelectorAll('img');
 
-  // let allImages = [
-  //   './image/me1.jpg',
-  //   './image/me2.jpg',
-  //   './image/me3.jpg',
-  // ]
+// let allImages = [
+//   './image/me1.jpg',
+//   './image/me2.jpg',
+//   './image/me3.jpg',
+// ]
 
-  // img.forEach((image,i)=>{
-  //   image.src = allImages[i]
-  //   image.width = 300
-  // })
+// img.forEach((image,i)=>{
+//   image.src = allImages[i]
+//   image.width = 300
+// })
 
-  // for(let i = 0; i<=2; i++){
-  //   img[i].src = allImages[i];
-  //   img[i].width = '300'
-  // }
+// for(let i = 0; i<=2; i++){
+//   img[i].src = allImages[i];
+//   img[i].width = '300'
+// }
 
-  // for(let i = 0; i<=2; i++){
-  //   img[i].src = `./image/me${i+1}.jpg`
-  //   img[i].width = '300'
-  // }
+// for(let i = 0; i<=2; i++){
+//   img[i].src = `./image/me${i+1}.jpg`
+//   img[i].width = '300'
+// }
 
-  // img[0].src = './image/me1.jpg'
-  // img[0].width = '300'
+// img[0].src = './image/me1.jpg'
+// img[0].width = '300'
 
-  // img[1].src = './image/me2.jpg'
-  // img[1].width = '300'
+// img[1].src = './image/me2.jpg'
+// img[1].width = '300'
 
-  // img[2].src = './image/me3.jpg'
-  // img[2].width = '300'
+// img[2].src = './image/me3.jpg'
+// img[2].width = '300'
 
+// let ols = document.querySelector('.ol');
+// let olHello = ols.querySelector('.hello')
 
-  // let ols = document.querySelector('.ol');
-  // let olHello = ols.querySelector('.hello')
+//copy js path
+// let hello = document.querySelector("body > ol:nth-child(3) > li:nth-child(2)")
 
-  //copy js path
-  // let hello = document.querySelector("body > ol:nth-child(3) > li:nth-child(2)")
+// let text = document.querySelector('.inner')
 
-  // let text = document.querySelector('.inner')
+// Attribute Selector
+// let att = document.querySelector("[tanvir='ahmed']")
+// let att1 = document.querySelector("[tanvir='ahmed']").attributes
+// let att2 = document.querySelector("[tanvir='ahmed']").attributes.tanvir
+// let att3 = document.querySelector("[tanvir='ahmed']").attributes.tanvir.value
 
-  // Attribute Selector
-  // let att = document.querySelector("[tanvir='ahmed']")
-  // let att1 = document.querySelector("[tanvir='ahmed']").attributes
-  // let att2 = document.querySelector("[tanvir='ahmed']").attributes.tanvir
-  // let att3 = document.querySelector("[tanvir='ahmed']").attributes.tanvir.value
+// let manualAtt = document.children[0].children[1].children[0].attributes.tanvir.value
+// console.log(manualAtt)
+// let manualAttBody = document.body.children[0].attributes.tanvir.value
+// console.log(manualAttBody)
 
-  // let manualAtt = document.children[0].children[1].children[0].attributes.tanvir.value
-  // console.log(manualAtt)
-  // let manualAttBody = document.body.children[0].attributes.tanvir.value
-  // console.log(manualAttBody)
+// let att = document.querySelector("[tanvir='ahmed']").getAttribute('class')
 
-  // let att = document.querySelector("[tanvir='ahmed']").getAttribute('class')
+// function att(){
+//   document.querySelector("[tanvir='ahmed']").setAttribute("id","heading")
+// }
+// function headings(){
+//   window.document.children[0].children[1].children[0].setAttribute("id","heading")
+// }
 
-  // function att(){
-  //   document.querySelector("[tanvir='ahmed']").setAttribute("id","heading")
-  // }
-  // function headings(){
-  //   window.document.children[0].children[1].children[0].setAttribute("id","heading")
-  // }
+// function headings(){
+//   document.querySelector("[tanvir='ahmed']").id = 'heading'
+// }
 
-  // function headings(){
-  //   document.querySelector("[tanvir='ahmed']").id = 'heading'
-  // }
+// document.body.children[0].className = 'tanvirss'
 
-  // document.body.children[0].className = 'tanvirss'
+// Change Style
 
-  // Change Style 
+// let h1 = document.querySelector('.hell')
 
-  // let h1 = document.querySelector('.hell')
+// let ol = document.querySelectorAll('.ol li')
 
-  // let ol = document.querySelectorAll('.ol li')
+// ol.forEach((li)=>{
+//   li.style.color = 'yellow'
+// })
 
-  // ol.forEach((li)=>{
-  //   li.style.color = 'yellow'
-  // })
+// for(let li of ol){
+//   li.style.color = 'yellowgreen'
+// }
 
-  // for(let li of ol){
-  //   li.style.color = 'yellowgreen'
-  // }
+// for(let i = 0; i<=ol.length; i++){
+//   ol[i].style.color = 'pink'
+// }
 
-  // for(let i = 0; i<=ol.length; i++){
-  //   ol[i].style.color = 'pink'
-  // }
+// cssText
+// let ol = document.querySelectorAll('.ol li')
 
-  // cssText
-  // let ol = document.querySelectorAll('.ol li')
+// ol.forEach((li)=>{
+//   li.style.cssText = 'font-size : 40px; background-color: pink; color: red; margin-bottom: 2px; padding: 4px; text-decoration: underline'
+// })
 
-  // ol.forEach((li)=>{
-  //   li.style.cssText = 'font-size : 40px; background-color: pink; color: red; margin-bottom: 2px; padding: 4px; text-decoration: underline'
-  // })
+//className
+// ol.forEach((li)=>{
+//   li.className = 'changeCSS'
+// })
 
-  //className
-  // ol.forEach((li)=>{
-  //   li.className = 'changeCSS'
-  // })
+//setAttribute
+// ol.forEach((li)=>{
+//   li.setAttribute('class','changeCSS')
+// })
 
-  //setAttribute
-  // ol.forEach((li)=>{
-  //   li.setAttribute('class','changeCSS')
-  // })
-
-  //classList
+//classList
 //   ol.forEach((li)=>{
 //     // li.classList.add('changeCSS')
 //     li.classList.toggle('changeCSS')
@@ -690,8 +687,7 @@
 //   document.body.children[0].classList.remove('hell');
 // },2000)
 
-
-// all css style change summary 
+// all css style change summary
 // let p = window.document.children[0].children[1];
 // let allP = p.querySelectorAll('p');
 
@@ -705,12 +701,12 @@
 //   allP[i].style.color = 'red'
 // }
 
-//Access Parent , Sibling and children element 
+//Access Parent , Sibling and children element
 
-// Access Parent 
+// Access Parent
 // const li = document.querySelector('ul li:nth-child(3)')
 
-// li.parentElement.parentElement // body 
+// li.parentElement.parentElement // body
 // li.parentElement // ul
 // li.parentElement.parentElement.parentElement // html
 
@@ -725,7 +721,7 @@
 // li3.previousElementSibling.previousElementSibling //li1
 // li3.previousElementSibling.previousElementSibling.previousElementSibling // null
 
-// Node 
+// Node
 
 //Text Node change
 // let nodes = document.body.childNodes
@@ -735,7 +731,6 @@
 // document.body.childNodes[2].nodeValue = 'Hii Tanvir!!'
 
 // document.children[0].children[1].children[1].childNodes[1].childNodes[0].nodeValue = 'Hello My Love!!'
-
 
 // Append & AppendChild -- append , appendChild
 // let h1 = document.querySelector('h1')
@@ -771,7 +766,7 @@
 //   h1.childNodes[0].nodeValue = null
 // }
 
-// Clone Node 
+// Clone Node
 // container.appendChild(h1.cloneNode())
 // function cloneNodeWithoutText(){
 //   container.appendChild(h1.cloneNode())
@@ -783,30 +778,30 @@
 // difference between append and appendChild - 3 types of differences
 
 //1. append function return undefined but appendChild function return dom element
-//Example : 
-//container.append(h1) 
+//Example :
+//container.append(h1)
 // Ans : undefined
 //container.appendChild(h1)
 // Ans : <h1>'all node'</h1>
 
 //2. append function accept normal text for append but appendChild not accept any type of normal text, but appendChild accept child node . thats why first you create a text node using document.createTextNode('Hello World') then append
-// EXample: 
+// EXample:
 //container.append('any text');
 // Ans : append Successfully in the last
 // container.appendChild('any text');
 // Ans : ERROR!
 // But the solution is first i am creating a text node for 'any text' then put it
-// Solution : 
+// Solution :
 // let newTextNode = document.createTextNode('any text')
 // container.appendChild(newTextNode)
 // Ans : append successfully
 
-//3. append function appended multiple node at a time but appendChild function appended not able to multiple node at a time . its append only first node 
-//Example : 
+//3. append function appended multiple node at a time but appendChild function appended not able to multiple node at a time . its append only first node
+//Example :
 // container.append('hello world',h1)
 // Ans : append 2 at a time
 // let newText = document.createTextNode('hello world')
-// container.appendChild(newText,h1) 
+// container.appendChild(newText,h1)
 // Ans : append only first parameter , that's mean append only newText, not append h1
 
 //Mini Project
@@ -822,15 +817,30 @@
 //   j++
 // }
 
-
 // Create Element -- document.createElement('div')
-const container = document.querySelector('.container')
-const para = document.createElement('p')
-para.innerText = 'Hi, My name is Tanvir Ahmed'
-// para.classList.add('para')
-// para.classList.toggle('para')
-// para.style.color = 'blue'
-// para.style.cssText = 'color : pink;'
-para.className = 'para'
-container.appendChild(para)
+// const container = document.querySelector('.container')
+// const para = document.createElement('p')
+// para.innerText = 'Hi, My name is Tanvir Ahmed'
+// // para.classList.add('para')
+// // para.classList.toggle('para')
+// // para.style.color = 'blue'
+// // para.style.cssText = 'color : pink;'
+// para.className = 'para'
+// container.appendChild(para)
 
+// simple project using document.createElement
+const container = document.body.querySelector(".container");
+
+let x = 1;
+
+for (let i = 1; i <= 100; i++) {
+  let image = document.createElement("img");
+  container.appendChild(image);
+  image.src = `./image/me${x}.JPG`;
+  image.alt = `image${i}`;
+
+  x++;
+  if (i % 3 == 0) {
+    x = 1;
+  }
+}
