@@ -718,10 +718,20 @@
 // const body = document.body.children[0] // h1
 
 // Access Sibling
-const li3 = document.querySelector('ul li:nth-child(3)')
-li3.nextElementSibling.nextElementSibling // li5
-li3.nextElementSibling.nextElementSibling.nextElementSibling // null
-li3.previousElementSibling // li2
-li3.previousElementSibling.previousElementSibling //li1
-li3.previousElementSibling.previousElementSibling.previousElementSibling // null
+// const li3 = document.querySelector('ul li:nth-child(3)')
+// li3.nextElementSibling.nextElementSibling // li5
+// li3.nextElementSibling.nextElementSibling.nextElementSibling // null
+// li3.previousElementSibling // li2
+// li3.previousElementSibling.previousElementSibling //li1
+// li3.previousElementSibling.previousElementSibling.previousElementSibling // null
 
+// Node 
+
+//Text Node change
+let nodes = document.body.childNodes
+nodes = document.body.childNodes[2]
+nodes = document.body.childNodes[2].nodeValue
+
+document.body.childNodes[2].nodeValue = 'Hii Tanvir!!'
+
+document.children[0].children[1].children[1].childNodes[1].childNodes[0].nodeValue = 'Hello My Love!!'
