@@ -964,10 +964,28 @@
 let input = document.querySelector('input')
 let para = document.querySelector('p')
 
-input.addEventListener('input',(e)=>{
-  console.log(e.target.value)
-  para.innerText = e.target.value
-})
+//input event (input e kichu likhleii fire hote thake)
+// input.addEventListener('input',(e)=>{
+//   console.log(e)
+//   para.innerText = e.target.value
+// })
 
+//change event (input er baire click korle fire hoy)
+// input.addEventListener('change',(e)=>{
+//   console.log(e)
+//   para.innerText = e.target.value
+// })
+
+//focus event (input er vitor click korle fire hoy)
+// input.addEventListener('focus',(e)=>{
+//   console.log(e)
+//   para.innerText = e.target.value
+// })
+
+//blur event (input er baire click korle fire hoy)
+// input.addEventListener('blur',(e)=>{
+//   console.log(e)
+//   para.innerText = e.target.value
+// })
 
 
