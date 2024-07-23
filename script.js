@@ -927,19 +927,31 @@
 // mini project with addEventListener
 
 // using create Element
+// let container = document.querySelector('.container')
+// let card = document.querySelector('.card')
+// card.style.cssText = 'cursor:pointer'
+// let x = 0
+
+// card.addEventListener('click',()=>{
+//   x++
+//   let cardItem = document.createElement('div')
+//   let cardTextNode = document.createTextNode(`${x}`)
+//   cardItem.appendChild(cardTextNode)
+//   container.appendChild(cardItem)
+//   cardItem.classList.add('card')
+//   cardItem.style.cssText = 'cursor:initial'
+// })
+
+// using clone node
 let container = document.querySelector('.container')
 let card = document.querySelector('.card')
-card.style.cssText = 'cursor:pointer'
-let x = 0
+let x = 0;
 
 card.addEventListener('click',()=>{
   x++
-  let cardItem = document.createElement('div')
-  let cardTextNode = document.createTextNode(`${x}`)
-  cardItem.appendChild(cardTextNode)
-  container.appendChild(cardItem)
-  cardItem.classList.add('card')
-  cardItem.style.cssText = 'cursor:initial'
+  let cloneCard = card.cloneNode(true)
+  cloneCard.childNodes[0].nodeValue = `${x}`
+  container.appendChild(cloneCard)
 })
 
-// using clone node
+
