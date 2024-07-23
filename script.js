@@ -912,14 +912,29 @@
 
 // addEventListener
 // syntext : element.addEventListener('event type',any type of function)
-function sayHi(){
-  console.log('hello2')
-}
-let h1 = document.querySelector('h1')
-h1.addEventListener('click',()=>{
-  console.log('hello1')
-})
-h1.addEventListener('click', sayHi)
-h1.addEventListener('click',function(){
-  console.log('hello3')
+// function sayHi(){
+//   console.log('hello2')
+// }
+// let h1 = document.querySelector('h1')
+// h1.addEventListener('click',()=>{
+//   console.log('hello1')
+// })
+// h1.addEventListener('click', sayHi)
+// h1.addEventListener('click',function(){
+//   console.log('hello3')
+// })
+
+// mini project with addEventListener
+let container = document.querySelector('.container')
+let card = document.querySelector('.card')
+card.style.cssText = 'cursor:pointer'
+let x = 0
+card.addEventListener('click',()=>{
+  x++
+  let cardItem = document.createElement('div')
+  let cardTextNode = document.createTextNode(`${x}`)
+  cardItem.appendChild(cardTextNode)
+  container.appendChild(cardItem)
+  cardItem.classList.add('card')
+  cardItem.style.cssText = 'cursor:initial'
 })
