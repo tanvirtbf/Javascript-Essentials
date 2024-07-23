@@ -884,6 +884,12 @@
 
 // Event Listener 
 //1. using onclick
+//2. ondblclick
+//3. addEventListener
+
+// difference between onclick,ondblclick and adEventListener :
+//1. onclick and ondblclick er khetre ek sathe multiple event thakle sob gula event fire hoy na . last event ta fire hoy . kintu addEventListener er khetre multiple listener thakleo sob gula fire hoy 
+
 
 // onclick 
 // function sayHi(){
@@ -897,9 +903,23 @@
 // document.body.childNodes[1].setAttribute('onclick','sayHello()')
 
 // ondblclick
+// function sayHi(){
+//   console.log("Hello World")
+// }
+// document.querySelector('h1').ondblclick = sayHi
+// document.body.children[0].setAttribute('ondblclick','sayHi()')
+// document.children[0].children[1].childNodes[1].setAttribute('ondblclick','console.log("Helloooooo")')
+
+// addEventListener
+// syntext : element.addEventListener('event type',any type of function)
 function sayHi(){
-  console.log("Hello World")
+  console.log('hello2')
 }
-document.querySelector('h1').ondblclick = sayHi
-document.body.children[0].setAttribute('ondblclick','sayHi()')
-document.children[0].children[1].childNodes[1].setAttribute('ondblclick','console.log("Helloooooo")')
+let h1 = document.querySelector('h1')
+h1.addEventListener('click',()=>{
+  console.log('hello1')
+})
+h1.addEventListener('click', sayHi)
+h1.addEventListener('click',function(){
+  console.log('hello3')
+})
