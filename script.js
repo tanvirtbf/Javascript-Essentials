@@ -810,14 +810,27 @@
 // Ans : append only first parameter , that's mean append only newText, not append h1
 
 //Mini Project
+// const container = document.querySelector('.container')
+// const image = document.querySelector('.container > img')
+// let j = 2
+// for(let i = 1; i<100; i++){
+//   if(i%3 == 0){
+//     j = 1;
+//   }
+//   container.appendChild(image.cloneNode(true))
+//   container.children[i].attributes[0].nodeValue = `./image/me${j}.jpg`
+//   j++
+// }
+
+
+// Create Element -- document.createElement('div')
 const container = document.querySelector('.container')
-const image = document.querySelector('.container > img')
-let j = 2
-for(let i = 1; i<100; i++){
-  if(i%3 == 0){
-    j = 1;
-  }
-  container.appendChild(image.cloneNode(true))
-  container.children[i].attributes[0].nodeValue = `./image/me${j}.jpg`
-  j++
-}
+const para = document.createElement('p')
+para.innerText = 'Hi, My name is Tanvir Ahmed'
+// para.classList.add('para')
+// para.classList.toggle('para')
+// para.style.color = 'blue'
+// para.style.cssText = 'color : pink;'
+para.className = 'para'
+container.appendChild(para)
+

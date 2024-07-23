@@ -8,3 +8,7 @@ img{
   width: 60px;
   height: 60px;
 }
+.para {
+  color: green;
+  font-weight: 500;
+}
