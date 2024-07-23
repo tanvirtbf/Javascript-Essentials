@@ -944,7 +944,7 @@
 
 // using clone node
 let container = document.querySelector('.container')
-let card = document.querySelector('.card')
+let card = document.querySelector('.plusIcon')
 let x = 0;
 
 card.addEventListener('click',()=>{
@@ -952,6 +952,10 @@ card.addEventListener('click',()=>{
   let cloneCard = card.cloneNode(true)
   cloneCard.childNodes[0].nodeValue = `${x}`
   container.appendChild(cloneCard)
+  if(x>=1){
+    container.children[x].classList.add('card')
+    container.children[x].classList.remove('plusIcon')
+  }
 })
 
 
