@@ -925,6 +925,8 @@
 // })
 
 // mini project with addEventListener
+
+// using create Element
 let container = document.querySelector('.container')
 let card = document.querySelector('.card')
 card.style.cssText = 'cursor:pointer'
@@ -939,3 +941,5 @@ card.addEventListener('click',()=>{
   cardItem.classList.add('card')
   cardItem.style.cssText = 'cursor:initial'
 })
+
+// using clone node
