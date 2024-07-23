@@ -742,6 +742,14 @@ let h1 = document.querySelector('h1')
 let container = document.querySelector('.container')
 let card = document.querySelector('.card')
 
-function appendH1(){
-  container.appendChild(h1)
-}
+// function appendH1(){
+//   container.appendChild(h1)
+// }
+// function cloneAppend(){
+//   container.appendChild(h1.cloneNode(true))
+// }
+// for(let i = 0; i<99; i++){
+//   let newCard = card.cloneNode()
+//   newCard.innerText = i+2
+//   container.appendChild(newCard)
+// }
