@@ -1016,8 +1016,31 @@ let para = document.querySelector('p')
 
 //1. keypress event
 let h1 = document.querySelector('h1')
-h1.addEventListener('keypress', (e)=>{
-  console.log(e.key)
+// keypress event e shift key press korle kono event hoy na
+// h1.addEventListener('keypress', (e)=>{
+//   console.log(e.key)
+//   console.log(e)
+//   e.target.childNodes[0].nodeValue = e.key
+// })
+//understand key code -- e.code 
+// window er upor keypress event dile attribute tabindex="0" deya lage na 
+// window.addEventListener('keypress',(e)=>{
+//   console.log(e.code)
+//   console.log(e.key)
+// })
+
+// //2. keyup
+// // sob kichu keypress er motoi , just kono key press kore dhore rakhle event fire hoy na , jodi key press kore chere dei tokhon fire hoy . aijonnoi nam keyup event
+// h1.addEventListener('keyup',(e)=>{
+//   console.log(e)
+//   console.log(e.key)
+//   console.log(e.code)
+// })
+
+//3. keydown
+// ekdom keyup er biporit . press kore rakhle event fire hoy, press kore chere dile event kaj kore na 
+h1.addEventListener('keydown',(e)=>{
   console.log(e)
-  e.target.childNodes[0].nodeValue = e.key
+  console.log(e.key)
+  console.log(e.code)
 })
