@@ -996,11 +996,11 @@ let para = document.querySelector('p')
 // })
 
 // FormData
-let form = document.querySelector('form')
-form.addEventListener('submit',(e)=>{
-  e.preventDefault()
-  const formData = new FormData(form) // form or e.target
-  for(const p of formData.entries()){
-    console.log(p)
-  }
-})
+// let form = document.querySelector('form')
+// form.addEventListener('submit',(e)=>{
+//   e.preventDefault()
+//   const formData = new FormData(form) // form or e.target
+//   for(const p of formData.entries()){
+//     console.log(p)
+//   }
+// })
