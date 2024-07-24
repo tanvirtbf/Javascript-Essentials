@@ -1011,3 +1011,13 @@ let para = document.querySelector('p')
 //1. keyup
 //2. keydown
 //3. keypress 
+
+//note: jekono event jodi focus obosthay thake tahole sei element er upor keyboard event lagano jabe 
+
+//1. keypress event
+let h1 = document.querySelector('h1')
+h1.addEventListener('keypress', (e)=>{
+  console.log(e.key)
+  console.log(e)
+  e.target.childNodes[0].nodeValue = e.key
+})
