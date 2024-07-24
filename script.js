@@ -1007,3 +1007,7 @@ let para = document.querySelector('p')
 
 
 // KeyBoard Event
+// 3 types of keyboard event
+//1. keyup
+//2. keydown
+//3. keypress 
