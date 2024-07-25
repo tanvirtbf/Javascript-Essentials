@@ -1030,6 +1030,7 @@ let h1 = document.querySelector('h1')
 // })
 
 // //2. keyup
+// // keyup and keydown event e shift kaj kore
 // // sob kichu keypress er motoi , just kono key press kore dhore rakhle event fire hoy na , jodi key press kore chere dei tokhon fire hoy . aijonnoi nam keyup event
 // h1.addEventListener('keyup',(e)=>{
 //   console.log(e)
@@ -1039,8 +1040,11 @@ let h1 = document.querySelector('h1')
 
 //3. keydown
 // ekdom keyup er biporit . press kore rakhle event fire hoy, press kore chere dile event kaj kore na 
-h1.addEventListener('keydown',(e)=>{
-  console.log(e)
-  console.log(e.key)
-  console.log(e.code)
-})
+// h1.addEventListener('keydown',(e)=>{
+//   console.log(e)
+//   console.log(e.key)
+//   console.log(e.code)
+// })
+
+// summary of keyboard event 
+// 1. jekono element e keyboard event dei na kno sei element er attribute e tabindex="0" eta dite hobe . kintu window or document er upor event listener lagale eta dite hobe na . maximum usecase window or document er uporeii hoye thake . bishesh kore document 
