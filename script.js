@@ -1048,3 +1048,9 @@ let h1 = document.querySelector('h1')
 
 // summary of keyboard event 
 // 1. jekono element e keyboard event dei na kno sei element er attribute e tabindex="0" eta dite hobe . kintu window or document er upor event listener lagale eta dite hobe na . maximum usecase window or document er uporeii hoye thake . bishesh kore document 
+
+
+
+// Mouse Event 
+
+
