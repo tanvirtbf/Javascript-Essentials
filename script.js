@@ -592,18 +592,33 @@ console.log(x) // Ans : 10
 // Scope Chain
 // jokhon kono variable tar value ke existing scope e na pay tokhon se tar thik immidiate next scope e take khujte thake . jodi sekhaneo na pay tahole setar immidiate next scope e variable ta khujte thake . evabe variable khujar jonno scope nicher dike jete thake 
 // EX : 
-function hello(){
-  var a = 10;
-  hello1()
-  function hello1(){
-    hello2()
-    function hello2(){
-      console.log(a)
-    }
-  }
-}
-hello()
+// function hello(){
+//   var a = 10;
+//   hello1()
+//   function hello1(){
+//     hello2()
+//     function hello2(){
+//       console.log(a)
+//     }
+//   }
+// }
+// hello()
 // Ans : 10
+
+// EX : 
+function hello(){
+  function one(){
+    console.log(a)
+  }
+  function two(){
+    var a = 10;
+  }
+  var a = 100000;
+  two()
+  one()
+}
+hello() // Ans : 100000 
+// ekhane console.log(a) te aisha a variable ke na peye se tar immidiate scope , mane hello() function er scope e a ke khujte thake . se kintu tar siblings kono scope e check korbe na , mane two() function er scope er vitor khujbe na . se only tar parent scope e khujbe . tokhon se parent scope e giye a er value 100000 peyeche and print kore diyeche 
 
 
 
