@@ -535,7 +535,10 @@ var test = function (){
   console.log('Hello World')
 }
 //Ans : Error- test is not a function 
-// karon test ekta variable hishebe count hoise. test er value ekta function kintu test kono function na . 
+// karon test ekta variable hishebe count hoise. test er value ekta function kintu test kono function na .
+
+// note for hoisting : 
+// let and const er khetre variable hoisting possible na . karon var er khetre creation phase e undefined assign kora hoy kintu let and const er khetre kichuii assign kora hoy na . tai let and const er khetre hoisting korle error ashbe . tar mane javascript amader pressure dicche jate amra kono variable or function declare korar age execute na kori 
 
 //Browser Object Mode
 //1. Location = window.location OR location
