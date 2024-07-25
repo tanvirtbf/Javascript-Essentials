@@ -525,6 +525,10 @@
 // add();
 // console.log("Program Ended");
 
+// Hoisting 
+//1. Variable hoisting (variable create korar ageii oi variable ke use kora)
+//2. function hoisting (function ke create korar agei oi function ke use kora)
+
 //Browser Object Mode
 //1. Location = window.location OR location
 //2. History = window.history OR history
