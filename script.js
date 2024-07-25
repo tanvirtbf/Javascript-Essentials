@@ -544,11 +544,15 @@
 
 // Scope and Scope Chain
 //4 types of scope 
-//1. Global Scope
-//2. Local Scope or Functional Scope
-//3. Block Scope 
+//1. Global Scope (without block scope or local scope)
+//2. Local Scope or Functional Scope (function(){..})
+//3. Block Scope ({} or if(){} or for(){} etc..)
 //4. Module Scope
 
+//1. Global Scope 
+// rules :  jodi kono function er vitor othoba kono block er vitor na thake tahole seta global scope . var let const jeta diyeii variable declare kori na kno seta global scope hoye jay . 
+// rules : eta jekono function block everything sob jayga theke access hote pare 
+// rules : global scope use korar ee dorkar nei . jodi use korteii hoy tahole const diye use korle valo . nahole variable override hoye jauyar chance thake
 
 
 
