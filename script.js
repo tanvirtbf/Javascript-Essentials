@@ -543,6 +543,11 @@
 
 
 // Scope and Scope Chain
+//4 types of scope 
+//1. Global Scope
+//2. Local Scope or Functional Scope
+//3. Block Scope 
+//4. Module Scope
 
 
 
