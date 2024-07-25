@@ -258,15 +258,15 @@
 // const funVal = testReturn()
 // console.log(funVal)
 
-// Tokenization in Javascript
-// var code = 'var x = 5 + 3;';
-// var tokens = code.match(/(\b\w+\b|[^\s])/g);
-// console.log(tokens); //  Answer : ["var", "x", "=", "5", "+", "3", ";"] -> Tokenization
-// Tokenization in Deep
-// function hello (){
-//   let a = 10;
-//   return a + 1;
-// }
+Tokenization in Javascript
+var code = 'var x = 5 + 3;';
+var tokens = code.match(/(\b\w+\b|[^\s])/g);
+console.log(tokens); //  Answer : ["var", "x", "=", "5", "+", "3", ";"] -> Tokenization
+Tokenization in Deep
+function hello (){
+  let a = 10;
+  return a + 1;
+}
 //Tokenization => "function(keyword)","hello(a function name)","(){ (function start)","let(a variable will be declared)","a(a variable name)","10(value of a)","return(keyword)","a+1(expresstion for return where it's called)","}(function end)"
 
 //Abstract Syntex Tree
