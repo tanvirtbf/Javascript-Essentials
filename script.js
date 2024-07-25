@@ -540,6 +540,17 @@
 // note for hoisting : 
 // let and const er khetre variable hoisting possible na . karon var er khetre creation phase e undefined assign kora hoy kintu let and const er khetre kichuii assign kora hoy na . tai let and const er khetre hoisting korle error ashbe . tar mane javascript amader pressure dicche jate amra kono variable or function declare korar age execute na kori 
 
+
+
+// Scope and Scope Chain
+
+
+
+
+
+
+
+
 //Browser Object Mode
 //1. Location = window.location OR location
 //2. History = window.history OR history
