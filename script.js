@@ -582,14 +582,28 @@ console.log(x) // Ans : 10
 // var : var holo functional scope . function er baire access kora jay na . kintu block er baire access kora jay . karon var block scope na . 
 // let and const : kintu let and const block scope . block er baire access kora jay na 
 // EX : 
-if(true){
-  let x = 10;
-  const y  = 20;
+// if(true){
+//   let x = 10;
+//   const y  = 20;
+// }
+// console.log(x) // Error : x is not defined
+// console.log(y) // Error : y is not defined
+
+// Scope Chain
+// jokhon kono variable tar value ke existing scope e na pay tokhon se tar thik immidiate next scope e take khujte thake . jodi sekhaneo na pay tahole setar immidiate next scope e variable ta khujte thake . evabe variable khujar jonno scope nicher dike jete thake 
+// EX : 
+function hello(){
+  var a = 10;
+  hello1()
+  function hello1(){
+    hello2()
+    function hello2(){
+      console.log(a)
+    }
+  }
 }
-console.log(x) // Error : x is not defined
-console.log(y) // Error : y is not defined
-
-
+hello()
+// Ans : 10
 
 
 
