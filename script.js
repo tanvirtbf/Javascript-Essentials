@@ -554,7 +554,20 @@
 // rules : eta jekono function block everything sob jayga theke access hote pare 
 // rules : global scope use korar ee dorkar nei . jodi use korteii hoy tahole const diye use korle valo . nahole variable override hoye jauyar chance thake
 
+//2. Local Scope or Functional Scope
+// rules : function er vitor var diye hok, let diye hok , const diye hok jeta diyeii variable declare kori na kno seta oi function er baire access kora jay na . etaii local scope or functional scope
 
+// Shadowing
+// jodi globally kono variable er same name diye locally kono variable declare kora hoy and tader value jodi change hoy tahole localscope e local variable value taii show hobe r global scope e global variable er value ta show hobe 
+// EX : 
+var a = 'hello'
+function sayHi(){
+  var a = 'hello world'
+  console.log(a) // Ans : hello world
+}
+console.log(a) // Ans : hello
+// ekhane global scope er variable er value ta ke local scope e hide kora hoyeche 
+// othoba jodi amra execution context diye eta map kori tahole bujhte parbo kno ei code er answer erokom holo 
 
 
 
