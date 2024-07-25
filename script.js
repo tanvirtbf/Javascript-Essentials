@@ -560,14 +560,36 @@
 // Shadowing
 // jodi globally kono variable er same name diye locally kono variable declare kora hoy and tader value jodi change hoy tahole localscope e local variable value taii show hobe r global scope e global variable er value ta show hobe 
 // EX : 
-var a = 'hello'
-function sayHi(){
-  var a = 'hello world'
-  console.log(a) // Ans : hello world
-}
-console.log(a) // Ans : hello
+// var a = 'hello'
+// function sayHi(){
+//   var a = 'hello world'
+//   console.log(a) // Ans : hello world
+// }
+// console.log(a) // Ans : hello
 // ekhane global scope er variable er value ta ke local scope e hide kora hoyeche 
 // othoba jodi amra execution context diye eta map kori tahole bujhte parbo kno ei code er answer erokom holo 
+
+//3. Block Scope 
+// Tricky part
+if(true){
+  var x = 10;
+}
+console.log(x) // Ans : 10 
+// kintu ai answer kivabe holo ? eta to houyar chilo na . niche tar bekkha kora holo -> 
+// var holo only function scope . tar mane var diye kono function er vitore variable create hole seta oi function er baire access kora jabe na . kintu var kintu block scope na . tar mane holo if(){}, {..}, for(){..} ai type er block er vitor var diye kono variable create korleo seta ai block gular baire access kora jabe . kintu let and const block scope . tar mane block er baire access kora jay na 
+
+// Difference between var , let and const 
+// var : var holo functional scope . function er baire access kora jay na . kintu block er baire access kora jay . karon var block scope na . 
+// let and const : kintu let and const block scope . block er baire access kora jay na 
+// EX : 
+if(true){
+  let x = 10;
+  const y  = 20;
+}
+console.log(x) // Error : x is not defined
+console.log(y) // Error : y is not defined
+
+
 
 
 
