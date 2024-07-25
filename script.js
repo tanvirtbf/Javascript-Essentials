@@ -530,10 +530,10 @@
 //2. function hoisting (function ke create korar agei oi function ke use kora)
 
 //A tricky question 
-test();
-var test = function (){
-  console.log('Hello World')
-}
+// test();
+// var test = function (){
+//   console.log('Hello World')
+// }
 //Ans : Error- test is not a function 
 // karon test ekta variable hishebe count hoise. test er value ekta function kintu test kono function na .
 
