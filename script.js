@@ -635,8 +635,6 @@
 
 
 
-
-
 //Browser Object Mode
 //1. Location = window.location OR location
 //2. History = window.history OR history
