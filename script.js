@@ -100,7 +100,7 @@
 // const result = null ? 'Tanvir' : '' ? 12 : 1 ? 11 : 22
 // console.log(result)
 
-// How to see variable address in dev tools
+// How to See variable address in dev tools
 // const firstName = 'Tanvir'
 // const firstRule = 'Tanvir'
 // const userAge = 15
