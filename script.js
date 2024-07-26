@@ -624,7 +624,13 @@ console.log(x) // Ans : 10
 // Immutability and Mutability 
 // definition : immutability mane jeta change kora jay na . mutability mane jeta change kora jay 
 
+// primitive data type immutable or mutable ? 
+let a = 'hello'
+a = 'hii'
+console.log(a) // Ans : hii
+// ekhane dekha jacche je primitive data type er value change kora jacche , tar mane ki eta mutable ? Ans is No. ekhane javascript kokhonoii ager a variable er value ke shoraiya notun value ke rakhe nai . javascript kono notun memory container er new value ta rakhse and just a er pointer ta change kore notun value jei memory address e ase setay point kortese . tar mane primitive data type sob gulaii immutable 
 
+// Object and Array is Mutable 
 
 
 
