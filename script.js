@@ -571,10 +571,10 @@
 
 //3. Block Scope 
 // Tricky part
-if(true){
-  var x = 10;
-}
-console.log(x) // Ans : 10 
+// if(true){
+//   var x = 10;
+// }
+// console.log(x) // Ans : 10 
 // kintu ai answer kivabe holo ? eta to houyar chilo na . niche tar bekkha kora holo -> 
 // var holo only function scope . tar mane var diye kono function er vitore variable create hole seta oi function er baire access kora jabe na . kintu var kintu block scope na . tar mane holo if(){}, {..}, for(){..} ai type er block er vitor var diye kono variable create korleo seta ai block gular baire access kora jabe . kintu let and const block scope . tar mane block er baire access kora jay na 
 
@@ -625,9 +625,9 @@ console.log(x) // Ans : 10
 // definition : immutability mane jeta change kora jay na . mutability mane jeta change kora jay 
 
 // primitive data type immutable or mutable ? 
-let a = 'hello'
-a = 'hii'
-console.log(a) // Ans : hii
+// let a = 'hello'
+// a = 'hii'
+// console.log(a) // Ans : hii
 // ekhane dekha jacche je primitive data type er value change kora jacche , tar mane ki eta mutable ? Ans is No. ekhane javascript kokhonoii ager a variable er value ke shoraiya notun value ke rakhe nai . javascript kono notun memory container er new value ta rakhse and just a er pointer ta change kore notun value jei memory address e ase setay point kortese . tar mane primitive data type sob gulaii immutable 
 
 // Object and Array is Mutable 
@@ -676,7 +676,7 @@ console.log(a) // Ans : hii
 //   document.children[0].children[1].children[4].alt = 'hello image';
 // }
 
-// console.dir(document)
+console.dir(document)
 
 //getElementsByTagName
 // const hello = document.getElementsByTagName('h2');
