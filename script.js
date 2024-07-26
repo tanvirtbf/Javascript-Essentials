@@ -809,6 +809,9 @@
 //   document.body.children[0].classList.remove('hell');
 // },2000)
 
+// some notes for class in js 
+// classList chara baki method e ager kono className thakleo seta override hoye jay kintu classList e ager gula ager motoii thake, just another class add or remove kora hoy 
+
 // all css style change summary
 // let p = window.document.children[0].children[1];
 // let allP = p.querySelectorAll('p');
