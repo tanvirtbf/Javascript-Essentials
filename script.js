@@ -101,6 +101,9 @@
 // console.log(result)
 
 // How to See variable address in dev tools
+let firstName = 'Tanvir'
+let userAge = 25
+let isGraduate = false
 // const firstName = 'Tanvir'
 // const firstRule = 'Tanvir'
 // const userAge = 15
