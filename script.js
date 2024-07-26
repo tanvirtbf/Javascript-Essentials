@@ -1130,7 +1130,7 @@
 //note: jekono event jodi focus obosthay thake tahole sei element er upor keyboard event lagano jabe 
 
 //1. keypress event
-let h1 = document.querySelector('h1')
+// let h1 = document.querySelector('h1')
 // keypress event e shift key press korle kono event hoy na
 // h1.addEventListener('keypress', (e)=>{
 //   console.log(e.key)
