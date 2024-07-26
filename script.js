@@ -826,7 +826,7 @@
 //   allP[i].style.color = 'red'
 // }
 
-//Access Parent , Sibling and children element
+// Access Parent , Sibling and children element
 
 // Access Parent
 // const li = document.querySelector('ul li:nth-child(3)')
