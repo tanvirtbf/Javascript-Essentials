@@ -1076,8 +1076,8 @@
 
 
 // Form Event and Event Object 
-let input = document.querySelector('input')
-let para = document.querySelector('p')
+// let input = document.querySelector('input')
+// let para = document.querySelector('p')
 
 //input event (input e kichu likhleii fire hote thake)
 // input.addEventListener('input',(e)=>{
