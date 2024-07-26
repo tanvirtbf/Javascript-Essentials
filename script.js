@@ -830,7 +830,6 @@
 
 // Access Parent
 // const li = document.querySelector('ul li:nth-child(3)')
-
 // li.parentElement.parentElement // body
 // li.parentElement // ul
 // li.parentElement.parentElement.parentElement // html
