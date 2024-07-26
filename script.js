@@ -606,19 +606,26 @@ console.log(x) // Ans : 10
 // Ans : 10
 
 // EX : 
-function hello(){
-  function one(){
-    console.log(a)
-  }
-  function two(){
-    var a = 10;
-  }
-  var a = 100000;
-  two()
-  one()
-}
-hello() // Ans : 100000 
+// function hello(){
+//   function one(){
+//     console.log(a)
+//   }
+//   function two(){
+//     var a = 10;
+//   }
+//   var a = 100000;
+//   two()
+//   one()
+// }
+// hello() // Ans : 100000 
 // ekhane console.log(a) te aisha a variable ke na peye se tar immidiate scope , mane hello() function er scope e a ke khujte thake . se kintu tar siblings kono scope e check korbe na , mane two() function er scope er vitor khujbe na . se only tar parent scope e khujbe . tokhon se parent scope e giye a er value 100000 peyeche and print kore diyeche 
+
+
+// Immutability and Mutability 
+// definition : immutability mane jeta change kora jay na . mutability mane jeta change kora jay 
+
+
+
 
 
 
