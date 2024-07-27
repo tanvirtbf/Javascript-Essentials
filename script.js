@@ -340,16 +340,76 @@
 // obj2 address is : @434343
 
 // Shallow Copy with Object.assign(newItem,oldItem)
-let obj1 = {
-  fname : 'Tanvir',
-  lname : 'Ahmed',
-  age : 25
-} 
-let obj2 = {}
-Object.assign(obj2,obj1)
-console.log(obj1 === obj2) // Ans : false
+// let obj1 = {
+//   fname : 'Tanvir',
+//   lname : 'Ahmed',
+//   age : 25
+// } // @123456
+// let obj2 = {} // @546434
+// Object.assign(obj2,obj1)
+// console.log(obj1 === obj2) // Ans : false
+// ekhane obj1 and obj2 er memory address not same
 
+// Shallow Copy with spread operator
+// let obj1 = {
+//   fname : 'Tanvir',
+//   lname : 'Ahmed',
+//   age : 24,
+// } // @123456
+// let obj2 = {...obj1} // @343434
+// console.log(obj1 === obj2)
 
+// let arr1 = [1,2,3]
+// let arr2 = [...arr1]
+// console.log(arr1 === arr2)
+
+// Shallow Copy with for loop
+// numbers = [1, 2, 3];
+// numbersCopy = [];
+
+// for (i = 0; i < numbers.length; i++) {
+//   numbersCopy[i] = numbers[i];
+// }
+
+//Shallow Copy with while loop
+// numbers = [1, 2, 3];
+// numbersCopy = [];
+// i = -1;
+
+// while (++i < numbers.length) {
+//   numbersCopy[i] = numbers[i];
+// }
+
+// Shallow Copy with Map
+// numbers = [1, 2, 3];
+// numbersCopy = numbers.map((x) => x);
+
+// Shallow Copy with filter method
+// [1, 2, 3].filter((x) => x % 2 === 0);
+// // [2]
+// numbers = [1, 2, 3];
+// numbersCopy = numbers.filter(() => true);
+
+// Shallow Copy with Reduce 
+// numbers = [1, 2, 3];
+
+// numbersCopy = numbers.reduce((newArray, element) => {
+//   newArray.push(element);
+
+//   return newArray;
+// }, []);
+
+// Shallow Copy with Slice
+// numbers = [1, 2, 3, 4, 5];
+// numbersCopy = numbers.slice();
+// // [1, 2, 3, 4, 5]
+// [1, 2, 3, 4, 5].slice(0, 3);
+// // [1, 2, 3]
+// // Starts at index 0, stops at index 3
+
+// Shallow Copy with Concat method
+// [1, 2, 3].concat(4); // [1, 2, 3, 4]
+// [1, 2, 3].concat([4, 5]); // [1, 2, 3, 4, 5]
 
 
 // let fruits = ['Mango','Banana','Jackfruits','Grapes','Dates']
