@@ -101,17 +101,21 @@
 // console.log(result)
 
 // How to See variable address in dev tools
-// let firstName = 'Tanvir'
-// let userAge = 25
-// let isGraduate = false
+// const firstName = 'Tanvir'
+// const lastName = 'Ahmed'
+// const userAge = 25
+// const isGraduate = false
 // const firstName = 'Tanvir'
 // const firstRule = 'Tanvir'
 // const userAge = 15
-// const isGraduate = false
-// const hasJob = false
-// const isStudent = true
-// const isNull = null
-// const isUndefined = undefined
+// const isGraduate = false //@75
+// const hasJob = false //@75
+// const isStudent = true // @73 fixed for true value
+// const isNull = null // @71 address is fixed everywhere
+// const isUndefined = undefined // @67 fixed for undefined value
+
+
+
 
 //Objects => Non-premitive Data Type
 // const user1 = {
