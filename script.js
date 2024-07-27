@@ -282,7 +282,10 @@
 // const user1 = {firstName:'Tanvir',lastName:'Ahmed'}
 // let user2 = {...user1}
 
-// let fruits = ['Mango','Banana','Jackfruits','Grapes','Dates']
+// Arrays 
+let fruits = ['Mango','Banana','Jackfruits','Grapes','Dates']
+// fruits.push('Amm') // add last in element in same reference array
+// fruits.pop() // delete last element in same reference array
 // let allFruits = fruits
 // console.log(allFruits===fruits)
 // let allFruits = []
@@ -953,6 +956,8 @@
 // let container = document.querySelector('.container')
 // let card = document.querySelector('.card')
 
+// document.body.appendChild(document.children[0].children[1].children[2].children[0])
+
 // document.querySelector('body > .container').appendChild(document.querySelector('body > h1'))
 // function appendH1(){
 //   container.appendChild(h1)
@@ -1051,7 +1056,7 @@
 
 // let container = document.body.querySelector(".container");
 // let x = 1;
-// //let myHtml ;
+// let myHtml ;
 
 // for (let i = 1; i <= 100; i++) {
 //   // myHtml = myHtml + `
