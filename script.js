@@ -212,8 +212,20 @@
 
 // Object.seal(obj) and Object.freeze(obj)
 
-// console.log('my addresss' in obj)
+// Object.seal(obj)
+const user = {
+  fname : 'Tanvir',
+  lname : 'Ahmed',
+  address : {
+    state : 'Dhaka',
+    city : 'Polashpur'
+  }
+}
+Object.seal(user)
+// Object.seal function ta object ke delete korte dibe na + kono kichu new add korte dibe na 
 
+
+// console.log('my addresss' in obj)
 // const arr = [1,2,3,4,5]
 // const obj = {names:'tanvir'}
 // console.log(typeof(arr))
