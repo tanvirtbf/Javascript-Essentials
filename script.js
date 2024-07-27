@@ -209,7 +209,6 @@
 
 
 
-
 // Object.seal(obj) and Object.freeze(obj)
 
 // Object.seal(obj)
@@ -222,7 +221,7 @@
 //   }
 // }
 // Object.seal(user)
-// Object.seal function ta object ke delete korte dibe na + kono kichu new add korte dibe na 
+// Object.seal function ta object ke delete korte dibe na + kono kichu new add korte dibe na kintu object er kono property er value update korte dibe 
 
 // Object.freeze(obj)
 // const user = {
@@ -238,18 +237,18 @@
 
 // In keyword
 // object er vitore kono property ache kina check korar jonno use hoy 
-const user = {
-  fname : 'Tanvir',
-  lname : 'Ahmed',
-  address : {
-    state : 'Dhaka',
-    city : 'Polashpur'
-  }
-}
-console.log('fname' in user ) // Ans : True
-console.log('designation' in user) // Ans : false
-console.log('address' in user) // Ans : true
-console.log('state' in user) // Ans : false
+// const user = {
+//   fname : 'Tanvir',
+//   lname : 'Ahmed',
+//   address : {
+//     state : 'Dhaka',
+//     city : 'Polashpur'
+//   }
+// }
+// console.log('fname' in user ) // Ans : True
+// console.log('designation' in user) // Ans : false
+// console.log('address' in user) // Ans : true
+// console.log('state' in user) // Ans : false
 
 
 // console.log('my addresss' in obj)
@@ -949,6 +948,7 @@ console.log('state' in user) // Ans : false
 // document.children[0].children[1].children[1].childNodes[1].childNodes[0].nodeValue = 'Hello My Love!!'
 
 // Append & AppendChild -- append , appendChild
+// Append and AppendChild kono element ke onno element er vitore cut kore last e place kore dey . kintu jodi oi element ke copy node kore tarpor appendChild or Append kore tahole oitar copy ashe kintu oi element ager jayga teii thake 
 // let h1 = document.querySelector('h1')
 // let container = document.querySelector('.container')
 // let card = document.querySelector('.card')
