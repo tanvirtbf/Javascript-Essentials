@@ -144,6 +144,14 @@ console.log(user1===user2) // Ans : false
 
 // Note : user1 and user2 er value same diye create kora holeo tader variable address same na and user1 === user2 is false . karon object non-primitive . tai ekhane value compare na hoye memory address compare hoise . 
 
+// key value pair
+const hello = {
+  "firstName" : "Tanvir",
+  'lastName' : 'Ahmed',
+  address : 'Dhaka',
+  'userAge' : 25
+}
+// Note : object er key by default string hoye thake . eta ke double qoute or single quote na dileo eta string hishebei count hobe
 
 // const user2 = {
 //   'firs tName': 'Sadia',
