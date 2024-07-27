@@ -213,6 +213,18 @@
 // Object.seal(obj) and Object.freeze(obj)
 
 // Object.seal(obj)
+// const user = {
+//   fname : 'Tanvir',
+//   lname : 'Ahmed',
+//   address : {
+//     state : 'Dhaka',
+//     city : 'Polashpur'
+//   }
+// }
+// Object.seal(user)
+// Object.seal function ta object ke delete korte dibe na + kono kichu new add korte dibe na 
+
+// Object.freeze(obj)
 const user = {
   fname : 'Tanvir',
   lname : 'Ahmed',
@@ -221,8 +233,8 @@ const user = {
     city : 'Polashpur'
   }
 }
-Object.seal(user)
-// Object.seal function ta object ke delete korte dibe na + kono kichu new add korte dibe na 
+Object.freeze(user)
+// Object.freeze use korle oi object e r keu kokhono property add korte parbe na + property delete korte parbe na and property value update korte parbe na . mot kotha kichui korte parbe na 
 
 
 // console.log('my addresss' in obj)
