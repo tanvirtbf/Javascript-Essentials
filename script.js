@@ -314,6 +314,43 @@
 
 
 // Deep Copy and Shallow Copy
+// let firstName = 'Tanvir' // @39939
+// let name = firstName // @39939
+
+// name = name + ' Ahmed'
+// console.log(name === firstName+' Ahmed') // Ans : true
+
+// let fruits = ['Mango','Banana','Jackfruits','Grapes','Dates']
+// let arr = fruits
+// arr.push('hello')
+// console.log(fruits) // ['Mango', 'Banana', 'Jackfruits', 'Grapes', 'Dates', 'hello']
+// console.log(arr) // ['Mango', 'Banana', 'Jackfruits', 'Grapes', 'Dates', 'hello']
+// karon ekhane arr and fruits 2 taii same memory address e point kora chilo tai arr e change korle fruits e hobe, fruits e korle arr e hobe
+
+// Note : 
+// let arr1 = [1,2,3]
+// let arr2 = arr1
+
+// let obj1 = {fname : 'Tanvir', age : 24}
+// let obj2 = obj1
+// ekhane equal sign operator diye same value onno variable e ante gele ager memory address tai point hoy 
+// arr1 address is : @123456
+// arr2 address is : @123456
+// obj1 address is : @434343
+// obj2 address is : @434343
+
+// Shallow Copy with Object.assign(newItem,oldItem)
+let obj1 = {
+  fname : 'Tanvir',
+  lname : 'Ahmed',
+  age : 25
+} 
+let obj2 = {}
+Object.assign(obj2,obj1)
+console.log(obj1 === obj2) // Ans : false
+
+
+
 
 // let fruits = ['Mango','Banana','Jackfruits','Grapes','Dates']
 // fruits.push('Amm') // add last in element in same reference array
