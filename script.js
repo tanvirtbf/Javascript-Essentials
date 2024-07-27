@@ -283,35 +283,37 @@
 // let user2 = {...user1}
 
 // Arrays 
-let a = ['Mango','Banana','Jackfruits','Grapes','Dates']
+// let a = ['Mango','Banana','Jackfruits','Grapes','Dates']
 
 // Push Method
-a.push('Kola','Aam')
-console.log(a)
+// a.push('Kola','Aam')
+// console.log(a)
 // Ans : ['Mango', 'Banana', 'Jackfruits', 'Grapes', 'Dates', 'Kola', 'Aam']
 // push method diye array er last e kono value add kora jay
 
 // Pop Method
-a.pop() 
-a.pop()
-console.log(a)
+// a.pop() 
+// a.pop()
+// console.log(a)
 // Ans : ['Mango', 'Banana', 'Jackfruits', 'Grapes', 'Dates']
 // pop method diye array last theke value delete kora hoy 
 
 // Unshift Method (opposite of Push Method)
-a.unshift('kola','ruti')
-console.log(a)
+// a.unshift('kola','ruti')
+// console.log(a)
 // Ans : ['kola', 'ruti', 'Mango', 'Banana', 'Jackfruits', 'Grapes', 'Dates']
 // eta push method er ulta kaj kore . mane array er first e value add kore
 
 // Shift Method (Opposite of Pop Method)
-a.shift()
-a.shift()
-console.log(a)
+// a.shift()
+// a.shift()
+// console.log(a)
 // Ans : ['Mango', 'Banana', 'Jackfruits', 'Grapes', 'Dates']
 // eta pop method er ulta kaj kore . mane array er first theke value delete kore
 
 
+
+// Deep Copy and Shallow Copy
 
 // let fruits = ['Mango','Banana','Jackfruits','Grapes','Dates']
 // fruits.push('Amm') // add last in element in same reference array
