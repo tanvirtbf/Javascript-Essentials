@@ -225,6 +225,19 @@
 // Object.seal function ta object ke delete korte dibe na + kono kichu new add korte dibe na 
 
 // Object.freeze(obj)
+// const user = {
+//   fname : 'Tanvir',
+//   lname : 'Ahmed',
+//   address : {
+//     state : 'Dhaka',
+//     city : 'Polashpur'
+//   }
+// }
+// Object.freeze(user)
+// Object.freeze use korle oi object e r keu kokhono property add korte parbe na + property delete korte parbe na and property value update korte parbe na . mot kotha kichui korte parbe na 
+
+// In keyword
+// object er vitore kono property ache kina check korar jonno use hoy 
 const user = {
   fname : 'Tanvir',
   lname : 'Ahmed',
@@ -233,8 +246,10 @@ const user = {
     city : 'Polashpur'
   }
 }
-Object.freeze(user)
-// Object.freeze use korle oi object e r keu kokhono property add korte parbe na + property delete korte parbe na and property value update korte parbe na . mot kotha kichui korte parbe na 
+console.log('fname' in user ) // Ans : True
+console.log('designation' in user) // Ans : false
+console.log('address' in user) // Ans : true
+console.log('state' in user) // Ans : false
 
 
 // console.log('my addresss' in obj)
