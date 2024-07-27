@@ -125,22 +125,22 @@
 // ekhane same variable address na hoyeo output true ashce karon primitive data type kokhono memory address diye compare kore na . primitive data type value diye compare kore . value same hoile true hobe jodio memory address change thakuk
 
 //Objects => Non-premitive Data Type
-const firstName = "Tanvir"; // @1757053
-const lastName = "Tan" + "vir"; // @2457343
-console.log(firstName === lastName); // Ans : true
-const user1 = {
-  firstName: "Tanvir",
-  "last Name": "Ahmed",
-  age: 25,
-  hasJob: true,
-}; // @620689
-const user2 = {
-  firstName: "Tanvir",
-  "last Name": "Ahmed",
-  age: 25,
-  hasJob: true,
-}; // @620689
-console.log(user1 === user2); // Ans : false
+// const firstName = "Tanvir"; // @1757053
+// const lastName = "Tan" + "vir"; // @2457343
+// console.log(firstName === lastName); // Ans : true
+// const user1 = {
+//   firstName: "Tanvir",
+//   "last Name": "Ahmed",
+//   age: 25,
+//   hasJob: true,
+// }; // @620689
+// const user2 = {
+//   firstName: "Tanvir",
+//   "last Name": "Ahmed",
+//   age: 25,
+//   hasJob: true,
+// }; // @620689
+// console.log(user1 === user2); // Ans : false
 
 // Note : user1 and user2 er value same diye create kora holeo tader variable address same na and user1 === user2 is false . karon object non-primitive . tai ekhane value compare na hoye memory address compare hoise .
 
@@ -170,18 +170,19 @@ console.log(user1 === user2); // Ans : false
 // user2['is-Student'] = 'student' // added a new property
 
 //Object inside Object
-const obj = {
-  firstName: "Tanvir",
-  lastName: "Ahmed",
-  address: {
-    town: "Dhaka",
-    elaka: "Sonir Akhra",
-    moreDetails: {
-      more: "Polashpur",
-      age: 122,
-    },
-  },
-};
+// const obj = {
+//   firstName: "Tanvir",
+//   lastName: "Ahmed",
+//   address: {
+//     town: "Dhaka",
+//     elaka: "Sonir Akhra",
+//     moreDetails: {
+//       more: "Polashpur",
+//       age: 122,
+//     },
+//   },
+// };
+
 // Memory Allocation : 
 
 // obj // @446743
@@ -209,8 +210,7 @@ const obj = {
 
 
 
-// Object.seal(obj)
-// Object.freeze(obj)
+// Object.seal(obj) and Object.freeze(obj)
 
 // console.log('my addresss' in obj)
 
