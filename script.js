@@ -114,9 +114,9 @@
 // const isNull = null // @71 address is fixed everywhere
 // const isUndefined = undefined // @67 fixed for undefined value
 
-// Important Note : 
+// Important Note :
 // const firstName = 'Tanvir' // @1757053 address
-// const name = 'Tanvir' // @1757053 address 
+// const name = 'Tanvir' // @1757053 address
 // console.log(firstName === name ) // Ans : true
 // // But....
 // const fname = 'Tanvir' // @1757053
@@ -125,24 +125,24 @@
 // ekhane same variable address na hoyeo output true ashce karon primitive data type kokhono memory address diye compare kore na . primitive data type value diye compare kore . value same hoile true hobe jodio memory address change thakuk
 
 //Objects => Non-premitive Data Type
-const firstName = 'Tanvir' // @1757053
-const lastName = 'Tan'+'vir' // @2457343
-console.log(firstName === lastName) // Ans : true
+const firstName = "Tanvir"; // @1757053
+const lastName = "Tan" + "vir"; // @2457343
+console.log(firstName === lastName); // Ans : true
 const user1 = {
-  firstName: 'Tanvir',
-  'last Name': 'Ahmed',
+  firstName: "Tanvir",
+  "last Name": "Ahmed",
   age: 25,
-  'hasJob': true,
-} // @620689 
+  hasJob: true,
+}; // @620689
 const user2 = {
-  firstName: 'Tanvir',
-  'last Name': 'Ahmed',
+  firstName: "Tanvir",
+  "last Name": "Ahmed",
   age: 25,
-  'hasJob': true,
-} // @620689
-console.log(user1===user2) // Ans : false
+  hasJob: true,
+}; // @620689
+console.log(user1 === user2); // Ans : false
 
-// Note : user1 and user2 er value same diye create kora holeo tader variable address same na and user1 === user2 is false . karon object non-primitive . tai ekhane value compare na hoye memory address compare hoise . 
+// Note : user1 and user2 er value same diye create kora holeo tader variable address same na and user1 === user2 is false . karon object non-primitive . tai ekhane value compare na hoye memory address compare hoise .
 
 // key value pair
 // const hello = {
@@ -170,18 +170,44 @@ console.log(user1===user2) // Ans : false
 // user2['is-Student'] = 'student' // added a new property
 
 //Object inside Object
-// const obj = {
+const obj = {
+  firstName: "Tanvir",
+  lastName: "Ahmed",
+  address: {
+    town: "Dhaka",
+    elaka: "Sonir Akhra",
+    moreDetails: {
+      more: "Polashpur",
+      age: 122,
+    },
+  },
+};
+// Memory Allocation : 
+
+// obj // @446743
+// {
 //   firstName : 'Tanvir',
-//   'last Name' : 'Ahmed',
-//   'my address' : {
-//     town : 'Dhaka',
-//     'elaka' : 'Sonir Akhra',
-//     moreDetails : {
-//       more: 'Polashpur',
-//       age: 122,
-//     }
-//   }
+//   lastName : 'Ahmed',
+//   address : @658734
 // }
+
+// address // @658734 
+// {
+//   town : 'Dhaka',
+//   elaka : 'Sonir Akhra',
+//   moreDetails : @436464
+// }
+
+// moreDetails //@436464
+// {
+//   more : "Polashpur",
+//   age : 122
+// }
+
+// Note :  obj object tar vitore address object , address object er vitore moreDetails object ache . ekhane address object and moreDetails object 2 ta alada alada memory te create hoyeche . tarpor obj object er address key te address object er memory address ashce , tar value ashe nai . then address object er moreDetails key te moreDetails key er memory address ashce , tar value ashe nai . evabeii tara nested obosthay address e point kore thake . 
+
+
+
 
 // Object.seal(obj)
 // Object.freeze(obj)
@@ -420,7 +446,7 @@ console.log(user1===user2) // Ans : false
 // Globar Execution Contaxt (GEC)
 //jokhon javascript first time load hoy tokhon by default ekta execution contaxt create kore jar nam holo Global Execution Contaxt(GEC)
 // GEC 2 ta special jinish amader dey(jodio 0 line code thake)
-// 1. window 2. this (window === this => true) --> tar mane window and this same memory location point kore 
+// 1. window 2. this (window === this => true) --> tar mane window and this same memory location point kore
 
 // GEC er 2 ta phase thake
 // 1. Creation phase
@@ -562,63 +588,61 @@ console.log(user1===user2) // Ans : false
 // add();
 // console.log("Program Ended");
 
-// Hoisting 
+// Hoisting
 //1. Variable hoisting (variable create korar ageii oi variable ke use kora)
 //2. function hoisting (function ke create korar agei oi function ke use kora)
 
-//A tricky question 
+//A tricky question
 // test();
 // var test = function (){
 //   console.log('Hello World')
 // }
-//Ans : Error- test is not a function 
+//Ans : Error- test is not a function
 // karon test ekta variable hishebe count hoise. test er value ekta function kintu test kono function na .
 
-// note for hoisting : 
-// let and const er khetre variable hoisting possible na . karon var er khetre creation phase e undefined assign kora hoy kintu let and const er khetre kichuii assign kora hoy na . tai let and const er khetre hoisting korle error ashbe . tar mane javascript amader pressure dicche jate amra kono variable or function declare korar age execute na kori 
-
-
+// note for hoisting :
+// let and const er khetre variable hoisting possible na . karon var er khetre creation phase e undefined assign kora hoy kintu let and const er khetre kichuii assign kora hoy na . tai let and const er khetre hoisting korle error ashbe . tar mane javascript amader pressure dicche jate amra kono variable or function declare korar age execute na kori
 
 // Scope and Scope Chain
-//4 types of scope 
+//4 types of scope
 //1. Global Scope (without block scope or local scope)
 //2. Local Scope or Functional Scope (function(){..})
 //3. Block Scope ({} or if(){} or for(){} etc..)
 //4. Module Scope
 
-//1. Global Scope 
-// rules :  jodi kono function er vitor othoba kono block er vitor na thake tahole seta global scope . var let const jeta diyeii variable declare kori na kno seta global scope hoye jay . 
-// rules : eta jekono function block everything sob jayga theke access hote pare 
+//1. Global Scope
+// rules :  jodi kono function er vitor othoba kono block er vitor na thake tahole seta global scope . var let const jeta diyeii variable declare kori na kno seta global scope hoye jay .
+// rules : eta jekono function block everything sob jayga theke access hote pare
 // rules : global scope use korar ee dorkar nei . jodi use korteii hoy tahole const diye use korle valo . nahole variable override hoye jauyar chance thake
 
 //2. Local Scope or Functional Scope
 // rules : function er vitor var diye hok, let diye hok , const diye hok jeta diyeii variable declare kori na kno seta oi function er baire access kora jay na . etaii local scope or functional scope
 
 // Shadowing
-// jodi globally kono variable er same name diye locally kono variable declare kora hoy and tader value jodi change hoy tahole localscope e local variable value taii show hobe r global scope e global variable er value ta show hobe 
-// EX : 
+// jodi globally kono variable er same name diye locally kono variable declare kora hoy and tader value jodi change hoy tahole localscope e local variable value taii show hobe r global scope e global variable er value ta show hobe
+// EX :
 // var a = 'hello'
 // function sayHi(){
 //   var a = 'hello world'
 //   console.log(a) // Ans : hello world
 // }
 // console.log(a) // Ans : hello
-// ekhane global scope er variable er value ta ke local scope e hide kora hoyeche 
-// othoba jodi amra execution context diye eta map kori tahole bujhte parbo kno ei code er answer erokom holo 
+// ekhane global scope er variable er value ta ke local scope e hide kora hoyeche
+// othoba jodi amra execution context diye eta map kori tahole bujhte parbo kno ei code er answer erokom holo
 
-//3. Block Scope 
+//3. Block Scope
 // Tricky part
 // if(true){
 //   var x = 10;
 // }
-// console.log(x) // Ans : 10 
-// kintu ai answer kivabe holo ? eta to houyar chilo na . niche tar bekkha kora holo -> 
-// var holo only function scope . tar mane var diye kono function er vitore variable create hole seta oi function er baire access kora jabe na . kintu var kintu block scope na . tar mane holo if(){}, {..}, for(){..} ai type er block er vitor var diye kono variable create korleo seta ai block gular baire access kora jabe . kintu let and const block scope . tar mane block er baire access kora jay na 
+// console.log(x) // Ans : 10
+// kintu ai answer kivabe holo ? eta to houyar chilo na . niche tar bekkha kora holo ->
+// var holo only function scope . tar mane var diye kono function er vitore variable create hole seta oi function er baire access kora jabe na . kintu var kintu block scope na . tar mane holo if(){}, {..}, for(){..} ai type er block er vitor var diye kono variable create korleo seta ai block gular baire access kora jabe . kintu let and const block scope . tar mane block er baire access kora jay na
 
-// Difference between var , let and const 
-// var : var holo functional scope . function er baire access kora jay na . kintu block er baire access kora jay . karon var block scope na . 
-// let and const : kintu let and const block scope . block er baire access kora jay na 
-// EX : 
+// Difference between var , let and const
+// var : var holo functional scope . function er baire access kora jay na . kintu block er baire access kora jay . karon var block scope na .
+// let and const : kintu let and const block scope . block er baire access kora jay na
+// EX :
 // if(true){
 //   let x = 10;
 //   const y  = 20;
@@ -627,8 +651,8 @@ console.log(user1===user2) // Ans : false
 // console.log(y) // Error : y is not defined
 
 // Scope Chain
-// jokhon kono variable tar value ke existing scope e na pay tokhon se tar thik immidiate next scope e take khujte thake . jodi sekhaneo na pay tahole setar immidiate next scope e variable ta khujte thake . evabe variable khujar jonno scope nicher dike jete thake 
-// EX : 
+// jokhon kono variable tar value ke existing scope e na pay tokhon se tar thik immidiate next scope e take khujte thake . jodi sekhaneo na pay tahole setar immidiate next scope e variable ta khujte thake . evabe variable khujar jonno scope nicher dike jete thake
+// EX :
 // function hello(){
 //   var a = 10;
 //   hello1()
@@ -642,7 +666,7 @@ console.log(user1===user2) // Ans : false
 // hello()
 // Ans : 10
 
-// EX : 
+// EX :
 // function hello(){
 //   function one(){
 //     console.log(a)
@@ -654,23 +678,19 @@ console.log(user1===user2) // Ans : false
 //   two()
 //   one()
 // }
-// hello() // Ans : 100000 
-// ekhane console.log(a) te aisha a variable ke na peye se tar immidiate scope , mane hello() function er scope e a ke khujte thake . se kintu tar siblings kono scope e check korbe na , mane two() function er scope er vitor khujbe na . se only tar parent scope e khujbe . tokhon se parent scope e giye a er value 100000 peyeche and print kore diyeche 
+// hello() // Ans : 100000
+// ekhane console.log(a) te aisha a variable ke na peye se tar immidiate scope , mane hello() function er scope e a ke khujte thake . se kintu tar siblings kono scope e check korbe na , mane two() function er scope er vitor khujbe na . se only tar parent scope e khujbe . tokhon se parent scope e giye a er value 100000 peyeche and print kore diyeche
 
+// Immutability and Mutability
+// definition : immutability mane jeta change kora jay na . mutability mane jeta change kora jay
 
-// Immutability and Mutability 
-// definition : immutability mane jeta change kora jay na . mutability mane jeta change kora jay 
-
-// primitive data type immutable or mutable ? 
+// primitive data type immutable or mutable ?
 // let a = 'hello'
 // a = 'hii'
 // console.log(a) // Ans : hii
-// ekhane dekha jacche je primitive data type er value change kora jacche , tar mane ki eta mutable ? Ans is No. ekhane javascript kokhonoii ager a variable er value ke shoraiya notun value ke rakhe nai . javascript kono notun memory container er new value ta rakhse and just a er pointer ta change kore notun value jei memory address e ase setay point kortese . tar mane primitive data type sob gulaii immutable 
+// ekhane dekha jacche je primitive data type er value change kora jacche , tar mane ki eta mutable ? Ans is No. ekhane javascript kokhonoii ager a variable er value ke shoraiya notun value ke rakhe nai . javascript kono notun memory container er new value ta rakhse and just a er pointer ta change kore notun value jei memory address e ase setay point kortese . tar mane primitive data type sob gulaii immutable
 
-// Object and Array is Mutable 
-
-
-
+// Object and Array is Mutable
 
 //Browser Object Mode
 //1. Location = window.location OR location
@@ -710,8 +730,6 @@ console.log(user1===user2) // Ans : false
 //   document.body.children[4].src = '';
 //   document.children[0].children[1].children[4].alt = 'hello image';
 // }
-
-
 
 // console.dir(document)
 
@@ -798,8 +816,8 @@ console.log(user1===user2) // Ans : false
 //3. element.className = 'className'
 //4. element.setAttributes('class','className')
 //5. element.classList.add('className')
-  // element.classList.remove('classNamve)
-  // element.classList.toggle('className')
+// element.classList.remove('classNamve)
+// element.classList.toggle('className')
 
 // let h1 = document.querySelector('.hell')
 
@@ -843,8 +861,8 @@ console.log(user1===user2) // Ans : false
 //   document.body.children[0].classList.remove('hell');
 // },2000)
 
-// some notes for class in js 
-// classList chara baki method e ager kono className thakleo seta override hoye jay kintu classList e ager gula ager motoii thake, just another class add or remove kora hoy 
+// some notes for class in js
+// classList chara baki method e ager kono className thakleo seta override hoye jay kintu classList e ager gula ager motoii thake, just another class add or remove kora hoy
 
 // all css style change summary
 // let p = window.document.children[0].children[1];
@@ -890,9 +908,6 @@ console.log(user1===user2) // Ans : false
 // document.body.childNodes[2].nodeValue = 'Hii Tanvir!!'
 
 // document.children[0].children[1].children[1].childNodes[1].childNodes[0].nodeValue = 'Hello My Love!!'
-
-
-
 
 // Append & AppendChild -- append , appendChild
 // let h1 = document.querySelector('h1')
@@ -979,7 +994,7 @@ console.log(user1===user2) // Ans : false
 //   j++
 // }
 
-//Creatae Any Element 
+//Creatae Any Element
 
 // Create Element -- document.createElement('div')
 
@@ -1025,7 +1040,7 @@ console.log(user1===user2) // Ans : false
 // }
 // //container.innerHTML = myHtml
 
-// Remove Element -- 2 Way 
+// Remove Element -- 2 Way
 //1. OLD Way
 // container.parentElement.removeChild(container) // ui container remove but memory container not remove
 // container = null // remove in memory
@@ -1033,19 +1048,15 @@ console.log(user1===user2) // Ans : false
 // container.remove()// ui container remove but memory container not remove
 // container = null// remove in memory
 
-
-
-
-// Event Listener 
+// Event Listener
 //1. using onclick
 //2. ondblclick
 //3. addEventListener
 
 // difference between onclick,ondblclick and adEventListener :
-//1. onclick and ondblclick er khetre ek sathe multiple event thakle sob gula event fire hoy na . last event ta fire hoy . kintu addEventListener er khetre multiple listener thakleo sob gula fire hoy 
+//1. onclick and ondblclick er khetre ek sathe multiple event thakle sob gula event fire hoy na . last event ta fire hoy . kintu addEventListener er khetre multiple listener thakleo sob gula fire hoy
 
-
-// onclick 
+// onclick
 // function sayHi(){
 //   console.log('clicked')
 // }
@@ -1112,9 +1123,7 @@ console.log(user1===user2) // Ans : false
 //   }
 // })
 
-
-
-// Form Event and Event Object 
+// Form Event and Event Object
 // let input = document.querySelector('input')
 // let para = document.querySelector('p')
 
@@ -1142,7 +1151,7 @@ console.log(user1===user2) // Ans : false
 //   para.innerText = e.target.value
 // })
 
-// Form 
+// Form
 // let form = document.querySelector('form')
 // form.addEventListener('submit',(e)=>{
 //   e.preventDefault()
@@ -1159,14 +1168,13 @@ console.log(user1===user2) // Ans : false
 //   }
 // })
 
-
 // KeyBoard Event
 // 3 types of keyboard event
 //1. keyup
 //2. keydown
-//3. keypress 
+//3. keypress
 
-//note: jekono event jodi focus obosthay thake tahole sei element er upor keyboard event lagano jabe 
+//note: jekono event jodi focus obosthay thake tahole sei element er upor keyboard event lagano jabe
 
 //1. keypress event
 // let h1 = document.querySelector('h1')
@@ -1176,8 +1184,8 @@ console.log(user1===user2) // Ans : false
 //   console.log(e)
 //   e.target.childNodes[0].nodeValue = e.key
 // })
-//understand key code -- e.code 
-// window er upor keypress event dile attribute tabindex="0" deya lage na 
+//understand key code -- e.code
+// window er upor keypress event dile attribute tabindex="0" deya lage na
 // window.addEventListener('keypress',(e)=>{
 //   console.log(e.code)
 //   console.log(e.key)
@@ -1193,18 +1201,14 @@ console.log(user1===user2) // Ans : false
 // })
 
 //3. keydown
-// ekdom keyup er biporit . press kore rakhle event fire hoy, press kore chere dile event kaj kore na 
+// ekdom keyup er biporit . press kore rakhle event fire hoy, press kore chere dile event kaj kore na
 // h1.addEventListener('keydown',(e)=>{
 //   console.log(e)
 //   console.log(e.key)
 //   console.log(e.code)
 // })
 
-// summary of keyboard event 
-// 1. jekono element e keyboard event dei na kno sei element er attribute e tabindex="0" eta dite hobe . kintu window or document er upor event listener lagale eta dite hobe na . maximum usecase window or document er uporeii hoye thake . bishesh kore document 
+// summary of keyboard event
+// 1. jekono element e keyboard event dei na kno sei element er attribute e tabindex="0" eta dite hobe . kintu window or document er upor event listener lagale eta dite hobe na . maximum usecase window or document er uporeii hoye thake . bishesh kore document
 
-
-
-// Mouse Event 
-
-
+// Mouse Event
