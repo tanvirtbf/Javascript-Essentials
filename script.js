@@ -114,8 +114,15 @@
 // const isNull = null // @71 address is fixed everywhere
 // const isUndefined = undefined // @67 fixed for undefined value
 
-
-
+// Important Note : 
+const firstName = 'Tanvir' // @1757053 address
+const name = 'Tanvir' // @1757053 address 
+console.log(firstName === name ) // Ans : true
+// But....
+const fname = 'Tanvir' // @1757053
+const lname = 'Tan' + 'vi' + 'r' // @2676783
+console.log(fname === lname) // Ans : true
+// ekhane same variable address na hoyeo output true ashce karon primitive data type kokhono memory address diye compare kore na . primitive data type value diye compare kore . value same hoile true hobe jodio memory address change thakuk
 
 //Objects => Non-premitive Data Type
 // const user1 = {
