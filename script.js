@@ -945,10 +945,14 @@
 //   console.log("Hiii")
 // }
 
+// const timer1 = setTimeout('console.log("set time 1")',0)
+// const timer2 = setTimeout('console.log("set time 2")')
+// const timer3 = setTimeout('console.log("set time 3")',100)
 
+// console.log('Hello World')
+// Ans : Hello World - set time 1 - set time 2 - set time 3
 
-
-
+// setInterval
 
 
 
