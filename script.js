@@ -926,13 +926,34 @@
 
 // Very Important Note for Closure
 // closure jokhon kono variable ke close kore, orthat parent er kono variable ke nije use kore  tokhon sei variable er immidiate value ke dhore rakhe na . sei variable er memory address ke point kora thake . orthat jokhon closure function ta call kora hobe tokhon oi variable er present value show hobe . example niche deya holo
-for(var i = 0; i<5; i++){
-  setTimeout(function(){
+// for(var i = 0; i<5; i++){
+//   setTimeout(function(){
+//     console.log(i)
+//   },1000)
+// }
+// Ans is expected 0 1 2 3 4 but Ans is : 5 5 5 5 5
+// ekhane i=0 er somoy setTimeout ke callback queue te rakha hocche, temni vabe i = 1, 2, 3, 4 er jonno setTimeout ke callback queue te rakha hocche. jokhon call stack khali hobe tokhon event loop er maddhome ekta ekta kore setTimeout total 5 ta setTimeout callStack e aisha ekta ekta kore execute hote thakbe . kintu jokhon execute hote thakbe tokhon to already for loop execution sesh . and last e i er value 5 hoye gesilo . tai setTimeout er i er value always 5 thakbe . karon closure always i er memory address e point kora thake 
+
+// example 4 : 
+// for(var i = 0; i<5; i++){
+//   (function(j){
+//     setTimeout(function(){
+//       console.log(j)
+//     },1000)
+//   })(i)
+// }
+// Now Ans is : 0 1 2 3 4
+
+// example 5 : 
+for(let i = 0; i<5; i++){
+  setTimeout(()=>{
     console.log(i)
   },1000)
 }
-// Ans is expected 0 1 2 3 4 but Ans is : 5 5 5 5 5
-// ekhane i=0 er somoy setTimeout ke callback queue te rakha hocche, temni vabe i = 1, 2, 3, 4 er jonno setTimeout ke callback queue te rakha hocche. jokhon call stack khali hobe tokhon event loop er maddhome ekta ekta kore setTimeout total 5 ta setTimeout callStack e aisha ekta ekta kore execute hote thakbe . kintu jokhon execute hote thakbe tokhon to already for loop execution sesh . and last e i er value 5 hoye gesilo . tai setTimeout er i er value always 5 thakbe . karon closure always i er memory address e point kora thake 
+// Ans : 0 1 2 3 4
+// ekhane let use koray loop jotobar ghurche totobar notun i variable create korche notun notun memory address e rakhche . kintu var diye loop ghuranor somoy protibar same i er value change kora hocchilo jekhane let diye protibar notun i create kora hocchilo .
+
+
 
 
 // Immutability and Mutability
