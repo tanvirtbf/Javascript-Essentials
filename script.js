@@ -869,10 +869,35 @@
 // What is Higher Order Function
 // Ans : jokhon kono function er vitor onno kono function ke return kora hoy othoba function ke pass kora hoy tokhon seta Higher Order Function .  amra function ke call korar somoy tar parameter e string , integer , object , array etc onk dhoroner data type er data pathai . kintu function jokhon pathabo tokhon seta higher order function 
 
+// function sayHi(){
+//   console.log('Hiiii')
+// }
+// const x = sayHi
+// x()
+// console.dir(x)
+// x.age = 24
 
+// Example of Higher order function
+function a(b){
+  console.dir(b)
+  b()
+}
+function sayHi(){
+  console.log('Hiiiiiiiii')
+}
+a(sayHi)
+// a is a Higher Order Function
 
+function add(f){
+  console.dir(f)
+  f()
+}
 
-
+//Callback function
+// jokhon function ke call korar somoy onno kono function ke pass kora hoy , tokhon jei function ke pass kora hoy seta ke bola hoy callback function
+add(function(){
+  console.log('HIIIIIII')
+})
 
 
 
