@@ -954,8 +954,17 @@
 
 // setInterval
 
+const timer1 = setInterval('console.log("set time 1")',1000)
+// 1 second por por output print hoite thakbe 
+setTimeout(()=>{
+  clearInterval(timer1)
+},5000)
 
-
+// Ans : set time 1
+//       set time 1
+//       set time 1
+//       set time 1
+//       set time 1
 
 
 
