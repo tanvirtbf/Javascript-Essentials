@@ -845,6 +845,14 @@
 // hello() // Ans : 100000
 // ekhane console.log(a) te aisha a variable ke na peye se tar immidiate scope , mane hello() function er scope e a ke khujte thake . se kintu tar siblings kono scope e check korbe na , mane two() function er scope er vitor khujbe na . se only tar parent scope e khujbe . tokhon se parent scope e giye a er value 100000 peyeche and print kore diyeche
 
+
+
+// closure
+
+
+
+
+
 // Immutability and Mutability
 // definition : immutability mane jeta change kora jay na . mutability mane jeta change kora jay
 
@@ -952,20 +960,27 @@
 // console.log('Hello World')
 // Ans : Hello World - set time 1 - set time 2 - set time 3
 
+
+
 // setInterval
-
-const timer1 = setInterval('console.log("set time 1")',1000)
-// 1 second por por output print hoite thakbe 
-setTimeout(()=>{
-  clearInterval(timer1)
-},5000)
-
+// const timer1 = setInterval('console.log("set time 1")',1000)
+// // 1 second por por output print hoite thakbe 
+// setTimeout(()=>{
+//   clearInterval(timer1)
+// },5000)
 // Ans : set time 1
 //       set time 1
 //       set time 1
 //       set time 1
 //       set time 1
 
+// setTimeout with HOC
+
+const timerId = setInterval(a,1000)
+
+function a(){
+  console.log('hiii')
+}
 
 
 
