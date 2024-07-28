@@ -862,12 +862,12 @@
 // ekhane inner function tar parent er variable x ke access korte parche + x er value change korte parche . etaii closure er concept 
 
 // tahole closure ki ? 
-function outer(){
-  var x = 'hello world'
-  return function inner(){
-    console.log(x)
-  }
-}
+// function outer(){
+//   var x = 'hello world'
+//   return function inner(){
+//     console.log(x)
+//   }
+// }
 // console.log(outer)
 // Ans : -->
 // ƒ outer(){
@@ -879,7 +879,7 @@ function outer(){
 
 // jehetu outer function return korche inner function ke tai outer function ke call korle sekhane tar return value ta ashbe . tar mane holo outer() = function inner(){..}
 
-const closureFun = outer()
+// const closureFun = outer()
 // ekhane outer function er return value orthat inner function ta closureFun variable e pass kora hoyeche . tai closureFun call korle inner function ke call korle jei value ashto seta ashbe 
 // console.log(closureFun)
 // Ans : -->
@@ -890,10 +890,49 @@ const closureFun = outer()
 //   }
 // }
 
-closureFun() // Ans : hello world
+// closureFun() // Ans : hello world
 
 // definition of closure 
 // outer function er vitor x variable jehetu inner function use koreche and sei inner function closureFun variable er vitor rakha hoyeche tai outer function execute houyar poreo outer function er variable x er ostitto theke jacche inner function orthat closureFun variable e . jotokkhon porjonto child function orthat inner function ba closureFun ke execute kora sesh hobe totokkhon variable x er ostitto thakbe . ekhane inner function taii closure 
+
+// Some Example of Closure
+
+// Example 1 : 
+// function outer(){
+//   var x = 10;
+//   function inner(){
+//     console.log(x)
+//   }
+//   x=20;
+//   return inner;
+// }
+// var innerFunc = outer()
+// innerFunc() // Ans : 20 
+// innerFunc ke call korle 20 ashbe kno ? ashar kotha to 10 . karon x =20 houyar ageii inner function er definition memory te chole gese . kintu na . ekhane inner function ke use kora hoyeche innerFunc() er maddhome . totokkhone x er value 20 hoye gesilo . r jokhon innerFunc() kora holo tokhon oi somoy x ke pauyar jonno x er present memory te point kora obosthay chilo
+
+// Example 2 : 
+// function outer(){
+//   var x = 10;
+//   function inner(){
+//     var y = 5;
+//     console.log(x + y)
+//   }
+//   var x=20;
+//   return inner;
+// }
+// var innerFunc = outer()
+// innerFunc() // Ans : 25
+// var x = 20 jokhon kora hoyeche tokhon ashole ager x er 10 value ke replace kore 20 kora hoyeche . r jehetu innerFunc() hoite hoite x er value 20 kora hoise tai x = 20 ei address e point kora chilo x er value 
+
+// Very Important Note for Closure
+// closure jokhon kono variable ke close kore, orthat parent er kono variable ke nije use kore  tokhon sei variable er immidiate value ke dhore rakhe na . sei variable er memory address ke point kora thake . orthat jokhon closure function ta call kora hobe tokhon oi variable er present value show hobe . example niche deya holo
+for(var i = 0; i<5; i++){
+  setTimeout(function(){
+    console.log(i)
+  },1000)
+}
+// Ans is expected 0 1 2 3 4 but Ans is : 5 5 5 5 5
+// ekhane i=0 er somoy setTimeout ke callback queue te rakha hocche, temni vabe i = 1, 2, 3, 4 er jonno setTimeout ke callback queue te rakha hocche. jokhon call stack khali hobe tokhon event loop er maddhome ekta ekta kore setTimeout total 5 ta setTimeout callStack e aisha ekta ekta kore execute hote thakbe . kintu jokhon execute hote thakbe tokhon to already for loop execution sesh . and last e i er value 5 hoye gesilo . tai setTimeout er i er value always 5 thakbe . karon closure always i er memory address e point kora thake 
 
 
 // Immutability and Mutability
