@@ -945,11 +945,11 @@
 // Now Ans is : 0 1 2 3 4
 
 // example 5 : 
-for(let i = 0; i<5; i++){
-  setTimeout(()=>{
-    console.log(i)
-  },1000)
-}
+// for(let i = 0; i<5; i++){
+//   setTimeout(()=>{
+//     console.log(i)
+//   },1000)
+// }
 // Ans : 0 1 2 3 4
 // ekhane let use koray loop jotobar ghurche totobar notun i variable create korche notun notun memory address e rakhche . kintu var diye loop ghuranor somoy protibar same i er value change kora hocchilo jekhane let diye protibar notun i create kora hocchilo .
 
