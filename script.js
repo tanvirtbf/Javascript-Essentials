@@ -920,18 +920,43 @@
 // const timer1 = setTimeout('console.log("set time 1")',2000)
 // const timer2 = setTimeout('console.log("set time 2")',4000)
 // const timer3 = setTimeout('console.log("set time 3")',9000)
+// ekhane timer1, timer2, timer3 variable er vitore setTimeout set kore only setTimout gular timer id dhorar jonno . jate sei timer id diye clearTimeout korte pare
 
 // console.log(timer1) // Ans is timer id
 // console.log(timer2) // Ans is timer id
 // console.log(timer3) // Ans is timer id
 
 // ClearTimeOut
-const timer1 = setTimeout('console.log("set time 1")', 2000);
-const timer2 = setTimeout('console.log("set time 2")', 4000);
-const timer3 = setTimeout('console.log("set time 3")', 9000);
-clearTimeout(timer2);
-clearTimeout(timer1);
+// const timer1 = setTimeout('console.log("set time 1")', 2000);
+// const timer2 = setTimeout('console.log("set time 2")', 4000);
+// const timer3 = setTimeout('console.log("set time 3")', 9000);
+// // ekhane timer1, timer2, timer3 variable er vitore setTimeout set kore only setTimout gular timer id dhorar jonno . jate sei timer id diye clearTimeout korte pare
+// clearTimeout(timer2);
+// clearTimeout(timer1);
 // ekhane timer1 and timer2 er setTimeout kokhonoii run hobe na . jehetu timer3 id diye clear kori nai tai 9 second por timer3 er setTimeout run hobe
+
+// setTimeout with Higher Order Function
+// const timer1 = setTimeout('console.log("set time 1")',2000)
+// const timer2 = setTimeout('console.log("set time 2")',4000)
+// const timer3 = setTimeout(a,9000) // a ke setTimeout internally call kore 
+// // ekhane timer3 er setTimeout higher order function hoye gese . karon etar parameter e ekta function pass kora hoise 
+
+// function a(){
+//   console.log("Hiii")
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //Browser Object Mode
 //1. Location = window.location OR location
