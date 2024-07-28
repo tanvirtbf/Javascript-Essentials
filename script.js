@@ -848,23 +848,52 @@
 
 
 // closure
-function outer(){
-  var x = 'hello world'
-  function inner(){
-    x = 'hii'
-    console.log(x) // Ans : hii
-  }
-  console.log(x) // Ans : hello world
-  inner()
-  console.log(x) // Ans : hii
-}
-outer()
+// function outer(){
+//   var x = 'hello world'
+//   function inner(){
+//     x = 'hii'
+//     console.log(x) // Ans : hii
+//   }
+//   console.log(x) // Ans : hello world
+//   inner()
+//   console.log(x) // Ans : hii
+// }
+// outer()
 // ekhane inner function tar parent er variable x ke access korte parche + x er value change korte parche . etaii closure er concept 
 
 // tahole closure ki ? 
+function outer(){
+  var x = 'hello world'
+  return function inner(){
+    console.log(x)
+  }
+}
+// console.log(outer)
+// Ans : -->
+// ƒ outer(){
+//   var x = 'hello world'
+//   return function inner(){
+//     console.log(x)
+//   }
+// }
 
+// jehetu outer function return korche inner function ke tai outer function ke call korle sekhane tar return value ta ashbe . tar mane holo outer() = function inner(){..}
 
+const closureFun = outer()
+// ekhane outer function er return value orthat inner function ta closureFun variable e pass kora hoyeche . tai closureFun call korle inner function ke call korle jei value ashto seta ashbe 
+// console.log(closureFun)
+// Ans : -->
+// ƒ outer(){
+//   var x = 'hello world'
+//   return function inner(){
+//     console.log(x)
+//   }
+// }
 
+closureFun() // Ans : hello world
+
+// definition of closure 
+// outer function er vitor x variable jehetu inner function use koreche and sei inner function closureFun variable er vitor rakha hoyeche tai outer function execute houyar poreo outer function er variable x er ostitto theke jacche inner function orthat closureFun variable e . jotokkhon porjonto child function orthat inner function ba closureFun ke execute kora sesh hobe totokkhon variable x er ostitto thakbe . ekhane inner function taii closure 
 
 
 // Immutability and Mutability
