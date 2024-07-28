@@ -183,7 +183,7 @@
 //   },
 // };
 
-// Memory Allocation : 
+// Memory Allocation :
 
 // obj // @446743
 // {
@@ -192,7 +192,7 @@
 //   address : @658734
 // }
 
-// address // @658734 
+// address // @658734
 // {
 //   town : 'Dhaka',
 //   elaka : 'Sonir Akhra',
@@ -205,9 +205,7 @@
 //   age : 122
 // }
 
-// Note :  obj object tar vitore address object , address object er vitore moreDetails object ache . ekhane address object and moreDetails object 2 ta alada alada memory te create hoyeche . tarpor obj object er address key te address object er memory address ashce , tar value ashe nai . then address object er moreDetails key te moreDetails key er memory address ashce , tar value ashe nai . evabeii tara nested obosthay address e point kore thake . 
-
-
+// Note :  obj object tar vitore address object , address object er vitore moreDetails object ache . ekhane address object and moreDetails object 2 ta alada alada memory te create hoyeche . tarpor obj object er address key te address object er memory address ashce , tar value ashe nai . then address object er moreDetails key te moreDetails key er memory address ashce , tar value ashe nai . evabeii tara nested obosthay address e point kore thake .
 
 // Object.seal(obj) and Object.freeze(obj)
 
@@ -221,7 +219,7 @@
 //   }
 // }
 // Object.seal(user)
-// Object.seal function ta object ke delete korte dibe na + kono kichu new add korte dibe na kintu object er kono property er value update korte dibe 
+// Object.seal function ta object ke delete korte dibe na + kono kichu new add korte dibe na kintu object er kono property er value update korte dibe
 
 // Object.freeze(obj)
 // const user = {
@@ -233,10 +231,10 @@
 //   }
 // }
 // Object.freeze(user)
-// Object.freeze use korle oi object e r keu kokhono property add korte parbe na + property delete korte parbe na and property value update korte parbe na . mot kotha kichui korte parbe na 
+// Object.freeze use korle oi object e r keu kokhono property add korte parbe na + property delete korte parbe na and property value update korte parbe na . mot kotha kichui korte parbe na
 
 // In keyword
-// object er vitore kono property ache kina check korar jonno use hoy 
+// object er vitore kono property ache kina check korar jonno use hoy
 // const user = {
 //   fname : 'Tanvir',
 //   lname : 'Ahmed',
@@ -249,7 +247,6 @@
 // console.log('designation' in user) // Ans : false
 // console.log('address' in user) // Ans : true
 // console.log('state' in user) // Ans : false
-
 
 // console.log('my addresss' in obj)
 // const arr = [1,2,3,4,5]
@@ -282,7 +279,7 @@
 // const user1 = {firstName:'Tanvir',lastName:'Ahmed'}
 // let user2 = {...user1}
 
-// Arrays 
+// Arrays
 // let a = ['Mango','Banana','Jackfruits','Grapes','Dates']
 
 // Push Method
@@ -292,11 +289,11 @@
 // push method diye array er last e kono value add kora jay
 
 // Pop Method
-// a.pop() 
+// a.pop()
 // a.pop()
 // console.log(a)
 // Ans : ['Mango', 'Banana', 'Jackfruits', 'Grapes', 'Dates']
-// pop method diye array last theke value delete kora hoy 
+// pop method diye array last theke value delete kora hoy
 
 // Unshift Method (opposite of Push Method)
 // a.unshift('kola','ruti')
@@ -310,8 +307,6 @@
 // console.log(a)
 // Ans : ['Mango', 'Banana', 'Jackfruits', 'Grapes', 'Dates']
 // eta pop method er ulta kaj kore . mane array er first theke value delete kore
-
-
 
 // Deep Copy and Shallow Copy
 // let firstName = 'Tanvir' // @39939
@@ -327,13 +322,13 @@
 // console.log(arr) // ['Mango', 'Banana', 'Jackfruits', 'Grapes', 'Dates', 'hello']
 // karon ekhane arr and fruits 2 taii same memory address e point kora chilo tai arr e change korle fruits e hobe, fruits e korle arr e hobe
 
-// Note : 
+// Note :
 // let arr1 = [1,2,3]
 // let arr2 = arr1
 
 // let obj1 = {fname : 'Tanvir', age : 24}
 // let obj2 = obj1
-// ekhane equal sign operator diye same value onno variable e ante gele ager memory address tai point hoy 
+// ekhane equal sign operator diye same value onno variable e ante gele ager memory address tai point hoy
 // arr1 address is : @123456
 // arr2 address is : @123456
 // obj1 address is : @434343
@@ -390,7 +385,7 @@
 // numbers = [1, 2, 3];
 // numbersCopy = numbers.filter(() => true);
 
-// Shallow Copy with Reduce 
+// Shallow Copy with Reduce
 // numbers = [1, 2, 3];
 
 // numbersCopy = numbers.reduce((newArray, element) => {
@@ -410,9 +405,6 @@
 // Shallow Copy with Concat method
 // [1, 2, 3].concat(4); // [1, 2, 3, 4]
 // [1, 2, 3].concat([4, 5]); // [1, 2, 3, 4, 5]
-
-
-
 
 // let fruits = ['Mango','Banana','Jackfruits','Grapes','Dates']
 // fruits.push('Amm') // add last in element in same reference array
@@ -864,10 +856,9 @@
 
 // Object and Array is Mutable
 
-
 // Higher Order Function (HOC)
 // What is Higher Order Function
-// Ans : jokhon kono function er vitor onno kono function ke return kora hoy othoba function ke pass kora hoy tokhon seta Higher Order Function .  amra function ke call korar somoy tar parameter e string , integer , object , array etc onk dhoroner data type er data pathai . kintu function jokhon pathabo tokhon seta higher order function 
+// Ans : jokhon kono function er vitor onno kono function ke return kora hoy othoba function ke pass kora hoy tokhon seta Higher Order Function .  amra function ke call korar somoy tar parameter e string , integer , object , array etc onk dhoroner data type er data pathai . kintu function jokhon pathabo tokhon seta higher order function
 
 // function sayHi(){
 //   console.log('Hiiii')
@@ -894,26 +885,23 @@
 // }
 
 //Callback function
-// jokhon function ke call korar somoy onno kono function ke pass kora hoy , tokhon jei function ke pass kora hoy seta ke bola hoy callback function . 
+// jokhon function ke call korar somoy onno kono function ke pass kora hoy , tokhon jei function ke pass kora hoy seta ke bola hoy callback function .
 // add(function(){
 //   console.log('HIIIIIII')
 // })
 // ekhane add() holo higher order function and add er vitor jei function pass kora hoise seta callback function
 
-
-
-
 // SetTimeout and SetInterval
 
 // setTimeout
 // setTimeout('console.log("Tanvir")') // Ans : Tanvir
-// ekhane javascript 'console.log(true)' ai string ta ke behind the scene javascript code er moto nicche . tai true print hocche 
+// ekhane javascript 'console.log(true)' ai string ta ke behind the scene javascript code er moto nicche . tai true print hocche
 // setTimeout('hiii') // Error : hiii is not defined
-// ekhane javascript hiii ke ekta variable hishebe dekhche tai jehetu hiii nam e kono variable nei tai error message ashce hiii is not defined 
+// ekhane javascript hiii ke ekta variable hishebe dekhche tai jehetu hiii nam e kono variable nei tai error message ashce hiii is not defined
 // const hiii = 'Hello World!'
 // setTimeout('hiii') // Not Error
 
-//setTimeout with second parameter 
+//setTimeout with second parameter
 // second parameter holo time milisecond e . jei time por tar vitorer code run hobe
 // setTimeout('console.log("Hello World")', 2000) // Ans : Hello World (After 2 second)
 // setTimeout('console.log("hii"); console.log("hello")',3000) // Ans : hii hello (After 3 second)
@@ -926,18 +914,24 @@
 // 1 Second
 // 2 Second
 // clearTimeout(13)
-// ekhane browser console e eksathe 3 ta setTimeout deyar por Enter dile return value 13 pathay jeta kina timer id . oi timer id diyeii ami clearTimeOut kore disi 9 second er ageii . tai 9 second print hoy nai 
+// ekhane browser console e eksathe 3 ta setTimeout deyar por Enter dile return value 13 pathay jeta kina timer id . oi timer id diyeii ami clearTimeOut kore disi 9 second er ageii . tai 9 second print hoy nai
 
 // SetTimeout Timer Id
 // const timer1 = setTimeout('console.log("set time 1")',2000)
 // const timer2 = setTimeout('console.log("set time 2")',4000)
 // const timer3 = setTimeout('console.log("set time 3")',9000)
 
-// console.log(timer1) // Ans is timer id 
+// console.log(timer1) // Ans is timer id
 // console.log(timer2) // Ans is timer id
 // console.log(timer3) // Ans is timer id
 
-
+// ClearTimeOut
+const timer1 = setTimeout('console.log("set time 1")', 2000);
+const timer2 = setTimeout('console.log("set time 2")', 4000);
+const timer3 = setTimeout('console.log("set time 3")', 9000);
+clearTimeout(timer2);
+clearTimeout(timer1);
+// ekhane timer1 and timer2 er setTimeout kokhonoii run hobe na . jehetu timer3 id diye clear kori nai tai 9 second por timer3 er setTimeout run hobe
 
 //Browser Object Mode
 //1. Location = window.location OR location
@@ -1157,7 +1151,7 @@
 // document.children[0].children[1].children[1].childNodes[1].childNodes[0].nodeValue = 'Hello My Love!!'
 
 // Append & AppendChild -- append , appendChild
-// Append and AppendChild kono element ke onno element er vitore cut kore last e place kore dey . kintu jodi oi element ke copy node kore tarpor appendChild or Append kore tahole oitar copy ashe kintu oi element ager jayga teii thake 
+// Append and AppendChild kono element ke onno element er vitore cut kore last e place kore dey . kintu jodi oi element ke copy node kore tarpor appendChild or Append kore tahole oitar copy ashe kintu oi element ager jayga teii thake
 // let h1 = document.querySelector('h1')
 // let container = document.querySelector('.container')
 // let card = document.querySelector('.card')
