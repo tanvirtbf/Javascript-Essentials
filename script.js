@@ -905,8 +905,37 @@
 
 // SetTimeout and SetInterval
 
+// setTimeout
+// setTimeout('console.log("Tanvir")') // Ans : Tanvir
+// ekhane javascript 'console.log(true)' ai string ta ke behind the scene javascript code er moto nicche . tai true print hocche 
+// setTimeout('hiii') // Error : hiii is not defined
+// ekhane javascript hiii ke ekta variable hishebe dekhche tai jehetu hiii nam e kono variable nei tai error message ashce hiii is not defined 
+// const hiii = 'Hello World!'
+// setTimeout('hiii') // Not Error
 
+//setTimeout with second parameter 
+// second parameter holo time milisecond e . jei time por tar vitorer code run hobe
+// setTimeout('console.log("Hello World")', 2000) // Ans : Hello World (After 2 second)
+// setTimeout('console.log("hii"); console.log("hello")',3000) // Ans : hii hello (After 3 second)
 
+// In Browser console with clearTimeout
+// setTimeout('console.log("1 Second")',1000)
+// setTimeout('console.log("2 Second")',3000)
+// setTimeout('console.log("9 Second")',9000)
+// 13 ---> Timer Id of last setTimeout
+// 1 Second
+// 2 Second
+// clearTimeout(13)
+// ekhane browser console e eksathe 3 ta setTimeout deyar por Enter dile return value 13 pathay jeta kina timer id . oi timer id diyeii ami clearTimeOut kore disi 9 second er ageii . tai 9 second print hoy nai 
+
+// SetTimeout Timer Id
+// const timer1 = setTimeout('console.log("set time 1")',2000)
+// const timer2 = setTimeout('console.log("set time 2")',4000)
+// const timer3 = setTimeout('console.log("set time 3")',9000)
+
+// console.log(timer1) // Ans is timer id 
+// console.log(timer2) // Ans is timer id
+// console.log(timer3) // Ans is timer id
 
 
 
