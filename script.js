@@ -866,6 +866,16 @@
 
 
 // Higher Order Function (HOC)
+// What is Higher Order Function
+// Ans : jokhon kono function er vitor onno kono function ke return kora hoy othoba function ke pass kora hoy tokhon seta Higher Order Function .  amra function ke call korar somoy tar parameter e string , integer , object , array etc onk dhoroner data type er data pathai . kintu function jokhon pathabo tokhon seta higher order function 
+
+
+
+
+
+
+
+
 
 //Browser Object Mode
 //1. Location = window.location OR location
