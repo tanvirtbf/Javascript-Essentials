@@ -848,6 +848,20 @@
 
 
 // closure
+function outer(){
+  var x = 'hello world'
+  function inner(){
+    x = 'hii'
+    console.log(x) // Ans : hii
+  }
+  console.log(x) // Ans : hello world
+  inner()
+  console.log(x) // Ans : hii
+}
+outer()
+// ekhane inner function tar parent er variable x ke access korte parche + x er value change korte parche . etaii closure er concept 
+
+// tahole closure ki ? 
 
 
 
@@ -976,11 +990,11 @@
 
 // setTimeout with HOC
 
-const timerId = setInterval(a,1000)
+// const timerId = setInterval(a,1000)
 
-function a(){
-  console.log('hiii')
-}
+// function a(){
+//   console.log('hiii')
+// }
 
 
 
