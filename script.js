@@ -864,6 +864,9 @@
 
 // Object and Array is Mutable
 
+
+// Higher Order Function (HOC)
+
 //Browser Object Mode
 //1. Location = window.location OR location
 //2. History = window.history OR history
