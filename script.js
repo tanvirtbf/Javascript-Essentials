@@ -878,26 +878,34 @@
 // x.age = 24
 
 // Example of Higher order function
-function a(b){
-  console.dir(b)
-  b()
-}
-function sayHi(){
-  console.log('Hiiiiiiiii')
-}
-a(sayHi)
-// a is a Higher Order Function
+// function a(b){
+//   console.dir(b)
+//   b()
+// }
+// function sayHi(){
+//   console.log('Hiiiiiiiii')
+// }
+// a(sayHi)
+// // a is a Higher Order Function
 
-function add(f){
-  console.dir(f)
-  f()
-}
+// function add(f){
+//   console.dir(f)
+//   f()
+// }
 
 //Callback function
-// jokhon function ke call korar somoy onno kono function ke pass kora hoy , tokhon jei function ke pass kora hoy seta ke bola hoy callback function
-add(function(){
-  console.log('HIIIIIII')
-})
+// jokhon function ke call korar somoy onno kono function ke pass kora hoy , tokhon jei function ke pass kora hoy seta ke bola hoy callback function . 
+// add(function(){
+//   console.log('HIIIIIII')
+// })
+// ekhane add() holo higher order function and add er vitor jei function pass kora hoise seta callback function
+
+
+
+
+// SetTimeout and SetInterval
+
+
 
 
 
