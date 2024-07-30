@@ -1197,10 +1197,17 @@
 
 // let att = document.querySelector("[tanvir='ahmed']").getAttribute('class')
 
+// const heading = document.getElementById('h1')
+// console.log(heading.getAttribute('class'))
+// console.log(heading.getAttribute('id'))
+// console.log(heading.getAttribute('tanvir'))
+
 const heading = document.getElementById('h1')
-console.log(heading.getAttribute('class'))
-console.log(heading.getAttribute('id'))
-console.log(heading.getAttribute('tanvir'))
+heading.setAttribute('class','test')
+// ekhane age class e heading nam e class chilo . kintu ami jokhon setAttribute diye test class set korlam tokhon ager class heading ta muche diye only test add kora hoise . tai heading class er kono css apply hobe na . only test er css apply hobe
+// jodi chai ager class o thakbe, new class o thakbe tahole...
+heading.setAttribute('class','heading test')
+// karon setAttribute always override kore thake
 
 // function att(){
 //   document.querySelector("[tanvir='ahmed']").setAttribute("id","heading")
