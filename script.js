@@ -1148,8 +1148,26 @@
 // querySelectorAll
 // document.querySelectorAll('h1') // ekhane page e joto h1 tag ache sob gula eksathe kore array or nodeList akare diye dibe . jekhane array er property jemon map filter etc use kora jabe
 
-const input = document.querySelector('[type="password"]')
-const input1 = document.querySelector('input[type="password"]')
+// const input = document.querySelector('[type="password"]')
+// const input1 = document.querySelector('input[type="password"]')
+
+// Important Note for HTMLcollection and NodeList
+// HTMLcollection e array er kono method jemon map, forEach , filter etc pauya jay na . tai html collection ke use kore array er moto use kora jay na . kintu NodeList er vitor only forEach use kora jay jeta diye amra prottekta array er element ke ekta ekta kore access korte pari . 
+// jodi ami chai html collection or nodeList ke pure array baniye tarpor array er sob method use korte tahole html collection or nodeList ke array te convart korte hobe
+
+// Convert HTMLCollection to Array 
+const li = document.getElementsByClassName('li')
+// Ans : HTMLCollection(3) [li.li, li.li, li.li]
+
+const convertLiArr = Array.from(li)
+console.log(convertLiArr)
+convertLiArr.map((l)=>{
+  console.log(l)
+})
+
+// Convert NodeList to Array
+
+
 
 
 // let img = document.querySelectorAll('img');
