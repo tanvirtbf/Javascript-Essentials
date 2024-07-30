@@ -1156,17 +1156,25 @@
 // jodi ami chai html collection or nodeList ke pure array baniye tarpor array er sob method use korte tahole html collection or nodeList ke array te convart korte hobe
 
 // Convert HTMLCollection to Array 
-const li = document.getElementsByClassName('li')
-// Ans : HTMLCollection(3) [li.li, li.li, li.li]
+// const li = document.getElementsByClassName('li')
+// // Ans : HTMLCollection(3) [li.li, li.li, li.li]
+
+// const convertLiArr = Array.from(li)
+// console.log(convertLiArr)
+// convertLiArr.map((l)=>{
+//   console.log(l)
+// })
+
+// Convert NodeList to Array
+const li = document.querySelectorAll('.li')
+console.log(li)
+// Ans : NodeList(3) [li.li, li.li, li.li]
 
 const convertLiArr = Array.from(li)
 console.log(convertLiArr)
-convertLiArr.map((l)=>{
+convertLiArr.forEach((l)=>{
   console.log(l)
 })
-
-// Convert NodeList to Array
-
 
 
 
