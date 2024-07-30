@@ -1146,7 +1146,7 @@
 //querySelector
 // document.querySelector('h1') // ekhane page e joto h1 tag ache tar moddhe first h1 ekhane diye dibe
 // querySelectorAll
-// document.querySelectorAll('h1') // ekhane page e joto h1 tag ache sob gula eksathe kore array or nodeList akare diye dibe . jekhane array er property jemon map filter etc use kora jabe
+// document.querySelectorAll('h1') // ekhane page e joto h1 tag ache sob gula eksathe kore array or nodeList akare diye dibe . jekhane array er property forEach use kora jabe
 
 // const input = document.querySelector('[type="password"]')
 // const input1 = document.querySelector('input[type="password"]')
@@ -1166,16 +1166,15 @@
 // })
 
 // Convert NodeList to Array
-const li = document.querySelectorAll('.li')
-console.log(li)
-// Ans : NodeList(3) [li.li, li.li, li.li]
+// const li = document.querySelectorAll('.li')
+// console.log(li)
+// // Ans : NodeList(3) [li.li, li.li, li.li]
 
-const convertLiArr = Array.from(li)
-console.log(convertLiArr)
-convertLiArr.forEach((l)=>{
-  console.log(l)
-})
-
+// const convertLiArr = Array.from(li)
+// console.log(convertLiArr)
+// convertLiArr.forEach((l)=>{
+//   console.log(l)
+// })
 
 
 // let img = document.querySelectorAll('img');
@@ -1218,6 +1217,8 @@ convertLiArr.forEach((l)=>{
 
 // let text = document.querySelector('.inner')
 
+
+
 // Attribute Selector
 // let att = document.querySelector("[tanvir='ahmed']")
 // let att1 = document.querySelector("[tanvir='ahmed']").attributes
@@ -1256,6 +1257,10 @@ convertLiArr.forEach((l)=>{
 
 // document.body.children[0].className = 'tanvirss'
 
+
+
+
+
 // Change Style
 //1. element.style.color = 'red'
 //2. element.style.cssText = 'background-color: black; color: green; font-weight: 500;'
@@ -1263,7 +1268,11 @@ convertLiArr.forEach((l)=>{
 //4. element.setAttributes('class','className')
 //5. element.classList.add('className')
 // element.classList.remove('classNamve)
-// element.classList.toggle('className')
+// element.classList.toggle('className') // jodi ai className thake tahole remove kore dau, jodi na thake add kore dau
+
+// setInterval(()=>{
+//   h1.classList.toggle('head') // .5s por por head class add hobe remove hobe
+// },500)
 
 // let h1 = document.querySelector('.hell')
 
@@ -1356,6 +1365,14 @@ convertLiArr.forEach((l)=>{
 
 // document.children[0].children[1].children[1].childNodes[1].childNodes[0].nodeValue = 'Hello My Love!!'
 
+// Clone Node
+// container.appendChild(h1.cloneNode())
+// function cloneNodeWithoutText(){
+//   container.appendChild(h1.cloneNode())
+// }
+// function cloneNodeWithAllNode(){
+//   container.appendChild(h1.cloneNode(true))
+// }
 
 
 
