@@ -1144,6 +1144,14 @@
 // const hello = document.getElementById('ids')
 
 //querySelector
+// document.querySelector('h1') // ekhane page e joto h1 tag ache tar moddhe first h1 ekhane diye dibe
+// querySelectorAll
+// document.querySelectorAll('h1') // ekhane page e joto h1 tag ache sob gula eksathe kore array or nodeList akare diye dibe . jekhane array er property jemon map filter etc use kora jabe
+
+const input = document.querySelector('[type="password"]')
+const input1 = document.querySelector('input[type="password"]')
+
+
 // let img = document.querySelectorAll('img');
 
 // let allImages = [
@@ -1202,12 +1210,12 @@
 // console.log(heading.getAttribute('id'))
 // console.log(heading.getAttribute('tanvir'))
 
-const heading = document.getElementById('h1')
-heading.setAttribute('class','test')
-// ekhane age class e heading nam e class chilo . kintu ami jokhon setAttribute diye test class set korlam tokhon ager class heading ta muche diye only test add kora hoise . tai heading class er kono css apply hobe na . only test er css apply hobe
-// jodi chai ager class o thakbe, new class o thakbe tahole...
-heading.setAttribute('class','heading test')
-// karon setAttribute always override kore thake
+// const heading = document.getElementById('h1')
+// heading.setAttribute('class','test')
+// // ekhane age class e heading nam e class chilo . kintu ami jokhon setAttribute diye test class set korlam tokhon ager class heading ta muche diye only test add kora hoise . tai heading class er kono css apply hobe na . only test er css apply hobe
+// // jodi chai ager class o thakbe, new class o thakbe tahole...
+// heading.setAttribute('class','heading test')
+// // karon setAttribute always override kore thake
 
 // function att(){
 //   document.querySelector("[tanvir='ahmed']").setAttribute("id","heading")
