@@ -1122,6 +1122,7 @@
 //   document.children[0].children[1].children[4].innerText = "Hello World";
 // }
 
+
 // var hello = document.body.children[0].innerText = "Hello World@"
 // function changeImage(){
 //   document.body.children[4].src = '';
@@ -1129,6 +1130,8 @@
 // }
 
 // console.dir(document)
+
+// const heading = document.getElementById('h1').className
 
 // getElementsByTagName
 // const hello = document.getElementsByTagName('h2');
@@ -1193,6 +1196,11 @@
 // console.log(manualAttBody)
 
 // let att = document.querySelector("[tanvir='ahmed']").getAttribute('class')
+
+const heading = document.getElementById('h1')
+console.log(heading.getAttribute('class'))
+console.log(heading.getAttribute('id'))
+console.log(heading.getAttribute('tanvir'))
 
 // function att(){
 //   document.querySelector("[tanvir='ahmed']").setAttribute("id","heading")
@@ -1303,8 +1311,13 @@
 // nodes = document.body.childNodes[2].nodeValue
 
 // document.body.childNodes[2].nodeValue = 'Hii Tanvir!!'
+// const node = document.childNodes[1].childNodes[2].childNodes[1]
 
 // document.children[0].children[1].children[1].childNodes[1].childNodes[0].nodeValue = 'Hello My Love!!'
+
+
+
+
 
 // Append & AppendChild -- append , appendChild
 // Append and AppendChild kono element ke onno element er vitore cut kore last e place kore dey . kintu jodi oi element ke copy node kore tarpor appendChild or Append kore tahole oitar copy ashe kintu oi element ager jayga teii thake
