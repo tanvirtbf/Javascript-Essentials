@@ -511,10 +511,26 @@ const gameName = 'Tanvir-Ahmed'
 
 // Substring
 const newGameName = gameName.substring(0,4)
+console.log(newGameName) // Tanv (0 index theke 4 index er age 3 index porjonto)
 
+// slice
+const anotherName = gameName.slice(-8,4)
+console.log(anotherName) // ans will be similer with substring , but only difference is slice can set negative value , but substring are not
 
+// trim
+const newString1 = '       Tanvir  Ahmed      '
+console.log(newString1.trim()) // Tanvir  Ahmed
 
+// replace
+const url = 'https://tanvir.com/tanvir ahmed'
+const newUrl =url.replace(' ','%20')
+console.log(newUrl) // https://tanvir.com/tanvir%20ahmed
 
+// includes
+console.log(url.includes('tanvir')) // true
+console.log(url.includes('tanvirrr')) // false
+
+// splite
 
 
 
