@@ -485,6 +485,39 @@
 // const funVal = testReturn()
 // console.log(funVal)
 
+
+
+// String 
+const fname = 'Tanvir'
+const repoCount = 75
+
+// string interpolation
+console.log(`${fname} ${repoCount} Value`)
+
+// Access character using index
+console.log(fname[1]) // a
+console.log(repoCount[0]) // undefined // number not access with index
+
+// toUpperCase
+console.log(fname.toUpperCase()) // TANVIR
+
+// charAt
+console.log(fname.charAt(3)) // v (fname variable er 3 no. index value)
+
+// indexOf
+console.log(fname.indexOf('v')) // 3 (fname variable er 'v' kon index)
+
+const gameName = 'Tanvir-Ahmed'
+
+// Substring
+const newGameName = gameName.substring(0,4)
+
+
+
+
+
+
+
 // Stack and Heap
 // ager kaler language gulay jokhon kaj hoito tokhon memory ke reserve kora, memory ke free kora sob programmer der kaj chilo . jar karone extra pera nite hoito . jemon kono kichu define korar age vabte hoito kothay memory dibo, kototuku memory dibo etc . kintu modern language e memoryr eto beshi control deya hoy na . automatic egula handling hoy
 
@@ -499,13 +532,13 @@
 // jei value heap memory te store hoy tokhon setar theke only memory address pauya jay , actual value directly access kora jay na . 
 
 // Example : 
-let fname = 'Tanvir'
-let funName = fname ;
-console.log(fname) // Ans : Tanvir
-console.log(funName) // Ans : Tanvir
-funName = 'Tanvir Ahmed'
-console.log(fname) // Ans : Tanvir
-console.log(funName) // Ans : Tanvir Ahmed
+// let fname = 'Tanvir'
+// let funName = fname ;
+// console.log(fname) // Ans : Tanvir
+// console.log(funName) // Ans : Tanvir
+// funName = 'Tanvir Ahmed'
+// console.log(fname) // Ans : Tanvir
+// console.log(funName) // Ans : Tanvir Ahmed
 // ekhane let funName = fname jokhon kora hoy tokhon fname er value copy hoye funName er moddhe ashe . tai funName change korle fname er value change hoy na . abar fname er value change korle funName er value change hoy . 
 
 
