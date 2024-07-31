@@ -485,6 +485,26 @@
 // const funVal = testReturn()
 // console.log(funVal)
 
+// Stack and Heap
+// ager kaler language gulay jokhon kaj hoito tokhon memory ke reserve kora, memory ke free kora sob programmer der kaj chilo . jar karone extra pera nite hoito . jemon kono kichu define korar age vabte hoito kothay memory dibo, kototuku memory dibo etc . kintu modern language e memoryr eto beshi control deya hoy na . automatic egula handling hoy
+
+// 2 types of memory 
+// 1. Stack memory (for Primitive)
+// 2. Heap memory (for Non-Primitive)
+
+// Primitive data store korar jonno use hoy Stack Memory
+// Non-Primitive data store korar jonno heap memory use hoy
+
+
+
+
+
+
+
+
+
+
+
 // Tokenization in Javascript
 // var code = 'var x = 5 + 3;';
 // var tokens = code.match(/(\b\w+\b|[^\s])/g);
@@ -1375,8 +1395,6 @@
 // }
 
 
-
-
 // Append & AppendChild -- append , appendChild
 // Append and AppendChild kono element ke onno element er vitore cut kore last e place kore dey . kintu jodi oi element ke copy node kore tarpor appendChild or Append kore tahole oitar copy ashe kintu oi element ager jayga teii thake
 // let h1 = document.querySelector('h1')
@@ -1518,6 +1536,10 @@
 // //2. New Way
 // container.remove()// ui container remove but memory container not remove
 // container = null// remove in memory
+
+
+
+
 
 // Event Listener
 //1. using onclick
