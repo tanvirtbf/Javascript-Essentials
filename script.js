@@ -495,6 +495,18 @@
 // Primitive data store korar jonno use hoy Stack Memory
 // Non-Primitive data store korar jonno heap memory use hoy
 
+// jei value stack memory te store hoy tokhon setar copy pauya jay 
+// jei value heap memory te store hoy tokhon setar theke only memory address pauya jay , actual value directly access kora jay na . 
+
+// Example : 
+let fname = 'Tanvir'
+let funName = fname ;
+console.log(fname) // Ans : Tanvir
+console.log(funName) // Ans : Tanvir
+funName = 'Tanvir Ahmed'
+console.log(fname) // Ans : Tanvir
+console.log(funName) // Ans : Tanvir Ahmed
+// ekhane let funName = fname jokhon kora hoy tokhon fname er value copy hoye funName er moddhe ashe . tai funName change korle fname er value change hoy na . abar fname er value change korle funName er value change hoy . 
 
 
 
