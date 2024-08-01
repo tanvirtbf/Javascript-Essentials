@@ -534,6 +534,12 @@ console.log(url.includes('tanvirrr')) // false
 
 
 
+// Arrays 
+const myArr = []
+
+
+
+
 // Stack and Heap
 // ager kaler language gulay jokhon kaj hoito tokhon memory ke reserve kora, memory ke free kora sob programmer der kaj chilo . jar karone extra pera nite hoito . jemon kono kichu define korar age vabte hoito kothay memory dibo, kototuku memory dibo etc . kintu modern language e memoryr eto beshi control deya hoy na . automatic egula handling hoy
 
