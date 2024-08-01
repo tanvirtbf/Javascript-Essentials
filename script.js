@@ -600,11 +600,25 @@
 // console.log(arr1) // [1, 2, 3]
 
 // spread operator
-const arr1 = [1,2,3]
-const arr2 = [4,5,6]
-const newArr = [...arr1, ...arr2]
-console.log(newArr)
+// const arr1 = [1,2,3]
+// const arr2 = [4,5,6]
+// const newArr = [...arr1, ...arr2]
+// console.log(newArr)
 
+// isArray
+console.log(Array.isArray('Tanvir')) // False (karon Tanvir ekta string not array)
+
+// Array.from (convert array)
+console.log(Array.from('Tanvir')) // ['T', 'a', 'n', 'v', 'i', 'r']
+const convertArr = Array.from('Tanvir Ahmed')
+console.log(convertArr) // ['T', 'a', 'n', 'v', 'i', 'r', ' ', 'A', 'h', 'm', 'e', 'd']
+
+// Array.of (convert in array of multiple variable)
+const a = 10;
+const b = 20;
+const c = 30;
+const arrayOf = Array.of(a,b,c)
+console.log(arrayOf) // [10, 20, 30]
 
 
 
