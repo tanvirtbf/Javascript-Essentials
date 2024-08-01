@@ -488,54 +488,88 @@
 
 
 // String 
-const fname = 'Tanvir'
-const repoCount = 75
+// const fname = 'Tanvir'
+// const repoCount = 75
 
 // string interpolation
-console.log(`${fname} ${repoCount} Value`)
+// console.log(`${fname} ${repoCount} Value`)
 
 // Access character using index
-console.log(fname[1]) // a
-console.log(repoCount[0]) // undefined // number not access with index
+// console.log(fname[1]) // a
+// console.log(repoCount[0]) // undefined // number not access with index
 
-// toUpperCase
-console.log(fname.toUpperCase()) // TANVIR
+// // toUpperCase
+// console.log(fname.toUpperCase()) // TANVIR
 
-// charAt
-console.log(fname.charAt(3)) // v (fname variable er 3 no. index value)
+// // charAt
+// console.log(fname.charAt(3)) // v (fname variable er 3 no. index value)
 
-// indexOf
-console.log(fname.indexOf('v')) // 3 (fname variable er 'v' kon index)
+// // indexOf
+// console.log(fname.indexOf('v')) // 3 (fname variable er 'v' kon index)
 
-const gameName = 'Tanvir-Ahmed'
+// const gameName = 'Tanvir-Ahmed'
 
-// Substring
-const newGameName = gameName.substring(0,4)
-console.log(newGameName) // Tanv (0 index theke 4 index er age 3 index porjonto)
+// // Substring
+// const newGameName = gameName.substring(0,4)
+// console.log(newGameName) // Tanv (0 index theke 4 index er age 3 index porjonto)
 
-// slice
-const anotherName = gameName.slice(-8,4)
-console.log(anotherName) // ans will be similer with substring , but only difference is slice can set negative value , but substring are not
+// // slice
+// const anotherName = gameName.slice(-8,4)
+// console.log(anotherName) // ans will be similer with substring , but only difference is slice can set negative value , but substring are not
 
-// trim
-const newString1 = '       Tanvir  Ahmed      '
-console.log(newString1.trim()) // Tanvir  Ahmed
+// // trim
+// const newString1 = '       Tanvir  Ahmed      '
+// console.log(newString1.trim()) // Tanvir  Ahmed
 
-// replace
-const url = 'https://tanvir.com/tanvir ahmed'
-const newUrl =url.replace(' ','%20')
-console.log(newUrl) // https://tanvir.com/tanvir%20ahmed
+// // replace
+// const url = 'https://tanvir.com/tanvir ahmed'
+// const newUrl =url.replace(' ','%20')
+// console.log(newUrl) // https://tanvir.com/tanvir%20ahmed
 
-// includes
-console.log(url.includes('tanvir')) // true
-console.log(url.includes('tanvirrr')) // false
+// // includes
+// console.log(url.includes('tanvir')) // true
+// console.log(url.includes('tanvirrr')) // false
 
 // splite
 
 
 
 // Arrays 
-const myArr = []
+const myArr = [1,2,3,4,5,6,7]
+const myHeros = ["Tanvir","Sadia"]
+const myArr2 = new Array(1,2,3,4,5)
+console.log(myArr2)
+
+// Array Methods
+
+// 1. push (array er last e element add korbe)
+myArr.push(8)
+myArr.push(9)
+console.log(myArr)
+
+// 2. pop (array er last theke element delete korbe)
+myArr.pop()
+console.log(myArr)
+
+// 3. unshift (array er first e element add kore)
+myArr.unshift(0)
+console.log(myArr)
+
+// 4. shift (array er first theke element delete kore)
+myArr.shift()
+console.log(myArr)
+
+// 5. includes (array er moddhe kono value exist hole true, na hole false)
+console.log(myArr.includes(5)) // true
+console.log(myArr.includes(15)) // false
+
+// 6. indexOf (etao array er moddhe search kora . kintu includes only true false value return kore . kintu eta jodi false hoy, orthat jodi oi value ta array te na thake tahole -1 return kore . r thakle oi value er index number return kore)
+console.log(myArr.indexOf(2)) // 1 (2 value in 1 number index)
+console.log(myArr.indexOf(17)) // -1 (not find 17 in myArr)
+
+
+
+
 
 
 
