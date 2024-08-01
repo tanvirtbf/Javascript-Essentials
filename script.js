@@ -535,46 +535,59 @@
 
 
 // Arrays 
-const myArr = [1,2,3,4,5,6,7]
-const myHeros = ["Tanvir","Sadia"]
-const myArr2 = new Array(1,2,3,4,5)
-console.log(myArr2)
+// const myArr = [1,2,3,4,5,6,7]
+// const myHeros = ["Tanvir","Sadia"]
+// const myArr2 = new Array(1,2,3,4,5)
+// console.log(myArr2)
 
-// Array Methods
+// // Array Methods
 
-// 1. push (array er last e element add korbe)
-myArr.push(8)
-myArr.push(9)
-console.log(myArr)
+// // 1. push (array er last e element add korbe)
+// myArr.push(8)
+// myArr.push(9)
+// console.log(myArr)
 
-// 2. pop (array er last theke element delete korbe)
-myArr.pop()
-console.log(myArr)
+// // 2. pop (array er last theke element delete korbe)
+// myArr.pop()
+// console.log(myArr)
 
-// 3. unshift (array er first e element add kore)
-myArr.unshift(0)
-console.log(myArr)
+// // 3. unshift (array er first e element add kore)
+// myArr.unshift(0)
+// console.log(myArr)
 
-// 4. shift (array er first theke element delete kore)
-myArr.shift()
-console.log(myArr)
+// // 4. shift (array er first theke element delete kore)
+// myArr.shift()
+// console.log(myArr)
 
-// 5. includes (array er moddhe kono value exist hole true, na hole false)
-console.log(myArr.includes(5)) // true
-console.log(myArr.includes(15)) // false
+// // 5. includes (array er moddhe kono value exist hole true, na hole false)
+// console.log(myArr.includes(5)) // true
+// console.log(myArr.includes(15)) // false
 
-// 6. indexOf (etao array er moddhe search kora . kintu includes only true false value return kore . kintu eta jodi false hoy, orthat jodi oi value ta array te na thake tahole -1 return kore . r thakle oi value er index number return kore)
-console.log(myArr.indexOf(2)) // 1 (2 value in 1 number index)
-console.log(myArr.indexOf(17)) // -1 (not find 17 in myArr)
+// // 6. indexOf (etao array er moddhe search kora . kintu includes only true false value return kore . kintu eta jodi false hoy, orthat jodi oi value ta array te na thake tahole -1 return kore . r thakle oi value er index number return kore)
+// console.log(myArr.indexOf(2)) // 1 (2 value in 1 number index)
+// console.log(myArr.indexOf(17)) // -1 (not find 17 in myArr)
 
-// 7. join (array ke string e convert kore)
-const newArray = myArr.join()
-console.log(newArray) // 1,2,3,4,5,6,7,8
-console.log(typeof(newArray)) // string
+// // 7. join (array ke string e convert kore)
+// const newArray = myArr.join()
+// console.log(newArray) // 1,2,3,4,5,6,7,8
+// console.log(typeof(newArray)) // string
 
-// 8. slice
+// 8. slice and splice 
+// slice origin array ke change korte pare na , kintu splice original array ke change korte pare
 
+// Slice Method
+// const arr = [1,2,3,4,5]
+// console.log(arr) // [1, 2, 3, 4, 5]
+// const sliceArr = arr.slice(1,4)
+// console.log(sliceArr) // [2, 3, 4]
+// console.log(arr) // [1, 2, 3, 4, 5]
 
+// Splice Method 
+const arr = [1,2,3,4,5]
+console.log(arr) // [1, 2, 3, 4, 5]
+const spliceArr = arr.splice(2,4) 
+console.log(spliceArr) // [3, 4, 5]
+console.log(arr) // [1, 2] 
 
 
 
