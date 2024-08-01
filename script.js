@@ -567,7 +567,12 @@ console.log(myArr.includes(15)) // false
 console.log(myArr.indexOf(2)) // 1 (2 value in 1 number index)
 console.log(myArr.indexOf(17)) // -1 (not find 17 in myArr)
 
+// 7. join (array ke string e convert kore)
+const newArray = myArr.join()
+console.log(newArray) // 1,2,3,4,5,6,7,8
+console.log(typeof(newArray)) // string
 
+// 8. slice
 
 
 
