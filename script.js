@@ -1988,3 +1988,24 @@
 
 
 
+
+
+
+
+
+
+
+
+// Card Project using XHR
+
+const wrapper = document.querySelector('.wrapper')
+const card = document.createElement('div')
+const title = document.createElement('h3')
+const text = document.createElement('p')
+
+const xhr = new XMLHttpRequest();
+console.log(xhr)
+
+xhr.open('GET','https://jsonplaceholder.typicode.com/posts')
+xhr.send()
+
