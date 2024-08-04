@@ -2008,31 +2008,36 @@
 
 // Synchronous , Asynchronous and Ajax 
 
+// javascript single threaded houyay eksathe multiple kaj korte pare na . kintu jodi asynchrous code run kora lage, orthat jodi setTimeout, setInterval, XHR, fetch request etc er moto asynchronous code thake tahole javascript nije segula handle na kore browser ke diye dey handle korar jonno . karon browser multi threaded. pore browser oi code gula re run kore callback queue te diye rakhe . jokhon pura call stack khali hoye jay tokhon seigula call stack e giye ekta ekta kore execute hote thake 
+
 // Dog api mini project with XHR and Synchronously
 
-const image = document.querySelector("#image");
-const btn = document.querySelector("#btn");
+// const image = document.querySelector("#image");
+// const btn = document.querySelector("#btn");
 
-const xhr = new XMLHttpRequest()
-console.log(xhr)
+// const xhr = new XMLHttpRequest()
+// console.log(xhr)
 
-xhr.responseType = 'json'
+// xhr.responseType = 'json'
 
-xhr.addEventListener('load',()=>{
-  // const src = JSON.parse(xhr.response)
-  btn.addEventListener('click',()=>{
-    // image.src = src.message
-    image.src = xhr.response.message
-  })
-})
+// xhr.addEventListener('load',()=>{
+//   // const src = JSON.parse(xhr.response)
+//   btn.addEventListener('click',()=>{
+//     // image.src = src.message
+//     image.src = xhr.response.message
+//   })
+// })
 
-xhr.onload = ()=>{
-  btn.addEventListener('click',()=>{
-    image.src = xhr.response.message
-  })
-}
+// xhr.onload = ()=>{
+//   btn.addEventListener('click',()=>{
+//     image.src = xhr.response.message
+//   })
+// }
 
-xhr.open('GET','https://dog.ceo/api/breeds/image/random', false); // jokhon third argument false deya hobe tokhon seta api request synchrously korbe . by default true deya thake . tar mane hocche by default asynchrously run hoy
-xhr.send();
+// xhr.open('GET','https://dog.ceo/api/breeds/image/random', false); // jokhon third argument false deya hobe tokhon seta api request synchrously korbe . by default true deya thake . tar mane hocche by default asynchrously run hoy
+// xhr.send();
 
-console.log('hello')
+// console.log('hello')
+
+// Ajax
+// ajax alada kichu na . eta holo asynchronous javascript er ekta example . ajax mane holo asynchronous javascript xml 
