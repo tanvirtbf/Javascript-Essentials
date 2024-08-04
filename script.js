@@ -1952,12 +1952,11 @@
 //         console.log(xhr.response) // {"message":"https:\/\/images.dog.ceo\/breeds\/gaddi-indian\/Gaddi.jpg","status":"success"}
 //         console.log(JSON.parse(xhr.response)) // xhr response object er format e ashbe
 
-//       }) // jokhon xhr e data server theke ashbe tokhon eta run korbe 
+//       }) // jokhon xhr e data server theke ashbe tokhon eta run korbe
 
 //       xhr.open('GET','https://dog.ceo/api/breeds/image/random')
 //       xhr.send();
 // });
-
 
 // Dog api mini project with XHR
 
@@ -1986,26 +1985,23 @@
 // xhr.open('GET','https://dog.ceo/api/breeds/image/random');
 // xhr.send();
 
-
-
-
-
-
-
-
-
-
-
 // Card Project using XHR
 
-const wrapper = document.querySelector('.wrapper')
-const card = document.createElement('div')
-const title = document.createElement('h3')
-const text = document.createElement('p')
+const wrapper = document.querySelector(".wrapper");
+const btn = document.querySelector('button')
 
 const xhr = new XMLHttpRequest();
-console.log(xhr)
+console.log(xhr);
+xhr.responseType = 'json'
+xhr.onload = () => {
+  console.log(xhr);
+  btn.addEventListener('click',()=>{
+    const card = document.createElement("div");
+    const title = document.createElement("h3");
+    const text = document.createElement("p");
 
-xhr.open('GET','https://jsonplaceholder.typicode.com/posts')
-xhr.send()
+  })
+};
 
+xhr.open("GET", "https://jsonplaceholder.typicode.com/posts");
+xhr.send();
