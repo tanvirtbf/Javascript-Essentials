@@ -1959,9 +1959,12 @@
 
 //Dog Api Mini Project
 let data;
-fetch('https://jsonplaceholder.typicode.com/todos/1')
+fetch('https://dog.ceo/api/breeds/image/random')
       .then(response => response.json())
       .then(json => {
         console.log(json)
         data = json;
+        const image = document.querySelector('#image')
+        image.src = json.message
+        image.style.width = '200px'
       })
