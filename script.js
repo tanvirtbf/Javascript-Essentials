@@ -1967,10 +1967,11 @@ const btn = document.querySelector("#btn");
 const xhr = new XMLHttpRequest()
 console.log(xhr)
 
+xhr.responseType = 'json'
+
 xhr.addEventListener('load',()=>{
-  const src = JSON.parse(xhr.response)
   btn.addEventListener('click',()=>{
-    image.src = src.message
+    image.src = xhr.response.message
   })
 })
 
