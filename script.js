@@ -1910,31 +1910,47 @@
 
 //Dog Api Mini Project
 
-  // let data;
-  // fetch("https://dog.ceo/api/breeds/image/random")
-  //   .then((response) => response.json())
-  //   .then((json) => {
-  //     console.log(json);
-  //     data = json;
-  //     const image = document.querySelector("#image");
-  //     const btn = document.querySelector("#btn");
-  //     image.src = json.message;
-  //     image.style.width = "200px";
-  //   });
+// let data;
+// fetch("https://dog.ceo/api/breeds/image/random")
+//   .then((response) => response.json())
+//   .then((json) => {
+//     console.log(json);
+//     data = json;
+//     const image = document.querySelector("#image");
+//     const btn = document.querySelector("#btn");
+//     image.src = json.message;
+//     image.style.width = "200px";
+//   });
 
-  //   btn.addEventListener("click", () => {
-  //     let data;
-  //     fetch("https://dog.ceo/api/breeds/image/random")
-  //       .then((response) => response.json())
-  //       .then((json) => {
-  //         console.log(json);
-  //         data = json;
-  //         const image = document.querySelector("#image");
-  //         const btn = document.querySelector("#btn");
-  //         image.src = json.message;
-  //         image.style.width = "200px";
-  //       });
-  //   });
+// btn.addEventListener("click", () => {
+//   let data;
+//   fetch("https://dog.ceo/api/breeds/image/random")
+//     .then((response) => response.json())
+//     .then((json) => {
+//       console.log(json);
+//       data = json;
+//       const image = document.querySelector("#image");
+//       const btn = document.querySelector("#btn");
+//       image.src = json.message;
+//       image.style.width = "200px";
+//     });
+// });
 
+// XMLHttpRequest (XHR)
+// amra fetch diye kono api fetch kori , eta ashce 2015 shale . tar age manush api fetch korar jonno XMLHttpRequest (XHR) use korto
 
-  // XMLHttpRequest (XHR)
+const image = document.querySelector("#image");
+const btn = document.querySelector("#btn");
+btn.addEventListener("click", () => {
+      const image = document.querySelector("#image");
+      const btn = document.querySelector("#btn");
+      const xhr = new XMLHttpRequest();
+
+      console.log(xhr)
+      xhr.addEventListener('load',()=>{
+        console.log(xhr)
+      }) // jokhon xhr e data server theke ashbe tokhon eta run korbe 
+
+      xhr.open('GET','https://dog.ceo/api/breeds/image/random')
+      xhr.send();
+});
