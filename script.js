@@ -487,9 +487,7 @@
 // const funVal = testReturn()
 // console.log(funVal)
 
-
-
-// String 
+// String
 // const fname = 'Tanvir'
 // const repoCount = 75
 
@@ -534,9 +532,7 @@
 
 // splite
 
-
-
-// Arrays 
+// Arrays
 // const myArr = [1,2,3,4,5,6,7]
 // const myHeros = ["Tanvir","Sadia"]
 // const myArr2 = new Array(1,2,3,4,5)
@@ -574,7 +570,7 @@
 // console.log(newArray) // 1,2,3,4,5,6,7,8
 // console.log(typeof(newArray)) // string
 
-// 8. slice and splice 
+// 8. slice and splice
 // slice origin array ke change korte pare na , kintu splice original array ke change korte pare
 
 // Slice Method
@@ -584,14 +580,14 @@
 // console.log(sliceArr) // [2, 3, 4]
 // console.log(arr) // [1, 2, 3, 4, 5]
 
-// Splice Method 
+// Splice Method
 // const arr = [1,2,3,4,5]
 // console.log(arr) // [1, 2, 3, 4, 5]
-// const spliceArr = arr.splice(2,4) 
+// const spliceArr = arr.splice(2,4)
 // console.log(spliceArr) // [3, 4, 5]
-// console.log(arr) // [1, 2] 
+// console.log(arr) // [1, 2]
 
-// concat method 
+// concat method
 // const arr1 = [1,2,3]
 // const arr2 = [4,5,6]
 // // arr1.push(arr2)
@@ -621,7 +617,6 @@
 // const c = 30;
 // const arrayOf = Array.of(a,b,c)
 // console.log(arrayOf) // [10, 20, 30]
-
 
 // Object
 
@@ -674,7 +669,6 @@
 //   }
 // }
 
-
 // Object de-structure and JSON API
 // const course = {
 //   courseName : 'React',
@@ -686,24 +680,20 @@
 // console.log(courseName) // React
 // console.log(courseIns) // courseIns is not defined
 
-
-
-
-
 // Stack and Heap
 // ager kaler language gulay jokhon kaj hoito tokhon memory ke reserve kora, memory ke free kora sob programmer der kaj chilo . jar karone extra pera nite hoito . jemon kono kichu define korar age vabte hoito kothay memory dibo, kototuku memory dibo etc . kintu modern language e memoryr eto beshi control deya hoy na . automatic egula handling hoy
 
-// 2 types of memory 
+// 2 types of memory
 // 1. Stack memory (for Primitive)
 // 2. Heap memory (for Non-Primitive)
 
 // Primitive data store korar jonno use hoy Stack Memory
 // Non-Primitive data store korar jonno heap memory use hoy
 
-// jei value stack memory te store hoy tokhon setar copy pauya jay 
-// jei value heap memory te store hoy tokhon setar theke only memory address pauya jay , actual value directly access kora jay na . 
+// jei value stack memory te store hoy tokhon setar copy pauya jay
+// jei value heap memory te store hoy tokhon setar theke only memory address pauya jay , actual value directly access kora jay na .
 
-// Example : 
+// Example :
 // let fname = 'Tanvir'
 // let funName = fname ;
 // console.log(fname) // Ans : Tanvir
@@ -711,16 +701,7 @@
 // funName = 'Tanvir Ahmed'
 // console.log(fname) // Ans : Tanvir
 // console.log(funName) // Ans : Tanvir Ahmed
-// ekhane let funName = fname jokhon kora hoy tokhon fname er value copy hoye funName er moddhe ashe . tai funName change korle fname er value change hoy na . abar fname er value change korle funName er value change hoy . 
-
-
-
-
-
-
-
-
-
+// ekhane let funName = fname jokhon kora hoy tokhon fname er value copy hoye funName er moddhe ashe . tai funName change korle fname er value change hoy na . abar fname er value change korle funName er value change hoy .
 
 // Tokenization in Javascript
 // var code = 'var x = 5 + 3;';
@@ -1082,8 +1063,6 @@
 // hello() // Ans : 100000
 // ekhane console.log(a) te aisha a variable ke na peye se tar immidiate scope , mane hello() function er scope e a ke khujte thake . se kintu tar siblings kono scope e check korbe na , mane two() function er scope er vitor khujbe na . se only tar parent scope e khujbe . tokhon se parent scope e giye a er value 100000 peyeche and print kore diyeche
 
-
-
 // closure
 // function outer(){
 //   var x = 'hello world'
@@ -1096,9 +1075,9 @@
 //   console.log(x) // Ans : hii
 // }
 // outer()
-// ekhane inner function tar parent er variable x ke access korte parche + x er value change korte parche . etaii closure er concept 
+// ekhane inner function tar parent er variable x ke access korte parche + x er value change korte parche . etaii closure er concept
 
-// tahole closure ki ? 
+// tahole closure ki ?
 // function outer(){
 //   var x = 'hello world'
 //   return function inner(){
@@ -1117,7 +1096,7 @@
 // jehetu outer function return korche inner function ke tai outer function ke call korle sekhane tar return value ta ashbe . tar mane holo outer() = function inner(){..}
 
 // const closureFun = outer()
-// ekhane outer function er return value orthat inner function ta closureFun variable e pass kora hoyeche . tai closureFun call korle inner function ke call korle jei value ashto seta ashbe 
+// ekhane outer function er return value orthat inner function ta closureFun variable e pass kora hoyeche . tai closureFun call korle inner function ke call korle jei value ashto seta ashbe
 // console.log(closureFun)
 // Ans : -->
 // ƒ outer(){
@@ -1129,12 +1108,12 @@
 
 // closureFun() // Ans : hello world
 
-// definition of closure 
-// outer function er vitor x variable jehetu inner function use koreche and sei inner function closureFun variable er vitor rakha hoyeche tai outer function execute houyar poreo outer function er variable x er ostitto theke jacche inner function orthat closureFun variable e . jotokkhon porjonto child function orthat inner function ba closureFun ke execute kora sesh hobe totokkhon variable x er ostitto thakbe . ekhane inner function taii closure 
+// definition of closure
+// outer function er vitor x variable jehetu inner function use koreche and sei inner function closureFun variable er vitor rakha hoyeche tai outer function execute houyar poreo outer function er variable x er ostitto theke jacche inner function orthat closureFun variable e . jotokkhon porjonto child function orthat inner function ba closureFun ke execute kora sesh hobe totokkhon variable x er ostitto thakbe . ekhane inner function taii closure
 
 // Some Example of Closure
 
-// Example 1 : 
+// Example 1 :
 // function outer(){
 //   var x = 10;
 //   function inner(){
@@ -1144,10 +1123,10 @@
 //   return inner;
 // }
 // var innerFunc = outer()
-// innerFunc() // Ans : 20 
+// innerFunc() // Ans : 20
 // innerFunc ke call korle 20 ashbe kno ? ashar kotha to 10 . karon x =20 houyar ageii inner function er definition memory te chole gese . kintu na . ekhane inner function ke use kora hoyeche innerFunc() er maddhome . totokkhone x er value 20 hoye gesilo . r jokhon innerFunc() kora holo tokhon oi somoy x ke pauyar jonno x er present memory te point kora obosthay chilo
 
-// Example 2 : 
+// Example 2 :
 // function outer(){
 //   var x = 10;
 //   function inner(){
@@ -1159,7 +1138,7 @@
 // }
 // var innerFunc = outer()
 // innerFunc() // Ans : 25
-// var x = 20 jokhon kora hoyeche tokhon ashole ager x er 10 value ke replace kore 20 kora hoyeche . r jehetu innerFunc() hoite hoite x er value 20 kora hoise tai x = 20 ei address e point kora chilo x er value 
+// var x = 20 jokhon kora hoyeche tokhon ashole ager x er 10 value ke replace kore 20 kora hoyeche . r jehetu innerFunc() hoite hoite x er value 20 kora hoise tai x = 20 ei address e point kora chilo x er value
 
 // Very Important Note for Closure
 // closure jokhon kono variable ke close kore, orthat parent er kono variable ke nije use kore  tokhon sei variable er immidiate value ke dhore rakhe na . sei variable er memory address ke point kora thake . orthat jokhon closure function ta call kora hobe tokhon oi variable er present value show hobe . example niche deya holo
@@ -1169,9 +1148,9 @@
 //   },1000)
 // }
 // Ans is expected 0 1 2 3 4 but Ans is : 5 5 5 5 5
-// ekhane i=0 er somoy setTimeout ke callback queue te rakha hocche, temni vabe i = 1, 2, 3, 4 er jonno setTimeout ke callback queue te rakha hocche. jokhon call stack khali hobe tokhon event loop er maddhome ekta ekta kore setTimeout total 5 ta setTimeout callStack e aisha ekta ekta kore execute hote thakbe . kintu jokhon execute hote thakbe tokhon to already for loop execution sesh . and last e i er value 5 hoye gesilo . tai setTimeout er i er value always 5 thakbe . karon closure always i er memory address e point kora thake 
+// ekhane i=0 er somoy setTimeout ke callback queue te rakha hocche, temni vabe i = 1, 2, 3, 4 er jonno setTimeout ke callback queue te rakha hocche. jokhon call stack khali hobe tokhon event loop er maddhome ekta ekta kore setTimeout total 5 ta setTimeout callStack e aisha ekta ekta kore execute hote thakbe . kintu jokhon execute hote thakbe tokhon to already for loop execution sesh . and last e i er value 5 hoye gesilo . tai setTimeout er i er value always 5 thakbe . karon closure always i er memory address e point kora thake
 
-// example 4 : 
+// example 4 :
 // for(var i = 0; i<5; i++){
 //   (function(j){
 //     setTimeout(function(){
@@ -1181,7 +1160,7 @@
 // }
 // Now Ans is : 0 1 2 3 4
 
-// example 5 : 
+// example 5 :
 // for(let i = 0; i<5; i++){
 //   setTimeout(()=>{
 //     console.log(i)
@@ -1189,9 +1168,6 @@
 // }
 // Ans : 0 1 2 3 4
 // ekhane let use koray loop jotobar ghurche totobar notun i variable create korche notun notun memory address e rakhche . kintu var diye loop ghuranor somoy protibar same i er value change kora hocchilo jekhane let diye protibar notun i create kora hocchilo .
-
-
-
 
 // Immutability and Mutability
 // definition : immutability mane jeta change kora jay na . mutability mane jeta change kora jay
@@ -1286,8 +1262,8 @@
 // setTimeout with Higher Order Function
 // const timer1 = setTimeout('console.log("set time 1")',2000)
 // const timer2 = setTimeout('console.log("set time 2")',4000)
-// const timer3 = setTimeout(a,9000) // a ke setTimeout internally call kore 
-// // ekhane timer3 er setTimeout higher order function hoye gese . karon etar parameter e ekta function pass kora hoise 
+// const timer3 = setTimeout(a,9000) // a ke setTimeout internally call kore
+// // ekhane timer3 er setTimeout higher order function hoye gese . karon etar parameter e ekta function pass kora hoise
 
 // function a(){
 //   console.log("Hiii")
@@ -1300,11 +1276,9 @@
 // console.log('Hello World')
 // Ans : Hello World - set time 1 - set time 2 - set time 3
 
-
-
 // setInterval
 // const timer1 = setInterval('console.log("set time 1")',1000)
-// // 1 second por por output print hoite thakbe 
+// // 1 second por por output print hoite thakbe
 // setTimeout(()=>{
 //   clearInterval(timer1)
 // },5000)
@@ -1321,10 +1295,6 @@
 // function a(){
 //   console.log('hiii')
 // }
-
-
-
-
 
 //Browser Object Mode
 //1. Location = window.location OR location
@@ -1359,7 +1329,6 @@
 //   document.children[0].children[1].children[4].innerText = "Hello World";
 // }
 
-
 // var hello = document.body.children[0].innerText = "Hello World@"
 // function changeImage(){
 //   document.body.children[4].src = '';
@@ -1389,10 +1358,10 @@
 // const input1 = document.querySelector('input[type="password"]')
 
 // Important Note for HTMLcollection and NodeList
-// HTMLcollection e array er kono method jemon map, forEach , filter etc pauya jay na . tai html collection ke use kore array er moto use kora jay na . kintu NodeList er vitor only forEach use kora jay jeta diye amra prottekta array er element ke ekta ekta kore access korte pari . 
+// HTMLcollection e array er kono method jemon map, forEach , filter etc pauya jay na . tai html collection ke use kore array er moto use kora jay na . kintu NodeList er vitor only forEach use kora jay jeta diye amra prottekta array er element ke ekta ekta kore access korte pari .
 // jodi ami chai html collection or nodeList ke pure array baniye tarpor array er sob method use korte tahole html collection or nodeList ke array te convart korte hobe
 
-// Convert HTMLCollection to Array 
+// Convert HTMLCollection to Array
 // const li = document.getElementsByClassName('li')
 // // Ans : HTMLCollection(3) [li.li, li.li, li.li]
 
@@ -1412,7 +1381,6 @@
 // convertLiArr.forEach((l)=>{
 //   console.log(l)
 // })
-
 
 // let img = document.querySelectorAll('img');
 
@@ -1454,8 +1422,6 @@
 
 // let text = document.querySelector('.inner')
 
-
-
 // Attribute Selector
 // let att = document.querySelector("[tanvir='ahmed']")
 // let att1 = document.querySelector("[tanvir='ahmed']").attributes
@@ -1493,10 +1459,6 @@
 // }
 
 // document.body.children[0].className = 'tanvirss'
-
-
-
-
 
 // Change Style
 //1. element.style.color = 'red'
@@ -1628,8 +1590,6 @@
 // function cloneNodeWithAllNode(){
 //   container.appendChild(h1.cloneNode(true))
 // }
-
-
 
 // Append & AppendChild -- append , appendChild
 // Append and AppendChild kono element ke onno element er vitore cut kore last e place kore dey . kintu jodi oi element ke copy node kore tarpor appendChild or Append kore tahole oitar copy ashe kintu oi element ager jayga teii thake
@@ -1772,8 +1732,6 @@
 // //2. New Way
 // container.remove()// ui container remove but memory container not remove
 // container = null// remove in memory
-
-
 
 // Event Listener
 //1. using onclick
@@ -1940,15 +1898,8 @@
 
 // Mouse Event
 
-
-
-
-
-
-
-
 // Advance Javascript (Async)
-// JSON 
+// JSON
 // let data;
 // fetch('https://jsonplaceholder.typicode.com/todos/1')
 //       .then(response => response.json())
@@ -1958,13 +1909,30 @@
 //       })
 
 //Dog Api Mini Project
-let data;
-fetch('https://dog.ceo/api/breeds/image/random')
-      .then(response => response.json())
-      .then(json => {
-        console.log(json)
-        data = json;
-        const image = document.querySelector('#image')
-        image.src = json.message
-        image.style.width = '200px'
-      })
+
+  let data;
+  fetch("https://dog.ceo/api/breeds/image/random")
+    .then((response) => response.json())
+    .then((json) => {
+      console.log(json);
+      data = json;
+      const image = document.querySelector("#image");
+      const btn = document.querySelector("#btn");
+      image.src = json.message;
+      image.style.width = "200px";
+    });
+
+    btn.addEventListener("click", () => {
+      let data;
+      fetch("https://dog.ceo/api/breeds/image/random")
+        .then((response) => response.json())
+        .then((json) => {
+          console.log(json);
+          data = json;
+          const image = document.querySelector("#image");
+          const btn = document.querySelector("#btn");
+          image.src = json.message;
+          image.style.width = "200px";
+        });
+    });
+
