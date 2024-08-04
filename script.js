@@ -1910,29 +1910,31 @@
 
 //Dog Api Mini Project
 
-  let data;
-  fetch("https://dog.ceo/api/breeds/image/random")
-    .then((response) => response.json())
-    .then((json) => {
-      console.log(json);
-      data = json;
-      const image = document.querySelector("#image");
-      const btn = document.querySelector("#btn");
-      image.src = json.message;
-      image.style.width = "200px";
-    });
+  // let data;
+  // fetch("https://dog.ceo/api/breeds/image/random")
+  //   .then((response) => response.json())
+  //   .then((json) => {
+  //     console.log(json);
+  //     data = json;
+  //     const image = document.querySelector("#image");
+  //     const btn = document.querySelector("#btn");
+  //     image.src = json.message;
+  //     image.style.width = "200px";
+  //   });
 
-    btn.addEventListener("click", () => {
-      let data;
-      fetch("https://dog.ceo/api/breeds/image/random")
-        .then((response) => response.json())
-        .then((json) => {
-          console.log(json);
-          data = json;
-          const image = document.querySelector("#image");
-          const btn = document.querySelector("#btn");
-          image.src = json.message;
-          image.style.width = "200px";
-        });
-    });
+  //   btn.addEventListener("click", () => {
+  //     let data;
+  //     fetch("https://dog.ceo/api/breeds/image/random")
+  //       .then((response) => response.json())
+  //       .then((json) => {
+  //         console.log(json);
+  //         data = json;
+  //         const image = document.querySelector("#image");
+  //         const btn = document.querySelector("#btn");
+  //         image.src = json.message;
+  //         image.style.width = "200px";
+  //       });
+  //   });
 
+
+  // XMLHttpRequest (XHR)
