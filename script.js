@@ -1939,18 +1939,24 @@
 // XMLHttpRequest (XHR)
 // amra fetch diye kono api fetch kori , eta ashce 2015 shale . tar age manush api fetch korar jonno XMLHttpRequest (XHR) use korto
 
-const image = document.querySelector("#image");
-const btn = document.querySelector("#btn");
-btn.addEventListener("click", () => {
-      const image = document.querySelector("#image");
-      const btn = document.querySelector("#btn");
-      const xhr = new XMLHttpRequest();
+// const image = document.querySelector("#image");
+// const btn = document.querySelector("#btn");
+// btn.addEventListener("click", () => {
+//       const image = document.querySelector("#image");
+//       const btn = document.querySelector("#btn");
+//       const xhr = new XMLHttpRequest();
 
-      console.log(xhr)
-      xhr.addEventListener('load',()=>{
-        console.log(xhr)
-      }) // jokhon xhr e data server theke ashbe tokhon eta run korbe 
+//       console.log(xhr)
+//       xhr.addEventListener('load',()=>{
 
-      xhr.open('GET','https://dog.ceo/api/breeds/image/random')
-      xhr.send();
-});
+//         console.log(xhr.response) // {"message":"https:\/\/images.dog.ceo\/breeds\/gaddi-indian\/Gaddi.jpg","status":"success"}
+//         console.log(JSON.parse(xhr.response)) // xhr response object er format e ashbe
+
+//       }) // jokhon xhr e data server theke ashbe tokhon eta run korbe 
+
+//       xhr.open('GET','https://dog.ceo/api/breeds/image/random')
+//       xhr.send();
+// });
+
+
+// Dog api mini project with XHR
