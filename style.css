@@ -1,4 +1,22 @@
-.head{
-  color : blue;
-  font-size: 2em;
+.container{
+  max-width: 1140px;
+  margin: 0 auto;
+  padding : 20px;
+}
+.wrapper{
+  padding: 50px;
+}
+.wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+.card{
+  width: 200px;
+  height: 300px;
+  overflow: hidden;
+  border: 1px solid #212121;
+  border-radius: 10px;
+  padding: 10px;
 }

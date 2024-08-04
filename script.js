@@ -1961,13 +1961,13 @@
 
 // Dog api mini project with XHR
 
-const image = document.querySelector("#image");
-const btn = document.querySelector("#btn");
+// const image = document.querySelector("#image");
+// const btn = document.querySelector("#btn");
 
-const xhr = new XMLHttpRequest()
-console.log(xhr)
+// const xhr = new XMLHttpRequest()
+// console.log(xhr)
 
-xhr.responseType = 'json'
+// xhr.responseType = 'json'
 
 // xhr.addEventListener('load',()=>{
 //   // const src = JSON.parse(xhr.response)
@@ -1977,11 +1977,14 @@ xhr.responseType = 'json'
 //   })
 // })
 
-xhr.onload = ()=>{
-  btn.addEventListener('click',()=>{
-    image.src = xhr.response.message
-  })
-}
+// xhr.onload = ()=>{
+//   btn.addEventListener('click',()=>{
+//     image.src = xhr.response.message
+//   })
+// }
 
-xhr.open('GET','https://dog.ceo/api/breeds/image/random');
-xhr.send();
+// xhr.open('GET','https://dog.ceo/api/breeds/image/random');
+// xhr.send();
+
+
+
