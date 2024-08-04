@@ -676,15 +676,15 @@
 
 
 // Object de-structure and JSON API
-const course = {
-  courseName : 'React',
-  price : "999",
-  courseIns : 'Tanvir'
-}
-const {courseName,price} = course
-console.log(price) // 999
-console.log(courseName) // React
-console.log(courseIns) // courseIns is not defined
+// const course = {
+//   courseName : 'React',
+//   price : "999",
+//   courseIns : 'Tanvir'
+// }
+// const {courseName,price} = course
+// console.log(price) // 999
+// console.log(courseName) // React
+// console.log(courseIns) // courseIns is not defined
 
 
 
@@ -1588,6 +1588,11 @@ console.log(courseIns) // courseIns is not defined
 // li3.previousElementSibling // li2
 // li3.previousElementSibling.previousElementSibling //li1
 // li3.previousElementSibling.previousElementSibling.previousElementSibling // null
+
+// Access firstElementChild and lastElementChild
+const parent = document.querySelector('.parent')
+console.log(parent.firstElementChild) // parent div er first child return hobe
+console.log(parent.lastElementChild) // parent div er last child return hobe
 
 // Node Node Node ChildNode
 
