@@ -1987,21 +1987,23 @@
 
 // Card Project using XHR
 
-const wrapper = document.querySelector(".wrapper");
-const btn = document.querySelector('button')
+// const wrapper = document.querySelector(".wrapper");
+// const btn = document.querySelector('button')
 
-const xhr = new XMLHttpRequest();
-console.log(xhr);
-xhr.responseType = 'json'
-xhr.onload = () => {
-  console.log(xhr);
-  btn.addEventListener('click',()=>{
-    const card = document.createElement("div");
-    const title = document.createElement("h3");
-    const text = document.createElement("p");
+// const xhr = new XMLHttpRequest();
+// console.log(xhr);
+// xhr.responseType = 'json'
+// xhr.onload = () => {
+//   console.log(xhr);
+//   btn.addEventListener('click',()=>{
+//     const card = document.createElement("div");
+//     const title = document.createElement("h3");
+//     const text = document.createElement("p");
 
-  })
-};
+//   })
+// };
 
-xhr.open("GET", "https://jsonplaceholder.typicode.com/posts");
-xhr.send();
+// xhr.open("GET", "https://jsonplaceholder.typicode.com/posts");
+// xhr.send();
+
+// Synchronous , Asynchronous and Ajax 
