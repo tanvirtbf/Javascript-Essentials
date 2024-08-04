@@ -1969,11 +1969,19 @@ console.log(xhr)
 
 xhr.responseType = 'json'
 
-xhr.addEventListener('load',()=>{
+// xhr.addEventListener('load',()=>{
+//   // const src = JSON.parse(xhr.response)
+//   btn.addEventListener('click',()=>{
+//     // image.src = src.message
+//     image.src = xhr.response.message
+//   })
+// })
+
+xhr.onload = ()=>{
   btn.addEventListener('click',()=>{
     image.src = xhr.response.message
   })
-})
+}
 
 xhr.open('GET','https://dog.ceo/api/breeds/image/random');
 xhr.send();
