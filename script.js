@@ -1595,12 +1595,14 @@
 // console.log(parent.lastElementChild) // parent div er last child return hobe
 
 // Node Node Node ChildNode
+
 // const parent = document.querySelector('.parent')
 // console.dir(parent.childNodes[1].childNodes[0].nodeValue)
 // const newText = document.createTextNode('Hello World');
 // const div = document.createElement('div')
 // div.appendChild(newText)
 // document.body.querySelector('.parent').appendChild(div)
+
 //Text Node change
 // let nodes = document.body.childNodes
 // nodes = document.body.childNodes[2]
@@ -1613,6 +1615,12 @@
 // document.children[0].children[1].children[1].childNodes[1].childNodes[0].nodeValue = 'Hello My Love!!'
 
 // Clone Node
+// const parent = document.querySelector('.parent')
+// const cloneParentWithoutChildNodes = parent.cloneNode();
+// const cloneParentWithAllChildNodes = parent.cloneNode(true);
+// console.log(cloneParentWithoutChildNodes)
+// console.log(cloneParentWithAllChildNodes)
+// parent.appendChild(parent.cloneNode(true))
 // container.appendChild(h1.cloneNode())
 // function cloneNodeWithoutText(){
 //   container.appendChild(h1.cloneNode())
@@ -1620,6 +1628,7 @@
 // function cloneNodeWithAllNode(){
 //   container.appendChild(h1.cloneNode(true))
 // }
+
 
 
 // Append & AppendChild -- append , appendChild
