@@ -143,6 +143,7 @@
 // console.log(user1 === user2); // Ans : false
 
 // Note : user1 and user2 er value same diye create kora holeo tader variable address same na and user1 === user2 is false . karon object non-primitive . tai ekhane value compare na hoye memory address compare hoise .
+// jehetu user1 and user2 const diye declare hoise tai value same holeo vinno vinno memory te tader rakha hoise
 
 // key value pair
 // const hello = {
@@ -154,7 +155,7 @@
 // Note : object er key by default string hoye thake . eta ke double qoute or single quote na dileo eta string hishebei count hobe
 
 // const user2 = {
-//   'firs tName': 'Sadia',
+//   'first Name': 'Sadia',
 //   'last Name': 'Ahmed',
 //   'age': 15,
 //   'has Job': false,
@@ -317,6 +318,7 @@
 
 // let fruits = ['Mango','Banana','Jackfruits','Grapes','Dates']
 // let arr = fruits
+// jehetu fruits variable e tar value na theke tar address thake tai let arr = fruits ei code e fruits er bodole tar memory address ashce . tar mane let arr = [memory address of fruits]
 // arr.push('hello')
 // console.log(fruits) // ['Mango', 'Banana', 'Jackfruits', 'Grapes', 'Dates', 'hello']
 // console.log(arr) // ['Mango', 'Banana', 'Jackfruits', 'Grapes', 'Dates', 'hello']
@@ -606,19 +608,84 @@
 // console.log(newArr)
 
 // isArray
-console.log(Array.isArray('Tanvir')) // False (karon Tanvir ekta string not array)
+// console.log(Array.isArray('Tanvir')) // False (karon Tanvir ekta string not array)
 
-// Array.from (convert array)
-console.log(Array.from('Tanvir')) // ['T', 'a', 'n', 'v', 'i', 'r']
-const convertArr = Array.from('Tanvir Ahmed')
-console.log(convertArr) // ['T', 'a', 'n', 'v', 'i', 'r', ' ', 'A', 'h', 'm', 'e', 'd']
+// // Array.from (convert array)
+// console.log(Array.from('Tanvir')) // ['T', 'a', 'n', 'v', 'i', 'r']
+// const convertArr = Array.from('Tanvir Ahmed')
+// console.log(convertArr) // ['T', 'a', 'n', 'v', 'i', 'r', ' ', 'A', 'h', 'm', 'e', 'd']
 
-// Array.of (convert in array of multiple variable)
-const a = 10;
-const b = 20;
-const c = 30;
-const arrayOf = Array.of(a,b,c)
-console.log(arrayOf) // [10, 20, 30]
+// // Array.of (convert in array of multiple variable)
+// const a = 10;
+// const b = 20;
+// const c = 30;
+// const arrayOf = Array.of(a,b,c)
+// console.log(arrayOf) // [10, 20, 30]
+
+
+// Object
+
+// object literals
+// const jsUser = {
+//   name : 'Tanvir',
+//   age : 25,
+//   location : 'Dhaka',
+//   email : 'tanvir@gmail.com',
+//   isLogin : false,
+//   lastLoginDays : ['Monday','Saturday']
+// }
+// jsUser.email = 'tanvir018765@gmail.com'
+// Object.freeze(jsUser)
+// Object.freeze use korle kono object ke add update delete kisui kora jay na
+// jsUser.name = 'Sadia'
+// console.log(jsUser)
+// jsUser.hobby = 'Software Engineer'
+// console.log(jsUser)
+// delete jsUser.name;
+// console.log(jsUser)
+
+// jsUser.greeting = function (){
+//   console.log("Hello Js User")
+// }
+// jsUser.greeting2 = function (){
+//   console.log(`Hello Js User ${this.name}`)
+// }
+// console.log(jsUser.greeting2())
+
+// singleton object and non-singleton object
+// const tinder = new Object(); // singleton object
+// const dinder = {} // non-singleton object
+// console.log(tinder) // {}
+// console.log(dinder) // {}
+
+// tinder.id = "1"
+// tinder.name = 'Tanvir'
+// tinder.isLogin = false
+// console.log(tinder)
+
+// const regular = {
+//   email : 'tanvir@gmail.com',
+//   fullName : {
+//     fname : 'Tanvir',
+//     lname : 'Ahmed',
+//     total : {
+//       name : 'Tanvir Ahmed '
+//     }
+//   }
+// }
+
+
+// Object de-structure and JSON API
+const course = {
+  courseName : 'React',
+  price : "999",
+  courseIns : 'Tanvir'
+}
+const {courseName,price} = course
+console.log(price) // 999
+console.log(courseName) // React
+console.log(courseIns) // courseIns is not defined
+
 
 
 
