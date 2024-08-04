@@ -2007,3 +2007,32 @@
 // xhr.send();
 
 // Synchronous , Asynchronous and Ajax 
+
+// Dog api mini project with XHR and Synchronously
+
+const image = document.querySelector("#image");
+const btn = document.querySelector("#btn");
+
+const xhr = new XMLHttpRequest()
+console.log(xhr)
+
+xhr.responseType = 'json'
+
+xhr.addEventListener('load',()=>{
+  // const src = JSON.parse(xhr.response)
+  btn.addEventListener('click',()=>{
+    // image.src = src.message
+    image.src = xhr.response.message
+  })
+})
+
+xhr.onload = ()=>{
+  btn.addEventListener('click',()=>{
+    image.src = xhr.response.message
+  })
+}
+
+xhr.open('GET','https://dog.ceo/api/breeds/image/random', false); // jokhon third argument false deya hobe tokhon seta api request synchrously korbe . by default true deya thake . tar mane hocche by default asynchrously run hoy
+xhr.send();
+
+console.log('hello')
