@@ -1960,3 +1960,19 @@
 
 
 // Dog api mini project with XHR
+
+const image = document.querySelector("#image");
+const btn = document.querySelector("#btn");
+
+const xhr = new XMLHttpRequest()
+console.log(xhr)
+
+xhr.addEventListener('load',()=>{
+  const src = JSON.parse(xhr.response)
+  btn.addEventListener('click',()=>{
+    image.src = src.message
+  })
+})
+
+xhr.open('GET','https://dog.ceo/api/breeds/image/random');
+xhr.send();
