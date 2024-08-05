@@ -704,6 +704,8 @@
 // ekhane let funName = fname jokhon kora hoy tokhon fname er value copy hoye funName er moddhe ashe . tai funName change korle fname er value change hoy na . abar fname er value change korle funName er value change hoy .
 
 // Tokenization in Javascript
+// javascript ekdom first e tar code gula ke tukra tukra kore vag kore . eta kei Tokenization bole
+
 // var code = 'var x = 5 + 3;';
 // var tokens = code.match(/(\b\w+\b|[^\s])/g);
 // console.log(tokens); //  Answer : ["var", "x", "=", "5", "+", "3", ";"] -> Tokenization
@@ -714,7 +716,10 @@
 // }
 //Tokenization => "function(keyword)","hello(a function name)","(){ (function start)","let(a variable will be declared)","a(a variable name)","10(value of a)","return(keyword)","a+1(expresstion for return where it's called)","}(function end)"
 
+
 //Abstract Syntex Tree
+// Tokenization complete houyar por javascript sob tukro tukro token gula ke niye ekta tree banay . jake bole Abstract Syntex Tree
+// tarpor Abstract Syntex Tree bananor por setake as a input hishebe niye javascript finally machine code e convart kore 
 // let a = 99
 // function hello(){
 // 	return a;
@@ -811,16 +816,17 @@
 //Execution Contaxt start
 
 //Lexical Position or Lexical Contaxt or Lexical Environment
-// const a = 10; // Lexical Position or Lexical context is line number 369
-// let b = 'Hello' // Lexical Position or Lexical context is line number 370
+// prottekta single code er position keii lexical position bole . position bolte bujhano hoise ei particular code ta file er thik kothay ache .
+// const a = 10; // Lexical Position or Lexical context is line number 819
+// let b = 'Hello' // Lexical Position or Lexical context is line number 820
 
-// function hello(){ // Lexical Position or Lexical context is line number 372-374
+// function hello(){ // Lexical Position or Lexical context is line number 822-824
 //   console.log('Hello World!')
 // }
 
-// let c = 11; // Lexical Position or Lexical context is line number 376
+// let c = 11; // Lexical Position or Lexical context is line number 827
 
-// hello(); // Lexical Position or Lexical context is line number 378
+// hello(); // Lexical Position or Lexical context is line number 829
 
 //Execution Contaxt understand by some text:
 // onk boro source code er moddhe onk lexical contaxt thake . prottekta lexical contaxt or prottekta particular code ke execute korar jonno javascript er ja ja dorkar tai holo oi particular code er jonno execution contaxt . line number 371 er jonno alada execution contaxt create hoy, line number 372 er jonno alada execution contaxt create hoy,line number 374-376  er jonno alada execution contaxt create hoy,evabe prottekta particular code er jonno alada alada execution contaxt create hoy
@@ -836,7 +842,7 @@
 
 // Creation phase eii 2 ta special object peye thaki, 1. window(global object) 2. this (point on window)
 
-// Global execution contaxt er creation phase e ki ki hobe ?
+// Global execution contaxt er creation phase e ki ki hobe ? nicher coder er jonno..
 // var tom = 'Hello Tom'
 // function hiTom(){
 //   console.log(this.tom)
