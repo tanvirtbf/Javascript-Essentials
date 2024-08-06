@@ -1033,7 +1033,7 @@
 // ekhane global scope er variable er value ta ke local scope e hide kora hoyeche
 // othoba jodi amra execution context diye eta map kori tahole bujhte parbo kno ei code er answer erokom holo
 
-// EX: 
+// EX : 
 // const greeting = 'hello'
 // function showGreeting(){
 //   const greeting = 'valo achen?'
@@ -1041,6 +1041,18 @@
 // }
 // showGreeting()
 // console.log(greeting) // hello
+
+// Concept of shadowing..
+
+// const greeting = 'hello'
+// function showGreeting(){
+//   const greeting = 'valo achen?'
+//   console.log(greeting) // valo achen?
+// }
+// showGreeting()
+// console.log(greeting) // hello
+
+// ******Important note***** ekhane global scope e greeting er value global execution context er execution phase e 'hello' deya hoyeche.tarpor jokhon showGreeting er execution phase start hoy tokhon notun vabe greeting name e variable create hoy, tar value undefined assign hoy . tarpor execution phase e greeting er value 'valo achen?' deya hoy . tarpor jokhon showGreeting er execution phase sesh hoye jay tokhon to callStack theke showGreeting ber hoye jay . tar mane showGreeting er vitore joto variable ase sob gula moira jay . showGreeting er vitor r kono kichur ostitto thake na . tar mane showGreeting er baire console.log(greeting) er value 'valo achen?' hobe na . karon function er vitor greeting already moira gese . tai jei greeting akhno beche ase , greeting = 'hello' sei greeting tai show hoise .    
 
 //3. Block Scope
 // Tricky part
@@ -1052,7 +1064,7 @@
 // var holo only function scope . tar mane var diye kono function er vitore variable create hole seta oi function er baire access kora jabe na . kintu var kintu block scope na . tar mane holo if(){}, {..}, for(){..} ai type er block er vitor var diye kono variable create korleo seta ai block gular baire access kora jabe . kintu let and const block scope . tar mane block er baire access kora jay na
 
 // Difference between var , let and const
-// var : var holo functional scope . function er baire access kora jay na . kintu block er baire access kora jay . karon var block scope na .
+// var : var holo functional scope . function er baire access kora jay na . kintu block er baire access kora jay . karon var block scope na , var functional scope
 // let and const : kintu let and const block scope . block er baire access kora jay na
 // EX :
 // if(true){
@@ -1092,6 +1104,24 @@
 // }
 // hello() // Ans : 100000
 // ekhane console.log(a) te aisha a variable ke na peye se tar immidiate scope , mane hello() function er scope e a ke khujte thake . se kintu tar siblings kono scope e check korbe na , mane two() function er scope er vitor khujbe na . se only tar parent scope e khujbe . tokhon se parent scope e giye a er value 100000 peyeche and print kore diyeche
+
+// More about Scope Chain
+// lexical context or lexical scope
+// jokhon jei function or variable jekhane rakha hoy setai holo tar lexical scope or lexical context . aro bujhate gele bolte nicher example er jerry function er lexical scope hocche global scope, karon take globally placed kora hoyeche and tom function er vitor name variable er lexical scope or lexical context hocche tom function er functional scope, karon take tom function er vitore define kora hoyeche . abar tom function er lexical context or lexical scope hocche global scope , karon tom ke globally define kora hoyeche 
+// function ke jekhanei call or invoked kora hok function er scope hocche jekhane take rakha hoyeche , orthat jei scoope e take rakha hoyeche . ai khetre niche jerry function ke tom function er vitore  call kora holeo jerry function er lexical context or lexical scope kintu tom function er baire global scope e . 
+// Ex: 
+function jerry(){
+  console.log(name)
+}
+function tom(){
+  var name = 'jerry'
+  jerry()
+}
+var name = 'cartoon'
+tom()
+// ekhane jerry jokhon name pacchilo na tokhon se tar immidiate next scope orthat global scope e khuje name er value 'cartoon' pay . tai se cartoon print kore dey . jerry kintu jekhane take call kora hoyeche sekhane khujeni , orthat tom function er vitore khujeni . karon take tom er vitor define kora hoy nai . just call kora hoyeche . tar mane call jekhaneii koruk function er definition jekhane ase setaii tar scope . sekhane na pele tar uporer scope e khujbe 
+
+
 
 // closure
 // function outer(){
