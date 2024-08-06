@@ -956,6 +956,8 @@
 //NOW FEC (Function Execution Context)
 // sayHi()
 
+
+
 // Scope and Scope Chain
 // var hello = 'Hello World'
 // function sayHello(){
@@ -1005,6 +1007,20 @@
 //2. Local Scope or Functional Scope
 // rules : function er vitor var diye hok, let diye hok , const diye hok jeta diyeii variable declare kori na kno seta oi function er baire access kora jay na . etaii local scope or functional scope
 
+// function sayHi(){
+//   const a = 10;
+//   function hello(){
+//     if(true){
+//       function xx(){
+//         console.log(a) // 10
+//       }
+//       xx()
+//     }
+//   }
+//   hello();
+// }
+// sayHi()
+
 // Shadowing
 // jodi globally kono variable er same name diye locally kono variable declare kora hoy and tader value jodi change hoy tahole localscope e local variable value taii show hobe r global scope e global variable er value ta show hobe
 // EX :
@@ -1016,6 +1032,15 @@
 // console.log(a) // Ans : hello
 // ekhane global scope er variable er value ta ke local scope e hide kora hoyeche
 // othoba jodi amra execution context diye eta map kori tahole bujhte parbo kno ei code er answer erokom holo
+
+// EX: 
+// const greeting = 'hello'
+// function showGreeting(){
+//   const greeting = 'valo achen?'
+//   console.log(greeting) // valo achen?
+// }
+// showGreeting()
+// console.log(greeting) // hello
 
 //3. Block Scope
 // Tricky part
@@ -2097,36 +2122,36 @@
 // 'https://dummyjson.com/posts/user/5' // get posts by user id
 // 'https://dummyjson.com/comments/post/6' // get comments by post id
 
-function makeHttpRequest(method,url,callback){
-  const xhr = new XMLHttpRequest()
-  xhr.responseType = 'json'
+// function makeHttpRequest(method,url,callback){
+//   const xhr = new XMLHttpRequest()
+//   xhr.responseType = 'json'
 
-  xhr.onload = () => {
-    callback(xhr.response)
-  }
+//   xhr.onload = () => {
+//     callback(xhr.response)
+//   }
 
-  xhr.open(method,url)
-  xhr.send()
-}
-makeHttpRequest('GET','https://dummyjson.com/users',(userData)=>{
-  console.log(userData)
+//   xhr.open(method,url)
+//   xhr.send()
+// }
+// makeHttpRequest('GET','https://dummyjson.com/users',(userData)=>{
+//   console.log(userData)
 
-  makeHttpRequest('GET',`https://dummyjson.com/posts/user/${userData.users[0].id}`,(userPosts)=>{
-    console.log(userPosts)
-    console.log(userPosts.posts[0].id)
+//   makeHttpRequest('GET',`https://dummyjson.com/posts/user/${userData.users[0].id}`,(userPosts)=>{
+//     console.log(userPosts)
+//     console.log(userPosts.posts[0].id)
 
-    makeHttpRequest('GET',`https://dummyjson.com/comments/post/${userPosts.posts[0].id}`, (postComment)=>{
-      console.log(postComment)
-      console.log(postComment.comments[0].body)
+//     makeHttpRequest('GET',`https://dummyjson.com/comments/post/${userPosts.posts[0].id}`, (postComment)=>{
+//       console.log(postComment)
+//       console.log(postComment.comments[0].body)
 
-      makeHttpRequest('GET',`https://dummyjson.com/users/${postComment.comments[0].user.id}`,(foundUser)=>{
-        console.log(foundUser)
-      })
+//       makeHttpRequest('GET',`https://dummyjson.com/users/${postComment.comments[0].user.id}`,(foundUser)=>{
+//         console.log(foundUser)
+//       })
 
-    })
+//     })
 
-  })
+//   })
 
-})
-// This is called Callback Hell . this piramid is a callback hell
+// })
+// // This is called Callback Hell . this piramid is a callback hell
 
