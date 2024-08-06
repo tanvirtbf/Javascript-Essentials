@@ -1948,8 +1948,8 @@
 // const image = document.querySelector("#image");
 // const btn = document.querySelector("#btn");
 // btn.addEventListener("click", () => {
-//       const image = document.querySelector("#image");
-//       const btn = document.querySelector("#btn");
+//       // const image = document.querySelector("#image");
+//       // const btn = document.querySelector("#btn");
 //       const xhr = new XMLHttpRequest();
 
 //       console.log(xhr)
@@ -2047,3 +2047,27 @@
 
 // Ajax
 // ajax alada kichu na . eta holo asynchronous javascript er ekta example . ajax mane holo asynchronous javascript xml 
+
+// Callback Hell
+
+// xhr revision 
+const image = document.querySelector("#image")
+const btn = document.querySelector("#btn")
+
+btn.addEventListener('click',()=>{
+  const xhr = new XMLHttpRequest();
+  console.log(xhr)
+  // xhr.responseType = 'json'
+  xhr.onload = ()=>{
+    const res = JSON.parse(xhr.response)
+    const {message} = res
+    image.src = message
+    image.style.width = '200px'
+    image.style.height = '200px'
+  }
+  // xhr.addEventListener('load',()=>{
+  //   console.log(xhr)
+  // })
+  xhr.open('GET','https://dog.ceo/api/breeds/image/random')
+  xhr.send();
+})
