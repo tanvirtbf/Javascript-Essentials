@@ -716,10 +716,9 @@
 // }
 //Tokenization => "function(keyword)","hello(a function name)","(){ (function start)","let(a variable will be declared)","a(a variable name)","10(value of a)","return(keyword)","a+1(expresstion for return where it's called)","}(function end)"
 
-
 //Abstract Syntex Tree
 // Tokenization complete houyar por javascript sob tukro tukro token gula ke niye ekta tree banay . jake bole Abstract Syntex Tree
-// tarpor Abstract Syntex Tree bananor por setake as a input hishebe niye javascript finally machine code e convart kore 
+// tarpor Abstract Syntex Tree bananor por setake as a input hishebe niye javascript finally machine code e convart kore
 // let a = 99
 // function hello(){
 // 	return a;
@@ -2012,9 +2011,9 @@
 // xhr.open("GET", "https://jsonplaceholder.typicode.com/posts");
 // xhr.send();
 
-// Synchronous , Asynchronous and Ajax 
+// Synchronous , Asynchronous and Ajax
 
-// javascript single threaded houyay eksathe multiple kaj korte pare na . kintu jodi asynchrous code run kora lage, orthat jodi setTimeout, setInterval, XHR, fetch request etc er moto asynchronous code thake tahole javascript nije segula handle na kore browser ke diye dey handle korar jonno . karon browser multi threaded. pore browser oi code gula re run kore callback queue te diye rakhe . jokhon pura call stack khali hoye jay tokhon seigula call stack e giye ekta ekta kore execute hote thake 
+// javascript single threaded houyay eksathe multiple kaj korte pare na . kintu jodi asynchrous code run kora lage, orthat jodi setTimeout, setInterval, XHR, fetch request etc er moto asynchronous code thake tahole javascript nije segula handle na kore browser ke diye dey handle korar jonno . karon browser multi threaded. pore browser oi code gula re run kore callback queue te diye rakhe . jokhon pura call stack khali hoye jay tokhon seigula call stack e giye ekta ekta kore execute hote thake
 
 // Dog api mini project with XHR and Synchronously
 
@@ -2046,11 +2045,11 @@
 // console.log('hello')
 
 // Ajax
-// ajax alada kichu na . eta holo asynchronous javascript er ekta example . ajax mane holo asynchronous javascript xml 
+// ajax alada kichu na . eta holo asynchronous javascript er ekta example . ajax mane holo asynchronous javascript xml
 
 // Callback Hell
 
-// xhr revision 
+// xhr revision
 // const image = document.querySelector("#image")
 // const btn = document.querySelector("#btn")
 
@@ -2072,17 +2071,53 @@
 //   xhr.send();
 // })
 
-// Reusable function 
+// Reusable function
 
-function makeHttpRequest(method,url){
+// function makeHttpRequest(method, url, callback) {
+//   const xhr = new XMLHttpRequest();
+//   console.log(xhr);
+//   xhr.responseType = "json";
+//   xhr.addEventListener("load", () => {
+//     callback(xhr.response);
+//   });
+//   xhr.open(method, url);
+//   xhr.send();
+// }
+// makeHttpRequest("GET", "https://dummyjson.com/users", (data) => {
+//   console.log(data);
+//   console.log("Hii");
+// });
+// makeHttpRequest("GET", "https://dummyjson.com/users/1", (data)=>{
+//   console.log(data)
+// });
+
+function makeHttpRequest(method,url,callback){
   const xhr = new XMLHttpRequest()
-  console.log(xhr)
   xhr.responseType = 'json'
-  xhr.onload = ()=>{
-    console.log(xhr.response.users[0].id)
+
+  xhr.onload = () => {
+    callback(xhr.response)
   }
+
   xhr.open(method,url)
   xhr.send()
 }
-makeHttpRequest('GET','https://dummyjson.com/users')
+makeHttpRequest('GET','https://dummyjson.com/users',(userData)=>{
+  console.log(userData)
 
+  makeHttpRequest('GET',`https://dummyjson.com/posts/user/${userData.users[0].id}`,(userPosts)=>{
+    console.log(userPosts)
+    console.log(userPosts.posts[0].id)
+
+    makeHttpRequest('GET',`https://dummyjson.com/comments/post/${userPosts.posts[0].id}`, (postComment)=>{
+      console.log(postComment)
+      console.log(postComment.comments[0].body)
+    })
+
+  })
+
+})
+
+
+// 'https://dummyjson.com/posts/user/5'
+// 'https://dummyjson.com/comments/post/6'
