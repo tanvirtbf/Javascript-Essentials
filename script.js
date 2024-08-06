@@ -2091,6 +2091,12 @@
 //   console.log(data)
 // });
 
+// Some important api
+// 'https://dummyjson.com/users' // get all users
+// 'https://dummyjson.com/users/2' // get single users by id
+// 'https://dummyjson.com/posts/user/5' // get posts by user id
+// 'https://dummyjson.com/comments/post/6' // get comments by post id
+
 function makeHttpRequest(method,url,callback){
   const xhr = new XMLHttpRequest()
   xhr.responseType = 'json'
@@ -2112,12 +2118,15 @@ makeHttpRequest('GET','https://dummyjson.com/users',(userData)=>{
     makeHttpRequest('GET',`https://dummyjson.com/comments/post/${userPosts.posts[0].id}`, (postComment)=>{
       console.log(postComment)
       console.log(postComment.comments[0].body)
+
+      makeHttpRequest('GET',`https://dummyjson.com/users/${postComment.comments[0].user.id}`,(foundUser)=>{
+        console.log(foundUser)
+      })
+
     })
 
   })
 
 })
+// This is called Callback Hell . this piramid is a callback hell
 
-
-// 'https://dummyjson.com/posts/user/5'
-// 'https://dummyjson.com/comments/post/6'
