@@ -1961,7 +1961,7 @@
 //       }) // jokhon xhr e data server theke ashbe tokhon eta run korbe
 
 //       xhr.open('GET','https://dog.ceo/api/breeds/image/random')
-//       xhr.send();
+//       xhr.send(); // request ke server e pathanor jonno send call kora hoy
 // });
 
 // Dog api mini project with XHR
@@ -2051,23 +2051,38 @@
 // Callback Hell
 
 // xhr revision 
-const image = document.querySelector("#image")
-const btn = document.querySelector("#btn")
+// const image = document.querySelector("#image")
+// const btn = document.querySelector("#btn")
 
-btn.addEventListener('click',()=>{
-  const xhr = new XMLHttpRequest();
+// btn.addEventListener('click',()=>{
+//   const xhr = new XMLHttpRequest();
+//   console.log(xhr)
+//   // xhr.responseType = 'json'
+//   xhr.onload = ()=>{
+//     const res = JSON.parse(xhr.response)
+//     const {message} = res
+//     image.src = message
+//     image.style.width = '200px'
+//     image.style.height = '200px'
+//   }
+//   // xhr.addEventListener('load',()=>{
+//   //   console.log(xhr)
+//   // })
+//   xhr.open('GET','https://dog.ceo/api/breeds/image/random')
+//   xhr.send();
+// })
+
+// Reusable function 
+
+function makeHttpRequest(method,url){
+  const xhr = new XMLHttpRequest()
   console.log(xhr)
-  // xhr.responseType = 'json'
+  xhr.responseType = 'json'
   xhr.onload = ()=>{
-    const res = JSON.parse(xhr.response)
-    const {message} = res
-    image.src = message
-    image.style.width = '200px'
-    image.style.height = '200px'
+    console.log(xhr.response.users[0].id)
   }
-  // xhr.addEventListener('load',()=>{
-  //   console.log(xhr)
-  // })
-  xhr.open('GET','https://dog.ceo/api/breeds/image/random')
-  xhr.send();
-})
+  xhr.open(method,url)
+  xhr.send()
+}
+makeHttpRequest('GET','https://dummyjson.com/users')
+
