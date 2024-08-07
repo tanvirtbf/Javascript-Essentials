@@ -2221,9 +2221,29 @@
 // })
 
 // Promises
+// Promise is a special type of object
+// const p = new Promise((resolve,reject)=>{
+//   // resolve('tanvir')
+//   // reject('tanvir')
+// }) // create a promise named p
 
+// ekta promise er 3 ta state thake 
+// 1. pending state
+// 2. resolved state (tar mane promise fullfill hoyeche)
+// 3. rejected state (tar mane jeta korte chaisilam seta reject hoyeche)
 
-
+// Understand promise using setTimeout (resolve after setTimeout time)
+const p = new Promise((resolve,reject)=>{
+  setTimeout(()=>{
+    resolve({
+      fname: 'Tanvir',
+      lname: 'Ahmed',
+      age: 25,
+    })
+    console.log(p) // after 4 second :-> promiseState: fullfilled , promiseResult:{fname: 'Tanvir', lname:'Ahmed', age:25}
+  },4000)
+})
+console.log(p) // promiseState: pending , promiseResult: undefined
 
 
 
