@@ -1124,6 +1124,55 @@
 
 
 // closure
+// outer function inner function refreshment..
+// function outer(){
+//   function inner(){
+//     console.log('inner')
+//   }
+//   console.log('outer')
+//   inner()
+// }
+// outer() // inner call in outer
+
+// now outer function return inner function
+// function outer(){
+//   return function inner(){
+//     console.log('inner')
+//   }
+// }
+// console.log(outer) 
+// output : 
+// ƒ outer(){
+//   return function inner(){
+//     console.log('inner')
+//   }
+// }
+// console.log(outer())
+// output : 
+// ƒ inner(){
+//   console.log('inner')
+// }
+
+// function outer(){
+//   return function inner(){
+//     console.log('inner')
+//   }
+// }
+// const outerFun = outer
+// console.log(outerFun) // outer function definition
+// // ƒ outer(){
+// //   return function inner(){
+// //     console.log('inner')
+// //   }
+// // }
+// const outerCall = outerFun()
+// console.log(outerCall) // inner function definition
+// // ƒ inner(){
+// //   console.log('inner')
+// // }
+// outerCall() // inner (finally inner function called)
+
+
 // function outer(){
 //   var x = 'hello world'
 //   function inner(){
@@ -1136,6 +1185,34 @@
 // }
 // outer()
 // ekhane inner function tar parent er variable x ke access korte parche + x er value change korte parche . etaii closure er concept
+// scope chain er concept clear thakle uporer example ta bujhte parbo
+
+// baba chele example 
+// function baba(){
+//   let bari = 'shantinikaton'
+//   function chele(){
+//     console.log(bari) // shantinikaton
+//     bari = 'hellonikaton'
+//     console.log(bari) // hellonikaton
+//   }
+//   chele()
+// }
+// baba()
+// ekhane chele tar babar sob property access korte pare and take change korte pare 
+
+// function baba(){
+//   let bari = 'shantinikaton'
+//   function chele(){
+//     console.log(bari) // shantinikaton
+//     bari = 'hellonikaton'
+//     console.log(bari) // hellonikaton
+//     const myProperty = 'bike'
+//   }
+//   chele()
+//   console.log(myProperty) // error : myProperty is not defined
+// }
+// baba()
+// kintu cheler myProperty variable baba tar scope e access korte partese na 
 
 // tahole closure ki ?
 // function outer(){
@@ -1170,6 +1247,22 @@
 
 // definition of closure
 // outer function er vitor x variable jehetu inner function use koreche and sei inner function closureFun variable er vitor rakha hoyeche tai outer function execute houyar poreo outer function er variable x er ostitto theke jacche inner function orthat closureFun variable e . jotokkhon porjonto child function orthat inner function ba closureFun ke execute kora sesh hobe totokkhon variable x er ostitto thakbe . ekhane inner function taii closure
+
+// Definition of Closure Again 
+// function baba(){
+//   const bari = 'myHome'
+//   return function chele(){
+//     console.log(bari)
+//   }
+// }
+// const amarChele = baba() // ekhaneii baba function execute hoye gese 
+// console.log(amarChele)
+// // ƒ chele(){
+// //   console.log(bari)
+// // }
+// amarChele() // myHome
+// baba function execute hoye jauyar pore to baba function er property bari callstack theke ber hoye jauyar kotha . kintu na . baba execute houyar poreo chele function ta babar property use korte parche , totokkhon use korte parbe jotokkhon chele purapuri vabe execute na hoy . ai jinishtaii closure . ekhane chele function taii closure . karon chele onno function er property use korte parche sei property jei function e ache sei function execute houyar poreo use korte parche . tai chele function taii closure 
+
 
 // Some Example of Closure
 
@@ -2438,39 +2531,44 @@
 // 'https://dummyjson.com/posts/user/5' // get posts by user id
 // 'https://dummyjson.com/comments/post/6' // get comments by post id
 
-const resolveBtn = document.querySelector('#resolveBtn')
-const rejectBtn = document.querySelector('#rejectBtn')
+// const resolveBtn = document.querySelector('#resolveBtn')
+// const rejectBtn = document.querySelector('#rejectBtn')
 
-function makeHttpRequest(method,url){
-  const xhr = new XMLHttpRequest()
-  xhr.responseType = 'json'
+// function makeHttpRequest(method,url){
+//   const xhr = new XMLHttpRequest()
+//   xhr.responseType = 'json'
 
-  const promise = new Promise((resolve,reject)=>{
-    xhr.onload = ()=>{
-      resolve(xhr.response)
-    }
-  })
+//   const promise = new Promise((resolve,reject)=>{
+//     xhr.addEventListener('load',()=>{
+//       resolve(xhr.response)
+//     })
+//     xhr.addEventListener('error',()=>{
+//       reject('Rejected!')
+//     })
+//   })
 
-  xhr.open(method,url)
-  xhr.send()
+//   xhr.open(method,url)
+//   xhr.send()
   
-  return promise
-}
-makeHttpRequest('GET','https://dummyjson.com/users')
-  .then((data)=>{
-    const promise2 = makeHttpRequest('GET',`https://dummyjson.com/users/${data.users[0].id}`)
-    return promise2
-  }).then((data)=>{
-    const promise3 = makeHttpRequest('GET',`https://dummyjson.com/posts/user/${data.id}`)
-    return promise3
-  }).then((data)=>{
-    const promise4 = makeHttpRequest('GET',`https://dummyjson.com/comments/post/${data.posts[0].id}`)
-    return promise4
-  }).then((data)=>{
-    const promise5 = makeHttpRequest('GET',`https://dummyjson.com/users/${data.comments[0].user.id}`)
-    return promise5
-  }).then((data)=>{
-    console.log(data)
-  })
+//   return promise
+// }
+// makeHttpRequest('GET','https://dummyjson.com/users')
+//   .then((data)=>{
+//     const promise2 = makeHttpRequest('GET',`https://dummyjson.com/users/${data.users[0].id}`)
+//     return promise2
+//   }).then((data)=>{
+//     const promise3 = makeHttpRequest('GET',`https://dummyjson.com/posts/user/${data.id}`)
+//     return promise3
+//   }).then((data)=>{
+//     const promise4 = makeHttpRequest('GET',`https://dummyjson.com/comments/post/${data.posts[0].id}`)
+//     return promise4
+//   }).then((data)=>{
+//     const promise5 = makeHttpRequest('GET',`https://dummyjson.com/users/${data.comments[0].user.id}`)
+//     return promise5
+//   }).then((data)=>{
+//     console.log(data)
+//   }).catch((data)=>{
+//     console.log(data)
+//   })
 
 
