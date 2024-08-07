@@ -1278,6 +1278,7 @@
 // var innerFunc = outer()
 // innerFunc() // Ans : 20
 // innerFunc ke call korle 20 ashbe kno ? ashar kotha to 10 . karon x =20 houyar ageii inner function er definition memory te chole gese . kintu na . ekhane inner function ke use kora hoyeche innerFunc() er maddhome . totokkhone x er value 20 hoye gesilo . r jokhon innerFunc() kora holo tokhon oi somoy x ke pauyar jonno x er present memory te point kora obosthay chilo
+// mot kotha ekhane outer function er x jei memory location e point kora chilo inner function er vitor x same memory address e point kora ache . tai inner er baireo jodi x er value change hoy tahole x er value inner function eo change hobe 
 
 // Example 2 :
 // function outer(){
@@ -1301,7 +1302,7 @@
 //   },1000)
 // }
 // Ans is expected 0 1 2 3 4 but Ans is : 5 5 5 5 5
-// ekhane i=0 er somoy setTimeout ke callback queue te rakha hocche, temni vabe i = 1, 2, 3, 4 er jonno setTimeout ke callback queue te rakha hocche. jokhon call stack khali hobe tokhon event loop er maddhome ekta ekta kore setTimeout total 5 ta setTimeout callStack e aisha ekta ekta kore execute hote thakbe . kintu jokhon execute hote thakbe tokhon to already for loop execution sesh . and last e i er value 5 hoye gesilo . tai setTimeout er i er value always 5 thakbe . karon closure always i er memory address e point kora thake
+// ekhane i=0 er somoy setTimeout ke callback queue(task queue) te rakha hocche, temni vabe i = 1, 2, 3, 4 er jonno setTimeout ke callback queue te rakha hocche. jokhon call stack khali hobe tokhon event loop er maddhome ekta ekta kore setTimeout total 5 ta setTimeout callStack e aisha ekta ekta kore execute hote thakbe . kintu jokhon execute hote thakbe tokhon to already for loop execution sesh . and last e i er value 5 hoye gesilo . tai setTimeout er i er value always 5 thakbe . karon closure always i er memory address e point kora thake
 
 // example 4 :
 // for(var i = 0; i<5; i++){
