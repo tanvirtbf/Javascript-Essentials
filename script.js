@@ -2259,7 +2259,7 @@
 // })
 // console.log(p) // promiseState: pending , promiseResult: undefined
 
-
+// .then and .catch
 
 
 
