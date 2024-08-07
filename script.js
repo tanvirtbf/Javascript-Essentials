@@ -2309,7 +2309,26 @@
 
 // difference between task queue(callback queue) and micro task queue with Promise
 
-
+{
+  setTimeout(()=>{
+    console.log('Set time out')
+  })
+  const p = new Promise((resolve,reject)=>{
+    resolve('Promise Resolved')
+  })
+  p.then((data)=>{
+    console.log(data)
+  }).catch(()=>{
+    console.log('rejected!')
+  }).finally(()=>{
+    console.log('finally')
+  })
+}
+// uporer block er vitorer output holo :=>
+  // Promise Resolved
+  // finally
+  // Set time out
+// ekhane age setTimeout thakar poreo promise er last e execute hoise . karon setTimeout by default task queue or callback queue te dhuke . and promise micro task queue te dhuke . jehetu micro task queue er priority sobcheye beshi tai micro task queue er code sobar age callstack e dhuke, jodio setTimeout age task queue te ashcilo 
 
 
 
