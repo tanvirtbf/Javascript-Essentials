@@ -1,3 +1,4 @@
+
 // Methods (Without Argument)
 // toUpperCase()
 // toLowerCase()
@@ -5,6 +6,7 @@
 // trimStart()
 // trimEnd()
 // length
+
 
 // const names = 'Tanvir'
 // console.log(names[2]) //result : n
