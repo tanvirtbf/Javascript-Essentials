@@ -2222,6 +2222,7 @@
 
 // Promises
 // Promise is a special type of object
+// Promise Asynchronously kaj hoye thake
 // const p = new Promise((resolve,reject)=>{
 //   // resolve('tanvir')
 //   // reject('tanvir')
@@ -2282,26 +2283,31 @@
 //   console.log('promise rejected') // jokhon p promise reject hobe tokhon ai console log print hobe
 // })
 
-const resolveBtn = document.querySelector('#resolveBtn')
-const rejectBtn = document.querySelector('#rejectBtn')
+// const resolveBtn = document.querySelector('#resolveBtn')
+// const rejectBtn = document.querySelector('#rejectBtn')
 
-const p = new Promise((resolve,reject)=>{
-  resolveBtn.addEventListener('click',()=>{
-    resolve('Promise Resolved!')
-  })
-  rejectBtn.addEventListener('click',()=>{
-    reject('404 not found!!')
-  })
-})
-p.then((data)=>{
-  console.log(data) // Promise Resolved!
-}).catch((err)=>{
-  console.log(err) // 404 not found!!
-})
+// const p = new Promise((resolve,reject)=>{
+//   resolveBtn.addEventListener('click',()=>{
+//     resolve('Promise Resolved!')
+//   })
+//   rejectBtn.addEventListener('click',()=>{
+//     reject('404 not found!!')
+//   })
+// })
+// p.then((data)=>{
+//   console.log(data) // Promise Resolved!
+// }).catch((err)=>{
+//   console.log(err) // 404 not found!!
+// }).finally((data)=>{
+//   console.log('Finally promise complete')
+// })
+// promise resolve hok or reject hok tate kichu ashe jay na , finally er code run korbeii korbe . seta ekdom last e run korbe
+
 // ekhane resolve() function call korar somoy jei arguments 'Promise Resolved!' deya hoyechilo setai p.then((data)=>{}) er data er moddhe gese. reject er khetreo same .catch() er err er moddhe gese
 
+// promise er kaj javascript er main thread kore na . eta browser alada vabe kore . orthat promise er code er jonno kokhono normal asynchronous code atke thake na . eta alada vabe run hoy browswer er thread er maddhome.
 
-
+// difference between task queue(callback queue) and micro task queue with Promise
 
 
 
