@@ -1110,15 +1110,15 @@
 // jokhon jei function or variable jekhane rakha hoy setai holo tar lexical scope or lexical context . aro bujhate gele bolte nicher example er jerry function er lexical scope hocche global scope, karon take globally placed kora hoyeche and tom function er vitor name variable er lexical scope or lexical context hocche tom function er functional scope, karon take tom function er vitore define kora hoyeche . abar tom function er lexical context or lexical scope hocche global scope , karon tom ke globally define kora hoyeche 
 // function ke jekhanei call or invoked kora hok function er scope hocche jekhane take rakha hoyeche , orthat jei scoope e take rakha hoyeche . ai khetre niche jerry function ke tom function er vitore  call kora holeo jerry function er lexical context or lexical scope kintu tom function er baire global scope e . 
 // Ex: 
-function jerry(){
-  console.log(name)
-}
-function tom(){
-  var name = 'jerry'
-  jerry()
-}
-var name = 'cartoon'
-tom()
+// function jerry(){
+//   console.log(name)
+// }
+// function tom(){
+//   var name = 'jerry'
+//   jerry()
+// }
+// var name = 'cartoon'
+// tom()
 // ekhane jerry jokhon name pacchilo na tokhon se tar immidiate next scope orthat global scope e khuje name er value 'cartoon' pay . tai se cartoon print kore dey . jerry kintu jekhane take call kora hoyeche sekhane khujeni , orthat tom function er vitore khujeni . karon take tom er vitor define kora hoy nai . just call kora hoyeche . tar mane call jekhaneii koruk function er definition jekhane ase setaii tar scope . sekhane na pele tar uporer scope e khujbe 
 
 
@@ -2184,4 +2184,12 @@ tom()
 
 // })
 // // This is called Callback Hell . this piramid is a callback hell
+
+// Some important api
+// 'https://dummyjson.com/users' // get all users
+// 'https://dummyjson.com/users/2' // get single users by id
+// 'https://dummyjson.com/posts/user/5' // get posts by user id
+// 'https://dummyjson.com/comments/post/6' // get comments by post id
+
+
 
