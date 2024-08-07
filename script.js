@@ -2261,28 +2261,44 @@
 
 // .then and .catch
 
+// const resolveBtn = document.querySelector('#resolveBtn')
+// const rejectBtn = document.querySelector('#rejectBtn')
+// const p = new Promise((resolve,reject)=>{
+//   resolveBtn.addEventListener('click',()=>{
+//     resolve({fname:'Tanvir',lname:'Ahmed',age: 25,})
+//   })
+//   rejectBtn.addEventListener('click',()=>{
+//     reject('Promise Rejected!')
+//   })
+// })
+
+// // console.log(p) korle prototype name e ekta object ase . oi object er vitore 3 ta special object ase . 1. catch() 2. finally() 3. then() 
+
+// // rules of then() -> jokhonii promise resolve hoye jabe tokhonii then() method call hoye jabe 
+// // rules of then() -> then() method tar vitore ekta callback function accept kore thake
+// p.then(()=>{
+//   console.log('promise resolved') // jokhon p promise resolved hobe tokhon ai console log print hobe
+// }).catch(()=>{
+//   console.log('promise rejected') // jokhon p promise reject hobe tokhon ai console log print hobe
+// })
+
 const resolveBtn = document.querySelector('#resolveBtn')
 const rejectBtn = document.querySelector('#rejectBtn')
+
 const p = new Promise((resolve,reject)=>{
   resolveBtn.addEventListener('click',()=>{
-    resolve({fname:'Tanvir',lname:'Ahmed',age: 25,})
+    resolve('Promise Resolved!')
   })
   rejectBtn.addEventListener('click',()=>{
-    reject('Promise Rejected!')
+    reject('404 not found!!')
   })
 })
-
-// console.log(p) korle prototype name e ekta object ase . oi object er vitore 3 ta special object ase . 1. catch() 2. finally() 3. then() 
-
-// rules of then() -> jokhonii promise resolve hoye jabe tokhonii then() method call hoye jabe 
-// rules of then() -> then() method tar vitore ekta callback function accept kore thake
-p.then(()=>{
-  console.log('promise resolved') // jokhon p promise resolved hobe tokhon ai console log print hobe
-}).catch(()=>{
-  console.log('promise rejected') // jokhon p promise reject hobe tokhon ai console log print hobe
+p.then((data)=>{
+  console.log(data) // Promise Resolved!
+}).catch((err)=>{
+  console.log(err) // 404 not found!!
 })
-
-
+// ekhane resolve() function call korar somoy jei arguments 'Promise Resolved!' deya hoyechilo setai p.then((data)=>{}) er data er moddhe gese. reject er khetreo same .catch() er err er moddhe gese
 
 
 
