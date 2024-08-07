@@ -2309,29 +2309,123 @@
 
 // difference between task queue(callback queue) and micro task queue with Promise
 
-{
-  setTimeout(()=>{
-    console.log('Set time out')
-  })
-  const p = new Promise((resolve,reject)=>{
-    resolve('Promise Resolved')
-  })
-  p.then((data)=>{
-    console.log(data)
-  }).catch(()=>{
-    console.log('rejected!')
-  }).finally(()=>{
-    console.log('finally')
-  })
-}
+// {
+//   setTimeout(()=>{
+//     console.log('Set time out')
+//   })
+//   const p = new Promise((resolve,reject)=>{
+//     resolve('Promise Resolved')
+//   })
+//   p.then((data)=>{
+//     console.log(data)
+//   }).catch(()=>{
+//     console.log('rejected!')
+//   }).finally(()=>{
+//     console.log('finally')
+//   })
+// }
 // uporer block er vitorer output holo :=>
   // Promise Resolved
   // finally
   // Set time out
 // ekhane age setTimeout thakar poreo promise er last e execute hoise . karon setTimeout by default task queue or callback queue te dhuke . and promise micro task queue te dhuke . jehetu micro task queue er priority sobcheye beshi tai micro task queue er code sobar age callstack e dhuke, jodio setTimeout age task queue te ashcilo 
 
+// {
+//   setTimeout(()=>{
+//     console.log('Set time out')
+//   })
+//   const p = new Promise((resolve,reject)=>{
+//     resolve('Promise Resolved')
+//   })
+//   p.then((data)=>{
+//     console.log(data)
+//   }).catch(()=>{
+//     console.log('rejected!')
+//   }).finally(()=>{
+//     console.log('finally')
+//   })
+//   setTimeout(()=>{
+//     console.log('Set time out')
+//   })
+//   const p2 = new Promise((resolve,reject)=>{
+//     resolve('Promise Resolve 2')
+//   })
+//   p2.then((data)=>{
+//     console.log(data)
+//   }).catch(()=>{
+//     console.log('404')
+//   }).finally(()=>{
+//     console.log('finally 2')
+//   })
+//   setTimeout(()=>{
+//     console.log('Set time out')
+//   })
+//   const p3 = new Promise((resolve,reject)=>{
+//     reject('404 not found')
+//   })
+//   p3.then(()=>{
+//     console.log('resolve')
+//   }).catch(()=>{
+//     console.log('reject')
+//   }).finally(()=>{
+//     console.log('finally 3')
+//   })
+//   setTimeout(()=>{
+//     console.log('Set time out')
+//   })
+// }
+// output : 
+// Promise Resolved
+// Promise Resolve 2
+// reject
+// finally
+// finally 2
+// finally 3
+// Set time out
+// Set time out
+// Set time out
+// Set time out
 
 
+// .then() return value
 
+const resolveBtn = document.querySelector('#resolveBtn')
+const rejectBtn = document.querySelector('#rejectBtn')
 
+const p = new Promise((resolve,reject)=>{
+  resolveBtn.addEventListener('click',()=>{
+    resolve('Promise Resolve')
+  })
+  rejectBtn.addEventListener('click',()=>{
+    reject('Rejected!')
+  })
+})
+// console.log(p.then((data)=>{
+//   console.log(data)
+// })) // Promise {pending}
+// .then() method ekta promise return kore . tai .then() er upor abar .then() kora jabe jehetu .then() promise return kore . 
+
+p.then((data)=>{
+  console.log(data) // Promise Resolve
+  return 155
+}).then((data)=>{
+  console.log(data) // 155
+  return data
+}).then((data)=>{
+  console.log(data) // 155
+  return 'Hello World'
+}).then((data)=>{
+  console.log(data) // Hello World
+}).catch((data)=>{
+  console.log(data) // Rejected!
+})
+
+// Resolve Button e click korle output :-> 
+// Promise Resolve
+// 155
+// 155
+// Hello World
+
+// Reject Button e click korle output :->
+// Rejected!
 
