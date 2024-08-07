@@ -2389,36 +2389,36 @@
 
 // .then() return value
 
-const resolveBtn = document.querySelector('#resolveBtn')
-const rejectBtn = document.querySelector('#rejectBtn')
+// const resolveBtn = document.querySelector('#resolveBtn')
+// const rejectBtn = document.querySelector('#rejectBtn')
 
-const p = new Promise((resolve,reject)=>{
-  resolveBtn.addEventListener('click',()=>{
-    resolve('Promise Resolve')
-  })
-  rejectBtn.addEventListener('click',()=>{
-    reject('Rejected!')
-  })
-})
+// const p = new Promise((resolve,reject)=>{
+//   resolveBtn.addEventListener('click',()=>{
+//     resolve('Promise Resolve')
+//   })
+//   rejectBtn.addEventListener('click',()=>{
+//     reject('Rejected!')
+//   })
+// })
 // console.log(p.then((data)=>{
 //   console.log(data)
 // })) // Promise {pending}
 // .then() method ekta promise return kore . tai .then() er upor abar .then() kora jabe jehetu .then() promise return kore . 
 
-p.then((data)=>{
-  console.log(data) // Promise Resolve
-  return 155
-}).then((data)=>{
-  console.log(data) // 155
-  return data
-}).then((data)=>{
-  console.log(data) // 155
-  return 'Hello World'
-}).then((data)=>{
-  console.log(data) // Hello World
-}).catch((data)=>{
-  console.log(data) // Rejected!
-})
+// p.then((data)=>{
+//   console.log(data) // Promise Resolve
+//   return 155
+// }).then((data)=>{
+//   console.log(data) // 155
+//   return data
+// }).then((data)=>{
+//   console.log(data) // 155
+//   return 'Hello World'
+// }).then((data)=>{
+//   console.log(data) // Hello World
+// }).catch((data)=>{
+//   console.log(data) // Rejected!
+// })
 
 // Resolve Button e click korle output :-> 
 // Promise Resolve
@@ -2428,4 +2428,49 @@ p.then((data)=>{
 
 // Reject Button e click korle output :->
 // Rejected!
+
+
+// Let's fixed the callback hell using promises
+
+// Some important api
+// 'https://dummyjson.com/users' // get all users
+// 'https://dummyjson.com/users/2' // get single users by id
+// 'https://dummyjson.com/posts/user/5' // get posts by user id
+// 'https://dummyjson.com/comments/post/6' // get comments by post id
+
+const resolveBtn = document.querySelector('#resolveBtn')
+const rejectBtn = document.querySelector('#rejectBtn')
+
+function makeHttpRequest(method,url){
+  const xhr = new XMLHttpRequest()
+  xhr.responseType = 'json'
+
+  const promise = new Promise((resolve,reject)=>{
+    xhr.onload = ()=>{
+      resolve(xhr.response)
+    }
+  })
+
+  xhr.open(method,url)
+  xhr.send()
+  
+  return promise
+}
+makeHttpRequest('GET','https://dummyjson.com/users')
+  .then((data)=>{
+    const promise2 = makeHttpRequest('GET',`https://dummyjson.com/users/${data.users[0].id}`)
+    return promise2
+  }).then((data)=>{
+    const promise3 = makeHttpRequest('GET',`https://dummyjson.com/posts/user/${data.id}`)
+    return promise3
+  }).then((data)=>{
+    const promise4 = makeHttpRequest('GET',`https://dummyjson.com/comments/post/${data.posts[0].id}`)
+    return promise4
+  }).then((data)=>{
+    const promise5 = makeHttpRequest('GET',`https://dummyjson.com/users/${data.comments[0].user.id}`)
+    return promise5
+  }).then((data)=>{
+    console.log(data)
+  })
+
 
