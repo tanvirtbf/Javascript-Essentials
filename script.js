@@ -2233,18 +2233,31 @@
 // 3. rejected state (tar mane jeta korte chaisilam seta reject hoyeche)
 
 // Understand promise using setTimeout (resolve after setTimeout time)
-const p = new Promise((resolve,reject)=>{
-  setTimeout(()=>{
-    resolve({
-      fname: 'Tanvir',
-      lname: 'Ahmed',
-      age: 25,
-    })
-    console.log(p) // after 4 second :-> promiseState: fullfilled , promiseResult:{fname: 'Tanvir', lname:'Ahmed', age:25}
-  },4000)
-})
-console.log(p) // promiseState: pending , promiseResult: undefined
+// const p = new Promise((resolve,reject)=>{
+//   setTimeout(()=>{
+//     resolve({
+//       fname: 'Tanvir',
+//       lname: 'Ahmed',
+//       age: 25,
+//     })
+//     console.log(p) // after 4 second :-> promiseState: fullfilled , promiseResult:{fname: 'Tanvir', lname:'Ahmed', age:25}
+//   },4000)
+// })
+// console.log(p) // promiseState: pending , promiseResult: undefined
 
+// Understand Promise using button click (resolve after button click)
+// const btn = document.querySelector('#btn')
+// const p = new Promise((resolve,reject)=>{
+//   btn.addEventListener('click',()=>{
+//     resolve({
+//       fname: 'Tanvir',
+//       lname: 'Ahmed',
+//       age: 25,
+//     })
+//     console.log(p) // after button click :-> promiseState: fullfilled , promiseResult: {fname: 'Tanvir', lname:'Ahmed', age:25}
+//   })
+// })
+// console.log(p) // promiseState: pending , promiseResult: undefined
 
 
 
