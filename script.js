@@ -2185,11 +2185,59 @@
 // })
 // // This is called Callback Hell . this piramid is a callback hell
 
+
 // Some important api
 // 'https://dummyjson.com/users' // get all users
 // 'https://dummyjson.com/users/2' // get single users by id
 // 'https://dummyjson.com/posts/user/5' // get posts by user id
 // 'https://dummyjson.com/comments/post/6' // get comments by post id
+
+
+function makeHttpRequest(method,url,callback){
+  const xhr = new XMLHttpRequest()
+  xhr.responseType = 'json'
+  xhr.onload = ()=>{
+    callback(xhr.response)
+  }
+  xhr.open(method,url)
+  xhr.send()
+}
+
+makeHttpRequest('GET','https://dummyjson.com/users',(data)=>{
+  console.log(data.users)
+  makeHttpRequest('GET',`https://dummyjson.com/users/${data.users[0].id}`,(data)=>{
+    console.log(data)
+    makeHttpRequest('GET',`https://dummyjson.com/posts/user/${data.id}`,(data)=>{
+      console.log(data.posts[0])
+      makeHttpRequest('GET',`https://dummyjson.com/comments/post/${data.posts[0].id}`,(data)=>{
+        console.log(data.comments[0])
+        console.log(data.comments[0].user.id)
+        makeHttpRequest('GET',`https://dummyjson.com/users/${data.comments[0].user.id}`,(data)=>{
+          console.log(data)
+        })
+      })
+    })
+  })
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
