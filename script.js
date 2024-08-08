@@ -2372,11 +2372,11 @@
 // })
 // console.log(p) // promiseState: pending , promiseResult: undefined
 
-const p = new Promise((resolve,reject)=>{
-  setTimeout(()=>{
-    resolve('Promise Resolve')
-  },4000)
-})
+// const p = new Promise((resolve,reject)=>{
+//   setTimeout(()=>{
+//     resolve('Promise Resolve')
+//   },4000)
+// })
 
 // Understand Promise using button click (resolve after button click)
 // const btn = document.querySelector('#btn')
@@ -2409,6 +2409,7 @@ const p = new Promise((resolve,reject)=>{
 
 // // rules of then() -> jokhonii promise resolve hoye jabe tokhonii then() method call hoye jabe 
 // // rules of then() -> then() method tar vitore ekta callback function accept kore thake
+
 // p.then(()=>{
 //   console.log('promise resolved') // jokhon p promise resolved hobe tokhon ai console log print hobe
 // }).catch(()=>{
@@ -2561,6 +2562,16 @@ const p = new Promise((resolve,reject)=>{
 // Reject Button e click korle output :->
 // Rejected!
 
+// const p = new Promise((res,rej)=>{
+//   res({fname:'tanvir',lname:'ahmed',age:25})
+//   rej('rejected!')
+// })
+// p.then((data)=>{
+//   console.log(data)
+//   return data
+// }).then((data)=>{
+//   console.log(data)
+// })
 
 // Let's fixed the callback hell using promises
 
@@ -2612,3 +2623,47 @@ const p = new Promise((resolve,reject)=>{
 //     console.log(data)
 //   })
 
+// Some important api
+// 'https://dummyjson.com/users' // get all users
+// 'https://dummyjson.com/users/2' // get single users by id
+// 'https://dummyjson.com/posts/user/5' // get posts by user id
+// 'https://dummyjson.com/comments/post/6' // get comments by post id
+
+function makeHttpRequest(method,url){
+  const xhr = new XMLHttpRequest()
+  xhr.responseType = 'json'
+
+  const promise = new Promise((resolve,reject)=>{
+    xhr.addEventListener('load',()=>{
+      resolve(xhr.response)
+    })
+    xhr.addEventListener('error',()=>{
+      reject('Rejected!')
+    })
+  })
+
+  xhr.open(method,url)
+  xhr.send()
+
+  return promise
+}
+makeHttpRequest('GET','https://dummyjson.com/users')
+  .then((data)=>{
+    console.log(data.users[0].id)
+    return makeHttpRequest('GET',`https://dummyjson.com/users/${data.users[0].id}`)
+  }).then((data)=>{
+    console.log(data.id)
+    return makeHttpRequest('GET',`https://dummyjson.com/posts/user/${data.id}`)
+  }).then((data)=>{
+    console.log(data.posts[0].id)
+    return makeHttpRequest('GET',`https://dummyjson.com/comments/post/${data.posts[0].id}`)
+  }).then((data)=>{
+    console.log(data.comments[0].body)
+    return makeHttpRequest('GET',`https://dummyjson.com/users/${data.comments[0].user.id}`)
+  }).then((data)=>{
+    console.log(data)
+  })
+
+
+
+// Fetch 
