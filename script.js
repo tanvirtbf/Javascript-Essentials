@@ -1,3 +1,4 @@
+
 // Methods (Without Argument)
 // toUpperCase()
 // toLowerCase()
@@ -5,6 +6,7 @@
 // trimStart()
 // trimEnd()
 // length
+
 
 // const names = 'Tanvir'
 // console.log(names[2]) //result : n
@@ -2220,6 +2222,33 @@
 //   xhr.send();
 // })
 
+// const xhr = new XMLHttpRequest()
+// xhr.responseType = 'json'
+// console.log(xhr.response)
+// xhr.addEventListener('load',()=>{
+//     const xhr1 = new XMLHttpRequest()
+//     xhr1.responseType = 'json'
+//     xhr1.onload = ()=>{
+//         const xhr2 = new XMLHttpRequest()
+//         xhr2.responseType = 'json'
+//         xhr2.onload = ()=>{
+//             const xhr3 = new XMLHttpRequest()
+//             xhr3.responseType = 'json'
+//             xhr3.onload = ()=>{
+//                 console.log(xhr3.response)
+//             }
+//             xhr3.open('GET','https://dummyjson.com/comments/post/6')
+//             xhr3.send()
+//         }
+//         xhr2.open('GET','https://dummyjson.com/posts/user/5')
+//         xhr2.send()
+//     }
+//     xhr1.open('GET','https://dummyjson.com/users/0')
+//     xhr1.send()
+// })
+// xhr.open('GET','https://dummyjson.com/users')
+// xhr.send()
+
 // Reusable function
 
 // function makeHttpRequest(method, url, callback) {
@@ -2313,6 +2342,7 @@
 //     })
 //   })
 // })
+
 
 
 
@@ -2559,6 +2589,8 @@ const p = new Promise((resolve,reject)=>{
 //   xhr.open(method,url)
 //   xhr.send()
   
+
+
 //   return promise
 // }
 // makeHttpRequest('GET','https://dummyjson.com/users')
@@ -2579,5 +2611,4 @@ const p = new Promise((resolve,reject)=>{
 //   }).catch((data)=>{
 //     console.log(data)
 //   })
-
 
