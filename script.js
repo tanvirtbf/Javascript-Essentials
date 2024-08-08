@@ -2316,7 +2316,6 @@
 
 
 
-
 // Promises
 // Promise is a special type of object
 // Promise Asynchronously kaj hoye thake
@@ -2342,6 +2341,12 @@
 //   },4000)
 // })
 // console.log(p) // promiseState: pending , promiseResult: undefined
+
+const p = new Promise((resolve,reject)=>{
+  setTimeout(()=>{
+    resolve('Promise Resolve')
+  },4000)
+})
 
 // Understand Promise using button click (resolve after button click)
 // const btn = document.querySelector('#btn')
