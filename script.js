@@ -2680,16 +2680,45 @@
 //   })
 
 // concept 
-fetch('https://dummyjson.com/products') // eta ekta pending state er promise return kore jar PromiseResult or return value hocche response object 
-// jehetu uporer fetch ekta promise return kore tai tar sathe then lagaiya tar resolve value ta nite pari 
-fetch('https://dummyjson.com/products').then((response)=>{
-  console.log(response) // response object
-  // akhn response object ke .json() diye json e convart korle setao ekta promise return kore . and sei promise er Response Result e actual data pauya jay 
-  // console.log(response.json()) // pending promise // state fullfilled // promise Result = actual data
-  // tai response.json() return korle actual data puaya jay 
-  return response.json() // return actual data
-}).then((data)=>{
-  console.log(data) // actual data
-  console.log(data.products) // products array
-  console.log(data.products[0]) // first product details
-})
+// fetch('https://dummyjson.com/products') // eta ekta pending state er promise return kore jar PromiseResult or return value hocche response object 
+// // jehetu uporer fetch ekta promise return kore tai tar sathe then lagaiya tar resolve value ta nite pari 
+// fetch('https://dummyjson.com/products').then((response)=>{
+//   console.log(response) // response object
+//   // akhn response object ke .json() diye json e convart korle setao ekta promise return kore . and sei promise er Response Result e actual data pauya jay 
+//   // console.log(response.json()) // pending promise // state fullfilled // promise Result = actual data
+//   // tai response.json() return korle actual data puaya jay 
+//   return response.json() // return actual data
+// }).then((data)=>{
+//   console.log(data) // actual data
+//   console.log(data.products) // products array
+//   console.log(data.products[0]) // first product details
+// })
+
+// fetch('https://dummyjson.com/products')
+//   .then((response)=> response.json())
+//   .then((data) => console.log(data))
+
+
+// POST Request 
+// fetch('https://dummyjson.com/products',{
+//   method: 'GET'
+// }) // this is by default GET method , there are no change to previous code
+//   .then((response)=> response.json())
+//   .then((data) => console.log(data))
+
+// Now POST
+  // fetch('https://dummyjson.com/products/add',{
+  //   method: 'POST',
+  //   headers: { 'Content-Type': 'application/json' },
+  //   body: JSON.stringify({
+  //     title: 'BMW Pencil',
+  //     category: 'serum'
+  //     /* other product data */
+  //   })
+  // })
+  //   .then((response)=> response.json())
+  //   .then((data) => console.log(data))
+  //   .catch((err)=>{
+  //     console.log(err)
+  //   })
+
