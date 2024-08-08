@@ -2629,41 +2629,67 @@
 // 'https://dummyjson.com/posts/user/5' // get posts by user id
 // 'https://dummyjson.com/comments/post/6' // get comments by post id
 
-function makeHttpRequest(method,url){
-  const xhr = new XMLHttpRequest()
-  xhr.responseType = 'json'
+// function makeHttpRequest(method,url){
+//   const xhr = new XMLHttpRequest()
+//   xhr.responseType = 'json'
 
-  const promise = new Promise((resolve,reject)=>{
-    xhr.addEventListener('load',()=>{
-      resolve(xhr.response)
-    })
-    xhr.addEventListener('error',()=>{
-      reject('Rejected!')
-    })
-  })
+//   const promise = new Promise((resolve,reject)=>{
+//     xhr.addEventListener('load',()=>{
+//       resolve(xhr.response)
+//     })
+//     xhr.addEventListener('error',()=>{
+//       reject('Rejected!')
+//     })
+//   })
 
-  xhr.open(method,url)
-  xhr.send()
+//   xhr.open(method,url)
+//   xhr.send()
 
-  return promise
-}
-makeHttpRequest('GET','https://dummyjson.com/users')
-  .then((data)=>{
-    console.log(data.users[0].id)
-    return makeHttpRequest('GET',`https://dummyjson.com/users/${data.users[0].id}`)
-  }).then((data)=>{
-    console.log(data.id)
-    return makeHttpRequest('GET',`https://dummyjson.com/posts/user/${data.id}`)
-  }).then((data)=>{
-    console.log(data.posts[0].id)
-    return makeHttpRequest('GET',`https://dummyjson.com/comments/post/${data.posts[0].id}`)
-  }).then((data)=>{
-    console.log(data.comments[0].body)
-    return makeHttpRequest('GET',`https://dummyjson.com/users/${data.comments[0].user.id}`)
-  }).then((data)=>{
-    console.log(data)
-  })
+//   return promise
+// }
+// makeHttpRequest('GET','https://dummyjson.com/users')
+//   .then((data)=>{
+//     console.log(data.users[0].id)
+//     return makeHttpRequest('GET',`https://dummyjson.com/users/${data.users[0].id}`)
+//   }).then((data)=>{
+//     console.log(data.id)
+//     return makeHttpRequest('GET',`https://dummyjson.com/posts/user/${data.id}`)
+//   }).then((data)=>{
+//     console.log(data.posts[0].id)
+//     return makeHttpRequest('GET',`https://dummyjson.com/comments/post/${data.posts[0].id}`)
+//   }).then((data)=>{
+//     console.log(data.comments[0].body)
+//     return makeHttpRequest('GET',`https://dummyjson.com/users/${data.comments[0].user.id}`)
+//   }).then((data)=>{
+//     console.log(data)
+//   })
 
 
 
 // Fetch 
+// fetch('https://dummyjson.com/products')
+//   .then((res)=>{
+//     console.log(res) // return response object
+//     console.log(res.json()) // return a promise
+//   })
+// fetch('https://dummyjson.com/products')
+//   .then((res)=>{
+//     return res.json()
+//   }).then((data)=>{
+//     console.log(data)
+//   })
+
+// concept 
+fetch('https://dummyjson.com/products') // eta ekta pending state er promise return kore jar PromiseResult or return value hocche response object 
+// jehetu uporer fetch ekta promise return kore tai tar sathe then lagaiya tar resolve value ta nite pari 
+fetch('https://dummyjson.com/products').then((response)=>{
+  console.log(response) // response object
+  // akhn response object ke .json() diye json e convart korle setao ekta promise return kore . and sei promise er Response Result e actual data pauya jay 
+  // console.log(response.json()) // pending promise // state fullfilled // promise Result = actual data
+  // tai response.json() return korle actual data puaya jay 
+  return response.json() // return actual data
+}).then((data)=>{
+  console.log(data) // actual data
+  console.log(data.products) // products array
+  console.log(data.products[0]) // first product details
+})
