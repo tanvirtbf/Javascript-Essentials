@@ -2095,6 +2095,15 @@
 // XMLHttpRequest (XHR)
 // amra fetch diye kono api fetch kori , eta ashce 2015 shale . tar age manush api fetch korar jonno XMLHttpRequest (XHR) use korto
 
+const xhr = new XMLHttpRequest()
+xhr.responseType = 'json'
+xhr.onload = ()=>{
+  console.log(xhr.response)
+}
+xhr.open('GET','https://dog.ceo/api/breeds/image/random')
+xhr.send()
+
+
 // const image = document.querySelector("#image");
 // const btn = document.querySelector("#btn");
 // btn.addEventListener("click", () => {
