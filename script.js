@@ -2095,6 +2095,10 @@
 // XMLHttpRequest (XHR)
 // amra fetch diye kono api fetch kori , eta ashce 2015 shale . tar age manush api fetch korar jonno XMLHttpRequest (XHR) use korto
 
+const resolveBtn = document.querySelector('#resolveBtn')
+const rejectBtn = document.querySelector('#rejectBtn')
+
+
 const xhr = new XMLHttpRequest()
 xhr.responseType = 'json'
 xhr.onload = ()=>{
