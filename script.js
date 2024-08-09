@@ -2114,6 +2114,19 @@ xhr.addEventListener("load", () => {
   image.src = response.message;
   image.style.width = "200px";
   image.style.height = "200px";
+
+  resolveBtn.addEventListener('click',()=>{
+    const xhr = new XMLHttpRequest()
+    xhr.responseType = 'json'
+    xhr.onload = ()=>{
+      image.src = xhr.response.message
+      image.style.width = '200px'
+      image.style.height = '200px'
+    }
+    xhr.open('GET','https://dog.ceo/api/breeds/image/random')
+    xhr.send()
+  })
+
 });
 
 xhr.open("GET", "https://dog.ceo/api/breeds/image/random");
