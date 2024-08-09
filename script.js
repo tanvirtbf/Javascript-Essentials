@@ -2259,6 +2259,32 @@
 // })
 
 // callback hell revision
+// Some important api
+// 'https://dummyjson.com/users' // get all users
+// 'https://dummyjson.com/users/2' // get single users by id
+// 'https://dummyjson.com/posts/user/5' // get posts by user id
+// 'https://dummyjson.com/comments/post/6' // get comments by post id
+
+// const xhr = new XMLHttpRequest();
+// xhr.responseType = "json";
+// xhr.addEventListener("load", () => {
+//   console.log(xhr.response);
+//   const singleUser = new XMLHttpRequest();
+//   singleUser.responseType = "json";
+//   singleUser.onload = () => {
+//     const userPost = new XMLHttpRequest();
+//     userPost.responseType = "json";
+//     userPost.addEventListener("load", () => {
+//       console.log(userPost.response.posts[0].id);
+//     });
+//     userPost.open("GET", `https://dummyjson.com/posts/user/5`);
+//     userPost.send();
+//   };
+//   singleUser.open("GET", `https://dummyjson.com/users/${xhr.response.users[3].id}`);
+//   singleUser.send();
+// });
+// xhr.open("GET", "https://dummyjson.com/users");
+// xhr.send();
 
 // const xhr = new XMLHttpRequest()
 // xhr.responseType = 'json'
