@@ -2487,6 +2487,20 @@
 
 // const resolveBtn = document.querySelector('#resolveBtn')
 // const rejectBtn = document.querySelector('#rejectBtn')
+
+// const p = new Promise((resolve,reject)=>{
+//     resolveBtn.addEventListener('click',()=>{
+//         resolve('Resolve')
+//         console.log(p)
+//     })
+//     rejectBtn.addEventListener('click',()=>{
+//         reject('Rejected!')
+//         console.log(p)
+//     })
+// })
+
+// const resolveBtn = document.querySelector('#resolveBtn')
+// const rejectBtn = document.querySelector('#rejectBtn')
 // const p = new Promise((resolve,reject)=>{
 //   resolveBtn.addEventListener('click',()=>{
 //     resolve({fname:'Tanvir',lname:'Ahmed',age: 25,})
@@ -2505,6 +2519,23 @@
 //   console.log('promise resolved') // jokhon p promise resolved hobe tokhon ai console log print hobe
 // }).catch(()=>{
 //   console.log('promise rejected') // jokhon p promise reject hobe tokhon ai console log print hobe
+// })
+
+// const resolveBtn = document.querySelector('#resolveBtn')
+// const rejectBtn = document.querySelector('#rejectBtn')
+
+// const p = new Promise((resolve,reject)=>{
+//     resolveBtn.addEventListener('click',()=>{
+//         resolve('Resolve')
+//     })
+//     rejectBtn.addEventListener('click',()=>{
+//         reject('Rejected!')
+//     })
+// })
+// p.then((data)=>{
+//     console.log(data)
+// }).catch((data)=>{
+//     console.log(data)
 // })
 
 // const resolveBtn = document.querySelector('#resolveBtn')
@@ -2611,6 +2642,26 @@
 // Set time out
 
 // .then() return value
+
+const resolveBtn = document.querySelector('#resolveBtn')
+const rejectBtn = document.querySelector('#rejectBtn')
+
+const p = new Promise((resolve,reject)=>{
+  resolveBtn.addEventListener('click',()=>{
+    resolve('Promise Resolve')
+  })
+  rejectBtn.addEventListener('click',()=>{
+    reject('Rejected!')
+  })
+})
+const returnThen = p.then((data)=>{
+    console.log(data)
+    return 'Hello World'
+})
+console.log(returnThen) // No Return Value . karon p.then() e dhuke nai jehetu resolve hoy nai 
+setTimeout(()=>{
+    console.log(returnThen) // resolve houyar por p.then() 'Hello World' return korse
+},4000)
 
 // const resolveBtn = document.querySelector('#resolveBtn')
 // const rejectBtn = document.querySelector('#rejectBtn')
