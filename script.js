@@ -2600,8 +2600,6 @@
 //   xhr.open(method,url)
 //   xhr.send()
   
-
-
 //   return promise
 // }
 // makeHttpRequest('GET','https://dummyjson.com/users')
