@@ -2259,11 +2259,6 @@
 // })
 
 // callback hell revision
-// Some important api
-// 'https://dummyjson.com/users' // get all users
-// 'https://dummyjson.com/users/2' // get single users by id
-// 'https://dummyjson.com/posts/user/5' // get posts by user id
-// 'https://dummyjson.com/comments/post/6' // get comments by post id
 
 // const xhr = new XMLHttpRequest();
 // xhr.responseType = "json";
@@ -2315,16 +2310,47 @@
 
 // Reusable function
 
-function makeHttpRequest(method,url){
+// function makeHttpRequest(method,url){
+//     const xhr = new XMLHttpRequest()
+//     xhr.responseType = 'json'
+//     xhr.onload = ()=>{
+//         console.log(xhr.response)
+//     }
+//     xhr.open(method,url)
+//     xhr.send()
+// }
+// makeHttpRequest('GET','https://dummyjson.com/users/')
+
+// Some important api
+// 'https://dummyjson.com/users' // get all users
+// 'https://dummyjson.com/users/2' // get single users by id
+// 'https://dummyjson.com/posts/user/5' // get posts by user id
+// 'https://dummyjson.com/comments/post/6' // get comments by post id
+
+function makeHttpRequest(method,url,callback){
     const xhr = new XMLHttpRequest()
     xhr.responseType = 'json'
     xhr.onload = ()=>{
-        console.log(xhr.response)
+        callback(xhr.response)
     }
     xhr.open(method,url)
     xhr.send()
 }
-makeHttpRequest('GET','https://dummyjson.com/users/')
+makeHttpRequest('GET','https://dummyjson.com/users/',(allUser)=>{
+    console.log(allUser.users[0].id)
+    makeHttpRequest('GET',`https://dummyjson.com/users/${allUser.users[0].id}`,(singleUser)=>{
+        console.log(singleUser.id)
+        makeHttpRequest('GET',`https://dummyjson.com/posts/user/5`,(userPost)=>{
+            console.log(userPost.posts[0].id)
+            makeHttpRequest('GET',`https://dummyjson.com/comments/post/${userPost.posts[1].id}`,(postComment)=>{
+                console.log(postComment.comments[0].user.id)
+                makeHttpRequest('GET',`https://dummyjson.com/users/${postComment.comments[0].user.id}`,(user)=>{
+                    console.log(user)
+                })
+            })
+        })
+    })
+})
 
 // function makeHttpRequest(method, url, callback) {
 //   const xhr = new XMLHttpRequest();
