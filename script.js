@@ -2089,6 +2089,7 @@
 
 const resolveBtn = document.querySelector("#resolveBtn");
 const rejectBtn = document.querySelector("#rejectBtn");
+const image = document.querySelector('img')
 
 resolveBtn.addEventListener("click", () => {
   const xhr = new XMLHttpRequest();
