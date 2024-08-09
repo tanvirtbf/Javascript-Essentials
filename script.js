@@ -2327,30 +2327,30 @@
 // 'https://dummyjson.com/posts/user/5' // get posts by user id
 // 'https://dummyjson.com/comments/post/6' // get comments by post id
 
-function makeHttpRequest(method,url,callback){
-    const xhr = new XMLHttpRequest()
-    xhr.responseType = 'json'
-    xhr.onload = ()=>{
-        callback(xhr.response)
-    }
-    xhr.open(method,url)
-    xhr.send()
-}
-makeHttpRequest('GET','https://dummyjson.com/users/',(allUser)=>{
-    console.log(allUser.users[0].id)
-    makeHttpRequest('GET',`https://dummyjson.com/users/${allUser.users[0].id}`,(singleUser)=>{
-        console.log(singleUser.id)
-        makeHttpRequest('GET',`https://dummyjson.com/posts/user/5`,(userPost)=>{
-            console.log(userPost.posts[0].id)
-            makeHttpRequest('GET',`https://dummyjson.com/comments/post/${userPost.posts[1].id}`,(postComment)=>{
-                console.log(postComment.comments[0].user.id)
-                makeHttpRequest('GET',`https://dummyjson.com/users/${postComment.comments[0].user.id}`,(user)=>{
-                    console.log(user)
-                })
-            })
-        })
-    })
-})
+// function makeHttpRequest(method,url,callback){
+//     const xhr = new XMLHttpRequest()
+//     xhr.responseType = 'json'
+//     xhr.onload = ()=>{
+//         callback(xhr.response)
+//     }
+//     xhr.open(method,url)
+//     xhr.send()
+// }
+// makeHttpRequest('GET','https://dummyjson.com/users/',(allUser)=>{
+//     console.log(allUser.users[0].id)
+//     makeHttpRequest('GET',`https://dummyjson.com/users/${allUser.users[0].id}`,(singleUser)=>{
+//         console.log(singleUser.id)
+//         makeHttpRequest('GET',`https://dummyjson.com/posts/user/5`,(userPost)=>{
+//             console.log(userPost.posts[0].id)
+//             makeHttpRequest('GET',`https://dummyjson.com/comments/post/${userPost.posts[1].id}`,(postComment)=>{
+//                 console.log(postComment.comments[0].user.id)
+//                 makeHttpRequest('GET',`https://dummyjson.com/users/${postComment.comments[0].user.id}`,(user)=>{
+//                     console.log(user)
+//                 })
+//             })
+//         })
+//     })
+// })
 
 // function makeHttpRequest(method, url, callback) {
 //   const xhr = new XMLHttpRequest();
