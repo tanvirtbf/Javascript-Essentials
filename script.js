@@ -2810,41 +2810,41 @@
 // 'https://dummyjson.com/comments/post/6' // get comments by post id
 
 
-function makeHttpRequest(method,url){
-    const xhr = new XMLHttpRequest()
-    xhr.responseType = 'json'
+// function makeHttpRequest(method,url){
+//     const xhr = new XMLHttpRequest()
+//     xhr.responseType = 'json'
 
-    const promise = new Promise((resolve,reject)=>{
-        xhr.addEventListener('load',()=>{
-            resolve(xhr.response)
-        })
-        xhr.addEventListener('error',()=>{
-            reject('Rejected!')
-        })
-    })
+//     const promise = new Promise((resolve,reject)=>{
+//         xhr.addEventListener('load',()=>{
+//             resolve(xhr.response)
+//         })
+//         xhr.addEventListener('error',()=>{
+//             reject('Rejected!')
+//         })
+//     })
 
-    xhr.open(method,url)
-    xhr.send()
+//     xhr.open(method,url)
+//     xhr.send()
 
-    return promise;
-}
+//     return promise;
+// }
 
-makeHttpRequest('GET','https://dummyjson.com/users')
-    .then((allUsers)=>{
-        console.log(allUsers.users[0].id)
-        return makeHttpRequest('GET',`https://dummyjson.com/users/${allUsers.users[0].id}`)
-    }).then((singleUser)=>{
-        console.log(singleUser.id)
-        return makeHttpRequest('GET',`https://dummyjson.com/posts/user/${singleUser.id}`)
-    }).then((userPost)=>{
-        console.log(userPost.posts[0].id)
-        return makeHttpRequest('GET',`https://dummyjson.com/comments/post/${userPost.posts[0].id}`)
-    }).then((postComment)=>{
-        console.log(postComment.comments[0].user.id)
-        return makeHttpRequest('GET',`https://dummyjson.com/users/${postComment.comments[0].user.id}`)
-    }).then((user)=>{
-        console.log(user)
-    })
+// makeHttpRequest('GET','https://dummyjson.com/users')
+//     .then((allUsers)=>{
+//         console.log(allUsers.users[0].id)
+//         return makeHttpRequest('GET',`https://dummyjson.com/users/${allUsers.users[0].id}`)
+//     }).then((singleUser)=>{
+//         console.log(singleUser.id)
+//         return makeHttpRequest('GET',`https://dummyjson.com/posts/user/${singleUser.id}`)
+//     }).then((userPost)=>{
+//         console.log(userPost.posts[0].id)
+//         return makeHttpRequest('GET',`https://dummyjson.com/comments/post/${userPost.posts[0].id}`)
+//     }).then((postComment)=>{
+//         console.log(postComment.comments[0].user.id)
+//         return makeHttpRequest('GET',`https://dummyjson.com/users/${postComment.comments[0].user.id}`)
+//     }).then((user)=>{
+//         console.log(user)
+//     })
 
 
 
