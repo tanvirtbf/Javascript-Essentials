@@ -2643,25 +2643,25 @@
 
 // .then() return value
 
-const resolveBtn = document.querySelector('#resolveBtn')
-const rejectBtn = document.querySelector('#rejectBtn')
+// const resolveBtn = document.querySelector('#resolveBtn')
+// const rejectBtn = document.querySelector('#rejectBtn')
 
-const p = new Promise((resolve,reject)=>{
-  resolveBtn.addEventListener('click',()=>{
-    resolve('Promise Resolve')
-  })
-  rejectBtn.addEventListener('click',()=>{
-    reject('Rejected!')
-  })
-})
-const returnThen = p.then((data)=>{
-    console.log(data)
-    return 'Hello World'
-})
-console.log(returnThen) // No Return Value . karon p.then() e dhuke nai jehetu resolve hoy nai 
-setTimeout(()=>{
-    console.log(returnThen) // resolve houyar por p.then() 'Hello World' return korse
-},4000)
+// const p = new Promise((resolve,reject)=>{
+//   resolveBtn.addEventListener('click',()=>{
+//     resolve('Promise Resolve')
+//   })
+//   rejectBtn.addEventListener('click',()=>{
+//     reject('Rejected!')
+//   })
+// })
+// const returnThen = p.then((data)=>{
+//     console.log(data)
+//     return 'Hello World'
+// })
+// console.log(returnThen) // No Return Value . karon p.then() e dhuke nai jehetu resolve hoy nai 
+// setTimeout(()=>{
+//     console.log(returnThen) // resolve houyar por p.then() 'Hello World' return korse
+// },4000)
 
 // const resolveBtn = document.querySelector('#resolveBtn')
 // const rejectBtn = document.querySelector('#rejectBtn')
@@ -2802,6 +2802,61 @@ setTimeout(()=>{
 //   }).then((data)=>{
 //     console.log(data)
 //   })
+
+// Some important api
+// 'https://dummyjson.com/users' // get all users
+// 'https://dummyjson.com/users/2' // get single users by id
+// 'https://dummyjson.com/posts/user/5' // get posts by user id
+// 'https://dummyjson.com/comments/post/6' // get comments by post id
+
+
+function makeHttpRequest(method,url){
+    const xhr = new XMLHttpRequest()
+    xhr.responseType = 'json'
+
+    const promise = new Promise((resolve,reject)=>{
+        xhr.addEventListener('load',()=>{
+            resolve(xhr.response)
+        })
+        xhr.addEventListener('error',()=>{
+            reject('Rejected!')
+        })
+    })
+
+    xhr.open(method,url)
+    xhr.send()
+
+    return promise;
+}
+
+makeHttpRequest('GET','https://dummyjson.com/users')
+    .then((allUsers)=>{
+        console.log(allUsers.users[0].id)
+        return makeHttpRequest('GET',`https://dummyjson.com/users/${allUsers.users[0].id}`)
+    }).then((singleUser)=>{
+        console.log(singleUser.id)
+        return makeHttpRequest('GET',`https://dummyjson.com/posts/user/${singleUser.id}`)
+    }).then((userPost)=>{
+        console.log(userPost.posts[0].id)
+        return makeHttpRequest('GET',`https://dummyjson.com/comments/post/${userPost.posts[0].id}`)
+    }).then((postComment)=>{
+        console.log(postComment.comments[0].user.id)
+        return makeHttpRequest('GET',`https://dummyjson.com/users/${postComment.comments[0].user.id}`)
+    }).then((user)=>{
+        console.log(user)
+    })
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Fetch
 // fetch('https://dummyjson.com/products')
