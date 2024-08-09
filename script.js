@@ -2103,34 +2103,33 @@
 //   xhr.send();
 // });
 
-const resolveBtn = document.querySelector("#resolveBtn");
-const rejectBtn = document.querySelector("#rejectBtn");
-const image = document.querySelector("img");
+// const resolveBtn = document.querySelector("#resolveBtn");
+// const rejectBtn = document.querySelector("#rejectBtn");
+// const image = document.querySelector("img");
 
-const xhr = new XMLHttpRequest();
+// const xhr = new XMLHttpRequest();
 
-xhr.addEventListener("load", () => {
-  const response = JSON.parse(xhr.response); // JSON convert
-  image.src = response.message;
-  image.style.width = "200px";
-  image.style.height = "200px";
+// xhr.addEventListener("load", () => {
+//   const response = JSON.parse(xhr.response); // JSON convert
+//   image.src = response.message;
+//   image.style.width = "200px";
+//   image.style.height = "200px";
 
-  resolveBtn.addEventListener('click',()=>{
-    const xhr = new XMLHttpRequest()
-    xhr.responseType = 'json'
-    xhr.onload = ()=>{
-      image.src = xhr.response.message
-      image.style.width = '200px'
-      image.style.height = '200px'
-    }
-    xhr.open('GET','https://dog.ceo/api/breeds/image/random')
-    xhr.send()
-  })
+//   resolveBtn.addEventListener('click',()=>{
+//     const xhr = new XMLHttpRequest()
+//     xhr.responseType = 'json'
+//     xhr.onload = ()=>{
+//       image.src = xhr.response.message
+//       image.style.width = '200px'
+//       image.style.height = '200px'
+//     }
+//     xhr.open('GET','https://dog.ceo/api/breeds/image/random')
+//     xhr.send()
+//   })
+// });
 
-});
-
-xhr.open("GET", "https://dog.ceo/api/breeds/image/random");
-xhr.send();
+// xhr.open("GET", "https://dog.ceo/api/breeds/image/random");
+// xhr.send();
 
 // const image = document.querySelector("#image");
 // const btn = document.querySelector("#btn");
@@ -2258,6 +2257,8 @@ xhr.send();
 //   xhr.open('GET','https://dog.ceo/api/breeds/image/random')
 //   xhr.send();
 // })
+
+// callback hell revision
 
 // const xhr = new XMLHttpRequest()
 // xhr.responseType = 'json'
