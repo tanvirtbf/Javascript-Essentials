@@ -2846,18 +2846,6 @@
 //         console.log(user)
 //     })
 
-
-
-
-
-
-
-
-
-
-
-
-
 // Fetch
 // fetch('https://dummyjson.com/products')
 //   .then((res)=>{
