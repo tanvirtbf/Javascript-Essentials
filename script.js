@@ -2315,6 +2315,17 @@
 
 // Reusable function
 
+function makeHttpRequest(method,url){
+    const xhr = new XMLHttpRequest()
+    xhr.responseType = 'json'
+    xhr.onload = ()=>{
+        console.log(xhr.response)
+    }
+    xhr.open(method,url)
+    xhr.send()
+}
+makeHttpRequest('GET','https://dummyjson.com/users/')
+
 // function makeHttpRequest(method, url, callback) {
 //   const xhr = new XMLHttpRequest();
 //   console.log(xhr);
