@@ -3072,24 +3072,31 @@
 // Constructor Function and new Keyword
 
 // this
-function createUser(firstName,lastName,age){
-  const user = {
-    firstName : firstName,
-    lastName : lastName,
-    age : age,
-    getAgeYear : getAgeYear,
-  }
-  return user
-}
-function getAgeYear(age){
-  console.log(this) 
-  // return new Date().getFullYear - user.age
-}
-const user1 = createUser('Aman','Ahmed',23)
-const user2 = createUser('Aman','Ahmed',23)
-const user3 = createUser('Aman','Ahmed',23)
+// function createUser(firstName,lastName,age){
+//   const user = {
+//     firstName : firstName,
+//     lastName : lastName,
+//     age : age,
+//     getAgeYear : getAgeYear,
+//   }
+//   return user
+// }
+// function getAgeYear(age){
+//   console.log(this) 
+//   // return new Date().getFullYear - user.age
+// }
+// const user1 = createUser('Aman','Ahmed',23)
+// const user2 = createUser('Aman','Ahmed',55)
+// const user3 = createUser('Aman','Ahmed',72)
 
-getAgeYear() // window object ke point korse . karon getAgeYear globally call kora hoyeche
-user1.getAgeYear() // user1 object ta output ashce , ekhane this jehetu user1 object er vitore ase tai user1 object kei point kore ase this
+// getAgeYear() // window object ke point korse . karon getAgeYear globally call kora hoyeche
+// user1.getAgeYear() // user1 object ta output ashce , ekhane this jehetu user1 object er vitore ase tai user1 object kei point kore ase this
 
-// this :-> this jei object er vitore thake sei object ke point kore thake . globally this keyword window object ke point kore thake . r jodi this kono object or onno kichur vitor theke call hoy tahole oi object or jeikhan theke call hoise take point kore thake
+// // this :-> this jei object er vitore thake sei object ke point kore thake . globally this keyword window object ke point kore thake . r jodi this kono object or onno kichur vitor theke call hoy tahole oi object or jeikhan theke call hoise take point kore thake
+
+// console.log(user1.getAgeYear === user2.getAgeYear) // true
+// console.log(user1.getAgeYear === user3.getAgeYear) // true
+// // tar mane jotoi user create kori tader sobar jonno getAgeYear function ektaii . orthat same memory address e ase . tai memory khoroch o kom 
+// // kintu ekhetre Encapsulation er rules break hoy . rules onujayii sob variable logic everything eksathe thakte hobe . kintu ekhane getAgeYear function ta object er baire . abar object er vitore anle prottek user er jonno alada alada getAgeYear memory te create hoye memory khoroch baraiya dibe . ai somosshar somadhan hocche Constractor function
+// // Polymorphism
+// // kintu ekhane polymorphism rules apply hoye gese . polymorphism hocche ektaii function kintu alada alada rup . tar mane hocche same getAgeYear function taii alada alada user er jonno alada alada vabe kaj kortese, alada alada rup toiri kortese. upore same function getAgeYear prottekta user er jonnoa alada alada vabe kaj kortese . etaii polymorphism 
