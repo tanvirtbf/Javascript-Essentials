@@ -2442,6 +2442,42 @@
 //   })
 // })
 
+// Callback hell Namaste Javascript 
+// callback good part : for asynchronous are good
+// callback bad part are two
+// 1. callback hell
+// 2. inversion of control
+
+// callback hell problem discuss
+const cart = ['shoes','pants','kurta']
+// amr ekta ecommerce site ase . upore cart array te amr kichu product ase 
+// jokhon kono user amr site e dhuke order korbe tokhon product choose kora theke shuru kore payment korar ag porjonto kichu process er moddho diye jete hoy . jemon..
+// 1. Add to cart
+// 2. create order
+// 3. payment
+// 4. order summary
+// 5. update wallet
+// etc...
+// ekhane uporer 5 ta kaj serial maintain kore ashte hobe . add to cart na korle order create hobe na . order create na hole payment hobe na . payment na korle order er summary ashbe na . order summary na korle wallet update hobe na . jehetu kaj gula serial maintain kore korte hoy tai prottekta kajer por immidiate next kaj korar jonno oi function ke ekta callback pass kore dite hoy next kaj korar jonno . jemon..
+api.addToCart(cart,function(){
+  api.createOrder(order,function(){
+    api.payment(payment,function(){
+      api.orderSummary(orderSummary,function(){
+        api.updateWallet(updateWallet,function(){
+          // and so on...
+        })
+      })
+    })
+  })
+})
+//this is callback hell
+// upore add to cart kora sesh hole ekta callback function call hobe order create er jonno . tar age hobe na . then order create er por immidiate payment er callback call hobe payment er jonno . then orderSummary and so on...
+
+
+
+
+
+
 // Promises
 // Promise is a special type of object
 // Promise Asynchronously kaj hoye thake
@@ -3009,7 +3045,12 @@
 // ai problem ta solve korse Constractor function
 
 // example : 
-const arr1 = [1,2,3]
-const arr2 = [4,5,6]
-console.log(arr1.pop === arr2.pop) // true
+// const arr1 = [1,2,3]
+// const arr2 = [4,5,6]
+// console.log(arr1.pop === arr2.pop) // true
 // tar mane arr1 and arr2 er khetre pop method same memory address e rakha hoyeche . erokom hajar ta array er jonno same memory location er pop method use kora hoyeche . er dara memory khoroch onk kombe . etaii constractor function diye kora jay
+
+
+
+
+
