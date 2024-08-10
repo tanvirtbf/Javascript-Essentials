@@ -2493,6 +2493,9 @@
 // The callback function is passed to another callback, this way we lose the control of our code. We don't know what is happening behind the scene and the program becomes very difficult to maintain. 
 // That process is called inversion of control. 
 
+// Promises with Namaste Javascript 
+
+
 // Promises
 // Promise is a special type of object
 // Promise Asynchronously kaj hoye thake
@@ -3045,7 +3048,7 @@
 //     firstName : firstName,
 //     lastName : lastName,
 //     age : age,
-//     myBirthYear : getAgeYear(age) 
+//     getAgeYear : getAgeYear,
 //   }
 //   return user
 // }
@@ -3066,6 +3069,27 @@
 // tar mane arr1 and arr2 er khetre pop method same memory address e rakha hoyeche . erokom hajar ta array er jonno same memory location er pop method use kora hoyeche . er dara memory khoroch onk kombe . etaii constractor function diye kora jay
 
 
+// Constructor Function and new Keyword
 
+// this
+function createUser(firstName,lastName,age){
+  const user = {
+    firstName : firstName,
+    lastName : lastName,
+    age : age,
+    getAgeYear : getAgeYear,
+  }
+  return user
+}
+function getAgeYear(age){
+  console.log(this) 
+  // return new Date().getFullYear - user.age
+}
+const user1 = createUser('Aman','Ahmed',23)
+const user2 = createUser('Aman','Ahmed',23)
+const user3 = createUser('Aman','Ahmed',23)
 
+getAgeYear() // window object ke point korse . karon getAgeYear globally call kora hoyeche
+user1.getAgeYear() // user1 object ta output ashce , ekhane this jehetu user1 object er vitore ase tai user1 object kei point kore ase this
 
+// this :-> this jei object er vitore thake sei object ke point kore thake . globally this keyword window object ke point kore thake . r jodi this kono object or onno kichur vitor theke call hoy tahole oi object or jeikhan theke call hoise take point kore thake
