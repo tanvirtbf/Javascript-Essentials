@@ -2944,30 +2944,67 @@
 
 
 // Factory function 
-const user1 = {
-  firstName : 'Tanvir',
-  lastName : 'Ahmed',
-  age : 25,
-  getAgeYear : function(){
-    return new Date().getFullYear - user.age
-  }
-}
-const user2 = {
-  firstName : 'Tanvir',
-  lastName : 'Ahmed',
-  age : 25,
-  getAgeYear : function(){
-    return new Date().getFullYear - user.age
-  }
-}
-const user3 = {
-  firstName : 'Tanvir',
-  lastName : 'Ahmed',
-  age : 25,
-  getAgeYear : function(){
-    return new Date().getFullYear - user.age
-  }
-}
+// const user1 = {
+//   firstName : 'Tanvir',
+//   lastName : 'Ahmed',
+//   age : 25,
+//   getAgeYear : function(){
+//     return new Date().getFullYear - user.age
+//   }
+// }
+// const user2 = {
+//   firstName : 'Tanvir',
+//   lastName : 'Ahmed',
+//   age : 25,
+//   getAgeYear : function(){
+//     return new Date().getFullYear - user.age
+//   }
+// }
+// const user3 = {
+//   firstName : 'Tanvir',
+//   lastName : 'Ahmed',
+//   age : 25,
+//   getAgeYear : function(){
+//     return new Date().getFullYear - user.age
+//   }
+// }
 // ekhane jotogula user create korbo totogula object ekhane create kora lagtese . jodi 1 hajar user thake tahole 1 hajar ta object create kora lagtese . ei problem solve korar jonno factory function create hoise 
 
+// Create Factory function
+// function createUser(firstName,lastName,age){
+//   const user = {
+//     firstName : firstName,
+//     lastName : lastName,
+//     age : age,
+//     getAgeYear : function(){
+//       return new Date().getFullYear - user.age
+//     }
+//   }
+//   return user
+// }
+// const user1 = createUser('Aman','Ahmed',23)
+// const user2 = createUser('Aman','Ahmed',23)
+// const user3 = createUser('Aman','Ahmed',23)
+// kintu ekhetre ekta problem ase . seta holo user1, user2, user3 sob gula teii getAgeyear function duplicate hoitese . jodio getAgeYear er definition sob khetre same , kintu tao prottekbar user create hole oi user er jonno alada alada vabe getAgeYear function alada alada memory te create hoitese . kintu jehetu same definition tai alada alada memory te ai function store korle onk memory khoroch hoye jabe . 
+// console.log(user1.getAgeYear === user2.getAgeYear )// false
+// tar mane prottekta user er jonno getAgeYear alada alada memory te store hocche jodio ai function er definition sobar jonno same . 
+// tahole to ai function ke baire rakhleii valo . tahole same memory te point thakbe sob user er jonno . jemon...
+function createUser(firstName,lastName,age){
+  const user = {
+    firstName : firstName,
+    lastName : lastName,
+    age : age,
+    myBirthYear : getAgeYear(age) 
+  }
+  return user
+}
+function getAgeYear(age){
+  return new Date().getFullYear - age
+}
+const user1 = createUser('Aman','Ahmed',23)
+const user2 = createUser('Aman','Ahmed',23)
+const user3 = createUser('Aman','Ahmed',23)
+
+// tahole evabeii korle memory khoroch onk kom hoy . karon getAgeYear ai khetre 1 taii memory location dokhol kore rakhse sob user er jonno . kintu eta korle to OOP concept taii thakbe na . tai getAgeYear ke  baire declare kora jabe na . vitoreii declare kore ai problem er solve korte hobe
+// ai problem ta solve korse Constractor function
 
