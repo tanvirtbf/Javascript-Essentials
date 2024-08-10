@@ -2912,21 +2912,21 @@
 
 // Encapsulation
 
-function getAgeYear(age){
-  return new Date().getFullYear() - age
-}
-console.log(getAgeYear(25)) // 1999
-// eta hocche ager procedural programming code lekhar style . tarpor ashlo OOP
+// function getAgeYear(age){
+//   return new Date().getFullYear() - age
+// }
+// console.log(getAgeYear(25)) // 1999
+// // eta hocche ager procedural programming code lekhar style . tarpor ashlo OOP
 
-// OOP diye uporer problem ta solve kora hocche..
-const user = {
-  firstName : 'Tanvir',
-  lastName : 'Ahmed',
-  age : 25,
-  getAgeYear : function(){
-    return new Date().getFullYear - user.age
-  }
-}
+// // OOP diye uporer problem ta solve kora hocche..
+// const user = {
+//   firstName : 'Tanvir',
+//   lastName : 'Ahmed',
+//   age : 25,
+//   getAgeYear : function(){
+//     return new Date().getFullYear - user.age
+//   }
+// }
 // Encapsulation er mane hocche alada alada jinish ke ek jaygay rakha . upore variable gula + function sob user er vitore rakha hoyeche . data and logic sob kichui user er vitor rakha hoyeche . eta Encapsulation er ekta main definition . 
 // kintu arekta definition ase Encapsulation er . seta hocche data hiding . tar mane hocche user object ta bairer duniyar theke hidden . tar mane baire theke user ke keu change korte parbe na . kintu uporer user object ke baire theke change kora jabe . tai bola jay je akhno purapuri vabe user object ta Encapsulation hoy nai . kichu ta Encapsulation hoyeche .
 // onno programming language e hiding er jonno private keyword use kore variable declare kora hoy jate data hiding thake . tar mane user object ke jate baire theke change kora na jay . kintu javascript e private keyword nei . ekhane (#) diye private kora jay . eta pore dekhano hobe
@@ -2941,3 +2941,33 @@ const user = {
 // }
 // getAgeYear(25) // return value is : 1999
 // ai function taii Abstraction achieve korse . karon jokhon kono user eta ke call korbe tokhon user just age input dibe and sei onujayi tar birth year ber hoye ashbe . tar kase hide kora hoyeche behind the scene ki ki logic complexity choltese . etai Abstraction
+
+
+// Factory function 
+const user1 = {
+  firstName : 'Tanvir',
+  lastName : 'Ahmed',
+  age : 25,
+  getAgeYear : function(){
+    return new Date().getFullYear - user.age
+  }
+}
+const user2 = {
+  firstName : 'Tanvir',
+  lastName : 'Ahmed',
+  age : 25,
+  getAgeYear : function(){
+    return new Date().getFullYear - user.age
+  }
+}
+const user3 = {
+  firstName : 'Tanvir',
+  lastName : 'Ahmed',
+  age : 25,
+  getAgeYear : function(){
+    return new Date().getFullYear - user.age
+  }
+}
+// ekhane jotogula user create korbo totogula object ekhane create kora lagtese . jodi 1 hajar user thake tahole 1 hajar ta object create kora lagtese . ei problem solve korar jonno factory function create hoise 
+
+
