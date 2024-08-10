@@ -3137,20 +3137,20 @@
 // akhn amader problem solve hoise . karon ekhane Encapsulation er rules break hoy nai + abstraction er rules o break hoy nai . tar sathe memory khoroch o hoy nai . karon same memory address e ase getAgeYear function ta . 
 // kintu ekhane onk extra code lekha lagse 
 
-function createUser(fname,lname,age){
-  const user = {
-    fname,
-    lname,
-    age,
-    getBirthYear : createUser.commonMethods.getBirthYear,
-  }
-  return user;
-}
-createUser.commonMethods = {
-  getBirthYear (){
-    return new Date().getFullYear() - this.age
-  }
-} // ekhane evabe nije theke commonmethods set korar dorkar nei . javascript nijei eta kore dey constractor er maddhome
-const user1 = createUser('Tanvir','Ahmed',25)
-console.log(user1.getBirthYear())
+// function createUser(fname,lname,age){
+//   const user = {
+//     fname,
+//     lname,
+//     age,
+//     getBirthYear : createUser.commonMethods.getBirthYear,
+//   }
+//   return user;
+// }
+// createUser.commonMethods = {
+//   getBirthYear (){
+//     return new Date().getFullYear() - this.age
+//   }
+// } // ekhane evabe nije theke commonmethods set korar dorkar nei . javascript nijei eta kore dey constractor er maddhome
+// const user1 = createUser('Tanvir','Ahmed',25)
+// console.log(user1.getBirthYear())
 
