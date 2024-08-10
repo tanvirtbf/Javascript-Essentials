@@ -2901,22 +2901,11 @@
 //     console.log(err)
 //   })
 
-<<<<<<< HEAD
-
-  // Async Await
-
-  async function hello(){
-    return 'hello'
-  }
-
-
-
-
-
-
 
 // Object Oriented Programming
-  
-=======
-// Async Await
->>>>>>> 1c57063e7e7f2bc520641898f10ad78357549f11
+
+// 4 Pillars of Object Oriented Programming
+// 1. Encapsulation
+// 2. Abstraction
+// 3. Inheritance
+// 4. Polymorphism
