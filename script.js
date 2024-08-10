@@ -1,4 +1,3 @@
-
 // Methods (Without Argument)
 // toUpperCase()
 // toLowerCase()
@@ -6,7 +5,6 @@
 // trimStart()
 // trimEnd()
 // length
-
 
 // const names = 'Tanvir'
 // console.log(names[2]) //result : n
@@ -958,8 +956,6 @@
 //NOW FEC (Function Execution Context)
 // sayHi()
 
-
-
 // Scope and Scope Chain
 // var hello = 'Hello World'
 // function sayHello(){
@@ -1035,7 +1031,7 @@
 // ekhane global scope er variable er value ta ke local scope e hide kora hoyeche
 // othoba jodi amra execution context diye eta map kori tahole bujhte parbo kno ei code er answer erokom holo
 
-// EX : 
+// EX :
 // const greeting = 'hello'
 // function showGreeting(){
 //   const greeting = 'valo achen?'
@@ -1054,7 +1050,7 @@
 // showGreeting()
 // console.log(greeting) // hello
 
-// ******Important note***** ekhane global scope e greeting er value global execution context er execution phase e 'hello' deya hoyeche.tarpor jokhon showGreeting er execution phase start hoy tokhon notun vabe greeting name e variable create hoy, tar value undefined assign hoy . tarpor execution phase e greeting er value 'valo achen?' deya hoy . tarpor jokhon showGreeting er execution phase sesh hoye jay tokhon to callStack theke showGreeting ber hoye jay . tar mane showGreeting er vitore joto variable ase sob gula moira jay . showGreeting er vitor r kono kichur ostitto thake na . tar mane showGreeting er baire console.log(greeting) er value 'valo achen?' hobe na . karon function er vitor greeting already moira gese . tai jei greeting akhno beche ase , greeting = 'hello' sei greeting tai show hoise .    
+// ******Important note***** ekhane global scope e greeting er value global execution context er execution phase e 'hello' deya hoyeche.tarpor jokhon showGreeting er execution phase start hoy tokhon notun vabe greeting name e variable create hoy, tar value undefined assign hoy . tarpor execution phase e greeting er value 'valo achen?' deya hoy . tarpor jokhon showGreeting er execution phase sesh hoye jay tokhon to callStack theke showGreeting ber hoye jay . tar mane showGreeting er vitore joto variable ase sob gula moira jay . showGreeting er vitor r kono kichur ostitto thake na . tar mane showGreeting er baire console.log(greeting) er value 'valo achen?' hobe na . karon function er vitor greeting already moira gese . tai jei greeting akhno beche ase , greeting = 'hello' sei greeting tai show hoise .
 
 //3. Block Scope
 // Tricky part
@@ -1109,9 +1105,9 @@
 
 // More about Scope Chain
 // lexical context or lexical scope
-// jokhon jei function or variable jekhane rakha hoy setai holo tar lexical scope or lexical context . aro bujhate gele bolte nicher example er jerry function er lexical scope hocche global scope, karon take globally placed kora hoyeche and tom function er vitor name variable er lexical scope or lexical context hocche tom function er functional scope, karon take tom function er vitore define kora hoyeche . abar tom function er lexical context or lexical scope hocche global scope , karon tom ke globally define kora hoyeche 
-// function ke jekhanei call or invoked kora hok function er scope hocche jekhane take rakha hoyeche , orthat jei scoope e take rakha hoyeche . ai khetre niche jerry function ke tom function er vitore  call kora holeo jerry function er lexical context or lexical scope kintu tom function er baire global scope e . 
-// Ex: 
+// jokhon jei function or variable jekhane rakha hoy setai holo tar lexical scope or lexical context . aro bujhate gele bolte nicher example er jerry function er lexical scope hocche global scope, karon take globally placed kora hoyeche and tom function er vitor name variable er lexical scope or lexical context hocche tom function er functional scope, karon take tom function er vitore define kora hoyeche . abar tom function er lexical context or lexical scope hocche global scope , karon tom ke globally define kora hoyeche
+// function ke jekhanei call or invoked kora hok function er scope hocche jekhane take rakha hoyeche , orthat jei scoope e take rakha hoyeche . ai khetre niche jerry function ke tom function er vitore  call kora holeo jerry function er lexical context or lexical scope kintu tom function er baire global scope e .
+// Ex:
 // function jerry(){
 //   console.log(name)
 // }
@@ -1121,9 +1117,7 @@
 // }
 // var name = 'cartoon'
 // tom()
-// ekhane jerry jokhon name pacchilo na tokhon se tar immidiate next scope orthat global scope e khuje name er value 'cartoon' pay . tai se cartoon print kore dey . jerry kintu jekhane take call kora hoyeche sekhane khujeni , orthat tom function er vitore khujeni . karon take tom er vitor define kora hoy nai . just call kora hoyeche . tar mane call jekhaneii koruk function er definition jekhane ase setaii tar scope . sekhane na pele tar uporer scope e khujbe 
-
-
+// ekhane jerry jokhon name pacchilo na tokhon se tar immidiate next scope orthat global scope e khuje name er value 'cartoon' pay . tai se cartoon print kore dey . jerry kintu jekhane take call kora hoyeche sekhane khujeni , orthat tom function er vitore khujeni . karon take tom er vitor define kora hoy nai . just call kora hoyeche . tar mane call jekhaneii koruk function er definition jekhane ase setaii tar scope . sekhane na pele tar uporer scope e khujbe
 
 // closure
 // outer function inner function refreshment..
@@ -1142,15 +1136,15 @@
 //     console.log('inner')
 //   }
 // }
-// console.log(outer) 
-// output : 
+// console.log(outer)
+// output :
 // ƒ outer(){
 //   return function inner(){
 //     console.log('inner')
 //   }
 // }
 // console.log(outer())
-// output : 
+// output :
 // ƒ inner(){
 //   console.log('inner')
 // }
@@ -1174,7 +1168,6 @@
 // // }
 // outerCall() // inner (finally inner function called)
 
-
 // function outer(){
 //   var x = 'hello world'
 //   function inner(){
@@ -1189,7 +1182,7 @@
 // ekhane inner function tar parent er variable x ke access korte parche + x er value change korte parche . etaii closure er concept
 // scope chain er concept clear thakle uporer example ta bujhte parbo
 
-// baba chele example 
+// baba chele example
 // function baba(){
 //   let bari = 'shantinikaton'
 //   function chele(){
@@ -1200,7 +1193,7 @@
 //   chele()
 // }
 // baba()
-// ekhane chele tar babar sob property access korte pare and take change korte pare 
+// ekhane chele tar babar sob property access korte pare and take change korte pare
 
 // function baba(){
 //   let bari = 'shantinikaton'
@@ -1214,7 +1207,7 @@
 //   console.log(myProperty) // error : myProperty is not defined
 // }
 // baba()
-// kintu cheler myProperty variable baba tar scope e access korte partese na 
+// kintu cheler myProperty variable baba tar scope e access korte partese na
 
 // tahole closure ki ?
 // function outer(){
@@ -1250,21 +1243,20 @@
 // definition of closure
 // outer function er vitor x variable jehetu inner function use koreche and sei inner function closureFun variable er vitor rakha hoyeche tai outer function execute houyar poreo outer function er variable x er ostitto theke jacche inner function orthat closureFun variable e . jotokkhon porjonto child function orthat inner function ba closureFun ke execute kora sesh hobe totokkhon variable x er ostitto thakbe . ekhane inner function taii closure
 
-// Definition of Closure Again 
+// Definition of Closure Again
 // function baba(){
 //   const bari = 'myHome'
 //   return function chele(){
 //     console.log(bari)
 //   }
 // }
-// const amarChele = baba() // ekhaneii baba function execute hoye gese 
+// const amarChele = baba() // ekhaneii baba function execute hoye gese
 // console.log(amarChele)
 // // ƒ chele(){
 // //   console.log(bari)
 // // }
 // amarChele() // myHome
-// baba function execute hoye jauyar pore to baba function er property bari callstack theke ber hoye jauyar kotha . kintu na . baba execute houyar poreo chele function ta babar property use korte parche , totokkhon use korte parbe jotokkhon chele purapuri vabe execute na hoy . ai jinishtaii closure . ekhane chele function taii closure . karon chele onno function er property use korte parche sei property jei function e ache sei function execute houyar poreo use korte parche . tai chele function taii closure 
-
+// baba function execute hoye jauyar pore to baba function er property bari callstack theke ber hoye jauyar kotha . kintu na . baba execute houyar poreo chele function ta babar property use korte parche , totokkhon use korte parbe jotokkhon chele purapuri vabe execute na hoy . ai jinishtaii closure . ekhane chele function taii closure . karon chele onno function er property use korte parche sei property jei function e ache sei function execute houyar poreo use korte parche . tai chele function taii closure
 
 // Some Example of Closure
 
@@ -1280,7 +1272,7 @@
 // var innerFunc = outer()
 // innerFunc() // Ans : 20
 // innerFunc ke call korle 20 ashbe kno ? ashar kotha to 10 . karon x =20 houyar ageii inner function er definition memory te chole gese . kintu na . ekhane inner function ke use kora hoyeche innerFunc() er maddhome . totokkhone x er value 20 hoye gesilo . r jokhon innerFunc() kora holo tokhon oi somoy x ke pauyar jonno x er present memory te point kora obosthay chilo
-// mot kotha ekhane outer function er x jei memory location e point kora chilo inner function er vitor x same memory address e point kora ache . tai inner er baireo jodi x er value change hoy tahole x er value inner function eo change hobe 
+// mot kotha ekhane outer function er x jei memory location e point kora chilo inner function er vitor x same memory address e point kora ache . tai inner er baireo jodi x er value change hoy tahole x er value inner function eo change hobe
 
 // Example 2 :
 // function outer(){
@@ -2095,6 +2087,50 @@
 // XMLHttpRequest (XHR)
 // amra fetch diye kono api fetch kori , eta ashce 2015 shale . tar age manush api fetch korar jonno XMLHttpRequest (XHR) use korto
 
+// const resolveBtn = document.querySelector("#resolveBtn");
+// const rejectBtn = document.querySelector("#rejectBtn");
+// const image = document.querySelector("img");
+
+// resolveBtn.addEventListener("click", () => {
+//   const xhr = new XMLHttpRequest();
+//   xhr.responseType = "json";
+//   xhr.addEventListener("load", () => {
+//     image.src = xhr.response.message;
+//     image.style.width = "200px";
+//     image.style.height = "200px";
+//   });
+//   xhr.open("GET", "https://dog.ceo/api/breeds/image/random");
+//   xhr.send();
+// });
+
+// const resolveBtn = document.querySelector("#resolveBtn");
+// const rejectBtn = document.querySelector("#rejectBtn");
+// const image = document.querySelector("img");
+
+// const xhr = new XMLHttpRequest();
+
+// xhr.addEventListener("load", () => {
+//   const response = JSON.parse(xhr.response); // JSON convert
+//   image.src = response.message;
+//   image.style.width = "200px";
+//   image.style.height = "200px";
+
+//   resolveBtn.addEventListener('click',()=>{
+//     const xhr = new XMLHttpRequest()
+//     xhr.responseType = 'json'
+//     xhr.onload = ()=>{
+//       image.src = xhr.response.message
+//       image.style.width = '200px'
+//       image.style.height = '200px'
+//     }
+//     xhr.open('GET','https://dog.ceo/api/breeds/image/random')
+//     xhr.send()
+//   })
+// });
+
+// xhr.open("GET", "https://dog.ceo/api/breeds/image/random");
+// xhr.send();
+
 // const image = document.querySelector("#image");
 // const btn = document.querySelector("#btn");
 // btn.addEventListener("click", () => {
@@ -2222,6 +2258,29 @@
 //   xhr.send();
 // })
 
+// callback hell revision
+
+// const xhr = new XMLHttpRequest();
+// xhr.responseType = "json";
+// xhr.addEventListener("load", () => {
+//   console.log(xhr.response);
+//   const singleUser = new XMLHttpRequest();
+//   singleUser.responseType = "json";
+//   singleUser.onload = () => {
+//     const userPost = new XMLHttpRequest();
+//     userPost.responseType = "json";
+//     userPost.addEventListener("load", () => {
+//       console.log(userPost.response.posts[0].id);
+//     });
+//     userPost.open("GET", `https://dummyjson.com/posts/user/5`);
+//     userPost.send();
+//   };
+//   singleUser.open("GET", `https://dummyjson.com/users/${xhr.response.users[3].id}`);
+//   singleUser.send();
+// });
+// xhr.open("GET", "https://dummyjson.com/users");
+// xhr.send();
+
 // const xhr = new XMLHttpRequest()
 // xhr.responseType = 'json'
 // console.log(xhr.response)
@@ -2250,6 +2309,48 @@
 // xhr.send()
 
 // Reusable function
+
+// function makeHttpRequest(method,url){
+//     const xhr = new XMLHttpRequest()
+//     xhr.responseType = 'json'
+//     xhr.onload = ()=>{
+//         console.log(xhr.response)
+//     }
+//     xhr.open(method,url)
+//     xhr.send()
+// }
+// makeHttpRequest('GET','https://dummyjson.com/users/')
+
+// Some important api
+// 'https://dummyjson.com/users' // get all users
+// 'https://dummyjson.com/users/2' // get single users by id
+// 'https://dummyjson.com/posts/user/5' // get posts by user id
+// 'https://dummyjson.com/comments/post/6' // get comments by post id
+
+// function makeHttpRequest(method,url,callback){
+//     const xhr = new XMLHttpRequest()
+//     xhr.responseType = 'json'
+//     xhr.onload = ()=>{
+//         callback(xhr.response)
+//     }
+//     xhr.open(method,url)
+//     xhr.send()
+// }
+// makeHttpRequest('GET','https://dummyjson.com/users/',(allUser)=>{
+//     console.log(allUser.users[0].id)
+//     makeHttpRequest('GET',`https://dummyjson.com/users/${allUser.users[0].id}`,(singleUser)=>{
+//         console.log(singleUser.id)
+//         makeHttpRequest('GET',`https://dummyjson.com/posts/user/5`,(userPost)=>{
+//             console.log(userPost.posts[0].id)
+//             makeHttpRequest('GET',`https://dummyjson.com/comments/post/${userPost.posts[1].id}`,(postComment)=>{
+//                 console.log(postComment.comments[0].user.id)
+//                 makeHttpRequest('GET',`https://dummyjson.com/users/${postComment.comments[0].user.id}`,(user)=>{
+//                     console.log(user)
+//                 })
+//             })
+//         })
+//     })
+// })
 
 // function makeHttpRequest(method, url, callback) {
 //   const xhr = new XMLHttpRequest();
@@ -2308,13 +2409,11 @@
 // })
 // // This is called Callback Hell . this piramid is a callback hell
 
-
 // Some important api
 // 'https://dummyjson.com/users' // get all users
 // 'https://dummyjson.com/users/2' // get single users by id
 // 'https://dummyjson.com/posts/user/5' // get posts by user id
 // 'https://dummyjson.com/comments/post/6' // get comments by post id
-
 
 // function makeHttpRequest(method,url,callback){
 //   const xhr = new XMLHttpRequest()
@@ -2343,9 +2442,6 @@
 //   })
 // })
 
-
-
-
 // Promises
 // Promise is a special type of object
 // Promise Asynchronously kaj hoye thake
@@ -2354,7 +2450,7 @@
 //   // reject('tanvir')
 // }) // create a promise named p
 
-// ekta promise er 3 ta state thake 
+// ekta promise er 3 ta state thake
 // 1. pending state
 // 2. resolved state (tar mane promise fullfill hoyeche)
 // 3. rejected state (tar mane jeta korte chaisilam seta reject hoyeche)
@@ -2372,11 +2468,6 @@
 // })
 // console.log(p) // promiseState: pending , promiseResult: undefined
 
-// const p = new Promise((resolve,reject)=>{
-//   setTimeout(()=>{
-//     resolve('Promise Resolve')
-//   },4000)
-// })
 
 // Understand Promise using button click (resolve after button click)
 // const btn = document.querySelector('#btn')
@@ -2396,6 +2487,20 @@
 
 // const resolveBtn = document.querySelector('#resolveBtn')
 // const rejectBtn = document.querySelector('#rejectBtn')
+
+// const p = new Promise((resolve,reject)=>{
+//     resolveBtn.addEventListener('click',()=>{
+//         resolve('Resolve')
+//         console.log(p)
+//     })
+//     rejectBtn.addEventListener('click',()=>{
+//         reject('Rejected!')
+//         console.log(p)
+//     })
+// })
+
+// const resolveBtn = document.querySelector('#resolveBtn')
+// const rejectBtn = document.querySelector('#rejectBtn')
 // const p = new Promise((resolve,reject)=>{
 //   resolveBtn.addEventListener('click',()=>{
 //     resolve({fname:'Tanvir',lname:'Ahmed',age: 25,})
@@ -2405,15 +2510,32 @@
 //   })
 // })
 
-// // console.log(p) korle prototype name e ekta object ase . oi object er vitore 3 ta special object ase . 1. catch() 2. finally() 3. then() 
+// // console.log(p) korle prototype name e ekta object ase . oi object er vitore 3 ta special object ase . 1. catch() 2. finally() 3. then()
 
-// // rules of then() -> jokhonii promise resolve hoye jabe tokhonii then() method call hoye jabe 
+// // rules of then() -> jokhonii promise resolve hoye jabe tokhonii then() method call hoye jabe
 // // rules of then() -> then() method tar vitore ekta callback function accept kore thake
 
 // p.then(()=>{
 //   console.log('promise resolved') // jokhon p promise resolved hobe tokhon ai console log print hobe
 // }).catch(()=>{
 //   console.log('promise rejected') // jokhon p promise reject hobe tokhon ai console log print hobe
+// })
+
+// const resolveBtn = document.querySelector('#resolveBtn')
+// const rejectBtn = document.querySelector('#rejectBtn')
+
+// const p = new Promise((resolve,reject)=>{
+//     resolveBtn.addEventListener('click',()=>{
+//         resolve('Resolve')
+//     })
+//     rejectBtn.addEventListener('click',()=>{
+//         reject('Rejected!')
+//     })
+// })
+// p.then((data)=>{
+//     console.log(data)
+// }).catch((data)=>{
+//     console.log(data)
 // })
 
 // const resolveBtn = document.querySelector('#resolveBtn')
@@ -2458,10 +2580,10 @@
 //   })
 // }
 // uporer block er vitorer output holo :=>
-  // Promise Resolved
-  // finally
-  // Set time out
-// ekhane age setTimeout thakar poreo promise er last e execute hoise . karon setTimeout by default task queue or callback queue te dhuke . and promise micro task queue te dhuke . jehetu micro task queue er priority sobcheye beshi tai micro task queue er code sobar age callstack e dhuke, jodio setTimeout age task queue te ashcilo 
+// Promise Resolved
+// finally
+// Set time out
+// ekhane age setTimeout thakar poreo promise er last e execute hoise . karon setTimeout by default task queue or callback queue te dhuke . and promise micro task queue te dhuke . jehetu micro task queue er priority sobcheye beshi tai micro task queue er code sobar age callstack e dhuke, jodio setTimeout age task queue te ashcilo
 
 // {
 //   setTimeout(()=>{
@@ -2507,7 +2629,7 @@
 //     console.log('Set time out')
 //   })
 // }
-// output : 
+// output :
 // Promise Resolved
 // Promise Resolve 2
 // reject
@@ -2519,8 +2641,27 @@
 // Set time out
 // Set time out
 
-
 // .then() return value
+
+// const resolveBtn = document.querySelector('#resolveBtn')
+// const rejectBtn = document.querySelector('#rejectBtn')
+
+// const p = new Promise((resolve,reject)=>{
+//   resolveBtn.addEventListener('click',()=>{
+//     resolve('Promise Resolve')
+//   })
+//   rejectBtn.addEventListener('click',()=>{
+//     reject('Rejected!')
+//   })
+// })
+// const returnThen = p.then((data)=>{
+//     console.log(data)
+//     return 'Hello World'
+// })
+// console.log(returnThen) // No Return Value . karon p.then() e dhuke nai jehetu resolve hoy nai 
+// setTimeout(()=>{
+//     console.log(returnThen) // resolve houyar por p.then() 'Hello World' return korse
+// },4000)
 
 // const resolveBtn = document.querySelector('#resolveBtn')
 // const rejectBtn = document.querySelector('#rejectBtn')
@@ -2536,7 +2677,7 @@
 // console.log(p.then((data)=>{
 //   console.log(data)
 // })) // Promise {pending}
-// .then() method ekta promise return kore . tai .then() er upor abar .then() kora jabe jehetu .then() promise return kore . 
+// .then() method ekta promise return kore . tai .then() er upor abar .then() kora jabe jehetu .then() promise return kore .
 
 // p.then((data)=>{
 //   console.log(data) // Promise Resolve
@@ -2553,7 +2694,7 @@
 //   console.log(data) // Rejected!
 // })
 
-// Resolve Button e click korle output :-> 
+// Resolve Button e click korle output :->
 // Promise Resolve
 // 155
 // 155
@@ -2599,8 +2740,6 @@
 
 //   xhr.open(method,url)
 //   xhr.send()
-  
-
 
 //   return promise
 // }
@@ -2664,9 +2803,50 @@
 //     console.log(data)
 //   })
 
+// Some important api
+// 'https://dummyjson.com/users' // get all users
+// 'https://dummyjson.com/users/2' // get single users by id
+// 'https://dummyjson.com/posts/user/5' // get posts by user id
+// 'https://dummyjson.com/comments/post/6' // get comments by post id
 
 
-// Fetch 
+// function makeHttpRequest(method,url){
+//     const xhr = new XMLHttpRequest()
+//     xhr.responseType = 'json'
+
+//     const promise = new Promise((resolve,reject)=>{
+//         xhr.addEventListener('load',()=>{
+//             resolve(xhr.response)
+//         })
+//         xhr.addEventListener('error',()=>{
+//             reject('Rejected!')
+//         })
+//     })
+
+//     xhr.open(method,url)
+//     xhr.send()
+
+//     return promise;
+// }
+
+// makeHttpRequest('GET','https://dummyjson.com/users')
+//     .then((allUsers)=>{
+//         console.log(allUsers.users[0].id)
+//         return makeHttpRequest('GET',`https://dummyjson.com/users/${allUsers.users[0].id}`)
+//     }).then((singleUser)=>{
+//         console.log(singleUser.id)
+//         return makeHttpRequest('GET',`https://dummyjson.com/posts/user/${singleUser.id}`)
+//     }).then((userPost)=>{
+//         console.log(userPost.posts[0].id)
+//         return makeHttpRequest('GET',`https://dummyjson.com/comments/post/${userPost.posts[0].id}`)
+//     }).then((postComment)=>{
+//         console.log(postComment.comments[0].user.id)
+//         return makeHttpRequest('GET',`https://dummyjson.com/users/${postComment.comments[0].user.id}`)
+//     }).then((user)=>{
+//         console.log(user)
+//     })
+
+// Fetch
 // fetch('https://dummyjson.com/products')
 //   .then((res)=>{
 //     console.log(res) // return response object
@@ -2679,14 +2859,14 @@
 //     console.log(data)
 //   })
 
-// concept 
-// fetch('https://dummyjson.com/products') // eta ekta pending state er promise return kore jar PromiseResult or return value hocche response object 
-// // jehetu uporer fetch ekta promise return kore tai tar sathe then lagaiya tar resolve value ta nite pari 
+// concept
+// fetch('https://dummyjson.com/products') // eta ekta pending state er promise return kore jar PromiseResult or return value hocche response object
+// // jehetu uporer fetch ekta promise return kore tai tar sathe then lagaiya tar resolve value ta nite pari
 // fetch('https://dummyjson.com/products').then((response)=>{
 //   console.log(response) // response object
-//   // akhn response object ke .json() diye json e convart korle setao ekta promise return kore . and sei promise er Response Result e actual data pauya jay 
+//   // akhn response object ke .json() diye json e convart korle setao ekta promise return kore . and sei promise er Response Result e actual data pauya jay
 //   // console.log(response.json()) // pending promise // state fullfilled // promise Result = actual data
-//   // tai response.json() return korle actual data puaya jay 
+//   // tai response.json() return korle actual data puaya jay
 //   return response.json() // return actual data
 // }).then((data)=>{
 //   console.log(data) // actual data
@@ -2698,8 +2878,7 @@
 //   .then((response)=> response.json())
 //   .then((data) => console.log(data))
 
-
-// POST Request 
+// POST Request
 // fetch('https://dummyjson.com/products',{
 //   method: 'GET'
 // }) // this is by default GET method , there are no change to previous code
@@ -2707,21 +2886,22 @@
 //   .then((data) => console.log(data))
 
 // Now POST
-  // fetch('https://dummyjson.com/products/add',{
-  //   method: 'POST',
-  //   headers: { 'Content-Type': 'application/json' },
-  //   body: JSON.stringify({
-  //     title: 'BMW Pencil',
-  //     category: 'serum'
-  //     /* other product data */
-  //   })
-  // })
-  //   .then((response)=> response.json())
-  //   .then((data) => console.log(data))
-  //   .catch((err)=>{
-  //     console.log(err)
-  //   })
+// fetch('https://dummyjson.com/products/add',{
+//   method: 'POST',
+//   headers: { 'Content-Type': 'application/json' },
+//   body: JSON.stringify({
+//     title: 'BMW Pencil',
+//     category: 'serum'
+//     /* other product data */
+//   })
+// })
+//   .then((response)=> response.json())
+//   .then((data) => console.log(data))
+//   .catch((err)=>{
+//     console.log(err)
+//   })
 
+<<<<<<< HEAD
 
   // Async Await
 
@@ -2737,3 +2917,6 @@
 
 // Object Oriented Programming
   
+=======
+// Async Await
+>>>>>>> 1c57063e7e7f2bc520641898f10ad78357549f11
