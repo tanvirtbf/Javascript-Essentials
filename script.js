@@ -2989,22 +2989,27 @@
 // console.log(user1.getAgeYear === user2.getAgeYear )// false
 // tar mane prottekta user er jonno getAgeYear alada alada memory te store hocche jodio ai function er definition sobar jonno same . 
 // tahole to ai function ke baire rakhleii valo . tahole same memory te point thakbe sob user er jonno . jemon...
-function createUser(firstName,lastName,age){
-  const user = {
-    firstName : firstName,
-    lastName : lastName,
-    age : age,
-    myBirthYear : getAgeYear(age) 
-  }
-  return user
-}
-function getAgeYear(age){
-  return new Date().getFullYear - age
-}
-const user1 = createUser('Aman','Ahmed',23)
-const user2 = createUser('Aman','Ahmed',23)
-const user3 = createUser('Aman','Ahmed',23)
+// function createUser(firstName,lastName,age){
+//   const user = {
+//     firstName : firstName,
+//     lastName : lastName,
+//     age : age,
+//     myBirthYear : getAgeYear(age) 
+//   }
+//   return user
+// }
+// function getAgeYear(age){
+//   return new Date().getFullYear - age
+// }
+// const user1 = createUser('Aman','Ahmed',23)
+// const user2 = createUser('Aman','Ahmed',23)
+// const user3 = createUser('Aman','Ahmed',23)
 
 // tahole evabeii korle memory khoroch onk kom hoy . karon getAgeYear ai khetre 1 taii memory location dokhol kore rakhse sob user er jonno . kintu eta korle to OOP concept taii thakbe na . tai getAgeYear ke  baire declare kora jabe na . vitoreii declare kore ai problem er solve korte hobe
 // ai problem ta solve korse Constractor function
 
+// example : 
+const arr1 = [1,2,3]
+const arr2 = [4,5,6]
+console.log(arr1.pop === arr2.pop) // true
+// tar mane arr1 and arr2 er khetre pop method same memory address e rakha hoyeche . erokom hajar ta array er jonno same memory location er pop method use kora hoyeche . er dara memory khoroch onk kombe . etaii constractor function diye kora jay
