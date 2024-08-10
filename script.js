@@ -2978,11 +2978,11 @@
 //   lastName : 'Ahmed',
 //   age : 25,
 //   getAgeYear : function(){
-//     return new Date().getFullYear - user.age
+//     return new Date().getFullYear() - user.age
 //   }
 // }
 // Encapsulation er mane hocche alada alada jinish ke ek jaygay rakha . upore variable gula + function sob user er vitore rakha hoyeche . data and logic sob kichui user er vitor rakha hoyeche . eta Encapsulation er ekta main definition . 
-// kintu arekta definition ase Encapsulation er . seta hocche data hiding . tar mane hocche user object ta bairer duniyar theke hidden . tar mane baire theke user ke keu change korte parbe na . kintu uporer user object ke baire theke change kora jabe . tai bola jay je akhno purapuri vabe user object ta Encapsulation hoy nai . kichu ta Encapsulation hoyeche .
+// kintu arekta definition ase Encapsulation er . seta hocche data hiding . tar mane hocche user object ta bairer duniyar theke hidden . tar mane baire theke user ke keu change korte parbe na . jodi getAgeYear function ke baire define kora hoito, then user object er vitore call kora hoito taile getAgeYear function ke user object charaii independent vabe je keu access korte parto . eta Encapsulation er rules break kore . uporer user object ke baire theke change kora jabe + Access kora jabe . tai bola jay je akhno purapuri vabe user object ta Encapsulation hoy nai . kichu ta Encapsulation hoyeche .
 // onno programming language e hiding er jonno private keyword use kore variable declare kora hoy jate data hiding thake . tar mane user object ke jate baire theke change kora na jay . kintu javascript e private keyword nei . ekhane (#) diye private kora jay . eta pore dekhano hobe
 
 // Abstraction
@@ -2996,14 +2996,15 @@
 // getAgeYear(25) // return value is : 1999
 // ai function taii Abstraction achieve korse . karon jokhon kono user eta ke call korbe tokhon user just age input dibe and sei onujayi tar birth year ber hoye ashbe . tar kase hide kora hoyeche behind the scene ki ki logic complexity choltese . etai Abstraction
 
-
 // Factory function 
+
+// why need factory function?...
 // const user1 = {
 //   firstName : 'Tanvir',
 //   lastName : 'Ahmed',
 //   age : 25,
 //   getAgeYear : function(){
-//     return new Date().getFullYear - user.age
+//     return new Date().getFullYear() - user.age
 //   }
 // }
 // const user2 = {
@@ -3011,7 +3012,7 @@
 //   lastName : 'Ahmed',
 //   age : 25,
 //   getAgeYear : function(){
-//     return new Date().getFullYear - user.age
+//     return new Date().getFullYear() - user.age
 //   }
 // }
 // const user3 = {
@@ -3019,10 +3020,12 @@
 //   lastName : 'Ahmed',
 //   age : 25,
 //   getAgeYear : function(){
-//     return new Date().getFullYear - user.age
+//     return new Date().getFullYear() - user.age
 //   }
 // }
 // ekhane jotogula user create korbo totogula object ekhane create kora lagtese . jodi 1 hajar user thake tahole 1 hajar ta object create kora lagtese . ei problem solve korar jonno factory function create hoise 
+
+
 
 // Create Factory function
 // function createUser(firstName,lastName,age){
@@ -3039,7 +3042,8 @@
 // const user1 = createUser('Aman','Ahmed',23)
 // const user2 = createUser('Aman','Ahmed',23)
 // const user3 = createUser('Aman','Ahmed',23)
-// kintu ekhetre ekta problem ase . seta holo user1, user2, user3 sob gula teii getAgeyear function duplicate hoitese . jodio getAgeYear er definition sob khetre same , kintu tao prottekbar user create hole oi user er jonno alada alada vabe getAgeYear function alada alada memory te create hoitese . kintu jehetu same definition tai alada alada memory te ai function store korle onk memory khoroch hoye jabe . 
+// upore khub kom code use kore barbar notun user create kora jacche .
+// kintu ekhetre ekta problem ase . seta holo user1, user2, user3 sob gula teii getAgeyear function duplicate hoitese . jodio getAgeYear er definition sob khetre same , kintu tao prottekbar user create hole oi user er jonno alada alada vabe getAgeYear function alada alada memory te create hoitese . kintu jehetu same definition tai alada alada memory te thaka ta logical na .  aivabe function store korle onk memory khoroch hoye jabe . 
 // console.log(user1.getAgeYear === user2.getAgeYear )// false
 // tar mane prottekta user er jonno getAgeYear alada alada memory te store hocche jodio ai function er definition sobar jonno same . 
 // tahole to ai function ke baire rakhleii valo . tahole same memory te point thakbe sob user er jonno . jemon...
@@ -3100,3 +3104,53 @@
 // // kintu ekhetre Encapsulation er rules break hoy . rules onujayii sob variable logic everything eksathe thakte hobe . kintu ekhane getAgeYear function ta object er baire . abar object er vitore anle prottek user er jonno alada alada getAgeYear memory te create hoye memory khoroch baraiya dibe . ai somosshar somadhan hocche Constractor function
 // // Polymorphism
 // // kintu ekhane polymorphism rules apply hoye gese . polymorphism hocche ektaii function kintu alada alada rup . tar mane hocche same getAgeYear function taii alada alada user er jonno alada alada vabe kaj kortese, alada alada rup toiri kortese. upore same function getAgeYear prottekta user er jonnoa alada alada vabe kaj kortese . etaii polymorphism 
+
+// How to create key value pair on the function and get a common methods
+// createUser.hello = 'world'
+// console.log(createUser.hello) // world
+// // ekhane createUser ekta function houyar poreo ami er sathe key value pair create korte partesi . karon prottekta function behind the scene object hoye thake 
+// console.dir(createUser) // ekhane ami hello = 'world' pabo 
+
+// Common Methods Technique
+// function createUser(firstName,lastName,age){
+//   const user = {
+//     firstName : firstName,
+//     lastName : lastName,
+//     age : age,
+//     getAgeYear : createUser.commonMethods.getAgeYear
+//   }
+//   return user
+// }
+
+// // create common methods
+// createUser.commonMethods = {
+//   getAgeYear : function(age){
+//     return new Date().getFullYear - this.age
+//   }
+// }
+
+// const user1 = createUser('Aman','Ahmed',23)
+// const user2 = createUser('Aman','Ahmed',55)
+
+// console.log(user2.getAgeYear === user1.getAgeYear) // true
+
+// akhn amader problem solve hoise . karon ekhane Encapsulation er rules break hoy nai + abstraction er rules o break hoy nai . tar sathe memory khoroch o hoy nai . karon same memory address e ase getAgeYear function ta . 
+// kintu ekhane onk extra code lekha lagse 
+
+function createUser(fname,lname,age){
+  const user = {
+    fname,
+    lname,
+    age,
+    getBirthYear : createUser.commonMethods.getBirthYear,
+  }
+  return user;
+}
+createUser.commonMethods = {
+  getBirthYear (){
+    return new Date().getFullYear() - this.age
+  }
+} // ekhane evabe nije theke commonmethods set korar dorkar nei . javascript nijei eta kore dey constractor er maddhome
+const user1 = createUser('Tanvir','Ahmed',25)
+console.log(user1.getBirthYear())
+
