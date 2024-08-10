@@ -2449,7 +2449,7 @@
 // 2. inversion of control
 
 // callback hell problem discuss
-const cart = ['shoes','pants','kurta']
+// const cart = ['shoes','pants','kurta']
 // amr ekta ecommerce site ase . upore cart array te amr kichu product ase 
 // jokhon kono user amr site e dhuke order korbe tokhon product choose kora theke shuru kore payment korar ag porjonto kichu process er moddho diye jete hoy . jemon..
 // 1. Add to cart
@@ -2459,23 +2459,28 @@ const cart = ['shoes','pants','kurta']
 // 5. update wallet
 // etc...
 // ekhane uporer 5 ta kaj serial maintain kore ashte hobe . add to cart na korle order create hobe na . order create na hole payment hobe na . payment na korle order er summary ashbe na . order summary na korle wallet update hobe na . jehetu kaj gula serial maintain kore korte hoy tai prottekta kajer por immidiate next kaj korar jonno oi function ke ekta callback pass kore dite hoy next kaj korar jonno . jemon..
-api.addToCart(cart,function(){
-  api.createOrder(order,function(){
-    api.payment(payment,function(){
-      api.orderSummary(orderSummary,function(){
-        api.updateWallet(updateWallet,function(){
-          // and so on...
-        })
-      })
-    })
-  })
-})
+// api.addToCart(cart,function(){
+//   api.createOrder(order,function(){
+//     api.payment(payment,function(){
+//       api.orderSummary(orderSummary,function(){
+//         api.updateWallet(updateWallet,function(){
+//           // and so on...
+//         })
+//       })
+//     })
+//   })
+// })
 //this is callback hell
 // upore add to cart kora sesh hole ekta callback function call hobe order create er jonno . tar age hobe na . then order create er por immidiate payment er callback call hobe payment er jonno . then orderSummary and so on...
 
-
-
-
+// Inversion of Control (callback problem)
+// callback use korar maddhome amader code er upor control loose hoye jay . kintu kivabe?
+// api.addToCart(cart,function(){
+//   api.createOrder()
+// })
+// upore addToCart api call houyar por ami tar vitore createOrder function as a callback hishebe diye dilam . i am as a developer tension free hoye gelam je automatic addToCart er kaj sesh hole se nijeii createOrder api ke call korbe callback hishebe . kintu eta ki risky ?? eta ashole onk beshi risky. kivabe risky ?
+// upore onk important ekta api createOrder api er control ami nijer kache na rekhe addToCart api er moddhe diye rakhsi . ekhetre ami blindly trust kortesi addToCart api ke je se tar kaj sesh kore createOrder api ke call korbe . 
+// addToCart api er personal bugs thakte pare . ai addToCart api ke aro onk developer change kore dite pare . tar jonno effect porbe createOrder api er upor .
 
 
 // Promises
