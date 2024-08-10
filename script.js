@@ -2724,3 +2724,16 @@
 
 
   // Async Await
+
+  async function hello(){
+    return 'hello'
+  }
+
+
+
+
+
+
+
+// Object Oriented Programming
+  
