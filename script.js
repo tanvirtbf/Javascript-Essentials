@@ -2909,3 +2909,24 @@
 // 2. Abstraction
 // 3. Inheritance
 // 4. Polymorphism
+
+// Encapsulation
+
+function getAgeYear(age){
+  return new Date().getFullYear() - age
+}
+console.log(getAgeYear(25)) // 1999
+// eta hocche ager procedural programming code lekhar style . tarpor ashlo OOP
+
+// OOP diye uporer problem ta solve kora hocche..
+const user = {
+  firstName : 'Tanvir',
+  lastName : 'Ahmed',
+  age : 25,
+  getAgeYear : function(){
+    return new Date().getFullYear - user.age
+  }
+}
+// Encapsulation er mane hocche alada alada jinish ke ek jaygay rakha . upore variable gula + function sob user er vitore rakha hoyeche . data and logic sob kichui user er vitor rakha hoyeche . eta Encapsulation er ekta main definition . 
+// kintu arekta definition ase Encapsulation er . seta hocche data hiding . tar mane hocche user object ta bairer duniyar theke hidden . tar mane baire theke user ke keu change korte parbe na . kintu uporer user object ke baire theke change kora jabe . tai bola jay je akhno purapuri vabe user object ta Encapsulation hoy nai . kichu ta Encapsulation hoyeche .
+// onno programming language e hiding er jonno private keyword use kore variable declare kora hoy jate data hiding thake . tar mane user object ke jate baire theke change kora na jay . kintu javascript e private keyword nei . ekhane (#) diye private kora jay . eta pore dekhano hobe
