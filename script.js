@@ -2930,3 +2930,14 @@ const user = {
 // Encapsulation er mane hocche alada alada jinish ke ek jaygay rakha . upore variable gula + function sob user er vitore rakha hoyeche . data and logic sob kichui user er vitor rakha hoyeche . eta Encapsulation er ekta main definition . 
 // kintu arekta definition ase Encapsulation er . seta hocche data hiding . tar mane hocche user object ta bairer duniyar theke hidden . tar mane baire theke user ke keu change korte parbe na . kintu uporer user object ke baire theke change kora jabe . tai bola jay je akhno purapuri vabe user object ta Encapsulation hoy nai . kichu ta Encapsulation hoyeche .
 // onno programming language e hiding er jonno private keyword use kore variable declare kora hoy jate data hiding thake . tar mane user object ke jate baire theke change kora na jay . kintu javascript e private keyword nei . ekhane (#) diye private kora jay . eta pore dekhano hobe
+
+// Abstraction
+// er simple definition hocche hiding the complexity 
+// amar logic user ke dekhanor dorkar nei . user sudhu tar kajer sathe thakbe . 
+// amra jemon keyboard er vibinno button click kori . amra jani space button click korle ki hobe, delete button click korle ki hobe . amader aita dekhar dorkar nei je behind the scene ai button click er por ki ki operation hocche , ki ki logic cholche egula user ke dekhanor dorkar nei . etaii hocche hiding the complexity . tar mane hocche user ke behind the scene logic complexity egula dekhanor dorkar nei . sudhu user jei kaj korbe seta korar jonnoi playground toiri kore dite hobe 
+
+// function getAgeYear(age){
+//   return new Date().getFullYear() - age
+// }
+// getAgeYear(25) // return value is : 1999
+// ai function taii Abstraction achieve korse . karon jokhon kono user eta ke call korbe tokhon user just age input dibe and sei onujayi tar birth year ber hoye ashbe . tar kase hide kora hoyeche behind the scene ki ki logic complexity choltese . etai Abstraction
