@@ -3176,3 +3176,55 @@
 // sayHello() // print hello and return value is Hello World
 
 // new keyword
+// function sayHi(){
+  
+// }
+// console.log(sayHi()) // return undefined
+// console.log(new sayHi()) // return a object
+// // jokhon amra new keyword use kore kono function ke call korle amader ekta object return kore , jodio sei function kono kichu return kore nai tao..
+// function sayHi(){
+//   return 'hello'
+// }
+// console.log(new sayHi()) // not return 'hello' , return a object
+// // tar mane new keyword diye kono function call korle sei function jei data return koruk na kno oi function oi jinish ta return korbe na . se tar nijer motoi ager object return korbe jeta se function kono kichu return na korleo korto
+
+// definition of new keyword
+// jokhon new keyword diye kono function call kora hoy tokhon se nije ekta object create kore and sei object ke automatic return kore dey . 
+
+// new keyword jei object return kortese sei object e amra chaile onk property set korte pari 
+// tar age this er useCase bujhte hobe new keyword er belay 
+
+// function sayHi(){
+//   console.log(this) 
+// }
+// console.log(sayHi()) // print window object
+// console.log(new sayHi()) // jei object ta new keyword create and return kore automatically sei object keii print korse . tar mane new keyword use kore function call korle sei function er vitor this keyword ashole sei function jei object return kortese setakeii point kore thake 
+
+// function createUser(fname,lname,age){
+//   this.firstName = fname
+// }
+// const user1 = new createUser('Tanvir','Ahmed',25)
+// console.log(user1.firstName)
+
+// important notes*****
+// jokhon new keyword use kore kono function ke call kore tokhon sei function ke bola hoy constractor function . same function jodi new keyword use kore call kora na hoy tahole seta normal function
+
+// function createUser(fname,lname,age){
+//   this.firstName = fname
+//   this.lastName = lname
+//   this.age = age
+// }
+// const user1 = createUser('Tanvir','Ahmed',25)
+// console.log(user1) // undefined . karon jehetu new keyword use kore createUser function call kora hoy nai tai kono kichui return kora hoy nai . tai undefined ashce 
+
+// // important notes*****
+// // upore createUser jehetu normal function , normal function karon take new keyword use kore call kora hoy nai tai createUser er vitor this keyword window object ke point kore ache . tar mane createUser er vitor firstName, lastName, age aigula window object er vitor set hoyeche . 
+// console.log(window.firstName)// Tanvir
+// console.log(window.lastName)// Ahmed
+// console.log(window.age) // 25
+// // jehetu window object er vitor set hoise tai amra window.firstName na diye only firstName dite pari 
+// console.log(firstName)// Tanvir
+// console.log(lastName)// Ahmed
+// console.log(age) // 25
+
+
