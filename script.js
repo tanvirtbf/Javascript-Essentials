@@ -3206,6 +3206,15 @@
 // const user1 = new createUser('Tanvir','Ahmed',25)
 // console.log(user1.firstName)
 
+// function createUser(fname,lname,age){
+//   this.firstName = fname
+//   this.lastName = lname
+//   this.age = age
+// }
+// const user1 = new createUser('Tanvir','Ahmed',25)
+// const user2 = new createUser('Sadia','Ahmed',16)
+
+
 // important notes*****
 // jokhon new keyword use kore kono function ke call kore tokhon sei function ke bola hoy constractor function . same function jodi new keyword use kore call kora na hoy tahole seta normal function
 
@@ -3246,6 +3255,23 @@
 // console.log(user1.__proto__.constructor === user2.__proto__.constructor) // true
 // // tar mane createUser er vitor jei constructor function ase segula user1 , user2 and jotogula user create hobe sob gular moddhei same memory address er function thakbe
 
+// function createUser(fname,lname,age){
+//   this.firstName = fname
+//   this.lastName = lname
+//   this.age = age
+// }
+// createUser.prototype.getBirthYear = function(){
+//   return new Date().getFullYear() - this.age
+// }
+// const user1 = new createUser('Tanvir','Ahmed',25)
+// const user2 = new createUser('Sadia','Ahmed',16)
+
+// console.log(createUser.prototype.constructor === user1.__proto__.constructor) // true
+// console.log(user1.__proto__.getBirthYear) // ƒ (){ return new Date().getFullYear() - this.age}
+// console.log(user2.__proto__.getBirthYear) // ƒ (){ return new Date().getFullYear() - this.age}
+// // upore createUser er prototype e getBirthYear function set kore dise , sathe satheii user1 and user2 object sei getBirthYear function er access peye gese tader prototype e 
+
+
 // set common function for all user
 // function createUser(fname,lname,age){
 //   this.firstName = fname
@@ -3268,6 +3294,7 @@
 // console.log(user3.getBirthYear()) // 2006
 // console.log(user1.getFullName()) // Tanvir Ahmed
 // console.log(user2.getFullName()) // Sadia Ahmed
+
 
 
 
