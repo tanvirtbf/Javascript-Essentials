@@ -3156,4 +3156,23 @@
 
 // Prototype
 
+// function sayHi(){
 
+// }
+// console.dir(sayHi)
+// // duniyar jekono function hok sekhane prototype object thake 
+
+// console.log(sayHi.prototype) // in prototype
+
+// use of prototype
+// function sayHi(){
+//   console.log('hii')
+// }
+// sayHi() // print hii and return value is undefined
+// function sayHello(){
+//   console.log('hello')
+//   return 'Hello World'
+// }
+// sayHello() // print hello and return value is Hello World
+
+// new keyword
