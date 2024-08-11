@@ -3155,31 +3155,25 @@
 // console.log(user1.getBirthYear())
 
 // revision 
-const user1 = {
-  fname:'Tanvir',
-  lname:'Ahmed',
-  age:25,
-  getBirthYear:function(){
-    return new Date().getFullYear() - this.age
-  }
-}
-const user2 = {
-  fname:'Tanvir',
-  lname:'Ahmed',
-  age:36,
-  getBirthYear:function(){
-    return new Date().getFullYear() - this.age
-  }
-}
-const user3 = {
-  fname:'Tanvir',
-  lname:'Ahmed',
-  age:36,
-  getBirthYear:function(){
-    return new Date().getFullYear() - this.age
-  }
-}
-console.log(user1.getBirthYear === user2.getBirthYear) // false
 
+function createUser(fname,lname,age){
+  const user = {
+    fname,
+    lname,
+    age,
+    getBirthYear: createUser.commonMethods.getBirthYear
+  }
+  return user
+}
+createUser.commonMethods =  {
+  getBirthYear : function(){
+    return new Date().getFullYear() - this.age
+  }
+}
+console.dir(createUser)
+
+const user1 = createUser('Tanvir','Ahmed',25)
+const user2 = createUser('Sadia','Ahmed',15)
+const user3 = createUser('Maymuna','Ahmed',18)
 
 
