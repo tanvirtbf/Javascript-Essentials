@@ -3154,26 +3154,6 @@
 // const user1 = createUser('Tanvir','Ahmed',25)
 // console.log(user1.getBirthYear())
 
-// revision 
-
-function createUser(fname,lname,age){
-  const user = {
-    fname,
-    lname,
-    age,
-    getBirthYear: createUser.commonMethods.getBirthYear
-  }
-  return user
-}
-createUser.commonMethods =  {
-  getBirthYear : function(){
-    return new Date().getFullYear() - this.age
-  }
-}
-console.dir(createUser)
-
-const user1 = createUser('Tanvir','Ahmed',25)
-const user2 = createUser('Sadia','Ahmed',15)
-const user3 = createUser('Maymuna','Ahmed',18)
+// Prototype
 
 
