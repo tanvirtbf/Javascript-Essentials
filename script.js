@@ -3227,4 +3227,21 @@
 // console.log(lastName)// Ahmed
 // console.log(age) // 25
 
+// function createUser(fname,lname,age){
+//   this.firstName = fname
+//   this.lastName = lname
+//   this.age = age
+// }
+// const user1 = new createUser('Tanvir','Ahmed',25)
+// const user2 = new createUser('Sadia','Ahmed',16)
+// console.log(user1) // createUser {firstName: 'Tanvir', lastName: 'Ahmed', age: 25}
+// console.log(user2) // createUser {firstName: 'Sadia', lastName: 'Ahmed', age: 16}
 
+// // akhn dekhbo kivabe common methods user1 , user2 object e automatically chole jay 
+
+// // createUser er vitore prototype object ase . tar vitore constructor function ase . jei constructor function createUser function er definition hold kore rakhe . new keywrod diye jokhon createUser call kore user1 and user2 create kora holo tokhono user1 and user2 er vitore same constructor function jay 
+// // jemon..
+// console.log(createUser.prototype.constructor === user1.__proto__.constructor) // true
+// console.log(createUser.prototype.constructor === user2.__proto__.constructor) // true
+// console.log(user1.__proto__.constructor === user2.__proto__.constructor) // true
+// // tar mane createUser er vitor jei constructor function ase segula user1 , user2 and jotogula user create hobe sob gular moddhei same memory address er function thakbe
