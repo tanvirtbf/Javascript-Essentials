@@ -3247,22 +3247,28 @@
 // // tar mane createUser er vitor jei constructor function ase segula user1 , user2 and jotogula user create hobe sob gular moddhei same memory address er function thakbe
 
 // set common function for all user
-function createUser(fname,lname,age){
-  this.firstName = fname
-  this.lastName = lname
-  this.age = age
-}
+// function createUser(fname,lname,age){
+//   this.firstName = fname
+//   this.lastName = lname
+//   this.age = age
+// }
 
-createUser.prototype.getBirthYear = function(){
-  return new Date().getFullYear() - this.age
-}
+// createUser.prototype.getBirthYear = function(){
+//   return new Date().getFullYear() - this.age
+// }
+// createUser.prototype.getFullName = function(){
+//   return this.firstName + ' ' + this.lastName
+// }
 
-const user1 = new createUser('Tanvir','Ahmed',25)
-const user2 = new createUser('Sadia','Ahmed',15)
-const user3 = new createUser('Maymuna','Khatun',18)
-console.log(user1.getBirthYear()) // 1999
-console.log(user2.getBirthYear()) // 2009
-console.log(user3.getBirthYear()) // 2006
+// const user1 = new createUser('Tanvir','Ahmed',25)
+// const user2 = new createUser('Sadia','Ahmed',15)
+// const user3 = new createUser('Maymuna','Khatun',18)
+// console.log(user1.getBirthYear()) // 1999
+// console.log(user2.getBirthYear()) // 2009
+// console.log(user3.getBirthYear()) // 2006
+// console.log(user1.getFullName()) // Tanvir Ahmed
+// console.log(user2.getFullName()) // Sadia Ahmed
+
 
 
 
