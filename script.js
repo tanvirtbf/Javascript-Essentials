@@ -3329,10 +3329,28 @@
 
 
 // Geeky Shows Advance Javascript 
-// DOM definition 
+// DOM definition (What is Document Object Model - v.3)
 // 1. The Document Object Model(DOM) is a Application Programming Interface (API) for HTML and XML documents.
 // 2. Wth the Document Object Model, Programmers can create and build documents, navigate their structure, and add, modify, or delete elements and content.
 // 3. The DOM is an object-oriented representation of the web page, which can be modified with a scripting language such as javascript. 
 // 4. The DOM model represents a document with a logical tree.
 // 5. According to Document Object Model (DOM), everyt HTML-tag is an object. Nested tags are called "children" of the enclosing one. All operations on the DOM start with the document object. From it we can access any node.
 // 6. The Document Object Model can be used with any programming language like python php etc.
+
+// Document Tree (v.4)
+// Notes :
+// 1. Element Node : joto html tag ase sob gula ke bola hoy Element Node
+// 2. Text Node : kono tag er vitor text thakle setake Text Node bole . Text Node DOM er vitor onno kothau create hoy .jei tag er vitor text ase sei tag er vitor text node create hoy na. 
+// 3. Attribute Node : tag er vitor joto attribute ase sob gula Attribute Node
+// 4. Comment Node : comment gula Comment Node 
+
+// DOM Node Types : 
+// 1. Element Node er type holo 1. tar mane jodi kono Element er type ber kora hoy tahole return value ashe 1 . jodi kono Node er return value 1 ashe tahole bujhte hobe seta Element Node.
+// 2. Text Node er type holo 3. tar mane jodi kono Text er type ber kora hoy tahole return value ashe 3 . jodi kono Node er return value 3 ashe tahole bujhte hobe seta Text Node.
+// 3. Comment Node er type holo 8. tar mane jodi kono Comment er type ber kora hoy tahole return value ashbe 8. jodi kono Node er return value 8 ashe tahole bujhte hobe seta Comment Node.
+// 4. Document Node er type holo 9. tar mane jodi document er type ber kora hoy tahole return value ashbe 9. jodi kono Node er return value 9 ashe tahole bujhte hobe seta Document Node.
+// 5. Document Type Node is 10. 
+// 6. Document Fragment Node is 11. 
+
+
+
