@@ -3382,3 +3382,25 @@
 // console.dir(p) // p Object
 
 // getElementsByTagName Method (v.6)
+// The method getElementsByTagName("Tag_Name") returns a live node list meaning that it updates itself with the DOM tree automatically, so modification of the DOM tree will be reflected in the returned collection. The returned Node List or Collection of Nodes can be accessed by index numbers starting with index 0. 
+// upore getElementById te kono nodeList or Collection return kore na, oikhane single object return kore . karon getElementById diye single element ke access kora jay . kintu getElementsByTagName er khetre same tag onkgula thakte pare . sob gulake list akare or collection akare return kore, like an array . tai index number diyeo access kora jay. 
+// This method accepts a string indicating the type of elements that be retrieved, a special value "*" returns all elements in the document
+// document.getElementsByTagName("p") // eta return korbe ekta list . tai etake kono variable e store korte hobe. 
+// const p = document.getElementsByTagName("p") // p variable er moddhe list ta aisha porse
+// console.log(p) // HTMLCollection(2) [0] = p#geek [1] = p#find
+// console.log(p[0]) // <p id="geek">Hello Tanvir</p>
+// console.log(p[1]) // <p id="find">Bye Tanvir</p>
+// console.log(p.geek) // <p id="geek">Hello Tanvir</p>
+// console.log(p.find) // <p id="find">Bye Tanvir</p>
+// console.log(p.length) // 2 (karon p tag ase total 2 ta)
+
+// You can use the length property of the NodeList object to determine the number of elements with the specified tag name, then you can loop through all elements and extract the info you want
+
+// const allElementOfDocument = document.getElementsByTagName("*") // HTMLCollection(14) - all element return 
+// console.log(allElementOfDocument.length) // 14 (total 13 element ase pura web page e)
+
+// const allElementOfBody = document.body.getElementsByTagName("*")// document er vitor body object deya ase . kintu onno tag directly deya nei . tai body chara onno kono tag shorashori access kora jay na 
+// console.log(allElementOfBody) // return all element in body
+
+// getElementsByTagName More Specific Method (v.7)
+
