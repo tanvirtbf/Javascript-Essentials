@@ -3318,3 +3318,21 @@
   
 // }
 
+
+
+
+
+
+
+
+
+
+
+// Geeky Shows Advance Javascript 
+// DOM definition 
+// 1. The Document Object Model(DOM) is a Application Programming Interface (API) for HTML and XML documents.
+// 2. Wth the Document Object Model, Programmers can create and build documents, navigate their structure, and add, modify, or delete elements and content.
+// 3. The DOM is an object-oriented representation of the web page, which can be modified with a scripting language such as javascript. 
+// 4. The DOM model represents a document with a logical tree.
+// 5. According to Document Object Model (DOM), everyt HTML-tag is an object. Nested tags are called "children" of the enclosing one. All operations on the DOM start with the document object. From it we can access any node.
+// 6. The Document Object Model can be used with any programming language like python php etc.
