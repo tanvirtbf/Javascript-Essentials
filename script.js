@@ -3367,3 +3367,18 @@
 // 3. document.getElementsByClassName("Class_Name") -> Get all the specified element By the Class Name
 // 4. document.querySelector("CSS_Selector") -> It returns the first match of the passed selector string
 // 5. document.querySelectorAll("CSS_Selector") -> It returns a node list of DOM elements that match the query
+
+// *****Important Notes******
+// jekono element access method use kore kono element ke find kori na kno sob khetreii ekta element object return kore sei element access method , jodi seta khuje pay...
+// jemon...
+// console.log(document.getElementById("geek"))
+// // <p id="geek">Hello Tanvir</p>
+// console.dir(document.getElementById("geek"))
+// // p Object jekhane onk property ase 
+
+// // tar mane jekono element access method object return kore . tai setake kono variable e hold kora jay 
+// var p = document.getElementById("geek")
+// console.log(p) // <p id="geek">Hello Tanvir</p>
+// console.dir(p) // p Object
+
+// getElementsByTagName Method (v.6)
