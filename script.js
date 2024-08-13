@@ -3360,4 +3360,10 @@
 // 5. Next Sibling
 // 6. Last Child
 
-
+// getElementById Method (v.5)
+// Element Access Method
+// 1. document.getElementById("ID_Name") -> Get the element with the specified ID
+// 2. document.getElementsByTagName("Tag_Name") -> Get all the specified element by the Tag Name
+// 3. document.getElementsByClassName("Class_Name") -> Get all the specified element By the Class Name
+// 4. document.querySelector("CSS_Selector") -> It returns the first match of the passed selector string
+// 5. document.querySelectorAll("CSS_Selector") -> It returns a node list of DOM elements that match the query
