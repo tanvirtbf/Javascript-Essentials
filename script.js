@@ -3295,23 +3295,26 @@
 // console.log(user1.getFullName()) // Tanvir Ahmed
 // console.log(user2.getFullName()) // Sadia Ahmed
 
-function createUser(fname,lname,age){
-  this.firstName = fname
-  this.lastName = lname
-  this.age = age
-}
-createUser.prototype.getBirthYear = function(){
-  return new Date().getFullYear() - this.age
-}
-createUser.prototype.getFullName = function(){
-  return this.firstName + ' ' + this.lastName
-}
-// ***Important Notes*** -> ekhane createUser er baire aisha getBirthYear and getFullName set kora lagtesee . etao Encapsulation rules break kore . aijonnoi classes er intro hoy 
-const user1 = new createUser('Tanvir','Ahmed',25)
-const user2 = new createUser('Sadia','Khatun',16)
-console.log(user1.getFullName()) // Inheit hoye getFullName access hoise tai user1 er por __proto__ deya lage na
+// function createUser(fname,lname,age){
+//   this.firstName = fname
+//   this.lastName = lname
+//   this.age = age
+// }
+// createUser.prototype.getBirthYear = function(){
+//   return new Date().getFullYear() - this.age
+// }
+// createUser.prototype.getFullName = function(){
+//   return this.firstName + ' ' + this.lastName
+// }
+// // ***Important Notes*** -> ekhane createUser er baire aisha getBirthYear and getFullName set kora lagtesee . etao Encapsulation rules break kore . aijonnoi classes er intro hoy 
+// const user1 = new createUser('Tanvir','Ahmed',25)
+// const user2 = new createUser('Sadia','Khatun',16)
+// console.log(user1.getFullName()) // Inheit hoye getFullName access hoise tai user1 er por __proto__ deya lage na
 
 
 
 // Classes
+// class createUser {
+  
+// }
 
