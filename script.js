@@ -3404,3 +3404,26 @@
 
 // getElementsByTagName More Specific Method (v.7)
 
+// var geek = document.getElementById("geek")
+// var span = geek.getElementsByTagName("span")
+// console.log(span) // Html Collection(2)
+
+// var result = document.getElementById("geek").getElementsByTagName("span")
+// console.log(result)
+// // span == result 
+
+// var allGeekElement = document.getElementById("geek").getElementsByTagName("*")
+// console.log(allGeekElement) // ekhane block level element thakle ashbe na . karon * use kore element select korte chaile only inline element select hobe
+
+// getElementsByTagName Method with Loop (v.9)
+// const div = document.getElementById('div')
+// const listOfParagraph = div.getElementsByTagName('p')
+
+// for(let i = 0 ; i<listOfParagraph.length ; i++){
+//   console.log(listOfParagraph[i])
+// }
+
+
+
+
+
