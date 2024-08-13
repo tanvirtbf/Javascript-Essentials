@@ -3352,5 +3352,12 @@
 // 5. Document Type Node is 10. 
 // 6. Document Fragment Node is 11. 
 
+// Node Relationship
+// 1. Parent
+// 2. Children
+// 3. First Child
+// 4. Previous Sibling
+// 5. Next Sibling
+// 6. Last Child
 
 
