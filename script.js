@@ -3431,6 +3431,9 @@
 // const p = document.getElementsByClassName("card wrapper")
 // console.log(p) // ekhane amon element er collection return hobe jar vitore card and wrapper ai 2 ta class eksathe thakbe .  
 
-
+const para = document.getElementsByClassName('para')
+for(let i = 0; i<para.length; i++){
+  console.log(para[i])
+}
 
 
