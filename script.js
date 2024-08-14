@@ -2629,6 +2629,65 @@
 //   })
 // })
 
+const cart = ['Shoes','Pants','Kurta']
+function validateCart(cart){
+  if(cart){
+    return true
+  }
+  else{
+    return false
+  }
+}
+
+function createOrder(cart){
+  const p = new Promise((resolve,reject)=>{
+    if(!validateCart(cart)){
+      const err = new Error("Cart is not defined!")
+      reject(err)
+    }
+    const orderId = "123"
+    if(orderId){
+      setTimeout(()=>{
+        resolve(orderId)
+      },3000)
+    }
+  })
+  return p;
+}
+
+function proceedToPayment(orderId){
+  const p = new Promise((resolve,reject)=>{
+    if(!orderId){
+      const err = new Error("order id is not found!")
+      reject(err)
+    }
+    const paymentInfo = "payment is clear"
+    if(paymentInfo){
+      setTimeout(()=>{
+        resolve(paymentInfo)
+      },3000)
+    }
+  })
+  return p;
+}
+
+function showOrderSummery(paymentInfo){
+  return new Promise((resolve,reject)=>{
+    if(!paymentInfo){
+      const err = new Error("payment not clear!")
+      reject(err)
+    }
+    const updateWalletBalance = "1200 Taka"
+    if(updateWalletBalance){
+      setTimeout(()=>{
+        resolve(updateWalletBalance)
+      },2000)
+    }
+  })
+}
+
+const promise = createOrder(cart)
+promise.then((orderId)=> proceedToPayment(orderId)).then((paymentInfo)=> showOrderSummery(paymentInfo)).then((updateWalletBalance)=> console.log(updateWalletBalance))
 
 
 
