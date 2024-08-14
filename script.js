@@ -2567,8 +2567,63 @@
 //   return true;
 // }
 
-
 // Now Advance Promise chaining project
+// callback hell : => 
+// const cart = ["shoes","pants","Kurta"]
+// createOrder(cart,(orderId)=>{
+//   proceedToPayment(orderId, (paymentInfo)=>{
+//     showOrderSummery(paymentInfo,(updateWalletBalance)=>{
+//       updateWalletBalance();
+//     })
+//   })
+// })
+const cart = ['Shoes','Kurta','Pants']
+function validateCart(cart){
+  if(cart){
+    return true
+  }else{
+    return false
+  }
+}
+function createOrder(cart){
+  const p = new Promise((resolve,reject)=>{
+    if(!validateCart(cart)){
+      const err = new Error('Cart is not defined!')
+      reject(err)
+    }
+    const orderId = "123"
+    if(orderId){
+      resolve(orderId)
+    }
+  })
+  return p;
+}
+
+const promise = createOrder(cart)
+promise 
+  .then((orderId)=> proceedToPayment(orderId))
+  .then((paymentInfo)=> console.log(paymentInfo))
+
+
+
+function proceedToPayment(orderId){
+  const p = new Promise((resolve,reject)=>{
+    if(orderId){
+      const paymentInfo = "Payment info is here"
+      resolve(paymentInfo)
+    }else{
+      const err = new Error("CreateOrder are not running")
+      reject(err)
+    }
+  })
+  return p;
+}
+
+
+
+
+
+
 
 
 
