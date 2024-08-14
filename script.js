@@ -2494,18 +2494,28 @@
 // That process is called inversion of control. 
 
 // Promises with Namaste Javascript 
-const cart = ["shoes","pants","kurta"]
+// const cart = ["shoes","pants","kurta"]
 
-// createOrder(cart) // user jokhon cart e kono item add kore tokhon createOrder function call hoy and tar parameter e cart details pass hoy . 
+// // createOrder(cart) // user jokhon cart e kono item add kore tokhon createOrder function call hoy and tar parameter e cart details pass hoy . 
 
-const promise = createOrder(cart) // jehetu eta asynchronous operation tai kichu somoy por eta execute hobe . jokhon javascript first time run hoy tokhon createOrder(cart) ekta empty object return kore promise namok variable er moddhe . jar result thakbe undefined . kintu jokhon createOrder(cart) function successfully tar kaj sesh korbe tokhon automatically ekta result same variable promise e return korbe 
+// const promise = createOrder(cart) // jehetu eta asynchronous operation tai kichu somoy por eta execute hobe . jokhon javascript first time run hoy tokhon createOrder(cart) ekta empty object return kore promise namok variable er moddhe . jar result thakbe undefined . kintu jokhon createOrder(cart) function successfully tar kaj sesh korbe tokhon automatically ekta result same variable promise e return korbe 
 
-promise.then(function(orderId){
-  proceedToPayment(orderId)
+// promise.then(function(orderId){
+//   proceedToPayment(orderId)
+// })
+// // jokhon async operation complete hobe tokhon automatically promise.then(()=>{..}) function call hobe. .then() er vitor callback function er parameter e sei promise er result ashbe. 
+
+// Example : 
+const GITHUM_API = "https://api.github.com/users/tanvirtbf"
+
+const user = fetch(GITHUM_API)
+console.log(user)
+user.then((data)=>{
+  console.log(data)
 })
-// jokhon async operation complete hobe tokhon automatically promise.then(()=>{..}) function call hobe. .then() er vitor callback function er parameter e sei promise er result ashbe. 
+// Important Notes : promise jei result dey seta Immutable
 
-
+// Promise Definition : kono async operation handle korar jonno eta use hoye thake . jokhonii async operation first time run hobe tokhon sathe sathe ekta promise return kore jar state hocche pending and result hocche undefined. jokhon async operation fullfill hoy, orthat micro task queue theke call stack then fully execute hoy tokhon abar automatically sei ager return kora promise er state automatically fullfill kore dey and result aisha pore .
 
 
 
