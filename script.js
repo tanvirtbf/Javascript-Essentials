@@ -3435,3 +3435,15 @@
 // for(let i = 0; i<para.length; i++){
 //   console.log(para[i])
 // }
+
+
+// querySelector
+// The method querySelector() returns the first Element match of the specified selector, or group of selectors. If no matches are found, null is returned.
+
+// Element selector
+document.querySelector('p') // return first p tag
+// Id Selector
+document.querySelector('#geek') 
+// Class Selector
+document.querySelector('.geek') // return first geek class element
+
