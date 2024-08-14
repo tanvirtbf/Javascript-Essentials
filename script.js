@@ -2494,6 +2494,18 @@
 // That process is called inversion of control. 
 
 // Promises with Namaste Javascript 
+const cart = ["shoes","pants","kurta"]
+
+// createOrder(cart) // user jokhon cart e kono item add kore tokhon createOrder function call hoy and tar parameter e cart details pass hoy . 
+
+const promise = createOrder(cart) // jehetu eta asynchronous operation tai kichu somoy por eta execute hobe . jokhon javascript first time run hoy tokhon createOrder(cart) ekta empty object return kore promise namok variable er moddhe . jar result thakbe undefined . kintu jokhon createOrder(cart) function successfully tar kaj sesh korbe tokhon automatically ekta result same variable promise e return korbe 
+
+promise.then(function(orderId){
+  proceedToPayment(orderId)
+})
+// jokhon async operation complete hobe tokhon automatically promise.then(()=>{..}) function call hobe. .then() er vitor callback function er parameter e sei promise er result ashbe. 
+
+
 
 
 
