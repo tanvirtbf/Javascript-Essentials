@@ -2540,32 +2540,35 @@
 
 // Creating a promise
 // Now I will try to write our own createOrder function
-function createOrder(cart){
+// function createOrder(cart){
 
-  const promise = new Promise((resolve,reject)=>{
-    if(!validateCart(cart)){
-      const err = new Error("Cart is not valid")
-      reject(err)
-    }
-    const orderId = "123456"
-    if(orderId){
-      setTimeout(()=>{
-        resolve(orderId)
-      },5000)
-    }
-  }) 
+//   const promise = new Promise((resolve,reject)=>{
+//     if(!validateCart(cart)){
+//       const err = new Error("Cart is not valid")
+//       reject(err)
+//     }
+//     const orderId = "123456"
+//     if(orderId){
+//       setTimeout(()=>{
+//         resolve(orderId)
+//       },5000)
+//     }
+//   }) 
 
-  return promise;
-}
-const cart = ['Shoes','Pants','Kurta']
-const promise = createOrder(cart)
-console.log(promise)
-promise
-  .then((data)=> console.log(data))
+//   return promise;
+// }
+// const cart = ['Shoes','Pants','Kurta']
+// const promise = createOrder(cart)
+// console.log(promise)
+// promise
+//   .then((data)=> console.log(data))
 
-function validateCart(cart){
-  return true;
-}
+// function validateCart(cart){
+//   return true;
+// }
+
+
+// Now Advance Promise chaining project
 
 
 
