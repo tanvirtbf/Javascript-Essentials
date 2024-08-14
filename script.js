@@ -3459,16 +3459,34 @@
 // You can use the length property of the NodeList object to determine the number of elements that matches the specified selector, then you can loop through all elements and extract the info you want.
 // If the specified selectors include a CSS pseudo-element, the returned list is always empty.
 
-// Element Selector
-document.querySelectorAll("p") // all p tag return with nodelist
-document.querySelectorAll("p, div, h1, h4") // jeta first e pabe setar similar sob tag eksathe return hobe nodelist akare
+// // Element Selector
+// document.querySelectorAll("p") // all p tag return with nodelist
+// document.querySelectorAll("p, div, h1, h4") // sob gula tag eksathe serial by nodelist akare return korbe
+// var result = document.querySelectorAll("p, div, h1")
+// console.log(result) // NodeList(9) [h1.hello, h1, p.geek, p.find, div.div, p.para, p.para, p.para, p.para]
 
-// Class Selector
-document.querySelectorAll(".geek") // geek class er sob element eksathe return hobe NodeList akare 
-document.querySelectorAll("p.myClass") // p tag er vitor joto gula myClass nam e class ase sob element ke eksathe return kore NodeList akare
-const p = document.querySelectorAll("p > span.myclass") // p tag er vitore span tag er moddhe jegular class myclass deya sob gula nodelist akare return
+// // Id Selector
+// alaways return nodeList, event selection only one element
+// var result = document.querySelectorAll("#geek")
+// console.log(result) // this is also return nodeList // NodeList(2) [h2#geek, p#geek]
 
-// Attribute Selector
-document.querySelectorAll("div[id]") // jei div er vitore id ase...
-document.querySelectorAll("div[id='geek']") // jei div er vitor id ase and tar value geek...
-document.querySelectorAll("[id='geek']") // jei element e id ase and tar value geek...
+// // Class Selector
+// document.querySelectorAll(".geek") // geek class er sob element eksathe return hobe NodeList akare 
+// document.querySelectorAll("p.myClass") // p tag er vitor joto gula myClass nam e class ase sob element ke eksathe return kore NodeList akare
+// const p = document.querySelectorAll("p > span.myclass") // p tag er vitore span tag er moddhe jegular class myclass deya sob gula nodelist akare return
+
+// // Attribute Selector
+// document.querySelectorAll("div[id]") // jei div er vitore id ase...
+// document.querySelectorAll("div[id='geek']") // jei div er vitor id ase and tar value geek...
+// document.querySelectorAll("[id='geek']") // jei element e id ase and tar value geek...
+
+// var result = document.querySelectorAll('[id="geek"]')
+// console.log(result) // NodeList(2) [h2#geek, p#geek]
+
+// var result = document.querySelectorAll('[id]')
+// console.log(result) // NodeList(3) [h2#geek, p#geek, p#firstPara.para]
+
+// var result = document.querySelectorAll('div > p[id]')
+// console.log(result) // NodeList [p#firstPara.para]
+
+// QuerySelectorAll More Specified Method
