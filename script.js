@@ -3504,4 +3504,10 @@
 // let result = document.querySelectorAll("#show > p > span.myspan") //id show er vitor giye p tag er vitor dhuke check koro kon span er className myspan
 // console.log(result) // NodeList [span.myspan]
 
-// querySelectorAll Method with Length Property 
+// querySelectorAll Method with Length Property and loop (v.17 and v.18)
+// const result = document.querySelectorAll("html > body > div#show > .para")
+// console.log(result) // NodeList(4) [p#firstPara.para, p.para, p.para, p.para]
+// const length = result.length
+// for(let i = 0; i<length; i++){
+//   console.log(result[i])
+// }
