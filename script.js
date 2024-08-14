@@ -3511,3 +3511,8 @@
 // for(let i = 0; i<length; i++){
 //   console.log(result[i])
 // }
+
+// loop with forEach
+// result.forEach((item,index)=>{
+// console.log(item)
+// })
