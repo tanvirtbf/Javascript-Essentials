@@ -3490,3 +3490,18 @@
 // console.log(result) // NodeList [p#firstPara.para]
 
 // QuerySelectorAll More Specified Method
+
+/* <div id="show">
+<p class="para" id="firstPara">
+  <span class="myspan">inside</span>
+</p>
+<p class="para">2nd</p>
+<p class="para">3rd</p>
+<p class="para">4th</p>
+</div> */
+// question : jei div er id show, tar vitor p tag er vitor jodi kono span thake jar class myspan sei element ke return korte hobe
+
+// let result = document.querySelectorAll("#show > p > span.myspan") //id show er vitor giye p tag er vitor dhuke check koro kon span er className myspan
+// console.log(result) // NodeList [span.myspan]
+
+// querySelectorAll Method with Length Property 
