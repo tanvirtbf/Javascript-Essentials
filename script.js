@@ -3516,3 +3516,16 @@
 // result.forEach((item,index)=>{
 // console.log(item)
 // })
+
+
+// Web Page Properties (v.19)
+// console.dir(document)
+
+// console.log(document.URL) // http://localhost:5500/
+// console.log(document.location.port) // 5500
+// console.log(document.location.pathname) // "/"
+// // document.location.reload // reload hobe
+// console.log(document.location.href) // http://localhost:5500/
+// console.log(document.domain) // localhost
+// console.log(document.title)
+// etc.....
