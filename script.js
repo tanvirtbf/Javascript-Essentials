@@ -2700,11 +2700,26 @@ function isSuccess(updateWalletBalance){
 // const promise = createOrder(cart)
 // promise.then((orderId)=> proceedToPayment(orderId)).then((paymentInfo)=> showOrderSummery(paymentInfo)).then((updateWalletBalance)=> console.log(updateWalletBalance))
 
+// createOrder(cart)
+//   .then((orderId)=> proceedToPayment(orderId))
+//   .then((paymentInfo)=> showOrderSummery(paymentInfo))
+//   .then((updateWalletBalance)=> isSuccess(updateWalletBalance))
+//   .then((successORnot)=> console.log(successORnot))
+
 createOrder(cart)
-  .then((orderId)=> proceedToPayment(orderId))
-  .then((paymentInfo)=> showOrderSummery(paymentInfo))
-  .then((updateWalletBalance)=> isSuccess(updateWalletBalance))
-  .then((successORnot)=> console.log(successORnot))
+  .then((orderId)=>{
+    console.log('order create successfully')
+    return proceedToPayment(orderId)
+  })
+  .then((paymentInfo)=>{
+    console.log('Update Payment info')
+    return showOrderSummery(paymentInfo)
+  })
+  .then((updateWalletBalance)=> {
+    console.log("Update wallet ballance")
+    return isSuccess(updateWalletBalance)
+  })
+  .then((success)=> console.log("Finally Success all Proccess"))
 
 
 
