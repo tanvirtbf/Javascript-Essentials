@@ -2506,19 +2506,35 @@
 // // jokhon async operation complete hobe tokhon automatically promise.then(()=>{..}) function call hobe. .then() er vitor callback function er parameter e sei promise er result ashbe. 
 
 // Example : 
-const GITHUM_API = "https://api.github.com/users/tanvirtbf"
+// const GITHUM_API = "https://api.github.com/users/tanvirtbf"
 
-const user = fetch(GITHUM_API)
-console.log(user)
-user.then((data)=>{
-  console.log(data)
-})
+// const user = fetch(GITHUM_API)
+// console.log(user)
+// user.then((data)=>{
+//   console.log(data)
+// })
 // Important Notes : promise jei result dey seta Immutable
 
 // Promise Definition : kono async operation handle korar jonno eta use hoye thake . jokhonii async operation first time run hobe tokhon sathe sathe ekta promise return kore jar state hocche pending and result hocche undefined. jokhon async operation fullfill hoy, orthat micro task queue theke call stack then fully execute hoy tokhon abar automatically sei ager return kora promise er state automatically fullfill kore dey and result aisha pore .
 
+// Promise chaining
 
-
+// callback hell : => 
+const cart = ["shoes","pants","Kurta"]
+createOrder(cart,(orderId)=>{
+  proceedToPayment(orderId, (paymentInfo)=>{
+    showOrderSummery(paymentInfo,(updateWalletBalance)=>{
+      updateWalletBalance();
+    })
+  })
+})
+// same concept in promise chaining..
+createOrder(cart) // eta return korbe ekta promise 
+  .then((orderId)=> proceedToPayment(orderId))
+  .then((paymentInfo)=> showOrderSummery(paymentInfo))
+  .then((updateWalletBalance)=> updateWalletBalance())
+// upore createOrder(cart) initially ekta pending promise return koreche jeta pore resolve hole automatically then() er vitor callback call hoye tar parameter e createOrder orderId pass korbe . setao ekta promise return korbe . sei promise jokhon resolve hobe abaro tar pore then() function call hobe. evabeii chaining hocche... 
+// This is just Promise Chaining
 
 // Promises
 // Promise is a special type of object
