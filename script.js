@@ -2686,10 +2686,25 @@ function showOrderSummery(paymentInfo){
   })
 }
 
-const promise = createOrder(cart)
-promise.then((orderId)=> proceedToPayment(orderId)).then((paymentInfo)=> showOrderSummery(paymentInfo)).then((updateWalletBalance)=> console.log(updateWalletBalance))
+function isSuccess(updateWalletBalance){
+  return new Promise((resolve,reject)=>{
+    if(updateWalletBalance){
+      resolve("Finally Success")
+    }else{
+      const err = new Error("Something went wrong!!")
+      reject(err)
+    }
+  })
+}
 
+// const promise = createOrder(cart)
+// promise.then((orderId)=> proceedToPayment(orderId)).then((paymentInfo)=> showOrderSummery(paymentInfo)).then((updateWalletBalance)=> console.log(updateWalletBalance))
 
+createOrder(cart)
+  .then((orderId)=> proceedToPayment(orderId))
+  .then((paymentInfo)=> showOrderSummery(paymentInfo))
+  .then((updateWalletBalance)=> isSuccess(updateWalletBalance))
+  .then((successORnot)=> console.log(successORnot))
 
 
 
