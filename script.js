@@ -2520,21 +2520,56 @@
 // Promise chaining
 
 // callback hell : => 
-const cart = ["shoes","pants","Kurta"]
-createOrder(cart,(orderId)=>{
-  proceedToPayment(orderId, (paymentInfo)=>{
-    showOrderSummery(paymentInfo,(updateWalletBalance)=>{
-      updateWalletBalance();
-    })
-  })
-})
-// same concept in promise chaining..
-createOrder(cart) // eta return korbe ekta promise 
-  .then((orderId)=> proceedToPayment(orderId))
-  .then((paymentInfo)=> showOrderSummery(paymentInfo))
-  .then((updateWalletBalance)=> updateWalletBalance())
-// upore createOrder(cart) initially ekta pending promise return koreche jeta pore resolve hole automatically then() er vitor callback call hoye tar parameter e createOrder orderId pass korbe . setao ekta promise return korbe . sei promise jokhon resolve hobe abaro tar pore then() function call hobe. evabeii chaining hocche... 
-// This is just Promise Chaining
+// const cart = ["shoes","pants","Kurta"]
+// createOrder(cart,(orderId)=>{
+//   proceedToPayment(orderId, (paymentInfo)=>{
+//     showOrderSummery(paymentInfo,(updateWalletBalance)=>{
+//       updateWalletBalance();
+//     })
+//   })
+// })
+// // same concept in promise chaining..
+// createOrder(cart) // eta return korbe ekta promise 
+//   .then((orderId)=> proceedToPayment(orderId))
+//   .then((paymentInfo)=> showOrderSummery(paymentInfo))
+//   .then((updateWalletBalance)=> updateWalletBalance())
+// // upore createOrder(cart) initially ekta pending promise return koreche jeta pore resolve hole automatically then() er vitor callback call hoye tar parameter e createOrder orderId pass korbe . setao ekta promise return korbe . sei promise jokhon resolve hobe abaro tar pore then() function call hobe. evabeii chaining hocche... 
+// // This is just Promise Chaining
+
+// Creating a Promise, Chaining & Error Handling
+
+// Creating a promise
+// Now I will try to write our own createOrder function
+function createOrder(cart){
+
+  const promise = new Promise((resolve,reject)=>{
+    if(!validateCart(cart)){
+      const err = new Error("Cart is not valid")
+      reject(err)
+    }
+    const orderId = "123456"
+    if(orderId){
+      setTimeout(()=>{
+        resolve(orderId)
+      },5000)
+    }
+  }) 
+
+  return promise;
+}
+const cart = ['Shoes','Pants','Kurta']
+const promise = createOrder(cart)
+console.log(promise)
+promise
+  .then((data)=> console.log(data))
+
+function validateCart(cart){
+  return true;
+}
+
+
+
+
 
 // Promises
 // Promise is a special type of object
