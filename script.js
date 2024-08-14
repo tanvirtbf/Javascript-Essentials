@@ -3529,3 +3529,5 @@
 // console.log(document.domain) // localhost
 // console.log(document.title)
 // etc.....
+
+// Properties of Node Object (v.20)
