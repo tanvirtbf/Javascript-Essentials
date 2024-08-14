@@ -3450,3 +3450,25 @@
 // // double selector
 // const hello = document.querySelector('#geek, .hello')
 // console.log(hello) // jodi webpage er age hello class pay pore geek id pay tahole hello class er element return hobe . jodi geek age pay tahole geek element return hobe . jodi geek na pay, kintu hello pay tahole hello return hobe . jodi hello na pay kintu geek pay tahole geek return hobe
+
+// Notes : id use korle same result pabo getElementById use korle. 
+
+// querySelectorAll
+// The method querySelectorAll() returns a static (not live) NodeList representing a list of the document's elements that match the specified group of selectors.
+// The Nodelist object represents a collection of nodes. The Nodes can be accessed by index numbers. The index starts at 0.
+// You can use the length property of the NodeList object to determine the number of elements that matches the specified selector, then you can loop through all elements and extract the info you want.
+// If the specified selectors include a CSS pseudo-element, the returned list is always empty.
+
+// Element Selector
+document.querySelectorAll("p") // all p tag return with nodelist
+document.querySelectorAll("p, div, h1, h4") // jeta first e pabe setar similar sob tag eksathe return hobe nodelist akare
+
+// Class Selector
+document.querySelectorAll(".geek") // geek class er sob element eksathe return hobe NodeList akare 
+document.querySelectorAll("p.myClass") // p tag er vitor joto gula myClass nam e class ase sob element ke eksathe return kore NodeList akare
+const p = document.querySelectorAll("p > span.myclass") // p tag er vitore span tag er moddhe jegular class myclass deya sob gula nodelist akare return
+
+// Attribute Selector
+document.querySelectorAll("div[id]") // jei div er vitore id ase...
+document.querySelectorAll("div[id='geek']") // jei div er vitor id ase and tar value geek...
+document.querySelectorAll("[id='geek']") // jei element e id ase and tar value geek...
