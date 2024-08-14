@@ -3441,9 +3441,12 @@
 // The method querySelector() returns the first Element match of the specified selector, or group of selectors. If no matches are found, null is returned.
 
 // Element selector
-document.querySelector('p') // return first p tag
-// Id Selector
-document.querySelector('#geek') 
-// Class Selector
-document.querySelector('.geek') // return first geek class element
+// document.querySelector('p') // return first p tag
+// // Id Selector
+// document.querySelector('#geek') // return first geek id element
+// // Class Selector
+// document.querySelector('.geek') // return first geek class element
 
+// // double selector
+// const hello = document.querySelector('#geek, .hello')
+// console.log(hello) // jodi webpage er age hello class pay pore geek id pay tahole hello class er element return hobe . jodi geek age pay tahole geek element return hobe . jodi geek na pay, kintu hello pay tahole hello return hobe . jodi hello na pay kintu geek pay tahole geek return hobe
