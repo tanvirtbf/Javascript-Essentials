@@ -2824,8 +2824,6 @@
 //   })
 //   .then((success)=> console.log("Finally Success all Proccess"))
 
-
-
 // Some important api
 // 'https://dummyjson.com/users' // get all users
 // 'https://dummyjson.com/users/2' // get single users by id
@@ -2834,28 +2832,28 @@
 
 
 // callback hell solved with promise
-function makeHttpRequest(method,url){
-  const xhr = new XMLHttpRequest()
-  xhr.responseType = 'json'
+// function makeHttpRequest(method,url){
+//   const xhr = new XMLHttpRequest()
+//   xhr.responseType = 'json'
 
-  const p = new Promise((resolve,reject)=>{
-    xhr.addEventListener('load',()=>{
-      resolve(xhr.response)
-    })
-    xhr.addEventListener('error',()=>{
-      reject("Something went wrong!")
-    })
-  })
-  xhr.open(method,url)
-  xhr.send()
-  return p;
-}
-makeHttpRequest('GET','https://dummyjson.com/users')
-  .then((allUser)=> makeHttpRequest('GET',`https://dummyjson.com/users/${allUser.users[0].id}`))
-  .then((singleUser)=> makeHttpRequest('GET',`https://dummyjson.com/posts/user/${singleUser.id}`))
-  .then((userPost)=> makeHttpRequest('GET',`https://dummyjson.com/comments/post/${userPost.posts[0].id}`))
-  .then((userComment)=> makeHttpRequest('GET',`https://dummyjson.com/users/${userComment.comments[0].user.id}`))
-  .then((user)=> console.log(user))
+//   const p = new Promise((resolve,reject)=>{
+//     xhr.addEventListener('load',()=>{
+//       resolve(xhr.response)
+//     })
+//     xhr.addEventListener('error',()=>{
+//       reject("Something went wrong!")
+//     })
+//   })
+//   xhr.open(method,url)
+//   xhr.send()
+//   return p;
+// }
+// makeHttpRequest('GET','https://dummyjson.com/users')
+//   .then((allUser)=> makeHttpRequest('GET',`https://dummyjson.com/users/${allUser.users[0].id}`))
+//   .then((singleUser)=> makeHttpRequest('GET',`https://dummyjson.com/posts/user/${singleUser.id}`))
+//   .then((userPost)=> makeHttpRequest('GET',`https://dummyjson.com/comments/post/${userPost.posts[0].id}`))
+//   .then((userComment)=> makeHttpRequest('GET',`https://dummyjson.com/users/${userComment.comments[0].user.id}`))
+//   .then((user)=> console.log(user))
 
 
 
@@ -2886,6 +2884,7 @@ makeHttpRequest('GET','https://dummyjson.com/users')
 //   },4000)
 // })
 // console.log(p) // promiseState: pending , promiseResult: undefined
+
 
 // Understand Promise using button click (resolve after button click)
 // const btn = document.querySelector('#btn')
