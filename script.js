@@ -3549,26 +3549,26 @@
 // upore first time Hello World print hoye gese . tarpor 4 second r kono console.log() print hoy nai . pore 4 second por eksathe Hii , Promise Resolve Value! and hello print hoy . 
 
 // another example of async await..
-const p1 = new Promise((resolve,reject)=>{
-  setTimeout(()=>{
-    resolve("Resolved 1")
-  },5000)
-})
-const p2 = new Promise((resolve,reject)=>{
-  setTimeout(()=>{
-    resolve("Resolved 2")
-  },3000)
-})
-async function getData(){
-  console.log('Hello World')
-  const promise1 = await p1;
-  console.log('After P1')
-  console.log(promise1)
-  const promise2 = await p2;
-  console.log('After P2')
-  console.log(promise2)
-}
-getData()
+// const p1 = new Promise((resolve,reject)=>{
+//   setTimeout(()=>{
+//     resolve("Resolved 1")
+//   },5000)
+// })
+// const p2 = new Promise((resolve,reject)=>{
+//   setTimeout(()=>{
+//     resolve("Resolved 2")
+//   },3000)
+// })
+// async function getData(){
+//   console.log('Hello World')
+//   const promise1 = await p1;
+//   console.log('After P1')
+//   console.log(promise1)
+//   const promise2 = await p2;
+//   console.log('After P2')
+//   console.log(promise2)
+// }
+// getData()
 // Hello World
 // After 5 second...
 // After p1
@@ -3580,6 +3580,10 @@ getData()
 // ***** Important Notes ******
 // async await er khetre jokhon async function getData call hoy tokhon call stack e getData() ashe . then console.log('Hello World') print kore . jokhon porer line promise1 = await p1 execute korte jay tokhonii sathe sathe getData() function ta call stack theke ber hoye jay and tarpor joto gula promise ase await diye declare kore rakhse sob gula eksathe execute kore . jotokkhon porjonto kono await promise execute bad jabe totokkhon getData() call stack e jabe na . uporer example e p1 and p2 ai 2 ta promise await diye declare korse . tai jotokkhon porjonto ai 2 ta promise resolve na hocche totokkhon porjonto getData() function call stack e jabe na . 
 // p1 5 second por resolve hobe, p2 hobe 3 second por . jotokkhon na sob gula promise resolve hocche totokkhon getData() function call stack e firbe na . tai ekhane total 5 second lagbe getData() function ta call stack e giya pura execute complete korte . karon p2 jodio 3 second e execute kore boshe ase kintu p1 to 5 second poreii execute hobe. that's why...
+
+
+
+
 
 
 
