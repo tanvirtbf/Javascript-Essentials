@@ -3060,6 +3060,14 @@
 
 // .then() return value
 
+// const p = new Promise((resolve,reject)=>{
+//   setTimeout(()=>{
+//     resolve('Resolve')
+//   },2000)
+// })
+// console.log(p.then((data)=> data)) // return a promise
+// // tar mane .then() ekta promise return kore . 
+
 // const resolveBtn = document.querySelector('#resolveBtn')
 // const rejectBtn = document.querySelector('#rejectBtn')
 
@@ -3264,21 +3272,10 @@
 //     })
 
 // Fetch
-// fetch('https://dummyjson.com/products')
-//   .then((res)=>{
-//     console.log(res) // return response object
-//     console.log(res.json()) // return a promise
-//   })
-// fetch('https://dummyjson.com/products')
-//   .then((res)=>{
-//     return res.json()
-//   }).then((data)=>{
-//     console.log(data)
-//   })
 
 // concept
 // fetch('https://dummyjson.com/products') // eta ekta pending state er promise return kore jar PromiseResult or return value hocche response object
-// // jehetu uporer fetch ekta promise return kore tai tar sathe then lagaiya tar resolve value ta nite pari
+// // jehetu uporer fetch ekta promise return kore tai tar sathe .then() lagaiya tar resolve value ta nite pari
 // fetch('https://dummyjson.com/products').then((response)=>{
 //   console.log(response) // response object
 //   // akhn response object ke .json() diye json e convart korle setao ekta promise return kore . and sei promise er Response Result e actual data pauya jay
@@ -3312,11 +3309,18 @@
 //     /* other product data */
 //   })
 // })
+
 //   .then((response)=> response.json())
 //   .then((data) => console.log(data))
 //   .catch((err)=>{
 //     console.log(err)
 //   })
+
+
+
+
+
+
 
 
 // Object Oriented Programming
