@@ -3344,8 +3344,55 @@
 // }
 // console.log(makeHttpRequest())
 
+// async function makeHttpRequest() {
+//   const url = 'https://dummyjson.com/comments/post/6'
+//   const data = fetch(url)
+//   data.then((data)=> console.log(data))
+//   console.log('hiii')
+// }
+// makeHttpRequest()
+// hiii
+// {return object}
+// ekhane console.log('hiii') sobar niche thakar poreo sobar age run hoise . karon uorer then() function promise egula async code. tai etaii houyar chilo usually...
 
+// kintu async er sathe await use korle onnorokom result ashbe
+// async function makeHttpRequest(){
+//   console.log('hii')
+//   const url = 'https://dummyjson.com/comments/post/6'
+//   const data = await fetch(url)
+//   console.log('hello')
+//   const json = await data.json()
+//   console.log(json)
+//   console.log('hellllllooooo')
+// }
+// makeHttpRequest()
+// // hii
+// // hello
+// // {return object}
+// // hellllllooooo
+// dekhe mone hocche await use korle code synchronous hocche . kintu ashole ta na . await use korle code ektu onno vabe execute hoy . jemon..
+// await use korle jokhon await wala line execute houya start kore tokhon makeHttpRequest() function ta callstack theke ber hoye jay , jotokkhon porjonto await wala line execute na hoy totokkhon porjonto callstack e makeHttpRequest function ta thake na . jehetu call stack tokhon khali thake tai makeHttpRequest function chara baki code gula run hote thake . jokhonii await wala line execute complete hoy tokhon sathe sathe makeHttpRequest function call stack e ashe , then next line theke execute start hoy . aikhetre function ta mone rakhe last time kothay chilo . 
 
+async function makeHttpRequest(){
+  console.log('hii')
+  const url = 'https://dummyjson.com/comments/post/6'
+  const data = await fetch(url)
+  console.log('hello')
+  const json = await data.json()
+  console.log(json)
+  console.log('hellllllooooo')
+}
+makeHttpRequest()
+function getNum(){
+  console.log(5+5)
+}
+getNum()
+// hii
+// 10 
+// hello
+// {return object}
+// hellllllooooo
+// ekhane jokhon await keyword ashce sathe sathe callstack theke makeHttpRequest function chole gese , tai getNum function execute hoise, tarpor jokhon await execute hoise tarpor theke baki code execute hoise makeHttpRequest function er
 
 
 
