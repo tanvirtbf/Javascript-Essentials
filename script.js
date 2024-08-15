@@ -3431,7 +3431,34 @@
 // Namaste Async Await 
 // async is a keyword that is use before a function for create a asynchronous function
 
+// what is different between async function and normal function
+// 1. async function always return a promise and normal function return what are returned
+// 2. async function jodi kono promise return kore or non-promise value return kore , jetai return koruk , ultimately async function ekta promise return kore . jodi non-promise value , jemon string boolean number etc return kore tahole setake wrap kore ekta promise e rakhe and setake return kore . jemon...
+// async function sayHi(){
+//   return 'Hiii'
+// }
+// console.log(sayHi()) // state : fullfilled , Promise Result : 'Hiii'
+// tar mane jeta return kore seta oi promise er result e rekhe dey 
+// async function sayhi(){
+//   const p = new Promise((res,rej)=>{
+//     res('resolve')
+//   })
+//   return p
+// }
+// console.log(sayhi())// sate: fullfilled, promise result : 'resolve'
+// tar mane async function jodi ekta promise return kore tao sei promise er result ekta onno promise er vitor wrap kore sei promise return kore
 
+// more example : for return a non-promise value
+async function getData(){
+  return 'Namaste'
+}
+const dataPromise = getData()
+console.log(dataPromise) // return a promise where state fullfilled and result is 'Namaste'
+// kintu ami actual data Namaste string kivabe pabo??
+// Answer : 
+dataPromise.then((data)=> console.log(data))
+
+// example of promise return case
 
 
 
