@@ -2629,73 +2629,75 @@
 //   })
 // })
 
-const cart = ['Shoes','Pants','Kurta']
-function validateCart(cart){
-  if(cart){
-    return true
-  }
-  else{
-    return false
-  }
-}
+// A Great Promise Project....
 
-function createOrder(cart){
-  const p = new Promise((resolve,reject)=>{
-    if(!validateCart(cart)){
-      const err = new Error("Cart is not defined!")
-      reject(err)
-    }
-    const orderId = "123"
-    if(orderId){
-      setTimeout(()=>{
-        resolve(orderId)
-      },3000)
-    }
-  })
-  return p;
-}
+// const cart = ['Shoes','Pants','Kurta']
+// function validateCart(cart){
+//   if(cart){
+//     return true
+//   }
+//   else{
+//     return false
+//   }
+// }
 
-function proceedToPayment(orderId){
-  const p = new Promise((resolve,reject)=>{
-    if(!orderId){
-      const err = new Error("order id is not found!")
-      reject(err)
-    }
-    const paymentInfo = "payment is clear"
-    if(paymentInfo){
-      setTimeout(()=>{
-        resolve(paymentInfo)
-      },3000)
-    }
-  })
-  return p;
-}
+// function createOrder(cart){
+//   const p = new Promise((resolve,reject)=>{
+//     if(!validateCart(cart)){
+//       const err = new Error("Cart is not defined!")
+//       reject(err)
+//     }
+//     const orderId = "123"
+//     if(orderId){
+//       setTimeout(()=>{
+//         resolve(orderId)
+//       },3000)
+//     }
+//   })
+//   return p;
+// }
 
-function showOrderSummery(paymentInfo){
-  return new Promise((resolve,reject)=>{
-    if(!paymentInfo){
-      const err = new Error("payment not clear!")
-      reject(err)
-    }
-    const updateWalletBalance = "1200 Taka"
-    if(updateWalletBalance){
-      setTimeout(()=>{
-        resolve(updateWalletBalance)
-      },2000)
-    }
-  })
-}
+// function proceedToPayment(orderId){
+//   const p = new Promise((resolve,reject)=>{
+//     if(!orderId){
+//       const err = new Error("order id is not found!")
+//       reject(err)
+//     }
+//     const paymentInfo = "payment is clear"
+//     if(paymentInfo){
+//       setTimeout(()=>{
+//         resolve(paymentInfo)
+//       },3000)
+//     }
+//   })
+//   return p;
+// }
 
-function isSuccess(updateWalletBalance){
-  return new Promise((resolve,reject)=>{
-    if(updateWalletBalance){
-      resolve("Finally Success")
-    }else{
-      const err = new Error("Something went wrong!!")
-      reject(err)
-    }
-  })
-}
+// function showOrderSummery(paymentInfo){
+//   return new Promise((resolve,reject)=>{
+//     if(!paymentInfo){
+//       const err = new Error("payment not clear!")
+//       reject(err)
+//     }
+//     const updateWalletBalance = "1200 Taka"
+//     if(updateWalletBalance){
+//       setTimeout(()=>{
+//         resolve(updateWalletBalance)
+//       },2000)
+//     }
+//   })
+// }
+
+// function isSuccess(updateWalletBalance){
+//   return new Promise((resolve,reject)=>{
+//     if(updateWalletBalance){
+//       resolve("Finally Success")
+//     }else{
+//       const err = new Error("Something went wrong!!")
+//       reject(err)
+//     }
+//   })
+// }
 
 // const promise = createOrder(cart)
 // promise.then((orderId)=> proceedToPayment(orderId)).then((paymentInfo)=> showOrderSummery(paymentInfo)).then((updateWalletBalance)=> console.log(updateWalletBalance))
@@ -2706,20 +2708,20 @@ function isSuccess(updateWalletBalance){
 //   .then((updateWalletBalance)=> isSuccess(updateWalletBalance))
 //   .then((successORnot)=> console.log(successORnot))
 
-createOrder(cart)
-  .then((orderId)=>{
-    console.log('order create successfully')
-    return proceedToPayment(orderId)
-  })
-  .then((paymentInfo)=>{
-    console.log('Update Payment info')
-    return showOrderSummery(paymentInfo)
-  })
-  .then((updateWalletBalance)=> {
-    console.log("Update wallet ballance")
-    return isSuccess(updateWalletBalance)
-  })
-  .then((success)=> console.log("Finally Success all Proccess"))
+// createOrder(cart)
+//   .then((orderId)=>{
+//     console.log('order create successfully')
+//     return proceedToPayment(orderId)
+//   })
+//   .then((paymentInfo)=>{
+//     console.log('Update Payment info')
+//     return showOrderSummery(paymentInfo)
+//   })
+//   .then((updateWalletBalance)=> {
+//     console.log("Update wallet ballance")
+//     return isSuccess(updateWalletBalance)
+//   })
+//   .then((success)=> console.log("Finally Success all Proccess"))
 
 
 
