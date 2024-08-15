@@ -3394,6 +3394,38 @@
 // hellllllooooo
 // ekhane jokhon await keyword ashce sathe sathe callstack theke makeHttpRequest function chole gese , tai getNum function execute hoise, tarpor jokhon await execute hoise tarpor theke baki code execute hoise makeHttpRequest function er
 
+// async function makeHttpRequest(){
+//   const url = 'https://dummyjson.com/comments/post/6'
+//   const responseObj = await fetch(url) 
+//   const data = await responseObj.json() // responseObj.json() etao ekta promise return kore tai ekhaneo await use kora jay . 
+//   console.log(data)
+// }
+// makeHttpRequest()
+
+// async function makeHttpRequest(){
+//   const url = 'https://dummyjson.com/comments/post/6'
+//   const data = await(await fetch(url)).json()
+//   console.log(data)
+// }
+// makeHttpRequest()
+
+// async function makeHttpRequest(){
+//   const data = await(await fetch('https://dummyjson.com/comments/post/6')).json()
+//   console.log(data)
+// }
+// makeHttpRequest()
+
+// Async Await 2 rules 
+// 1. await keyword only oi function eii use kora jabe jei function async keyword diye declare kora hoyeche
+// 2. module scope e async keyword charao top level e await keyword use kora jabe . top level mane kono function er vitor na . mane globally
+
+
+
+
+
+
+
+
 
 
 // Object Oriented Programming
