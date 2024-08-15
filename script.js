@@ -3446,20 +3446,31 @@
 //   return p
 // }
 // console.log(sayhi())// sate: fullfilled, promise result : 'resolve'
-// tar mane async function jodi ekta promise return kore tao sei promise er result ekta onno promise er vitor wrap kore sei promise return kore
+// tar mane async function jodi ekta promise return kore tahole sei promise taii hubuhu return hoy . alada kono promise er vitor wrap hoy na . same promise return hoy . niche eta deya holo bistarito...
 
 // more example : for return a non-promise value
-async function getData(){
-  return 'Namaste'
-}
-const dataPromise = getData()
-console.log(dataPromise) // return a promise where state fullfilled and result is 'Namaste'
-// kintu ami actual data Namaste string kivabe pabo??
-// Answer : 
-dataPromise.then((data)=> console.log(data))
+// async function getData(){
+//   return 'Namaste'
+// }
+// const dataPromise = getData()
+// console.log(dataPromise) // return a promise where state fullfilled and result is 'Namaste'
+// // kintu ami actual data Namaste string kivabe pabo??
+// // Answer : 
+// dataPromise.then((data)=> console.log(data))
 
 // example of promise return case
+const p = new Promise((resolve,reject)=>{
+  resolve('Promise Resolved Value')
+})
 
+async function getData(){
+  return p;
+}
+const dataPromise = getData()
+dataPromise.then((data)=> console.log(data))
+// *****Important Note*********
+// jokhon kono async function kono non-promise value jemon string number boolean object array etc return kore tokhon seta kono ekta promise er vitor wrap kore rakha hoy and sei promise ta return hoy . return non-promise value gula sei promise er promise result er vitor thake
+// r jokhon kono async function another kono promise ke return kore tokhon sei async function hubuhu sei promise tai return kore dey . jemon upore alada vabe create kora p promise ta jokhon async function er vitor return kora hoy tokhon hubuhu p promise taii async function return kore 
 
 
 
