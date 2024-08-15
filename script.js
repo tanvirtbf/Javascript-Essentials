@@ -3459,18 +3459,94 @@
 // dataPromise.then((data)=> console.log(data))
 
 // example of promise return case
-const p = new Promise((resolve,reject)=>{
-  resolve('Promise Resolved Value')
-})
+// const p = new Promise((resolve,reject)=>{
+//   resolve('Promise Resolved Value')
+// })
 
-async function getData(){
-  return p;
-}
-const dataPromise = getData()
-dataPromise.then((data)=> console.log(data))
+// async function getData(){
+//   return p;
+// }
+// const dataPromise = getData()
+// dataPromise.then((data)=> console.log(data)) // Promise Resolved Value
 // *****Important Note*********
 // jokhon kono async function kono non-promise value jemon string number boolean object array etc return kore tokhon seta kono ekta promise er vitor wrap kore rakha hoy and sei promise ta return hoy . return non-promise value gula sei promise er promise result er vitor thake
 // r jokhon kono async function another kono promise ke return kore tokhon sei async function hubuhu sei promise tai return kore dey . jemon upore alada vabe create kora p promise ta jokhon async function er vitor return kora hoy tokhon hubuhu p promise taii async function return kore 
+
+// How do you use async along with await 
+// async and await combo is use to handle promises
+// But before async await how do you use to handle promises? why do we need even async await ? do i really need async await? sob answer niche..
+
+// first : kivabe promise handle kora hoto age, akhn kivabe promise handle kora hoy async await er maddhome
+// old approach
+// const p = new Promise((resolve,reject)=>{
+//   resolve('Promise Resolve Value!')
+// })
+// function getData(){
+//   p.then((data)=> console.log(data))
+// }
+// getData() // Promise Resolve Value!
+
+// async await for handled promise
+// const p = new Promise((resolve,reject)=>{
+//   resolve('Promise Resolve Value!')
+// })
+// async function handlePromise(){
+//   const val = await p;
+//   console.log(val)
+// }
+// handlePromise() // Promise Resolve Value!
+
+// ****Important Notes****
+// await keyword sudhu promise er ageii lekha hoy . promise chara onno kichur age await keyword lekha jabe na . 
+
+// Important difference between older way and async await way..
+
+// older way : 
+// const p = new Promise((resolve,reject)=> {
+//   setTimeout(()=>{
+//     resolve("Promise Resolve Value!")
+//   },5000)
+// })
+// function getData(){
+//   console.log('Hello')
+//   p.then((data)=> console.log(data))
+//   console.log('hiii')
+//   console.log('hiii')
+//   console.log('hiii')
+// }
+// getData() 
+// Hello 
+// hiii
+// hiii
+// hiii
+// hiii
+// Promise Resolve Value! (After 5 Second )
+
+// karon p.then((....)) eta async operation , tai eta task queue te jabe jotokkhon na call stack khali hobe tar age call stack e ashbe na . jokhon sob console.log() call stack theke execute hoye call stack khali hoye jabe tokhon p.then((...)) aisha execute hobe . tai p.then() er porer code age execute hoise
+// this is older way 
+
+// Now Async Await way or Latest way to handle promises
+
+const p = new Promise((resolve,reject)=> {
+  setTimeout(()=>{
+    resolve('Promise Resolve Value!')
+  },4000)
+})
+async function getData(){
+  console.log('Hello World')
+  const data = await p;
+  console.log('Hiii')
+  console.log(data) 
+  console.log('hello')
+}
+getData()
+// Hello World
+// After 4 Second...
+// Hiii
+// Promise Resolve Value!
+// helllo
+
+// upore first time Hello World print hoye gese . tarpor 4 second r kono console.log() print hoy nai . pore 4 second por eksathe Hii , Promise Resolve Value! and hello print hoy . 
 
 
 
