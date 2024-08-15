@@ -3373,20 +3373,20 @@
 // dekhe mone hocche await use korle code synchronous hocche . kintu ashole ta na . await use korle code ektu onno vabe execute hoy . jemon..
 // await use korle jokhon await wala line execute houya start kore tokhon makeHttpRequest() function ta callstack theke ber hoye jay , jotokkhon porjonto await wala line execute na hoy totokkhon porjonto callstack e makeHttpRequest function ta thake na . jehetu call stack tokhon khali thake tai makeHttpRequest function chara baki code gula run hote thake . jokhonii await wala line execute complete hoy tokhon sathe sathe makeHttpRequest function call stack e ashe , then next line theke execute start hoy . aikhetre function ta mone rakhe last time kothay chilo . 
 
-async function makeHttpRequest(){
-  console.log('hii')
-  const url = 'https://dummyjson.com/comments/post/6'
-  const data = await fetch(url)
-  console.log('hello')
-  const json = await data.json()
-  console.log(json)
-  console.log('hellllllooooo')
-}
-makeHttpRequest()
-function getNum(){
-  console.log(5+5)
-}
-getNum()
+// async function makeHttpRequest(){
+//   console.log('hii')
+//   const url = 'https://dummyjson.com/comments/post/6'
+//   const data = await fetch(url)
+//   console.log('hello')
+//   const json = await data.json()
+//   console.log(json)
+//   console.log('hellllllooooo')
+// }
+// makeHttpRequest()
+// function getNum(){
+//   console.log(5+5)
+// }
+// getNum()
 // hii
 // 10 
 // hello
