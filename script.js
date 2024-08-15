@@ -3317,6 +3317,32 @@
 //   })
 
 // Async Await 
+// eta amader jonno notun kichu aina dey na . promise er sob concept ekhane ache . amra jemon vabe .then() .catch() kori sei syntex gula ektu easy kore. 
+
+// ami jokhon kono function call kori tokhon oi function theke ja return kora hoy setaii return hoy . jemon..
+// function makeHttpRequest(){
+//   return 'hello'
+// }
+// makeHttpRequest() // return - hello
+// kintu jokhon kono function er age async keyword use kora hoy tokhon seta by default ekta promise return kore . jemon...
+// async function makeHttpRequest(){
+
+// }
+// console.log(makeHttpRequest()) // return a promise -> state : fullfilled , result : undefined
+// // kono kichu return kora hoy nai tai result e undefined ashce . 
+// // ai situation e by default always state fullfilled thakbe
+// async function makeHttpRequest(){
+//   return 1234;
+// }
+// console.log(makeHttpRequest()) // return a promise -> state : fullfilled , result : 1234
+// // ja return koreche ai function seta promiseResult er moddhe jay . 
+
+// ***** important notes *******
+// async function er khetre always state fullfilled thake . tar mane always resolve state thake . tahole reject state kivabe pauya jay ?? Answer...
+// async function makeHttpRequest(){
+//   throw new Error("404 not found")
+// }
+// console.log(makeHttpRequest())
 
 
 
