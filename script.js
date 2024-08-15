@@ -3428,6 +3428,8 @@
 // }
 // console.log(makeHttpRequest())
 
+// Namaste Async Await 
+// async is a keyword that is use before a function for create a asynchronous function
 
 
 
