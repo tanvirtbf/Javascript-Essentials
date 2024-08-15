@@ -3419,6 +3419,14 @@
 // 1. await keyword only oi function eii use kora jabe jei function async keyword diye declare kora hoyeche
 // 2. module scope e async keyword charao top level e await keyword use kora jabe . top level mane kono function er vitor na . mane globally
 
+// async function makeHttpRequest(){
+//   const url = 'https://dummyjson.com/comments/post/6'
+//   const responseObject = await fetch(url)
+//   const data = await responseObject.json()
+//   console.log(data)
+//   return data
+// }
+// console.log(makeHttpRequest())
 
 
 
