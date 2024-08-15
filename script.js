@@ -2087,6 +2087,37 @@
 // XMLHttpRequest (XHR)
 // amra fetch diye kono api fetch kori , eta ashce 2015 shale . tar age manush api fetch korar jonno XMLHttpRequest (XHR) use korto
 
+// const image = document.querySelector('img')
+// const btn = document.querySelector('button')
+
+// const xhr = new XMLHttpRequest()
+// xhr.responseType = 'json'
+
+// btn.addEventListener('click',()=>{
+//   const xhr = new XMLHttpRequest()
+//   xhr.responseType = 'json'
+
+//   xhr.onload = ()=>{
+//     image.src = xhr.response.message
+//   }
+
+//   xhr.open('GET','https://dog.ceo/api/breeds/image/random')
+//   xhr.send()
+// })
+
+
+// xhr.addEventListener('load',()=>{
+//   image.src = xhr.response.message
+//   image.style.cssText = 'width: 200px; height: 200px'
+// })
+// xhr.addEventListener('error',()=>{
+//   console.log(xhr.response)
+// })
+
+// xhr.open('GET','https://dog.ceo/api/breeds/image/random')
+// xhr.send()
+
+
 // const resolveBtn = document.querySelector("#resolveBtn");
 // const rejectBtn = document.querySelector("#rejectBtn");
 // const image = document.querySelector("img");
@@ -2200,7 +2231,9 @@
 
 // Synchronous , Asynchronous and Ajax
 
-// javascript single threaded houyay eksathe multiple kaj korte pare na . kintu jodi asynchrous code run kora lage, orthat jodi setTimeout, setInterval, XHR, fetch request etc er moto asynchronous code thake tahole javascript nije segula handle na kore browser ke diye dey handle korar jonno . karon browser multi threaded. pore browser oi code gula re run kore callback queue te diye rakhe . jokhon pura call stack khali hoye jay tokhon seigula call stack e giye ekta ekta kore execute hote thake
+// javascript single threaded houyay eksathe multiple kaj korte pare na . kintu jodi asynchrous code run kora lage, orthat jodi setTimeout, setInterval, XHR, fetch request etc er moto asynchronous code thake tahole javascript nije segula handle na kore browser ke diye dey handle korar jonno . karon browser multi threaded. pore browser oi code gula re run kore callback queue te diye rakhe . jokhon pura call stack khali hoye jay tokhon seigula event loop er maddhome call stack e giye ekta ekta kore execute hote thake . event loop holo task queue and micro task queue theke code call stack e dey . se sarakkhon check korte thake call stack khali hoise kina . call stack khali holeii task queue or micro task queue theke code call stack e niye jay 
+// **** Important Notes **** 
+// task queue theke micro task queue er priority beshi thake.
 
 // Dog api mini project with XHR and Synchronously
 
@@ -2235,6 +2268,8 @@
 // ajax alada kichu na . eta holo asynchronous javascript er ekta example . ajax mane holo asynchronous javascript xml
 
 // Callback Hell
+
+
 
 // xhr revision
 // const image = document.querySelector("#image")
@@ -2307,6 +2342,46 @@
 // })
 // xhr.open('GET','https://dummyjson.com/users')
 // xhr.send()
+
+const xhr = new XMLHttpRequest()
+xhr.responseType = 'json'
+
+xhr.onload = ()=>{
+  const xhr1 = new XMLHttpRequest()
+  xhr1.responseType = 'json'
+
+  xhr1.addEventListener('load',()=>{
+    const xhr2 = new XMLHttpRequest()
+    xhr2.responseType = 'json'
+
+    xhr2.onload = ()=>{
+      const xhr3 = new XMLHttpRequest()
+      xhr3.responseType = 'json'
+
+      xhr3.addEventListener('load',()=>{
+        console.log(xhr3.response)
+      })
+
+      xhr3.open('GET',`https://dummyjson.com/comments/post/6`)
+      xhr3.send()
+    }
+
+    xhr2.open('GET',`https://dummyjson.com/posts/user/5`)
+    xhr2.send()
+  })
+
+  xhr1.open('GET',`https://dummyjson.com/users/5`)
+  xhr1.send()
+}
+
+xhr.open('GET','https://dummyjson.com/users')
+xhr.send();
+
+
+
+
+
+
 
 // Reusable function
 
@@ -2441,6 +2516,39 @@
 //     })
 //   })
 // })
+
+// Some important api
+// 'https://dummyjson.com/users' // get all users
+// 'https://dummyjson.com/users/2' // get single users by id
+// 'https://dummyjson.com/posts/user/5' // get posts by user id
+// 'https://dummyjson.com/comments/post/6' // get comments by post id
+
+// function makeHttpRequest(method,url,callback){
+//   const xhr = new XMLHttpRequest()
+//   xhr.responseType = 'json'
+
+//   xhr.onload = ()=>{
+//     callback(xhr.response)
+//   }
+
+//   xhr.open(method,url)
+//   xhr.send()
+// }
+// makeHttpRequest('GET','https://dummyjson.com/users',(allUser)=>{
+//   makeHttpRequest('GET',`https://dummyjson.com/users/${allUser.users[0].id}`,(singleUser)=>{
+//     makeHttpRequest('GET',`https://dummyjson.com/posts/user/${singleUser.id}`,(userPost)=>{
+//       makeHttpRequest('GET',`https://dummyjson.com/comments/post/${userPost.posts[0].id}`,(userComment)=>{
+//         makeHttpRequest('GET',`https://dummyjson.com/users/${userComment.comments[0].user.id}`,(user)=>{
+//           console.log(user)
+//         })
+//       })
+//     })
+//   })
+// })
+
+
+
+
 
 // Callback hell Namaste Javascript 
 // callback good part : for asynchronous are good
