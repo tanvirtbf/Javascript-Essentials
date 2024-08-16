@@ -3836,7 +3836,7 @@ function createUser(fname,lname,age){
     firstName : fname,
     lastName : lname,
     age : age,
-    getBirthYear 
+    getBirthYear : createUser.prototype.getBirthYear
   }
   return user;
 }
@@ -3844,7 +3844,7 @@ createUser.prototype.getBirthYear = function(){
   return new Date().getFullYear() - this.age
 }
 const user1 = new createUser('Tanvir','Ahmed',25)
-console.log(user1)
+console.log(user1.getBirthYear())
 
 // function createUser(fname,lname,age){
 //   this.firstName = fname
