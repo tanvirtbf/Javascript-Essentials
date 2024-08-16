@@ -3902,6 +3902,21 @@
 // console.log(user2.__proto__.getBirthYear) // ƒ (){ return new Date().getFullYear() - this.age}
 // // upore createUser er prototype e getBirthYear function set kore dise , sathe satheii user1 and user2 object sei getBirthYear function er access peye gese tader prototype e 
 
+function createUser(fname,lname,age){
+  const user = {
+    firstName : fname,
+    lastName : lname,
+    age : age, 
+    getBirthYear : function(){
+      return new Date().getFullYear() - age
+    }
+  }
+  return user
+}
+const user1 = createUser('Tanvir','Ahmed',25)
+console.log(user1)
+console.log(user1.getBirthYear())
+
 // set common function for all user
 // function createUser(fname,lname,age){
 //   this.firstName = fname
