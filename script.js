@@ -3902,21 +3902,21 @@
 // console.log(user2.__proto__.getBirthYear) // ƒ (){ return new Date().getFullYear() - this.age}
 // // upore createUser er prototype e getBirthYear function set kore dise , sathe satheii user1 and user2 object sei getBirthYear function er access peye gese tader prototype e 
 
-function createUser(fname,lname,age){
-  const user = {
-    firstName : fname,
-    lastName : lname,
-    age : age, 
-    getBirthYear : createUser.prototype.getBirthYear
-  }
-  return user
-}
-createUser.prototype.getBirthYear = function(){
-  return new Date().getFullYear() - this.age
-}
-const user1 = createUser('Tanvir','Ahmed',25)
-const user2 = createUser('Tanvir','Ahmed',25)
-console.log(user1.getBirthYear === user2.getBirthYear) // true
+// function createUser(fname,lname,age){
+//   const user = {
+//     firstName : fname,
+//     lastName : lname,
+//     age : age, 
+//     getBirthYear : createUser.prototype.getBirthYear
+//   }
+//   return user
+// }
+// createUser.prototype.getBirthYear = function(){
+//   return new Date().getFullYear() - this.age
+// }
+// const user1 = createUser('Tanvir','Ahmed',25)
+// const user2 = createUser('Tanvir','Ahmed',25)
+// console.log(user1.getBirthYear === user2.getBirthYear) // true
 
 // set common function for all user
 // function createUser(fname,lname,age){
