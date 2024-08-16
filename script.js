@@ -3831,20 +3831,20 @@
 // console.log(sayHi()) // print window object
 // console.log(new sayHi()) // jei object ta new keyword create and return kore automatically sei object keii print korse . tar mane new keyword use kore function call korle sei function er vitor this keyword ashole sei function jei object return kortese setakeii point kore thake 
 
-function createUser(fname,lname,age){
-  const user = {
-    firstName : fname,
-    lastName : lname,
-    age : age,
-    getBirthYear : createUser.prototype.getBirthYear
-  }
-  return user;
-}
-createUser.prototype.getBirthYear = function(){
-  return new Date().getFullYear() - this.age
-}
-const user1 = new createUser('Tanvir','Ahmed',25)
-console.log(user1.getBirthYear())
+// function createUser(fname,lname,age){
+//   const user = {
+//     firstName : fname,
+//     lastName : lname,
+//     age : age,
+//     getBirthYear : createUser.prototype.getBirthYear
+//   }
+//   return user;
+// }
+// createUser.prototype.getBirthYear = function(){
+//   return new Date().getFullYear() - this.age
+// }
+// const user1 = new createUser('Tanvir','Ahmed',25)
+// console.log(user1.getBirthYear())
 
 // function createUser(fname,lname,age){
 //   this.firstName = fname
