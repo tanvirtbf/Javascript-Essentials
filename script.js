@@ -3831,6 +3831,16 @@
 // console.log(sayHi()) // print window object
 // console.log(new sayHi()) // jei object ta new keyword create and return kore automatically sei object keii print korse . tar mane new keyword use kore function call korle sei function er vitor this keyword ashole sei function jei object return kortese setakeii point kore thake 
 
+function createUser(fname,lname,age){
+  const user = {
+    firstName : fname,
+    lastName : lname,
+    age : age,
+    getBirthYear 
+  }
+  return user;
+}
+
 // function createUser(fname,lname,age){
 //   this.firstName = fname
 // }
