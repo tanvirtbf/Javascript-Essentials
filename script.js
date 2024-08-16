@@ -3907,17 +3907,17 @@ function createUser(fname,lname,age){
     firstName : fname,
     lastName : lname,
     age : age, 
-    getBirthYear : function(){
-      return new Date().getFullYear() - age
-    }
+    getBirthYear : getBirthYear(age)
   }
   return user
+}
+function getBirthYear(age){
+  return new Date().getFullYear() - age
 }
 const user1 = createUser('Tanvir','Ahmed',25)
 const user2 = createUser('Tanvir','Ahmed',25)
 console.log(user1)
-console.log(user1.getBirthYear())
-console.log(user1.getBirthYear === user2.getBirthYear) // false
+console.log(first)
 
 // set common function for all user
 // function createUser(fname,lname,age){
