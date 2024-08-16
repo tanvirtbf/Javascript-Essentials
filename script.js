@@ -3914,8 +3914,10 @@ function createUser(fname,lname,age){
   return user
 }
 const user1 = createUser('Tanvir','Ahmed',25)
+const user2 = createUser('Tanvir','Ahmed',25)
 console.log(user1)
 console.log(user1.getBirthYear())
+console.log(user1.getBirthYear === user2.getBirthYear) // false
 
 // set common function for all user
 // function createUser(fname,lname,age){
