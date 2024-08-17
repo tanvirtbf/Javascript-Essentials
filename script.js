@@ -689,7 +689,7 @@
 // function hello(){
 //   console.log('hello world')
 // }
-// hell o()
+// hello()
 // const hellos = () => {
 //   console.log("Hello World!")
 // }
@@ -922,6 +922,8 @@
 // console.log(funName) // Ans : Tanvir Ahmed
 // ekhane let funName = fname jokhon kora hoy tokhon fname er value copy hoye funName er moddhe ashe . tai funName change korle fname er value change hoy na . abar fname er value change korle funName er value change hoy .
 
+
+// Execution Context (Tapas)
 // Tokenization in Javascript
 // javascript ekdom first e tar code gula ke tukra tukra kore vag kore . eta kei Tokenization bole
 
@@ -1076,7 +1078,7 @@
 
 // Global execution contaxt er creation phase sesh , akhn execution phase start hobe
 // 1. tom = "Hello Tom" (tom er vitor tar value assign kore deya hobe)
-// 2. (jehetu hiTom function ke call kora hoy nai tai tokhono ei function er jonno kono execution contaxt hobe na . kintu hiddenly er jonno kichu kaj hoye thake ja amra function execution contaxt e dekhbo)
+// 2. (jehetu hiTom function ke call kora hoy nai tai tokhono ei function er jonno kono execution contaxt hobe na)
 
 // test 1 :
 // var jerry = "Hello Jerry"
@@ -1107,24 +1109,24 @@
 //How Javascript Engine Managed execution contaxt tree ? Answer : Using Call Stack(last in first out)
 
 //test 2 code
-// console.log("Inside global execution context")
-// var a = 5;
-// function testMe(){
-//   console.log("Inside testMe execution context")
-//   var b = 10;
-//   var user = {
-//     name:'tanvir',
-//     county:'Bangladesh',
-//   }
-//   function testAgain(){
-//     console.log("Inside testAgain execution context")
-//     console.log("Exiting testAgain execution context")
-//   }
-//   testAgain();
-//   console.log("Exiting global execution context")
-// }
-// testMe();
-// console.log("Exiting global execution context")
+console.log("Inside global execution context")
+var a = 5;
+function testMe(){
+  console.log("Inside testMe execution context")
+  var b = 10;
+  var user = {
+    name:'tanvir',
+    county:'Bangladesh',
+  }
+  function testAgain(){
+    console.log("Inside testAgain execution context")
+    console.log("Exiting testAgain execution context")
+  }
+  testAgain();
+  console.log("Exiting global execution context")
+}
+testMe();
+console.log("Exiting global execution context")
 
 // Now test 2 code Execution Context design:
 // GEC
