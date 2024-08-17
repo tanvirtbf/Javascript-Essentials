@@ -1753,6 +1753,174 @@
 // console.log(random()) // 1
 // tar mane ami chaile first breaket diye return keyword charai return korte pari 
 
+// for of vs for in loop 
+// let fruits = ['Mango','Banana','Jackfruits','Grapes']
+// for(let fruit of fruits){
+//   debugger
+//   console.log(fruit)
+// }
+// Answer : 
+// Mango 
+// Banana
+// Jackfruits
+// Grapes
+
+// then..
+// console.log(fruit) // Grapes
+
+// ekhane upore for(fruit of fruits) korar maddhome fruit ekta variable jeta var let const kichu diyeii declare hoy nai . tai by default var thake . jai hok, fruits er prottekta value ekta ekta kore protibar fruit er moddhe ashbe , and loop prottekbar execute sesh houyar pore fruit notun vabe declare hobe and fruit er moddhe fruits er next value add hobe . evabeii cholte thake for of loop 
+// jehetu var diye create hoise fruit tai global context e fruit khuje pauya jay . jemon..
+// console.log(fruit) // Grapes
+// Grapes ashce karon last value chilo Grapes. tarpor jokhon fruits er value sesh tai loop o complete hoye jay and call stack theke uthe jay . tai last value Grapes holo fruit er value 
+
+// jodi let or const diye declare kortam tahole fruit ke baire theke access kora jeto na . karon let and const block scope . r amra jani block scope ke baire theke access kora jay na . 
+// let and const diye declare korle global context e fruit create hoito na . 
+
+// use strict 
+// jodi javascript er file er top e 'use strict' dei tahole for(fruit of fruits) likhle error dito . karon fruit declare korsi var let or const keyword charai .
+
+// ******Important Notes********
+// kar kar sathe for of loop use kora jay ? 
+// Array, String, TypedArray, Map, Set, NodeList
+
+// string with for of loop
+// const fullName = 'Tanvir Ahmed'
+// for(let character of fullName){
+//   console.log(character)
+// }
+// Answer : 
+// T
+// a 
+// n 
+// v 
+// i 
+// r 
+// ' '
+// A 
+// h 
+// m 
+// e 
+// d 
+
+// Object with for of loops
+// Object er sathe for of loop use kora jay na 
+
+// const person = {
+//   firstName : 'Tanvir',
+//   lastName : 'Ahmed',
+//   age : 25,
+//   city : 'Dhaka'
+// }
+// for(const p of person){
+//   console.log(p) // error
+// }
+
+// Object er sathe for in loop use kora jay 
+
+// const person = {
+//   firstName : 'Tanvir',
+//   lastName : 'Ahmed',
+//   age : 25,
+//   city : 'Dhaka'
+// }
+// for(const key in person){
+//   console.log(key) // eta person er sob key print korbe
+// }
+// for(const key in person){
+//   console.log(person[key]) // eta person er sob value print korbe
+// }
+// for(const key in person){
+//   console.log(key + ' : ' + person[key]) // key value pair print korbe
+// }
+
+// ******Important Notes*****
+//kintu object ke evabe access korar jonno for in loop khubii time consume hoy . etar jonno best hocche Object.keys() or Object.values() or Object.entries() method
+
+// Object.keys()
+// const person = {
+//   firstName : 'Tanvir',
+//   lastName : 'Ahmed',
+//   age : 25,
+//   city : 'Dhaka'
+// }
+// const personKeys = Object.keys(person)
+// console.log(personKeys) // ['firstName', 'lastName', 'age', 'city']
+// Object.keys() diye personKeys er moddhe person object er sob key eksathe array akare return kora hoise personKeys er moddhe
+
+// for(const key of personKeys){
+//   console.log(key)
+// }
+// Answer : 
+// firstName
+// lastName 
+// age 
+// city
+
+// for(const key of personKeys){
+//   console.log(person[key])
+// }
+// // person er sob value print hoise 
+// for(const key of personKeys){
+//   console.log(key + ' : ' + person[key])
+// }
+// person er key value eksathe print hoise
+
+// Object.values()
+// Object.Keys() er motoii just , object er value ke array te return kore 
+
+// const person = {
+//   firstName : 'Tanvir',
+//   lastName : 'Ahmed',
+//   age : 25,
+//   city : 'Dhaka'
+// }
+// const personKeys = Object.keys(person)
+// const personValues = Object.values(person)
+// console.log(personKeys) // ['firstName', 'lastName', 'age', 'city']
+// console.log(personValues) // ['Tanvir', 'Ahmed', 25, 'Dhaka']
+
+// tar mane Object.keys(object_name) oi object er sob key ke serial kore ekta array te rekhe seta return kore and Object.values(object_name) oi object er sob value ke serial kore ekta array te rekhe seta return kore
+
+// Object.entries() 
+// key value eksathe pair kore array return kore 
+// const person = {
+//   firstName : 'Tanvir',
+//   lastName : 'Ahmed',
+//   age : 25,
+//   city : 'Dhaka'
+// }
+// for(let item of Object.entries(person)){
+//   console.log(item)
+// }
+// Answer : 
+// ['firstName', 'Tanvir']
+// ['lastName', 'Ahmed']
+// ['age', 25]
+// ['city', 'Dhaka']
+// tar mane prottekbar person key and value ke separate array te index 0 te key and index 1 e rakhe value ke 
+
+// const user = {
+//   firstName : 'Tanvir',
+//   lastName : 'Ahmed',
+//   age : 25,
+//   city : 'Dhaka',
+// }
+// for(let key of Object.keys(user)){
+//   console.log(key)
+// } // user object er sob key print hoise
+// for(let value of Object.values(user)){
+//   console.log(value)
+// } // user object er sob value print hoise
+// for(let keyValue of Object.entries(user)){
+//   console.log(keyValue[0] + ' : ' + keyValue[1])
+// }
+// firstName : Tanvir
+// lastName : Ahmed
+// age : 25
+// city : Dhaka
+
+
+// forEach() method
 
 
 
