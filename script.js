@@ -3838,6 +3838,21 @@
 // console.log(new sayHi()) // jei object ta new keyword create and return kore automatically sei object keii print korse . tar mane new keyword use kore function call korle sei function er vitor this keyword ashole sei function jei object return kortese setakeii point kore thake 
 
 // function createUser(fname,lname,age){
+//   const user = {
+//     firstName : fname,
+//     lastName : lname,
+//     age : age,
+//     getBirthYear : createUser.prototype.getBirthYear
+//   }
+//   return user;
+// }
+// createUser.prototype.getBirthYear = function(){
+//   return new Date().getFullYear() - this.age
+// }
+// const user1 = new createUser('Tanvir','Ahmed',25)
+// console.log(user1.getBirthYear())
+
+// function createUser(fname,lname,age){
 //   this.firstName = fname
 // }
 // const user1 = new createUser('Tanvir','Ahmed',25)
@@ -3907,6 +3922,22 @@
 // console.log(user1.__proto__.getBirthYear) // ƒ (){ return new Date().getFullYear() - this.age}
 // console.log(user2.__proto__.getBirthYear) // ƒ (){ return new Date().getFullYear() - this.age}
 // // upore createUser er prototype e getBirthYear function set kore dise , sathe satheii user1 and user2 object sei getBirthYear function er access peye gese tader prototype e 
+
+// function createUser(fname,lname,age){
+//   const user = {
+//     firstName : fname,
+//     lastName : lname,
+//     age : age, 
+//     getBirthYear : createUser.prototype.getBirthYear
+//   }
+//   return user
+// }
+// createUser.prototype.getBirthYear = function(){
+//   return new Date().getFullYear() - this.age
+// }
+// const user1 = createUser('Tanvir','Ahmed',25)
+// const user2 = createUser('Tanvir','Ahmed',25)
+// console.log(user1.getBirthYear === user2.getBirthYear) // true
 
 
 // set common function for all user
@@ -4168,3 +4199,5 @@
 // etc.....
 
 // Properties of Node Object (v.20)
+
+
