@@ -313,10 +313,10 @@
 // console.log(fruits.pop())
 // console.log(fruits.shift())
 // console.log(fruits.unshift())
-// console.log(fruits.concat(['hello','gelo']))
-// console.log(fruits.indexOf('Banana'))
-// console.log(fruits.includes('Mango'))
-// console.log(fruits.reverse())
+// console.log(fruits.concat(['hello','gelo'])) // ['Mango', 'Banana', 'Jackfruits', 'Grapes', 'Dates', 'hello', 'gelo']
+// console.log(fruits.indexOf('Banana')) // 1 (Banana in 1 number index)
+// console.log(fruits.includes('Mango')) // true (Mango is exist in fruits array, so true, otherwise return false)
+// console.log(fruits.reverse()) // ['Dates', 'Grapes', 'Jackfruits', 'Banana', 'Mango'] (fruits array er value order ultaiya dise)
 
 // const firstName = 'Tanvir'
 // let lastName = 'Tanvir'
@@ -367,10 +367,25 @@
 
 // name = name + ' Ahmed'
 // console.log(name === firstName+' Ahmed') // Ans : true
+// jekono obosthay primitive data type er khetre 2 ta variable er value same hoile 2 ta variable equal hoy . tar mane equality check korle true ashbe
+
+// let fruits = ['Mango','Banana','Jackfruits','Grapes','Dates']
+// let newFruits = ['Mango','Banana','Jackfruits','Grapes','Dates']
+// console.log(fruits===newFruits) // false (karon tara non-premitive)
+
+// let fruits = ['Mango','Banana','Jackfruits','Grapes','Dates']
+// let newFruits = fruits
+// console.log(fruits===newFruits) // true 
+// ekhetre true ashce karon newFruits = fruits korar somoy newFruits = fruits er memory address newFruits er moddhe jay . tar mane newFruits = [memory address of fruits] . tar mane fruits and newFruits same memory address e point kora ase . tai fruits e jodi kono change kori newFruits e same change hobe
+// fruits.push('new Fruits')
+// console.log(fruits) // ['Mango', 'Banana', 'Jackfruits', 'Grapes', 'Dates', 'new Fruits']
+// console.log(newFruits) // ['Mango', 'Banana', 'Jackfruits', 'Grapes', 'Dates', 'new Fruits']
+// console.log(fruits===newFruits) // true
+
 
 // let fruits = ['Mango','Banana','Jackfruits','Grapes','Dates']
 // let arr = fruits
-// jehetu fruits variable e tar value na theke tar address thake tai let arr = fruits ei code e fruits er bodole tar memory address ashce . tar mane let arr = [memory address of fruits]
+// jehetu fruits variable e tar value na thake tar address thake tai let arr = fruits ei code e fruits er bodole tar memory address ashce . tar mane let arr = [memory address of fruits]
 // arr.push('hello')
 // console.log(fruits) // ['Mango', 'Banana', 'Jackfruits', 'Grapes', 'Dates', 'hello']
 // console.log(arr) // ['Mango', 'Banana', 'Jackfruits', 'Grapes', 'Dates', 'hello']
@@ -398,6 +413,18 @@
 // Object.assign(obj2,obj1)
 // console.log(obj1 === obj2) // Ans : false
 // ekhane obj1 and obj2 er memory address not same
+// let obj1 = {
+//   fname: 'Tanvir',
+//   age: 25
+// } // @6973183
+// let obj2 = {} // @6973187
+// obj1 and obj2 is not same memory address . that's why obj1===obj2 false. 
+// now obj1 copy and paste in obj2 using Object.assign
+// Object.assign(obj2,obj1)
+// console.log(obj2) // {fname: 'Tanvir', age: 25}
+// console.log(obj1===obj2) // false
+// tate obj1 er sob value obj2 te ashlo kintu alada alada memory address e point holo 
+
 
 // Shallow Copy with spread operator
 // let obj1 = {
