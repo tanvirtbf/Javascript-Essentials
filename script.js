@@ -2044,19 +2044,94 @@
 
 
 // Filter 
-const month = ['January','February','March','April','May','June']
+// map and filter same concept , map er motoii new array return kore kintu filter oi element keii array te return korbe jetar return value true ashbe . kintu map true false er vittite return kore na . 
+// const month = ['January','February','March','April','May','June']
+// const newMonth = month.filter(()=> {
+//   return true
+// })
+// console.log(newMonth) // ['January', 'February', 'March', 'April', 'May', 'June']
+// ekhane prottekta iteration e jehetu return value true tai month er sob gula value niyeii return hoise 
 
+// jodi kono iteration e return false hoy tahole oi iteration er value ta array te return korbe na . jemon...
 
+// const month = ['January', 'February', 'March', 'April', 'May', 'June']
+// const newMonth = month.filter((m,i)=>{
+//   console.log(i, m)
+//   if(i >2){
+//     return true
+//   }else{
+//     return false
+//   }
+// })
+// Answer : 
+// 0 'January'
+// 1 'February'
+// 2 'March'
+// 3 'April'
+// 4 'May'
+// 5 'June'
+// console.log(newMonth) // ['April', 'May', 'June']
 
+// tar mane filter method onektaii map er moto , just filter e return value true hoile sei iteration er value ta array te return kore, return value false hoile kore na 
 
+// Example : 
+// const month = ['January', 'February', 'March', 'April', 'May', 'June']
+// const newMonth = month.filter((m,i)=> {
+//   if(m.length <= 5){
+//     return true
+//   }
+//   return false
+// })
+// console.log(newMonth) // ['March', 'April', 'May', 'June']
 
+// Example : 
+// const month = ['January', 'February', 'March', 'April', 'May', 'June']
+// const newMonth = month.filter((m,i)=> {
+//   return m.includes('u')
+// })
+// console.log(newMonth) // ['January', 'February', 'June']
 
+// Example : 
+// const students = [
+//   {name:'Tanvir', age:25},
+//   {name:'Sadia',age:16},
+//   {name:'Maymuna',age:19},
+//   {name:'Humaira',age:17},
+// ]
+// // question : 18 bosorer beshi age er student er object ekta array te return korte hobe
+// const filteredStudents = students.filter((stu,i)=>{
+//   return stu.age >=18
+// })
+// console.log(filteredStudents)
+// Answer : 
+// {name:'Tanvir', age:25}
+// {name:'Maymuna',age:19}
 
+// complex example : 
+// chaining..
+// const students = [
+//   {name:'Tanvir', age:25},
+//   {name:'Sadia',age:16},
+//   {name:'Maymuna',age:19},
+//   {name:'Humaira',age:17},
+// ]
+// const filteredStudents = students.filter((student)=>{
+//   return student.age >=18
+// })
+// const filteredStudentName = filteredStudents.map((stu)=>{
+//   return stu.name 
+// })
+// console.log(filteredStudentName) // ['Tanvir', 'Maymuna']
 
+// shortcut 
+// const filtered = students.filter((stu)=>{
+//   return stu.age >= 18
+// }).map((student)=> {
+//   return student.name
+// })
+// console.log(filtered) // ['Tanvir', 'Maymuna']
 
-
-
-
+// Reduce 
 
 
 //Browser Object Mode
