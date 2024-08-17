@@ -403,6 +403,16 @@
 // obj1 address is : @434343
 // obj2 address is : @434343
 
+// ******Important Notes*********
+// Why need shallow copy and deep copy?
+// normal copy : 
+let obj1 = {fname : 'Tanvir', age : 24}
+let obj2 = obj1
+// evabe copy korle somossha hocche obj1 e kichu change korle obj2 te change hoy, obj2 te kichu change korle obj1 eo change hoy . karon tara same memory address e point kora thake . karon obj2 = obj1 korar maddhome obj1 er memory address obj2 te store hoise . 
+// kintu evabe copy korle to project e somossha hobe . tai amon vabe copy korte hobe jate obj1 change korle obj2 change na hoy, obj2 change korle jate obj1 change na hoy . tar jonno obj1 and obj2 alada alada memory te store korte hobe . tar jonno need shallow copy . shallow copy korle obj1 er same value obj2 te ashe kintu tara alada alada memory address e point kora thake
+// Deepy copy need : 
+// shallow copy just 1 stage porjonto copy korte pare . kintu jokhon object er object thake, array er vitor array thake , or object er vitor array thake , mot kotha kono non-primitive er vitor arekta non-premitive thake tokhon setake copy korte pare na alada alada memory te rekhe . seikhetre vitorer sei non-premitive ke same memory address e rekhe dey . tai ektay change korle arektay o change hoye jay . ai problem solve korte ashe deep copy . deep copy diye vitorer nested sob non-premitive keo alada alada memory te rekehe copy korte pare
+
 // Shallow Copy with Object.assign(newItem,oldItem)
 // let obj1 = {
 //   fname : 'Tanvir',
