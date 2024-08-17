@@ -1404,17 +1404,17 @@
 // // }
 // outerCall() // inner (finally inner function called)
 
-// function outer(){
-//   var x = 'hello world'
-//   function inner(){
-//     x = 'hii'
-//     console.log(x) // Ans : hii
-//   }
-//   console.log(x) // Ans : hello world
-//   inner()
-//   console.log(x) // Ans : hii
-// }
-// outer()
+function outer(){
+  let x = 'hello world'
+  function inner(){
+    x = 'hii'
+    console.log(x) // Ans : hii
+  }
+  console.log(x) // Ans : hello world
+  inner()
+  console.log(x) // Ans : hii
+}
+outer()
 // ekhane inner function tar parent er variable x ke access korte parche + x er value change korte parche . etaii closure er concept
 // scope chain er concept clear thakle uporer example ta bujhte parbo
 
@@ -1679,6 +1679,12 @@
 // function a(){
 //   console.log('hiii')
 // }
+
+// Function vs Methods
+// jokhon kono object er vitor kono key er moddhe kono function pass kora hoy tokhon take method bole . kintu kono object er vitor function pass na kore khola jaygay function declare korle seta normal function not method
+
+// Map, Filter and Reduce
+
 
 //Browser Object Mode
 //1. Location = window.location OR location
