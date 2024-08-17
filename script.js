@@ -1933,7 +1933,130 @@
 //   return 'Hello World'
 // }) // fruits er sob gula value print hoise but kichuii return hoy nai 
 
+// index with forEach
+// forEach er vitor callback function er 2nd parameter e index pass kora jay , jeta prottekta iteration index 0 theke iteration ag projonto index dibe
+// const months = ['January','February','March']
+// const newMonths = months.forEach((m,i)=>{
+//   console.log(i,m)
+// })
+// Answer : 
+// 0 'January'
+// 1 'February'
+// 2 'March'
+
 // Map, Filter and Reduce
+// map ekdom forEach er motoi . just forEach kichui return kore na , kintu map array return kore . 
+
+// const month = ['January','February','March','April','May','June']
+// month.forEach((m)=> {
+//   console.log(m)
+//   return m
+// })
+// ekhane month er sob gula value return hobe kintu undefined return hobe , jodio ami return korsilam onno kichu . karon forEach kichui return kore na . 
+// kintu map prottekta iteration ke ekta array te serial kore rekhe oi array ta return kore . jemon..
+// console.log(month.map((m)=> {
+//   console.log(m)
+// })) 
+// Answer :
+// January
+// February
+// March
+// April
+// May
+// June
+// [undefined, undefined, undefined, undefined, undefined, undefined] 
+// upore month ke map korar por kichuii return kore nai dekhe prottekbar iteration e undefined ekta array te rekhe sei array last e return kore . 
+
+// console.log(month.map((m)=>{
+//   console.log(m)
+//   return m
+// }))
+// Answer :
+// January
+// February
+// March
+// April
+// May
+// June
+// ['January', 'February', 'March', 'April', 'May', 'June']
+// upore sob gula iteration er result ke ekta array er moddhe serial kore rekhe last e return kore dey
+
+// Example : 
+// console.log(month.map((m)=>{
+//   console.log(m)
+//   if(m==='March'){
+//     console.log('hello world')
+//   }
+//   return m
+// }))
+// Answer :
+// January
+// February
+// March
+// hello world
+// April
+// May
+// June
+// ['January', 'February', 'March', 'April', 'May', 'June']
+// upore March er por hello world print hoise . tar mane map jei array ta return kore seta ekdom last e return kore sob gula iteration complete houyar por 
+
+// jehetu map last e sob value ke niye ekta array return kore tai amra map method ke ekta variable e store korte pari jate map er return value oi variable er moddhe store thake 
+
+// const month = ['January','February','March','April','May','June']
+// const storeMonth = month.map((m)=> {
+//   console.log(m)
+// })
+// console.log(storeMonth) // [undefined, undefined, undefined, undefined, undefined, undefined]
+// sob undefined hoise karon map ekhane kichuii return kore nai .
+
+// const storeMonth = month.map((m)=> {
+//   console.log(m)
+//   return m ; // prottekbar iteration sesh e current m sei array er last element e 
+// })
+// console.log(storeMonth) // ['January', 'February', 'March', 'April', 'May', 'June']
+// console.log(month === storeMonth) // false 
+// ekhane month er value and storeMonth er value same holeo tara alada memory te ase . tai false ashce 
+
+// ***Important Notes****
+// map jei array return kore seta notun array return kore . tar mane eta array ke shallow copy kore . tar mane map main array ke change kore na , destroy kore na . notun array banaiya tarpor return kore
+
+// index with map
+// map er callback function er 2nd parameter e index pass kora jay jeta return array er index number dibe
+// const month = ['January','February','March','April','May','June']
+// month.map((m,i)=>{
+//   console.log(i,m)
+// })
+
+// map third parameter
+// const month = ['January','February','March','April','May','June']
+// const newMonth = month.map((m,i,arr)=> {
+//   console.log(arr)
+// })
+// Answer : 
+// ['January', 'February', 'March', 'April', 'May', 'June']
+// ['January', 'February', 'March', 'April', 'May', 'June']
+// ['January', 'February', 'March', 'April', 'May', 'June']
+// ['January', 'February', 'March', 'April', 'May', 'June']
+// ['January', 'February', 'March', 'April', 'May', 'June']
+// ['January', 'February', 'March', 'April', 'May', 'June']
+
+// ekhane last parameter holo sei array jeta main array . tar mane arr ekhane month array ke represents kortese . 
+
+
+// Filter 
+const month = ['January','February','March','April','May','June']
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //Browser Object Mode
