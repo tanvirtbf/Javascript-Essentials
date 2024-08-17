@@ -477,16 +477,57 @@
 // 8. -- (Decrement)
 
 // += (Addition Assignment Operator)
-let num = 5;
+// let num = 5;
 // debugger
 // num = num + 2;
 // num = num + 2;
 // num = num + 2;
-// console.log(num)
+// console.log(num) // 11
 // num += 5
 // num += 5
 // num += 5
 
+// -= (Subtraction Assignment Operator)
+// let num = 5;
+// num = num - 4;
+// num = num - 4;
+// num = num - 4;
+// console.log(num) // -7
+// num -= 5
+// num -= 5
+// num -= 5
+// console.log(num) // -22
+
+// %= (Reminder Assignment Operator)
+// let num = 5;
+// num = num % 2; // 5%2 = 1
+// num = num % 2; // 1%2 = 1
+// console.log(num) // 1
+// let num = 101
+// num %=3 
+// num %=3 
+// console.log(num) // 2
+
+// *= (Multiplication Assignment Operator)
+// let num = 5;
+// num = num * 2; // 10
+// num = num * 2; // 20
+// console.log(num) // 20
+// num *= 2 
+// num *= 2 
+// num *= 2 
+// console.log(num) // 160
+
+// /= (Division Assignment Operator)
+// let num = 5;
+// num = num / 2;
+// num = num / 2;
+// console.log(num) // 1.25
+// let num = 102;
+// num /= 2 // 51
+// num /= 2 // 25.5
+// num /= 2 // 12.75
+// console.log(num) // 12.75
 
 
 
