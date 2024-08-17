@@ -476,6 +476,19 @@
 // 7. ++ (Increment)
 // 8. -- (Decrement)
 
+// += (Addition Assignment Operator)
+let num = 5;
+// debugger
+// num = num + 2;
+// num = num + 2;
+// num = num + 2;
+// console.log(num)
+// num += 5
+// num += 5
+// num += 5
+
+
+
 
 //Function
 // function hello(){
