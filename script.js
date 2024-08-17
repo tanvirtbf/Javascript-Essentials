@@ -117,9 +117,9 @@
 // const isNull = null // @71 address is fixed everywhere
 // const isUndefined = undefined // @67 fixed for undefined value
 
-let name1 = 'Tanvir' // @2129197
-let name2 = 'Tan'+'vir' // @2194955
-console.log(name1 === name2) // true
+// let name1 = 'Tanvir' // @2129197
+// let name2 = 'Tan'+'vir' // @2194955
+// console.log(name1 === name2) // true
 // ekhane name1 and name2 er memory address change houyar poreo name1 === name2 true ashce. karon string primitive data type . primitive data type sob somoy value compare kore . value same hoileii true
 
 // ****Important Note :
@@ -150,8 +150,18 @@ console.log(name1 === name2) // true
 // }; // @620689
 // console.log(user1 === user2); // Ans : false
 
+
 // Note : user1 and user2 er value same diye create kora holeo tader variable address same na and user1 === user2 is false . karon object non-primitive . tai ekhane value compare na hoye memory address compare hoise .
-// jehetu user1 and user2 const diye declare hoise tai value same holeo vinno vinno memory te tader rakha hoise
+
+// var user1 = {
+//   firstName : 'Tanvir',
+//   lastName : 'Ahmed'
+// } // @3156889
+// var user2 = {
+//   firstName : 'Tanvir',
+//   lastName : 'Ahmed'
+// } // @3156891
+// console.log(user1 === user2) // false
 
 // key value pair
 // const hello = {
@@ -161,6 +171,41 @@ console.log(name1 === name2) // true
 //   'userAge' : 25
 // }
 // Note : object er key by default string hoye thake . eta ke double qoute or single quote na dileo eta string hishebei count hobe
+
+// var user1 = {
+//   firstName : 'Tanvir', 
+//   lastName : 'Ahmed'
+// } // @3156889
+// var user2 = {
+//   firstName : 'Tanvir',
+//   lastName : 'Ahmed'
+// } // @3156891
+// console.log(user1 === user2) // false
+
+// let user1 = {
+//   firstName : 'Tanvir', // @5302035
+//   lastName : 'Ahmed'
+// } // @3156889
+// let user2 = {
+//   firstName : 'Tanvir', // @5302035
+//   lastName : 'Ahmed'
+// } // @3156891
+// console.log(user1 === user2) // false
+// console.log(user1.firstName === user2.firstName) // true
+// upore user1 and user2 er khetre firstName er value jehetu 2 khetreii same tai user1===user2 false houyar poreo user1.firstName===user2.firstName true hoise . karon firstName ekhane primitive , jodio tara non-primitive er vitore ase
+
+const user1 = {
+  firstName : 'Tanvir', // @5750265
+  lastName : 'Ahmed'
+} // @3156889
+const user2 = {
+  fname : 'Tanvir', // @5750265
+  lastName : 'Ahmed'
+} // @3156891
+console.log(user1 === user2) // false
+console.log(user1.firstName === user2.fname) // true
+// upore firstName and fname 2 ta variable er name vinno houyar poreo jehetu value same tai tara same memory address e ase and user1===user2 false houyar poreo tara true . karon tara primitive data type 
+
 
 // const user2 = {
 //   'first Name': 'Sadia',
