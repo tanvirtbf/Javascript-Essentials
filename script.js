@@ -1920,10 +1920,18 @@
 // city : Dhaka
 
 
-// forEach() method
+// forEach() method (ata array er upor kaj kore)
+// const fruits = ['Mango', 'Banana', 'Jackfruits', 'Grapes', 'Dates']
+// fruits.forEach(function(fruit){
+//   console.log(fruit)
+// }) // fruits er sob gula value print hoise
 
-
-
+// forEach Method kichui return kore na , korteo dey na . jodi keu forEach method er vitore kichu return kore tahole seta kokhonoii return hoy na . always return undefined . karon amra jani jokhon kono kichuii return hoy na tokhon undefined return hoy
+// const fruits = ['Mango', 'Banana', 'Jackfruits', 'Grapes', 'Dates']
+// fruits.forEach(function(fruit){
+//   console.log(fruit)
+//   return 'Hello World'
+// }) // fruits er sob gula value print hoise but kichuii return hoy nai 
 
 // Map, Filter and Reduce
 
