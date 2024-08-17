@@ -529,6 +529,46 @@
 // num /= 2 // 12.75
 // console.log(num) // 12.75
 
+// ++ (Increment)
+// let num = 5
+// num++
+// console.log(num) // 6
+// num++
+// num++
+// num++
+// console.log(num) // 9
+// num++ hoile age num=5 print hobe, then num er value 1 increase hobe. jodi ++num hoy tahole age 1 increase hobe then num value print hobe . 
+// num++ er khetre age num print hoy then increase hoy tai jodi console.log(num++) hoy tahole 5 print hoy . karon ++ houyar ageii num print hoye jay . 
+// ++num er khetre age 1 increase hoy then num print hoy tai console.log(++num) korle 6 print hoy . 
+// let num = 5;
+// console.log(num++) // 5
+// console.log(num) // 6
+// let num = 5
+// let newNum = num++
+// console.log(newNum) // 5
+// let num = 5
+// let anotherNewName = ++num
+// console.log(anotherNewName) // 6
+// ekhane newNum e num++ assign korle se first time num er value store kore 5 . pore num er value 1 increase kora ta se store korte pare na . 
+// kintu second example e ++num assign koray age num er value 1 increase hoise tarpor num er update value 6 anotherNewName e assign hoise
+
+// Another Example : 
+// let num = 5
+// let newNum = num++
+// console.log(newNum) // 5 (but num er value 6 hoye gese already)
+// let anotherNum = ++num
+// console.log(anotherNum) // 7 (ekhane age chilo num = 6 , then ++num er khetre age num er value 1 barse, then num store hoise anotherNum e . tai value 7 ashace)
+
+// Same concept in --(Decrement Operator)
+
+// **Important Notes**
+// Behind the scene ++ and -- operator use += and -= operator 
+// Example : 
+// let num = 5
+// num = num + 1 === num += 1 === num++ (true)
+// num = num -1 === num -= 1 === num-- (true)
+
+
 
 
 //Function
