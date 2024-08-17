@@ -107,6 +107,9 @@
 // const isGraduate = false
 // const firstName = 'Tanvir'
 // const firstRule = 'Tanvir'
+// console.log(firstName === firstRule) // true
+// ekhane 2 ta variable er memory address @1358351 . jodio variable name same na . kintu jehetu value same tai same memory address e 2 ta variable ke create kora hoise . tai true ashce 
+// important thing is string primitive data type . and primitive data type value compare kore . value same hoile true
 // const userAge = 15
 // const isGraduate = false //@75
 // const hasJob = false //@75
@@ -114,7 +117,12 @@
 // const isNull = null // @71 address is fixed everywhere
 // const isUndefined = undefined // @67 fixed for undefined value
 
-// Important Note :
+let name1 = 'Tanvir' // @2129197
+let name2 = 'Tan'+'vir' // @2194955
+console.log(name1 === name2) // true
+// ekhane name1 and name2 er memory address change houyar poreo name1 === name2 true ashce. karon string primitive data type . primitive data type sob somoy value compare kore . value same hoileii true
+
+// ****Important Note :
 // const firstName = 'Tanvir' // @1757053 address
 // const name = 'Tanvir' // @1757053 address
 // console.log(firstName === name ) // Ans : true
