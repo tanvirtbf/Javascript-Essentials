@@ -1109,24 +1109,24 @@
 //How Javascript Engine Managed execution contaxt tree ? Answer : Using Call Stack(last in first out)
 
 //test 2 code
-console.log("Inside global execution context")
-var a = 5;
-function testMe(){
-  console.log("Inside testMe execution context")
-  var b = 10;
-  var user = {
-    name:'tanvir',
-    county:'Bangladesh',
-  }
-  function testAgain(){
-    console.log("Inside testAgain execution context")
-    console.log("Exiting testAgain execution context")
-  }
-  testAgain();
-  console.log("Exiting global execution context")
-}
-testMe();
-console.log("Exiting global execution context")
+// console.log("Inside global execution context")
+// var a = 5;
+// function testMe(){
+//   console.log("Inside testMe execution context")
+//   var b = 10;
+//   var user = {
+//     name:'tanvir',
+//     county:'Bangladesh',
+//   }
+//   function testAgain(){
+//     console.log("Inside testAgain execution context")
+//     console.log("Exiting testAgain execution context")
+//   }
+//   testAgain();
+//   console.log("Exiting global execution context")
+// }
+// testMe();
+// console.log("Exiting global execution context")
 
 // Now test 2 code Execution Context design:
 // GEC
@@ -1177,24 +1177,6 @@ console.log("Exiting global execution context")
 //NOW FEC (Function Execution Context)
 // sayHi()
 
-// Scope and Scope Chain
-// var hello = 'Hello World'
-// function sayHello(){
-//   console.log(hello)
-// }
-
-// const userName = "Tanvir";
-// const userAge = 25;
-
-// function add() {
-//   const x = 5;
-//   const y = 8;
-//   console.log(x + y);
-//   console.log(userName);
-// }
-// console.log(x + y);
-// add();
-// console.log("Program Ended");
 
 // Hoisting
 //1. Variable hoisting (variable create korar ageii oi variable ke use kora)
@@ -1211,6 +1193,15 @@ console.log("Exiting global execution context")
 // note for hoisting :
 // let and const er khetre variable hoisting possible na . karon var er khetre creation phase e undefined assign kora hoy kintu let and const er khetre kichuii assign kora hoy na . tai let and const er khetre hoisting korle error ashbe . tar mane javascript amader pressure dicche jate amra kono variable or function declare korar age execute na kori
 
+// console.log(a) // undefined
+// var a = 'hello'
+// console.log(a) // hello
+
+// console.log(b) // error 
+// let b = 'hiii'
+// console.log(b) // hiii
+
+
 // Scope and Scope Chain
 //4 types of scope
 //1. Global Scope (without block scope or local scope)
@@ -1223,15 +1214,39 @@ console.log("Exiting global execution context")
 // rules : eta jekono function block everything sob jayga theke access hote pare
 // rules : global scope use korar ee dorkar nei . jodi use korteii hoy tahole const diye use korle valo . nahole variable override hoye jauyar chance thake
 
+// Example of Block scope : 
+// function sayHi(){
+//   const a = 10;
+//   let b = 'hello'
+//   var c = false
+//   function hello(){
+//     if(true){
+//       console.log(b) // hello
+//       function xx(){
+//         console.log(c) // false
+//         console.log(a) // 10
+//       }
+//       xx()
+//     }
+//   }
+//   hello();
+// }
+// sayHi()
+
 //2. Local Scope or Functional Scope
 // rules : function er vitor var diye hok, let diye hok , const diye hok jeta diyeii variable declare kori na kno seta oi function er baire access kora jay na . etaii local scope or functional scope
 
 // function sayHi(){
-//   const a = 10;
+//   console.log(a) // error
+//   console.log(b) // error
+//   console.log(c) // error
 //   function hello(){
+//     const a = 'hello'
+//     let b = 10
+//     var c = true
 //     if(true){
 //       function xx(){
-//         console.log(a) // 10
+//         console.log(a) // hello
 //       }
 //       xx()
 //     }
@@ -1294,7 +1309,7 @@ console.log("Exiting global execution context")
 // console.log(y) // Error : y is not defined
 
 // Scope Chain
-// jokhon kono variable tar value ke existing scope e na pay tokhon se tar thik immidiate next scope e take khujte thake . jodi sekhaneo na pay tahole setar immidiate next scope e variable ta khujte thake . evabe variable khujar jonno scope nicher dike jete thake
+// jokhon kono variable tar value ke existing scope e na pay tokhon se tar thik immidiate ager scope e take khujte thake . jodi sekhaneo na pay tahole setar immidiate ager scope e variable ta khujte thake . evabe variable khujar jonno scope uporer dike jete thake
 // EX :
 // function hello(){
 //   var a = 10;
@@ -1338,7 +1353,7 @@ console.log("Exiting global execution context")
 // }
 // var name = 'cartoon'
 // tom()
-// ekhane jerry jokhon name pacchilo na tokhon se tar immidiate next scope orthat global scope e khuje name er value 'cartoon' pay . tai se cartoon print kore dey . jerry kintu jekhane take call kora hoyeche sekhane khujeni , orthat tom function er vitore khujeni . karon take tom er vitor define kora hoy nai . just call kora hoyeche . tar mane call jekhaneii koruk function er definition jekhane ase setaii tar scope . sekhane na pele tar uporer scope e khujbe
+// ekhane jerry jokhon name pacchilo na tokhon se tar immidiate ager scope orthat global scope e khuje name er value 'cartoon' pay . tai se cartoon print kore dey . jerry kintu jekhane take call kora hoyeche sekhane khujeni , orthat tom function er vitore khujeni . karon take tom er vitor define kora hoy nai . just call kora hoyeche . tar mane call jekhaneii koruk function er definition jekhane ase setaii tar scope . sekhane na pele tar uporer scope e khujbe
 
 // closure
 // outer function inner function refreshment..
