@@ -406,8 +406,8 @@
 // ******Important Notes*********
 // Why need shallow copy and deep copy?
 // normal copy : 
-let obj1 = {fname : 'Tanvir', age : 24}
-let obj2 = obj1
+// let obj1 = {fname : 'Tanvir', age : 24}
+// let obj2 = obj1
 // evabe copy korle somossha hocche obj1 e kichu change korle obj2 te change hoy, obj2 te kichu change korle obj1 eo change hoy . karon tara same memory address e point kora thake . karon obj2 = obj1 korar maddhome obj1 er memory address obj2 te store hoise . 
 // kintu evabe copy korle to project e somossha hobe . tai amon vabe copy korte hobe jate obj1 change korle obj2 change na hoy, obj2 change korle jate obj1 change na hoy . tar jonno obj1 and obj2 alada alada memory te store korte hobe . tar jonno need shallow copy . shallow copy korle obj1 er same value obj2 te ashe kintu tara alada alada memory address e point kora thake
 // Deepy copy need : 
@@ -486,16 +486,19 @@ let obj2 = obj1
 // }, []);
 
 // Shallow Copy with Slice
-// numbers = [1, 2, 3, 4, 5];
-// numbersCopy = numbers.slice();
-// // [1, 2, 3, 4, 5]
-// [1, 2, 3, 4, 5].slice(0, 3);
-// // [1, 2, 3]
-// // Starts at index 0, stops at index 3
+// let fruits = ['Mango','Banana','Jackfruits','Grapes','Dates']
+// let newFruits = fruits.slice() // index number na dile full array copy hobe
+// console.log(newFruits) // ['Mango', 'Banana', 'Jackfruits', 'Grapes', 'Dates']
+// console.log(fruits===newFruits) // false
+// let anotherCopy = fruits.slice(1,4) // fruits er 1 index theke 4 index copy hobe
+// console.log(anotherCopy) // ['Banana', 'Jackfruits', 'Grapes']
+// console.log(fruits===anotherCopy) // false
 
 // Shallow Copy with Concat method
-// [1, 2, 3].concat(4); // [1, 2, 3, 4]
-// [1, 2, 3].concat([4, 5]); // [1, 2, 3, 4, 5]
+// let fruits = ['Mango','Banana','Jackfruits','Grapes','Dates']
+// let newFruits = [].concat(fruits)
+// console.log(newFruits) // ['Mango', 'Banana', 'Jackfruits', 'Grapes', 'Dates']
+// console.log(fruits === newFruits) // false
 
 // let fruits = ['Mango','Banana','Jackfruits','Grapes','Dates']
 // fruits.push('Amm') // add last in element in same reference array
@@ -528,6 +531,29 @@ let obj2 = obj1
 // namArrayCopy[5]='lamia'
 // console.log(namArray,namArrayCopy)
 
+// Problem of Shallow Copy
+const user1 = {
+  firstName : 'Tanvir',
+  lastName : 'Ahmed',
+  address : {
+    city : 'Dhaka',
+    country : 'Bangladesh'
+  }
+}
+const user2 = {...user1}
+console.log(user1===user2) // false (karon spread operator diye shallow copy kora hoise)
+// But...
+console.log(user1.address === user2.address) // true
+// ekhane shallow copy nested obosthay copy korte pare na . tar jonno deep copy korte hobe 
+user2.address.city = 'Cumilla'
+console.log(user1.address.city) // Cumilla
+console.log(user2.address.city) // Cumilla
+// ekhane user2 er address change koray user1 eo change hoise
+// ai karone deep copy dorkar jate nested obosthay o copy hoite pare alada alada memory address e 
+
+
+
+
 //Deep Copy
 // const hello = {
 //   firstName:'Tanvir',
@@ -554,6 +580,8 @@ let obj2 = obj1
 // hello.address.country = 'USA'
 // console.log(copyHello)
 // console.log(hello)
+
+
 
 // Combined Assignment Operators 
 // 1. += (Addition Assignment Operator)
