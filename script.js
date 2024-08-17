@@ -194,18 +194,17 @@
 // console.log(user1.firstName === user2.firstName) // true
 // upore user1 and user2 er khetre firstName er value jehetu 2 khetreii same tai user1===user2 false houyar poreo user1.firstName===user2.firstName true hoise . karon firstName ekhane primitive , jodio tara non-primitive er vitore ase
 
-const user1 = {
-  firstName : 'Tanvir', // @5750265
-  lastName : 'Ahmed'
-} // @3156889
-const user2 = {
-  fname : 'Tanvir', // @5750265
-  lastName : 'Ahmed'
-} // @3156891
-console.log(user1 === user2) // false
-console.log(user1.firstName === user2.fname) // true
+// const user1 = {
+//   firstName : 'Tanvir', // @5750265
+//   lastName : 'Ahmed'
+// } // @3156889
+// const user2 = {
+//   fname : 'Tanvir', // @5750265
+//   lastName : 'Ahmed'
+// } // @3156891
+// console.log(user1 === user2) // false
+// console.log(user1.firstName === user2.fname) // true
 // upore firstName and fname 2 ta variable er name vinno houyar poreo jehetu value same tai tara same memory address e ase and user1===user2 false houyar poreo tara true . karon tara primitive data type 
-
 
 // const user2 = {
 //   'first Name': 'Sadia',
@@ -621,7 +620,7 @@ console.log(user1.firstName === user2.fname) // true
 // num = num + 1 === num += 1 === num++ (true)
 // num = num -1 === num -= 1 === num-- (true)
 
-
+// While Loop 
 
 
 //Function
