@@ -532,26 +532,24 @@
 // console.log(namArray,namArrayCopy)
 
 // Problem of Shallow Copy
-const user1 = {
-  firstName : 'Tanvir',
-  lastName : 'Ahmed',
-  address : {
-    city : 'Dhaka',
-    country : 'Bangladesh'
-  }
-}
-const user2 = {...user1}
-console.log(user1===user2) // false (karon spread operator diye shallow copy kora hoise)
-// But...
-console.log(user1.address === user2.address) // true
-// ekhane shallow copy nested obosthay copy korte pare na . tar jonno deep copy korte hobe 
-user2.address.city = 'Cumilla'
-console.log(user1.address.city) // Cumilla
-console.log(user2.address.city) // Cumilla
+// const user1 = {
+//   firstName : 'Tanvir',
+//   lastName : 'Ahmed',
+//   address : {
+//     city : 'Dhaka',
+//     country : 'Bangladesh'
+//   }
+// }
+// const user2 = {...user1}
+// console.log(user1===user2) // false (karon spread operator diye shallow copy kora hoise)
+// // But...
+// console.log(user1.address === user2.address) // true
+// // ekhane shallow copy nested obosthay copy korte pare na . tar jonno deep copy korte hobe 
+// user2.address.city = 'Cumilla'
+// console.log(user1.address.city) // Cumilla
+// console.log(user2.address.city) // Cumilla
 // ekhane user2 er address change koray user1 eo change hoise
 // ai karone deep copy dorkar jate nested obosthay o copy hoite pare alada alada memory address e 
-
-
 
 
 //Deep Copy
@@ -580,7 +578,6 @@ console.log(user2.address.city) // Cumilla
 // hello.address.country = 'USA'
 // console.log(copyHello)
 // console.log(hello)
-
 
 
 // Combined Assignment Operators 
