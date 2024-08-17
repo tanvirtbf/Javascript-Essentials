@@ -1404,17 +1404,17 @@
 // // }
 // outerCall() // inner (finally inner function called)
 
-function outer(){
-  let x = 'hello world'
-  function inner(){
-    x = 'hii'
-    console.log(x) // Ans : hii
-  }
-  console.log(x) // Ans : hello world
-  inner()
-  console.log(x) // Ans : hii
-}
-outer()
+// function outer(){
+//   let x = 'hello world'
+//   function inner(){
+//     x = 'hii'
+//     console.log(x) // Ans : hii
+//   }
+//   console.log(x) // Ans : hello world
+//   inner()
+//   console.log(x) // Ans : hii
+// }
+// outer()
 // ekhane inner function tar parent er variable x ke access korte parche + x er value change korte parche . etaii closure er concept
 // scope chain er concept clear thakle uporer example ta bujhte parbo
 
@@ -1682,6 +1682,80 @@ outer()
 
 // Function vs Methods
 // jokhon kono object er vitor kono key er moddhe kono function pass kora hoy tokhon take method bole . kintu kono object er vitor function pass na kore khola jaygay function declare korle seta normal function not method
+
+// Arrow Function 
+// akhn porjonto amra 2 vabe function create kora sikhechi . 
+// 1. function expression 
+// 2. function declaration
+
+// function expression : 
+// jokhon kono function ke kono variable e store kora hoy take bole function expression . 
+// jokhon function expression create kori tokhon function er kono name deya lage na . oi variable er moddhe anonymous function create kora hoy 
+// const func = function(){
+//   console.log('hello world')
+// }
+// func() // hello world
+// function declaration : 
+// jokhon function keyword use kore function er ekta name diye jokhon kono function create kora hoy setake function declaration bole. 
+// example : 
+// function hello(){
+  
+// } // function declaration
+
+// ebar dekhbo arrow function 
+
+// function declaration
+// function square(num){
+//   return num*num;
+// }
+// console.log(square(4)) // 16
+
+// function expression
+// const square = function(num){
+//   return num*num
+// }
+// console.log(square(4)) // 16
+
+// function declaration and function expression amra arrow function diyeo korte pari . jemon...
+
+// const square = (num)=>{
+//   return num * num;
+// }
+// console.log(square(4)) // 16
+
+// new feature of arrow function : jodi chai return keyword charaii kichu return korte tahole seta possible . tar jonno 1 line er moddhe function sesh korte hobe
+// const square = (num) => num * num
+// console.log(square(4)) // 16
+// etake bole Implicit return . mane holo return keyword charai return 1 line er moddhe
+// jodi return keyword use kore return kori tahole setake bole explicit return 
+
+// example : 
+// const add = (a,b)=> a+b;
+// console.log(add(2,4)) // 6
+
+// example : 
+// const random = ()=> Math.random()
+// console.log(random())
+
+// example : 
+// const random = num => num * num
+// console.log(random(4)) // 16
+// ekhane jehetu ektaii parameter ase num . tai () charaii arrow function kaj hoise . kintu 1 er beshi parameter thakle () diteii hobe. 
+// const add = a,b => a+b // syntex error 
+// const add = (a,b) => a+b // syntex okay 
+
+// another technic 
+// const random = () => (
+//   Math.floor(Math.random() * 10) + 1
+// )
+// console.log(random()) // 4
+// console.log(random()) // 9
+// console.log(random()) // 1
+// tar mane ami chaile first breaket diye return keyword charai return korte pari 
+
+
+
+
 
 // Map, Filter and Reduce
 
