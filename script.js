@@ -466,6 +466,17 @@
 // console.log(copyHello)
 // console.log(hello)
 
+// Combined Assignment Operators 
+// 1. += (Addition Assignment Operator)
+// 2. -= (Subtraction Assignment Operator)
+// 3. %= (Reminder Assignment Operator)
+// 4. *= (Multiplication Assignment Operator)
+// 5. /= (Division Assignment Operator)
+// 6. **= (Exponentiation Assignent Operator)
+// 7. ++ (Increment)
+// 8. -- (Decrement)
+
+
 //Function
 // function hello(){
 //   console.log('hello world')
@@ -3580,11 +3591,6 @@
 // ***** Important Notes ******
 // async await er khetre jokhon async function getData call hoy tokhon call stack e getData() ashe . then console.log('Hello World') print kore . jokhon porer line promise1 = await p1 execute korte jay tokhonii sathe sathe getData() function ta call stack theke ber hoye jay and tarpor joto gula promise ase await diye declare kore rakhse sob gula eksathe execute kore . jotokkhon porjonto kono await promise execute bad jabe totokkhon getData() call stack e jabe na . uporer example e p1 and p2 ai 2 ta promise await diye declare korse . tai jotokkhon porjonto ai 2 ta promise resolve na hocche totokkhon porjonto getData() function call stack e jabe na . 
 // p1 5 second por resolve hobe, p2 hobe 3 second por . jotokkhon na sob gula promise resolve hocche totokkhon getData() function call stack e firbe na . tai ekhane total 5 second lagbe getData() function ta call stack e giya pura execute complete korte . karon p2 jodio 3 second e execute kore boshe ase kintu p1 to 5 second poreii execute hobe. that's why...
-
-
-
-
-
 
 
 // Object Oriented Programming
