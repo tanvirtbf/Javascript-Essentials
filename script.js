@@ -1780,6 +1780,16 @@
 // tar mane ami chaile first breaket diye return keyword charai return korte pari 
 
 // for of vs for in loop 
+// let fruits = ['Mango','Banana','Jackfruits','Grapes']
+// for(fruit of fruits){
+//   console.log(fruit)
+// } 
+// Answer : 
+// Mango 
+// Banana
+// Jackfruits
+// Grapes
+
 
 // let fruits = ['Mango','Banana','Jackfruits','Grapes']
 // for(let fruit of fruits){
@@ -1808,7 +1818,8 @@
 
 // ******Important Notes********
 // kar kar sathe for of loop use kora jay ? 
-// Array, String, TypedArray, Map, Set, NodeList
+// Array, String, TypedArray, Map, Set, NodeList 
+// Object er sathe for of loop use kora jay na 
 
 // string with for of loop
 // const fullName = 'Tanvir Ahmed'
@@ -1844,12 +1855,15 @@
 
 // Object er sathe for in loop use kora jay 
 
+// for in loop
+
 // const person = {
 //   firstName : 'Tanvir',
 //   lastName : 'Ahmed',
 //   age : 25,
 //   city : 'Dhaka'
 // }
+
 // for(const key in person){
 //   console.log(key) // eta person er sob key print korbe
 // }
@@ -1874,6 +1888,8 @@
 // console.log(personKeys) // ['firstName', 'lastName', 'age', 'city']
 // Object.keys() diye personKeys er moddhe person object er sob key eksathe array akare return kora hoise personKeys er moddhe
 
+// for of loop jehetu object er sathe loop kore na kintu array ke loop kore tai Object.keys(person) diye person er sob key ekta ekta array te rekhe return kore personKeys er moddhe deya hobe . and tarpor oi array er sathe for of loop chalaiya person er key gula print kora hoy
+
 // for(const key of personKeys){
 //   console.log(key)
 // }
@@ -1882,6 +1898,16 @@
 // lastName 
 // age 
 // city
+
+// for(let key of Object.keys(person)){
+//   console.log(key)
+// }
+// Answer : 
+// firstName
+// lastName 
+// age 
+// city
+// upore Object.keys(person) ekta array ke represents kore rakhse . r seta holo person er sob key er array . and sei array er upor for of loop chalano hoise , array er prottekta value key variable e ashtese and console hoitese
 
 // for(const key of personKeys){
 //   console.log(person[key])
