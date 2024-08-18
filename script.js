@@ -1972,7 +1972,6 @@
 // age : 25
 // city : Dhaka
 
-
 // forEach() method (ata array er upor kaj kore)
 // const fruits = ['Mango', 'Banana', 'Jackfruits', 'Grapes', 'Dates']
 // fruits.forEach(function(fruit){
