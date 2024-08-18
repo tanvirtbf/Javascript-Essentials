@@ -1604,17 +1604,23 @@
 // setTimeout
 // setTimeout('console.log("Tanvir")') // Ans : Tanvir
 // ekhane javascript 'console.log(true)' ai string ta ke behind the scene javascript code er moto nicche . tai true print hocche
+// setTimeout('console.log("Tanvir"); console.log("Hello")') // Tanvir   Hello
+// setTimeout('var a = 10; console.log(a)') // 10
+// ekhane setTimeout er vitor javascript er sob code likha jay . 
 // setTimeout('hiii') // Error : hiii is not defined
 // ekhane javascript hiii ke ekta variable hishebe dekhche tai jehetu hiii nam e kono variable nei tai error message ashce hiii is not defined
+// setTimeout("const hiii = 'Hello World'; console.log(hiii)") // Hello World
 // const hiii = 'Hello World!'
 // setTimeout('hiii') // Not Error
-
 //setTimeout with second parameter
+// setTimeout er first parameter holo jekono javascript code . and second parameter holo time in milisecond . ai time por first parameter e deya javascript code run korbe 
 // second parameter holo time milisecond e . jei time por tar vitorer code run hobe
 // setTimeout('console.log("Hello World")', 2000) // Ans : Hello World (After 2 second)
 // setTimeout('console.log("hii"); console.log("hello")',3000) // Ans : hii hello (After 3 second)
+// setTimeout("console.log('Hello World')",3000) // Hello World (After 3 second)
 
 // In Browser console with clearTimeout
+// browser er console e setTimeout function likhe enter korle sathe sathe ekta random number ashe . seta hocche oi setTimeout er jonno timer id . jei id use kore ami sei setTimeout ke clear korte pari . karon clear na korle eta browser e theke jay 
 // setTimeout('console.log("1 Second")',1000)
 // setTimeout('console.log("2 Second")',3000)
 // setTimeout('console.log("9 Second")',9000)
@@ -1635,15 +1641,20 @@
 // console.log(timer3) // Ans is timer id
 
 // ClearTimeOut
+// jokhon setTimeout browser er console e run kora hoy sathe sathe ekta number return kore dey . jodi amra setTimeout kono variable e likhi tahole sei number ta variable e return hoye store hoye thakbe . jeta diye ami pore clearTimeout korte pari 
 // const timer1 = setTimeout('console.log("set time 1")', 2000);
 // const timer2 = setTimeout('console.log("set time 2")', 4000);
 // const timer3 = setTimeout('console.log("set time 3")', 9000);
 // // ekhane timer1, timer2, timer3 variable er vitore setTimeout set kore only setTimout gular timer id dhorar jonno . jate sei timer id diye clearTimeout korte pare
 // clearTimeout(timer2);
 // clearTimeout(timer1);
-// ekhane timer1 and timer2 er setTimeout kokhonoii run hobe na . jehetu timer3 id diye clear kori nai tai 9 second por timer3 er setTimeout run hobe
+// jehetu timer3 id diye clear kori nai tai 9 second por timer3 er setTimeout run hobe . r jodi timer2 and timer1 tader run korar somoyer ageii clear korte pari tahole tarao run korbe na 
 
 // setTimeout with Higher Order Function
+// ******Important Notes***** : 
+//jehetu setTimeout er first parameter e javascript code dite pari tai setTimeout er first parameter e callback function o dite pari . 
+// jodi first parameter e callback function dei tahole setTimeout ke higher order function bola hobe . 
+// kintu callback function pass korar khetre kono single quote or double quote deya hobe na 
 // const timer1 = setTimeout('console.log("set time 1")',2000)
 // const timer2 = setTimeout('console.log("set time 2")',4000)
 // const timer3 = setTimeout(a,9000) // a ke setTimeout internally call kore
@@ -1653,6 +1664,9 @@
 //   console.log("Hiii")
 // }
 
+
+// setTimeout and setInterval asynchronous code . tara task queue hoye call stack e ashe 
+
 // const timer1 = setTimeout('console.log("set time 1")',0)
 // const timer2 = setTimeout('console.log("set time 2")')
 // const timer3 = setTimeout('console.log("set time 3")',100)
@@ -1660,18 +1674,30 @@
 // console.log('Hello World')
 // Ans : Hello World - set time 1 - set time 2 - set time 3
 
-// setInterval
-// const timer1 = setInterval('console.log("set time 1")',1000)
-// // 1 second por por output print hoite thakbe
-// setTimeout(()=>{
-//   clearInterval(timer1)
-// },5000)
-// Ans : set time 1
-//       set time 1
-//       set time 1
-//       set time 1
-//       set time 1
+// setTimeout with function 
+// setTimeout(function(){
+//   console.log('Hello World')
+// },3000) // Hello World (After 3 second)
 
+// setTimeout(()=>{
+//   console.log("Hello World")
+// },2000) //  Hello World (After 2 second)
+
+// setInterval
+// setTimeout er motoii concept . kintu etar second parameter e jei time deya hoy sei time por por tar code run kore . kokhono thame na . r setTimeout just 1 bar run kore sei time er por 
+// const timer1 = setInterval('console.log("set time 1")',1000)
+// // 1 second por por output print hoite thakbe . jotokkhon na clearInterval na kora hoy timer1 id use kore
+
+// const timer1 = setInterval('console.log("Hello")',2000)
+// setTimeout(function(){
+//   clearInterval(timer1)
+// },11000)
+// Ans : Hello
+//       Hello
+//       Hello
+//       Hello
+//       Hello
+// jokhonii 12 second er mathay 6 bar run korte jabe tokhonii setTimeout 11 second por setInterval ke clear kore dise using timer1 id . 6th time Hello Print hoy nai 
 // setTimeout with HOC
 
 // const timerId = setInterval(a,1000)
@@ -1754,6 +1780,7 @@
 // tar mane ami chaile first breaket diye return keyword charai return korte pari 
 
 // for of vs for in loop 
+
 // let fruits = ['Mango','Banana','Jackfruits','Grapes']
 // for(let fruit of fruits){
 //   debugger
@@ -2132,6 +2159,30 @@
 // console.log(filtered) // ['Tanvir', 'Maymuna']
 
 // Reduce 
+// kono array er sob gula value ke reduce kore 1 ta value te ane 
+// syntex of reducer : 
+// array_name.reduce((accumulator,currentValue, index , array)=>{
+
+// }, initialValue)
+// Accumulator => ekotrikarok
+// currentValue => current value of nums
+// index => index number similar with map, forEach and filter
+// array => represents of nums array similar with map , forEach and filter
+// initialValue => initial value
+
+// const nums = [1,1,2,1,1,1]
+// const totalNums = nums.reduce((accumulator,currentValue) => {
+//   console.log(accumulator) // 0 1 2 3 4 5 6 (add korar por current add value represent kore) 
+//   return accumulator + currentValue
+// },0)
+// console.log(totalNums) // 7 
+// ekhane nums array er sob number gula plus korle answer ashe 7 . reduce method diye mainly etaii kora hoy . 
+// initialValue ja deya hoy seta diyeii nums er index 0 er 1 er sathe add kora theke shuru kore last value porjonto add kore 
+
+// ekhane reduce method khub simple er moddhe dekhano hoise . baki ta pore dekhano hobe details
+
+
+
 
 
 //Browser Object Mode
