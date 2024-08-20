@@ -26,9 +26,9 @@ thirdInput.addEventListener("input",(e)=>{
 customCheckbox.forEach((item)=>{
   item.addEventListener('click',()=>{
     if(inputObj.first && inputObj.second && inputObj.third){
-      console.log('true')
+      errorLabel.style.display = 'none'
     }else{
-      console.log('false')
+      errorLabel.style.display = 'block'
     }
   })
 })
