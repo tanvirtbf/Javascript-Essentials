@@ -2210,9 +2210,36 @@
 
 
 
-//Browser Object Mode
-//1. Location = window.location OR location
-//2. History = window.history OR history
+//Browser Object Model (BOM)
+
+// 1. location
+// 2. history
+// 3. innerHeight
+// 4. innerWidth
+// 5. open()
+// 6. close()
+// 7. resizeBy()
+// 8. resizeTo()
+// 9. moveTo()
+// 10. moveBy()
+// 11. scrollBy()
+// 12. Scroll()
+// 13. scrollTo()
+// 14. print()
+// 15. document
+
+// 1. Location 
+console.log(window.location)
+console.log(location.host) // localhost:5500
+console.log(location.hostname) // localhost
+console.log(location.href) // http://localhost:5500/?hello=%27world%27#hello
+console.log(location.origin) // http://localhost:5500
+console.log(location.protocol) // http:
+console.log(location.pathname) // "/"
+console.log(location.port) // 5500
+// console.log(location.reload()) // page loading hobe
+console.log(location.search) // for get query string
+console.log(location.hash) // url er moddhe # diye kichu likhle seta return kore
 
 //Location
 // console.log(window.location.pathname)
@@ -2220,6 +2247,8 @@
 // setTimeout(()=>{
 //   window.location.reload();
 // }, 10000)
+
+//2. History 
 
 //History
 // console.log(history.forward())
