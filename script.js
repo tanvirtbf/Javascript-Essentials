@@ -4450,30 +4450,6 @@
 // }
 // ekhane jotogula user create korbo totogula object ekhane create kora lagtese . jodi 1 hajar user thake tahole 1 hajar ta object create kora lagtese . ei problem solve korar jonno factory function create hoise 
 
-const user1 = {
-  firstName : 'Tanvir',
-  age : 25,
-  getAgeYear : function(){
-    return new Date().getFullYear() - user1.age
-  }
-}
-const user2 = {
-  firstName : 'Tanvir',
-  age : 25,
-  getAgeYear : function(){
-    return new Date().getFullYear() - user1.age
-  }
-}
-const user3 = {
-  firstName : 'Tanvir',
-  age : 25,
-  getAgeYear : function(){
-    return new Date().getFullYear() - user1.age
-  }
-}
-
-
-
 // Create Factory function
 // function createUser(firstName,lastName,age){
 //   const user = {
@@ -4518,7 +4494,6 @@ const user3 = {
 // const arr2 = [4,5,6]
 // console.log(arr1.pop === arr2.pop) // true
 // tar mane arr1 and arr2 er khetre pop method same memory address e rakha hoyeche . erokom hajar ta array er jonno same memory location er pop method use kora hoyeche . er dara memory khoroch onk kombe . etaii constractor function diye kora jay
-
 
 // Constructor Function and new Keyword
 
@@ -4620,7 +4595,7 @@ const user3 = {
 //   console.log('hello')
 //   return 'Hello World'
 // }
-// sayHello() // print hello and return value is Hello World
+// sayHello() // print hello and return value is Hello World (console e giye sayHello() command dile Hello World return value ashe . echara ashe na)
 
 // new keyword
 // function sayHi(){
@@ -4628,12 +4603,12 @@ const user3 = {
 // }
 // console.log(sayHi()) // return undefined
 // console.log(new sayHi()) // return a object
-// // jokhon amra new keyword use kore kono function ke call korle amader ekta object return kore , jodio sei function kono kichu return kore nai tao..
+// // jokhon amra new keyword use kore kono function ke call korle amader ekta object return kore , jodio sei function kono kichu return kore nai tao ekta object return kore.
 // function sayHi(){
 //   return 'hello'
 // }
 // console.log(new sayHi()) // not return 'hello' , return a object
-// // tar mane new keyword diye kono function call korle sei function jei data return koruk na kno oi function oi jinish ta return korbe na . se tar nijer motoi ager object return korbe jeta se function kono kichu return na korleo korto
+// // tar mane new keyword diye kono function call korle sei function jei data return koruk na kno oi function oi jinish ta return korbe na . se tar nijer motoi ekta object return korbe jeta se function kono kichu return na korleo korto
 
 // definition of new keyword
 // jokhon new keyword diye kono function call kora hoy tokhon se nije ekta object create kore and sei object ke automatic return kore dey . 
@@ -4686,7 +4661,7 @@ const user3 = {
 //   this.age = age
 // }
 // const user1 = createUser('Tanvir','Ahmed',25)
-// console.log(user1) // undefined . karon jehetu new keyword use kore createUser function call kora hoy nai tai kono kichui return kora hoy nai . tai undefined ashce 
+// console.log(user1) // undefined . karon jehetu new keyword use kore createUser function call kora hoy nai tai kono kichui return kora hoy nai user1 variable er kache . tai undefined ashce 
 
 // // important notes*****
 // // upore createUser jehetu normal function , normal function karon take new keyword use kore call kora hoy nai tai createUser er vitor this keyword window object ke point kore ache . tar mane createUser er vitor firstName, lastName, age aigula window object er vitor set hoyeche . 
@@ -4705,6 +4680,7 @@ const user3 = {
 // }
 // const user1 = new createUser('Tanvir','Ahmed',25)
 // const user2 = new createUser('Sadia','Ahmed',16)
+
 // console.log(user1) // createUser {firstName: 'Tanvir', lastName: 'Ahmed', age: 25}
 // console.log(user2) // createUser {firstName: 'Sadia', lastName: 'Ahmed', age: 16}
 
@@ -4732,6 +4708,39 @@ const user3 = {
 // console.log(user1.__proto__.getBirthYear) // ƒ (){ return new Date().getFullYear() - this.age}
 // console.log(user2.__proto__.getBirthYear) // ƒ (){ return new Date().getFullYear() - this.age}
 // // upore createUser er prototype e getBirthYear function set kore dise , sathe satheii user1 and user2 object sei getBirthYear function er access peye gese tader prototype e 
+
+function createUser(fname,lname,age){
+  this.fname = fname
+  this.lname = lname
+  this.age = age
+}
+const user1 = new createUser('Tanvir','Ahmed',25)
+const user2 = new createUser('Sadia','Ahmed',16)
+
+console.log(user1===user2) // false
+console.log(user1===createUser) // false
+console.log(user2===createUser) // false
+// tar mane user1, user2 and createUser alada alada memory te store hoise 
+// kintu createUser er vitor prototype er vitor jei constructor function ase seta user1, user2, user3... erokom sob user er jonno same memory allocation e ase . 
+console.log(user1.__proto__) // prototype object
+console.log(createUser.prototype) // prototype object
+console.log(user2.__proto__) // prototype object
+
+console.log(user1.__proto__ === user2.__proto__) // true
+console.log(user1.__proto__ === createUser.prototype) // true
+console.log(user2.__proto__ === createUser.prototype) // true
+
+// tar mane createUser tar prototype object sob user er sathe share korse same memory address e rekheii . 
+
+console.log(user1.__proto__.constructor === user2.__proto__.constructor) // true
+console.log(createUser.prototype.constructor === user1.__proto__.constructor) // true
+console.log(createUser.prototype.constructor === user2.__proto__.constructor) // true
+
+// jehetu createUser tar prototye object share korse sobar sathe tai prototype object er vitor constructor function o sobar sathe share koreche
+
+
+
+
 
 // function createUser(fname,lname,age){
 //   const user = {
