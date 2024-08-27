@@ -2260,6 +2260,9 @@
 
 // ScrollBy
 // scrollBy(0,200);
+// scrollBy() er argument 2 ta . prothom ta hocche x angle e kototuku scroll korbe, 2nd argument hocche y angle e kototuku scroll korbe 
+// scrollBy(100,-200) // x okkhe 100px and y okkher upore 200 px
+
 // scrollTo()
 // scroll
 
@@ -4401,6 +4404,8 @@
 //     return new Date().getFullYear() - user.age
 //   }
 // }
+// console.log(user.getAgeYear()) // 1999
+
 // Encapsulation er mane hocche alada alada jinish ke ek jaygay rakha . upore variable gula + function sob user er vitore rakha hoyeche . data and logic sob kichui user er vitor rakha hoyeche . eta Encapsulation er ekta main definition . 
 // kintu arekta definition ase Encapsulation er . seta hocche data hiding . tar mane hocche user object ta bairer duniyar theke hidden . tar mane baire theke user ke keu change korte parbe na . jodi getAgeYear function ke baire define kora hoito, then user object er vitore call kora hoito taile getAgeYear function ke user object charaii independent vabe je keu access korte parto . eta Encapsulation er rules break kore . uporer user object ke baire theke change kora jabe + Access kora jabe . tai bola jay je akhno purapuri vabe user object ta Encapsulation hoy nai . kichu ta Encapsulation hoyeche .
 // onno programming language e hiding er jonno private keyword use kore variable declare kora hoy jate data hiding thake . tar mane user object ke jate baire theke change kora na jay . kintu javascript e private keyword nei . ekhane (#) diye private kora jay . eta pore dekhano hobe
@@ -4424,7 +4429,7 @@
 //   lastName : 'Ahmed',
 //   age : 25,
 //   getAgeYear : function(){
-//     return new Date().getFullYear() - user.age
+//     return new Date().getFullYear() - user1.age
 //   }
 // }
 // const user2 = {
@@ -4432,7 +4437,7 @@
 //   lastName : 'Ahmed',
 //   age : 25,
 //   getAgeYear : function(){
-//     return new Date().getFullYear() - user.age
+//     return new Date().getFullYear() - user2.age
 //   }
 // }
 // const user3 = {
@@ -4440,10 +4445,32 @@
 //   lastName : 'Ahmed',
 //   age : 25,
 //   getAgeYear : function(){
-//     return new Date().getFullYear() - user.age
+//     return new Date().getFullYear() - user3.age
 //   }
 // }
 // ekhane jotogula user create korbo totogula object ekhane create kora lagtese . jodi 1 hajar user thake tahole 1 hajar ta object create kora lagtese . ei problem solve korar jonno factory function create hoise 
+
+const user1 = {
+  firstName : 'Tanvir',
+  age : 25,
+  getAgeYear : function(){
+    return new Date().getFullYear() - user1.age
+  }
+}
+const user2 = {
+  firstName : 'Tanvir',
+  age : 25,
+  getAgeYear : function(){
+    return new Date().getFullYear() - user1.age
+  }
+}
+const user3 = {
+  firstName : 'Tanvir',
+  age : 25,
+  getAgeYear : function(){
+    return new Date().getFullYear() - user1.age
+  }
+}
 
 
 
