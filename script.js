@@ -4797,35 +4797,60 @@
 // const user2 = new createUser('Sadia','Khatun',16)
 // console.log(user1.getFullName()) // Inheit hoye getFullName access hoise tai user1 er por __proto__ deya lage na
 
-function createUser(fname,lname,age){
-  this.firstName = fname;
-  this.lastName = lname;
-  this.age = age;
-  this.myFun = function(){
-    return new Date().getFullYear() - age
-  }
-  this.myArr = [1,2,3,4,5]
-}
 
-createUser.prototype.fullArray = [100,200,300,400,500]
-createUser.
 
-const user1 = new createUser('Tanvir','Ahmed',25)
-const user2 = new createUser('Sadia','Hatun',16)
 
-console.log(user1.myFun())
-console.log(user2.myFun())
-console.log(user1.myFun===user2.myFun) // false
-console.log(user1.lastName===user2.lastName) // false
-console.log(user1.myArr===user2.myArr) // false
 
-console.log(user1.fullArray === user2.fullArray) // true
+// ********Very Very Important Notes*************
+// jokhon new keyword diye kono function call kora hoy tokhon seta obosshoi obosshoi ekta object return korbe . oi function er moddhe ami ja kisu kori na kno sob kichu oi object er moddhe set kora thakbe . jemon niche createUser er moddhe this use kore firstname, lastname , age etc set kora hoise . ja set kora hoise sob kichu oi object er moddhe thakbe jeta new keyword use kore function call korle return kore . tarpor jodi oi function use kore kono object create kora hoy tokhon automatic sei object er sob property tar jonno alada vabe duplicate hoye return hoy . evabe user1, user2, user3.... onk object create hoy . sob gular jonnoi er vitorer sob property copy hoye ashe . jar karone user1.firstName change korle user2 er firstName change hoy na . function object array string integer jai set kori na kno seta copy hoye ashe user1, user2 egular moddhe . 
+// kintu...
+// createUser er prototype er moddhe kono kichu set korle seta sob user der moddhe reference hishebe jay . copy hoye jay na . 
 
-// Classes
-// class createUser {
-  
+// function createUser(fname,lname,age){
+//   this.firstName = fname;
+//   this.lastName = lname;
+//   this.age = age;
+//   this.myFun = function(){
+//     return new Date().getFullYear() - age
+//   }
+//   this.myArr = [1,2,3,4,5]
 // }
 
+// createUser.prototype.fullArray = [100,200,300,400,500]
+// createUser.prototype.getFullName = function(){
+//   return this.firstName+" "+this.lastName;
+// }
+// createUser.prototype.myAddress = function(address){
+//   return address
+// }
+
+// const user1 = new createUser('Tanvir','Ahmed',25)
+// const user2 = new createUser('Sadia','Hatun',16)
+
+// console.log(user1.myFun())
+// console.log(user2.myFun())
+// console.log(user1.myFun===user2.myFun) // false
+// console.log(user1.lastName===user2.lastName) // false
+// console.log(user1.myArr===user2.myArr) // false
+
+// console.log(user1.fullArray === user2.fullArray) // true
+// console.log(user1.getFullName())
+// console.log(user2.getFullName())
+
+// console.log(user1.myAddress('Dhaka'))
+// console.log(user1.myAddress('Brahmonbaria'))
+// console.log(user1.myAddress===user2.myAddress) // true
+
+// console.log(user1.fullArray===user2.fullArray) // true
+// user1.fullArray = [1,2,3]
+// console.log(user2.fullArray)
+
+// Classes
+class createUser {
+  
+}
+
+createUser.
 
 
 
