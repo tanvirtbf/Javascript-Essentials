@@ -4891,9 +4891,62 @@
 // upore createUser er moddhe argument gula constructor function recieve korte pare 
 
 // Example of Constructor function 
+// class createUser{
+
+//   constructor(fname,lname,age){
+//     console.log(fname,lname,age)
+//   }
+
+//   getFullName(name){
+//     return name
+//   }
+//   getBirthYear(age){
+//     return new Date().getFullYear() - age
+//   }
+// }
+// const user1 = new createUser('Tanvir','Ahmed',25) // user1 er moddhe createUser call kore tar return value object ta user1 er moddhe rakha hoise . kintu jehetu createUser call hoise ekhane tai automatic createUser er moddhe thaka constructor function tao call hoye gese and execute hoise . jehetu tar vitor console.log() ase tai ai console e seta print hobe . print hoyeche -> Tanvir Ahmed 25
+// const user2 = new createUser('Sadia','Hatun',16) // user2 er moddhe createUser call kore tar return value object ta user1 er moddhe rakha hoise . kintu jehetu createUser call hoise ekhane tai automatic createUser er moddhe thaka constructor function tao call hoye gese and execute hoise . jehetu tar vitor console.log() ase tai ai console e seta print hobe . print hoyeche -> Sadia Hatun 16
 
 
+// class createUser{
+//   constructor(fname,lname,age){
+//     this.firstName = fname;
+//     this.lastName = lname;
+//     this.age = age;
+//     console.log('Hello World')
+//   }
+//   getFullName(){
+//     return this.firstName + " " + this.lastName
+//   }
+// }
+// const user1 = new createUser('Tanvir','Ahmed',25)
+// const user2 = new createUser('Sadia','Hatun',16)
 
+// console.dir(user2.getFullName())
+
+
+// Private 
+class createUser{
+  #age
+  constructor(fname,lname,age){
+    this.firstName = fname;
+    this.lastName = lname;
+    this.#age = age;
+    console.log('Hello World')
+  }
+  getFullName(){
+    return this.firstName + " " + this.lastName
+  }
+  getBirthYear(){
+    return new Date().getFullYear() - this.#age
+  }
+}
+const user1 = new createUser('Tanvir','Ahmed',25)
+const user2 = new createUser('Sadia','Hatun',16)
+
+console.dir(user2.getFullName()) // Sadia Hatun
+console.log(user2.getBirthYear()) // 2008
+console.log(user2.#age) // error (karon eta private property)
 
 
 
