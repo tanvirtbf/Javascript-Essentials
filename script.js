@@ -4831,17 +4831,43 @@
 
 // Factory Function 
 
+// function createUser(firstName,lastName,age){
+//   const user = {
+//     firstName,
+//     lastName,
+//     age,
+//     getAgeYear : function(){
+//       return new Date().getFullYear() - user.age
+//     }
+//   }
+//   return user;
+// }
+// const user1 = createUser('Tanvir','Ahmed',25)
+// const user2 = createUser('Sadia','Ahmed',15)
+// console.log(user1.getAgeYear()) // 1999
+// console.log(user2.getAgeYear()) // 2009
+// console.log(user1.getAgeYear===user2.getAgeYear) // false
+
+// solve duplicate memory location problem
+
 function createUser(firstName,lastName,age){
   const user = {
     firstName,
     lastName,
     age,
-    getAgeYear : function(){
-      return new Date().getFullYear() - user.age
-    }
+    getAgeYear : getAgeYear
   }
+  return user;
 }
 
+function getAgeYear(age){
+  return new Date().getFullYear() - age
+}
+
+const user1 = createUser('Tanvir','Ahmed',25)
+const user2 = createUser('Sadia','Ahmed',15)
+console.log(user1.getAgeYear(user1.age)) // 1999
+console.log(user1.getAgeYear===user2.getAgeYear) // false
 
 
 
