@@ -4863,6 +4863,35 @@
 // akhn porjonto amader jei somossha ta chilo createUser er prototype er vitor kono method or property set korte hoito . class just ai problem tai solve kore . baki sob ager process eii hocche . 
 // upore getFullName function ta createUser er prototype er vitor set hoise . jekhane age getBirthYear function jevabe create korsi sevabe getFullName function create kortam prototype er moddhe.
 
+// class createUser{
+
+//   getBirthYear (age){
+//     return new Date().getFullYear() - age 
+//   }
+//   getFullName (name){
+//     return name
+//   }
+// }
+
+// const user1 = new createUser('Tanvir','Ahmed',25)
+// const user2 = new createUser('Sadia','Hatun',16)
+
+// console.log(user1.getBirthYear(25)) // 1999
+// console.log(user1.__proto__.getBirthYear(16)) // 2008
+// console.log(user1.getBirthYear===user2.getBirthYear) // true
+// console.log(user2.getFullName===user1.getFullName) // true
+
+
+// constructor functin 
+// upore createUser() function call korar somoy tar argument e 'Tanvir','Ahmed' and 25 deya ase . egula kothay jabe ? egula kivabe createUser function e access korbo ? 
+// Answer is Constructor function 
+
+// What is Constructor function ? 
+// jokhon kono class ke call kora hoy tokhon sei class er baki method gula sei class er prototype er moddhe set hoye jay . kintu kono kichu execute hoy na . execute hoy sudhu constructor function . jodi ami kono class ke new keyword diye kono class ke call kori tokhon constructor function sathe sathe automatic call hoy and tar vitor sob code execute hoy . 
+// upore createUser er moddhe argument gula constructor function recieve korte pare 
+
+// Example of Constructor function 
+
 
 
 
