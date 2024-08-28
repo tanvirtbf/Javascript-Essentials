@@ -4846,11 +4846,32 @@
 // console.log(user2.fullArray)
 
 // Classes
-class createUser {
-  
-}
+// class createUser {
+//   getFullName (fullName){
+//     return fullName
+//   }
+// }
 
-createUser.
+// createUser.prototype.getBirthYear = function(age){
+//   return new Date().getFullYear() - age
+// }
+
+// const user1 = new createUser()
+// console.log(user1.getFullName('Tanvir Ahmed')) // Tanvir Ahmed
+// console.log(user1.__proto__.getFullName('Hello')) // Hello
+
+// akhn porjonto amader jei somossha ta chilo createUser er prototype er vitor kono method or property set korte hoito . class just ai problem tai solve kore . baki sob ager process eii hocche . 
+// upore getFullName function ta createUser er prototype er vitor set hoise . jekhane age getBirthYear function jevabe create korsi sevabe getFullName function create kortam prototype er moddhe.
+
+
+
+
+
+
+
+
+
+
 
 
 
