@@ -4797,8 +4797,29 @@
 // const user2 = new createUser('Sadia','Khatun',16)
 // console.log(user1.getFullName()) // Inheit hoye getFullName access hoise tai user1 er por __proto__ deya lage na
 
+function createUser(fname,lname,age){
+  this.firstName = fname;
+  this.lastName = lname;
+  this.age = age;
+  this.myFun = function(){
+    return new Date().getFullYear() - age
+  }
+  this.myArr = [1,2,3,4,5]
+}
 
+createUser.prototype.fullArray = [100,200,300,400,500]
+createUser.
 
+const user1 = new createUser('Tanvir','Ahmed',25)
+const user2 = new createUser('Sadia','Hatun',16)
+
+console.log(user1.myFun())
+console.log(user2.myFun())
+console.log(user1.myFun===user2.myFun) // false
+console.log(user1.lastName===user2.lastName) // false
+console.log(user1.myArr===user2.myArr) // false
+
+console.log(user1.fullArray === user2.fullArray) // true
 
 // Classes
 // class createUser {
