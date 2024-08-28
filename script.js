@@ -4709,38 +4709,37 @@
 // console.log(user2.__proto__.getBirthYear) // ƒ (){ return new Date().getFullYear() - this.age}
 // // upore createUser er prototype e getBirthYear function set kore dise , sathe satheii user1 and user2 object sei getBirthYear function er access peye gese tader prototype e 
 
-function createUser(fname,lname,age){
-  this.fname = fname
-  this.lname = lname
-  this.age = age
-}
-const user1 = new createUser('Tanvir','Ahmed',25)
-const user2 = new createUser('Sadia','Ahmed',16)
+// function createUser(fname,lname,age){
+//   this.fname = fname
+//   this.lname = lname
+//   this.age = age
+// }
+// const user1 = new createUser('Tanvir','Ahmed',25)
+// const user2 = new createUser('Sadia','Ahmed',16)
 
-console.log(user1===user2) // false
-console.log(user1===createUser) // false
-console.log(user2===createUser) // false
-// tar mane user1, user2 and createUser alada alada memory te store hoise 
-// kintu createUser er vitor prototype er vitor jei constructor function ase seta user1, user2, user3... erokom sob user er jonno same memory allocation e ase . 
-console.log(user1.__proto__) // prototype object
-console.log(createUser.prototype) // prototype object
-console.log(user2.__proto__) // prototype object
+// console.log(user1===user2) // false
+// console.log(user1===createUser) // false
+// console.log(user2===createUser) // false
+// // tar mane user1, user2 and createUser alada alada memory te store hoise 
+// // kintu createUser er vitor prototype er vitor jei constructor function ase seta user1, user2, user3... erokom sob user er jonno same memory allocation e ase . 
+// console.log(user1.__proto__) // prototype object
+// console.log(createUser.prototype) // prototype object
+// console.log(user2.__proto__) // prototype object
 
-console.log(user1.__proto__ === user2.__proto__) // true
-console.log(user1.__proto__ === createUser.prototype) // true
-console.log(user2.__proto__ === createUser.prototype) // true
+// console.log(user1.__proto__ === user2.__proto__) // true
+// console.log(user1.__proto__ === createUser.prototype) // true
+// console.log(user2.__proto__ === createUser.prototype) // true
 
-// tar mane createUser tar prototype object sob user er sathe share korse same memory address e rekheii . 
+// // tar mane createUser tar prototype object sob user er sathe share korse same memory address e rekheii . 
 
-console.log(user1.__proto__.constructor === user2.__proto__.constructor) // true
-console.log(createUser.prototype.constructor === user1.__proto__.constructor) // true
-console.log(createUser.prototype.constructor === user2.__proto__.constructor) // true
+// console.log(user1.__proto__.constructor === user2.__proto__.constructor) // true
+// console.log(createUser.prototype.constructor === user1.__proto__.constructor) // true
+// console.log(createUser.prototype.constructor === user2.__proto__.constructor) // true
 
 // jehetu createUser tar prototye object share korse sobar sathe tai prototype object er vitor constructor function o sobar sathe share koreche
 
-
-
-
+// *****Important Notes*****
+// jehetu createUser er prototype object sob user er sathe share kore tai ami jodi createUser er prototype object e kono function or onno kichu set kori tahole createUser theke create houya sob object setar access nite parbe
 
 // function createUser(fname,lname,age){
 //   const user = {
@@ -4797,6 +4796,54 @@ console.log(createUser.prototype.constructor === user2.__proto__.constructor) //
 // const user1 = new createUser('Tanvir','Ahmed',25)
 // const user2 = new createUser('Sadia','Khatun',16)
 // console.log(user1.getFullName()) // Inheit hoye getFullName access hoise tai user1 er por __proto__ deya lage na
+
+
+// Revision 
+// const user1 = {
+//   firstName : 'Tanvir',
+//   lastName : 'Ahmed',
+//   age : 25,
+//   getAgeYear : function(){
+//     return new Date().getFullYear() - user1.age
+//   }
+// }
+// console.log(user1.getAgeYear()) // 1999
+
+// const user2 = {
+//   firstName : 'Sadia',
+//   lastName : 'Ahmed',
+//   age : 16,
+//   getAgeYear : function(){
+//     return new Date().getFullYear() - user2.age
+//   }
+// }
+// console.log(user2.getAgeYear()) // 2008
+
+// const user3 = {
+//   firstName : 'Maymuna',
+//   lastName : 'Ahmed',
+//   age : 19,
+//   getAgeYear : function(){
+//     return new Date().getFullYear() - user3.age
+//   }
+// }
+// console.log(user3.getAgeYear()) // 2005
+
+// Factory Function 
+
+function createUser(firstName,lastName,age){
+  const user = {
+    firstName,
+    lastName,
+    age,
+    getAgeYear : function(){
+      return new Date().getFullYear() - user.age
+    }
+  }
+}
+
+
+
 
 
 
