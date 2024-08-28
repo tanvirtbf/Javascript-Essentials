@@ -4799,78 +4799,30 @@
 
 
 // Revision 
-// const user1 = {
-//   firstName : 'Tanvir',
-//   lastName : 'Ahmed',
-//   age : 25,
-//   getAgeYear : function(){
-//     return new Date().getFullYear() - user1.age
-//   }
-// }
-// console.log(user1.getAgeYear()) // 1999
-
-// const user2 = {
-//   firstName : 'Sadia',
-//   lastName : 'Ahmed',
-//   age : 16,
-//   getAgeYear : function(){
-//     return new Date().getFullYear() - user2.age
-//   }
-// }
-// console.log(user2.getAgeYear()) // 2008
-
-// const user3 = {
-//   firstName : 'Maymuna',
-//   lastName : 'Ahmed',
-//   age : 19,
-//   getAgeYear : function(){
-//     return new Date().getFullYear() - user3.age
-//   }
-// }
-// console.log(user3.getAgeYear()) // 2005
-
-// Factory Function 
-
-// function createUser(firstName,lastName,age){
-//   const user = {
-//     firstName,
-//     lastName,
-//     age,
-//     getAgeYear : function(){
-//       return new Date().getFullYear() - user.age
-//     }
-//   }
-//   return user;
-// }
-// const user1 = createUser('Tanvir','Ahmed',25)
-// const user2 = createUser('Sadia','Ahmed',15)
-// console.log(user1.getAgeYear()) // 1999
-// console.log(user2.getAgeYear()) // 2009
-// console.log(user1.getAgeYear===user2.getAgeYear) // false
-
-// solve duplicate memory location problem
 
 function createUser(firstName,lastName,age){
   const user = {
     firstName,
     lastName,
     age,
-    getAgeYear : getAgeYear
+    getAgeYear : createUser.commonMethods.getAgeYear
   }
   return user;
 }
 
-function getAgeYear(age){
-  return new Date().getFullYear() - age
+createUser.commonMethods = {
+  getAgeYear : function(age){
+    return new Date().getFullYear() - age
+  }
 }
 
 const user1 = createUser('Tanvir','Ahmed',25)
 const user2 = createUser('Sadia','Ahmed',15)
+
 console.log(user1.getAgeYear(user1.age)) // 1999
-console.log(user1.getAgeYear===user2.getAgeYear) // false
-
-
-
+console.log(user2.getAgeYear(user2.age)) // 2009
+console.log(user1.getAgeYear === user2.getAgeYear)
+console.log(user1.getAgeYear === createUser.commonMethods.getAgeYear) // true
 
 
 // Classes
