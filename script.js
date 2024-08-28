@@ -4798,31 +4798,6 @@
 // console.log(user1.getFullName()) // Inheit hoye getFullName access hoise tai user1 er por __proto__ deya lage na
 
 
-// Revision 
-
-function createUser(firstName,lastName,age){
-  const user = {
-    firstName,
-    lastName,
-    age,
-    getAgeYear : createUser.commonMethods.getAgeYear
-  }
-  return user;
-}
-
-createUser.commonMethods = {
-  getAgeYear : function(age){
-    return new Date().getFullYear() - age
-  }
-}
-
-const user1 = createUser('Tanvir','Ahmed',25)
-const user2 = createUser('Sadia','Ahmed',15)
-
-console.log(user1.getAgeYear(user1.age)) // 1999
-console.log(user2.getAgeYear(user2.age)) // 2009
-console.log(user1.getAgeYear === user2.getAgeYear)
-console.log(user1.getAgeYear === createUser.commonMethods.getAgeYear) // true
 
 
 // Classes
