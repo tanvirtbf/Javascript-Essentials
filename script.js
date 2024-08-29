@@ -5394,6 +5394,57 @@
 
 
 
+// Dom Traversal (v.23)
+
+// parentNode - Returns Parent Node
+
+// parentElement - Returns parent element node
+
+// childNodes - Returns collection of an element's child nodes (including text and comment nodes) --- jodi kono element er childNodes ber kora hoy tahole sei element er vitor element node + text node + comment node etc sob dhoroner node list akare return hobe 
+
+// children - Returns a collection of an elements child element node(do not include text and comment nodes) --- jodi kono element er children ber kora hoy tahole sei element er vitor sudhu element node node list akare return hobe . text node, comment node ei type er node return hoy na 
+
+// firstChild - Returns first child node of an element (it can be text or comment node)
+
+// firstElementChild - Returns first child element node of an element 
+
+// lastChild - Returns last child node of an element (it can be text or comment node)
+
+// lastElementChild - Returns last child element node of an element 
+
+// previousSibling - Returns previous node of same level (it can be text or comment node)
+
+// previousElementSibling - Returns previous element node of same level
+
+// nextSibling - Returns next node of same level (it can be text or comment node)
+
+// nextElementSibling - Returns next element of same level
+
+
+// parentNode and parentElement (v.24) 
+// parentElement only tar parent e jodi kono element thake setaii return kore kintu parentNode element + aro sob node return kore jemon text node , document node , comment node etc 
+// Example : 
+// console.dir(document.body.parentElement.parentElement) // null
+// console.dir(document.body.parentElement.parentNode) // document object returned
+// upore html er parentElement ber korte gele null return ashe . karon html er upor r kono element nai . kintu html er upor node ase .seta holo document node . jehetu document node kono html element na tai html.parentElement korle null value return hoy and html.parentNode dile document node return hoy 
+
+// kintu...
+// element o jehetu ekta node tai parentNode diye jodi parent e kono element thake setao return kore . sudhu parthokko hocche parentElement diye only element return hoy kintu parentNode diye element node , text node , comment node , document node soho sob dhoroner node reutrn hoy
+
+
+
+
+
+
+
+
+
+
+
+// example of children and childNodes 
+// const ul = document.querySelector('ul')
+// console.log(ul.childNodes) // NodeList(11) [text, li.list, text, comment, text, li.list, text, li.list, text, li.list, text]
+// console.log(ul.children) // HTMLCollection(4) [li.list, li.list, li.list, li.list]
 
 
 
