@@ -5350,7 +5350,47 @@
 
 
 // Difference between Node of an Element and Element Node (v.22)
+// ekhane bujhar bishoy muloto 2 ta 
+// 1. Node of an Element 
+// 2. Element Node of an Element
 
+// 1. Node of an Element => 
+  // kono element er vitore jodi kono node thake seta Node of an Element . kintu kono Element er vitor arekta element thakle seta Node of an Element na . seta abar individual Element Node of an Element . only text node , comment node egulaii Node of an Element hoy 
+
+// 2. Element Node of an Element 
+  // jodi kono element er vitor kono element thake seta ke bole Element node of an Element 
+
+
+// Example Code : 
+{/* <html>
+  <head>
+    <title>Tree</title>
+  </head>
+  <body>
+    <h1>
+      <!-- This is Comment -->
+      Hello World!
+    </h1>
+    <p>Para</p>
+  </body>
+</html> */}
+
+// uporer html er code er dom tree structure holo :-> 
+
+// Document 
+
+// html 
+
+// head - Enter or Space(text node) - body 
+  // in head element node -----
+    // Enter or Space(text node) - title - Enter or Space(text node)
+      // in title elment node ------
+        // Tree (text node)
+  // in body element node ------
+    // Enter or Space(text node) - h1 - Enter or Space(text node) - p - Enter or Space(text node)
+      // in h1 element node
+
+// and so on....
 
 
 
