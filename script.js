@@ -5202,7 +5202,46 @@
 // Text --------- "#text"
 
 // uporer nodeName gula vibinno node er nodeName er return value . niche kichu example deya holo...
-console.log(document.childNodes[0].nodeName) // html (html node chilo)
-console.log(document.body.childNodes[0].nodeName) // #text (text node chilo)
-console.log(document.body.childNodes[11].nodeName) // #comment (comment node chilo)
-console.log(document.body.childNodes[13].nodeName) // SCRIPT (script node chilo)
+// console.log(document.childNodes[0].nodeName) // html (html node chilo)
+// console.log(document.body.childNodes[0].nodeName) // #text (text node chilo)
+// console.log(document.body.childNodes[11].nodeName) // #comment (comment node chilo)
+// console.log(document.body.childNodes[13].nodeName) // SCRIPT (script node chilo)
+
+
+// nodeValue 
+// The nodeValue property returns or sets the value of the current node
+// nodeValue return korar kaj o kore thake and kono value set korar kaj o kore thake
+
+// all of nodeValue
+// CDATASection ---- content of the CDATA Section
+// Comment ---------- content of the comment
+// Document ---------- null
+// DocumentFragment----- null
+// DocumentType ------- null
+// Element --------- null
+// NamedNodeMap ------- null
+// Entity ---------- null
+// EntityReference -------- null 
+// Notation ----------- null
+// ProcessingInstruction ---------- entire content excluding the target
+// Text --------- content of the text node
+
+// notes : amra maximum case e text node value niye kaj kore thaki . baki gula niye temon kaj hoy na 
+// amra kono element er text node er vitor nodeValue te gele sekhane sei element er text thake + amra chaile sei nodeValue te kono string or onno kichu set kore dite pari 
+// jemon....
+// const h2 = document.querySelector('h2')
+// // return value show..
+// console.log(h2.childNodes[0].nodeValue) // Hello (h2 tag er vitor jei text ase seta return korse)
+// // now set..
+// h2.childNodes[0].nodeValue = 'Hello World' // akhn h2 er vitor Hello text ta change hoye Hello World hoye gese
+
+// Another Example : 
+
+const list = document.querySelector('.list')
+console.log(list.childNodes[0].nodeValue) // Tanvir
+list.childNodes[0].nodeValue = 'Tanvir Ahmed'
+console.log(list.childNodes[0].nodeValue) // Tanvir Ahmed
+
+
+
+
