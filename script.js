@@ -5207,6 +5207,8 @@
 // console.log(document.body.childNodes[11].nodeName) // #comment (comment node chilo)
 // console.log(document.body.childNodes[13].nodeName) // SCRIPT (script node chilo)
 
+// console.log(document.nodeName) // #document
+
 
 // nodeValue 
 // The nodeValue property returns or sets the value of the current node
@@ -5236,12 +5238,44 @@
 // h2.childNodes[0].nodeValue = 'Hello World' // akhn h2 er vitor Hello text ta change hoye Hello World hoye gese
 
 // Another Example : 
-
-const list = document.querySelector('.list')
-console.log(list.childNodes[0].nodeValue) // Tanvir
-list.childNodes[0].nodeValue = 'Tanvir Ahmed'
-console.log(list.childNodes[0].nodeValue) // Tanvir Ahmed
-
+// const list = document.querySelector('.list')
+// console.log(list.childNodes[0].nodeValue) // Tanvir
+// list.childNodes[0].nodeValue = 'Tanvir Ahmed'
+// console.log(list.childNodes[0].nodeValue) // Tanvir Ahmed
 
 
+// nodeType 
+// 1. Element Node er type holo 1. tar mane jodi kono Element er type ber kora hoy tahole return value ashe 1 . jodi kono Node er return value 1 ashe tahole bujhte hobe seta Element Node.
+// 2. Text Node er type holo 3. tar mane jodi kono Text er type ber kora hoy tahole return value ashe 3 . jodi kono Node er return value 3 ashe tahole bujhte hobe seta Text Node.
+// 3. Comment Node er type holo 8. tar mane jodi kono Comment er type ber kora hoy tahole return value ashbe 8. jodi kono Node er return value 8 ashe tahole bujhte hobe seta Comment Node.
+// 4. Document Node er type holo 9. tar mane jodi document er type ber kora hoy tahole return value ashbe 9. jodi kono Node er return value 9 ashe tahole bujhte hobe seta Document Node.
+// 5. Document Type Node is 10. 
+// 6. Document Fragment Node is 11. 
 
+// Example of nodeType useCase : 
+// const h2 = document.querySelector('h2')
+// console.log(h2.nodeType) // 1
+// if(h2.nodeType === 1){
+//   console.log('This is a Element Node')
+// }else if(h2.nodeType === 3){
+//   console.log("This is a Text Node")
+// }
+
+// tar mane amra nodeType diye bujhte pari eta ki dhoroner node
+
+
+// nodeName, nodeValue and nodeType 
+
+const h2 = document.querySelector('h2')
+
+// for element node
+// console.log(h2.nodeName) // H2
+// console.log(h2.nodeValue) // null
+// console.log(h2.nodeType) // 1
+
+// for text node
+console.log(h2.childNodes) // NodeList(3) [text, comment]
+
+console.log(h2.firstChild.nodeName) // #text
+console.log(h2.firstChild.nodeValue) // Hello
+console.log(h2.firstChild.nodeType) // 3 
