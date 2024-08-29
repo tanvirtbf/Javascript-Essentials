@@ -5266,7 +5266,7 @@
 
 // nodeName, nodeValue and nodeType 
 
-const h2 = document.querySelector('h2')
+// const h2 = document.querySelector('h2')
 
 // for element node
 // console.log(h2.nodeName) // H2
@@ -5274,8 +5274,26 @@ const h2 = document.querySelector('h2')
 // console.log(h2.nodeType) // 1
 
 // for text node
-console.log(h2.childNodes) // NodeList(3) [text, comment]
+// console.log(h2.childNodes) // NodeList(3) [text, comment]
 
-console.log(h2.firstChild.nodeName) // #text
-console.log(h2.firstChild.nodeValue) // Hello
-console.log(h2.firstChild.nodeType) // 3 
+// console.log(h2.firstChild.nodeName) // #text
+// console.log(h2.firstChild.nodeValue) // Hello
+// console.log(h2.firstChild.nodeType) // 3 
+
+// // for comment node
+// console.log(h2.childNodes[1]) // comment node return 
+
+// console.log(h2.lastChild) // comment node
+
+// console.dir(h2.firstChild.nextSibling.nodeName) // #comment  
+// console.dir(h2.firstChild.nextSibling.nodeValue) // this is comment
+// console.dir(h2.firstChild.nextSibling.nodeType) // 8  
+
+
+// Example of change nodeValue 
+const ul = document.querySelector('ul')
+console.log(ul.childNodes) // NodeList(9) [text, li.list, text, li.list, text, li.list, text, li.list, text]
+console.log(ul.lastChild.previousSibling.previousSibling.previousSibling.firstChild.nodeValue) // Maymuna
+ul.lastChild.previousSibling.previousSibling.previousSibling.firstChild.nodeValue = 'Maymuna Ahmed'
+console.log(ul.lastChild.previousSibling.previousSibling.previousSibling.firstChild.nodeValue) // Maymuna Ahmed
+
