@@ -5029,9 +5029,9 @@
 // console.log(p.length) // 2 (karon p tag ase total 2 ta)
 
 // Convert HTMLCollection to Array (using Array.from())
-const allList = document.getElementsByClassName('list')
-var arr = Array.from( allList )
-console.log(arr)
+// const allList = document.getElementsByClassName('list')
+// var arr = Array.from( allList )
+// console.log(arr)
 
 // You can use the length property of the NodeList object to determine the number of elements with the specified tag name, then you can loop through all elements and extract the info you want
 
@@ -5074,7 +5074,6 @@ console.log(arr)
 // for(let i = 0; i<para.length; i++){
 //   console.log(para[i])
 // }
-
 
 // querySelector
 // The method querySelector() returns the first Element match of the specified selector, or group of selectors. If no matches are found, null is returned.
@@ -5170,5 +5169,40 @@ console.log(arr)
 // etc.....
 
 // Properties of Node Object (v.20)
+// 1. nodeName
+// 2. nodeValue
+// 3. nodeType
+// 4. textContent
+// 5. parentNode
+// 6. childNodes
+// 7. firstChild
+// 8. lastChild
+// 9. previousSibling
+// 10. nextSibling
 
 
+// 1. nodeName 
+// The nodeName read-only property returns the name of the current node as a string
+// Example :
+// const h2 = document.querySelector('h2')
+// console.dir(h2)
+// console.log(h2.nodeName) // H2
+
+// all of nodeName
+// CDATASection ---- "#cdata-section" 
+// Comment ---------- "#comment"
+// Document ---------- "#document"
+// DocumentFragment----- "#document-fragment"
+// DocumentType ------- The Value of DocumentType.name
+// Element --------- The value of Element.tagName
+// Entity ---------- The entity name
+// EntityReference -------- The name of entity reference
+// Notation ----------- The notation name
+// ProcessingInstruction ---------- The value of ProcessingInstruction.target
+// Text --------- "#text"
+
+// uporer nodeName gula vibinno node er nodeName er return value . niche kichu example deya holo...
+console.log(document.childNodes[0].nodeName) // html (html node chilo)
+console.log(document.body.childNodes[0].nodeName) // #text (text node chilo)
+console.log(document.body.childNodes[11].nodeName) // #comment (comment node chilo)
+console.log(document.body.childNodes[13].nodeName) // SCRIPT (script node chilo)
