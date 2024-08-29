@@ -5291,9 +5291,12 @@
 
 
 // Example of change nodeValue 
-const ul = document.querySelector('ul')
-console.log(ul.childNodes) // NodeList(9) [text, li.list, text, li.list, text, li.list, text, li.list, text]
-console.log(ul.lastChild.previousSibling.previousSibling.previousSibling.firstChild.nodeValue) // Maymuna
-ul.lastChild.previousSibling.previousSibling.previousSibling.firstChild.nodeValue = 'Maymuna Ahmed'
-console.log(ul.lastChild.previousSibling.previousSibling.previousSibling.firstChild.nodeValue) // Maymuna Ahmed
+// const ul = document.querySelector('ul')
+// console.log(ul.childNodes) // NodeList(9) [text, li.list, text, li.list, text, li.list, text, li.list, text]
+// console.log(ul.lastChild.previousSibling.previousSibling.previousSibling.firstChild.nodeValue) // Maymuna
+// ul.lastChild.previousSibling.previousSibling.previousSibling.firstChild.nodeValue = 'Maymuna Ahmed'
+// console.log(ul.lastChild.previousSibling.previousSibling.previousSibling.firstChild.nodeValue) // Maymuna Ahmed
+
+
+// Property of Attribute Object (v.21)
 
