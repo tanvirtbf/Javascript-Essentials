@@ -4926,31 +4926,27 @@
 
 
 // Private 
-class createUser{
-  #age
-  constructor(fname,lname,age){
-    this.firstName = fname;
-    this.lastName = lname;
-    this.#age = age;
-    console.log('Hello World')
-  }
-  getFullName(){
-    return this.firstName + " " + this.lastName
-  }
-  getBirthYear(){
-    return new Date().getFullYear() - this.#age
-  }
-}
-const user1 = new createUser('Tanvir','Ahmed',25)
-const user2 = new createUser('Sadia','Hatun',16)
+// class createUser{
+//   #age
+//   constructor(fname,lname,age){
+//     this.firstName = fname;
+//     this.lastName = lname;
+//     this.#age = age;
+//     console.log('Hello World')
+//   }
+//   getFullName(){
+//     return this.firstName + " " + this.lastName
+//   }
+//   getBirthYear(){
+//     return new Date().getFullYear() - this.#age
+//   }
+// }
+// const user1 = new createUser('Tanvir','Ahmed',25)
+// const user2 = new createUser('Sadia','Hatun',16)
 
-console.dir(user2.getFullName()) // Sadia Hatun
-console.log(user2.getBirthYear()) // 2008
-console.log(user2.#age) // error (karon eta private property)
-
-
-
-
+// console.dir(user2.getFullName()) // Sadia Hatun
+// console.log(user2.getBirthYear()) // 2008
+// console.log(user2.#age) // error (karon eta private property)
 
 
 
