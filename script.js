@@ -5251,6 +5251,7 @@
 // 4. Document Node er type holo 9. tar mane jodi document er type ber kora hoy tahole return value ashbe 9. jodi kono Node er return value 9 ashe tahole bujhte hobe seta Document Node.
 // 5. Document Type Node is 10. 
 // 6. Document Fragment Node is 11. 
+// 7. jekono attribute er nodeType holo 2.
 
 // Example of nodeType useCase : 
 // const h2 = document.querySelector('h2')
@@ -5299,4 +5300,60 @@
 
 
 // Property of Attribute Object (v.21)
+
+// for this element - <h2 class="hello" tanvir="ahmed">Hello</h2>
+// const h2 = document.querySelector('h2')
+// console.log(h2.attributes) // NamedNodeMap {0: class, 1: tanvir, class: class, tanvir: tanvir, length: 2}
+// console.log(h2.attributes[1].nodeName)  // tanvir
+// console.log(h2.attributes[0].nodeName) // class
+// console.log(h2.attributes[0].nodeValue) // hello
+// console.log(h2.attributes[1].nodeValue) // ahmed
+
+// console.log(h2.attributes.class.nodeName) // class
+// console.log(h2.attributes.tanvir.nodeName) // tanvir
+
+// console.log(h2.attributes.class.nodeName + ' = ' + h2.attributes.class.nodeValue) // class = hello
+// console.log(h2.attributes.tanvir.nodeName + ' = ' + h2.attributes.tanvir.nodeValue) // tanvir = ahmed
+
+// small project with property of attribute object
+// const btn = document.querySelector('button')
+
+// function changeBG(){
+//   const list = document.querySelectorAll('.list')
+//   for(let i = 0; i<list.length; i++){
+//     if(i%2==0){
+//       list[i].attributes[0].nodeValue = 'changeAtt'
+//     }
+//   }
+// }
+
+// btn.addEventListener('click',()=>{
+//   changeBG()
+// })
+
+// attributes length
+// const list = document.querySelectorAll('.list')
+// console.log(list[1].attributes.length) // 1 (that is class='hello')
+
+// *********Important Notes**********
+// nodeName,nodeValue ai 2 ta property deprecated hoye gese . jekono somoy off hoye jete pare . jodio akhno choltese 
+// nodeName er bodole name and nodeValue er bodole value property use korte hobe
+
+// Example : 
+// const list = document.querySelectorAll('.list')
+// for(let i = 0; i<list.length; i++){
+//   console.log(list[i].attributes[0].name) // class(4)
+//   console.log(list[i].attributes[0].value) // list(4)
+// }
+// console.log(list[0].attributes.class.name) // class
+// console.log(list[0].attributes.class.value) // list
+
+
+// Difference between Node of an Element and Element Node (v.22)
+
+
+
+
+
+
 
