@@ -5395,30 +5395,93 @@
 
 
 // Dom Traversal (v.23)
+// manually total 12 upaye dom traversal hoy 
+// 1. parentNode 
+// 2. parentElement 
+// 3. childNodes 
+// 4. children 
+// 5. firstChild 
+// 6. firstElementChild 
+// 7. lastChild 
+// 8. lastElementChild 
+// 9. previousSibling 
+// 10. previousElementSibling 
+// 11. nextSibling 
+// 12. nextElementSibling
 
-// parentNode - Returns Parent Node
 
-// parentElement - Returns parent element node
+// Theory of 12 Dom Traversal way
 
-// childNodes - Returns collection of an element's child nodes (including text and comment nodes) --- jodi kono element er childNodes ber kora hoy tahole sei element er vitor element node + text node + comment node etc sob dhoroner node list akare return hobe 
+// 1. parentNode - Returns Parent Node
 
-// children - Returns a collection of an elements child element node(do not include text and comment nodes) --- jodi kono element er children ber kora hoy tahole sei element er vitor sudhu element node node list akare return hobe . text node, comment node ei type er node return hoy na 
+// 2. parentElement - Returns parent element node
 
-// firstChild - Returns first child node of an element (it can be text or comment node)
+// 3. childNodes - Returns collection of an element's child nodes (including text and comment nodes) --- jodi kono element er childNodes ber kora hoy tahole sei element er vitor element node + text node + comment node etc sob dhoroner node list akare return hobe 
 
-// firstElementChild - Returns first child element node of an element 
+// 4. children - Returns a collection of an elements child element node(do not include text and comment nodes) --- jodi kono element er children ber kora hoy tahole sei element er vitor sudhu element node node list akare return hobe . text node, comment node ei type er node return hoy na 
 
-// lastChild - Returns last child node of an element (it can be text or comment node)
+// 5. firstChild - Returns first child node of an element (it can be text or comment node)
 
-// lastElementChild - Returns last child element node of an element 
+// 6. firstElementChild - Returns first child element node of an element 
 
-// previousSibling - Returns previous node of same level (it can be text or comment node)
+// 7. lastChild - Returns last child node of an element (it can be text or comment node)
 
-// previousElementSibling - Returns previous element node of same level
+// 8. lastElementChild - Returns last child element node of an element 
 
-// nextSibling - Returns next node of same level (it can be text or comment node)
+// 9. previousSibling - Returns previous node of same level (it can be text or comment node)
 
-// nextElementSibling - Returns next element of same level
+// 10. previousElementSibling - Returns previous element node of same level
+
+// 11. nextSibling - Returns next node of same level (it can be text or comment node)
+
+// 12. nextElementSibling - Returns next element of same level
+
+
+
+// Example of 12 Dom Traversal way
+
+// parentNode and parentElement
+// const ul = document.querySelector('ul')
+// console.log(ul.parentNode) // body
+// console.log(ul.parentElement) // body
+// console.log(ul.parentNode.parentNode) // html
+// console.log(ul.parentElement.parentElement) // html
+
+// childNodes and children
+// const ul = document.querySelector('ul')
+// console.log(ul.childNodes) // NodeList(11) [text, li.list, text, comment, text, li.list, text, li.list, text, li.list, text]
+// console.log(ul.children) // HTMLCollection(4) [li.list, li.list, li.list, li.list]
+
+// firstChild and firstElementChild
+// const ul = document.querySelector('ul')
+// console.log(ul.firstChild) // #text
+// console.log(ul.firstElementChild) // li.list
+// console.log(ul.firstChild.firstChild) // null (text node er vitor r kono node nei)
+// console.log(ul.firstElementChild.firstElementChild) // null (li er vitor r kono element nei)
+// console.log(ul.firstElementChild.firstChild) // #text (li er vitor element nei kintu text node ase)
+
+// lastChild and lastElementChild
+// const ul = document.querySelector('ul')
+// console.log(ul.lastChild) // #text (ul er moddhe last node holo text node. karon white space ase or line break ase tai oikhane text node create hoise)
+// console.log(ul.lastElementChild) // li.list (ul er moddhe last li element return hoise)
+
+// previousSibling and previousElementSibling and nextSibling and nextElementSibling
+// const ul = document.querySelector('ul')
+// console.log(ul.childNodes) // NodeList(11) [text, li.list, text, comment, text, li.list, text, li.list, text, li.list, text]
+// console.log(ul.children) // HTMLCollection(4) [li.list, li.list, li.list, li.list]
+// const li = document.querySelector('ul > li') // ul er first li return hoise
+// console.log(li.previousSibling) // #text node (karon ul er first node holo text node for line break white space . then li node)
+// console.log(li.previousElementSibling) // null (ul er first li er previous element nei)
+// console.log(li.nextSibling.nextSibling) // comment node
+// console.log(li.nextSibling.nextSibling.nextSibling) // text node
+// console.log(li.nextSibling.nextSibling.nextSibling.nextSibling) // second li node
+// console.log(li.nextSibling.nextSibling.nextSibling.nextSibling.nextElementSibling) // third li node
+// console.log(li.nextSibling.nextSibling.nextSibling.nextSibling.nextElementSibling.nextElementSibling) // fourth li node
+// console.log(li.nextSibling.nextSibling.nextSibling.nextSibling.nextElementSibling.nextElementSibling.nextElementSibling) // null (tarpor r kono element nai )
+// console.log(li.nextSibling.nextSibling.nextSibling.nextSibling.nextElementSibling.nextElementSibling.nextSibling) // text node 
+// console.log(li.nextSibling.nextSibling.nextSibling.nextSibling.nextElementSibling.nextElementSibling.nextSibling.nextSibling) // null 
+
+
 
 
 // parentNode and parentElement (v.24) 
@@ -5447,15 +5510,18 @@
 
 // You can use the length property of the NodeList object to determine the number of child nodes , then you can loop through all child nodes and extract the other info.
 
-
-
-
-
-
 // example of children and childNodes 
 // const ul = document.querySelector('ul')
+
 // console.log(ul.childNodes) // NodeList(11) [text, li.list, text, comment, text, li.list, text, li.list, text, li.list, text]
 // console.log(ul.children) // HTMLCollection(4) [li.list, li.list, li.list, li.list]
 
+// for(let i = 0; i<ul.childNodes.length; i++){
+//   console.log(ul.childNodes[i])
+// }
+
+// for(let i = 0; i<ul.children.length; i++){
+//   console.log(ul.children[i])
+// }
 
 
