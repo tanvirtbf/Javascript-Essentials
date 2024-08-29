@@ -5432,9 +5432,20 @@
 // element o jehetu ekta node tai parentNode diye jodi parent e kono element thake setao return kore . sudhu parthokko hocche parentElement diye only element return hoy kintu parentNode diye element node , text node , comment node , document node soho sob dhoroner node reutrn hoy
 
 
+// childNodes and children (v.25)
+
+// childNodes 
+// The childNodes read-only property returns a live NodeList of child nodes of the given element where the first child node is assigned index 0. childNodes includes all child nodes, including non-element nodes like text , comment or others non-element nodes
+
+// White space inside elements is considered as text , and text is considered as nodes.
+// Any whitespace will create a text node , from a single space to multiple spaces, returns, tabs and so on.
+// You can use the length property of the NodeList object to determine the number of child nodes , then you can loop through all child nodes and extract the other info.
 
 
+// children
+// The children property returns collection of child elements of the given element where the first child is assigned index 0. children includes only element node (no whitespace, text node , comment node etc)
 
+// You can use the length property of the NodeList object to determine the number of child nodes , then you can loop through all child nodes and extract the other info.
 
 
 
