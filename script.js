@@ -4963,7 +4963,7 @@
 // Geeky Shows Advance Javascript 
 // DOM definition (What is Document Object Model - v.3)
 // 1. The Document Object Model(DOM) is a Application Programming Interface (API) for HTML and XML documents.
-// 2. Wth the Document Object Model, Programmers can create and build documents, navigate their structure, and add, modify, or delete elements and content.
+// 2. With the Document Object Model, Programmers can create and build documents, navigate their structure, and add, modify, or delete elements and content.
 // 3. The DOM is an object-oriented representation of the web page, which can be modified with a scripting language such as javascript. 
 // 4. The DOM model represents a document with a logical tree.
 // 5. According to Document Object Model (DOM), everyt HTML-tag is an object. Nested tags are called "children" of the enclosing one. All operations on the DOM start with the document object. From it we can access any node.
@@ -4983,6 +4983,7 @@
 // 4. Document Node er type holo 9. tar mane jodi document er type ber kora hoy tahole return value ashbe 9. jodi kono Node er return value 9 ashe tahole bujhte hobe seta Document Node.
 // 5. Document Type Node is 10. 
 // 6. Document Fragment Node is 11. 
+
 
 // Node Relationship
 // 1. Parent
@@ -5013,6 +5014,7 @@
 // console.log(p) // <p id="geek">Hello Tanvir</p>
 // console.dir(p) // p Object
 
+
 // getElementsByTagName Method (v.6)
 // The method getElementsByTagName("Tag_Name") returns a live node list meaning that it updates itself with the DOM tree automatically, so modification of the DOM tree will be reflected in the returned collection. The returned Node List or Collection of Nodes can be accessed by index numbers starting with index 0. 
 // upore getElementById te kono nodeList or Collection return kore na, oikhane single object return kore . karon getElementById diye single element ke access kora jay . kintu getElementsByTagName er khetre same tag onkgula thakte pare . sob gulake list akare or collection akare return kore, like an array . tai index number diyeo access kora jay. 
@@ -5025,6 +5027,11 @@
 // console.log(p.geek) // <p id="geek">Hello Tanvir</p>
 // console.log(p.find) // <p id="find">Bye Tanvir</p>
 // console.log(p.length) // 2 (karon p tag ase total 2 ta)
+
+// Convert HTMLCollection to Array (using Array.from())
+const allList = document.getElementsByClassName('list')
+var arr = Array.from( allList )
+console.log(arr)
 
 // You can use the length property of the NodeList object to determine the number of elements with the specified tag name, then you can loop through all elements and extract the info you want
 
