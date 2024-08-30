@@ -5525,3 +5525,7 @@
 // }
 
 
+
+// Create Element Node
+let newElement = document.createElement('h3')
+console.log(newElement)
