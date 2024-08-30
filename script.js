@@ -5533,15 +5533,34 @@
 
 // Create Text Node
 
-let newTextNode = document.createTextNode('Hello, This is Text Node!')
-console.dir(newTextNode)
-console.log(newTextNode) 
-console.log(newTextNode.nodeName)
-console.log(newTextNode.nodeValue)
-console.log(newTextNode.length)
+// let newTextNode = document.createTextNode('Hello, This is Text Node!')
+// console.dir(newTextNode)
+// console.log(newTextNode) 
+// console.log(newTextNode.nodeName)
+// console.log(newTextNode.nodeValue)
+// console.log(newTextNode.length)
 
 // document object er vitor createTextNode nam e ekta function ase jeta ekta parameter recieve kore . jei parameter string e pass kora hoy. tarpor sei parameter niye createTextNode function ta ekta textNode create kore return kore
 
 
+// Create Comment Node
 
+let newCommentNode = document.createComment()
 
+// 24000 
+
+// nupur - 1000
+// dokan - 1500
+// dhar - 2000
+// busVara - 2000
+// wifi - 500
+// doctor+medicine - 4000
+// bashay - 4000
+// healthy food - 5000
+// course - 1000
+// Total : 21000
+
+// badam + khejur - 1500 
+// dudh - 1000
+// fruits - 1500
+// nasta - 1000
