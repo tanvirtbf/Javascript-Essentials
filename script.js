@@ -5529,3 +5529,5 @@
 // Create Element Node
 let newElement = document.createElement('h3')
 console.log(newElement)
+
+// document object er vitor createElement nam e ekta function ase jeta ekta parameter recieve kore . jei parameter string e pass korte hoy and sei parameter obosshoi obosshoi kono html er valid tag hote hobe , jemon h1,h2,h3,p,a,span,img...etc . tarpor sei parameter niye createElement function ta sei parameter jei html tag er sathe match kore sei html tag ta create kore sei tag return kore . return korar somoy sei tag er moddhe kono node thake na . mane empty thake
