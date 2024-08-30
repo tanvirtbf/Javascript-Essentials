@@ -5545,7 +5545,12 @@
 
 // Create Comment Node
 
-let newCommentNode = document.createComment()
+// let newCommentNode = document.createComment('This is comment')
+// console.log(newCommentNode)
+// console.dir(newCommentNode)
+// console.log(newCommentNode.textContent)
+// console.log(newCommentNode.nodeName)
+// console.log(newCommentNode.nodeValue)
 
 // 24000 
 
