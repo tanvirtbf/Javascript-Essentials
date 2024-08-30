@@ -5524,10 +5524,24 @@
 //   console.log(ul.children[i])
 // }
 
-
-
 // Create Element Node
-let newElement = document.createElement('h3')
-console.log(newElement)
+// let newElement = document.createElement('h3')
+// console.log(newElement)
 
 // document object er vitor createElement nam e ekta function ase jeta ekta parameter recieve kore . jei parameter string e pass korte hoy and sei parameter obosshoi obosshoi kono html er valid tag hote hobe , jemon h1,h2,h3,p,a,span,img...etc . tarpor sei parameter niye createElement function ta sei parameter jei html tag er sathe match kore sei html tag ta create kore sei tag return kore . return korar somoy sei tag er moddhe kono node thake na . mane empty thake
+
+
+// Create Text Node
+
+let newTextNode = document.createTextNode('Hello, This is Text Node!')
+console.dir(newTextNode)
+console.log(newTextNode) 
+console.log(newTextNode.nodeName)
+console.log(newTextNode.nodeValue)
+console.log(newTextNode.length)
+
+// document object er vitor createTextNode nam e ekta function ase jeta ekta parameter recieve kore . jei parameter string e pass kora hoy. tarpor sei parameter niye createTextNode function ta ekta textNode create kore return kore
+
+
+
+
