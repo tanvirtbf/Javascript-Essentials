@@ -5180,6 +5180,9 @@
 // 9. previousSibling
 // 10. nextSibling
 
+// ****Important Notes****
+// prottekta node er vitor uporer 10 ta object thake . segula diye node er vibinno kaj kora hoy . jemon nodeName diye sei node er name ber kora hoy . nodeValue diye sei node er nijossho kono value thakle seta ber kora hoy . nodeType diye sei node er type ber kora hoy . textContent diye sei node er vitor sob text ber kora hoy . parentNode diye sei node er parent node ber kora hoy . childNodes diye sei node er vitor joto gula node ase sob ber kora hoy . firstChild diye sei node er vitor first child node ber kora hoy...and so on.
+
 
 // 1. nodeName 
 // The nodeName read-only property returns the name of the current node as a string
@@ -5552,4 +5555,10 @@
 // console.log(newCommentNode.nodeName)
 // console.log(newCommentNode.nodeValue)
 
-// Document Fragment
+// ********________**********
+// akhn porjonto ja ja sikhlam...
+// 1. Element select 
+// 2. Node Object 
+// 3. Attribute Object
+// 4. Dom Traversal
+// 5. create node 
