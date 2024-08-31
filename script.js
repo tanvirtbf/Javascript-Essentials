@@ -5803,7 +5803,35 @@
 // ul er vitor onk gula list er moddhe 1 no. index e jei li ase tar age insert kora hoise df ke 
 
 
+// insertAdjacentElement() method (v.42)
+// kono ekta element er age and pore , element er vitor childNodes er age and pore kono element insert korar jonno ai method use kora hoy
+
+// targetElement.insertAdjacentElement('position',element)
+// targetElement = jei element er ashe pashe ami kono element insert korte chai seta 
+// element = jei element ami insert korte chai seta . existing kono element hole seta move hoye ashbe 
+// 'position' = 'beforebegin' | 'afterbegin' | 'beforeend' | afterend'
+// beforebegin = (this)<P>hello</p>
+// afterbegin = <p>(this)hello</p> 
+// beforeend = <P>hello(this)</p>
+// afterend = <P>hello</p>(this)
+
+// Example : 
+// document.querySelector('ul').insertAdjacentElement('afterbegin',document.querySelector('h1'))
+
+// Another example : 
+// const parentNode = document.querySelector('ul')
+// const element = document.querySelector('h1')
+// parentNode.insertAdjacentElement('afterbegin',element)
+// parentNode.insertAdjacentElement('beforebegin',element)
+// parentNode.insertAdjacentElement('afterbegin',element)
+// parentNode.insertAdjacentElement('afterend',element)
 
 
-
+// insertAdjacentHTML mehtod 
+// const parentNode = document.querySelector('ul')
+// const element = document.querySelector('h1')
+// parentNode.insertAdjacentElement('afterbegin',element)
+// parentNode.insertAdjacentElement('beforebegin',element)
+// parentNode.insertAdjacentElement('afterbegin',element)
+// parentNode.insertAdjacentElement('afterend',element)
 
