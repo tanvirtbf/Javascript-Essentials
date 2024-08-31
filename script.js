@@ -5612,3 +5612,24 @@
 // ul.appendChild(newElement)
 // document.querySelector('ul > p').appendChild(newTextNode)
 
+// Append Comment Node
+
+// const ul = document.querySelector('ul')
+// const newCommentNode = document.createComment('I am Comment in ul')
+// ul.appendChild(newCommentNode)
+
+// Append Element Node , Text Node and Comment Node Together
+// A simple Project (ekta element create korte hobe + comment and text node create korte hobe . then seta kono div section e append korte hobe )
+
+const ul = document.querySelector('ul')
+const newElement = document.createElement('h1')
+const newTextNode = document.createTextNode('I Am Tanvir!')
+const newCommentNode = document.createComment('This is Comment!')
+ul.appendChild(newElement)
+document.querySelector('ul > h1').appendChild(newTextNode)
+ul.appendChild(newCommentNode)
+
+
+
+
+
