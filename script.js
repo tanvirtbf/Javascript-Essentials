@@ -5654,3 +5654,28 @@
 
 // document.querySelector('ul').appendChild(df)
 // console.log(df)
+
+
+// Normalize() method
+
+const p = document.querySelector('p')
+
+p.appendChild(document.createTextNode('I am'))
+p.appendChild(document.createTextNode(' Tanvir Ahmed'))
+p.appendChild(document.createTextNode(' And I am a Software Engineer'))
+
+console.log(p)
+// <p>
+// "I am"
+// " Tanvir Ahmed"
+// " And I am a Software Engineer"
+// </p>
+
+console.log(p.childNodes) // NodeList(3) [text, text, text]
+
+p.normalize()
+
+console.log(p.childNodes) // NodeList [text]
+
+console.log(p)
+// <p>I am Tanvir Ahmed And I am a Software Engineer</p>
