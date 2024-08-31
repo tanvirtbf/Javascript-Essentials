@@ -5621,15 +5621,36 @@
 // Append Element Node , Text Node and Comment Node Together
 // A simple Project (ekta element create korte hobe + comment and text node create korte hobe . then seta kono div section e append korte hobe )
 
-const ul = document.querySelector('ul')
-const newElement = document.createElement('h1')
-const newTextNode = document.createTextNode('I Am Tanvir!')
-const newCommentNode = document.createComment('This is Comment!')
-ul.appendChild(newElement)
-document.querySelector('ul > h1').appendChild(newTextNode)
-ul.appendChild(newCommentNode)
+// const ul = document.querySelector('ul')
+// const newElement = document.createElement('h2')
+// const newTextNode = document.createTextNode('I Am Tanvir!')
+// const newCommentNode = document.createComment('This is Comment!')
+// // console.log(newElement.appendChild(newTextNode))
+// ul.appendChild(newElement)
+// document.querySelector('ul > h1').appendChild(newTextNode)
+// ul.appendChild(newCommentNode)
 
+// Document Fragment 
+// amra manually ekta ekta kore element create kore tarpor append kori , then modify kori ekta ekta kore . sob gula kori main parent er upor , or main html file er upor . kintu amra chaile sob kichu eksathe ekta alada jaygay korte pari , then sob sesh hole eksathe oita append korte pari . tar jonno use hoy Document Fragment
 
+// Document Fragment jokhon main html e append kora hoy tokhon automatically fragment empty hoye jay . 
+// Document Fragment ekdom main html flow er baire create hoy 
 
+// A Mini Project 
+// Project statement : h2 and p tag create kore tate text node add kore then eta ekta fragment er moddhe append korte hobe . then oi fragment final html e append kore dibe
+// const h2 = document.createElement('h2')
+// const p = document.createElement('p')
+// const comment = document.createComment('This is Comment!')
 
+// h2.textContent = 'I am H2'
+// p.textContent = 'I am p'
 
+// const df = document.createDocumentFragment()
+
+// df.appendChild(h2)
+// df.appendChild(p)
+
+// console.log(df)
+
+// document.querySelector('ul').appendChild(df)
+// console.log(df)
