@@ -5724,8 +5724,46 @@
 // // <p>
 //   // Tanvir Ahmed
 //   // <!--This is Comment-->
-//   // Sadia Ahmed
+//   // May Ahmed
 // // </p>
 
+
+// insertBefore() Method 
+// The insertBefore() method is used to insert a node before the reference node as a child of a specified parent node. 
+// if the given child is a reference to an existing node in the document, insertBefore() moves it from its current position to the new position.
+// if referenceNode is null, the new Node is inserted at the end of the list of child nodes.
+
+// Syntax : 
+// parentNode.insertBefore(newNode, referenceNode)
+// parentNode = jei jaygay kono node ante chan sei jayga ta jei parent node er under e seta 
+// newNode = jei node ta insert korte chan seta (hote pare new created node or hote pare existing kono node or clone node)
+// referenceNode = jei node er thik age(before) newNode boshaite chan seta
+
+// Example : 
+// const parentNode = document.querySelector('body')
+// const newNode = document.querySelector('h2')
+// const referenceNode = document.querySelector('button')
+
+// parentNode.insertBefore(newNode,referenceNode) // h2 tag aisha button er thik age boisha gese move hoy, and h2 age jekhane chilo sekhane nei . seta move hoye aisha porse
+
+// insert new node Example : 
+// const newElementNode = document.createElement('h2')
+// newElementNode.textContent = 'Hello World'
+// const parentNode = document.querySelector('body')
+// const referenceNode = document.querySelector('button')
+
+// parentNode.insertBefore(newElementNode,referenceNode) // success
+
+// Notes for insertBefore method 
+// jodi kono specific element er thik age kono element boshaite chai tahole insertBefore method use kora hoy . jodi existing kono node dhore insert kora hoy tahole move kore chole ashe oi jayga chere . 
+// jodi referenceNode na dei tahole parentNode er ekdom last e giya add hoye jay 
+
+// without reference Node  Example : 
+// const newElementNode = document.createElement('h2')
+// newElementNode.textContent = 'Hello World'
+// const parentNode = document.querySelector('body')
+// const referenceNode = document.querySelector('button')
+
+// parentNode.insertBefore(newElementNode,null) // insert last of body element
 
 
