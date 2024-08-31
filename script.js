@@ -5562,3 +5562,53 @@
 // 3. Attribute Object
 // 4. Dom Traversal
 // 5. create node 
+
+
+
+// Append Element Node
+
+// some rules : 
+
+// 1. The appendChild(Child_Node) method is used to add a node to the end of the list of children of a specified parent node. (jei parent node er vitor ami append korbo setar ekdom last e amr element append hobe)
+
+// 2. If the given child is a reference to an existing node in the docuent, appendChild() moves it from its current position to the new position. This method returns the new child node. (jodi html file er existing kono element ke select kore setakeii onno kothau append korte chai tahole obosshoi seta move hoye ashbe notun jaygay . purano jayga theke seta muche jabe )
+
+// 3. appendChild method use kore ami element ke append korte parbo + comment ke append korte parbo + text ke append korte parbo + document fragment ke append korte parbo 
+
+// syntax : 
+// 1. appendChild(child_node)
+// 2. parentNode.appendChild(child_node)
+// Example : 
+// const h2 = document.querySelector('h2')
+// const ul = document.querySelector('ul')
+// h2.appendChild(ul) // h2 tag er vitor last e ul tag er sob kichu append kora hoise + ul age jei jaygay chilo sekhane r nei 
+// ul.appendChild(h2) // ul tag er last e h2 tag aisha porse move hoye..
+
+// existing element ke append kore move kore niye asha onno ekta element er vitor...
+// document.querySelector('ul').appendChild(document.querySelector('h2'))
+
+// new element create kore tarpor kothau append kora...
+// const newElement = document.createElement('h3')
+// const ul = document.querySelector('ul')
+// ul.appendChild(newElement) // ul er last e ekta h3 element add hoye gese jar kono childNodes nei 
+// console.dir(newElement.nodeValue)
+// const newTextNode = document.createTextNode('Hello World!!!')
+// newElement.appendChild(newTextNode) // akhn ul er last e h3 er moddhe Hello World!!! text aisha porse
+
+
+// Append Text Node
+
+// Create a new Text Node and append in old element 
+// const h1 = document.querySelector('h1')
+// const newTextNode = document.createTextNode('I am H1')
+// h1.appendChild(newTextNode)
+// OR..
+// document.querySelector('h1').appendChild(document.createTextNode('I am H1'))
+
+// Create a new Element and append a new Text Node
+// const newElement = document.createElement('p')
+// const newTextNode = document.createTextNode('I am Paragraph')
+// const ul = document.querySelector('ul')
+// ul.appendChild(newElement)
+// document.querySelector('ul > p').appendChild(newTextNode)
+
