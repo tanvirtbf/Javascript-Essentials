@@ -5658,24 +5658,70 @@
 
 // Normalize() method
 
+// jodi onk gula node ke eksathe merge kore ekta node banaite chai seikhetre normalize() method use kora hoy 
+
+// A Project using Normalize method
+
+// const p = document.querySelector('p')
+
+// p.appendChild(document.createTextNode('I am'))
+// p.appendChild(document.createTextNode(' Tanvir Ahmed'))
+// p.appendChild(document.createTextNode(' And I am a Software Engineer'))
+
+// console.log(p)
+// // <p>
+// // "I am"
+// // " Tanvir Ahmed"
+// // " And I am a Software Engineer"
+// // </p>
+
+// console.log(p.childNodes) // NodeList(3) [text, text, text]
+
+// p.normalize()
+
+// console.log(p.childNodes) // NodeList [text]
+
+// console.log(p)
+// // <p>I am Tanvir Ahmed And I am a Software Engineer</p>
+
+// Notes : upore 3 ta alada alada text node create kore append kora hoise . jokhon p er childNodes khuja hoy tokhon 3 ta text node ashe . jodi ami sob gula text chai tahole amk loop chaliye sob gula text nite hoito . kintu ami jokhon normalize method use kore ekta text node banailam tokhon seta traverse kora onk easy hoye gese..
+
+// Again project using Normalize method 
+// const h2 = document.querySelector('h2')
+
+// console.log(h2.childNodes)
+
+// console.log(h2.childNodes)
+
+// Again Test 
 const p = document.querySelector('p')
 
-p.appendChild(document.createTextNode('I am'))
-p.appendChild(document.createTextNode(' Tanvir Ahmed'))
-p.appendChild(document.createTextNode(' And I am a Software Engineer'))
+const text1 = document.createTextNode('Tanvir')
+const text2 = document.createTextNode(' Ahmed')
+const comment1 = document.createComment('This is Comment')
+const text3 = document.createTextNode('Sadia ')
+const text4 = document.createTextNode('Ahmed')
 
+const arr = [text1,text2,comment1,text3,text4]
+console.log(arr)
+
+for(let i = 0; i<arr.length; i++){
+  p.appendChild(arr[i])
+}
 console.log(p)
 // <p>
-// "I am"
-// " Tanvir Ahmed"
-// " And I am a Software Engineer"
+  // Tanvir 
+  // Ahmed
+  // <!--This is Comment-->
+  // Sadia 
+  // Ahmed
 // </p>
-
-console.log(p.childNodes) // NodeList(3) [text, text, text]
 
 p.normalize()
 
-console.log(p.childNodes) // NodeList [text]
-
 console.log(p)
-// <p>I am Tanvir Ahmed And I am a Software Engineer</p>
+// <p>
+  // Tanvir Ahmed
+  // <!--This is Comment-->
+  // Sadia Ahmed
+// </p>
