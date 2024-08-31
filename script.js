@@ -5766,4 +5766,44 @@
 
 // parentNode.insertBefore(newElementNode,null) // insert last of body element
 
+// insertBefore() method with textNode 
+// const textNode = document.querySelector('h1').childNodes[0]
+// const parentNode = document.querySelector('p')
+// const refNode = null
+// parentNode.insertBefore(textNode,refNode)
+// p node khali chilo, sekhane h1 theke text niye p te lagaiya dilam
+
+// insertBefore() method with CommentNode
+// const newCommentNode = document.createComment('This is comment')
+// const parentNode = document.body
+// const refNode = document.querySelector('ul')
+// parentNode.insertBefore(newCommentNode,refNode)
+
+// insertBefore with Document Fragment 
+// const df = document.createDocumentFragment()
+// const h1 = document.createElement('h1')
+// const h2 = document.createElement('h2')
+// const h3 = document.createElement('h3')
+// const h4 = document.createElement('h4')
+// const h5 = document.createElement('h4')
+// const h6 = document.createElement('h4')
+// h1.textContent = "Hello World"
+// h2.textContent = "Hello World"
+// h3.textContent = "Hello World"
+// h4.textContent = "Hello World"
+// h5.textContent = "Hello World"
+// h6.textContent = "Hello World"
+// df.appendChild(h1)
+// df.appendChild(h2)
+// df.appendChild(h3)
+// df.appendChild(h4)
+// df.appendChild(h5)
+// df.appendChild(h6)
+// document.querySelector('ul').insertBefore(df,document.querySelectorAll('.list')[1])
+// ul er vitor onk gula list er moddhe 1 no. index e jei li ase tar age insert kora hoise df ke 
+
+
+
+
+
 
