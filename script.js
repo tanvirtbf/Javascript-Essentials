@@ -4798,9 +4798,6 @@
 // console.log(user1.getFullName()) // Inheit hoye getFullName access hoise tai user1 er por __proto__ deya lage na
 
 
-
-
-
 // ********Very Very Important Notes*************
 // jokhon new keyword diye kono function call kora hoy tokhon seta obosshoi obosshoi ekta object return korbe . oi function er moddhe ami ja kisu kori na kno sob kichu oi object er moddhe set kora thakbe . jemon niche createUser er moddhe this use kore firstname, lastname , age etc set kora hoise . ja set kora hoise sob kichu oi object er moddhe thakbe jeta new keyword use kore function call korle return kore . tarpor jodi oi function use kore kono object create kora hoy tokhon automatic sei object er sob property tar jonno alada vabe duplicate hoye return hoy . evabe user1, user2, user3.... onk object create hoy . sob gular jonnoi er vitorer sob property copy hoye ashe . jar karone user1.firstName change korle user2 er firstName change hoy na . function object array string integer jai set kori na kno seta copy hoye ashe user1, user2 egular moddhe . 
 // kintu...
@@ -4845,6 +4842,8 @@
 // user1.fullArray = [1,2,3]
 // console.log(user2.fullArray)
 
+
+
 // Classes
 // class createUser {
 //   getFullName (fullName){
@@ -4862,6 +4861,29 @@
 
 // akhn porjonto amader jei somossha ta chilo createUser er prototype er vitor kono method or property set korte hoito . class just ai problem tai solve kore . baki sob ager process eii hocche . 
 // upore getFullName function ta createUser er prototype er vitor set hoise . jekhane age getBirthYear function jevabe create korsi sevabe getFullName function create kortam prototype er moddhe.
+
+// Another Example : 
+// class createUser{
+//   getBirthYear(age){
+//     return new Date().getFullYear() - age
+//   }
+//   getFullName(name){
+//     return name
+//   }
+// }
+// // createUser.prototype.getBirthYear= function(age){
+// //   return new Date().getFullYear() - age
+// // }
+// // createUser.prototype.getFullName = function(name){
+// //   return name
+// // }
+// const user1 = new createUser('Tanvir','Ahmed',25)
+// const user2 = new createUser('Sadia','Ahmed',16)
+// console.log(user1.getBirthYear(25))
+// console.log(user2.getBirthYear(16))
+// console.log(user1.getFullName('Tanvir Ahmed'))
+// console.log(user2.getFullName('Sadia Ahmed'))
+
 
 // class createUser{
 
@@ -4882,13 +4904,14 @@
 // console.log(user2.getFullName===user1.getFullName) // true
 
 
-// constructor functin 
+// constructor function 
 // upore createUser() function call korar somoy tar argument e 'Tanvir','Ahmed' and 25 deya ase . egula kothay jabe ? egula kivabe createUser function e access korbo ? 
 // Answer is Constructor function 
 
 // What is Constructor function ? 
 // jokhon kono class ke call kora hoy tokhon sei class er baki method gula sei class er prototype er moddhe set hoye jay . kintu kono kichu execute hoy na . execute hoy sudhu constructor function . jodi ami kono class ke new keyword diye kono class ke call kori tokhon constructor function sathe sathe automatic call hoy and tar vitor sob code execute hoy . 
 // upore createUser er moddhe argument gula constructor function recieve korte pare 
+
 
 // Example of Constructor function 
 // class createUser{
@@ -5825,7 +5848,6 @@
 // parentNode.insertAdjacentElement('beforebegin',element)
 // parentNode.insertAdjacentElement('afterbegin',element)
 // parentNode.insertAdjacentElement('afterend',element)
-
 
 // insertAdjacentHTML mehtod 
 // const parentNode = document.querySelector('ul')
