@@ -5659,6 +5659,7 @@
 // Normalize() method
 
 // jodi onk gula node ke eksathe merge kore ekta node banaite chai seikhetre normalize() method use kora hoy 
+// pashapashi thaka node jodi same categoryr node hoy tahole seta normalize hoy . tar mane holo Adjacent node gulaii normalize hobe 
 
 // A Project using Normalize method
 
@@ -5694,34 +5695,37 @@
 // console.log(h2.childNodes)
 
 // Again Test 
-const p = document.querySelector('p')
+// const p = document.querySelector('p')
 
-const text1 = document.createTextNode('Tanvir')
-const text2 = document.createTextNode(' Ahmed')
-const comment1 = document.createComment('This is Comment')
-const text3 = document.createTextNode('Sadia ')
-const text4 = document.createTextNode('Ahmed')
+// const text1 = document.createTextNode('Tanvir')
+// const text2 = document.createTextNode(' Ahmed')
+// const comment1 = document.createComment('This is Comment')
+// const text3 = document.createTextNode('Sadia ')
+// const text4 = document.createTextNode('Ahmed')
 
-const arr = [text1,text2,comment1,text3,text4]
-console.log(arr)
+// const arr = [text1,text2,comment1,text3,text4]
+// console.log(arr)
 
-for(let i = 0; i<arr.length; i++){
-  p.appendChild(arr[i])
-}
-console.log(p)
-// <p>
-  // Tanvir 
-  // Ahmed
-  // <!--This is Comment-->
-  // Sadia 
-  // Ahmed
-// </p>
+// for(let i = 0; i<arr.length; i++){
+//   p.appendChild(arr[i])
+// }
+// console.log(p)
+// // <p>
+//   // Tanvir 
+//   // Ahmed
+//   // <!--This is Comment-->
+//   // Sadia 
+//   // Ahmed
+// // </p>
 
-p.normalize()
+// p.normalize()
 
-console.log(p)
-// <p>
-  // Tanvir Ahmed
-  // <!--This is Comment-->
-  // Sadia Ahmed
-// </p>
+// console.log(p)
+// // <p>
+//   // Tanvir Ahmed
+//   // <!--This is Comment-->
+//   // Sadia Ahmed
+// // </p>
+
+
+
