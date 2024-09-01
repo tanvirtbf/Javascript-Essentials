@@ -6049,3 +6049,24 @@
 // // set data 
 // h1.childNodes[0].data = 'Hello Tanvir Ahmed'
 // console.log(h1.childNodes[0].data) // Hello Tanvir Ahmed
+
+
+// Append Data in Text Node 
+// kono text node er last e onno kono new text add korar jonno use hoy appendData method 
+// eta ekdom similar appendChild er moto
+
+// const newTextNode = document.createTextNode('Hello ')
+// newTextNode.appendData("World!")
+// console.log(newTextNode) // Hello World!
+
+// // Example : (Existing text node)
+// <h1 id="geek" class="first second">Hello World!</h1>
+
+// const h1 = document.querySelector('h1')
+// console.log(h1) // <h1 id="geek" class="first second">Hello World!</h1>
+// h1.childNodes[0].appendData(" My name is Tanvir")
+// console.log(h1) // <h1 id="geek" class="first second">Hello World! My name is Tanvir</h1>
+
+
+
+
