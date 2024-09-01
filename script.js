@@ -6114,3 +6114,26 @@
 
 // const newTextNode = document.createTextNode('Hello World')
 // console.log(newTextNode.substringData(1,4)) // ello 
+
+
+// Difference Between HTML Attribute and DOM property (v.60)
+
+// <p id='para' class='classPara' tanvir="ahmed">Hello Para</p>
+// uporer p tag er attribute holo id, class and tanvir
+// now access...
+
+// console.log(document.querySelector('p').id ) // para
+// console.log(document.querySelector('p').className ) // classPara
+// console.log(document.querySelector('p').tanvir ) // ahmed
+// console.log(document.querySelector('p').title ) // null 
+
+
+
+
+
+
+
+
+
+
+
