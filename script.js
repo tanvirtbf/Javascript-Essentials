@@ -4949,32 +4949,32 @@
 
 
 // Private 
-class createUser{
-  #age // jekono private variable niye kaj korar age eta ke age evabe declare korte hoy # diye
-  constructor(fname,lname,age){
-    this.firstName = fname;
-    this.lastName = lname;
-    this.#age = age;
-    console.log('Hello World')
-  }
-  h1 = 'hello world!' // (ai variable ta user1, user2, user3... sob variable e aisha porbe)
-  #h2 = 'Hello'
-  getFullName(){
-    return this.firstName + " " + this.lastName
-  }
-  getBirthYear(){
-    return new Date().getFullYear() - this.#age
-  }
-  #privateFun(){
-    console.log('Hello Private Function')
-  }
-}
-const user1 = new createUser('Tanvir','Ahmed',25)
-const user2 = new createUser('Sadia','Hatun',16)
+// class createUser{
+//   #age // jekono private variable niye kaj korar age eta ke age evabe declare korte hoy # diye
+//   constructor(fname,lname,age){
+//     this.firstName = fname;
+//     this.lastName = lname;
+//     this.#age = age;
+//     console.log('Hello World')
+//   }
+//   h1 = 'hello world!' // (ai variable ta user1, user2, user3... sob variable e aisha porbe)
+//   #h2 = 'Hello'
+//   getFullName(){
+//     return this.firstName + " " + this.lastName
+//   }
+//   getBirthYear(){
+//     return new Date().getFullYear() - this.#age
+//   }
+//   #privateFun(){
+//     console.log('Hello Private Function')
+//   }
+// }
+// const user1 = new createUser('Tanvir','Ahmed',25)
+// const user2 = new createUser('Sadia','Hatun',16)
 
-console.dir(user2.getFullName()) // Sadia Hatun
-console.log(user2.getBirthYear()) // 2008
-// console.log(user2.#age) // error (karon eta private property)
+// console.dir(user2.getFullName()) // Sadia Hatun
+// console.log(user2.getBirthYear()) // 2008
+// // console.log(user2.#age) // error (karon eta private property)
 
 
 
@@ -5861,4 +5861,24 @@ console.log(user2.getBirthYear()) // 2008
 // parentNode.insertAdjacentElement('beforebegin',element)
 // parentNode.insertAdjacentElement('afterbegin',element)
 // parentNode.insertAdjacentElement('afterend',element)
+
+
+// Document Fragment Revision 
+const h1 = document.createElement('h1')
+const image = document.createElement('img')
+const textNode = document.createTextNode('Hello World!')
+
+h1.appendChild(textNode)
+image.setAttribute('src','./image/me1.JPG')
+image.style.width = '200px'
+
+const df = document.createDocumentFragment()
+df.appendChild(h1)
+df.appendChild(image)
+
+const ul = document.querySelector('ul')
+ul.appendChild(df)
+
+
+
 
