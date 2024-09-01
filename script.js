@@ -6107,4 +6107,10 @@
 // console.log(h1.childNodes) // NodeList(2) [text, text]
 
 
+// SubstringData Method (v.59)
+// kono text node er vitor substring niye seta ke return kore dey 
+// Syntax : 
+// TextNode.substringData(2,5)
 
+// const newTextNode = document.createTextNode('Hello World')
+// console.log(newTextNode.substringData(1,4)) // ello 
