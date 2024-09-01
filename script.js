@@ -6068,5 +6068,10 @@
 // console.log(h1) // <h1 id="geek" class="first second">Hello World! My name is Tanvir</h1>
 
 
+// Delete Data in Text Node (v.55)
+// This method is used to delete or remove text content from a text node and comment node. It deletes specified length of characters starting from index defined in start. 
+
+// Syntax : 
+// textNode.deleteData(start,length)
 
 
