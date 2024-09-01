@@ -6074,4 +6074,18 @@
 // Syntax : 
 // textNode.deleteData(start,length)
 
+// const newTextNode = document.createTextNode('Hello World!')
+// newTextNode.deleteData(2,2)
+// console.log(newTextNode) // Heo World!
+
+
+// Insert Data in Text Node(v.56)
+
+// <h1 id="geek" class="first second">Hello World!</h1>
+// const h1 = document.querySelector('h1')
+// const h1TextNode = h1.childNodes[0]
+// h1TextNode.insertData(5,'HIIII') // text node er 5 number index theke HIIII text insert kore dibe
+
+
+// Replace data in Text Node (v.57)
 
