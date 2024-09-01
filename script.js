@@ -6091,6 +6091,20 @@
 
 // Syntax : 
 // textNode.replaceData(start,length,string)
-const textNode = document.createTextNode('Hello World')
-textNode.replaceData(0,5,'Hi')
-console.log(textNode) // Hi World
+// const textNode = document.createTextNode('Hello World')
+// textNode.replaceData(0,5,'Hi')
+// console.log(textNode) // Hi World
+
+
+// Split Text in Text Node (v.58)
+// ekta text node ke 2 or tar theke beshi text node e convart korar jonno ai method use hoy 
+
+// const h1 = document.querySelector('h1')
+// console.log(h1.childNodes) // NodeList [text]
+// // ekhane h1 er vitor text gula ektaii node er under e ase .
+
+// h1.childNodes[0].splitText(2) // splitText(2) mane holo textNode er 2 number index theke vag kore deya hok . jar jonno first node is "He" and second node is llo World!
+// console.log(h1.childNodes) // NodeList(2) [text, text]
+
+
+
