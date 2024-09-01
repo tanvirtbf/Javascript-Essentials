@@ -5863,21 +5863,22 @@
 // parentNode.insertAdjacentElement('afterend',element)
 
 
-// Document Fragment Revision 
-const h1 = document.createElement('h1')
-const image = document.createElement('img')
-const textNode = document.createTextNode('Hello World!')
+// Normalize method Revision 
 
-h1.appendChild(textNode)
-image.setAttribute('src','./image/me1.JPG')
-image.style.width = '200px'
+const text1 = document.createTextNode('Hello')
+const text2 = document.createTextNode(' World!')
+const br = document.createElement('br')
+const comment = document.createComment('I am Comment')
+const text3 = document.createTextNode('My name is ')
+const text4 = document.createTextNode('Tanvir Ahmed')
+
+const nodeArray = [text1,text2,br,comment,text3,text4]
 
 const df = document.createDocumentFragment()
-df.appendChild(h1)
-df.appendChild(image)
+nodeArray.forEach((item)=> df.appendChild(item))
+console.log(df)
 
-const ul = document.querySelector('ul')
-ul.appendChild(df)
+
 
 
 
