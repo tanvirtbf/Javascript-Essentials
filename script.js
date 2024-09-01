@@ -6089,3 +6089,8 @@
 
 // Replace data in Text Node (v.57)
 
+// Syntax : 
+// textNode.replaceData(start,length,string)
+const textNode = document.createTextNode('Hello World')
+textNode.replaceData(0,5,'Hi')
+console.log(textNode) // Hi World
