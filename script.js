@@ -6115,7 +6115,6 @@
 // const newTextNode = document.createTextNode('Hello World')
 // console.log(newTextNode.substringData(1,4)) // ello 
 
-
 // Difference Between HTML Attribute and DOM property (v.60)
 
 // <p id='para' class='classPara' tanvir="ahmed">Hello Para</p>
