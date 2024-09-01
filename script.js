@@ -5863,22 +5863,24 @@
 // parentNode.insertAdjacentElement('afterend',element)
 
 
-// Normalize method Revision 
+// innerHTML 
+// kono element er vitor joto html tag ase + text comment jai ase sob eksathe sei element er innerHTML 
+// jemon ul tag re select kore jodi tar innertHTML ber korte chai tahole ul er vitor joto li ase + text node + comment node sob eksathe return hobe 
+// amra chaile innerHTML diye html + text node eksathe set korte pari 
 
-const text1 = document.createTextNode('Hello')
-const text2 = document.createTextNode(' World!')
-const br = document.createElement('br')
-const comment = document.createComment('I am Comment')
-const text3 = document.createTextNode('My name is ')
-const text4 = document.createTextNode('Tanvir Ahmed')
+// MINI project with innertHTML
+const ul = document.querySelector('ul')
+const btn = document.querySelector('button')
 
-const nodeArray = [text1,text2,br,comment,text3,text4]
-
-const df = document.createDocumentFragment()
-nodeArray.forEach((item)=> df.appendChild(item))
-console.log(df)
-
-
+let innerHtml  = `
+<li>Tanvir Ahmed</li>
+<li>Sadia Ahmed</li>
+<li>Maymuna Ahmed</li>
+<li>Humaira Ahmed</li>
+`
+btn.addEventListener('click',()=>{
+  ul.innerHTML += innerHtml 
+})
 
 
 
