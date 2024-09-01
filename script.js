@@ -5869,19 +5869,46 @@
 // amra chaile innerHTML diye html + text node eksathe set korte pari 
 
 // MINI project with innertHTML
-const ul = document.querySelector('ul')
-const btn = document.querySelector('button')
+// const ul = document.querySelector('ul')
+// const btn = document.querySelector('button')
 
-let innerHtml  = `
-<li>Tanvir Ahmed</li>
-<li>Sadia Ahmed</li>
-<li>Maymuna Ahmed</li>
-<li>Humaira Ahmed</li>
-`
-btn.addEventListener('click',()=>{
-  ul.innerHTML += innerHtml 
-})
-
-
+// let innerHtml  = `
+// <li>Tanvir Ahmed</li>
+// <li>Sadia Ahmed</li>
+// <li>Maymuna Ahmed</li>
+// <li>Humaira Ahmed</li>
+// `
+// btn.addEventListener('click',()=>{
+//   ul.innerHTML += innerHtml 
+// })
 
 
+// outerHTML
+
+// Difference Between innerHTML and outerHTML
+{/* <div>
+  <ul>
+    <li>Tanvir</li>
+    <li>Sadia</li>
+    <li>Maymuna</li>
+    <li>Ayesha</li>
+  </ul>
+</div> */}
+// uporer code e ul tag re jokhon innerHTML er sathe empty set kora deya hoisilo tokhon result : <div> <ul> </ul> </div> erokom hoisilo . kintu jokhon ul tag ke outerHTML er sathe empty set kora hoisilo tokhon result : <div> </div>
+
+// tar mane innerHTML only inner content gula reii dhore and change kore set kore . kintu outerHTML outer content + inner content sob gular uporeii kaj kore 
+
+// const ul = document.querySelector('ul')
+// ul.innerHTML = "<br /><h1>Hello world!!!</h1>"
+// OUTPUT : 
+{/* <ul>
+  <br>
+  <h1>Hello world!!!</h1>
+</ul> */}
+
+// ul.outerHTML = "<h1>Hello World!!!!!</h1>"
+// OUTPUT : 
+// <h1>Hello World!!!</h1>
+
+
+// innerText 
