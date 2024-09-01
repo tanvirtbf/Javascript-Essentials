@@ -5912,3 +5912,140 @@
 
 
 // innerText 
+// eta diye only text add or remove or modify kora hoy . tag or element use kora jay na . jodi innerHTML or outerHTML er moto html tag use korte jai tahole seta string hishebe text node create hobe
+
+// const h1 = document.querySelector('h1')
+// console.log(h1.innerText)
+
+// console.log(document.querySelector('ul').innerText) // ul er vitor joto text ase sob return hobe . hok seta ul er vitor arekta element er vitor text , tao return hobe
+// Tanvir
+// Sadia
+// Maymuna
+// Ayesha
+
+
+// write and writeln method 
+
+
+// Copy Node (v.49)
+
+// Some Rules : 
+// 1. The cloneNode(deep) method is used to copy the Node. It creates a copy of node including all attributes and their values and returns the clone.
+// 2. The method takes a single Boolean argument, indicating whether the copy should all children of the node or just the element itself. 
+// 3. The Duplicate node returned by cloneNode(deep) is not part of the document until it is added to another node that is part of the document using appendChild() or a similar method. It also has no parent until it is appended to another node.
+// 4. If the original node has an ID and the clone is to be placed in the same document, the ID of the clone should be modified to be unique.
+// 5. Name attributes may need to be modified also, depending on whether duplicate names are expected.
+// 6. cloneNode(false) will copy only the element, attributes and their values
+// 7. cloneNode(true) will copy entire element with child as well.
+
+// Syntax : 
+// var duplicateNode = targetNode.cloneNode(false); 
+// var duplicateNode = targetNode.cloneNode(true); 
+
+// const ul = document.querySelector('ul')
+// // const duplicateNode = ul.cloneNode(false)
+// // console.log(duplicateNode) // <ul></ul>
+// const duplicateNode = ul.cloneNode(true)
+// console.log(duplicateNode) // <ul> <li>Tanvir</li> <li>.... </ul>
+
+
+// Delete Node 
+// syntax : 
+// parentNode.removeChild(targetNode)
+
+// const parentNode = document.querySelector('ul')
+// const targetNode = document.querySelector('li')
+// parentNode.removeChild(targetNode)
+
+// const parentNode = document.querySelector('ul')
+// const targetNode = document.querySelector('li')
+// const deleteNode = parentNode.removeChild(targetNode)
+// console.log(deleteNode) // <li class="list">Tanvir</li>
+
+// const parentNode = document.querySelector('ul')
+// parentNode.removeChild(parentNode.lastElementChild)
+
+// const parentNode = document.querySelector('ul')
+// parentNode.removeChild(parentNode.firstElementChild)
+
+// const parentNode = document.querySelector('ul')
+// parentNode.removeChild(parentNode.firstElementChild.nextElementSibling)
+
+// const li = document.querySelector('li')
+// li.parentNode.removeChild(li)
+
+
+
+// Replace Node 
+// Rules : 
+// 1. The replaceChild(newChild, oldChild) method is used to replace a node with new node.
+// 2. The new node could be an existing node in the document, or you can create a new node.
+// 3. It will destroy the contents of nodes that are replaced
+// 4. it returns the replaced node(oldChild)
+// Syntax : 
+// var replacedNode = parentNode.replaceChild(newChild,oldChild)
+// newChild is the new node to replace oldChild. If it already exists in the DOM, it is first removed.
+// oldChild is the existing child to be replaced
+
+// Example : (Replacing with new Node)
+// const parentNode = document.querySelector('ul')
+// const oldChild = document.querySelector('#item2')
+// const newChild = document.createElement('h4')
+// newChild.textContent = 'Hello H4'
+// const replacedNode = parentNode.replaceChild(newChild,oldChild) // replace successfully korar por oldChild ke return kore dey . eta replacedNode er moddhe store kore rakhlam . chaile pore amra abar kothau use korte parbo 
+// console.log(replacedNode)
+
+// Example : (Replaceing with existing Node)
+// const parentNode = document.querySelector('ul')
+// const oldChild = document.querySelector('#item2')
+// const newChild = document.querySelector('h2')
+// const replacedNode = parentNode.replaceChild(newChild,oldChild)
+// // h2 tag jekhane chilo sekhan theke move hoye ul er moddhe item2 er moddhe boshe gese + item2 element vanish hoye gese . 
+
+
+
+// Modifying Text Nodes 
+
+// Properties : 
+// 1. Data
+// 2. Length
+
+// Methods : 
+// 1. appendData(string)
+// 2. deleteData(start, length)
+// 3. insertData(start, string)
+// 4. replaceData(start, length, string)
+// 5. splitText(start)
+// 6. substringData(start, length)
+
+
+// Length (text node length property) (v.52)
+// const newTextNode = document.createTextNode('Hello World!')
+// console.log(newTextNode.length) // 12
+
+// // Or Existing textNode length
+// const h1 = document.querySelector('h1')
+// console.log(h1.childNodes[0].length) // 12 (h1 er childNodes[0] er moddhe textNode ase and setar length 12)
+
+
+// Modifying Text Nodes Data Property (v.53)
+// const newTextNode = document.createTextNode('Hello World!')
+// console.dir(newTextNode)
+
+// // get data in textNode
+// const getData = newTextNode.data
+// console.log(getData) // Hello World!
+
+// // set data in textNode
+// newTextNode.data = "Hello Tanvir"
+// console.log(newTextNode) // Hello Tanvir
+
+// // Existing text node data set and get
+
+// // <h1 id="geek" class="first second">Hello World!</h1>
+// const h1 = document.querySelector('h1')
+// // get data
+// console.log(h1.childNodes[0].data) // Hello World!
+// // set data 
+// h1.childNodes[0].data = 'Hello Tanvir Ahmed'
+// console.log(h1.childNodes[0].data) // Hello Tanvir Ahmed
