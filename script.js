@@ -2883,12 +2883,37 @@
 
 
 // revision xhr 
+let count = 10;
 const df = document.createDocumentFragment()
 const mainDiv = document.createElement('div')
 mainDiv.className = 'images'
 const singleImageDiv = document.createElement('div')
 const image = document.createElement('img')
 const btn = document.querySelector('button')
+
+for(let i = 0; i<count; i++){
+  const div = singleImageDiv.cloneNode(true)
+  const img = image.cloneNode(true)
+
+  const xhr = new XMLHttpRequest()
+  xhr.responseType = 'json'
+  xhr.onload = ()=>{
+    img.src = xhr.response.message
+    img.style.width = '100%'
+    img.style.height = '100%'
+    img.style.borderRadius = '10px'
+    div.appendChild(img)
+    div.classList.toggle('image')
+    mainDiv.appendChild(div)
+    mainDiv.style.marginTop = '20px'
+    df.appendChild(mainDiv)
+    document.querySelector('body').appendChild(df)
+    console.log(mainDiv)
+  }
+
+  xhr.open('GET','https://dog.ceo/api/breeds/image/random')
+  xhr.send()
+}
 
 btn.addEventListener('click',()=>{
   const div = singleImageDiv.cloneNode(true)
@@ -2900,6 +2925,7 @@ btn.addEventListener('click',()=>{
     img.src = xhr.response.message
     img.style.width = '100%'
     img.style.height = '100%'
+    img.style.borderRadius = '10px'
     div.appendChild(img)
     div.classList.toggle('image')
     mainDiv.appendChild(div)
