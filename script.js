@@ -6300,7 +6300,50 @@
 // Syntax : 
 // var elementClasses = elementNodeReference.classList;
 
+// <h1 id="geek" class="first sec">Hello World!</h1>
 const h1 = document.querySelector('h1')
 console.log(h1.classList) // DOMTokenList(2) ['first', 'sec', value: 'first sec']
 // upore h1.classList ekta DOMTokenList return kore , jar value holo oi element er moddhe jotogula class item ache sob gula . index number diyeo segula access hoy and name diyeo access hoy
+
+// console.log(h1.classList[0]) // first
+// console.log(h1.classList.first) // first
+// console.log(h1.classList[1]) // sec
+// console.log(h1.classList[4]) // undefined
+
+// DOMTokenList er length and value property access :
+// console.log(h1.classList.length) // 2 (karon h1 er moddhe 2 ta class item ase)
+// console.log(h1.classList.value) // first sec (h1 er moddhe ai 2 ta class item ache)
+
+// DOMTokenList er method access : 
+
+// item() -- element er vitor sob class item gular access pauyar jonno use hoy
+// console.log(h1.classList.item(1)) // sec (h1 er 2 ta class er moddhe 1 number index e jei class ase seta return hoise)
+// console.log(h1.classList.item(0)) // first
+
+// add()
+// h1.classList.add('myClass')
+// console.log(h1.classList) // DOMTokenList(3) ['first', 'sec', 'myClass', value: 'first sec myClass']
+// tar mane h1 er moddhe notun vabe myClass nam e class item add hoye gese ekdom last e . kintu override hoy nai . ager class item gula jar jar jaygay ache
+
+// add multiple class
+// h1.classList.add('myClass1','myClass2','myClass3')
+// console.log(h1.classList) // DOMTokenList(5) ['first', 'sec', 'myClass1', 'myClass2', 'myClass3', value: 'first sec myClass1 myClass2 myClass3']
+
+// remove()
+// h1.classList.remove('first')
+// console.log(h1.classList) // DOMTokenList ['sec', value: 'sec']
+// h1.classList.remove('sec')
+// console.log(h1.classList) // DOMTokenList [value: '']
+
+// replace()
+// h1.classList.replace('first','main') // first class item ta remove hoye sei jaygay main class aisha porbe
+
+// contains() --- check kore specific kono class item ai element e ase kina . 
+
+// const isExist = h1.classList.contains('hello')
+// console.log(isExist) // false
+
+// console.log(h1.classList.contains('first')) // true
+
+
 
