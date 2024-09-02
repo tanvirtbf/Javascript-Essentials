@@ -6127,6 +6127,12 @@
 // console.log(document.querySelector('p').title ) // null 
 
 
+// Attributes Property (v.60)
+const h2 = document.querySelector('h2')
+const allH2Attributes = h2.attributes
+console.log(allH2Attributes) // NamedNodeMap {0: class, 1: tanvir, 2: id, class: class, tanvir: tanvir, id: id, length: 3}
+
+// prottekta element er vitor attributes nam e ekta object thake . sei object sei element er sob attribute hold kore rakhe . amra chaile sei attribute gula ke index number diye access korte pari , noyto attribute er name diyeo access korte pari . jemon h2..attributes.id , h2.attributes.class , h2.attributes.tanvir -- h2.attributes[0]
 
 
 
