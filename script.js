@@ -6128,17 +6128,40 @@
 
 
 // Attributes Property (v.60)
-const h2 = document.querySelector('h2')
-const allH2Attributes = h2.attributes
-console.log(allH2Attributes) // NamedNodeMap {0: class, 1: tanvir, 2: id, class: class, tanvir: tanvir, id: id, length: 3}
+// const h2 = document.querySelector('h2')
+// const allH2Attributes = h2.attributes
+// console.log(allH2Attributes) // NamedNodeMap {0: class, 1: tanvir, 2: id, class: class, tanvir: tanvir, id: id, length: 3}
 
 // prottekta element er vitor attributes nam e ekta object thake . sei object sei element er sob attribute hold kore rakhe . amra chaile sei attribute gula ke index number diye access korte pari , noyto attribute er name diyeo access korte pari . jemon h2..attributes.id , h2.attributes.class , h2.attributes.tanvir -- h2.attributes[0]
 
 
+// setAttribute and getAttribute Method (v.61)
+
+// setAttribute 
+// This method is used to set the value of an attribute on the specified element . If the attribute already exists, the value is updated; otherwise a new attribute is added with the specified name and value . We should not use this method to set inline style as it will overwrite other CSS Properties. 
+
+// Syntax : 
+// Element.setAttribute(name,value)
+// Element.setAttribute('style','font-size: 20px; color: green;')
+
+// const h2 = document.querySelector('h2')
+
+// h2.setAttribute('class','hiii') // override class value hello to hiii
+// h2.setAttribute('id','id1 id2 id3') // id te 3 ta id set hoye gese named id1,id2,id3
+// h2.setAttribute('class',' ')
 
 
+// getAttribute
+// The getAttribute() returns the value of a specified attribute on the element. If the given attribute does not exist, the value returned will either be null or " ".
 
+// Syntax : 
+// var attribute = element.getAttribute(attributeName)
 
+// const h2 = document.querySelector('h2')
 
-
-
+// const att1 = h2.getAttribute('class')
+// const att2 = h2.getAttribute('id')
+// const att3 = h2.getAttribute('tanvir')
+// console.log(att1,att2,att3)
+// const att4 = h2.getAttribute('title')
+// console.log(att4) // null
