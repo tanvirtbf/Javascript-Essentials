@@ -2906,7 +2906,6 @@
 //   xhr.send()
 // })
 
-
 // xhr.addEventListener('load',()=>{
 //   image.src = xhr.response.message
 //   image.style.cssText = 'width: 200px; height: 200px'
@@ -3069,6 +3068,54 @@
 // ajax alada kichu na . eta holo asynchronous javascript er ekta example . ajax mane holo asynchronous javascript xml
 
 // Callback Hell
+
+
+// Some important api
+// 'https://dummyjson.com/users' // get all users
+// 'https://dummyjson.com/users/2' // get single users by id
+// 'https://dummyjson.com/posts/user/5' // get posts by user id
+// 'https://dummyjson.com/comments/post/6' // get comments by post id
+
+const xhr = new XMLHttpRequest()
+xhr.responseType = 'json'
+xhr.addEventListener('load',()=>{
+  
+  const xhr1 = new XMLHttpRequest()
+  xhr1.responseType = 'json'
+  xhr1.addEventListener('load',()=>{
+
+    const xhr2 = new XMLHttpRequest()
+    xhr2.responseType = 'json'
+
+    xhr2.onload = ()=>{
+
+      const xhr3 = new XMLHttpRequest()
+      xhr3.responseType = 'json'
+
+      xhr3.onload = ()=>{
+        console.log(xhr3.response)
+      }
+
+      xhr3.open('GET','https://dummyjson.com/comments/post/6')
+      xhr3.send()
+
+    }
+
+    xhr2.open('GET','https://dummyjson.com/posts/user/5')
+    xhr2.send()
+
+  })
+
+  xhr1.open('GET','https://dummyjson.com/users/2')
+  xhr1.send()
+
+})
+
+xhr.open('GET','https://dummyjson.com/users')
+xhr.send()
+
+
+
 
 
 
