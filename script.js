@@ -2882,6 +2882,33 @@
 // });
 
 
+// revision xhr 
+
+const newImage = document.createElement('img')
+const df = document.createDocumentFragment()
+const body = document.body
+const btn = document.querySelector('button')
+
+btn.addEventListener('click',()=>{
+  const xhr = new XMLHttpRequest()
+  xhr.responseType = 'json'
+  xhr.onload = ()=>{
+    newImage.src = xhr.response.message
+    newImage.classList.add('img')
+    df.appendChild(newImage)
+    body.appendChild(df)
+  }
+  
+  xhr.open('GET','https://dog.ceo/api/breeds/image/random')
+  xhr.send()
+})
+
+
+
+
+
+
+
 
 
 
