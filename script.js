@@ -6281,7 +6281,7 @@
 
 // DOMTokenList (v.68)
 
-// classList return kore thake kichu property and method . jemon..
+// classList return kore thake DOMTokenList and DOMTokenList er kichu methods property ase . jemon..
 // property :
 // 1. length
 // 2. value
@@ -6294,3 +6294,13 @@
 // 5. contains()
 // 6. toggle()
 // 7. value()
+
+// classList (v.69)
+// The Element.classList is a read only property which returns a live DOMTokenList collection of the class attributes of the element. 
+// Syntax : 
+// var elementClasses = elementNodeReference.classList;
+
+const h1 = document.querySelector('h1')
+console.log(h1.classList) // DOMTokenList(2) ['first', 'sec', value: 'first sec']
+// upore h1.classList ekta DOMTokenList return kore , jar value holo oi element er moddhe jotogula class item ache sob gula . index number diyeo segula access hoy and name diyeo access hoy
+
