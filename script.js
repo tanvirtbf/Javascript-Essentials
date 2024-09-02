@@ -2881,6 +2881,13 @@
 //     });
 // });
 
+
+
+
+
+
+
+
 // XMLHttpRequest (XHR)
 // amra fetch diye kono api fetch kori , eta ashce 2015 shale . tar age manush api fetch korar jonno XMLHttpRequest (XHR) use korto
 
@@ -6301,8 +6308,8 @@
 // var elementClasses = elementNodeReference.classList;
 
 // <h1 id="geek" class="first sec">Hello World!</h1>
-const h1 = document.querySelector('h1')
-console.log(h1.classList) // DOMTokenList(2) ['first', 'sec', value: 'first sec']
+// const h1 = document.querySelector('h1')
+// console.log(h1.classList) // DOMTokenList(2) ['first', 'sec', value: 'first sec']
 // upore h1.classList ekta DOMTokenList return kore , jar value holo oi element er moddhe jotogula class item ache sob gula . index number diyeo segula access hoy and name diyeo access hoy
 
 // console.log(h1.classList[0]) // first
