@@ -6345,5 +6345,9 @@ console.log(h1.classList) // DOMTokenList(2) ['first', 'sec', value: 'first sec
 
 // console.log(h1.classList.contains('first')) // true
 
+// toggle() 
+
+// h1.classList.toggle('main') // jodi main class item thake h1 er vitore tahole remove kore dau, r jodi na thake tahole add kore dau 
+
 
 
