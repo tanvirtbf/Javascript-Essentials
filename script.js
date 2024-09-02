@@ -2883,26 +2883,35 @@
 
 
 // revision xhr 
-
-const newImage = document.createElement('img')
 const df = document.createDocumentFragment()
-const body = document.body
+const mainDiv = document.createElement('div')
+mainDiv.className = 'images'
+const singleImageDiv = document.createElement('div')
+const image = document.createElement('img')
 const btn = document.querySelector('button')
 
 btn.addEventListener('click',()=>{
+  const div = singleImageDiv.cloneNode(true)
+  const img = image.cloneNode(true)
+
   const xhr = new XMLHttpRequest()
   xhr.responseType = 'json'
   xhr.onload = ()=>{
-    newImage.src = xhr.response.message
-    newImage.classList.add('img')
-    df.appendChild(newImage)
-    body.appendChild(df)
+    img.src = xhr.response.message
+    img.style.width = '100%'
+    img.style.height = '100%'
+    div.appendChild(img)
+    div.classList.toggle('image')
+    mainDiv.appendChild(div)
+    mainDiv.style.marginTop = '20px'
+    df.appendChild(mainDiv)
+    document.querySelector('body').appendChild(df)
+    console.log(mainDiv)
   }
-  
+
   xhr.open('GET','https://dog.ceo/api/breeds/image/random')
   xhr.send()
 })
-
 
 
 
