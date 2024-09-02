@@ -6215,3 +6215,82 @@
 
 // jekono element er object e style nam e ekta object ase , sei object er vitor css er sob property camelCase akare deya ase and tader value deya ase "" empty string . jokhon style attribute diye oi element e inline css likha hoy tokhon seta oi style object er vitor dhuke value change kore updated value deya hoy . kintu extarnal css dile amon hoy na 
 
+
+// CSSStyleDeclaration Object (v.66)
+// The CSSStyleDeclaration object represents a collection of CSS Property-value pairs. It is used in API (mane CSSStyleDeclaration Object css er sob property er collection key value pair akare diye thake jar key hobe css property er camelCase and value hobe empty string "")
+
+// ai declaration er use 2 ta api kore thake 
+// 1. HTMLElement.style (inline)
+// 2. windwo.getComputedStyle() (internal and external)
+
+// amra jokhon element.style likhi tokhon seta ashole CSSStyleDeclaration Object ke point kore thake 
+
+
+// Some Properties of CSSStyleDeclaration Object
+
+// Properties : 
+// 1. cssText
+// 2. length
+// 3. parentRule
+
+// Methods :
+// 1. getPropertyValue(property)
+// 2. getPropertyPriority(property)
+// 3. removeProperty(property)
+// 4. setProperty(property,value,priority)
+// 5. item(index)
+
+// Inline Style Manipulation 
+// The most direct way to modify css value with javascript is through the style property that corresponding to the inline style sheet specification for a particular HTML element. To perform a manipulation of the CSS with Javascript DOM interface, you would access the style object of the element.
+
+// Style Property 
+// The style property is used to get or set the inline style of an element. While getting, it returns a CSSStyleDeclaration object that contains a list of all styles properties for that element with values assigned for the attributes that are defined in the element's inline style attribute.
+// style property represents only the css declarations set in the element's inline style attribute, not those that come from style rules elsewhere, such as style rules in the <head> section, or external style sheets or browser default.
+
+// get 
+// Element.style.property
+// const get = document.querySelector('h1').style.fontSize
+// console.log(get) // 30px
+
+// set
+// // element.style.property = 'value'
+// document.querySelector('h1').style.fontSize = '100px'
+// console.log(h1.style.fontSize)//100px
+
+// *******Important Notes**********
+// amra jokhon style attribute er moddhe background-color likhi seta hocche html attribute and pore backgroundColor holo dom property
+
+// const h2 = document.querySelector('h2')
+// const cssObj = h2.style // (return CSSStyleDeclaration object in cssObj variable)
+// console.log(cssObj) // CSSStyleDeclaration {accentColor: '', additiveSymbols: '', alignContent: '', alignItems: '', alignSelf: '',...............}
+
+// h2.style.fontSize = '100px' // h2 set her font size is 100px
+// h2.style.color = 'green' 
+
+
+// Dynamic Style Manipulation (v.67)
+
+// const h1 = document.querySelector('h1')
+// h1.className = 'main'
+
+// const h2 = document.querySelector('h2')
+// h2.id = 'main'
+
+// // evabe ager property gula override hoye jay . jodi class er moddhe onk gula class thake sob gula eksatheo override hoye jabe .
+
+
+// DOMTokenList (v.68)
+
+// classList return kore thake kichu property and method . jemon..
+// property :
+// 1. length
+// 2. value
+
+// Methods :
+// 1. item()
+// 2. add()
+// 3. remove()
+// 4. replace()
+// 5. contains()
+// 6. toggle()
+// 7. value()
