@@ -6165,3 +6165,53 @@
 // console.log(att1,att2,att3)
 // const att4 = h2.getAttribute('title')
 // console.log(att4) // null
+
+// removeAttribute and hasAttribute (v.63)
+
+// removeAttribute
+// This method is used to remove an attribute from the specified element.
+// Syntax : 
+// element.removeAttribute(attrName)
+
+// const h2 = document.querySelector('h2')
+// console.log(h2.attributes) // NamedNodeMap {0: class, 1: tanvir, 2: id, class: class, tanvir: tanvir, id: id, length: 3}
+
+// h2.removeAttribute('class')
+// console.log(h2.attributes) // NamedNodeMap {0: tanvir, 1: id, tanvir: tanvir, id: id, length: 2}
+
+
+// hasAttribute
+// The hasAttribute() method returns a Boolean value indicating whether the specified element has the specified attribute or not. 
+
+// const h2 = document.querySelector('h2')
+// console.log(h2.hasAttribute('class'))// true
+// console.log(h2.hasAttribute('title')) // false
+// console.log(h2.hasAttribute('id')) // true
+
+
+// HTML DOM Mapping (v.64)
+// Many object properties are simply direct mapping to the attributes of the HTML element. In other words there is a mapping directly between HTML Syntax and the DOM. 
+
+// <p id="myId" title="hello">Paragraph</p>
+// Above title can be accessed in DOM by document.querySelector('p').title 
+
+// Example : 
+// <h2 class="hello" tanvir="ahmed" id="ids">Hello World</h2>
+// const h2 = document.querySelector('h2')
+// console.log(h2.className) // hello
+// console.log(h2.id) // ids
+
+// amra kivabe element er attribute ke evabe (h2.id) element er sathe access korte pari ?  
+// er karon HTML ke DOM er sathe mapping kora hoise
+
+// mot kotha amra kichu reserve attribute , jemon id , class , title , src , alt , placeholder etc egula property hishebe create hoy sei element er object e . kintu unknown kono attribute jemon tanvir, hasOf etc egula property hishebe set hoy na element er object e . tai amra sei element er sathe direct access korte pari na . kintu known attribute gula direct element er sathe access korte pari 
+
+
+// CSS DOM Mapping (v.65) 
+
+{/* <h1 id="geek" class="first second main" style="font-size: 30px;">Hello World!</h1> */}
+// const h1 = document.querySelector('h1')
+// console.dir(h1.style.fontSize) // 30px
+
+// jekono element er object e style nam e ekta object ase , sei object er vitor css er sob property camelCase akare deya ase and tader value deya ase "" empty string . jokhon style attribute diye oi element e inline css likha hoy tokhon seta oi style object er vitor dhuke value change kore updated value deya hoy . kintu extarnal css dile amon hoy na 
+
