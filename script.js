@@ -6552,3 +6552,38 @@
 // length 
 // console.log(document.querySelector('h1').style.length ) // 2
 
+
+// now CSSStyleDeclaration Method 
+
+// all methods :
+// 1. getPropertyValue(property)
+// 2. getPropertyPriority(property)
+// 3. removeProperty(property)
+// 4. setProperty(property,value,priority)
+// 5. item(index)
+
+
+// item(index)
+// syntax : 
+// element.style.item(index)
+// ai method diye oi element er inline style er moddhe sob css property ke index number diye access kora jay 
+
+// Example :
+// <h1 style="color: green; font-size: 20px;">Hello World!</h1>  
+// const h1 = document.querySelector('h1')
+// console.log(h1.style.item(1)) // font-size
+// console.log(h1.style.item(0)) // color
+
+
+// getPropertyValue(property)
+// ei method diye inline css e kono property er value ber kora hoy
+
+// syntax : 
+// element.style.getPropertyValue('font-size')
+
+// Example :
+// <h1 style="color: green; font-size: 20px;">Hello World!</h1> 
+// const h1 = document.querySelector('h1')
+// console.log(h1.style.getPropertyValue('font-size')) // 20px
+// console.log(h1.style.getPropertyValue('color')) // green
+
