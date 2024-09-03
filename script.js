@@ -5997,6 +5997,12 @@
 // text -- The text which is about to insert.
 // The beforebegin and afterend positions work only if the node is in a tree and has an element
 
+// Example : 
+const li = document.querySelector('li')
+const text = "Hellosss"
+li.insertAdjacentText('afterend',text)
+
+
 
 
 // innerHTML 
