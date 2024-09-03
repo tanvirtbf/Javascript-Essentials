@@ -6624,3 +6624,15 @@
 // sob css compute kore final jei css output ashe setaii computed style
 
 // kono element er upor inline style thake , internal style thake , external style thake, browser er default style thake . erokom sob style eksathe kore oi element finally jei style e screen e show hocche setaii holo computed style 
+
+// element.style property represents only the CSS declarations set in the elements inline style attribute, not those that come from style rules elsewhere, such as style rules in the <head> section, or external style sheets or browser default. To get the values of all CSS properties for an element you should use window.getComputedStyle() instead.(tar mane holo element.style property only inline css er maddhome css property update kore . baki sob empty string thake . jodi oi element er parent element e kono style thake tahole se setake inherit kore na . browser er default style sei element.style property te thake na. only inline css style thake)
+
+// The return style is a live CSSStyleDeclaration object (The CSSStyleDeclaration object represents a collection of CSS property-value pairs), which updates itself automatically when the element's style is changed.
+
+// *******Important Notes***********
+// element.style return kore CSSStyleDeclaration Obj, same object return kore window.getComputedStyle() . kintu element.style jei CSSStyleDeclaration object return kore seta read write 2 tai kora jay . tar css property set and get 2 taii kora jay . kintu window.getComputedStyle() jei CSSStyleDeclaration object return kore seta only read kora jay . mane only get kora jay , set kora jay na 
+
+// Example :
+const h1 = document.querySelector('h1')
+const computedStyle = window.getComputedStyle(h1)
+console.log(computedStyle) // all css style returned..
