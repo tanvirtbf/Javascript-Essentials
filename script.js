@@ -5998,11 +5998,9 @@
 // The beforebegin and afterend positions work only if the node is in a tree and has an element
 
 // Example : 
-const li = document.querySelector('li')
-const text = "Hellosss"
-li.insertAdjacentText('afterend',text)
-
-
+// const li = document.querySelector('li')
+// const text = "Hellosss"
+// li.insertAdjacentText('afterend',text)
 
 
 // innerHTML 
@@ -6070,7 +6068,7 @@ li.insertAdjacentText('afterend',text)
 
 
 // Copy Node (v.49)
-
+ 
 // Some Rules : 
 // 1. The cloneNode(deep) method is used to copy the Node. It creates a copy of node including all attributes and their values and returns the clone.
 // 2. The method takes a single Boolean argument, indicating whether the copy should all children of the node or just the element itself. 
@@ -6089,7 +6087,6 @@ li.insertAdjacentText('afterend',text)
 // // console.log(duplicateNode) // <ul></ul>
 // const duplicateNode = ul.cloneNode(true)
 // console.log(duplicateNode) // <ul> <li>Tanvir</li> <li>.... </ul>
-
 
 // Delete Node 
 // syntax : 
@@ -6116,7 +6113,9 @@ li.insertAdjacentText('afterend',text)
 // const li = document.querySelector('li')
 // li.parentNode.removeChild(li)
 
-
+// const h = document.querySelector('ul').removeChild(document.querySelector('li'))
+// document.querySelector('ul').insertBefore(h,document.querySelector('li'))
+// document.querySelector('ul').insertAdjacentElement('afterbegin',h)
 
 // Replace Node 
 // Rules : 
