@@ -3730,6 +3730,7 @@
 // console.log(p) // promiseState: pending , promiseResult: undefined
 
 
+
 // Understand Promise using button click (resolve after button click)
 // const btn = document.querySelector('#btn')
 // const p = new Promise((resolve,reject)=>{
@@ -5306,7 +5307,7 @@
 // ProcessingInstruction ---------- entire content excluding the target
 // Text --------- content of the text node
 
-// notes : amra maximum case e text node value niye kaj kore thaki . baki gula niye temon kaj hoy na 
+// notes : amra maximum case e text node er  nodeValue niye kaj kore thaki . baki gula niye temon kaj hoy na 
 // amra kono element er text node er vitor nodeValue te gele sekhane sei element er text thake + amra chaile sei nodeValue te kono string or onno kichu set kore dite pari 
 // jemon....
 // const h2 = document.querySelector('h2')
@@ -5314,6 +5315,8 @@
 // console.log(h2.childNodes[0].nodeValue) // Hello (h2 tag er vitor jei text ase seta return korse)
 // // now set..
 // h2.childNodes[0].nodeValue = 'Hello World' // akhn h2 er vitor Hello text ta change hoye Hello World hoye gese
+
+// document.querySelector('h1').childNodes[0].nodeValue = 'Hiiiii'
 
 // Another Example : 
 // const list = document.querySelector('.list')
