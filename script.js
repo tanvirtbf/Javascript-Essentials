@@ -5501,7 +5501,7 @@
 
 // 3. childNodes - Returns collection of an element's child nodes (including text and comment nodes) --- jodi kono element er childNodes ber kora hoy tahole sei element er vitor element node + text node + comment node etc sob dhoroner node list akare return hobe 
 
-// 4. children - Returns a collection of an elements child element node(do not include text and comment nodes) --- jodi kono element er children ber kora hoy tahole sei element er vitor sudhu element node node list akare return hobe . text node, comment node ei type er node return hoy na 
+// 4. children - Returns a collection of an elements child element node(do not include text and comment nodes) --- jodi kono element er children ber kora hoy tahole sei element er vitor sudhu element node, node list akare return hobe . text node, comment node ei type er node return hoy na 
 
 // 5. firstChild - Returns first child node of an element (it can be text or comment node)
 
@@ -5606,6 +5606,8 @@
 // for(let i = 0; i<ul.children.length; i++){
 //   console.log(ul.children[i])
 // }
+
+
 
 // Create Element Node
 // let newElement = document.createElement('h3')
