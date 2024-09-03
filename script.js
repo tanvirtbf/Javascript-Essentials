@@ -6635,4 +6635,4 @@
 // Example :
 const h1 = document.querySelector('h1')
 const computedStyle = window.getComputedStyle(h1)
-console.log(computedStyle) // all css style returned..
+console.log(computedStyle) // all css style returned.. (joto inline, internal, extarnal , browser default sob eksathe return hoise)
