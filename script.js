@@ -5823,6 +5823,24 @@
 //   // May Ahmed
 // // </p>
 
+// Project with Normalize method
+
+// const h1 = document.createElement('h1')
+// const text1 = document.createTextNode('Hello')
+// const text2 = document.createTextNode(' World')
+// const text3 = document.createTextNode(' My ')
+// const text4 = document.createTextNode('Name is ')
+// const text5 = document.createTextNode('Tanvir Ahmed')
+// const comment = document.createComment('This is comment')
+// const arr = [text1,text2,comment,text3,text4,text5]
+// arr.forEach((item)=>{
+//   h1.appendChild(item)
+// })
+// console.log(h1.childNodes) // NodeList(5) [text, text, text, text, text]
+// h1.normalize()
+// console.log(h1.childNodes) // NodeList(5) [text, comment, text]
+
+
 
 // insertBefore() Method 
 // The insertBefore() method is used to insert a node before the reference node as a child of a specified parent node. 
