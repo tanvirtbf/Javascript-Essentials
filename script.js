@@ -6128,6 +6128,8 @@
 // newChild is the new node to replace oldChild. If it already exists in the DOM, it is first removed.
 // oldChild is the existing child to be replaced
 
+// document.querySelector('ul').replaceChild(document.querySelector('h1'),document.querySelector('#item2'))
+
 // Example : (Replacing with new Node)
 // const parentNode = document.querySelector('ul')
 // const oldChild = document.querySelector('#item2')
@@ -6170,6 +6172,7 @@
 
 
 // Modifying Text Nodes Data Property (v.53)
+
 // const newTextNode = document.createTextNode('Hello World!')
 // console.dir(newTextNode)
 
@@ -6200,6 +6203,9 @@
 // newTextNode.appendData("World!")
 // console.log(newTextNode) // Hello World!
 
+// const h1 = document.querySelector('h1')
+// h1.childNodes[0].appendData('hiiii')
+
 // // Example : (Existing text node)
 // <h1 id="geek" class="first second">Hello World!</h1>
 
@@ -6219,6 +6225,7 @@
 // newTextNode.deleteData(2,2)
 // console.log(newTextNode) // Heo World!
 
+// document.querySelector('h1').childNodes[0].deleteData(2,4)
 
 // Insert Data in Text Node(v.56)
 
@@ -6227,6 +6234,7 @@
 // const h1TextNode = h1.childNodes[0]
 // h1TextNode.insertData(5,'HIIII') // text node er 5 number index theke HIIII text insert kore dibe
 
+// document.querySelector('h1').childNodes[0].insertData(4,'HIIIIIIIII')
 
 // Replace data in Text Node (v.57)
 
@@ -6236,6 +6244,7 @@
 // textNode.replaceData(0,5,'Hi')
 // console.log(textNode) // Hi World
 
+// document.querySelector('h1').childNodes[0].replaceData(1,3,'Hello world')
 
 // Split Text in Text Node (v.58)
 // ekta text node ke 2 or tar theke beshi text node e convart korar jonno ai method use hoy 
@@ -6252,6 +6261,8 @@
 // kono text node er vitor substring niye seta ke return kore dey 
 // Syntax : 
 // TextNode.substringData(2,5)
+
+// console.log(document.querySelector('h1').childNodes[0].substringData(2,6)) // llo wo
 
 // const newTextNode = document.createTextNode('Hello World')
 // console.log(newTextNode.substringData(1,4)) // ello 
