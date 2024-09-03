@@ -6615,4 +6615,12 @@
 // console.log(h1.style.cssText) // color: green; font-size: 43px !important;
 
 
+// Computed Style and getComputedStyle Method (v.71)
 
+// The computed style is the style actually used in displaying the element, after "stylings" from multiple sources have been applied. (kono element er upor inline , extarnal, internal etc sob dhoroner style eksathe jei css apply hoy setaii computed style)
+
+// Style sources can include internal style sheets, external style sheets, inherited styles and browser default styles.
+
+// sob css compute kore final jei css output ashe setaii computed style
+
+// kono element er upor inline style thake , internal style thake , external style thake, browser er default style thake . erokom sob style eksathe kore oi element finally jei style e screen e show hocche setaii holo computed style 
