@@ -6357,12 +6357,12 @@
 // amra kivabe element er attribute ke evabe (h2.id) element er sathe access korte pari ?  
 // er karon HTML ke DOM er sathe mapping kora hoise
 
-// mot kotha amra kichu reserve attribute , jemon id , class , title , src , alt , placeholder etc egula property hishebe create hoy sei element er object e . kintu unknown kono attribute jemon tanvir, hasOf etc egula property hishebe set hoy na element er object e . tai amra sei element er sathe direct access korte pari na . kintu known attribute gula direct element er sathe access korte pari 
+// mot kotha amra kichu reserve attribute , jemon id , class , title , src , alt ,href , placeholder etc egula property hishebe create hoy sei element er object e . kintu unknown kono attribute jemon tanvir, hasOf etc egula property hishebe set hoy na element er object e . tai amra sei element er sathe direct access korte pari na . kintu known attribute gula direct element er sathe access korte pari 
 
 
 // CSS DOM Mapping (v.65) 
 
-{/* <h1 id="geek" class="first second main" style="font-size: 30px;">Hello World!</h1> */}
+// <h1 id="geek" class="first second main" style="font-size: 30px;">Hello World!</h1> 
 // const h1 = document.querySelector('h1')
 // console.dir(h1.style.fontSize) // 30px
 
@@ -6379,7 +6379,7 @@
 // amra jokhon element.style likhi tokhon seta ashole CSSStyleDeclaration Object ke point kore thake 
 
 
-// Some Properties of CSSStyleDeclaration Object
+// Some Properties and methods of CSSStyleDeclaration Object
 
 // Properties : 
 // 1. cssText
@@ -6467,6 +6467,7 @@
 // console.log(h1.classList.length) // 2 (karon h1 er moddhe 2 ta class item ase)
 // console.log(h1.classList.value) // first sec (h1 er moddhe ai 2 ta class item ache)
 
+
 // DOMTokenList er method access : 
 
 // item() -- element er vitor sob class item gular access pauyar jonno use hoy
@@ -6501,6 +6502,5 @@
 // toggle() 
 
 // h1.classList.toggle('main') // jodi main class item thake h1 er vitore tahole remove kore dau, r jodi na thake tahole add kore dau 
-
 
 
