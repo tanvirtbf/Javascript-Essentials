@@ -5737,6 +5737,20 @@
 // document.querySelector('ul').appendChild(df)
 // console.log(df)
 
+// Another Project 
+// const ul = document.querySelector('ul')
+// const newElement = document.createElement('h3')
+// const newTextNode = document.createTextNode('Hello This is Me')
+// const newCommentNode = document.createComment('This is comment')
+
+// const df = document.createDocumentFragment()
+
+// newElement.appendChild(newCommentNode)
+// newElement.appendChild(newTextNode)
+
+// df.appendChild(newElement)
+// ul.appendChild(df)
+
 
 // Normalize() method
 
