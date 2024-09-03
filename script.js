@@ -5984,6 +5984,19 @@
 
 
 
+// insertAdjacentText method (v.44)
+// insertAdjacentText method kono text node ke kothau replace kore insertAdjacentElement and insertAdjacentHTML er motoiii
+// Syntax : 
+// element.insertAdjacentText('position',text);
+// where positions are: 
+// beforebegin : before the element itself
+// afterbegin : just inside the element, before its first child
+// beforeend : just inside the element, after its last child
+// afterend : After the element itself.
+
+// text -- The text which is about to insert.
+// The beforebegin and afterend positions work only if the node is in a tree and has an element
+
 
 
 // innerHTML 
