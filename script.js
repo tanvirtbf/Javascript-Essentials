@@ -6587,3 +6587,21 @@
 // console.log(h1.style.getPropertyValue('font-size')) // 20px
 // console.log(h1.style.getPropertyValue('color')) // green
 
+
+// removeProperty()
+// kono css property remove korar jonno use hoy 
+
+// Example :
+// <h1 style="color: green; font-size: 20px;">Hello World!</h1> 
+// const h1 = document.querySelector('h1')
+// h1.style.removeProperty('font-size')
+// console.log(h1.style.cssText) // color: green; (font-size removed!)
+
+
+// setProperty()
+
+// Example :
+// <h1 style="color: green; font-size: 20px;">Hello World!</h1> 
+// const h1 = document.querySelector('h1')
+// h1.style.removeProperty('font-size')
+// console.log(h1.style.cssText) // color: green; (font-size removed!)
