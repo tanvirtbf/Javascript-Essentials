@@ -6599,9 +6599,20 @@
 
 
 // setProperty()
+// ei method diye kono element er inline e css property set kora jay . 
+// ai method er 3 ta parameter thake 
+// 1st parameter : css property
+// 2nd parameter : sei propertyr value 
+// 3rd parameter : 'important' , but this is optional parameter . 'important' dile css er important keyword er moto kaj kore . tar mane setar priority sobcheye beshi thake and sob jaygay apply hobe
+
+// Syntax : 
+// element.style.setProperty('property','value','priority')
 
 // Example :
 // <h1 style="color: green; font-size: 20px;">Hello World!</h1> 
 // const h1 = document.querySelector('h1')
-// h1.style.removeProperty('font-size')
-// console.log(h1.style.cssText) // color: green; (font-size removed!)
+// h1.style.setProperty('font-size','43px','important')
+// console.log(h1.style.cssText) // color: green; font-size: 43px !important;
+
+
+
