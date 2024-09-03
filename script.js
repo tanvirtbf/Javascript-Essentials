@@ -6633,6 +6633,6 @@
 // element.style return kore CSSStyleDeclaration Obj, same object return kore window.getComputedStyle() . kintu element.style jei CSSStyleDeclaration object return kore seta read write 2 tai kora jay . tar css property set and get 2 taii kora jay . kintu window.getComputedStyle() jei CSSStyleDeclaration object return kore seta only read kora jay . mane only get kora jay , set kora jay na 
 
 // Example :
-const h1 = document.querySelector('h1')
-const computedStyle = window.getComputedStyle(h1)
-console.log(computedStyle) // all css style returned.. (joto inline, internal, extarnal , browser default sob eksathe return hoise)
+// const h1 = document.querySelector('h1')
+// const computedStyle = window.getComputedStyle(h1)
+// console.log(computedStyle) // all css style returned.. (joto inline, internal, extarnal , browser default sob eksathe return hoise)
