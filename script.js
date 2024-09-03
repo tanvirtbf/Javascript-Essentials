@@ -5857,22 +5857,6 @@
 // referenceNode = jei node er thik age(before) newNode boshaite chan seta
 
 // Example : 
-// const newNode = document.createElement('h1')
-// const newTextNode = document.createTextNode('Hello, I am Tanvir')
-// const df = document.createDocumentFragment()
-// newNode.appendChild(newTextNode)
-// df.appendChild(newNode)
-
-// const ul = document.querySelector('ul')
-// const ref = document.querySelector('#item2')
-
-// ul.insertBefore(df,ref) // successfully inserted..
-
-
-
-
-
-// Example : 
 // const parentNode = document.querySelector('body')
 // const newNode = document.querySelector('h2')
 // const referenceNode = document.querySelector('button')
@@ -5886,6 +5870,18 @@
 // const referenceNode = document.querySelector('button')
 
 // parentNode.insertBefore(newElementNode,referenceNode) // success
+
+// Example : 
+// const newNode = document.createElement('h1')
+// const newTextNode = document.createTextNode('Hello, I am Tanvir')
+// const df = document.createDocumentFragment()
+// newNode.appendChild(newTextNode)
+// df.appendChild(newNode)
+
+// const ul = document.querySelector('ul')
+// const ref = document.querySelector('#item2')
+
+// ul.insertBefore(df,ref) // successfully inserted..
 
 // Notes for insertBefore method 
 // jodi kono specific element er thik age kono element boshaite chai tahole insertBefore method use kora hoy . jodi existing kono node dhore insert kora hoy tahole move kore chole ashe oi jayga chere . 
@@ -5966,6 +5962,20 @@
 // parentNode.insertAdjacentElement('beforebegin',element)
 // parentNode.insertAdjacentElement('afterbegin',element)
 // parentNode.insertAdjacentElement('afterend',element)
+
+
+// insertAdjacentHTML method (v.43)
+// The insertAdjacentHTML() method is used to insert a text as HTML (parses the specified text as HTML or XML) into a specified position.
+// Syntax : 
+// element.insertAdjacentHTML('position',text);
+// where positions are: 
+// beforebegin : before the element itself
+// afterbegin : just inside the element, before its first child
+// beforeend : just inside the element, after its last child
+// afterend : After the element itself.
+
+// text -- The string to be parsed as HTML or XML and inserted into the tree.
+// It is recommended you not use insertAdjacentHTML when inserting plain text instead, use the node.textContent property 
 
 
 // innerHTML 
