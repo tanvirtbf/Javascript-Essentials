@@ -5825,24 +5825,24 @@
 
 // Project with Normalize method
 
-const h1 = document.createElement('h1')
-const text1 = document.createTextNode('Hello')
-const text2 = document.createTextNode(' World')
-const text3 = document.createTextNode(' My ')
-const text4 = document.createTextNode('Name is ')
-const text5 = document.createTextNode('Tanvir Ahmed')
-const comment = document.createComment('This is comment')
-const arr = [text1,text2,comment,text3,text4,text5]
-arr.forEach((item)=>{
-  h1.appendChild(item)
-})
-console.log(h1.childNodes) // NodeList(5) [text, text, text, text, text]
-h1.normalize()
-console.log(h1.childNodes) // NodeList(5) [text, comment, text]
+// const h1 = document.createElement('h1')
+// const text1 = document.createTextNode('Hello')
+// const text2 = document.createTextNode(' World')
+// const text3 = document.createTextNode(' My ')
+// const text4 = document.createTextNode('Name is ')
+// const text5 = document.createTextNode('Tanvir Ahmed')
+// const comment = document.createComment('This is comment')
+// const arr = [text1,text2,comment,text3,text4,text5]
+// arr.forEach((item)=>{
+//   h1.appendChild(item)
+// })
+// console.log(h1.childNodes) // NodeList(5) [text, text, text, text, text]
+// h1.normalize()
+// console.log(h1.childNodes) // NodeList(5) [text, comment, text]
 
-const df = document.createDocumentFragment()
-df.appendChild(h1)
-document.querySelector('ul').appendChild(df)
+// const df = document.createDocumentFragment()
+// df.appendChild(h1)
+// document.querySelector('ul').appendChild(df)
 
 
 // insertBefore() Method 
@@ -5855,6 +5855,22 @@ document.querySelector('ul').appendChild(df)
 // parentNode = jei jaygay kono node ante chan sei jayga ta jei parent node er under e seta 
 // newNode = jei node ta insert korte chan seta (hote pare new created node or hote pare existing kono node or clone node)
 // referenceNode = jei node er thik age(before) newNode boshaite chan seta
+
+// Example : 
+// const newNode = document.createElement('h1')
+// const newTextNode = document.createTextNode('Hello, I am Tanvir')
+// const df = document.createDocumentFragment()
+// newNode.appendChild(newTextNode)
+// df.appendChild(newNode)
+
+// const ul = document.querySelector('ul')
+// const ref = document.querySelector('#item2')
+
+// ul.insertBefore(df,ref) // successfully inserted..
+
+
+
+
 
 // Example : 
 // const parentNode = document.querySelector('body')
