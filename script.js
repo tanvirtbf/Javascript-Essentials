@@ -6504,3 +6504,51 @@
 // h1.classList.toggle('main') // jodi main class item thake h1 er vitore tahole remove kore dau, r jodi na thake tahole add kore dau 
 
 
+// CSSStyleDeclaration Object Properties and Methods (v.70)
+// The CSSStyleDeclaration object represents a collection of CSS Property-value pairs. It is used in API (mane CSSStyleDeclaration Object css er sob property er collection key value pair akare diye thake jar key hobe css property er camelCase and value hobe empty string "")
+
+// ai declaration er use 2 ta api kore thake 
+// 1. HTMLElement.style (inline)
+// 2. windwo.getComputedStyle() (internal and external)
+
+// amra jokhon element.style likhi tokhon seta ashole CSSStyleDeclaration Object ke point kore thake 
+
+
+// Some Properties and methods of CSSStyleDeclaration Object
+
+// Properties : 
+// 1. cssText
+// 2. length
+// 3. parentRule
+
+// Methods :
+// 1. getPropertyValue(property)
+// 2. getPropertyPriority(property)
+// 3. removeProperty(property)
+// 4. setProperty(property,value,priority)
+// 5. item(index)
+
+
+
+// cssText 
+
+// element.style return kore CSSStyleDeclaration Object and sei object e 2 ta property thake . 1. length 2. cssText 
+// cssText holo oi element er sob inline css ke get and set korar jonno 
+
+// <h1 style="color: green; font-size: 20px;">Hello World!</h1> 
+
+// get cssText
+// const h1 = document.querySelector('h1')
+// console.log(h1.style.cssText) // color: green; font-size: 20px;
+
+// set cssText 
+// console.log(h1.style.cssText) // color: green; font-size: 20px;
+// h1.style.cssText = 'background-color: blue; color: white; font-size: 25px;'
+// console.log(h1.style.cssText) // background-color: blue; color: white; font-size: 25px;
+
+// tar mane ager sob inline css ke overwrite kore dise 
+
+
+// length 
+// console.log(document.querySelector('h1').style.length ) // 2
+
