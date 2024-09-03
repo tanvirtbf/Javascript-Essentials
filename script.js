@@ -6298,6 +6298,7 @@
 
 // const h2 = document.querySelector('h2')
 
+
 // h2.setAttribute('class','hiii') // override class value hello to hiii
 // h2.setAttribute('id','id1 id2 id3') // id te 3 ta id set hoye gese named id1,id2,id3
 // h2.setAttribute('class',' ')
