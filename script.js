@@ -5977,6 +5977,14 @@
 // text -- The string to be parsed as HTML or XML and inserted into the tree.
 // It is recommended you not use insertAdjacentHTML when inserting plain text instead, use the node.textContent property 
 
+// Example : 
+// const li = document.querySelector('.list')
+// const myHtml = "<p>hello worldss</p>"
+// li.insertAdjacentHTML('afterbegin',myHtml)
+
+
+
+
 
 // innerHTML 
 // kono element er vitor joto html tag ase + text comment jai ase sob eksathe sei element er innerHTML 
