@@ -5470,25 +5470,27 @@
   // in body element node ------
     // Enter or Space(text node) - h1 - Enter or Space(text node) - p - Enter or Space(text node)
       // in h1 element node
-
+        // Enter or Space(text node) - comment node - Enter or Space(text node) - text node  - Enter or Space(text node)
+      // in p element node
+        // text node (para)
 // and so on....
 
 
 
 // Dom Traversal (v.23)
 // manually total 12 upaye dom traversal hoy 
-// 1. parentNode 
-// 2. parentElement 
-// 3. childNodes 
-// 4. children 
-// 5. firstChild 
-// 6. firstElementChild 
-// 7. lastChild 
-// 8. lastElementChild 
-// 9. previousSibling 
-// 10. previousElementSibling 
-// 11. nextSibling 
-// 12. nextElementSibling
+// 1. parentNode ------------------(element + node 2 tai dhorbe)
+// 2. parentElement ------------------(sudhu element dhorbe)
+// 3. childNodes ------------------(element + node 2 tai dhorbe)
+// 4. children ------------------(sudhu element dhorbe)
+// 5. firstChild ------------------(element + node 2 tai dhorbe)
+// 6. firstElementChild ------------------(sudhu element dhorbe)
+// 7. lastChild ------------------(element + node 2 tai dhorbe)
+// 8. lastElementChild ------------------(sudhu element dhorbe)
+// 9. previousSibling ------------------(element + node 2 tai dhorbe)
+// 10. previousElementSibling ------------------(sudhu element dhorbe)
+// 11. nextSibling ------------------(element + node 2 tai dhorbe)
+// 12. nextElementSibling ------------------(sudhu element dhorbe)
 
 
 // Theory of 12 Dom Traversal way
