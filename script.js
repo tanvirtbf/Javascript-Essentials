@@ -6824,7 +6824,70 @@
 // document.getElementById('three').addEventListener('click',()=>{console.log(3)}, true);
 // document.getElementById('four').addEventListener('click',()=>{console.log(4)}, true);
 // output : 
-// output : 
 // click on div 3 and result : html body 1 2 3
 // click on div 1 and result : html body 1
 // click on div 4 and result : html body 1 2 3 4
+
+
+// Event Object (v.90)
+// DOM events pass an Event object as an argument to handlers . This object contains extra information about the event that occurred. 
+
+// Example : 
+// addEventListener('click',(e)=>{....})
+// upore e holo event object
+// jokhon kono event fire hoy sei event er handler function er parameter e ekta object pass hoy . sei object ke bole event object . amra chaile sei object sei event handler function er vitor use korte pari .
+
+// document.querySelector('button').addEventListener('click',(e)=>{
+//   console.log(e) // return pointerEvent object , this is actually event object
+//   console.log(e.clientX) // jekhane click kortesi seta x okkhe koto pixel right side e seta ber kore 
+//   console.log(e.clientY)// jekhane click kortesi seta y okkhe koto pixel nicher side e seta ber kore 
+//   console.log(e.target) // <button>Click for Change</button>
+//   console.log(e.type) // click
+//   // and so on...
+// })
+
+
+// What is the difference between target and current target (v.91)
+
+{/* <div id="one">
+1
+<div id="two">
+  2
+  <div id="three">
+    3
+    <div id="four">
+      4
+    </div>
+  </div>
+</div>
+</div> */}
+
+// document.getElementById('one').addEventListener('click',(e)=>{
+//   console.log('1')
+//   console.log('Target = ' + e.target.dataset.name)
+//   console.log('Current Target = ' + e.currentTarget.dataset.name)
+// }, false)
+// document.getElementById('two').addEventListener('click',(e)=>{
+//   console.log('2')
+//   console.log('Target = '+e.target.dataset.name)
+//   console.log('Current Target = '+e.currentTarget.dataset.name)
+// },false)
+// document.getElementById('three').addEventListener('click',(e)=>{
+//   console.log('3')
+//   console.log('Target = '+e.target.dataset.name)
+//   console.log('Current Target = '+e.currentTarget.dataset.name)
+// },false)
+// document.getElementById('four').addEventListener('click',(e)=>{
+//   console.log('4')
+//   console.log('Target = '+e.target.dataset.name)
+//   console.log('Current Target = '+e.currentTarget.dataset.name)
+// },false)
+
+
+// Event methods stopPropagation and stopImmediatePropagation (v.92)
+
+// stopPropagation() method  --- Prevents further propagation of the current event in the capturing and bubbling phases. 
+// Syntax : e.stopPropagation();
+
+// stopImmediagePropagation() --- Prevents other listeners of the same event from being called. 
+// Syntax : e.stopImmediatePropagation()
