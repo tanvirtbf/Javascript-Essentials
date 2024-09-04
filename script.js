@@ -6721,3 +6721,20 @@
 // }
 // const btn = document.querySelector('button')
 // btn.addEventListener('click',show, false)
+
+// *********Important Notes************
+// akhn porjonto amra onclick action old way te kore ashcilam . tahole keno amra new technique addEventListener use korbo ? ki amon facilities ase ekhane ? 
+// Why we should use addEventListener() ? 
+// Ans : 
+// 1st Reason : It allows you to bind multiple handlers to an object for the same event without overwriting 
+// Example of 1st Reason -- 
+// amra dekhechilam event overwriting concept . eta addEventListener diye easily solve kora jay . jemon..
+// const btn = document.querySelector('button')
+// btn.addEventListener('click',()=>{alert("Hello 1")})
+// btn.addEventListener('click',()=>{alert("Hello 2")})
+// ekhane prothome Hello 1 alert hobe then Hello 2 alert hobe 
+
+// 2nd Reason : It enables you finer-grained control of the phase when the listener is activated(Capture or Bubbling) -- amra capture and bubbling 2 ta phase er shubidha pai jeta ager technique e petam na 
+
+
+// 3rd Reason : It works on any DOM element, not just HTML elements.--- tar mane aita jekono node er upor kaj kore . jemon text node , comment node etc . not just element node, it use on text node, comment node etc
