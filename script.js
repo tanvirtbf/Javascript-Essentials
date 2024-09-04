@@ -7012,15 +7012,15 @@
 
 
 // 10. contextmenu -- It fires when mouse right button is clicked. 
-document.querySelector('button').addEventListener('contextmenu',(e)=>{
-  e.preventDefault()
-  console.log(e)
-  console.log('firing')
-  const box = document.querySelector('.box')
-  box.classList.toggle('show')
-  box.style.top = e.offsetY
-  box.style.left = e.offsetX
-})
+// document.querySelector('button').addEventListener('contextmenu',(e)=>{
+//   e.preventDefault()
+//   console.log(e)
+//   console.log('firing')
+//   const box = document.querySelector('.box')
+//   box.classList.toggle('show')
+//   box.style.top = e.offsetY
+//   box.style.left = e.offsetX
+// })
 
 
 
