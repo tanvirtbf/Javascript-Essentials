@@ -6754,5 +6754,61 @@
 // btn.removeEventListener('click',show,true) // ekhane 1st event remove hobe na . 2nd event remove hobe . karon 2nd event er sob argument hubuhu mile jay removeEventListener er argument er sathe 
 
 
+// DOM Event Flow or Event Propagation (v.89)
 
+// DOM Event Flow
+// The DOM 2 Event Model specification describes a standard way to create, capture , handle and cancel event in a tree like structure such as an XHTML document's object hierarchy.
 
+// DOM Event Flow er 3 ta phase thake 
+// 1. capture phase (event on top to bottom)
+// 2. target phase (event on exact target)
+// 3. bubbling phase (event on bottom to top) -- eta by default hoye thake
+
+// Example : 
+{/* <div id="one">
+1
+<div id="two">
+  2
+  <div id="three">
+    3
+    <div id="four">
+      4
+    </div>
+  </div>
+</div>
+</div> */}
+
+// Event Bubbling 
+// document.getElementById('one').addEventListener('click',()=>{console.log(1)}, false);
+// document.getElementById('two').addEventListener('click',()=>{console.log(2)}, false);
+// document.getElementById('three').addEventListener('click',()=>{console.log(3)}, false);
+// document.getElementById('four').addEventListener('click',()=>{console.log(4)}, false);
+// output : 
+// eta dekhbe jekhane take click kora hoise seta soho setar theke nicher dike kon kon jaygay click event ase . joto gula thakbe sob event run korbe . jemon div 3 te click korle answer : 3 2 1 . div 4 e click korle ashe 4 3 2 1 . div 2 te click korle 2 1 ashe . jodi div 1 er baire body or html tag e click event thakto tahole segulao run korto bottom to top serial onujayiii 
+// jemon 
+// document.querySelector('body').addEventListener('click',()=>{console.log('body')}, false)
+// document.querySelector('html').addEventListener('click',()=>{console.log('html')}, false)
+// document.getElementById('one').addEventListener('click',()=>{console.log(1)}, false);
+// document.getElementById('two').addEventListener('click',()=>{console.log(2)}, false);
+// document.getElementById('three').addEventListener('click',()=>{console.log(3)}, false);
+// document.getElementById('four').addEventListener('click',()=>{console.log(4)}, false);
+// output : 
+// click on div 3 and result : 3 2 1 body html
+// click on div 1 and result : 1 body html 
+// click on div 4 and result : 4 3 2 1 body html
+
+// tar mane jekhane click kora hobe sekhan theke shuru kore bottom to top serial maintain kore sob parent node e jay and check kore je click event ase kina . jodi thake tahole sei event run kore . 
+
+// *** Important Notes ***
+// jodi bottom to top jauyar somoy kono ekta parent e click event na pay tahole se next parent e chole jay click event khujar jonno . jodi pay setao run kore . tar mane holo jodi body element e click event na ditam and html element e click event ditam taholeo bottom to top jauyar somoy body skip hoye html er click event run korto 
+// jemon 
+// document.querySelector('html').addEventListener('click',()=>{console.log('html')}, false)
+// document.getElementById('one').addEventListener('click',()=>{console.log(1)}, false);
+// document.getElementById('two').addEventListener('click',()=>{console.log(2)}, false);
+// document.getElementById('three').addEventListener('click',()=>{console.log(3)}, false);
+// document.getElementById('four').addEventListener('click',()=>{console.log(4)}, false);
+// output : 
+// output : 
+// click on div 3 and result : 3 2 1 html
+// click on div 1 and result : 1 html 
+// click on div 4 and result : 4 3 2 1 html
