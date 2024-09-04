@@ -6684,7 +6684,11 @@
 
 // ekhane disp2 display hobe . karon disp1 pore houyay seta overwrite hoye disp2 hoye gese . etakeii bole OverWriting event handler
 
-
-
-
+// ai problem ta kivabe solve korbo ? 
+// function disp(){
+//   alert("Hello 1")
+//   alert("Hello 2")
+// }
+// document.querySelector('button').onclick = disp
+// kintu ai approach ta best practice na . samne amra dekhbo new technique use kore amra easily sohoj syntax diye 2 ta event eksathe run korte pari 
 
