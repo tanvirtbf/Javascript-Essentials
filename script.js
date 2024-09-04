@@ -6891,3 +6891,46 @@
 
 // stopImmediagePropagation() --- Prevents other listeners of the same event from being called. 
 // Syntax : e.stopImmediatePropagation()
+
+// Example : 
+{/* <div id="one">
+1
+<div id="two">
+  2
+  <div id="three">
+    3
+  </div>
+</div>
+</div> */}
+function div1(){
+  this.style.backgroundColor = 'red'
+}
+function div2(){
+  this.style.backgroundColor = 'blue'
+}
+function div2_2(){
+  this.style.width = '250px'
+}
+function div3(){
+  this.style.backgroundColor = 'green'
+}
+
+const divOne = document.querySelector('#one')
+const divTwo = document.querySelector('#two')
+const divThree = document.querySelector('#three')
+
+divOne.addEventListener('click',div1,false)
+divTwo.addEventListener('click',div2,false)
+divTwo.addEventListener('click',div2_2,false)
+divThree.addEventListener('click',div3,false)
+
+
+
+
+
+
+
+
+
+
+
