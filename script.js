@@ -6652,3 +6652,25 @@
 //   alert('Hello World!')
 // }
 
+// Event Binding with Javascript (v.85)
+// When we use this approach we can add or remove handlers dynamically as well as it improves the separation between the structure of document and its logic and presentation
+
+// Example : 
+// <button>Click Me</button>
+// document.querySelector('button').onclick = function(){
+//   alert('Hello World!')
+// }
+
+// Example : 
+// <button>Click Me</button>
+// const btn = document.querySelector('button')
+// function disp(){
+//   alert('Hello World!')
+// }
+// btn.onclick = disp
+
+
+
+
+
+
