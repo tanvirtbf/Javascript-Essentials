@@ -7048,4 +7048,26 @@
 
 
 
+// Key Event
+
+// 1. keydown -- It fires as a key is pressed down.
+
+// 2. keyup -- It fires as the key is released.
+
+// 3. keypress -- It fires after a key is pressed down(after keydown). It only works with printable characters. 
+
+// document.querySelector('input').addEventListener('keypress',(e)=>{
+//   console.log(e)
+//   // console.log(e)
+//   // after press shift button : 
+//   // console.log(e.key) // shift
+//   // after press alt button : 
+//   // console.log(e.key) // Alt
+//   // after press h button : 
+//   // console.log(e.key) // h
+// })
+
+
+
+
 
