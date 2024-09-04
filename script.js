@@ -6692,3 +6692,32 @@
 // document.querySelector('button').onclick = disp
 // kintu ai approach ta best practice na . samne amra dekhbo new technique use kore amra easily sohoj syntax diye 2 ta event eksathe run korte pari 
 
+
+// addEventListener (v.87)
+
+// DOM Event Model
+// The DOM 2 Event Model specification describes a standard way to create, capture , handle and cancel event in a tree like structure such as an XHTML document's object hierarchy.
+
+// phases : 
+// 1. Capture Phase
+// 2. Target Phase
+// 3. Bubbling Phase
+// eta niye pore study hobe . Now addEventListener()...
+
+// addEventListener() method 
+// This method is introduced by DOM2, used to engage an event handler in a page
+
+// Syntax : 
+// Object.addEventListener(event,handler,capturePhase)
+
+// Object -- Object is the node node which the listener is to be bound
+// event -- Event is a string indicating the type of event.
+// handler -- Handler is the function that should be called when the event occurs.
+// capturePhase -- CapturePhase is a Boolean indicating whether to use Bubbling(false) or Capture(True). This is optional. If you omit there is false by default.
+
+// Example : 
+// function show(){
+//   alert('hello')
+// }
+// const btn = document.querySelector('button')
+// btn.addEventListener('click',show, false)
