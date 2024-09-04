@@ -6957,13 +6957,13 @@
 // 1. mousedown -- It fires when mouse button is pressed down. 
 // 2. mouseup -- It fires when the mouse button is released.
 // 3. click -- It fires when something is clicked. mousedown, mouseup and click events fires in sequence.
-// 4. dblclick
-// 5. mouseenter
-// 6. mouseleave
-// 7. mouseover
-// 8. mouseout
-// 9. mousemove
-// 10. contextmenu 
+// 4. dblclick -- It fires when something is clicked twice in rapid succession. mousedown, mouseup, click, mousedown, mouseup, click and dblclick events fires in sequence.
+// 5. mouseenter -- It fires when a mouse starts to hover over some element. No bubble
+// 6. mouseleave -- It fires when a mouse exits while hovering over some element. No bubble
+// 7. mouseover -- It fires when mouse is hovering over some element.
+// 8. mouseout -- It fires when mouse leaves from hovering over some element.
+// 9. mousemove -- It fires when the mouse moves.
+// 10. contextmenu -- It fires when mouse right button is clicked. 
 
 
 // 1. mousedown -- It fires when mouse button is pressed down. 
@@ -6984,5 +6984,45 @@
 // 4. dblclick -- It fires when something is clicked twice in rapid succession. mousedown, mouseup, click, mousedown, mouseup, click and dblclick events fires in sequence.
 // document.querySelector('button').addEventListener('dblclick',()=>{console.log('firing')})
 // only left side er button 2 bar por por click kore chere dile ai event fire hoy 
+
+
+// 5. mouseenter -- It fires when a mouse starts to hover over some element. No bubble
+// document.querySelector('button').addEventListener('mouseenter',()=>{console.log('firing')})
+// jokhon ami mouse hover korbo tokhonii ei event fire hoy . kintu ai event er ekta bishoy hocche eta bubbling hoy na 
+
+
+// 6. mouseleave -- It fires when a mouse exits while hovering over some element. No bubble
+// document.querySelector('button').addEventListener('mouseleave',()=>{console.log('firing')})
+// jokhon ami mouse hover korbo tokhonii ei event fire hoy na. jokhon ami element theke mouse hover soraiya nibo tokhon aita fire hoy . kintu ai event er ekta bishoy hocche eta bubbling hoy na . 
+
+
+// 7. mouseover -- It fires when mouse is hovering over some element.
+// document.querySelector('button').addEventListener('mouseover',()=>{console.log('firing')})
+// eta mouseenter er motoi . just parthokko hocche mouseenter e bubbling hoy na and mouseover e bubbling hoy 
+
+
+// 8. mouseout -- It fires when mouse leaves from hovering over some element.
+// document.querySelector('button').addEventListener('mouseout',()=>{console.log('firing')})
+// eta mouseleave er motoi . just parthokko hocche mouseleave e bubbling hoy na and mouseout e bubbling hoy 
+
+
+// 9. mousemove -- It fires when the mouse moves.
+// document.querySelector('button').addEventListener('mousemove',()=>{console.log('firing')})
+// element er upor mouse hover kore joto naraite thakbo toto event fire hoteii thakbe
+
+
+// 10. contextmenu -- It fires when mouse right button is clicked. 
+document.querySelector('button').addEventListener('contextmenu',(e)=>{
+  e.preventDefault()
+  console.log(e)
+  console.log('firing')
+  const box = document.querySelector('.box')
+  box.classList.toggle('show')
+  box.style.top = e.offsetY
+  box.style.left = e.offsetX
+})
+
+
+
 
 

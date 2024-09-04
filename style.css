@@ -37,3 +37,18 @@
   height: 100px;
   background-color: yellow;
 }
+
+
+.buttons{
+  position: relative;
+}
+
+.box{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+}
+.show{
+  display: none;
+}
