@@ -6954,3 +6954,35 @@
 
 // Mouse Event (v.94)
 
+// 1. mousedown -- It fires when mouse button is pressed down. 
+// 2. mouseup -- It fires when the mouse button is released.
+// 3. click -- It fires when something is clicked. mousedown, mouseup and click events fires in sequence.
+// 4. dblclick
+// 5. mouseenter
+// 6. mouseleave
+// 7. mouseover
+// 8. mouseout
+// 9. mousemove
+// 10. contextmenu 
+
+
+// 1. mousedown -- It fires when mouse button is pressed down. 
+// document.querySelector('button').addEventListener('mousedown',()=>{console.log('firing')})
+// jokhon mouse er right or left jekono ekta button click hoy tokhon fire hoye thake 
+
+
+// 2. mouseup -- It fires when the mouse button is released.
+// document.querySelector('button').addEventListener('mouseup',()=>{console.log('firing')})
+// mouse er right or left jekono ekta button click kore chere dile ai event fire hoy . 
+
+
+// 3. click -- It fires when something is clicked. mousedown, mouseup and click events fires in sequence.
+// document.querySelector('button').addEventListener('click',()=>{console.log('firing')})
+// mouse er only left side click kore dhore rakhle fire hoy na . click kore chere dileii fire hoy . 
+
+
+// 4. dblclick -- It fires when something is clicked twice in rapid succession. mousedown, mouseup, click, mousedown, mouseup, click and dblclick events fires in sequence.
+// document.querySelector('button').addEventListener('dblclick',()=>{console.log('firing')})
+// only left side er button 2 bar por por click kore chere dile ai event fire hoy 
+
+
