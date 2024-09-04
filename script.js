@@ -7024,5 +7024,28 @@
 
 
 
+// Focus Event
+
+// focus -- jokhon kono input or onno kono element e jekhane focus event lagano jay sekhane click korle focus event fire hoy . jemon input er vitor click korle focus event fire hoy . ei event bubbling hoy na 
+
+// blur -- jei element er upor blur event set kora jay sei event e blur event dile jodi ami sei element er baire click kori tahole blur event fire hoy . ei event bubbling hoy na 
+
+// focusin -- eta similar focus event er . just eta bubbling hoy kintu focus e bubbling hoy na 
+
+// focusout -- eta similar blur event er . just eta bubbling hoy kintu blur e bubbling hoy na 
+
+
+// <input type="text" placeholder="focus event test">
+// const input = document.querySelector('input')
+// function fe(e){
+//   document.querySelector('h1').style.color = 'orange'
+// }
+// function be(e){
+//   document.querySelector('h1').style.color = 'blue'
+// }
+// input.addEventListener('focus',fe,false)
+// input.addEventListener('blur',be,false)
+
+
 
 
