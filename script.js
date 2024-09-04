@@ -6738,3 +6738,21 @@
 
 
 // 3rd Reason : It works on any DOM element, not just HTML elements.--- tar mane aita jekono node er upor kaj kore . jemon text node , comment node etc . not just element node, it use on text node, comment node etc
+
+
+// removeEventListener() method (v.88)
+// This method is used to remove handlers, with the same arguments given when the event was added. 
+// Example : 
+// const btn = document.querySelector('button')
+
+// function show(){
+//   alert('Hello World')
+// }
+// btn.addEventListener('click',show,false) // 1st 
+// btn.addEventListener('click',show,true) // 2nd 
+
+// btn.removeEventListener('click',show,true) // ekhane 1st event remove hobe na . 2nd event remove hobe . karon 2nd event er sob argument hubuhu mile jay removeEventListener er argument er sathe 
+
+
+
+
