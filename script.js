@@ -7048,7 +7048,7 @@
 
 
 
-// Key Event
+// Key Event (v.97)
 
 // 1. keydown -- It fires as a key is pressed down.
 
@@ -7068,6 +7068,10 @@
 // })
 
 
-
-
+// Text Event (v.98)
+// textInput
+// document.querySelector('input').addEventListener('textInput',(e)=>{
+//   // after press a button : 
+//   console.log(e.data) // a
+// })
 
