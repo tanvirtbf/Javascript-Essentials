@@ -6902,29 +6902,33 @@
   </div>
 </div>
 </div> */}
-function div1(){
-  this.style.backgroundColor = 'red'
-}
-function div2(){
-  this.style.backgroundColor = 'blue'
-}
-function div2_2(){
-  this.style.width = '250px'
-}
-function div3(){
-  this.style.backgroundColor = 'green'
-}
+// function div1(e){
+//   this.style.backgroundColor = 'red'
+// }
+// function div2(e){
+//   this.style.backgroundColor = 'blue'
+//   e.stopPropagation() 
+// }
+// function div2_2(e){
+//   this.style.width = '250px'
+// }
+// function div3(e){
+//   this.style.backgroundColor = 'green'
+// }
 
-const divOne = document.querySelector('#one')
-const divTwo = document.querySelector('#two')
-const divThree = document.querySelector('#three')
+// const divOne = document.querySelector('#one')
+// const divTwo = document.querySelector('#two')
+// const divThree = document.querySelector('#three')
 
-divOne.addEventListener('click',div1,false)
-divTwo.addEventListener('click',div2,false)
-divTwo.addEventListener('click',div2_2,false)
-divThree.addEventListener('click',div3,false)
+// divOne.addEventListener('click',div1,false)
+// divTwo.addEventListener('click',div2,false)
+// divTwo.addEventListener('click',div2_2,false)
+// divThree.addEventListener('click',div3,false)
 
-
+// Notes about stopPropagation -----
+// amra bubbling phase e thakle target element theke top parent element e same event fire hote thake and capturing phase e thakle top parent element theke target element porjonto same event fire hote thake . kintu amra jodi parent er ai traversal kora obosthay kono ekta parent er moddhe e.stopPropagation() lagaiya dei tahole oi parent element er por r kono event fire hobe na . 
+// bubbling er khetre ami jodi div 3 te click kori and div 2 te stopPropagation() lagaiya dei tokhon div 3 er click event fire hobe , then div 2 er click event fire hobe kintu tarpor parent to parent element e jotoi click event thakuk seta r fire hobe na . tar mane div 2 er por r event propagate hobe na 
+// capturing er khetre ami jodi div 3 te click kori and div 2 te e.stopPropagation() lagaiya dei tahole seta parent html theke propagate hote hote jokhon div 2 te ashbe tokhon se dekhbe ekhane propagate stop kore deya hoyeche . then se div 3 te jabeii na 
 
 
 
