@@ -6669,6 +6669,20 @@
 // }
 // btn.onclick = disp
 
+// OverWriting Event Handler (v.86)
+
+// Example : 
+// <button>Click Me</button>
+// function disp1(){
+//   alert("Alert 1")
+// }
+// function disp2(){
+//   alert("Alert2")
+// }
+// document.querySelector('button').onclick = disp1;
+// document.querySelector('button').onclick = disp2;
+
+// ekhane disp2 display hobe . karon disp1 pore houyay seta overwrite hoye disp2 hoye gese . etakeii bole OverWriting event handler
 
 
 
