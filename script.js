@@ -6932,9 +6932,24 @@
 
 
 
+// How to prevent Element default behavior (v.93)
+// jodi kono element er kono default behaviour thake tahole seta ke off kore dey 
 
+// <a href="https://beautybooth.com.bd/">BeautyBooth</a>
+// a tag er ekta default behaviour holo ekhane click korleii automatically href link e chole jay . othocho ami a tag er upor kono click event lagai nai . eta a tag er ekta default behaviour . ami jodi chai se tar default behaviour off kore dek tahole use korbo e.preventDefault() method 
+// Example : 
+// const a = document.querySelector('a')
+// a.addEventListener('click',(e)=>{
+//   e.preventDefault()
+// },false)
+// akhn a te click korleo kothau redirect hobe na 
 
-
+// akhn ami eta ke manually click event dibo jate click korle href er action e chole jay 
+// const a = document.querySelector('a')
+// a.addEventListener('click',(e)=>{
+//   e.preventDefault()
+//   window.open('https://beautybooth.com.bd/')
+// },false)
 
 
 
