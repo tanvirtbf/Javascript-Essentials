@@ -6636,3 +6636,19 @@
 // const h1 = document.querySelector('h1')
 // const computedStyle = window.getComputedStyle(h1)
 // console.log(computedStyle) // all css style returned.. (joto inline, internal, extarnal , browser default sob eksathe return hoise)
+
+
+
+// Event start (v.82)
+
+// Event Binding with HTML Attribute (v.84)
+// These bindings are element attributes , such as onclick, onchange, oninput etc which can be set equal to javascript that is to be executed when the given event occurs at that object. 
+// Example : 
+// <button onclick="alert('Button Clicked')">Click Me</button>
+
+// Example : 
+// <button onclick="helloEvent()">Click Me</button>
+// function helloEvent(){
+//   alert('Hello World!')
+// }
+
