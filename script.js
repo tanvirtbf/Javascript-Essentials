@@ -6817,12 +6817,12 @@
 // bottom to top event chole karon addEventListener er third argument e false thake . eta by default false deya thake . kintu jodi bottom to top er bodole top to bottom korte chai tahole 3rd argument e true dite hobe . tokhon take event capturing bole
 
 // Event Capturing
-document.querySelector('body').addEventListener('click',()=>{console.log('body')}, true)
-document.querySelector('html').addEventListener('click',()=>{console.log('html')}, true)
-document.getElementById('one').addEventListener('click',()=>{console.log(1)}, true);
-document.getElementById('two').addEventListener('click',()=>{console.log(2)}, true);
-document.getElementById('three').addEventListener('click',()=>{console.log(3)}, true);
-document.getElementById('four').addEventListener('click',()=>{console.log(4)}, true);
+// document.querySelector('body').addEventListener('click',()=>{console.log('body')}, true)
+// document.querySelector('html').addEventListener('click',()=>{console.log('html')}, true)
+// document.getElementById('one').addEventListener('click',()=>{console.log(1)}, true);
+// document.getElementById('two').addEventListener('click',()=>{console.log(2)}, true);
+// document.getElementById('three').addEventListener('click',()=>{console.log(3)}, true);
+// document.getElementById('four').addEventListener('click',()=>{console.log(4)}, true);
 // output : 
 // output : 
 // click on div 3 and result : html body 1 2 3
