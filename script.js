@@ -7125,4 +7125,12 @@
 // }
 
 
+// 3. prompt() method 
+// Windwo objects method prompt() can be used to get input from the user, named prompt. The prompt() method displays displays a dialog box that prompts the visitor for input. 
+// Once the prompt function obtains input from the user, it returns that input. If the user press the cancel button in the dialog or close box, a value null will be returned. 
+
+// Syntax : prompt(text,defaultText)
+// Example : 
+// const inputText = prompt('Enter your name : ','name')
+// console.log(inputText)
 
