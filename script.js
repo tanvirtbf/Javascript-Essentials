@@ -7075,3 +7075,54 @@
 //   console.log(e.data) // a
 // })
 
+
+
+// Window Object (v.98)
+
+// innerWidth and outerWidth 
+// innerWidth holo only browser screen er width jetay kono kichu display hoy and outerWidth holo full browser er width . 
+
+// console.log(window.innerWidth)
+// console.log(window.outerWidth)
+
+// innerHeight and outerHeight 
+// innerHeight holo only browser screen er height and outerHeight holo full browser er height
+
+// console.log(window.innerHeight)
+// console.log(window.outerHeight)
+
+
+
+// Dialog Boxes (v.99)
+// It is used to provide some information to users. 
+
+// Type of Dialog box : 
+// 1. Alert 
+// 2. Confirm
+// 3. Prompt
+
+// 1. Alert -- alert()
+// This window objects method is used to display data in alert dialog box. alert really should be used only when you truly want to stop everything and let the user know something. 
+// jokhon alert() method run korbe tokhon user sei page e kichui korte parbe na jotokkhon na sei alert close kora hoy .
+
+// Syntax : window.alert() or alert()
+
+
+// 2. Confirm -- confirm() 
+// This window object's method is used to display a message for a user to respond to by pressing either an OK button to agree with the message to a Cancel button to disagree with the message. It returns true on OK and false on Cancel
+// etao alert() method er moto ok or cancel korar ag porjonto browser stop hoye thake , r kono kaj kora jay na.
+
+// syntax : window.confirm() or confirm()
+// Example : 
+// const isOkay = window.confirm("Are You Sure ?")
+// console.log(isOkay)
+
+// Example : 
+// if(confirm('Are You Sure?')){
+//   console.log("He is Confirmed!")
+// }else{
+//   console.log('Not Confirmed!')
+// }
+
+
+
