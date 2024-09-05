@@ -7134,3 +7134,22 @@
 // const inputText = prompt('Enter your name : ','name')
 // console.log(inputText)
 
+
+// open and close method (v.100)
+
+// open
+// document.querySelector('button').addEventListener('click',()=>{
+//   window.open("https://beautybooth.com.bd/","_blank","width=100, height=200")
+// })
+
+// close
+// var newWindow
+// document.querySelector('button').addEventListener('click',()=>{
+//   newWindow = window.open("https://beautybooth.com.bd/","_blank","width=100, height=200")
+// })
+// document.querySelector('#close').addEventListener('click',()=>{
+//   newWindow.close();
+// })
+
+
+
