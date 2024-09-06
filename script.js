@@ -7169,7 +7169,8 @@
 // console.log(formOne)
 
 // Form Access with querySelector or getElementById or equal technique
-
-
-
+const formOne = document.querySelector('#form1')
+const formTwo = document.getElementById('form2')
+console.log(formOne)
+console.log(formTwo)
 
