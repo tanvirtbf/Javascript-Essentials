@@ -7164,9 +7164,12 @@
 
 // Form access with name attribute
 // <form action="" name="formOne">...</form> and <form action="" name="formTwo">...</form>
-const formOne = document.formOne
-const formTwo = document.formTwo
-console.log(formOne)
+// const formOne = document.formOne
+// const formTwo = document.formTwo
+// console.log(formOne)
+
+// Form Access with querySelector or getElementById or equal technique
+
 
 
 
