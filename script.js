@@ -7158,10 +7158,9 @@
 // kivabe amra form ke access korte pari 
 // document er vitor forms nam e ekta array ase . sei array te web page e joto gula form ase sob gula eksathe return hoy 
 
-const formOne = document.forms[0]
-const formTwo = document.forms[1]
-
-console.log(document.forms)
+const formOne = document.forms[0] // total form er first form ta return hoise
+const formTwo = document.forms[1] // total form er second form ta return hoise
+console.log(document.forms) // total joto gula form asi create korsi sob aisha porse 
 
 
 
