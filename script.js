@@ -7154,6 +7154,10 @@
 
 // Form (v.111)
 
+// Accessing Forms (v.112)
+// kivabe amra form ke access korte pari 
+const formOne = document.forms[0]
+const formTwo = document.forms[1]
 
 
 
