@@ -2976,47 +2976,47 @@
 
 
 // Mini Project 
-const nameInput = document.querySelector('#nameInput')
-const ageInput = document.querySelector('#ageInput')
-const obj = {
-  name : '',
-  age : null,
-}
-const para1 = document.createElement('p')
-const para2 = document.createElement('p')
-para1.className = 'para1'
-para2.className = 'para2'
+// const nameInput = document.querySelector('#nameInput')
+// const ageInput = document.querySelector('#ageInput')
+// const obj = {
+//   name : '',
+//   age : null,
+// }
+// const para1 = document.createElement('p')
+// const para2 = document.createElement('p')
+// para1.className = 'para1'
+// para2.className = 'para2'
 
-const df = document.createDocumentFragment()
-df.appendChild(para1)
-df.appendChild(para2)
+// const df = document.createDocumentFragment()
+// df.appendChild(para1)
+// df.appendChild(para2)
 
-document.querySelector('body').insertBefore(df,nameInput)
+// document.querySelector('body').insertBefore(df,nameInput)
 
-nameInput.addEventListener('input',(e) => {
-  obj.name = e.target.value 
-  const newObj = JSON.stringify(obj)
-  localStorage.setItem('object',newObj)
+// nameInput.addEventListener('input',(e) => {
+//   obj.name = e.target.value 
+//   const newObj = JSON.stringify(obj)
+//   localStorage.setItem('object',newObj)
 
-})
+// })
 
-ageInput.addEventListener('input', (e) => {
-  obj.age = e.target.value 
-  const newObj = JSON.stringify(obj)
-  localStorage.setItem('object',newObj)
+// ageInput.addEventListener('input', (e) => {
+//   obj.age = e.target.value 
+//   const newObj = JSON.stringify(obj)
+//   localStorage.setItem('object',newObj)
 
-})
+// })
 
-const parseObj = JSON.parse(localStorage.getItem('object'))
-para1.innerText = 'My name is '+parseObj.name
+// const parseObj = JSON.parse(localStorage.getItem('object'))
+// para1.innerText = 'My name is '+parseObj.name
 
-const parseObj1 = JSON.parse(localStorage.getItem('object'))
-para2.innerText = 'My age is '+parseObj1.age
+// const parseObj1 = JSON.parse(localStorage.getItem('object'))
+// para2.innerText = 'My age is '+parseObj1.age
 
-const button = document.querySelector('button')
-button.addEventListener('click',()=>{
-  window.location.reload()
-})
+// const button = document.querySelector('button')
+// button.addEventListener('click',()=>{
+//   window.location.reload()
+// })
 
 
 
