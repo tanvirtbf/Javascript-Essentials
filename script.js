@@ -2883,18 +2883,37 @@
 
 
 // Localstorage 
-const input = document.querySelector('input')
+// const input = document.querySelector('input')
 // localstorage e force fully myName variable create kora hoyeche. akhn input e ja type korbo seta myName variable e add kore dibo 
 // input.addEventListener('input',(e)=>{
 //   localStorage.myName = e.target.value
 // })
 // localStorage er myName variable e input er text update hoye overwrite hoyeche
 // Or...
-input.addEventListener('input',(e)=>{
-  localStorage.myName = e.target.value
-  document.querySelector('h1').innerText =localStorage.myName
-})
+// input.addEventListener('input',(e)=>{
+//   localStorage.myName = e.target.value
+//   document.querySelector('h1').innerText =localStorage.myName
+// })
 
+
+// second approach for access and update localstorage variable
+// getItem and setItem
+// const input = document.querySelector('input')
+// console.log(localStorage.getItem('myName')) 
+
+// input.addEventListener('input',(e)=>{
+//   localStorage.setItem('myAge',e.target.value)
+// })
+
+// const input = document.querySelector('input')
+// const h1 = document.querySelector('h1')
+
+// h1.innerText = localStorage.getItem('myName')
+
+// input.addEventListener('input',(e)=>{
+//   localStorage.setItem('myName',e.target.value)
+//   h1.innerText = localStorage.myName
+// })
 
 
 
