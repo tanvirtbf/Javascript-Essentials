@@ -2884,11 +2884,16 @@
 
 // Localstorage 
 const input = document.querySelector('input')
-
+// localstorage e force fully myName variable create kora hoyeche. akhn input e ja type korbo seta myName variable e add kore dibo 
+// input.addEventListener('input',(e)=>{
+//   localStorage.myName = e.target.value
+// })
+// localStorage er myName variable e input er text update hoye overwrite hoyeche
+// Or...
 input.addEventListener('input',(e)=>{
   localStorage.myName = e.target.value
+  document.querySelector('h1').innerText =localStorage.myName
 })
-// localStorage er myName variable e input er text update hoye overwrite hoyeche
 
 
 
