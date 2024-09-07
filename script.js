@@ -3019,6 +3019,11 @@
 // })
 
 
+// remove all data from localstorage
+// localStorage.clear() // all data clear hoye jabe joto variable object array chilo sob clear hoye jabe 
+
+// remove single data from localstorage
+// localStorage.removeItem('data') // data nam e ekta variable chilo localstorage e , seta delete hoye gese
 
 
 
