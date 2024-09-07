@@ -2961,18 +2961,18 @@
 // console.log(typeof(stringObj)) // string
 
 // Convert string to object --- JSON.parse(string)
-const obj = {
-  name : 'Tanvir Ahmed',
-  age : 25,
-}
-const stringObj = JSON.stringify(obj)
-console.log(stringObj) // '{"name":"Tanvir Ahmed","age":25}'
-console.log(typeof(stringObj)) // string
+// const obj = {
+//   name : 'Tanvir Ahmed',
+//   age : 25,
+// }
+// const stringObj = JSON.stringify(obj)
+// console.log(stringObj) // '{"name":"Tanvir Ahmed","age":25}'
+// console.log(typeof(stringObj)) // string
 
-// convert object now 
-const convertObj = JSON.parse(stringObj)
-console.log(convertObj) // {name: 'Tanvir Ahmed', age: 25}
-console.log(typeof(convertObj)) // object
+// // convert object now 
+// const convertObj = JSON.parse(stringObj)
+// console.log(convertObj) // {name: 'Tanvir Ahmed', age: 25}
+// console.log(typeof(convertObj)) // object
 
 
 
