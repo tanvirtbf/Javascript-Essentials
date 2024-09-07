@@ -2883,7 +2883,12 @@
 
 
 // Localstorage 
+const input = document.querySelector('input')
 
+input.addEventListener('input',(e)=>{
+  localStorage.myName = e.target.value
+})
+// localStorage er myName variable e input er text update hoye overwrite hoyeche
 
 
 
