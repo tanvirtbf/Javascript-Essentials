@@ -2950,18 +2950,29 @@
 // amra sorasori kono object set korte parbo na localstorage e . karon localstorage only string accept kore . tai amader sei object ke age string e convart korte hobe then oita set korte hobe . get korar somoy o sei object string hishebe ashbe . seta ke abar string to object e convart kore kaj korte hobe
 
 // string convert technique -- JSON.stringify(obj)
+// const obj = {
+//   name : 'Tanvir Ahmed',
+//   age : 25
+// }
+// console.log(obj) // {name: 'Tanvir Ahmed', age: 25}
+// console.log(typeof(obj)) // object
+// const stringObj = JSON.stringify(obj)
+// console.log(stringObj) // {"name":"Tanvir Ahmed","age":25}
+// console.log(typeof(stringObj)) // string
+
+// Convert string to object --- JSON.parse(string)
 const obj = {
   name : 'Tanvir Ahmed',
-  age : 25
+  age : 25,
 }
-console.log(obj) // {name: 'Tanvir Ahmed', age: 25}
-console.log(typeof(obj)) // object
 const stringObj = JSON.stringify(obj)
-console.log(stringObj) // {"name":"Tanvir Ahmed","age":25}
+console.log(stringObj) // '{"name":"Tanvir Ahmed","age":25}'
 console.log(typeof(stringObj)) // string
 
-
-
+// convert object now 
+const convertObj = JSON.parse(stringObj)
+console.log(convertObj) // {name: 'Tanvir Ahmed', age: 25}
+console.log(typeof(convertObj)) // object
 
 
 
