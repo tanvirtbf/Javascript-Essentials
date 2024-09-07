@@ -2915,8 +2915,56 @@
 //   h1.innerText = localStorage.myName
 // })
 
+// Mini Project 
+const nameInput = document.querySelector('#nameInput')
+const ageInput = document.querySelector('#ageInput')
 
-// set and get Big Object in Localstorage
+const myData = {
+  name : '',
+  age : '',
+}
+
+const para1 = document.createElement('p')
+const para2 = document.createElement('p')
+const df = document.createDocumentFragment()
+para1.innerText = localStorage.getItem('name')
+para2.innerText = localStorage.getItem('age')
+para1.className = 'para1'
+para2.className = 'para2'
+df.appendChild(para1)
+df.appendChild(para2)
+document.querySelector('body').appendChild(df)
+
+nameInput.addEventListener('input',(e)=>{
+  myData.name = e.target.value 
+  localStorage.setItem('name',myData.name)
+  document.querySelector('.para1').innerText = localStorage.getItem('name')
+})
+ageInput.addEventListener('input',(e)=>{
+  myData.age = e.target.value
+  localStorage.setItem('age',myData.age)
+  document.querySelector('.para2').innerText = localStorage.getItem('age')
+})
+
+// set and get Object in Localstorage
+// amra sorasori kono object set korte parbo na localstorage e . karon localstorage only string accept kore . tai amader sei object ke age string e convart korte hobe then oita set korte hobe . get korar somoy o sei object string hishebe ashbe . seta ke abar string to object e convart kore kaj korte hobe
+
+// string convert technique -- JSON.stringify(obj)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
