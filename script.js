@@ -2997,23 +2997,26 @@ nameInput.addEventListener('input',(e) => {
   obj.name = e.target.value 
   const newObj = JSON.stringify(obj)
   localStorage.setItem('object',newObj)
-  const parseObj = JSON.parse(localStorage.getItem('object'))
-  para1.innerText = 'My name is '+parseObj.name
+
 })
 
 ageInput.addEventListener('input', (e) => {
   obj.age = e.target.value 
   const newObj = JSON.stringify(obj)
   localStorage.setItem('object',newObj)
-  const parseObj = JSON.parse(localStorage.getItem('object'))
-  para2.innerText = 'My age is '+parseObj.age
+
 })
 
+const parseObj = JSON.parse(localStorage.getItem('object'))
+para1.innerText = 'My name is '+parseObj.name
 
+const parseObj1 = JSON.parse(localStorage.getItem('object'))
+para2.innerText = 'My age is '+parseObj1.age
 
-
-
-
+const button = document.querySelector('button')
+button.addEventListener('click',()=>{
+  window.location.reload()
+})
 
 
 
