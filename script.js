@@ -2975,6 +2975,23 @@
 // console.log(typeof(convertObj)) // object
 
 
+// Mini Project 
+const nameInput = document.querySelector('#nameInput')
+const ageInput = document.querySelector('#ageInput')
+const obj = {
+  name : '',
+  age : null,
+}
+const para1 = document.createElement('p')
+const para2 = document.createElement('p')
+para1.className = 'para1'
+para2.className = 'para2'
+
+const df = document.createDocumentFragment()
+df.appendChild(para1)
+df.appendChild(para2)
+
+document.querySelector('body').insertBefore(df,nameInput)
 
 
 
