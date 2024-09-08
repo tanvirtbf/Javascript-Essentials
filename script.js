@@ -7334,6 +7334,22 @@
 // What is Cookie and How it works  (v.115)
 // A cookie is a small piece of text data set by web server that resided on the client's machine. (cookie holo kichu text data jeta thake client machine er moddhe jemon google chrome , mozila or others browser or app. eta set kore dey web server . mane jei server e ai website ta thake sei server cookie set kore dey client er machine e jokhon client server er kase request pathay )
 
-// Once it's been set, the client automatically returns the cookie to the web server with each request that it makes. (jokhonii ekbar client e kono cookie set korse kono web server tokhon tar por theke joto request jabe sei client theke sei server e totobar sei cookie o jabe client theke server e )
+// Once it's been set, the client automatically returns the cookie to the web server with each request that it makes. (jokhonii ekbar client e kono cookie set korse kono web server, tar por theke joto request jabe sei client theke sei server e totobar sei cookie o jabe client theke server e )
 
 // This allows the server to place value it wishes to 'remember' in the cookie, and have access to them when creating a response.
+
+// sudhu sei web server cookie ke access korte parbe jei cookie ta sei server nije set korse . A namok web server jei cookie ekjon client er machine e set korse sei cookie kokhonoii B , C , D... namok web server access korte parbe na 
+
+
+// mot kotha prottek ta request er sathe cookie automatic server er kase jay . jei cookie ta sei particular server set koreche
+
+// prottekta cookie er ekta expire date thake . eta server thik kore dey koto somoy porjonto cookie ta client machine e thakbe or kichu condition basaed cookie delete hoye thake . jemon jodi user browser close kore dey tokhon cookie delete hoye jabe , or jodi logout kore dey tahole cookie delete hoye jabe
+
+
+// Third Party Cookies
+// cookie kichu ta develop hoyeche . tai third party cookie ashe . 
+// age ki hoito ? age web server cookie banaito and seta client er server e set kore dito . kintu akhn server cookie banay na , server akhn ekta unique id banay . and sei unique id er sathe match kore ekta cookie create hoye sei cookie third party cookies er moddhe set hoye jay . ai third party cookie client er machine e thake na . eta alada ekta jaygay thake . jar karone client er machine e kono chap pore na and server onek onek cookie set korte pare ekta particular client er jonno 
+
+// real world concept : 
+// dhoren ami beautybooth er website e ashi and kichu cart item add kori or onno kichu kori , tokhon beautybooth er server sei kajer vittite kichu cookie banaiya sei cookie third party cookies er moddhe set kore dey and ekta unique id client ke dey jate ai id diye third party cookies theke sei particular cookie ta ber kora jay .   
+
