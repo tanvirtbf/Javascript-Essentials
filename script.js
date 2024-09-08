@@ -7373,12 +7373,14 @@
 // document.cookie = "name=value";
 // document.cookie = "name=value; expires=date; domain=domain; path=path; secure";
 // document.cookie = "name=value; max-age=inSecond; domain=domain; path=path; secure";
-
+// ****Important Notes****
+// expires and max-age ai 2 ta attribute same kaj kore . kintu production e 2 ta attribute ee add kora hoy . karon onk browser e expires kaj kore na , abar onek browser e max-age kaj kore na . 
+// name=value chara baki sob attribute optional . name diteii hobe . kintu name chara baki attribute jodi nao dei taholeo browser by default oi attribute e kichu value condition onujayii add kore dey.
 
 // Example : 
 // document.cookie = "userName=Tanvir"
 // document.cookie = "userName=Tanvir; expires=Sunday, 8-Sep-2024 08:10:00 UTC"
-// document.cookie = "userName=Tanver; max-age="+60*60*24*1; 
+// document.cookie = "userName=Tanver; max-age="+60*60*24*1; // ekhane max-age= sesh houyar por sathe sathe double quotes end kore deya hoy . karon nahole time er hishab ta stirng hishebe calculate hobe 
 
 // Optional Cookies Attribute : 
 // max-age
@@ -7388,6 +7390,85 @@
 // secure
 
 // Whenever you omit the optional cookie fields, the browser fills them in automatically with reasonable defaults.
+
+
+
+// How to set Cookies max-age attribute (v.118)
+// It is used to create persistent cookie. It is supported by all modern browsers except IE. 
+// max-age only second e time set kore thake 
+
+// Types of Cookies : 
+// 1. Session Cookies - Cookies that are set without the expires field are called session cookies. It is destroyed when the user quits the browser. (browser ke close korar sathe cookie delete hoye jay)
+// 2. Persistent Cookies - The browser keeps it up until their expiration date is reached.(ekta somoy set kora jay koto somoy porjonto cookie thakbe)
+
+// EXample :
+// document.cookie = "username=geeky; max-age="+60*60*24*10; // time limit 10 days
+// document.cookie = "username=geeky; max-age="+10; // time limit 120 second
+// document.cookie = "username=geeky; max-age=" + 60*60*24*10 + "; path=/";
+
+// alert(document.cookie) // all cookie ashbe
+
+
+// How to set expires date for cookie (v.119)
+// It is used to create persistent cookie. 
+
+// Example : 
+// document.cookie = "username=tanvir; expires=Sun, 8-Sep-2024 08:57:00 UTC"
+
+
+// How to set Cookie domain path and secure (v.120)
+
+// domain
+// It specifies the domain for which the cookie is valid . If not specified, this defaults to the host portion of the current document location. If a domain is specified, subdomains are always included. 
+
+// Example :  
+// document.cookie = "username=tanvir; domain=tanvir.com";
+// ekhane tanvir.com domain er jonno ai cookie banano hoise . amra chaile ai domain er subdomain eo ai cookie ta access korte parbo . jemon code.tanvir.com or main.tavir.com etc . kintu subdomain e kono cookie set korle seta main domain e access kora jabe na or siblings kono domain e add kora jabe na . only sei subdomain er jodi kono child thake setate access kora jabe . tar mane parent to child access kora jabe kintu child to parent and siblings to siblings access kora jabe na . same concept path er khetreo . path bolte routing bujhaisi .
+
+// jodi domain kono kichu set na kori tahole jekhan theke cookie set kora hoise setaii domain deya hoy
+
+// path 
+// path o domain er moto behaviour kore 
+
+// Example :
+// document.cookie = "username=tanvir; path=/" 
+// document.cookie = "username=tanvir; path=/category"
+// document.cookie = "username=geeky; path=/category/first"
+
+// first example e path=/ deya hoise . tar mane / er por jekono child route jemon /category/third/3 or /freegift/2 etc jekono route e jabe cookie ta . kintu / er kono parent route thakle sekhane jabe na . 
+// amnivabe 2nd or third example e cookie set hole kokhono tader parent route jemon / e cookie access kora jabe na 
+
+
+// secure
+// jei cookie te attribute secure set kore dibo seta https protocol e transmit hobe . ta chara onno kono protocol e transmit hobe na 
+
+
+
+// How to Replace and Append Cookie (v.121)
+
+// tar mane kivabe amra existing cookie ke onno kono cookie dara replace korte pari and already kono cookie er vitor notun kichu append kora 
+
+// jodi amra same name diye 2 ba tar theke beshi cookie create kori tahole last name er value ta replace hobe kintu jodi name change kore create kori tahole append hobe 
+
+
+
+
+// How to Read Cookies (v.122)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
