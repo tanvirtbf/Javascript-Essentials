@@ -2237,7 +2237,7 @@
 // console.log(location.protocol) // http:
 // console.log(location.pathname) // "/"
 // console.log(location.port) // 5500
-// // console.log(location.reload()) // page loading hobe
+// // console.log(location.reload()) // page reload hobe
 // console.log(location.search) // for get query string
 // console.log(location.hash) // url er moddhe # diye kichu likhle seta return kore
 
@@ -2263,8 +2263,12 @@
 // scrollBy() er argument 2 ta . prothom ta hocche x angle e kototuku scroll korbe, 2nd argument hocche y angle e kototuku scroll korbe 
 // scrollBy(100,-200) // x okkhe 100px and y okkher upore 200 px
 
-// scrollTo()
-// scroll
+// console.log(scrollY) // Y okkhe koto tuku scroll hoye niche neme ache seta pixel value te return hoy 
+// console.log(scrollX) // X okkhe koto tuku scroll hoye right or left e ase seta pixel value te return hoy
+
+// scrollTo() -- eta onekta similar scrollBy er sathe 
+
+// scroll -- etao onekta similar scrollBy er sathe
 
 // print()
 // print()
@@ -2384,7 +2388,6 @@
 // console.log(heading.getAttribute('class'))
 // console.log(heading.getAttribute('id'))
 // console.log(heading.getAttribute('tanvir'))
-
 // const heading = document.getElementById('h1')
 // heading.setAttribute('class','test')
 // // ekhane age class e heading nam e class chilo . kintu ami jokhon setAttribute diye test class set korlam tokhon ager class heading ta muche diye only test add kora hoise . tai heading class er kono css apply hobe na . only test er css apply hobe
@@ -7320,3 +7323,12 @@
 
 
 // Accessing Form Fields (v.113)
+
+
+
+
+
+
+
+
+// What is Cookie and How it works  (v.115)
