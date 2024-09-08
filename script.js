@@ -7366,4 +7366,28 @@
 
 
 // How to Set Cookies into Client System using JavaScript (v.117)
+// When you assign a string to document.cookie, the browser parses it as a cookie and adds it to its list of cookies.
+//There are several parts to each cookies. many of them optional.
+
+// Syntax : 
+// document.cookie = "name=value";
+// document.cookie = "name=value; expires=date; domain=domain; path=path; secure";
+// document.cookie = "name=value; max-age=inSecond; domain=domain; path=path; secure";
+
+
+// Example : 
+// document.cookie = "userName=Tanvir"
+// document.cookie = "userName=Tanvir; expires=Sunday, 8-Sep-2024 08:10:00 UTC"
+// document.cookie = "userName=Tanver; max-age="+60*60*24*1; 
+
+// Optional Cookies Attribute : 
+// max-age
+// expires
+// domain
+// path
+// secure
+
+// Whenever you omit the optional cookie fields, the browser fills them in automatically with reasonable defaults.
+
+
 
