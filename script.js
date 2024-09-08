@@ -7332,3 +7332,8 @@
 
 
 // What is Cookie and How it works  (v.115)
+// A cookie is a small piece of text data set by web server that resided on the client's machine. (cookie holo kichu text data jeta thake client machine er moddhe jemon google chrome , mozila or others browser or app. eta set kore dey web server . mane jei server e ai website ta thake sei server cookie set kore dey client er machine e jokhon client server er kase request pathay )
+
+// Once it's been set, the client automatically returns the cookie to the web server with each request that it makes. (jokhonii ekbar client e kono cookie set korse kono web server tokhon tar por theke joto request jabe sei client theke sei server e totobar sei cookie o jabe client theke server e )
+
+// This allows the server to place value it wishes to 'remember' in the cookie, and have access to them when creating a response.
