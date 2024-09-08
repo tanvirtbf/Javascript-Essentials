@@ -7359,7 +7359,11 @@
 // 2. Persistent Cookies - The browser keeps it up until their expiration date is reached.(ekta somoy set kora jay koto somoy porjonto cookie thakbe)
 
 
+// Cookies in Javascript (v.116)
+// cookies are exposed as the cookie property of the document object. This property is both readable and writeable.
+
+// You can see cookies in google chrome by following chrome://settings/content/cookies
 
 
-
+// How to Set Cookies into Client System using JavaScript (v.117)
 
