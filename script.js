@@ -7353,3 +7353,13 @@
 // real world concept : 
 // dhoren ami beautybooth er website e ashi and kichu cart item add kori or onno kichu kori , tokhon beautybooth er server sei kajer vittite kichu cookie banaiya sei cookie third party cookies er moddhe set kore dey and ekta unique id client ke dey jate ai id diye third party cookies theke sei particular cookie ta ber kora jay .   
 
+
+// Types of Cookies : 
+// 1. Session Cookies - Cookies that are set without the expires field are called session cookies. It is destroyed when the user quits the browser. (browser ke close korar sathe cookie delete hoye jay)
+// 2. Persistent Cookies - The browser keeps it up until their expiration date is reached.(ekta somoy set kora jay koto somoy porjonto cookie thakbe)
+
+
+
+
+
+
