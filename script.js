@@ -1,3 +1,22 @@
+// String 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Methods (Without Argument)
 // toUpperCase()
 // toLowerCase()
