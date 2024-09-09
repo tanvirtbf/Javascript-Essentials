@@ -1,15 +1,66 @@
 // String 
 
+// 1. length
+
+// There are 4 methods for extracting string characters : 
+// 2. charAt()
+// 3. charCodeAt()
+// 4. at()
+// 5. []
+
+// 6. 
 
 
+// 1. length
+// let text = "ABCdf"
+// console.log(text.length) // 5
+
+// 2. charAt()
+// The charAt() method returns the character at a specified index (position) in a string (mane charAt method diye kono text er specific index e ki character ase seta return hoy)
+
+// Example : 
+// let text = "ABCDefgh"
+// console.log(text.charAt(3)) // D
+// console.log(text.charAt(1)) // B
+// console.log(text.charAt(5)) // f
+// console.log(text.charAt(64)) // null
+
+// 3. charCodeAt()
+// ai function er parameter e ekta string er index number deya hoy and sei index number e jei character exist kore sei character er unicode value return kore 
+
+// Example : 
+// let text = 'ABCDE'
+// console.log(text.charCodeAt(3)) // 68
+// console.log(text.charCodeAt(0)) // 65
+// console.log(text.charCodeAt(1)) // 66 
+// console.log(text.charCodeAt(2)) // 67
+// console.log(text.charCodeAt(4)) // 69
+// upore A er unicode value 65
+// B er unicode value 66
+// C er unicode value 67
+// D er unicode value 68
+// E er unicode value 69 and so on...
 
 
+// 4. at()
+// eta similar charAt() er motoi . just parthokko hocche charAt() negative index number nite pare na kintu at() negative index number parameter e accept kore 
+// The at() method is a new addition to JavaScript. It allows the use of negative indexes while charAt() do not.
+
+// kivabe negative index dile kaj kore ? 
+// negative index dile ulta dik theke string er character nite thake . suppose 'ABCDE' ekta string tar -2 index e ache D , -1 index e ache E, -4 index e ache B and so on...
+
+// let text = 'ABCDE'
+// console.log(text.at(2)) // C
+// console.log(text.at(1)) // B
+// console.log(text.at(-2)) //D
+// console.log(text.at(-4)) // B
 
 
-
-
-
-
+// []
+// let text = 'ABCDE'
+// console.log(text[2]) // C
+// console.log(text[5]) // undefined
+// console.log(text[4]) // E
 
 
 
