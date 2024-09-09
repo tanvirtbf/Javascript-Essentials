@@ -203,6 +203,7 @@
 // 15. padStart()
 // The padStart() method pads a string from the start.
 // It pads a string with another string (multiple times) until it reaches a given length.
+
 // Examples:- Pad a string with "0" until it reaches the length 4:
 // let text = '5'
 // let newText = text.padStart(4,'0')
@@ -241,17 +242,51 @@
 
 
 
-
-
-
-
-
-
-
 // 17. repeat()
+
+// The repeat() method returns a string with a number of copies of a string.
+// The repeat() method returns a new string.
+// The repeat() method does not change the original string.
+
+// let text = 'Hello World!'
+// let result = text.repeat(3) 
+// console.log(result) // Hello World!Hello World!Hello World!
+
+
+
+
 // 18. replace()
+// The replace() method replaces a specified value with another value in a string:
+
+// let text = 'Hello World!'
+// let newText = text.replace('Hello','Hiii')
+// console.log(newText) // Hiii World!
+// text.replace('Hello','Hi')
+// console.log(text) // Hello World!
+
+// let newText2 = text.replace('!','?')
+// console.log(newText2) // Hello World?
+
+
+
 // 19. replaceAll()
+
+
+
 // 20. split()
+
+// A string can be converted to an array with the split() method: (split method diye string ke array te convert kora jay)
+
+// let text = 'Hello My name is Tanvir Ahmed'
+// let arr = text.split(" ")
+// console.log(arr) // (6) ['Hello', 'My', 'name', 'is', 'Tanvir', 'Ahmed']
+
+// let text1 = 'Hello-My-Name-Is-Tanvir-Ahmed'
+// let arr1 = text1.split('-')
+// console.log(arr1) // (6) ['Hello', 'My', 'Name', 'Is', 'Tanvir', 'Ahmed']
+
+// upore text ke split korse " " space er vittite string gula ke alada korse and serial maintain kore rakhse
+
 
 
 
