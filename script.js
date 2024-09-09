@@ -1,4 +1,4 @@
-// String 
+// String
 
 // *********Important Notes***************
 // All string methods return a new string. They don't modify the original string.
@@ -6,20 +6,18 @@
 // How i convert a number or others data type to string ?
 // using toString() method
 // let number = 123
-// console.log(typeof(number)) // number 
-// let str = number.toString() 
+// console.log(typeof(number)) // number
+// let str = number.toString()
 // console.log(typeof(str)) // string
 
 // number.toString()
 // console.log(typeof(number)) // number
 
-
-
-// All String Method... (total20)
+// All String Method... (total 22 string methods)
 
 // 1. length
 
-// There are 4 methods for extracting string characters : 
+// There are 4 methods for extracting string characters :
 // 2. charAt()
 // 3. charCodeAt()
 // 4. at()
@@ -42,12 +40,8 @@
 // 18. replace()
 // 19. replaceAll()
 // 20. split()
-
-
-
-
-
-
+// 21. includes()
+// 22. indexOf()
 
 // 1. length
 // let text = "ABCdf"
@@ -56,7 +50,7 @@
 // 2. charAt()
 // The charAt() method returns the character at a specified index (position) in a string (mane charAt method diye kono text er specific index e ki character ase seta return hoy)
 
-// Example : 
+// Example :
 // let text = "ABCDefgh"
 // console.log(text.charAt(3)) // D
 // console.log(text.charAt(1)) // B
@@ -64,13 +58,13 @@
 // console.log(text.charAt(64)) // null
 
 // 3. charCodeAt()
-// ai function er parameter e ekta string er index number deya hoy and sei index number e jei character exist kore sei character er unicode value return kore 
+// ai function er parameter e ekta string er index number deya hoy and sei index number e jei character exist kore sei character er unicode value return kore
 
-// Example : 
+// Example :
 // let text = 'ABCDE'
 // console.log(text.charCodeAt(3)) // 68
 // console.log(text.charCodeAt(0)) // 65
-// console.log(text.charCodeAt(1)) // 66 
+// console.log(text.charCodeAt(1)) // 66
 // console.log(text.charCodeAt(2)) // 67
 // console.log(text.charCodeAt(4)) // 69
 // upore A er unicode value 65
@@ -79,12 +73,11 @@
 // D er unicode value 68
 // E er unicode value 69 and so on...
 
-
 // 4. at()
-// eta similar charAt() er motoi . just parthokko hocche charAt() negative index number nite pare na kintu at() negative index number parameter e accept kore 
+// eta similar charAt() er motoi . just parthokko hocche charAt() negative index number nite pare na kintu at() negative index number parameter e accept kore
 // The at() method is a new addition to JavaScript. It allows the use of negative indexes while charAt() do not.
 
-// kivabe negative index dile kaj kore ? 
+// kivabe negative index dile kaj kore ?
 // negative index dile ulta dik theke string er character nite thake . suppose 'ABCDE' ekta string tar -2 index e ache D , -1 index e ache E, -4 index e ache B and so on...
 
 // let text = 'ABCDE'
@@ -93,14 +86,11 @@
 // console.log(text.at(-2)) //D
 // console.log(text.at(-4)) // B
 
-
 // []
 // let text = 'ABCDE'
 // console.log(text[2]) // C
 // console.log(text[5]) // undefined
 // console.log(text[4]) // E
-
-
 
 // 6. slice(start,end)
 // slice() extracts a part of a string and returns the extracted part in a new string.
@@ -115,19 +105,15 @@
 // console.log(text.slice(1,4)) // ppl
 // console.log(text.slice(3,8)) // le, B
 
-
-
 // 7. substring(start,end)
-// substring() is similar to slice(). The difference is that start and end values less than 0 are treated as 0 in substring(). 
+// substring() is similar to slice(). The difference is that start and end values less than 0 are treated as 0 in substring().
 // ekhane substring er ekta bishesh gun hocche jodi start position boro hoy and end position choto hoy, jemon text.slice(4,1) tahole substring automatic (4,1) ke (1,4) banaiya dibe and sei onujayii output dibe . kintu ai jinish ta slice method e nei .
 // arekta bishesh gun hocche jodi negative value deya hoy tahole substring automatic seta ke 0 hishebe count kore . tar mane text.substring(-3,2) dile seta actually text.substring(0,2) hishebe treat kore
 
 // let text = 'ABCDE'
 // console.log(text.substring(-4,2)) // AB (ekhane -4 ke 0 dhore nise and 0 theke 2 er ag porjonto mane 1 index porjonto character print korse)
 // console.log(text.substring(3,-2)) // ABC (ekhane -2 ke 0 dhore nise and 0 theke 2 porjonto character print korse)
-// console.log(text.substring(4,1)) 
-
-
+// console.log(text.substring(4,1))
 
 // 8. substr(start,length)
 
@@ -138,8 +124,6 @@
 // console.log(text.substr(3,0)) // null
 // console.log(text.substr(3,1)) // D
 
-
-
 // 9. toUpperCase()
 // let text = 'Hello World!'
 // text.toUpperCase() // HELLO WORLD!
@@ -148,8 +132,6 @@
 // let newText = text.toUpperCase()
 // console.log(newText) // HELLO WORLD!
 // console.log(text) // Hello World!
-
-
 
 // 10. toLowerCase()
 // let text = "Hello World!"
@@ -168,16 +150,12 @@
 // let anotherText = text1.concat('My name is ',text2,' Tanvir Ahmed')
 // console.log(anotherText) //HelloMy name is World Tanvir Ahmed
 
-
-
 // 12. trim()
 // The trim() method removes whitespace from both sides of a string:
 
 // let text = '        Hello World          '
 // let trimedText = text.trim()
 // console.log(trimedText) // Hello World
-
-
 
 // 13. trimStart()
 // ECMAScript 2019 added the String method trimStart() to JavaScript.
@@ -187,8 +165,6 @@
 // let trimStart = text.trimStart()
 // console.log(trimStart) // 'Hello World             '
 
-
-
 // 14. trimEnd()
 // ECMAScript 2019 added the string method trimEnd() to JavaScript.
 
@@ -197,8 +173,6 @@
 // let text = '       Hello World        '
 // let trimEnd = text.trimEnd()
 // console.log(trimEnd) // '             Hello World'
-
-
 
 // 15. padStart()
 // The padStart() method pads a string from the start.
@@ -221,9 +195,6 @@
 // let text = numb.toString();
 // let padded = text.padStart(4,"0");
 
-
-
-
 // 16. padEnd()
 // The padEnd() method pads a string from the end.
 // It pads a string with another string (multiple times) until it reaches a given length.
@@ -240,8 +211,6 @@
 // let text = numb.toString();
 // let padded = text.padEnd(4,"0");
 
-
-
 // 17. repeat()
 
 // The repeat() method returns a string with a number of copies of a string.
@@ -249,11 +218,8 @@
 // The repeat() method does not change the original string.
 
 // let text = 'Hello World!'
-// let result = text.repeat(3) 
+// let result = text.repeat(3)
 // console.log(result) // Hello World!Hello World!Hello World!
-
-
-
 
 // 18. replace()
 // The replace() method replaces a specified value with another value in a string:
@@ -267,11 +233,7 @@
 // let newText2 = text.replace('!','?')
 // console.log(newText2) // Hello World?
 
-
-
 // 19. replaceAll()
-
-
 
 // 20. split()
 
@@ -286,8 +248,6 @@
 // console.log(arr1) // (6) ['Hello', 'My', 'Name', 'Is', 'Tanvir', 'Ahmed']
 
 // upore text ke split korse " " space er vittite string gula ke alada korse and serial maintain kore rakhse
-
-
 
 // 21. includes()
 
@@ -305,8 +265,6 @@
 // console.log(text.includes('He',2)) // false
 // console.log(text.includes('He',0)) // true
 
-
-
 // 22. indexOf()
 
 // The indexOf() method returns the position of the first occurrence of a value in a string.
@@ -321,15 +279,10 @@
 // let result = text.indexOf("Welcome");
 // console.log(result) // Welcome bolte kono string nei text variable er moddhe . karon indexOf method case sensitive
 
-
 // let text = "Hello world, welcome to the universe.";
 // let result = text.indexOf('e')
 // console.log(result) // 1 (first e paise 1 number index e . tai return 1)
 // console.log(text.indexOf("e")) // 1
-
-
-
-
 
 // *********Important Notes***************
 
@@ -337,11 +290,7 @@
 
 // *********Important Notes***************
 
-
-
-
-
-
+// Math Object
 
 // Methods (Without Argument)
 // toUpperCase()
@@ -445,6 +394,10 @@
 // const result = null ? 'Tanvir' : '' ? 12 : 1 ? 11 : 22
 // console.log(result)
 
+
+
+
+
 // How to See variable address in dev tools
 // const firstName = 'Tanvir'
 // const lastName = 'Ahmed'
@@ -453,7 +406,7 @@
 // const firstName = 'Tanvir'
 // const firstRule = 'Tanvir'
 // console.log(firstName === firstRule) // true
-// ekhane 2 ta variable er memory address @1358351 . jodio variable name same na . kintu jehetu value same tai same memory address e 2 ta variable ke create kora hoise . tai true ashce 
+// ekhane 2 ta variable er memory address @1358351 . jodio variable name same na . kintu jehetu value same tai same memory address e 2 ta variable ke create kora hoise . tai true ashce
 // important thing is string primitive data type . and primitive data type value compare kore . value same hoile true
 // const userAge = 15
 // const isGraduate = false //@75
@@ -477,24 +430,28 @@
 // console.log(fname === lname) // Ans : true
 // ekhane same variable address na hoyeo output true ashce karon primitive data type kokhono memory address diye compare kore na . primitive data type value diye compare kore . value same hoile true hobe jodio memory address change thakuk
 
+
+
 //Objects => Non-premitive Data Type
 // const firstName = "Tanvir"; // @1757053
 // const lastName = "Tan" + "vir"; // @2457343
 // console.log(firstName === lastName); // Ans : true
+
 // const user1 = {
 //   firstName: "Tanvir",
 //   "last Name": "Ahmed",
 //   age: 25,
 //   hasJob: true,
 // }; // @620689
+
 // const user2 = {
 //   firstName: "Tanvir",
 //   "last Name": "Ahmed",
 //   age: 25,
 //   hasJob: true,
 // }; // @620689
-// console.log(user1 === user2); // Ans : false
 
+// console.log(user1 === user2); // Ans : false
 
 // Note : user1 and user2 er value same diye create kora holeo tader variable address same na and user1 === user2 is false . karon object non-primitive . tai ekhane value compare na hoye memory address compare hoise .
 
@@ -518,7 +475,7 @@
 // Note : object er key by default string hoye thake . eta ke double qoute or single quote na dileo eta string hishebei count hobe
 
 // var user1 = {
-//   firstName : 'Tanvir', 
+//   firstName : 'Tanvir',
 //   lastName : 'Ahmed'
 // } // @3156889
 // var user2 = {
@@ -540,6 +497,19 @@
 // upore user1 and user2 er khetre firstName er value jehetu 2 khetreii same tai user1===user2 false houyar poreo user1.firstName===user2.firstName true hoise . karon firstName ekhane primitive , jodio tara non-primitive er vitore ase
 
 // const user1 = {
+//   firstName : 'Tanvir',
+//   lastName : 'Ahmed',
+//   age : 25
+// } // @236161
+// const user2 = {
+//   firstName : 'Tanvir',
+//   lastName : 'Tanvir',
+//   age : 25
+// } // @236167
+// console.log(user1===user2) // false
+// console.log(user1.firstName===user2.lastName) // true
+
+// const user1 = {
 //   firstName : 'Tanvir', // @5750265
 //   lastName : 'Ahmed'
 // } // @3156889
@@ -549,7 +519,7 @@
 // } // @3156891
 // console.log(user1 === user2) // false
 // console.log(user1.firstName === user2.fname) // true
-// upore firstName and fname 2 ta variable er name vinno houyar poreo jehetu value same tai tara same memory address e ase and user1===user2 false houyar poreo tara true . karon tara primitive data type 
+// upore firstName and fname 2 ta variable er name vinno houyar poreo jehetu value same tai tara same memory address e ase and user1===user2 false houyar poreo tara true . karon tara primitive data type
 
 // const user2 = {
 //   'first Name': 'Sadia',
@@ -619,6 +589,7 @@
 // Object.seal(user)
 // Object.seal function ta object ke delete korte dibe na + kono kichu new add korte dibe na kintu object er kono property er value update korte dibe
 
+
 // Object.freeze(obj)
 // const user = {
 //   fname : 'Tanvir',
@@ -677,6 +648,10 @@
 // const user1 = {firstName:'Tanvir',lastName:'Ahmed'}
 // let user2 = {...user1}
 
+
+
+
+
 // Arrays
 // let a = ['Mango','Banana','Jackfruits','Grapes','Dates']
 
@@ -706,6 +681,142 @@
 // Ans : ['Mango', 'Banana', 'Jackfruits', 'Grapes', 'Dates']
 // eta pop method er ulta kaj kore . mane array er first theke value delete kore
 
+
+// Concat Method 
+// The concat() method concatenates (joins) two or more arrays.
+// The concat() method returns a new array, containing the joined arrays.
+// The concat() method does not change the existing arrays.
+
+// Example : 
+// let arr1 = [1,2,3]
+// let arr2 = [4,5,6]
+// let arr = arr1.concat(arr2)
+// console.log(arr) // [1, 2, 3, 4, 5, 6]
+// let newArray = arr.concat(arr1,arr2)
+// console.log(newArray) // [1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6]
+
+
+// indexOf Method 
+
+// The indexOf() method returns the first index (position) of a specified value.
+// The indexOf() method returns -1 if the value is not found.
+// The indexOf() method starts at a specified index and searches from left to right (from the given start postion to the end of the array).
+// By default the search starts at the first element and ends at the last.
+// Negative start values counts from the last element (but still searches from left to right).
+
+// Example : 
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+// let index = fruits.indexOf("Apple");
+// console.log(index) // 2
+// let newIndex = fruits.indexOf('Hello')
+// console.log(newIndex) // -1
+
+// const fruits = ["Banana", "Orange", "Apple", "Mango", "Apple"];
+// let index = fruits.indexOf("Apple", 3); // should start finding at index 3
+// console.log(index) // 4
+
+// let index1 = fruits.indexOf('Orange',3) 
+// console.log(index1) // -1 (fruits array er 3 number index theke find kora start korse tai 1 number index e thaka Orange khuje pay nai tai -1 return kroe dise)
+
+
+
+// includes Method 
+
+// The includes() method returns true if an array contains a specified value.
+// The includes() method returns false if the value is not found.
+// The includes() method is case sensitive.
+
+// Syntax : array.includes(element, start)
+
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+// console.log(fruits.includes("Mango")) // true
+// console.log(fruits.includes('hello')) // false
+
+
+
+// reverse Method
+// The reverse() method reverses the order of the elements in an array.
+// The reverse() method overwrites the original array.****
+
+// let arr = [1,2,3,4,5]
+// arr.reverse()
+// console.log(arr) // [5, 4, 3, 2, 1]
+// reverse method original array ke modify kore 
+
+
+
+
+// sort Method 
+
+// The sort() method sorts the elements of an array.
+// The sort() method sorts the elements as strings in alphabetical and ascending order.
+// The sort() method overwrites the original array.****
+
+// Create an Array
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+// Sort the Array
+// fruits.sort();
+// console.log(fruits) // ['Apple', 'Banana', 'Mango', 'Orange']
+
+// let arr = [5,3,7,1,2]
+// arr.sort()
+// console.log(arr) // [1, 2, 3, 5, 7]
+
+
+// slice Method
+
+// The slice() method returns selected elements in an array, as a new array.*****
+// The slice() method selects from a given start, up to a (not inclusive) given end.
+// The slice() method does not change the original array.******
+
+// Syntax :
+// array.slice(start, end)
+
+// let arr = [1,2,3,4,5,6]
+// let newArr = arr.slice(2,4)
+// console.log(newArr) // [3, 4] (2 number index theke 4 er ag porjonto, mane 3 number index porjonto nise)
+
+// const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+// const myBest = fruits.slice(-3, -1);
+// console.log(myBest) //  ['Lemon', 'Apple']
+
+// pichon theke dhorle -1 index e ache Mango , -2 = Apple , -3 = Lemon , -4 = Orange and -5 = Banana . tai -3 theke -1 er ag porjonto , mane -2 porjonto array hocche [Lemon, Apple]
+
+
+
+
+// splice Method
+
+// The splice() method adds and/or removes array elements.
+// The splice() method overwrites the original array.******
+
+// Syntax : array.splice(index, count, item1, ....., itemX)
+// index - 	Required. The index (position) to add or remove items. A negative value counts from the end of the array.
+// count - This is Optional. Number of items to be removed.
+// item1,....,itemx - This is Optional. The new elements(s) to be added.
+
+// Example : 
+
+// Create an Array
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+// At position 2, remove 2 items
+// fruits.splice(2, 2);
+// console.log(fruits) // ['Banana', 'Orange']
+
+// Example : 
+
+// Create an Array
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+// At position 2, remove 1 item, add "Lemon" and "Kiwi"
+// fruits.splice(2, 1, "Lemon", "Kiwi");
+// console.log(fruits) // ['Banana', 'Orange', 'Lemon', 'Kiwi', 'Mango']
+
+
+
+
 // Deep Copy and Shallow Copy
 // let firstName = 'Tanvir' // @39939
 // let name = firstName // @39939
@@ -720,13 +831,12 @@
 
 // let fruits = ['Mango','Banana','Jackfruits','Grapes','Dates']
 // let newFruits = fruits
-// console.log(fruits===newFruits) // true 
+// console.log(fruits===newFruits) // true
 // ekhetre true ashce karon newFruits = fruits korar somoy newFruits = fruits er memory address newFruits er moddhe jay . tar mane newFruits = [memory address of fruits] . tar mane fruits and newFruits same memory address e point kora ase . tai fruits e jodi kono change kori newFruits e same change hobe
 // fruits.push('new Fruits')
 // console.log(fruits) // ['Mango', 'Banana', 'Jackfruits', 'Grapes', 'Dates', 'new Fruits']
 // console.log(newFruits) // ['Mango', 'Banana', 'Jackfruits', 'Grapes', 'Dates', 'new Fruits']
 // console.log(fruits===newFruits) // true
-
 
 // let fruits = ['Mango','Banana','Jackfruits','Grapes','Dates']
 // let arr = fruits
@@ -750,12 +860,12 @@
 
 // ******Important Notes*********
 // Why need shallow copy and deep copy?
-// normal copy : 
+// normal copy :
 // let obj1 = {fname : 'Tanvir', age : 24}
 // let obj2 = obj1
-// evabe copy korle somossha hocche obj1 e kichu change korle obj2 te change hoy, obj2 te kichu change korle obj1 eo change hoy . karon tara same memory address e point kora thake . karon obj2 = obj1 korar maddhome obj1 er memory address obj2 te store hoise . 
+// evabe copy korle somossha hocche obj1 e kichu change korle obj2 te change hoy, obj2 te kichu change korle obj1 eo change hoy . karon tara same memory address e point kora thake . karon obj2 = obj1 korar maddhome obj1 er memory address obj2 te store hoise .
 // kintu evabe copy korle to project e somossha hobe . tai amon vabe copy korte hobe jate obj1 change korle obj2 change na hoy, obj2 change korle jate obj1 change na hoy . tar jonno obj1 and obj2 alada alada memory te store korte hobe . tar jonno need shallow copy . shallow copy korle obj1 er same value obj2 te ashe kintu tara alada alada memory address e point kora thake
-// Deepy copy need : 
+// Deepy copy need :
 // shallow copy just 1 stage porjonto copy korte pare . kintu jokhon object er object thake, array er vitor array thake , or object er vitor array thake , mot kotha kono non-primitive er vitor arekta non-premitive thake tokhon setake copy korte pare na alada alada memory te rekhe . seikhetre vitorer sei non-premitive ke same memory address e rekhe dey . tai ektay change korle arektay o change hoye jay . ai problem solve korte ashe deep copy . deep copy diye vitorer nested sob non-premitive keo alada alada memory te rekehe copy korte pare
 
 // Shallow Copy with Object.assign(newItem,oldItem)
@@ -773,13 +883,12 @@
 //   age: 25
 // } // @6973183
 // let obj2 = {} // @6973187
-// obj1 and obj2 is not same memory address . that's why obj1===obj2 false. 
+// obj1 and obj2 is not same memory address . that's why obj1===obj2 false.
 // now obj1 copy and paste in obj2 using Object.assign
 // Object.assign(obj2,obj1)
 // console.log(obj2) // {fname: 'Tanvir', age: 25}
 // console.log(obj1===obj2) // false
-// tate obj1 er sob value obj2 te ashlo kintu alada alada memory address e point holo 
-
+// tate obj1 er sob value obj2 te ashlo kintu alada alada memory address e point holo
 
 // Shallow Copy with spread operator
 // let obj1 = {
@@ -889,13 +998,12 @@
 // console.log(user1===user2) // false (karon spread operator diye shallow copy kora hoise)
 // // But...
 // console.log(user1.address === user2.address) // true
-// // ekhane shallow copy nested obosthay copy korte pare na . tar jonno deep copy korte hobe 
+// // ekhane shallow copy nested obosthay copy korte pare na . tar jonno deep copy korte hobe
 // user2.address.city = 'Cumilla'
 // console.log(user1.address.city) // Cumilla
 // console.log(user2.address.city) // Cumilla
 // ekhane user2 er address change koray user1 eo change hoise
-// ai karone deep copy dorkar jate nested obosthay o copy hoite pare alada alada memory address e 
-
+// ai karone deep copy dorkar jate nested obosthay o copy hoite pare alada alada memory address e
 
 //Deep Copy
 // const hello = {
@@ -924,8 +1032,7 @@
 // console.log(copyHello)
 // console.log(hello)
 
-
-// Combined Assignment Operators 
+// Combined Assignment Operators
 // 1. += (Addition Assignment Operator)
 // 2. -= (Subtraction Assignment Operator)
 // 3. %= (Reminder Assignment Operator)
@@ -963,8 +1070,8 @@
 // num = num % 2; // 1%2 = 1
 // console.log(num) // 1
 // let num = 101
-// num %=3 
-// num %=3 
+// num %=3
+// num %=3
 // console.log(num) // 2
 
 // *= (Multiplication Assignment Operator)
@@ -972,9 +1079,9 @@
 // num = num * 2; // 10
 // num = num * 2; // 20
 // console.log(num) // 20
-// num *= 2 
-// num *= 2 
-// num *= 2 
+// num *= 2
+// num *= 2
+// num *= 2
 // console.log(num) // 160
 
 // /= (Division Assignment Operator)
@@ -996,9 +1103,9 @@
 // num++
 // num++
 // console.log(num) // 9
-// num++ hoile age num=5 print hobe, then num er value 1 increase hobe. jodi ++num hoy tahole age 1 increase hobe then num value print hobe . 
-// num++ er khetre age num print hoy then increase hoy tai jodi console.log(num++) hoy tahole 5 print hoy . karon ++ houyar ageii num print hoye jay . 
-// ++num er khetre age 1 increase hoy then num print hoy tai console.log(++num) korle 6 print hoy . 
+// num++ hoile age num=5 print hobe, then num er value 1 increase hobe. jodi ++num hoy tahole age 1 increase hobe then num value print hobe .
+// num++ er khetre age num print hoy then increase hoy tai jodi console.log(num++) hoy tahole 5 print hoy . karon ++ houyar ageii num print hoye jay .
+// ++num er khetre age 1 increase hoy then num print hoy tai console.log(++num) korle 6 print hoy .
 // let num = 5;
 // console.log(num++) // 5
 // console.log(num) // 6
@@ -1008,10 +1115,10 @@
 // let num = 5
 // let anotherNewName = ++num
 // console.log(anotherNewName) // 6
-// ekhane newNum e num++ assign korle se first time num er value store kore 5 . pore num er value 1 increase kora ta se store korte pare na . 
+// ekhane newNum e num++ assign korle se first time num er value store kore 5 . pore num er value 1 increase kora ta se store korte pare na .
 // kintu second example e ++num assign koray age num er value 1 increase hoise tarpor num er update value 6 anotherNewName e assign hoise
 
-// Another Example : 
+// Another Example :
 // let num = 5
 // let newNum = num++
 // console.log(newNum) // 5 (but num er value 6 hoye gese already)
@@ -1021,14 +1128,13 @@
 // Same concept in --(Decrement Operator)
 
 // **Important Notes**
-// Behind the scene ++ and -- operator use += and -= operator 
-// Example : 
+// Behind the scene ++ and -- operator use += and -= operator
+// Example :
 // let num = 5
 // num = num + 1 === num += 1 === num++ (true)
 // num = num -1 === num -= 1 === num-- (true)
 
-// While Loop 
-
+// While Loop
 
 //Function
 // function hello(){
@@ -1266,7 +1372,6 @@
 // console.log(fname) // Ans : Tanvir
 // console.log(funName) // Ans : Tanvir Ahmed
 // ekhane let funName = fname jokhon kora hoy tokhon fname er value copy hoye funName er moddhe ashe . tai funName change korle fname er value change hoy na . abar fname er value change korle funName er value change hoy .
-
 
 // Execution Context (Tapas)
 // Tokenization in Javascript
@@ -1522,7 +1627,6 @@
 //NOW FEC (Function Execution Context)
 // sayHi()
 
-
 // Hoisting
 //1. Variable hoisting (variable create korar ageii oi variable ke use kora)
 //2. function hoisting (function ke create korar agei oi function ke use kora)
@@ -1542,10 +1646,9 @@
 // var a = 'hello'
 // console.log(a) // hello
 
-// console.log(b) // error 
+// console.log(b) // error
 // let b = 'hiii'
 // console.log(b) // hiii
-
 
 // Scope and Scope Chain
 //4 types of scope
@@ -1559,7 +1662,7 @@
 // rules : eta jekono function block everything sob jayga theke access hote pare
 // rules : global scope use korar ee dorkar nei . jodi use korteii hoy tahole const diye use korle valo . nahole variable override hoye jauyar chance thake
 
-// Example of Block scope : 
+// Example of Block scope :
 // function sayHi(){
 //   const a = 10;
 //   let b = 'hello'
@@ -1951,21 +2054,21 @@
 // ekhane javascript 'console.log(true)' ai string ta ke behind the scene javascript code er moto nicche . tai true print hocche
 // setTimeout('console.log("Tanvir"); console.log("Hello")') // Tanvir   Hello
 // setTimeout('var a = 10; console.log(a)') // 10
-// ekhane setTimeout er vitor javascript er sob code likha jay . 
+// ekhane setTimeout er vitor javascript er sob code likha jay .
 // setTimeout('hiii') // Error : hiii is not defined
 // ekhane javascript hiii ke ekta variable hishebe dekhche tai jehetu hiii nam e kono variable nei tai error message ashce hiii is not defined
 // setTimeout("const hiii = 'Hello World'; console.log(hiii)") // Hello World
 // const hiii = 'Hello World!'
 // setTimeout('hiii') // Not Error
 //setTimeout with second parameter
-// setTimeout er first parameter holo jekono javascript code . and second parameter holo time in milisecond . ai time por first parameter e deya javascript code run korbe 
+// setTimeout er first parameter holo jekono javascript code . and second parameter holo time in milisecond . ai time por first parameter e deya javascript code run korbe
 // second parameter holo time milisecond e . jei time por tar vitorer code run hobe
 // setTimeout('console.log("Hello World")', 2000) // Ans : Hello World (After 2 second)
 // setTimeout('console.log("hii"); console.log("hello")',3000) // Ans : hii hello (After 3 second)
 // setTimeout("console.log('Hello World')",3000) // Hello World (After 3 second)
 
 // In Browser console with clearTimeout
-// browser er console e setTimeout function likhe enter korle sathe sathe ekta random number ashe . seta hocche oi setTimeout er jonno timer id . jei id use kore ami sei setTimeout ke clear korte pari . karon clear na korle eta browser e theke jay 
+// browser er console e setTimeout function likhe enter korle sathe sathe ekta random number ashe . seta hocche oi setTimeout er jonno timer id . jei id use kore ami sei setTimeout ke clear korte pari . karon clear na korle eta browser e theke jay
 // setTimeout('console.log("1 Second")',1000)
 // setTimeout('console.log("2 Second")',3000)
 // setTimeout('console.log("9 Second")',9000)
@@ -1986,20 +2089,20 @@
 // console.log(timer3) // Ans is timer id
 
 // ClearTimeOut
-// jokhon setTimeout browser er console e run kora hoy sathe sathe ekta number return kore dey . jodi amra setTimeout kono variable e likhi tahole sei number ta variable e return hoye store hoye thakbe . jeta diye ami pore clearTimeout korte pari 
+// jokhon setTimeout browser er console e run kora hoy sathe sathe ekta number return kore dey . jodi amra setTimeout kono variable e likhi tahole sei number ta variable e return hoye store hoye thakbe . jeta diye ami pore clearTimeout korte pari
 // const timer1 = setTimeout('console.log("set time 1")', 2000);
 // const timer2 = setTimeout('console.log("set time 2")', 4000);
 // const timer3 = setTimeout('console.log("set time 3")', 9000);
 // // ekhane timer1, timer2, timer3 variable er vitore setTimeout set kore only setTimout gular timer id dhorar jonno . jate sei timer id diye clearTimeout korte pare
 // clearTimeout(timer2);
 // clearTimeout(timer1);
-// jehetu timer3 id diye clear kori nai tai 9 second por timer3 er setTimeout run hobe . r jodi timer2 and timer1 tader run korar somoyer ageii clear korte pari tahole tarao run korbe na 
+// jehetu timer3 id diye clear kori nai tai 9 second por timer3 er setTimeout run hobe . r jodi timer2 and timer1 tader run korar somoyer ageii clear korte pari tahole tarao run korbe na
 
 // setTimeout with Higher Order Function
-// ******Important Notes***** : 
-//jehetu setTimeout er first parameter e javascript code dite pari tai setTimeout er first parameter e callback function o dite pari . 
-// jodi first parameter e callback function dei tahole setTimeout ke higher order function bola hobe . 
-// kintu callback function pass korar khetre kono single quote or double quote deya hobe na 
+// ******Important Notes***** :
+//jehetu setTimeout er first parameter e javascript code dite pari tai setTimeout er first parameter e callback function o dite pari .
+// jodi first parameter e callback function dei tahole setTimeout ke higher order function bola hobe .
+// kintu callback function pass korar khetre kono single quote or double quote deya hobe na
 // const timer1 = setTimeout('console.log("set time 1")',2000)
 // const timer2 = setTimeout('console.log("set time 2")',4000)
 // const timer3 = setTimeout(a,9000) // a ke setTimeout internally call kore
@@ -2009,8 +2112,7 @@
 //   console.log("Hiii")
 // }
 
-
-// setTimeout and setInterval asynchronous code . tara task queue hoye call stack e ashe 
+// setTimeout and setInterval asynchronous code . tara task queue hoye call stack e ashe
 
 // const timer1 = setTimeout('console.log("set time 1")',0)
 // const timer2 = setTimeout('console.log("set time 2")')
@@ -2019,7 +2121,7 @@
 // console.log('Hello World')
 // Ans : Hello World - set time 1 - set time 2 - set time 3
 
-// setTimeout with function 
+// setTimeout with function
 // setTimeout(function(){
 //   console.log('Hello World')
 // },3000) // Hello World (After 3 second)
@@ -2029,7 +2131,7 @@
 // },2000) //  Hello World (After 2 second)
 
 // setInterval
-// setTimeout er motoii concept . kintu etar second parameter e jei time deya hoy sei time por por tar code run kore . kokhono thame na . r setTimeout just 1 bar run kore sei time er por 
+// setTimeout er motoii concept . kintu etar second parameter e jei time deya hoy sei time por por tar code run kore . kokhono thame na . r setTimeout just 1 bar run kore sei time er por
 // const timer1 = setInterval('console.log("set time 1")',1000)
 // // 1 second por por output print hoite thakbe . jotokkhon na clearInterval na kora hoy timer1 id use kore
 
@@ -2042,7 +2144,7 @@
 //       Hello
 //       Hello
 //       Hello
-// jokhonii 12 second er mathay 6 bar run korte jabe tokhonii setTimeout 11 second por setInterval ke clear kore dise using timer1 id . 6th time Hello Print hoy nai 
+// jokhonii 12 second er mathay 6 bar run korte jabe tokhonii setTimeout 11 second por setInterval ke clear kore dise using timer1 id . 6th time Hello Print hoy nai
 // setTimeout with HOC
 
 // const timerId = setInterval(a,1000)
@@ -2054,26 +2156,26 @@
 // Function vs Methods
 // jokhon kono object er vitor kono key er moddhe kono function pass kora hoy tokhon take method bole . kintu kono object er vitor function pass na kore khola jaygay function declare korle seta normal function not method
 
-// Arrow Function 
-// akhn porjonto amra 2 vabe function create kora sikhechi . 
-// 1. function expression 
+// Arrow Function
+// akhn porjonto amra 2 vabe function create kora sikhechi .
+// 1. function expression
 // 2. function declaration
 
-// function expression : 
-// jokhon kono function ke kono variable e store kora hoy take bole function expression . 
-// jokhon function expression create kori tokhon function er kono name deya lage na . oi variable er moddhe anonymous function create kora hoy 
+// function expression :
+// jokhon kono function ke kono variable e store kora hoy take bole function expression .
+// jokhon function expression create kori tokhon function er kono name deya lage na . oi variable er moddhe anonymous function create kora hoy
 // const func = function(){
 //   console.log('hello world')
 // }
 // func() // hello world
-// function declaration : 
-// jokhon function keyword use kore function er ekta name diye jokhon kono function create kora hoy setake function declaration bole. 
-// example : 
+// function declaration :
+// jokhon function keyword use kore function er ekta name diye jokhon kono function create kora hoy setake function declaration bole.
+// example :
 // function hello(){
-  
+
 // } // function declaration
 
-// ebar dekhbo arrow function 
+// ebar dekhbo arrow function
 
 // function declaration
 // function square(num){
@@ -2098,51 +2200,50 @@
 // const square = (num) => num * num
 // console.log(square(4)) // 16
 // etake bole Implicit return . mane holo return keyword charai return 1 line er moddhe
-// jodi return keyword use kore return kori tahole setake bole explicit return 
+// jodi return keyword use kore return kori tahole setake bole explicit return
 
-// example : 
+// example :
 // const add = (a,b)=> a+b;
 // console.log(add(2,4)) // 6
 
-// example : 
+// example :
 // const random = ()=> Math.random()
 // console.log(random())
 
-// example : 
+// example :
 // const random = num => num * num
 // console.log(random(4)) // 16
-// ekhane jehetu ektaii parameter ase num . tai () charaii arrow function kaj hoise . kintu 1 er beshi parameter thakle () diteii hobe. 
-// const add = a,b => a+b // syntex error 
-// const add = (a,b) => a+b // syntex okay 
+// ekhane jehetu ektaii parameter ase num . tai () charaii arrow function kaj hoise . kintu 1 er beshi parameter thakle () diteii hobe.
+// const add = a,b => a+b // syntex error
+// const add = (a,b) => a+b // syntex okay
 
-// another technic 
+// another technic
 // const random = () => (
 //   Math.floor(Math.random() * 10) + 1
 // )
 // console.log(random()) // 4
 // console.log(random()) // 9
 // console.log(random()) // 1
-// tar mane ami chaile first breaket diye return keyword charai return korte pari 
+// tar mane ami chaile first breaket diye return keyword charai return korte pari
 
-// for of vs for in loop 
+// for of vs for in loop
 // let fruits = ['Mango','Banana','Jackfruits','Grapes']
 // for(fruit of fruits){
 //   console.log(fruit)
-// } 
-// Answer : 
-// Mango 
+// }
+// Answer :
+// Mango
 // Banana
 // Jackfruits
 // Grapes
-
 
 // let fruits = ['Mango','Banana','Jackfruits','Grapes']
 // for(let fruit of fruits){
 //   debugger
 //   console.log(fruit)
 // }
-// Answer : 
-// Mango 
+// Answer :
+// Mango
 // Banana
 // Jackfruits
 // Grapes
@@ -2150,43 +2251,43 @@
 // then..
 // console.log(fruit) // Grapes
 
-// ekhane upore for(fruit of fruits) korar maddhome fruit ekta variable jeta var let const kichu diyeii declare hoy nai . tai by default var thake . jai hok, fruits er prottekta value ekta ekta kore protibar fruit er moddhe ashbe , and loop prottekbar execute sesh houyar pore fruit notun vabe declare hobe and fruit er moddhe fruits er next value add hobe . evabeii cholte thake for of loop 
+// ekhane upore for(fruit of fruits) korar maddhome fruit ekta variable jeta var let const kichu diyeii declare hoy nai . tai by default var thake . jai hok, fruits er prottekta value ekta ekta kore protibar fruit er moddhe ashbe , and loop prottekbar execute sesh houyar pore fruit notun vabe declare hobe and fruit er moddhe fruits er next value add hobe . evabeii cholte thake for of loop
 // jehetu var diye create hoise fruit tai global context e fruit khuje pauya jay . jemon..
 // console.log(fruit) // Grapes
-// Grapes ashce karon last value chilo Grapes. tarpor jokhon fruits er value sesh tai loop o complete hoye jay and call stack theke uthe jay . tai last value Grapes holo fruit er value 
+// Grapes ashce karon last value chilo Grapes. tarpor jokhon fruits er value sesh tai loop o complete hoye jay and call stack theke uthe jay . tai last value Grapes holo fruit er value
 
-// jodi let or const diye declare kortam tahole fruit ke baire theke access kora jeto na . karon let and const block scope . r amra jani block scope ke baire theke access kora jay na . 
-// let and const diye declare korle global context e fruit create hoito na . 
+// jodi let or const diye declare kortam tahole fruit ke baire theke access kora jeto na . karon let and const block scope . r amra jani block scope ke baire theke access kora jay na .
+// let and const diye declare korle global context e fruit create hoito na .
 
-// use strict 
+// use strict
 // jodi javascript er file er top e 'use strict' dei tahole for(fruit of fruits) likhle error dito . karon fruit declare korsi var let or const keyword charai .
 
 // ******Important Notes********
-// kar kar sathe for of loop use kora jay ? 
-// Array, String, TypedArray, Map, Set, NodeList 
-// Object er sathe for of loop use kora jay na 
+// kar kar sathe for of loop use kora jay ?
+// Array, String, TypedArray, Map, Set, NodeList
+// Object er sathe for of loop use kora jay na
 
 // string with for of loop
 // const fullName = 'Tanvir Ahmed'
 // for(let character of fullName){
 //   console.log(character)
 // }
-// Answer : 
+// Answer :
 // T
-// a 
-// n 
-// v 
-// i 
-// r 
+// a
+// n
+// v
+// i
+// r
 // ' '
-// A 
-// h 
-// m 
-// e 
-// d 
+// A
+// h
+// m
+// e
+// d
 
 // Object with for of loops
-// Object er sathe for of loop use kora jay na 
+// Object er sathe for of loop use kora jay na
 
 // const person = {
 //   firstName : 'Tanvir',
@@ -2198,7 +2299,7 @@
 //   console.log(p) // error
 // }
 
-// Object er sathe for in loop use kora jay 
+// Object er sathe for in loop use kora jay
 
 // for in loop
 
@@ -2238,33 +2339,33 @@
 // for(const key of personKeys){
 //   console.log(key)
 // }
-// Answer : 
+// Answer :
 // firstName
-// lastName 
-// age 
+// lastName
+// age
 // city
 
 // for(let key of Object.keys(person)){
 //   console.log(key)
 // }
-// Answer : 
+// Answer :
 // firstName
-// lastName 
-// age 
+// lastName
+// age
 // city
 // upore Object.keys(person) ekta array ke represents kore rakhse . r seta holo person er sob key er array . and sei array er upor for of loop chalano hoise , array er prottekta value key variable e ashtese and console hoitese
 
 // for(const key of personKeys){
 //   console.log(person[key])
 // }
-// // person er sob value print hoise 
+// // person er sob value print hoise
 // for(const key of personKeys){
 //   console.log(key + ' : ' + person[key])
 // }
 // person er key value eksathe print hoise
 
 // Object.values()
-// Object.Keys() er motoii just , object er value ke array te return kore 
+// Object.Keys() er motoii just , object er value ke array te return kore
 
 // const person = {
 //   firstName : 'Tanvir',
@@ -2279,8 +2380,8 @@
 
 // tar mane Object.keys(object_name) oi object er sob key ke serial kore ekta array te rekhe seta return kore and Object.values(object_name) oi object er sob value ke serial kore ekta array te rekhe seta return kore
 
-// Object.entries() 
-// key value eksathe pair kore array return kore 
+// Object.entries()
+// key value eksathe pair kore array return kore
 // const person = {
 //   firstName : 'Tanvir',
 //   lastName : 'Ahmed',
@@ -2290,12 +2391,12 @@
 // for(let item of Object.entries(person)){
 //   console.log(item)
 // }
-// Answer : 
+// Answer :
 // ['firstName', 'Tanvir']
 // ['lastName', 'Ahmed']
 // ['age', 25]
 // ['city', 'Dhaka']
-// tar mane prottekbar person key and value ke separate array te index 0 te key and index 1 e rakhe value ke 
+// tar mane prottekbar person key and value ke separate array te index 0 te key and index 1 e rakhe value ke
 
 // const user = {
 //   firstName : 'Tanvir',
@@ -2328,7 +2429,7 @@
 // fruits.forEach(function(fruit){
 //   console.log(fruit)
 //   return 'Hello World'
-// }) // fruits er sob gula value print hoise but kichuii return hoy nai 
+// }) // fruits er sob gula value print hoise but kichuii return hoy nai
 
 // index with forEach
 // forEach er vitor callback function er 2nd parameter e index pass kora jay , jeta prottekta iteration index 0 theke iteration ag projonto index dibe
@@ -2336,24 +2437,24 @@
 // const newMonths = months.forEach((m,i)=>{
 //   console.log(i,m)
 // })
-// Answer : 
+// Answer :
 // 0 'January'
 // 1 'February'
 // 2 'March'
 
 // Map, Filter and Reduce
-// map ekdom forEach er motoi . just forEach kichui return kore na , kintu map array return kore . 
+// map ekdom forEach er motoi . just forEach kichui return kore na , kintu map array return kore .
 
 // const month = ['January','February','March','April','May','June']
 // month.forEach((m)=> {
 //   console.log(m)
 //   return m
 // })
-// ekhane month er sob gula value return hobe kintu undefined return hobe , jodio ami return korsilam onno kichu . karon forEach kichui return kore na . 
+// ekhane month er sob gula value return hobe kintu undefined return hobe , jodio ami return korsilam onno kichu . karon forEach kichui return kore na .
 // kintu map prottekta iteration ke ekta array te serial kore rekhe oi array ta return kore . jemon..
 // console.log(month.map((m)=> {
 //   console.log(m)
-// })) 
+// }))
 // Answer :
 // January
 // February
@@ -2361,8 +2462,8 @@
 // April
 // May
 // June
-// [undefined, undefined, undefined, undefined, undefined, undefined] 
-// upore month ke map korar por kichuii return kore nai dekhe prottekbar iteration e undefined ekta array te rekhe sei array last e return kore . 
+// [undefined, undefined, undefined, undefined, undefined, undefined]
+// upore month ke map korar por kichuii return kore nai dekhe prottekbar iteration e undefined ekta array te rekhe sei array last e return kore .
 
 // console.log(month.map((m)=>{
 //   console.log(m)
@@ -2378,7 +2479,7 @@
 // ['January', 'February', 'March', 'April', 'May', 'June']
 // upore sob gula iteration er result ke ekta array er moddhe serial kore rekhe last e return kore dey
 
-// Example : 
+// Example :
 // console.log(month.map((m)=>{
 //   console.log(m)
 //   if(m==='March'){
@@ -2395,9 +2496,9 @@
 // May
 // June
 // ['January', 'February', 'March', 'April', 'May', 'June']
-// upore March er por hello world print hoise . tar mane map jei array ta return kore seta ekdom last e return kore sob gula iteration complete houyar por 
+// upore March er por hello world print hoise . tar mane map jei array ta return kore seta ekdom last e return kore sob gula iteration complete houyar por
 
-// jehetu map last e sob value ke niye ekta array return kore tai amra map method ke ekta variable e store korte pari jate map er return value oi variable er moddhe store thake 
+// jehetu map last e sob value ke niye ekta array return kore tai amra map method ke ekta variable e store korte pari jate map er return value oi variable er moddhe store thake
 
 // const month = ['January','February','March','April','May','June']
 // const storeMonth = month.map((m)=> {
@@ -2408,11 +2509,11 @@
 
 // const storeMonth = month.map((m)=> {
 //   console.log(m)
-//   return m ; // prottekbar iteration sesh e current m sei array er last element e 
+//   return m ; // prottekbar iteration sesh e current m sei array er last element e
 // })
 // console.log(storeMonth) // ['January', 'February', 'March', 'April', 'May', 'June']
-// console.log(month === storeMonth) // false 
-// ekhane month er value and storeMonth er value same holeo tara alada memory te ase . tai false ashce 
+// console.log(month === storeMonth) // false
+// ekhane month er value and storeMonth er value same holeo tara alada memory te ase . tai false ashce
 
 // ***Important Notes****
 // map jei array return kore seta notun array return kore . tar mane eta array ke shallow copy kore . tar mane map main array ke change kore na , destroy kore na . notun array banaiya tarpor return kore
@@ -2429,7 +2530,7 @@
 // const newMonth = month.map((m,i,arr)=> {
 //   console.log(arr)
 // })
-// Answer : 
+// Answer :
 // ['January', 'February', 'March', 'April', 'May', 'June']
 // ['January', 'February', 'March', 'April', 'May', 'June']
 // ['January', 'February', 'March', 'April', 'May', 'June']
@@ -2437,17 +2538,16 @@
 // ['January', 'February', 'March', 'April', 'May', 'June']
 // ['January', 'February', 'March', 'April', 'May', 'June']
 
-// ekhane last parameter holo sei array jeta main array . tar mane arr ekhane month array ke represents kortese . 
+// ekhane last parameter holo sei array jeta main array . tar mane arr ekhane month array ke represents kortese .
 
-
-// Filter 
-// map and filter same concept , map er motoii new array return kore kintu filter oi element keii array te return korbe jetar return value true ashbe . kintu map true false er vittite return kore na . 
+// Filter
+// map and filter same concept , map er motoii new array return kore kintu filter oi element keii array te return korbe jetar return value true ashbe . kintu map true false er vittite return kore na .
 // const month = ['January','February','March','April','May','June']
 // const newMonth = month.filter(()=> {
 //   return true
 // })
 // console.log(newMonth) // ['January', 'February', 'March', 'April', 'May', 'June']
-// ekhane prottekta iteration e jehetu return value true tai month er sob gula value niyeii return hoise 
+// ekhane prottekta iteration e jehetu return value true tai month er sob gula value niyeii return hoise
 
 // jodi kono iteration e return false hoy tahole oi iteration er value ta array te return korbe na . jemon...
 
@@ -2460,7 +2560,7 @@
 //     return false
 //   }
 // })
-// Answer : 
+// Answer :
 // 0 'January'
 // 1 'February'
 // 2 'March'
@@ -2469,9 +2569,9 @@
 // 5 'June'
 // console.log(newMonth) // ['April', 'May', 'June']
 
-// tar mane filter method onektaii map er moto , just filter e return value true hoile sei iteration er value ta array te return kore, return value false hoile kore na 
+// tar mane filter method onektaii map er moto , just filter e return value true hoile sei iteration er value ta array te return kore, return value false hoile kore na
 
-// Example : 
+// Example :
 // const month = ['January', 'February', 'March', 'April', 'May', 'June']
 // const newMonth = month.filter((m,i)=> {
 //   if(m.length <= 5){
@@ -2481,14 +2581,14 @@
 // })
 // console.log(newMonth) // ['March', 'April', 'May', 'June']
 
-// Example : 
+// Example :
 // const month = ['January', 'February', 'March', 'April', 'May', 'June']
 // const newMonth = month.filter((m,i)=> {
 //   return m.includes('u')
 // })
 // console.log(newMonth) // ['January', 'February', 'June']
 
-// Example : 
+// Example :
 // const students = [
 //   {name:'Tanvir', age:25},
 //   {name:'Sadia',age:16},
@@ -2500,11 +2600,11 @@
 //   return stu.age >=18
 // })
 // console.log(filteredStudents)
-// Answer : 
+// Answer :
 // {name:'Tanvir', age:25}
 // {name:'Maymuna',age:19}
 
-// complex example : 
+// complex example :
 // chaining..
 // const students = [
 //   {name:'Tanvir', age:25},
@@ -2516,11 +2616,11 @@
 //   return student.age >=18
 // })
 // const filteredStudentName = filteredStudents.map((stu)=>{
-//   return stu.name 
+//   return stu.name
 // })
 // console.log(filteredStudentName) // ['Tanvir', 'Maymuna']
 
-// shortcut 
+// shortcut
 // const filtered = students.filter((stu)=>{
 //   return stu.age >= 18
 // }).map((student)=> {
@@ -2528,9 +2628,9 @@
 // })
 // console.log(filtered) // ['Tanvir', 'Maymuna']
 
-// Reduce 
-// kono array er sob gula value ke reduce kore 1 ta value te ane 
-// syntex of reducer : 
+// Reduce
+// kono array er sob gula value ke reduce kore 1 ta value te ane
+// syntex of reducer :
 // array_name.reduce((accumulator,currentValue, index , array)=>{
 
 // }, initialValue)
@@ -2542,18 +2642,14 @@
 
 // const nums = [1,1,2,1,1,1]
 // const totalNums = nums.reduce((accumulator,currentValue) => {
-//   console.log(accumulator) // 0 1 2 3 4 5 6 (add korar por current add value represent kore) 
+//   console.log(accumulator) // 0 1 2 3 4 5 6 (add korar por current add value represent kore)
 //   return accumulator + currentValue
 // },0)
-// console.log(totalNums) // 7 
-// ekhane nums array er sob number gula plus korle answer ashe 7 . reduce method diye mainly etaii kora hoy . 
-// initialValue ja deya hoy seta diyeii nums er index 0 er 1 er sathe add kora theke shuru kore last value porjonto add kore 
+// console.log(totalNums) // 7
+// ekhane nums array er sob number gula plus korle answer ashe 7 . reduce method diye mainly etaii kora hoy .
+// initialValue ja deya hoy seta diyeii nums er index 0 er 1 er sathe add kora theke shuru kore last value porjonto add kore
 
 // ekhane reduce method khub simple er moddhe dekhano hoise . baki ta pore dekhano hobe details
-
-
-
-
 
 //Browser Object Model (BOM)
 
@@ -2573,7 +2669,7 @@
 // 14. print()
 // 15. document
 
-// 1. Location 
+// 1. Location
 // console.log(window.location)
 // console.log(location.host) // localhost:5500
 // console.log(location.hostname) // localhost
@@ -2593,7 +2689,7 @@
 //   window.location.reload();
 // }, 10000)
 
-//2. History 
+//2. History
 
 // console.log(history.forward())
 // console.log(history.back())
@@ -2605,13 +2701,13 @@
 
 // ScrollBy
 // scrollBy(0,200);
-// scrollBy() er argument 2 ta . prothom ta hocche x angle e kototuku scroll korbe, 2nd argument hocche y angle e kototuku scroll korbe 
+// scrollBy() er argument 2 ta . prothom ta hocche x angle e kototuku scroll korbe, 2nd argument hocche y angle e kototuku scroll korbe
 // scrollBy(100,-200) // x okkhe 100px and y okkher upore 200 px
 
-// console.log(scrollY) // Y okkhe koto tuku scroll hoye niche neme ache seta pixel value te return hoy 
+// console.log(scrollY) // Y okkhe koto tuku scroll hoye niche neme ache seta pixel value te return hoy
 // console.log(scrollX) // X okkhe koto tuku scroll hoye right or left e ase seta pixel value te return hoy
 
-// scrollTo() -- eta onekta similar scrollBy er sathe 
+// scrollTo() -- eta onekta similar scrollBy er sathe
 
 // scroll -- etao onekta similar scrollBy er sathe
 
@@ -3229,10 +3325,9 @@
 //     });
 // });
 
-
-// Localstorage 
+// Localstorage
 // const input = document.querySelector('input')
-// localstorage e force fully myName variable create kora hoyeche. akhn input e ja type korbo seta myName variable e add kore dibo 
+// localstorage e force fully myName variable create kora hoyeche. akhn input e ja type korbo seta myName variable e add kore dibo
 // input.addEventListener('input',(e)=>{
 //   localStorage.myName = e.target.value
 // })
@@ -3243,11 +3338,10 @@
 //   document.querySelector('h1').innerText =localStorage.myName
 // })
 
-
 // second approach for access and update localstorage variable
 // getItem and setItem
 // const input = document.querySelector('input')
-// console.log(localStorage.getItem('myName')) 
+// console.log(localStorage.getItem('myName'))
 
 // input.addEventListener('input',(e)=>{
 //   localStorage.setItem('myAge',e.target.value)
@@ -3263,7 +3357,7 @@
 //   h1.innerText = localStorage.myName
 // })
 
-// Mini Project 
+// Mini Project
 // const nameInput = document.querySelector('#nameInput')
 // const ageInput = document.querySelector('#ageInput')
 
@@ -3284,7 +3378,7 @@
 // document.querySelector('body').appendChild(df)
 
 // nameInput.addEventListener('input',(e)=>{
-//   myData.name = e.target.value 
+//   myData.name = e.target.value
 //   localStorage.setItem('name',myData.name)
 //   document.querySelector('.para1').innerText = localStorage.getItem('name')
 // })
@@ -3317,13 +3411,12 @@
 // console.log(stringObj) // '{"name":"Tanvir Ahmed","age":25}'
 // console.log(typeof(stringObj)) // string
 
-// // convert object now 
+// // convert object now
 // const convertObj = JSON.parse(stringObj)
 // console.log(convertObj) // {name: 'Tanvir Ahmed', age: 25}
 // console.log(typeof(convertObj)) // object
 
-
-// Mini Project 
+// Mini Project
 // const nameInput = document.querySelector('#nameInput')
 // const ageInput = document.querySelector('#ageInput')
 // const obj = {
@@ -3342,14 +3435,14 @@
 // document.querySelector('body').insertBefore(df,nameInput)
 
 // nameInput.addEventListener('input',(e) => {
-//   obj.name = e.target.value 
+//   obj.name = e.target.value
 //   const newObj = JSON.stringify(obj)
 //   localStorage.setItem('object',newObj)
 
 // })
 
 // ageInput.addEventListener('input', (e) => {
-//   obj.age = e.target.value 
+//   obj.age = e.target.value
 //   const newObj = JSON.stringify(obj)
 //   localStorage.setItem('object',newObj)
 
@@ -3366,15 +3459,11 @@
 //   window.location.reload()
 // })
 
-
 // remove all data from localstorage
-// localStorage.clear() // all data clear hoye jabe joto variable object array chilo sob clear hoye jabe 
+// localStorage.clear() // all data clear hoye jabe joto variable object array chilo sob clear hoye jabe
 
 // remove single data from localstorage
 // localStorage.removeItem('data') // data nam e ekta variable chilo localstorage e , seta delete hoye gese
-
-
-
 
 // XMLHttpRequest (XHR)
 // amra fetch diye kono api fetch kori , eta ashce 2015 shale . tar age manush api fetch korar jonno XMLHttpRequest (XHR) use korto
@@ -3407,7 +3496,6 @@
 
 // xhr.open('GET','https://dog.ceo/api/breeds/image/random')
 // xhr.send()
-
 
 // const resolveBtn = document.querySelector("#resolveBtn");
 // const rejectBtn = document.querySelector("#rejectBtn");
@@ -3522,8 +3610,8 @@
 
 // Synchronous , Asynchronous and Ajax
 
-// javascript single threaded houyay eksathe multiple kaj korte pare na . kintu jodi asynchrous code run kora lage, orthat jodi setTimeout, setInterval, XHR, fetch request etc er moto asynchronous code thake tahole javascript nije segula handle na kore browser ke diye dey handle korar jonno . karon browser multi threaded. pore browser oi code gula re run kore callback queue te diye rakhe . jokhon pura call stack khali hoye jay tokhon seigula event loop er maddhome call stack e giye ekta ekta kore execute hote thake . event loop holo task queue and micro task queue theke code call stack e dey . se sarakkhon check korte thake call stack khali hoise kina . call stack khali holeii task queue or micro task queue theke code call stack e niye jay 
-// **** Important Notes **** 
+// javascript single threaded houyay eksathe multiple kaj korte pare na . kintu jodi asynchrous code run kora lage, orthat jodi setTimeout, setInterval, XHR, fetch request etc er moto asynchronous code thake tahole javascript nije segula handle na kore browser ke diye dey handle korar jonno . karon browser multi threaded. pore browser oi code gula re run kore callback queue te diye rakhe . jokhon pura call stack khali hoye jay tokhon seigula event loop er maddhome call stack e giye ekta ekta kore execute hote thake . event loop holo task queue and micro task queue theke code call stack e dey . se sarakkhon check korte thake call stack khali hoise kina . call stack khali holeii task queue or micro task queue theke code call stack e niye jay
+// **** Important Notes ****
 // task queue theke micro task queue er priority beshi thake.
 
 // Dog api mini project with XHR and Synchronously
@@ -3593,7 +3681,7 @@
 // const xhr = new XMLHttpRequest()
 // xhr.responseType = 'json'
 // xhr.addEventListener('load',()=>{
-  
+
 //   const xhr1 = new XMLHttpRequest()
 //   xhr1.responseType = 'json'
 //   xhr1.addEventListener('load',()=>{
@@ -3627,9 +3715,6 @@
 
 // xhr.open('GET','https://dummyjson.com/users')
 // xhr.send()
-
-
-
 
 // const xhr = new XMLHttpRequest();
 // xhr.responseType = "json";
@@ -3713,9 +3798,7 @@
 // xhr.open('GET','https://dummyjson.com/users')
 // xhr.send();
 
-
 // Reusable function with callback hell
-
 
 // function makeHttpRequest(method,url){
 //     const xhr = new XMLHttpRequest()
@@ -3878,9 +3961,7 @@
 //   })
 // })
 
-
-
-// Callback hell Namaste Javascript 
+// Callback hell Namaste Javascript
 // callback good part : for asynchronous are good
 // callback bad part are two
 // 1. callback hell
@@ -3888,7 +3969,7 @@
 
 // callback hell problem discuss
 // const cart = ['shoes','pants','kurta']
-// amr ekta ecommerce site ase . upore cart array te amr kichu product ase 
+// amr ekta ecommerce site ase . upore cart array te amr kichu product ase
 // jokhon kono user amr site e dhuke order korbe tokhon product choose kora theke shuru kore payment korar ag porjonto kichu process er moddho diye jete hoy . jemon..
 // 1. Add to cart
 // 2. create order
@@ -3917,7 +3998,7 @@
 //   api.createOrder()
 // })
 // upore addToCart api call houyar por ami tar vitore createOrder function as a callback hishebe diye dilam . i am as a developer tension free hoye gelam je automatic addToCart er kaj sesh hole se nijeii createOrder api ke call korbe callback hishebe . kintu eta ki risky ?? eta ashole onk beshi risky. kivabe risky ?
-// upore onk important ekta api createOrder api er control ami nijer kache na rekhe addToCart api er moddhe diye rakhsi . ekhetre ami blindly trust kortesi addToCart api ke je se tar kaj sesh kore createOrder api ke call korbe . 
+// upore onk important ekta api createOrder api er control ami nijer kache na rekhe addToCart api er moddhe diye rakhsi . ekhetre ami blindly trust kortesi addToCart api ke je se tar kaj sesh kore createOrder api ke call korbe .
 // addToCart api er personal bugs thakte pare . ai addToCart api ke aro onk developer change kore dite pare . tar jonno effect porbe createOrder api er upor .
 
 // Recap two problem of callback
@@ -3925,25 +4006,25 @@
 
 // 1 - Callback hell
 // When a function is passed as an argument to another function, it becomes a callback function. This process continues and there are many callbacks inside another's Callback function.
-// This grows the code horizontally instead of vertically. That mechanism is known as callback hell. 
+// This grows the code horizontally instead of vertically. That mechanism is known as callback hell.
 
 // 2 - Inversion of control
-// The callback function is passed to another callback, this way we lose the control of our code. We don't know what is happening behind the scene and the program becomes very difficult to maintain. 
-// That process is called inversion of control. 
+// The callback function is passed to another callback, this way we lose the control of our code. We don't know what is happening behind the scene and the program becomes very difficult to maintain.
+// That process is called inversion of control.
 
-// Promises with Namaste Javascript 
+// Promises with Namaste Javascript
 // const cart = ["shoes","pants","kurta"]
 
-// // createOrder(cart) // user jokhon cart e kono item add kore tokhon createOrder function call hoy and tar parameter e cart details pass hoy . 
+// // createOrder(cart) // user jokhon cart e kono item add kore tokhon createOrder function call hoy and tar parameter e cart details pass hoy .
 
-// const promise = createOrder(cart) // jehetu eta asynchronous operation tai kichu somoy por eta execute hobe . jokhon javascript first time run hoy tokhon createOrder(cart) ekta empty object return kore promise namok variable er moddhe . jar result thakbe undefined . kintu jokhon createOrder(cart) function successfully tar kaj sesh korbe tokhon automatically ekta result same variable promise e return korbe 
+// const promise = createOrder(cart) // jehetu eta asynchronous operation tai kichu somoy por eta execute hobe . jokhon javascript first time run hoy tokhon createOrder(cart) ekta empty object return kore promise namok variable er moddhe . jar result thakbe undefined . kintu jokhon createOrder(cart) function successfully tar kaj sesh korbe tokhon automatically ekta result same variable promise e return korbe
 
 // promise.then(function(orderId){
 //   proceedToPayment(orderId)
 // })
-// // jokhon async operation complete hobe tokhon automatically promise.then(()=>{..}) function call hobe. .then() er vitor callback function er parameter e sei promise er result ashbe. 
+// // jokhon async operation complete hobe tokhon automatically promise.then(()=>{..}) function call hobe. .then() er vitor callback function er parameter e sei promise er result ashbe.
 
-// Example : 
+// Example :
 // const GITHUM_API = "https://api.github.com/users/tanvirtbf"
 
 // const user = fetch(GITHUM_API)
@@ -3957,7 +4038,7 @@
 
 // Promise chaining
 
-// callback hell : => 
+// callback hell : =>
 // const cart = ["shoes","pants","Kurta"]
 // createOrder(cart,(orderId)=>{
 //   proceedToPayment(orderId, (paymentInfo)=>{
@@ -3967,11 +4048,11 @@
 //   })
 // })
 // // same concept in promise chaining..
-// createOrder(cart) // eta return korbe ekta promise 
+// createOrder(cart) // eta return korbe ekta promise
 //   .then((orderId)=> proceedToPayment(orderId))
 //   .then((paymentInfo)=> showOrderSummery(paymentInfo))
 //   .then((updateWalletBalance)=> updateWalletBalance())
-// // upore createOrder(cart) initially ekta pending promise return koreche jeta pore resolve hole automatically then() er vitor callback call hoye tar parameter e createOrder orderId pass korbe . setao ekta promise return korbe . sei promise jokhon resolve hobe abaro tar pore then() function call hobe. evabeii chaining hocche... 
+// // upore createOrder(cart) initially ekta pending promise return koreche jeta pore resolve hole automatically then() er vitor callback call hoye tar parameter e createOrder orderId pass korbe . setao ekta promise return korbe . sei promise jokhon resolve hobe abaro tar pore then() function call hobe. evabeii chaining hocche...
 // // This is just Promise Chaining
 
 // Creating a Promise, Chaining & Error Handling
@@ -3991,7 +4072,7 @@
 //         resolve(orderId)
 //       },5000)
 //     }
-//   }) 
+//   })
 
 //   return promise;
 // }
@@ -4006,7 +4087,7 @@
 // }
 
 // Now Advance Promise chaining project
-// callback hell : => 
+// callback hell : =>
 // const cart = ["shoes","pants","Kurta"]
 // createOrder(cart,(orderId)=>{
 //   proceedToPayment(orderId, (paymentInfo)=>{
@@ -4038,10 +4119,9 @@
 // }
 
 // const promise = createOrder(cart)
-// promise 
+// promise
 //   .then((orderId)=> proceedToPayment(orderId))
 //   .then((paymentInfo)=> console.log(paymentInfo))
-
 
 // function proceedToPayment(orderId){
 //   const p = new Promise((resolve,reject)=>{
@@ -4056,8 +4136,8 @@
 //   return p;
 // }
 
-// Again this Project 
-// // callback hell demo : => 
+// Again this Project
+// // callback hell demo : =>
 // const cart = ["shoes","pants","Kurta"]
 // createOrder(cart,(orderId)=>{
 //   proceedToPayment(orderId, (paymentInfo)=>{
@@ -4167,7 +4247,6 @@
 // 'https://dummyjson.com/posts/user/5' // get posts by user id
 // 'https://dummyjson.com/comments/post/6' // get comments by post id
 
-
 // callback hell solved with promise
 // function makeHttpRequest(method,url){
 //   const xhr = new XMLHttpRequest()
@@ -4191,8 +4270,6 @@
 //   .then((userPost)=> makeHttpRequest('GET',`https://dummyjson.com/comments/post/${userPost.posts[0].id}`))
 //   .then((userComment)=> makeHttpRequest('GET',`https://dummyjson.com/users/${userComment.comments[0].user.id}`))
 //   .then((user)=> console.log(user))
-
-
 
 // Promises
 // Promise is a special type of object
@@ -4219,8 +4296,6 @@
 //   },4000)
 // })
 // console.log(p) // promiseState: pending , promiseResult: undefined
-
-
 
 // Understand Promise using button click (resolve after button click)
 // const btn = document.querySelector('#btn')
@@ -4402,7 +4477,7 @@
 //   },2000)
 // })
 // console.log(p.then((data)=> data)) // return a promise
-// // tar mane .then() ekta promise return kore . 
+// // tar mane .then() ekta promise return kore .
 
 // const resolveBtn = document.querySelector('#resolveBtn')
 // const rejectBtn = document.querySelector('#rejectBtn')
@@ -4419,7 +4494,7 @@
 //     console.log(data)
 //     return 'Hello World'
 // })
-// console.log(returnThen) // No Return Value . karon p.then() e dhuke nai jehetu resolve hoy nai 
+// console.log(returnThen) // No Return Value . karon p.then() e dhuke nai jehetu resolve hoy nai
 // setTimeout(()=>{
 //     console.log(returnThen) // resolve houyar por p.then() 'Hello World' return korse
 // },4000)
@@ -4570,7 +4645,6 @@
 // 'https://dummyjson.com/posts/user/5' // get posts by user id
 // 'https://dummyjson.com/comments/post/6' // get comments by post id
 
-
 // function makeHttpRequest(method,url){
 //     const xhr = new XMLHttpRequest()
 //     xhr.responseType = 'json'
@@ -4652,8 +4726,8 @@
 //     console.log(err)
 //   })
 
-// Async Await 
-// eta amader jonno notun kichu aina dey na . promise er sob concept ekhane ache . amra jemon vabe .then() .catch() kori sei syntex gula ektu easy kore. 
+// Async Await
+// eta amader jonno notun kichu aina dey na . promise er sob concept ekhane ache . amra jemon vabe .then() .catch() kori sei syntex gula ektu easy kore.
 
 // ami jokhon kono function call kori tokhon oi function theke ja return kora hoy setaii return hoy . jemon..
 // function makeHttpRequest(){
@@ -4665,13 +4739,13 @@
 
 // }
 // console.log(makeHttpRequest()) // return a promise -> state : fullfilled , result : undefined
-// // kono kichu return kora hoy nai tai result e undefined ashce . 
+// // kono kichu return kora hoy nai tai result e undefined ashce .
 // // ai situation e by default always state fullfilled thakbe
 // async function makeHttpRequest(){
 //   return 1234;
 // }
 // console.log(makeHttpRequest()) // return a promise -> state : fullfilled , result : 1234
-// // ja return koreche ai function seta promiseResult er moddhe jay . 
+// // ja return koreche ai function seta promiseResult er moddhe jay .
 
 // ***** important notes *******
 // async function er khetre always state fullfilled thake . tar mane always resolve state thake . tahole reject state kivabe pauya jay ?? Answer...
@@ -4707,7 +4781,7 @@
 // // {return object}
 // // hellllllooooo
 // dekhe mone hocche await use korle code synchronous hocche . kintu ashole ta na . await use korle code ektu onno vabe execute hoy . jemon..
-// await use korle jokhon await wala line execute houya start kore tokhon makeHttpRequest() function ta callstack theke ber hoye jay , jotokkhon porjonto await wala line execute na hoy totokkhon porjonto callstack e makeHttpRequest function ta thake na . jehetu call stack tokhon khali thake tai makeHttpRequest function chara baki code gula run hote thake . jokhonii await wala line execute complete hoy tokhon sathe sathe makeHttpRequest function call stack e ashe , then next line theke execute start hoy . aikhetre function ta mone rakhe last time kothay chilo . 
+// await use korle jokhon await wala line execute houya start kore tokhon makeHttpRequest() function ta callstack theke ber hoye jay , jotokkhon porjonto await wala line execute na hoy totokkhon porjonto callstack e makeHttpRequest function ta thake na . jehetu call stack tokhon khali thake tai makeHttpRequest function chara baki code gula run hote thake . jokhonii await wala line execute complete hoy tokhon sathe sathe makeHttpRequest function call stack e ashe , then next line theke execute start hoy . aikhetre function ta mone rakhe last time kothay chilo .
 
 // async function makeHttpRequest(){
 //   console.log('hii')
@@ -4724,7 +4798,7 @@
 // }
 // getNum()
 // hii
-// 10 
+// 10
 // hello
 // {return object}
 // hellllllooooo
@@ -4732,8 +4806,8 @@
 
 // async function makeHttpRequest(){
 //   const url = 'https://dummyjson.com/comments/post/6'
-//   const responseObj = await fetch(url) 
-//   const data = await responseObj.json() // responseObj.json() etao ekta promise return kore tai ekhaneo await use kora jay . 
+//   const responseObj = await fetch(url)
+//   const data = await responseObj.json() // responseObj.json() etao ekta promise return kore tai ekhaneo await use kora jay .
 //   console.log(data)
 // }
 // makeHttpRequest()
@@ -4751,7 +4825,7 @@
 // }
 // makeHttpRequest()
 
-// Async Await 2 rules 
+// Async Await 2 rules
 // 1. await keyword only oi function eii use kora jabe jei function async keyword diye declare kora hoyeche
 // 2. module scope e async keyword charao top level e await keyword use kora jabe . top level mane kono function er vitor na . mane globally
 
@@ -4764,7 +4838,7 @@
 // }
 // console.log(makeHttpRequest())
 
-// Namaste Async Await 
+// Namaste Async Await
 // async is a keyword that is use before a function for create a asynchronous function
 
 // what is different between async function and normal function
@@ -4774,7 +4848,7 @@
 //   return 'Hiii'
 // }
 // console.log(sayHi()) // state : fullfilled , Promise Result : 'Hiii'
-// tar mane jeta return kore seta oi promise er result e rekhe dey 
+// tar mane jeta return kore seta oi promise er result e rekhe dey
 // async function sayhi(){
 //   const p = new Promise((res,rej)=>{
 //     res('resolve')
@@ -4791,7 +4865,7 @@
 // const dataPromise = getData()
 // console.log(dataPromise) // return a promise where state fullfilled and result is 'Namaste'
 // // kintu ami actual data Namaste string kivabe pabo??
-// // Answer : 
+// // Answer :
 // dataPromise.then((data)=> console.log(data))
 
 // example of promise return case
@@ -4806,9 +4880,9 @@
 // dataPromise.then((data)=> console.log(data)) // Promise Resolved Value
 // *****Important Note*********
 // jokhon kono async function kono non-promise value jemon string number boolean object array etc return kore tokhon seta kono ekta promise er vitor wrap kore rakha hoy and sei promise ta return hoy . return non-promise value gula sei promise er promise result er vitor thake
-// r jokhon kono async function another kono promise ke return kore tokhon sei async function hubuhu sei promise tai return kore dey . jemon upore alada vabe create kora p promise ta jokhon async function er vitor return kora hoy tokhon hubuhu p promise taii async function return kore 
+// r jokhon kono async function another kono promise ke return kore tokhon sei async function hubuhu sei promise tai return kore dey . jemon upore alada vabe create kora p promise ta jokhon async function er vitor return kora hoy tokhon hubuhu p promise taii async function return kore
 
-// How do you use async along with await 
+// How do you use async along with await
 // async and await combo is use to handle promises
 // But before async await how do you use to handle promises? why do we need even async await ? do i really need async await? sob answer niche..
 
@@ -4833,11 +4907,11 @@
 // handlePromise() // Promise Resolve Value!
 
 // ****Important Notes****
-// await keyword sudhu promise er ageii lekha hoy . promise chara onno kichur age await keyword lekha jabe na . 
+// await keyword sudhu promise er ageii lekha hoy . promise chara onno kichur age await keyword lekha jabe na .
 
 // Important difference between older way and async await way..
 
-// older way : 
+// older way :
 // const p = new Promise((resolve,reject)=> {
 //   setTimeout(()=>{
 //     resolve("Promise Resolve Value!")
@@ -4850,8 +4924,8 @@
 //   console.log('hiii')
 //   console.log('hiii')
 // }
-// getData() 
-// Hello 
+// getData()
+// Hello
 // hiii
 // hiii
 // hiii
@@ -4859,7 +4933,7 @@
 // Promise Resolve Value! (After 5 Second )
 
 // karon p.then((....)) eta async operation , tai eta task queue te jabe jotokkhon na call stack khali hobe tar age call stack e ashbe na . jokhon sob console.log() call stack theke execute hoye call stack khali hoye jabe tokhon p.then((...)) aisha execute hobe . tai p.then() er porer code age execute hoise
-// this is older way 
+// this is older way
 
 // Now Async Await way or Latest way to handle promises
 
@@ -4872,7 +4946,7 @@
 //   console.log('Hello World')
 //   const data = await p;
 //   console.log('Hiii')
-//   console.log(data) 
+//   console.log(data)
 //   console.log('hello')
 // }
 // getData()
@@ -4882,7 +4956,7 @@
 // Promise Resolve Value!
 // helllo
 
-// upore first time Hello World print hoye gese . tarpor 4 second r kono console.log() print hoy nai . pore 4 second por eksathe Hii , Promise Resolve Value! and hello print hoy . 
+// upore first time Hello World print hoye gese . tarpor 4 second r kono console.log() print hoy nai . pore 4 second por eksathe Hii , Promise Resolve Value! and hello print hoy .
 
 // another example of async await..
 // const p1 = new Promise((resolve,reject)=>{
@@ -4908,15 +4982,14 @@
 // Hello World
 // After 5 second...
 // After p1
-// Resolve 1 
+// Resolve 1
 // After p2
 // Resolve 2
 
-// upore kintu 3 second por p2 chole nai . sob eksathe promise resolve houyar poreii getData() function ta call stack e ashce 
+// upore kintu 3 second por p2 chole nai . sob eksathe promise resolve houyar poreii getData() function ta call stack e ashce
 // ***** Important Notes ******
-// async await er khetre jokhon async function getData call hoy tokhon call stack e getData() ashe . then console.log('Hello World') print kore . jokhon porer line promise1 = await p1 execute korte jay tokhonii sathe sathe getData() function ta call stack theke ber hoye jay and tarpor joto gula promise ase await diye declare kore rakhse sob gula eksathe execute kore . jotokkhon porjonto kono await promise execute bad jabe totokkhon getData() call stack e jabe na . uporer example e p1 and p2 ai 2 ta promise await diye declare korse . tai jotokkhon porjonto ai 2 ta promise resolve na hocche totokkhon porjonto getData() function call stack e jabe na . 
+// async await er khetre jokhon async function getData call hoy tokhon call stack e getData() ashe . then console.log('Hello World') print kore . jokhon porer line promise1 = await p1 execute korte jay tokhonii sathe sathe getData() function ta call stack theke ber hoye jay and tarpor joto gula promise ase await diye declare kore rakhse sob gula eksathe execute kore . jotokkhon porjonto kono await promise execute bad jabe totokkhon getData() call stack e jabe na . uporer example e p1 and p2 ai 2 ta promise await diye declare korse . tai jotokkhon porjonto ai 2 ta promise resolve na hocche totokkhon porjonto getData() function call stack e jabe na .
 // p1 5 second por resolve hobe, p2 hobe 3 second por . jotokkhon na sob gula promise resolve hocche totokkhon getData() function call stack e firbe na . tai ekhane total 5 second lagbe getData() function ta call stack e giya pura execute complete korte . karon p2 jodio 3 second e execute kore boshe ase kintu p1 to 5 second poreii execute hobe. that's why...
-
 
 // Object Oriented Programming
 
@@ -4945,14 +5018,14 @@
 // }
 // console.log(user.getAgeYear()) // 1999
 
-// Encapsulation er mane hocche alada alada jinish ke ek jaygay rakha . upore variable gula + function sob user er vitore rakha hoyeche . data and logic sob kichui user er vitor rakha hoyeche . eta Encapsulation er ekta main definition . 
+// Encapsulation er mane hocche alada alada jinish ke ek jaygay rakha . upore variable gula + function sob user er vitore rakha hoyeche . data and logic sob kichui user er vitor rakha hoyeche . eta Encapsulation er ekta main definition .
 // kintu arekta definition ase Encapsulation er . seta hocche data hiding . tar mane hocche user object ta bairer duniyar theke hidden . tar mane baire theke user ke keu change korte parbe na . jodi getAgeYear function ke baire define kora hoito, then user object er vitore call kora hoito taile getAgeYear function ke user object charaii independent vabe je keu access korte parto . eta Encapsulation er rules break kore . uporer user object ke baire theke change kora jabe + Access kora jabe . tai bola jay je akhno purapuri vabe user object ta Encapsulation hoy nai . kichu ta Encapsulation hoyeche .
 // onno programming language e hiding er jonno private keyword use kore variable declare kora hoy jate data hiding thake . tar mane user object ke jate baire theke change kora na jay . kintu javascript e private keyword nei . ekhane (#) diye private kora jay . eta pore dekhano hobe
 
 // Abstraction
-// er simple definition hocche hiding the complexity 
-// amar logic user ke dekhanor dorkar nei . user sudhu tar kajer sathe thakbe . 
-// amra jemon keyboard er vibinno button click kori . amra jani space button click korle ki hobe, delete button click korle ki hobe . amader aita dekhar dorkar nei je behind the scene ai button click er por ki ki operation hocche , ki ki logic cholche egula user ke dekhanor dorkar nei . etaii hocche hiding the complexity . tar mane hocche user ke behind the scene logic complexity egula dekhanor dorkar nei . sudhu user jei kaj korbe seta korar jonnoi playground toiri kore dite hobe 
+// er simple definition hocche hiding the complexity
+// amar logic user ke dekhanor dorkar nei . user sudhu tar kajer sathe thakbe .
+// amra jemon keyboard er vibinno button click kori . amra jani space button click korle ki hobe, delete button click korle ki hobe . amader aita dekhar dorkar nei je behind the scene ai button click er por ki ki operation hocche , ki ki logic cholche egula user ke dekhanor dorkar nei . etaii hocche hiding the complexity . tar mane hocche user ke behind the scene logic complexity egula dekhanor dorkar nei . sudhu user jei kaj korbe seta korar jonnoi playground toiri kore dite hobe
 
 // function getAgeYear(age){
 //   return new Date().getFullYear() - age
@@ -4960,7 +5033,7 @@
 // getAgeYear(25) // return value is : 1999
 // ai function taii Abstraction achieve korse . karon jokhon kono user eta ke call korbe tokhon user just age input dibe and sei onujayi tar birth year ber hoye ashbe . tar kase hide kora hoyeche behind the scene ki ki logic complexity choltese . etai Abstraction
 
-// Factory function 
+// Factory function
 
 // why need factory function?...
 // const user1 = {
@@ -4987,7 +5060,7 @@
 //     return new Date().getFullYear() - user3.age
 //   }
 // }
-// ekhane jotogula user create korbo totogula object ekhane create kora lagtese . jodi 1 hajar user thake tahole 1 hajar ta object create kora lagtese . ei problem solve korar jonno factory function create hoise 
+// ekhane jotogula user create korbo totogula object ekhane create kora lagtese . jodi 1 hajar user thake tahole 1 hajar ta object create kora lagtese . ei problem solve korar jonno factory function create hoise
 
 // Create Factory function
 // function createUser(firstName,lastName,age){
@@ -5005,9 +5078,9 @@
 // const user2 = createUser('Aman','Ahmed',23)
 // const user3 = createUser('Aman','Ahmed',23)
 // upore khub kom code use kore barbar notun user create kora jacche .
-// kintu ekhetre ekta problem ase . seta holo user1, user2, user3 sob gula teii getAgeyear function duplicate hoitese . jodio getAgeYear er definition sob khetre same , kintu tao prottekbar user create hole oi user er jonno alada alada vabe getAgeYear function alada alada memory te create hoitese . kintu jehetu same definition tai alada alada memory te thaka ta logical na .  aivabe function store korle onk memory khoroch hoye jabe . 
+// kintu ekhetre ekta problem ase . seta holo user1, user2, user3 sob gula teii getAgeyear function duplicate hoitese . jodio getAgeYear er definition sob khetre same , kintu tao prottekbar user create hole oi user er jonno alada alada vabe getAgeYear function alada alada memory te create hoitese . kintu jehetu same definition tai alada alada memory te thaka ta logical na .  aivabe function store korle onk memory khoroch hoye jabe .
 // console.log(user1.getAgeYear === user2.getAgeYear )// false
-// tar mane prottekta user er jonno getAgeYear alada alada memory te store hocche jodio ai function er definition sobar jonno same . 
+// tar mane prottekta user er jonno getAgeYear alada alada memory te store hocche jodio ai function er definition sobar jonno same .
 // tahole to ai function ke baire rakhleii valo . tahole same memory te point thakbe sob user er jonno . jemon...
 // function createUser(firstName,lastName,age){
 //   const user = {
@@ -5028,7 +5101,7 @@
 // tahole evabeii korle memory khoroch onk kom hoy . karon getAgeYear ai khetre 1 taii memory location dokhol kore rakhse sob user er jonno . kintu eta korle to OOP concept taii thakbe na . tai getAgeYear ke  baire declare kora jabe na . vitoreii declare kore ai problem er solve korte hobe
 // ai problem ta solve korse Constractor function
 
-// example : 
+// example :
 // const arr1 = [1,2,3]
 // const arr2 = [4,5,6]
 // console.log(arr1.pop === arr2.pop) // true
@@ -5047,7 +5120,7 @@
 //   return user
 // }
 // function getAgeYear(age){
-//   console.log(this) 
+//   console.log(this)
 //   // return new Date().getFullYear - user.age
 // }
 // const user1 = createUser('Aman','Ahmed',23)
@@ -5061,16 +5134,16 @@
 
 // console.log(user1.getAgeYear === user2.getAgeYear) // true
 // console.log(user1.getAgeYear === user3.getAgeYear) // true
-// // tar mane jotoi user create kori tader sobar jonno getAgeYear function ektaii . orthat same memory address e ase . tai memory khoroch o kom 
+// // tar mane jotoi user create kori tader sobar jonno getAgeYear function ektaii . orthat same memory address e ase . tai memory khoroch o kom
 // // kintu ekhetre Encapsulation er rules break hoy . rules onujayii sob variable logic everything eksathe thakte hobe . kintu ekhane getAgeYear function ta object er baire . abar object er vitore anle prottek user er jonno alada alada getAgeYear memory te create hoye memory khoroch baraiya dibe . ai somosshar somadhan hocche Constractor function
 // // Polymorphism
-// // kintu ekhane polymorphism rules apply hoye gese . polymorphism hocche ektaii function kintu alada alada rup . tar mane hocche same getAgeYear function taii alada alada user er jonno alada alada vabe kaj kortese, alada alada rup toiri kortese. upore same function getAgeYear prottekta user er jonnoa alada alada vabe kaj kortese . etaii polymorphism 
+// // kintu ekhane polymorphism rules apply hoye gese . polymorphism hocche ektaii function kintu alada alada rup . tar mane hocche same getAgeYear function taii alada alada user er jonno alada alada vabe kaj kortese, alada alada rup toiri kortese. upore same function getAgeYear prottekta user er jonnoa alada alada vabe kaj kortese . etaii polymorphism
 
 // How to create key value pair on the function and get a common methods
 // createUser.hello = 'world'
 // console.log(createUser.hello) // world
-// // ekhane createUser ekta function houyar poreo ami er sathe key value pair create korte partesi . karon prottekta function behind the scene object hoye thake 
-// console.dir(createUser) // ekhane ami hello = 'world' pabo 
+// // ekhane createUser ekta function houyar poreo ami er sathe key value pair create korte partesi . karon prottekta function behind the scene object hoye thake
+// console.dir(createUser) // ekhane ami hello = 'world' pabo
 
 // Common Methods Technique
 // function createUser(firstName,lastName,age){
@@ -5095,8 +5168,8 @@
 
 // console.log(user2.getAgeYear === user1.getAgeYear) // true
 
-// akhn amader problem solve hoise . karon ekhane Encapsulation er rules break hoy nai + abstraction er rules o break hoy nai . tar sathe memory khoroch o hoy nai . karon same memory address e ase getAgeYear function ta . 
-// kintu ekhane onk extra code lekha lagse 
+// akhn amader problem solve hoise . karon ekhane Encapsulation er rules break hoy nai + abstraction er rules o break hoy nai . tar sathe memory khoroch o hoy nai . karon same memory address e ase getAgeYear function ta .
+// kintu ekhane onk extra code lekha lagse
 
 // function createUser(fname,lname,age){
 //   const user = {
@@ -5121,7 +5194,7 @@
 
 // }
 // console.dir(sayHi)
-// // duniyar jekono function hok sekhane prototype object thake 
+// // duniyar jekono function hok sekhane prototype object thake
 
 // console.log(sayHi.prototype) // in prototype
 
@@ -5138,7 +5211,7 @@
 
 // new keyword
 // function sayHi(){
-  
+
 // }
 // console.log(sayHi()) // return undefined
 // console.log(new sayHi()) // return a object
@@ -5150,16 +5223,16 @@
 // // tar mane new keyword diye kono function call korle sei function jei data return koruk na kno oi function oi jinish ta return korbe na . se tar nijer motoi ekta object return korbe jeta se function kono kichu return na korleo korto
 
 // definition of new keyword
-// jokhon new keyword diye kono function call kora hoy tokhon se nije ekta object create kore and sei object ke automatic return kore dey . 
+// jokhon new keyword diye kono function call kora hoy tokhon se nije ekta object create kore and sei object ke automatic return kore dey .
 
-// new keyword jei object return kortese sei object e amra chaile onk property set korte pari 
-// tar age this er useCase bujhte hobe new keyword er belay 
+// new keyword jei object return kortese sei object e amra chaile onk property set korte pari
+// tar age this er useCase bujhte hobe new keyword er belay
 
 // function sayHi(){
-//   console.log(this) 
+//   console.log(this)
 // }
 // console.log(sayHi()) // print window object
-// console.log(new sayHi()) // jei object ta new keyword create and return kore automatically sei object keii print korse . tar mane new keyword use kore function call korle sei function er vitor this keyword ashole sei function jei object return kortese setakeii point kore thake 
+// console.log(new sayHi()) // jei object ta new keyword create and return kore automatically sei object keii print korse . tar mane new keyword use kore function call korle sei function er vitor this keyword ashole sei function jei object return kortese setakeii point kore thake
 
 // function createUser(fname,lname,age){
 //   const user = {
@@ -5190,7 +5263,6 @@
 // const user1 = new createUser('Tanvir','Ahmed',25)
 // const user2 = new createUser('Sadia','Ahmed',16)
 
-
 // important notes*****
 // jokhon new keyword use kore kono function ke call kore tokhon sei function ke bola hoy constractor function . same function jodi new keyword use kore call kora na hoy tahole seta normal function
 
@@ -5200,14 +5272,14 @@
 //   this.age = age
 // }
 // const user1 = createUser('Tanvir','Ahmed',25)
-// console.log(user1) // undefined . karon jehetu new keyword use kore createUser function call kora hoy nai tai kono kichui return kora hoy nai user1 variable er kache . tai undefined ashce 
+// console.log(user1) // undefined . karon jehetu new keyword use kore createUser function call kora hoy nai tai kono kichui return kora hoy nai user1 variable er kache . tai undefined ashce
 
 // // important notes*****
-// // upore createUser jehetu normal function , normal function karon take new keyword use kore call kora hoy nai tai createUser er vitor this keyword window object ke point kore ache . tar mane createUser er vitor firstName, lastName, age aigula window object er vitor set hoyeche . 
+// // upore createUser jehetu normal function , normal function karon take new keyword use kore call kora hoy nai tai createUser er vitor this keyword window object ke point kore ache . tar mane createUser er vitor firstName, lastName, age aigula window object er vitor set hoyeche .
 // console.log(window.firstName)// Tanvir
 // console.log(window.lastName)// Ahmed
 // console.log(window.age) // 25
-// // jehetu window object er vitor set hoise tai amra window.firstName na diye only firstName dite pari 
+// // jehetu window object er vitor set hoise tai amra window.firstName na diye only firstName dite pari
 // console.log(firstName)// Tanvir
 // console.log(lastName)// Ahmed
 // console.log(age) // 25
@@ -5223,9 +5295,9 @@
 // console.log(user1) // createUser {firstName: 'Tanvir', lastName: 'Ahmed', age: 25}
 // console.log(user2) // createUser {firstName: 'Sadia', lastName: 'Ahmed', age: 16}
 
-// // akhn dekhbo kivabe common methods user1 , user2 object e automatically chole jay 
+// // akhn dekhbo kivabe common methods user1 , user2 object e automatically chole jay
 
-// // createUser er vitore prototype object ase . tar vitore constructor function ase . jei constructor function createUser function er definition hold kore rakhe . new keywrod diye jokhon createUser call kore user1 and user2 create kora holo tokhono user1 and user2 er vitore same constructor function jay 
+// // createUser er vitore prototype object ase . tar vitore constructor function ase . jei constructor function createUser function er definition hold kore rakhe . new keywrod diye jokhon createUser call kore user1 and user2 create kora holo tokhono user1 and user2 er vitore same constructor function jay
 // // jemon..
 // console.log(createUser.prototype.constructor === user1.__proto__.constructor) // true
 // console.log(createUser.prototype.constructor === user2.__proto__.constructor) // true
@@ -5246,7 +5318,7 @@
 // console.log(createUser.prototype.constructor === user1.__proto__.constructor) // true
 // console.log(user1.__proto__.getBirthYear) // ƒ (){ return new Date().getFullYear() - this.age}
 // console.log(user2.__proto__.getBirthYear) // ƒ (){ return new Date().getFullYear() - this.age}
-// // upore createUser er prototype e getBirthYear function set kore dise , sathe satheii user1 and user2 object sei getBirthYear function er access peye gese tader prototype e 
+// // upore createUser er prototype e getBirthYear function set kore dise , sathe satheii user1 and user2 object sei getBirthYear function er access peye gese tader prototype e
 
 // function createUser(fname,lname,age){
 //   this.fname = fname
@@ -5259,8 +5331,8 @@
 // console.log(user1===user2) // false
 // console.log(user1===createUser) // false
 // console.log(user2===createUser) // false
-// // tar mane user1, user2 and createUser alada alada memory te store hoise 
-// // kintu createUser er vitor prototype er vitor jei constructor function ase seta user1, user2, user3... erokom sob user er jonno same memory allocation e ase . 
+// // tar mane user1, user2 and createUser alada alada memory te store hoise
+// // kintu createUser er vitor prototype er vitor jei constructor function ase seta user1, user2, user3... erokom sob user er jonno same memory allocation e ase .
 // console.log(user1.__proto__) // prototype object
 // console.log(createUser.prototype) // prototype object
 // console.log(user2.__proto__) // prototype object
@@ -5269,7 +5341,7 @@
 // console.log(user1.__proto__ === createUser.prototype) // true
 // console.log(user2.__proto__ === createUser.prototype) // true
 
-// // tar mane createUser tar prototype object sob user er sathe share korse same memory address e rekheii . 
+// // tar mane createUser tar prototype object sob user er sathe share korse same memory address e rekheii .
 
 // console.log(user1.__proto__.constructor === user2.__proto__.constructor) // true
 // console.log(createUser.prototype.constructor === user1.__proto__.constructor) // true
@@ -5284,7 +5356,7 @@
 //   const user = {
 //     firstName : fname,
 //     lastName : lname,
-//     age : age, 
+//     age : age,
 //     getBirthYear : createUser.prototype.getBirthYear
 //   }
 //   return user
@@ -5295,7 +5367,6 @@
 // const user1 = createUser('Tanvir','Ahmed',25)
 // const user2 = createUser('Tanvir','Ahmed',25)
 // console.log(user1.getBirthYear === user2.getBirthYear) // true
-
 
 // set common function for all user
 // function createUser(fname,lname,age){
@@ -5331,16 +5402,15 @@
 // createUser.prototype.getFullName = function(){
 //   return this.firstName + ' ' + this.lastName
 // }
-// // ***Important Notes*** -> ekhane createUser er baire aisha getBirthYear and getFullName set kora lagtesee . etao Encapsulation rules break kore . aijonnoi classes er intro hoy 
+// // ***Important Notes*** -> ekhane createUser er baire aisha getBirthYear and getFullName set kora lagtesee . etao Encapsulation rules break kore . aijonnoi classes er intro hoy
 // const user1 = new createUser('Tanvir','Ahmed',25)
 // const user2 = new createUser('Sadia','Khatun',16)
 // console.log(user1.getFullName()) // Inheit hoye getFullName access hoise tai user1 er por __proto__ deya lage na
 
-
 // ********Very Very Important Notes*************
-// jokhon new keyword diye kono function call kora hoy tokhon seta obosshoi obosshoi ekta object return korbe . oi function er moddhe ami ja kisu kori na kno sob kichu oi object er moddhe set kora thakbe . jemon niche createUser er moddhe this use kore firstname, lastname , age etc set kora hoise . ja set kora hoise sob kichu oi object er moddhe thakbe jeta new keyword use kore function call korle return kore . tarpor jodi oi function use kore kono object create kora hoy tokhon automatic sei object er sob property tar jonno alada vabe duplicate hoye return hoy . evabe user1, user2, user3.... onk object create hoy . sob gular jonnoi er vitorer sob property copy hoye ashe . jar karone user1.firstName change korle user2 er firstName change hoy na . function object array string integer jai set kori na kno seta copy hoye ashe user1, user2 egular moddhe . 
+// jokhon new keyword diye kono function call kora hoy tokhon seta obosshoi obosshoi ekta object return korbe . oi function er moddhe ami ja kisu kori na kno sob kichu oi object er moddhe set kora thakbe . jemon niche createUser er moddhe this use kore firstname, lastname , age etc set kora hoise . ja set kora hoise sob kichu oi object er moddhe thakbe jeta new keyword use kore function call korle return kore . tarpor jodi oi function use kore kono object create kora hoy tokhon automatic sei object er sob property tar jonno alada vabe duplicate hoye return hoy . evabe user1, user2, user3.... onk object create hoy . sob gular jonnoi er vitorer sob property copy hoye ashe . jar karone user1.firstName change korle user2 er firstName change hoy na . function object array string integer jai set kori na kno seta copy hoye ashe user1, user2 egular moddhe .
 // kintu...
-// createUser er prototype er moddhe kono kichu set korle seta sob user der moddhe reference hishebe jay . copy hoye jay na . 
+// createUser er prototype er moddhe kono kichu set korle seta sob user der moddhe reference hishebe jay . copy hoye jay na .
 
 // function createUser(fname,lname,age){
 //   this.firstName = fname;
@@ -5381,8 +5451,6 @@
 // user1.fullArray = [1,2,3]
 // console.log(user2.fullArray)
 
-
-
 // Classes
 // class createUser {
 //   getFullName (fullName){
@@ -5398,10 +5466,10 @@
 // console.log(user1.getFullName('Tanvir Ahmed')) // Tanvir Ahmed
 // console.log(user1.__proto__.getFullName('Hello')) // Hello
 
-// akhn porjonto amader jei somossha ta chilo createUser er prototype er vitor kono method or property set korte hoito . class just ai problem tai solve kore . baki sob ager process eii hocche . 
+// akhn porjonto amader jei somossha ta chilo createUser er prototype er vitor kono method or property set korte hoito . class just ai problem tai solve kore . baki sob ager process eii hocche .
 // upore getFullName function ta createUser er prototype er vitor set hoise . jekhane age getBirthYear function jevabe create korsi sevabe getFullName function create kortam prototype er moddhe.
 
-// Another Example : 
+// Another Example :
 // class createUser{
 //   getBirthYear(age){
 //     return new Date().getFullYear() - age
@@ -5423,11 +5491,10 @@
 // console.log(user1.getFullName('Tanvir Ahmed'))
 // console.log(user2.getFullName('Sadia Ahmed'))
 
-
 // class createUser{
 
 //   getBirthYear (age){
-//     return new Date().getFullYear() - age 
+//     return new Date().getFullYear() - age
 //   }
 //   getFullName (name){
 //     return name
@@ -5442,17 +5509,15 @@
 // console.log(user1.getBirthYear===user2.getBirthYear) // true
 // console.log(user2.getFullName===user1.getFullName) // true
 
+// constructor function
+// upore createUser() function call korar somoy tar argument e 'Tanvir','Ahmed' and 25 deya ase . egula kothay jabe ? egula kivabe createUser function e access korbo ?
+// Answer is Constructor function
 
-// constructor function 
-// upore createUser() function call korar somoy tar argument e 'Tanvir','Ahmed' and 25 deya ase . egula kothay jabe ? egula kivabe createUser function e access korbo ? 
-// Answer is Constructor function 
+// What is Constructor function ?
+// jokhon kono class ke call kora hoy tokhon sei class er baki method gula sei class er prototype er moddhe set hoye jay . kintu kono kichu execute hoy na . execute hoy sudhu constructor function . jodi ami kono class ke new keyword diye kono class ke call kori tokhon constructor function sathe sathe automatic call hoy and tar vitor sob code execute hoy .
+// upore createUser er moddhe argument gula constructor function recieve korte pare
 
-// What is Constructor function ? 
-// jokhon kono class ke call kora hoy tokhon sei class er baki method gula sei class er prototype er moddhe set hoye jay . kintu kono kichu execute hoy na . execute hoy sudhu constructor function . jodi ami kono class ke new keyword diye kono class ke call kori tokhon constructor function sathe sathe automatic call hoy and tar vitor sob code execute hoy . 
-// upore createUser er moddhe argument gula constructor function recieve korte pare 
-
-
-// Example of Constructor function 
+// Example of Constructor function
 // class createUser{
 
 //   constructor(fname,lname,age){
@@ -5468,7 +5533,6 @@
 // }
 // const user1 = new createUser('Tanvir','Ahmed',25) // user1 er moddhe createUser call kore tar return value object ta user1 er moddhe rakha hoise . kintu jehetu createUser call hoise ekhane tai automatic createUser er moddhe thaka constructor function tao call hoye gese and execute hoise . jehetu tar vitor console.log() ase tai ai console e seta print hobe . print hoyeche -> Tanvir Ahmed 25
 // const user2 = new createUser('Sadia','Hatun',16) // user2 er moddhe createUser call kore tar return value object ta user1 er moddhe rakha hoise . kintu jehetu createUser call hoise ekhane tai automatic createUser er moddhe thaka constructor function tao call hoye gese and execute hoise . jehetu tar vitor console.log() ase tai ai console e seta print hobe . print hoyeche -> Sadia Hatun 16
-
 
 // class createUser{
 //   constructor(fname,lname,age){
@@ -5486,8 +5550,7 @@
 
 // console.dir(user2.getFullName())
 
-
-// Private 
+// Private
 // class createUser{
 //   #age // jekono private variable niye kaj korar age eta ke age evabe declare korte hoy # diye
 //   constructor(fname,lname,age){
@@ -5515,23 +5578,11 @@
 // console.log(user2.getBirthYear()) // 2008
 // // console.log(user2.#age) // error (karon eta private property)
 
-
-
-
-
-
-
-
-
-
-
-
-
-// Geeky Shows Advance Javascript 
+// Geeky Shows Advance Javascript
 // DOM definition (What is Document Object Model - v.3)
 // 1. The Document Object Model(DOM) is a Application Programming Interface (API) for HTML and XML documents.
 // 2. With the Document Object Model, Programmers can create and build documents, navigate their structure, and add, modify, or delete elements and content.
-// 3. The DOM is an object-oriented representation of the web page, which can be modified with a scripting language such as javascript. 
+// 3. The DOM is an object-oriented representation of the web page, which can be modified with a scripting language such as javascript.
 // 4. The DOM model represents a document with a logical tree.
 // 5. According to Document Object Model (DOM), everyt HTML-tag is an object. Nested tags are called "children" of the enclosing one. All operations on the DOM start with the document object. From it we can access any node.
 // 6. The Document Object Model can be used with any programming language like python php etc.
@@ -5539,18 +5590,17 @@
 // Document Tree (v.4)
 // Notes :
 // 1. Element Node : joto html tag ase sob gula ke bola hoy Element Node
-// 2. Text Node : kono tag er vitor text thakle setake Text Node bole . Text Node DOM er vitor onno kothau create hoy .jei tag er vitor text ase sei tag er vitor text node create hoy na. 
+// 2. Text Node : kono tag er vitor text thakle setake Text Node bole . Text Node DOM er vitor onno kothau create hoy .jei tag er vitor text ase sei tag er vitor text node create hoy na.
 // 3. Attribute Node : tag er vitor joto attribute ase sob gula Attribute Node
-// 4. Comment Node : comment gula Comment Node 
+// 4. Comment Node : comment gula Comment Node
 
-// DOM Node Types : 
+// DOM Node Types :
 // 1. Element Node er type holo 1. tar mane jodi kono Element er type ber kora hoy tahole return value ashe 1 . jodi kono Node er return value 1 ashe tahole bujhte hobe seta Element Node.
 // 2. Text Node er type holo 3. tar mane jodi kono Text er type ber kora hoy tahole return value ashe 3 . jodi kono Node er return value 3 ashe tahole bujhte hobe seta Text Node.
 // 3. Comment Node er type holo 8. tar mane jodi kono Comment er type ber kora hoy tahole return value ashbe 8. jodi kono Node er return value 8 ashe tahole bujhte hobe seta Comment Node.
 // 4. Document Node er type holo 9. tar mane jodi document er type ber kora hoy tahole return value ashbe 9. jodi kono Node er return value 9 ashe tahole bujhte hobe seta Document Node.
-// 5. Document Type Node is 10. 
-// 6. Document Fragment Node is 11. 
-
+// 5. Document Type Node is 10.
+// 6. Document Fragment Node is 11.
 
 // Node Relationship
 // 1. Parent
@@ -5574,19 +5624,18 @@
 // console.log(document.getElementById("geek"))
 // // <p id="geek">Hello Tanvir</p>
 // console.dir(document.getElementById("geek"))
-// // p Object jekhane onk property ase 
+// // p Object jekhane onk property ase
 
-// // tar mane jekono element access method object return kore . tai setake kono variable e hold kora jay 
+// // tar mane jekono element access method object return kore . tai setake kono variable e hold kora jay
 // var p = document.getElementById("geek")
 // console.log(p) // <p id="geek">Hello Tanvir</p>
 // console.dir(p) // p Object
 
-
 // getElementsByTagName Method (v.6)
-// The method getElementsByTagName("Tag_Name") returns a live node list meaning that it updates itself with the DOM tree automatically, so modification of the DOM tree will be reflected in the returned collection. The returned Node List or Collection of Nodes can be accessed by index numbers starting with index 0. 
-// upore getElementById te kono nodeList or Collection return kore na, oikhane single object return kore . karon getElementById diye single element ke access kora jay . kintu getElementsByTagName er khetre same tag onkgula thakte pare . sob gulake list akare or collection akare return kore, like an array . tai index number diyeo access kora jay. 
+// The method getElementsByTagName("Tag_Name") returns a live node list meaning that it updates itself with the DOM tree automatically, so modification of the DOM tree will be reflected in the returned collection. The returned Node List or Collection of Nodes can be accessed by index numbers starting with index 0.
+// upore getElementById te kono nodeList or Collection return kore na, oikhane single object return kore . karon getElementById diye single element ke access kora jay . kintu getElementsByTagName er khetre same tag onkgula thakte pare . sob gulake list akare or collection akare return kore, like an array . tai index number diyeo access kora jay.
 // This method accepts a string indicating the type of elements that be retrieved, a special value "*" returns all elements in the document
-// document.getElementsByTagName("p") // eta return korbe ekta list . tai etake kono variable e store korte hobe. 
+// document.getElementsByTagName("p") // eta return korbe ekta list . tai etake kono variable e store korte hobe.
 // const p = document.getElementsByTagName("p") // p variable er moddhe list ta aisha porse
 // console.log(p) // HTMLCollection(2) [0] = p#geek [1] = p#find
 // console.log(p[0]) // <p id="geek">Hello Tanvir</p>
@@ -5602,10 +5651,10 @@
 
 // You can use the length property of the NodeList object to determine the number of elements with the specified tag name, then you can loop through all elements and extract the info you want
 
-// const allElementOfDocument = document.getElementsByTagName("*") // HTMLCollection(14) - all element return 
+// const allElementOfDocument = document.getElementsByTagName("*") // HTMLCollection(14) - all element return
 // console.log(allElementOfDocument.length) // 14 (total 13 element ase pura web page e)
 
-// const allElementOfBody = document.body.getElementsByTagName("*")// document er vitor body object deya ase . kintu onno tag directly deya nei . tai body chara onno kono tag shorashori access kora jay na 
+// const allElementOfBody = document.body.getElementsByTagName("*")// document er vitor body object deya ase . kintu onno tag directly deya nei . tai body chara onno kono tag shorashori access kora jay na
 // console.log(allElementOfBody) // return all element in body
 
 // getElementsByTagName More Specific Method (v.7)
@@ -5616,7 +5665,7 @@
 
 // var result = document.getElementById("geek").getElementsByTagName("span")
 // console.log(result)
-// // span == result 
+// // span == result
 
 // var allGeekElement = document.getElementById("geek").getElementsByTagName("*")
 // console.log(allGeekElement) // ekhane block level element thakle ashbe na . karon * use kore element select korte chaile only inline element select hobe
@@ -5635,7 +5684,7 @@
 // when one element two class...
 // <p class="card wrapper container">hello world</p>
 // const p = document.getElementsByClassName("card wrapper")
-// console.log(p) // ekhane amon element er collection return hobe jar vitore card and wrapper ai 2 ta class eksathe thakbe .  
+// console.log(p) // ekhane amon element er collection return hobe jar vitore card and wrapper ai 2 ta class eksathe thakbe .
 
 // const para = document.getElementsByClassName('para')
 // for(let i = 0; i<para.length; i++){
@@ -5656,7 +5705,7 @@
 // const hello = document.querySelector('#geek, .hello')
 // console.log(hello) // jodi webpage er age hello class pay pore geek id pay tahole hello class er element return hobe . jodi geek age pay tahole geek element return hobe . jodi geek na pay, kintu hello pay tahole hello return hobe . jodi hello na pay kintu geek pay tahole geek return hobe
 
-// Notes : id use korle same result pabo getElementById use korle. 
+// Notes : id use korle same result pabo getElementById use korle.
 
 // querySelectorAll
 // The method querySelectorAll() returns a static (not live) NodeList representing a list of the document's elements that match the specified group of selectors.
@@ -5676,7 +5725,7 @@
 // console.log(result) // this is also return nodeList // NodeList(2) [h2#geek, p#geek]
 
 // // Class Selector
-// document.querySelectorAll(".geek") // geek class er sob element eksathe return hobe NodeList akare 
+// document.querySelectorAll(".geek") // geek class er sob element eksathe return hobe NodeList akare
 // document.querySelectorAll("p.myClass") // p tag er vitor joto gula myClass nam e class ase sob element ke eksathe return kore NodeList akare
 // const p = document.querySelectorAll("p > span.myclass") // p tag er vitore span tag er moddhe jegular class myclass deya sob gula nodelist akare return
 
@@ -5722,7 +5771,6 @@
 // console.log(item)
 // })
 
-
 // Web Page Properties (v.19)
 // console.dir(document)
 
@@ -5750,8 +5798,7 @@
 // ****Important Notes****
 // prottekta node er vitor uporer 10 ta object thake . segula diye node er vibinno kaj kora hoy . jemon nodeName diye sei node er name ber kora hoy . nodeValue diye sei node er nijossho kono value thakle seta ber kora hoy . nodeType diye sei node er type ber kora hoy . textContent diye sei node er vitor sob text ber kora hoy . parentNode diye sei node er parent node ber kora hoy . childNodes diye sei node er vitor joto gula node ase sob ber kora hoy . firstChild diye sei node er vitor first child node ber kora hoy...and so on.
 
-
-// 1. nodeName 
+// 1. nodeName
 // The nodeName read-only property returns the name of the current node as a string
 // Example :
 // const h2 = document.querySelector('h2')
@@ -5759,7 +5806,7 @@
 // console.log(h2.nodeName) // H2
 
 // all of nodeName
-// CDATASection ---- "#cdata-section" 
+// CDATASection ---- "#cdata-section"
 // Comment ---------- "#comment"
 // Document ---------- "#document"
 // DocumentFragment----- "#document-fragment"
@@ -5779,8 +5826,7 @@
 
 // console.log(document.nodeName) // #document
 
-
-// nodeValue 
+// nodeValue
 // The nodeValue property returns or sets the value of the current node
 // nodeValue return korar kaj o kore thake and kono value set korar kaj o kore thake
 
@@ -5793,13 +5839,13 @@
 // Element --------- null
 // NamedNodeMap ------- null
 // Entity ---------- null
-// EntityReference -------- null 
+// EntityReference -------- null
 // Notation ----------- null
 // ProcessingInstruction ---------- entire content excluding the target
 // Text --------- content of the text node
 
-// notes : amra maximum case e text node er  nodeValue niye kaj kore thaki . baki gula niye temon kaj hoy na 
-// amra kono element er text node er vitor nodeValue te gele sekhane sei element er text thake + amra chaile sei nodeValue te kono string or onno kichu set kore dite pari 
+// notes : amra maximum case e text node er  nodeValue niye kaj kore thaki . baki gula niye temon kaj hoy na
+// amra kono element er text node er vitor nodeValue te gele sekhane sei element er text thake + amra chaile sei nodeValue te kono string or onno kichu set kore dite pari
 // jemon....
 // const h2 = document.querySelector('h2')
 // // return value show..
@@ -5809,23 +5855,22 @@
 
 // document.querySelector('h1').childNodes[0].nodeValue = 'Hiiiii'
 
-// Another Example : 
+// Another Example :
 // const list = document.querySelector('.list')
 // console.log(list.childNodes[0].nodeValue) // Tanvir
 // list.childNodes[0].nodeValue = 'Tanvir Ahmed'
 // console.log(list.childNodes[0].nodeValue) // Tanvir Ahmed
 
-
-// nodeType 
+// nodeType
 // 1. Element Node er type holo 1. tar mane jodi kono Element er type ber kora hoy tahole return value ashe 1 . jodi kono Node er return value 1 ashe tahole bujhte hobe seta Element Node.
 // 2. Text Node er type holo 3. tar mane jodi kono Text er type ber kora hoy tahole return value ashe 3 . jodi kono Node er return value 3 ashe tahole bujhte hobe seta Text Node.
 // 3. Comment Node er type holo 8. tar mane jodi kono Comment er type ber kora hoy tahole return value ashbe 8. jodi kono Node er return value 8 ashe tahole bujhte hobe seta Comment Node.
 // 4. Document Node er type holo 9. tar mane jodi document er type ber kora hoy tahole return value ashbe 9. jodi kono Node er return value 9 ashe tahole bujhte hobe seta Document Node.
-// 5. Document Type Node is 10. 
-// 6. Document Fragment Node is 11. 
+// 5. Document Type Node is 10.
+// 6. Document Fragment Node is 11.
 // 7. jekono attribute er nodeType holo 2.
 
-// Example of nodeType useCase : 
+// Example of nodeType useCase :
 // const h2 = document.querySelector('h2')
 // console.log(h2.nodeType) // 1
 // if(h2.nodeType === 1){
@@ -5836,8 +5881,7 @@
 
 // tar mane amra nodeType diye bujhte pari eta ki dhoroner node
 
-
-// nodeName, nodeValue and nodeType 
+// nodeName, nodeValue and nodeType
 
 // const h2 = document.querySelector('h2')
 
@@ -5851,25 +5895,23 @@
 
 // console.log(h2.firstChild.nodeName) // #text
 // console.log(h2.firstChild.nodeValue) // Hello
-// console.log(h2.firstChild.nodeType) // 3 
+// console.log(h2.firstChild.nodeType) // 3
 
 // // for comment node
-// console.log(h2.childNodes[1]) // comment node return 
+// console.log(h2.childNodes[1]) // comment node return
 
 // console.log(h2.lastChild) // comment node
 
-// console.dir(h2.firstChild.nextSibling.nodeName) // #comment  
+// console.dir(h2.firstChild.nextSibling.nodeName) // #comment
 // console.dir(h2.firstChild.nextSibling.nodeValue) // this is comment
-// console.dir(h2.firstChild.nextSibling.nodeType) // 8  
+// console.dir(h2.firstChild.nextSibling.nodeType) // 8
 
-
-// Example of change nodeValue 
+// Example of change nodeValue
 // const ul = document.querySelector('ul')
 // console.log(ul.childNodes) // NodeList(9) [text, li.list, text, li.list, text, li.list, text, li.list, text]
 // console.log(ul.lastChild.previousSibling.previousSibling.previousSibling.firstChild.nodeValue) // Maymuna
 // ul.lastChild.previousSibling.previousSibling.previousSibling.firstChild.nodeValue = 'Maymuna Ahmed'
 // console.log(ul.lastChild.previousSibling.previousSibling.previousSibling.firstChild.nodeValue) // Maymuna Ahmed
-
 
 // Property of Attribute Object (v.21)
 
@@ -5908,10 +5950,10 @@
 // console.log(list[1].attributes.length) // 1 (that is class='hello')
 
 // *********Important Notes**********
-// nodeName,nodeValue ai 2 ta property deprecated hoye gese . jekono somoy off hoye jete pare . jodio akhno choltese 
+// nodeName,nodeValue ai 2 ta property deprecated hoye gese . jekono somoy off hoye jete pare . jodio akhno choltese
 // nodeName er bodole name and nodeValue er bodole value property use korte hobe
 
-// Example : 
+// Example :
 // const list = document.querySelectorAll('.list')
 // for(let i = 0; i<list.length; i++){
 //   console.log(list[i].attributes[0].name) // class(4)
@@ -5920,21 +5962,20 @@
 // console.log(list[0].attributes.class.name) // class
 // console.log(list[0].attributes.class.value) // list
 
-
 // Difference between Node of an Element and Element Node (v.22)
-// ekhane bujhar bishoy muloto 2 ta 
-// 1. Node of an Element 
+// ekhane bujhar bishoy muloto 2 ta
+// 1. Node of an Element
 // 2. Element Node of an Element
 
-// 1. Node of an Element => 
-  // kono element er vitore jodi kono node thake seta Node of an Element . kintu kono Element er vitor arekta element thakle seta Node of an Element na . seta abar individual Element Node of an Element . only text node , comment node egulaii Node of an Element hoy 
+// 1. Node of an Element =>
+// kono element er vitore jodi kono node thake seta Node of an Element . kintu kono Element er vitor arekta element thakle seta Node of an Element na . seta abar individual Element Node of an Element . only text node , comment node egulaii Node of an Element hoy
 
-// 2. Element Node of an Element 
-  // jodi kono element er vitor kono element thake seta ke bole Element node of an Element 
+// 2. Element Node of an Element
+// jodi kono element er vitor kono element thake seta ke bole Element node of an Element
 
-
-// Example Code : 
-{/* <html>
+// Example Code :
+{
+  /* <html>
   <head>
     <title>Tree</title>
   </head>
@@ -5945,31 +5986,30 @@
     </h1>
     <p>Para</p>
   </body>
-</html> */}
+</html> */
+}
 
-// uporer html er code er dom tree structure holo :-> 
+// uporer html er code er dom tree structure holo :->
 
-// Document 
+// Document
 
-// html 
+// html
 
-// head - Enter or Space(text node) - body 
-  // in head element node -----
-    // Enter or Space(text node) - title - Enter or Space(text node)
-      // in title elment node ------
-        // Tree (text node)
-  // in body element node ------
-    // Enter or Space(text node) - h1 - Enter or Space(text node) - p - Enter or Space(text node)
-      // in h1 element node
-        // Enter or Space(text node) - comment node - Enter or Space(text node) - text node  - Enter or Space(text node)
-      // in p element node
-        // text node (para)
+// head - Enter or Space(text node) - body
+// in head element node -----
+// Enter or Space(text node) - title - Enter or Space(text node)
+// in title elment node ------
+// Tree (text node)
+// in body element node ------
+// Enter or Space(text node) - h1 - Enter or Space(text node) - p - Enter or Space(text node)
+// in h1 element node
+// Enter or Space(text node) - comment node - Enter or Space(text node) - text node  - Enter or Space(text node)
+// in p element node
+// text node (para)
 // and so on....
 
-
-
 // Dom Traversal (v.23)
-// manually total 12 upaye dom traversal hoy 
+// manually total 12 upaye dom traversal hoy
 // 1. parentNode ------------------(element + node 2 tai dhorbe)
 // 2. parentElement ------------------(sudhu element dhorbe)
 // 3. childNodes ------------------(element + node 2 tai dhorbe)
@@ -5983,24 +6023,23 @@
 // 11. nextSibling ------------------(element + node 2 tai dhorbe)
 // 12. nextElementSibling ------------------(sudhu element dhorbe)
 
-
 // Theory of 12 Dom Traversal way
 
 // 1. parentNode - Returns Parent Node
 
 // 2. parentElement - Returns parent element node
 
-// 3. childNodes - Returns collection of an element's child nodes (including text and comment nodes) --- jodi kono element er childNodes ber kora hoy tahole sei element er vitor element node + text node + comment node etc sob dhoroner node list akare return hobe 
+// 3. childNodes - Returns collection of an element's child nodes (including text and comment nodes) --- jodi kono element er childNodes ber kora hoy tahole sei element er vitor element node + text node + comment node etc sob dhoroner node list akare return hobe
 
-// 4. children - Returns a collection of an elements child element node(do not include text and comment nodes) --- jodi kono element er children ber kora hoy tahole sei element er vitor sudhu element node, node list akare return hobe . text node, comment node ei type er node return hoy na 
+// 4. children - Returns a collection of an elements child element node(do not include text and comment nodes) --- jodi kono element er children ber kora hoy tahole sei element er vitor sudhu element node, node list akare return hobe . text node, comment node ei type er node return hoy na
 
 // 5. firstChild - Returns first child node of an element (it can be text or comment node)
 
-// 6. firstElementChild - Returns first child element node of an element 
+// 6. firstElementChild - Returns first child element node of an element
 
 // 7. lastChild - Returns last child node of an element (it can be text or comment node)
 
-// 8. lastElementChild - Returns last child element node of an element 
+// 8. lastElementChild - Returns last child element node of an element
 
 // 9. previousSibling - Returns previous node of same level (it can be text or comment node)
 
@@ -6009,8 +6048,6 @@
 // 11. nextSibling - Returns next node of same level (it can be text or comment node)
 
 // 12. nextElementSibling - Returns next element of same level
-
-
 
 // Example of 12 Dom Traversal way
 
@@ -6052,39 +6089,34 @@
 // console.log(li.nextSibling.nextSibling.nextSibling.nextSibling.nextElementSibling) // third li node
 // console.log(li.nextSibling.nextSibling.nextSibling.nextSibling.nextElementSibling.nextElementSibling) // fourth li node
 // console.log(li.nextSibling.nextSibling.nextSibling.nextSibling.nextElementSibling.nextElementSibling.nextElementSibling) // null (tarpor r kono element nai )
-// console.log(li.nextSibling.nextSibling.nextSibling.nextSibling.nextElementSibling.nextElementSibling.nextSibling) // text node 
-// console.log(li.nextSibling.nextSibling.nextSibling.nextSibling.nextElementSibling.nextElementSibling.nextSibling.nextSibling) // null 
+// console.log(li.nextSibling.nextSibling.nextSibling.nextSibling.nextElementSibling.nextElementSibling.nextSibling) // text node
+// console.log(li.nextSibling.nextSibling.nextSibling.nextSibling.nextElementSibling.nextElementSibling.nextSibling.nextSibling) // null
 
-
-
-
-// parentNode and parentElement (v.24) 
-// parentElement only tar parent e jodi kono element thake setaii return kore kintu parentNode element + aro sob node return kore jemon text node , document node , comment node etc 
-// Example : 
+// parentNode and parentElement (v.24)
+// parentElement only tar parent e jodi kono element thake setaii return kore kintu parentNode element + aro sob node return kore jemon text node , document node , comment node etc
+// Example :
 // console.dir(document.body.parentElement.parentElement) // null
 // console.dir(document.body.parentElement.parentNode) // document object returned
-// upore html er parentElement ber korte gele null return ashe . karon html er upor r kono element nai . kintu html er upor node ase .seta holo document node . jehetu document node kono html element na tai html.parentElement korle null value return hoy and html.parentNode dile document node return hoy 
+// upore html er parentElement ber korte gele null return ashe . karon html er upor r kono element nai . kintu html er upor node ase .seta holo document node . jehetu document node kono html element na tai html.parentElement korle null value return hoy and html.parentNode dile document node return hoy
 
 // kintu...
 // element o jehetu ekta node tai parentNode diye jodi parent e kono element thake setao return kore . sudhu parthokko hocche parentElement diye only element return hoy kintu parentNode diye element node , text node , comment node , document node soho sob dhoroner node reutrn hoy
 
-
 // childNodes and children (v.25)
 
-// childNodes 
+// childNodes
 // The childNodes read-only property returns a live NodeList of child nodes of the given element where the first child node is assigned index 0. childNodes includes all child nodes, including non-element nodes like text , comment or others non-element nodes
 
 // White space inside elements is considered as text , and text is considered as nodes.
 // Any whitespace will create a text node , from a single space to multiple spaces, returns, tabs and so on.
 // You can use the length property of the NodeList object to determine the number of child nodes , then you can loop through all child nodes and extract the other info.
 
-
 // children
 // The children property returns collection of child elements of the given element where the first child is assigned index 0. children includes only element node (no whitespace, text node , comment node etc)
 
 // You can use the length property of the NodeList object to determine the number of child nodes , then you can loop through all child nodes and extract the other info.
 
-// example of children and childNodes 
+// example of children and childNodes
 // const ul = document.querySelector('ul')
 
 // console.log(ul.childNodes) // NodeList(11) [text, li.list, text, comment, text, li.list, text, li.list, text, li.list, text]
@@ -6098,26 +6130,22 @@
 //   console.log(ul.children[i])
 // }
 
-
-
 // Create Element Node
 // let newElement = document.createElement('h3')
 // console.log(newElement)
 
 // document object er vitor createElement nam e ekta function ase jeta ekta parameter recieve kore . jei parameter string e pass korte hoy and sei parameter obosshoi obosshoi kono html er valid tag hote hobe , jemon h1,h2,h3,p,a,span,img...etc . tarpor sei parameter niye createElement function ta sei parameter jei html tag er sathe match kore sei html tag ta create kore sei tag return kore . return korar somoy sei tag er moddhe kono node thake na . mane empty thake
 
-
 // Create Text Node
 
 // let newTextNode = document.createTextNode('Hello, This is Text Node!')
 // console.dir(newTextNode)
-// console.log(newTextNode) 
+// console.log(newTextNode)
 // console.log(newTextNode.nodeName)
 // console.log(newTextNode.nodeValue)
 // console.log(newTextNode.length)
 
 // document object er vitor createTextNode nam e ekta function ase jeta ekta parameter recieve kore . jei parameter string e pass kora hoy. tarpor sei parameter niye createTextNode function ta ekta textNode create kore return kore
-
 
 // Create Comment Node
 
@@ -6130,31 +6158,29 @@
 
 // ********________**********
 // akhn porjonto ja ja sikhlam...
-// 1. Element select 
-// 2. Node Object 
+// 1. Element select
+// 2. Node Object
 // 3. Attribute Object
 // 4. Dom Traversal
-// 5. create node 
-
-
+// 5. create node
 
 // Append Element Node
 
-// some rules : 
+// some rules :
 
 // 1. The appendChild(Child_Node) method is used to add a node to the end of the list of children of a specified parent node. (jei parent node er vitor ami append korbo setar ekdom last e amr element append hobe)
 
 // 2. If the given child is a reference to an existing node in the docuent, appendChild() moves it from its current position to the new position. This method returns the new child node. (jodi html file er existing kono element ke select kore setakeii onno kothau append korte chai tahole obosshoi seta move hoye ashbe notun jaygay . purano jayga theke seta muche jabe )
 
-// 3. appendChild method use kore ami element ke append korte parbo + comment ke append korte parbo + text ke append korte parbo + document fragment ke append korte parbo 
+// 3. appendChild method use kore ami element ke append korte parbo + comment ke append korte parbo + text ke append korte parbo + document fragment ke append korte parbo
 
-// syntax : 
+// syntax :
 // 1. appendChild(child_node)
 // 2. parentNode.appendChild(child_node)
-// Example : 
+// Example :
 // const h2 = document.querySelector('h2')
 // const ul = document.querySelector('ul')
-// h2.appendChild(ul) // h2 tag er vitor last e ul tag er sob kichu append kora hoise + ul age jei jaygay chilo sekhane r nei 
+// h2.appendChild(ul) // h2 tag er vitor last e ul tag er sob kichu append kora hoise + ul age jei jaygay chilo sekhane r nei
 // ul.appendChild(h2) // ul tag er last e h2 tag aisha porse move hoye..
 
 // existing element ke append kore move kore niye asha onno ekta element er vitor...
@@ -6163,15 +6189,14 @@
 // new element create kore tarpor kothau append kora...
 // const newElement = document.createElement('h3')
 // const ul = document.querySelector('ul')
-// ul.appendChild(newElement) // ul er last e ekta h3 element add hoye gese jar kono childNodes nei 
+// ul.appendChild(newElement) // ul er last e ekta h3 element add hoye gese jar kono childNodes nei
 // console.dir(newElement.nodeValue)
 // const newTextNode = document.createTextNode('Hello World!!!')
 // newElement.appendChild(newTextNode) // akhn ul er last e h3 er moddhe Hello World!!! text aisha porse
 
-
 // Append Text Node
 
-// Create a new Text Node and append in old element 
+// Create a new Text Node and append in old element
 // const h1 = document.querySelector('h1')
 // const newTextNode = document.createTextNode('I am H1')
 // h1.appendChild(newTextNode)
@@ -6203,13 +6228,13 @@
 // document.querySelector('ul > h1').appendChild(newTextNode)
 // ul.appendChild(newCommentNode)
 
-// Document Fragment 
+// Document Fragment
 // amra manually ekta ekta kore element create kore tarpor append kori , then modify kori ekta ekta kore . sob gula kori main parent er upor , or main html file er upor . kintu amra chaile sob kichu eksathe ekta alada jaygay korte pari , then sob sesh hole eksathe oita append korte pari . tar jonno use hoy Document Fragment
 
-// Document Fragment jokhon main html e append kora hoy tokhon automatically fragment empty hoye jay . 
-// Document Fragment ekdom main html flow er baire create hoy 
+// Document Fragment jokhon main html e append kora hoy tokhon automatically fragment empty hoye jay .
+// Document Fragment ekdom main html flow er baire create hoy
 
-// A Mini Project 
+// A Mini Project
 // Project statement : h2 and p tag create kore tate text node add kore then eta ekta fragment er moddhe append korte hobe . then oi fragment final html e append kore dibe
 // const h2 = document.createElement('h2')
 // const p = document.createElement('p')
@@ -6228,7 +6253,7 @@
 // document.querySelector('ul').appendChild(df)
 // console.log(df)
 
-// Another Project 
+// Another Project
 // const ul = document.querySelector('ul')
 // const newElement = document.createElement('h3')
 // const newTextNode = document.createTextNode('Hello This is Me')
@@ -6242,11 +6267,10 @@
 // df.appendChild(newElement)
 // ul.appendChild(df)
 
-
 // Normalize() method
 
-// jodi onk gula node ke eksathe merge kore ekta node banaite chai seikhetre normalize() method use kora hoy 
-// pashapashi thaka node jodi same categoryr node hoy tahole seta normalize hoy . tar mane holo Adjacent node gulaii normalize hobe 
+// jodi onk gula node ke eksathe merge kore ekta node banaite chai seikhetre normalize() method use kora hoy
+// pashapashi thaka node jodi same categoryr node hoy tahole seta normalize hoy . tar mane holo Adjacent node gulaii normalize hobe
 
 // A Project using Normalize method
 
@@ -6274,14 +6298,14 @@
 
 // Notes : upore 3 ta alada alada text node create kore append kora hoise . jokhon p er childNodes khuja hoy tokhon 3 ta text node ashe . jodi ami sob gula text chai tahole amk loop chaliye sob gula text nite hoito . kintu ami jokhon normalize method use kore ekta text node banailam tokhon seta traverse kora onk easy hoye gese..
 
-// Again project using Normalize method 
+// Again project using Normalize method
 // const h2 = document.querySelector('h2')
 
 // console.log(h2.childNodes)
 
 // console.log(h2.childNodes)
 
-// Again Test 
+// Again Test
 // const p = document.querySelector('p')
 
 // const text1 = document.createTextNode('Tanvir')
@@ -6298,10 +6322,10 @@
 // }
 // console.log(p)
 // // <p>
-//   // Tanvir 
+//   // Tanvir
 //   // Ahmed
 //   // <!--This is Comment-->
-//   // Sadia 
+//   // Sadia
 //   // Ahmed
 // // </p>
 
@@ -6335,26 +6359,25 @@
 // df.appendChild(h1)
 // document.querySelector('ul').appendChild(df)
 
-
-// insertBefore() Method 
-// The insertBefore() method is used to insert a node before the reference node as a child of a specified parent node. 
+// insertBefore() Method
+// The insertBefore() method is used to insert a node before the reference node as a child of a specified parent node.
 // if the given child is a reference to an existing node in the document, insertBefore() moves it from its current position to the new position.
 // if referenceNode is null, the new Node is inserted at the end of the list of child nodes.
 
-// Syntax : 
+// Syntax :
 // parentNode.insertBefore(newNode, referenceNode)
-// parentNode = jei jaygay kono node ante chan sei jayga ta jei parent node er under e seta 
+// parentNode = jei jaygay kono node ante chan sei jayga ta jei parent node er under e seta
 // newNode = jei node ta insert korte chan seta (hote pare new created node or hote pare existing kono node or clone node)
 // referenceNode = jei node er thik age(before) newNode boshaite chan seta
 
-// Example : 
+// Example :
 // const parentNode = document.querySelector('body')
 // const newNode = document.querySelector('h2')
 // const referenceNode = document.querySelector('button')
 
 // parentNode.insertBefore(newNode,referenceNode) // h2 tag aisha button er thik age boisha gese move hoy, and h2 age jekhane chilo sekhane nei . seta move hoye aisha porse
 
-// insert new node Example : 
+// insert new node Example :
 // const newElementNode = document.createElement('h2')
 // newElementNode.textContent = 'Hello World'
 // const parentNode = document.querySelector('body')
@@ -6362,7 +6385,7 @@
 
 // parentNode.insertBefore(newElementNode,referenceNode) // success
 
-// Example : 
+// Example :
 // const newNode = document.createElement('h1')
 // const newTextNode = document.createTextNode('Hello, I am Tanvir')
 // const df = document.createDocumentFragment()
@@ -6374,11 +6397,11 @@
 
 // ul.insertBefore(df,ref) // successfully inserted..
 
-// Notes for insertBefore method 
-// jodi kono specific element er thik age kono element boshaite chai tahole insertBefore method use kora hoy . jodi existing kono node dhore insert kora hoy tahole move kore chole ashe oi jayga chere . 
-// jodi referenceNode na dei tahole parentNode er ekdom last e giya add hoye jay 
+// Notes for insertBefore method
+// jodi kono specific element er thik age kono element boshaite chai tahole insertBefore method use kora hoy . jodi existing kono node dhore insert kora hoy tahole move kore chole ashe oi jayga chere .
+// jodi referenceNode na dei tahole parentNode er ekdom last e giya add hoye jay
 
-// without reference Node  Example : 
+// without reference Node  Example :
 // const newElementNode = document.createElement('h2')
 // newElementNode.textContent = 'Hello World'
 // const parentNode = document.querySelector('body')
@@ -6386,7 +6409,7 @@
 
 // parentNode.insertBefore(newElementNode,null) // insert last of body element
 
-// insertBefore() method with textNode 
+// insertBefore() method with textNode
 // const textNode = document.querySelector('h1').childNodes[0]
 // const parentNode = document.querySelector('p')
 // const refNode = null
@@ -6399,7 +6422,7 @@
 // const refNode = document.querySelector('ul')
 // parentNode.insertBefore(newCommentNode,refNode)
 
-// insertBefore with Document Fragment 
+// insertBefore with Document Fragment
 // const df = document.createDocumentFragment()
 // const h1 = document.createElement('h1')
 // const h2 = document.createElement('h2')
@@ -6420,25 +6443,24 @@
 // df.appendChild(h5)
 // df.appendChild(h6)
 // document.querySelector('ul').insertBefore(df,document.querySelectorAll('.list')[1])
-// ul er vitor onk gula list er moddhe 1 no. index e jei li ase tar age insert kora hoise df ke 
-
+// ul er vitor onk gula list er moddhe 1 no. index e jei li ase tar age insert kora hoise df ke
 
 // insertAdjacentElement() method (v.42)
 // kono ekta element er age and pore , element er vitor childNodes er age and pore kono element insert korar jonno ai method use kora hoy
 
 // targetElement.insertAdjacentElement('position',element)
-// targetElement = jei element er ashe pashe ami kono element insert korte chai seta 
-// element = jei element ami insert korte chai seta . existing kono element hole seta move hoye ashbe 
+// targetElement = jei element er ashe pashe ami kono element insert korte chai seta
+// element = jei element ami insert korte chai seta . existing kono element hole seta move hoye ashbe
 // 'position' = 'beforebegin' | 'afterbegin' | 'beforeend' | afterend'
 // beforebegin = (this)<P>hello</p>
-// afterbegin = <p>(this)hello</p> 
+// afterbegin = <p>(this)hello</p>
 // beforeend = <P>hello(this)</p>
 // afterend = <P>hello</p>(this)
 
-// Example : 
+// Example :
 // document.querySelector('ul').insertAdjacentElement('afterbegin',document.querySelector('h1'))
 
-// Another example : 
+// Another example :
 // const parentNode = document.querySelector('ul')
 // const element = document.querySelector('h1')
 // parentNode.insertAdjacentElement('afterbegin',element)
@@ -6446,40 +6468,37 @@
 // parentNode.insertAdjacentElement('afterbegin',element)
 // parentNode.insertAdjacentElement('afterend',element)
 
-// insertAdjacentHTML mehtod 
+// insertAdjacentHTML mehtod
 // const parentNode = document.querySelector('ul')
 // const element = document.querySelector('h1')
 // parentNode.insertAdjacentElement('afterbegin',element)
 // parentNode.insertAdjacentElement('beforebegin',element)
 // parentNode.insertAdjacentElement('afterbegin',element)
 // parentNode.insertAdjacentElement('afterend',element)
-
 
 // insertAdjacentHTML method (v.43)
 // The insertAdjacentHTML() method is used to insert a text as HTML (parses the specified text as HTML or XML) into a specified position.
-// Syntax : 
+// Syntax :
 // element.insertAdjacentHTML('position',text);
-// where positions are: 
+// where positions are:
 // beforebegin : before the element itself
 // afterbegin : just inside the element, before its first child
 // beforeend : just inside the element, after its last child
 // afterend : After the element itself.
 
 // text -- The string to be parsed as HTML or XML and inserted into the tree.
-// It is recommended you not use insertAdjacentHTML when inserting plain text instead, use the node.textContent property 
+// It is recommended you not use insertAdjacentHTML when inserting plain text instead, use the node.textContent property
 
-// Example : 
+// Example :
 // const li = document.querySelector('.list')
 // const myHtml = "<p>hello worldss</p>"
 // li.insertAdjacentHTML('afterbegin',myHtml)
 
-
-
 // insertAdjacentText method (v.44)
 // insertAdjacentText method kono text node ke kothau replace kore insertAdjacentElement and insertAdjacentHTML er motoiii
-// Syntax : 
+// Syntax :
 // element.insertAdjacentText('position',text);
-// where positions are: 
+// where positions are:
 // beforebegin : before the element itself
 // afterbegin : just inside the element, before its first child
 // beforeend : just inside the element, after its last child
@@ -6488,16 +6507,15 @@
 // text -- The text which is about to insert.
 // The beforebegin and afterend positions work only if the node is in a tree and has an element
 
-// Example : 
+// Example :
 // const li = document.querySelector('li')
 // const text = "Hellosss"
 // li.insertAdjacentText('afterend',text)
 
-
-// innerHTML 
-// kono element er vitor joto html tag ase + text comment jai ase sob eksathe sei element er innerHTML 
-// jemon ul tag re select kore jodi tar innertHTML ber korte chai tahole ul er vitor joto li ase + text node + comment node sob eksathe return hobe 
-// amra chaile innerHTML diye html + text node eksathe set korte pari 
+// innerHTML
+// kono element er vitor joto html tag ase + text comment jai ase sob eksathe sei element er innerHTML
+// jemon ul tag re select kore jodi tar innertHTML ber korte chai tahole ul er vitor joto li ase + text node + comment node sob eksathe return hobe
+// amra chaile innerHTML diye html + text node eksathe set korte pari
 
 // MINI project with innertHTML
 // const ul = document.querySelector('ul')
@@ -6510,39 +6528,41 @@
 // <li>Humaira Ahmed</li>
 // `
 // btn.addEventListener('click',()=>{
-//   ul.innerHTML += innerHtml 
+//   ul.innerHTML += innerHtml
 // })
-
 
 // outerHTML
 
 // Difference Between innerHTML and outerHTML
-{/* <div>
+{
+  /* <div>
   <ul>
     <li>Tanvir</li>
     <li>Sadia</li>
     <li>Maymuna</li>
     <li>Ayesha</li>
   </ul>
-</div> */}
+</div> */
+}
 // uporer code e ul tag re jokhon innerHTML er sathe empty set kora deya hoisilo tokhon result : <div> <ul> </ul> </div> erokom hoisilo . kintu jokhon ul tag ke outerHTML er sathe empty set kora hoisilo tokhon result : <div> </div>
 
-// tar mane innerHTML only inner content gula reii dhore and change kore set kore . kintu outerHTML outer content + inner content sob gular uporeii kaj kore 
+// tar mane innerHTML only inner content gula reii dhore and change kore set kore . kintu outerHTML outer content + inner content sob gular uporeii kaj kore
 
 // const ul = document.querySelector('ul')
 // ul.innerHTML = "<br /><h1>Hello world!!!</h1>"
-// OUTPUT : 
-{/* <ul>
+// OUTPUT :
+{
+  /* <ul>
   <br>
   <h1>Hello world!!!</h1>
-</ul> */}
+</ul> */
+}
 
 // ul.outerHTML = "<h1>Hello World!!!!!</h1>"
-// OUTPUT : 
+// OUTPUT :
 // <h1>Hello World!!!</h1>
 
-
-// innerText 
+// innerText
 // eta diye only text add or remove or modify kora hoy . tag or element use kora jay na . jodi innerHTML or outerHTML er moto html tag use korte jai tahole seta string hishebe text node create hobe
 
 // const h1 = document.querySelector('h1')
@@ -6554,24 +6574,22 @@
 // Maymuna
 // Ayesha
 
-
-// write and writeln method 
-
+// write and writeln method
 
 // Copy Node (v.49)
- 
-// Some Rules : 
+
+// Some Rules :
 // 1. The cloneNode(deep) method is used to copy the Node. It creates a copy of node including all attributes and their values and returns the clone.
-// 2. The method takes a single Boolean argument, indicating whether the copy should all children of the node or just the element itself. 
+// 2. The method takes a single Boolean argument, indicating whether the copy should all children of the node or just the element itself.
 // 3. The Duplicate node returned by cloneNode(deep) is not part of the document until it is added to another node that is part of the document using appendChild() or a similar method. It also has no parent until it is appended to another node.
 // 4. If the original node has an ID and the clone is to be placed in the same document, the ID of the clone should be modified to be unique.
 // 5. Name attributes may need to be modified also, depending on whether duplicate names are expected.
 // 6. cloneNode(false) will copy only the element, attributes and their values
 // 7. cloneNode(true) will copy entire element with child as well.
 
-// Syntax : 
-// var duplicateNode = targetNode.cloneNode(false); 
-// var duplicateNode = targetNode.cloneNode(true); 
+// Syntax :
+// var duplicateNode = targetNode.cloneNode(false);
+// var duplicateNode = targetNode.cloneNode(true);
 
 // const ul = document.querySelector('ul')
 // // const duplicateNode = ul.cloneNode(false)
@@ -6579,8 +6597,8 @@
 // const duplicateNode = ul.cloneNode(true)
 // console.log(duplicateNode) // <ul> <li>Tanvir</li> <li>.... </ul>
 
-// Delete Node 
-// syntax : 
+// Delete Node
+// syntax :
 // parentNode.removeChild(targetNode)
 
 // const parentNode = document.querySelector('ul')
@@ -6608,13 +6626,13 @@
 // document.querySelector('ul').insertBefore(h,document.querySelector('li'))
 // document.querySelector('ul').insertAdjacentElement('afterbegin',h)
 
-// Replace Node 
-// Rules : 
+// Replace Node
+// Rules :
 // 1. The replaceChild(newChild, oldChild) method is used to replace a node with new node.
 // 2. The new node could be an existing node in the document, or you can create a new node.
 // 3. It will destroy the contents of nodes that are replaced
 // 4. it returns the replaced node(oldChild)
-// Syntax : 
+// Syntax :
 // var replacedNode = parentNode.replaceChild(newChild,oldChild)
 // newChild is the new node to replace oldChild. If it already exists in the DOM, it is first removed.
 // oldChild is the existing child to be replaced
@@ -6626,7 +6644,7 @@
 // const oldChild = document.querySelector('#item2')
 // const newChild = document.createElement('h4')
 // newChild.textContent = 'Hello H4'
-// const replacedNode = parentNode.replaceChild(newChild,oldChild) // replace successfully korar por oldChild ke return kore dey . eta replacedNode er moddhe store kore rakhlam . chaile pore amra abar kothau use korte parbo 
+// const replacedNode = parentNode.replaceChild(newChild,oldChild) // replace successfully korar por oldChild ke return kore dey . eta replacedNode er moddhe store kore rakhlam . chaile pore amra abar kothau use korte parbo
 // console.log(replacedNode)
 
 // Example : (Replaceing with existing Node)
@@ -6634,24 +6652,21 @@
 // const oldChild = document.querySelector('#item2')
 // const newChild = document.querySelector('h2')
 // const replacedNode = parentNode.replaceChild(newChild,oldChild)
-// // h2 tag jekhane chilo sekhan theke move hoye ul er moddhe item2 er moddhe boshe gese + item2 element vanish hoye gese . 
+// // h2 tag jekhane chilo sekhan theke move hoye ul er moddhe item2 er moddhe boshe gese + item2 element vanish hoye gese .
 
+// Modifying Text Nodes
 
-
-// Modifying Text Nodes 
-
-// Properties : 
+// Properties :
 // 1. Data
 // 2. Length
 
-// Methods : 
+// Methods :
 // 1. appendData(string)
 // 2. deleteData(start, length)
 // 3. insertData(start, string)
 // 4. replaceData(start, length, string)
 // 5. splitText(start)
 // 6. substringData(start, length)
-
 
 // Length (text node length property) (v.52)
 // const newTextNode = document.createTextNode('Hello World!')
@@ -6660,7 +6675,6 @@
 // // Or Existing textNode length
 // const h1 = document.querySelector('h1')
 // console.log(h1.childNodes[0].length) // 12 (h1 er childNodes[0] er moddhe textNode ase and setar length 12)
-
 
 // Modifying Text Nodes Data Property (v.53)
 
@@ -6681,13 +6695,12 @@
 // const h1 = document.querySelector('h1')
 // // get data
 // console.log(h1.childNodes[0].data) // Hello World!
-// // set data 
+// // set data
 // h1.childNodes[0].data = 'Hello Tanvir Ahmed'
 // console.log(h1.childNodes[0].data) // Hello Tanvir Ahmed
 
-
-// Append Data in Text Node 
-// kono text node er last e onno kono new text add korar jonno use hoy appendData method 
+// Append Data in Text Node
+// kono text node er last e onno kono new text add korar jonno use hoy appendData method
 // eta ekdom similar appendChild er moto
 
 // const newTextNode = document.createTextNode('Hello ')
@@ -6705,11 +6718,10 @@
 // h1.childNodes[0].appendData(" My name is Tanvir")
 // console.log(h1) // <h1 id="geek" class="first second">Hello World! My name is Tanvir</h1>
 
-
 // Delete Data in Text Node (v.55)
-// This method is used to delete or remove text content from a text node and comment node. It deletes specified length of characters starting from index defined in start. 
+// This method is used to delete or remove text content from a text node and comment node. It deletes specified length of characters starting from index defined in start.
 
-// Syntax : 
+// Syntax :
 // textNode.deleteData(start,length)
 
 // const newTextNode = document.createTextNode('Hello World!')
@@ -6729,7 +6741,7 @@
 
 // Replace data in Text Node (v.57)
 
-// Syntax : 
+// Syntax :
 // textNode.replaceData(start,length,string)
 // const textNode = document.createTextNode('Hello World')
 // textNode.replaceData(0,5,'Hi')
@@ -6738,7 +6750,7 @@
 // document.querySelector('h1').childNodes[0].replaceData(1,3,'Hello world')
 
 // Split Text in Text Node (v.58)
-// ekta text node ke 2 or tar theke beshi text node e convart korar jonno ai method use hoy 
+// ekta text node ke 2 or tar theke beshi text node e convart korar jonno ai method use hoy
 
 // const h1 = document.querySelector('h1')
 // console.log(h1.childNodes) // NodeList [text]
@@ -6747,16 +6759,15 @@
 // h1.childNodes[0].splitText(2) // splitText(2) mane holo textNode er 2 number index theke vag kore deya hok . jar jonno first node is "He" and second node is llo World!
 // console.log(h1.childNodes) // NodeList(2) [text, text]
 
-
 // SubstringData Method (v.59)
-// kono text node er vitor substring niye seta ke return kore dey 
-// Syntax : 
+// kono text node er vitor substring niye seta ke return kore dey
+// Syntax :
 // TextNode.substringData(2,5)
 
 // console.log(document.querySelector('h1').childNodes[0].substringData(2,6)) // llo wo
 
 // const newTextNode = document.createTextNode('Hello World')
-// console.log(newTextNode.substringData(1,4)) // ello 
+// console.log(newTextNode.substringData(1,4)) // ello
 
 // Difference Between HTML Attribute and DOM property (v.60)
 
@@ -6767,8 +6778,7 @@
 // console.log(document.querySelector('p').id ) // para
 // console.log(document.querySelector('p').className ) // classPara
 // console.log(document.querySelector('p').tanvir ) // ahmed
-// console.log(document.querySelector('p').title ) // null 
-
+// console.log(document.querySelector('p').title ) // null
 
 // Attributes Property (v.60)
 // const h2 = document.querySelector('h2')
@@ -6777,28 +6787,25 @@
 
 // prottekta element er vitor attributes nam e ekta object thake . sei object sei element er sob attribute hold kore rakhe . amra chaile sei attribute gula ke index number diye access korte pari , noyto attribute er name diyeo access korte pari . jemon h2..attributes.id , h2.attributes.class , h2.attributes.tanvir -- h2.attributes[0]
 
-
 // setAttribute and getAttribute Method (v.61)
 
-// setAttribute 
-// This method is used to set the value of an attribute on the specified element . If the attribute already exists, the value is updated; otherwise a new attribute is added with the specified name and value . We should not use this method to set inline style as it will overwrite other CSS Properties. 
+// setAttribute
+// This method is used to set the value of an attribute on the specified element . If the attribute already exists, the value is updated; otherwise a new attribute is added with the specified name and value . We should not use this method to set inline style as it will overwrite other CSS Properties.
 
-// Syntax : 
+// Syntax :
 // Element.setAttribute(name,value)
 // Element.setAttribute('style','font-size: 20px; color: green;')
 
 // const h2 = document.querySelector('h2')
 
-
 // h2.setAttribute('class','hiii') // override class value hello to hiii
 // h2.setAttribute('id','id1 id2 id3') // id te 3 ta id set hoye gese named id1,id2,id3
 // h2.setAttribute('class',' ')
 
-
 // getAttribute
 // The getAttribute() returns the value of a specified attribute on the element. If the given attribute does not exist, the value returned will either be null or " ".
 
-// Syntax : 
+// Syntax :
 // var attribute = element.getAttribute(attributeName)
 
 // const h2 = document.querySelector('h2')
@@ -6814,7 +6821,7 @@
 
 // removeAttribute
 // This method is used to remove an attribute from the specified element.
-// Syntax : 
+// Syntax :
 // element.removeAttribute(attrName)
 
 // const h2 = document.querySelector('h2')
@@ -6823,56 +6830,51 @@
 // h2.removeAttribute('class')
 // console.log(h2.attributes) // NamedNodeMap {0: tanvir, 1: id, tanvir: tanvir, id: id, length: 2}
 
-
 // hasAttribute
-// The hasAttribute() method returns a Boolean value indicating whether the specified element has the specified attribute or not. 
+// The hasAttribute() method returns a Boolean value indicating whether the specified element has the specified attribute or not.
 
 // const h2 = document.querySelector('h2')
 // console.log(h2.hasAttribute('class'))// true
 // console.log(h2.hasAttribute('title')) // false
 // console.log(h2.hasAttribute('id')) // true
 
-
 // HTML DOM Mapping (v.64)
-// Many object properties are simply direct mapping to the attributes of the HTML element. In other words there is a mapping directly between HTML Syntax and the DOM. 
+// Many object properties are simply direct mapping to the attributes of the HTML element. In other words there is a mapping directly between HTML Syntax and the DOM.
 
 // <p id="myId" title="hello">Paragraph</p>
-// Above title can be accessed in DOM by document.querySelector('p').title 
+// Above title can be accessed in DOM by document.querySelector('p').title
 
-// Example : 
+// Example :
 // <h2 class="hello" tanvir="ahmed" id="ids">Hello World</h2>
 // const h2 = document.querySelector('h2')
 // console.log(h2.className) // hello
 // console.log(h2.id) // ids
 
-// amra kivabe element er attribute ke evabe (h2.id) element er sathe access korte pari ?  
+// amra kivabe element er attribute ke evabe (h2.id) element er sathe access korte pari ?
 // er karon HTML ke DOM er sathe mapping kora hoise
 
-// mot kotha amra kichu reserve attribute , jemon id , class , title , src , alt ,href , placeholder etc egula property hishebe create hoy sei element er object e . kintu unknown kono attribute jemon tanvir, hasOf etc egula property hishebe set hoy na element er object e . tai amra sei element er sathe direct access korte pari na . kintu known attribute gula direct element er sathe access korte pari 
+// mot kotha amra kichu reserve attribute , jemon id , class , title , src , alt ,href , placeholder etc egula property hishebe create hoy sei element er object e . kintu unknown kono attribute jemon tanvir, hasOf etc egula property hishebe set hoy na element er object e . tai amra sei element er sathe direct access korte pari na . kintu known attribute gula direct element er sathe access korte pari
 
+// CSS DOM Mapping (v.65)
 
-// CSS DOM Mapping (v.65) 
-
-// <h1 id="geek" class="first second main" style="font-size: 30px;">Hello World!</h1> 
+// <h1 id="geek" class="first second main" style="font-size: 30px;">Hello World!</h1>
 // const h1 = document.querySelector('h1')
 // console.dir(h1.style.fontSize) // 30px
 
-// jekono element er object e style nam e ekta object ase , sei object er vitor css er sob property camelCase akare deya ase and tader value deya ase "" empty string . jokhon style attribute diye oi element e inline css likha hoy tokhon seta oi style object er vitor dhuke value change kore updated value deya hoy . kintu extarnal css dile amon hoy na 
-
+// jekono element er object e style nam e ekta object ase , sei object er vitor css er sob property camelCase akare deya ase and tader value deya ase "" empty string . jokhon style attribute diye oi element e inline css likha hoy tokhon seta oi style object er vitor dhuke value change kore updated value deya hoy . kintu extarnal css dile amon hoy na
 
 // CSSStyleDeclaration Object (v.66)
 // The CSSStyleDeclaration object represents a collection of CSS Property-value pairs. It is used in API (mane CSSStyleDeclaration Object css er sob property er collection key value pair akare diye thake jar key hobe css property er camelCase and value hobe empty string "")
 
-// ai declaration er use 2 ta api kore thake 
+// ai declaration er use 2 ta api kore thake
 // 1. HTMLElement.style (inline)
 // 2. windwo.getComputedStyle() (internal and external)
 
-// amra jokhon element.style likhi tokhon seta ashole CSSStyleDeclaration Object ke point kore thake 
-
+// amra jokhon element.style likhi tokhon seta ashole CSSStyleDeclaration Object ke point kore thake
 
 // Some Properties and methods of CSSStyleDeclaration Object
 
-// Properties : 
+// Properties :
 // 1. cssText
 // 2. length
 // 3. parentRule
@@ -6884,14 +6886,14 @@
 // 4. setProperty(property,value,priority)
 // 5. item(index)
 
-// Inline Style Manipulation 
+// Inline Style Manipulation
 // The most direct way to modify css value with javascript is through the style property that corresponding to the inline style sheet specification for a particular HTML element. To perform a manipulation of the CSS with Javascript DOM interface, you would access the style object of the element.
 
-// Style Property 
+// Style Property
 // The style property is used to get or set the inline style of an element. While getting, it returns a CSSStyleDeclaration object that contains a list of all styles properties for that element with values assigned for the attributes that are defined in the element's inline style attribute.
 // style property represents only the css declarations set in the element's inline style attribute, not those that come from style rules elsewhere, such as style rules in the <head> section, or external style sheets or browser default.
 
-// get 
+// get
 // Element.style.property
 // const get = document.querySelector('h1').style.fontSize
 // console.log(get) // 30px
@@ -6909,8 +6911,7 @@
 // console.log(cssObj) // CSSStyleDeclaration {accentColor: '', additiveSymbols: '', alignContent: '', alignItems: '', alignSelf: '',...............}
 
 // h2.style.fontSize = '100px' // h2 set her font size is 100px
-// h2.style.color = 'green' 
-
+// h2.style.color = 'green'
 
 // Dynamic Style Manipulation (v.67)
 
@@ -6921,7 +6922,6 @@
 // h2.id = 'main'
 
 // // evabe ager property gula override hoye jay . jodi class er moddhe onk gula class thake sob gula eksatheo override hoye jabe .
-
 
 // DOMTokenList (v.68)
 
@@ -6940,8 +6940,8 @@
 // 7. value()
 
 // classList (v.69)
-// The Element.classList is a read only property which returns a live DOMTokenList collection of the class attributes of the element. 
-// Syntax : 
+// The Element.classList is a read only property which returns a live DOMTokenList collection of the class attributes of the element.
+// Syntax :
 // var elementClasses = elementNodeReference.classList;
 
 // <h1 id="geek" class="first sec">Hello World!</h1>
@@ -6958,8 +6958,7 @@
 // console.log(h1.classList.length) // 2 (karon h1 er moddhe 2 ta class item ase)
 // console.log(h1.classList.value) // first sec (h1 er moddhe ai 2 ta class item ache)
 
-
-// DOMTokenList er method access : 
+// DOMTokenList er method access :
 
 // item() -- element er vitor sob class item gular access pauyar jonno use hoy
 // console.log(h1.classList.item(1)) // sec (h1 er 2 ta class er moddhe 1 number index e jei class ase seta return hoise)
@@ -6983,31 +6982,29 @@
 // replace()
 // h1.classList.replace('first','main') // first class item ta remove hoye sei jaygay main class aisha porbe
 
-// contains() --- check kore specific kono class item ai element e ase kina . 
+// contains() --- check kore specific kono class item ai element e ase kina .
 
 // const isExist = h1.classList.contains('hello')
 // console.log(isExist) // false
 
 // console.log(h1.classList.contains('first')) // true
 
-// toggle() 
+// toggle()
 
-// h1.classList.toggle('main') // jodi main class item thake h1 er vitore tahole remove kore dau, r jodi na thake tahole add kore dau 
-
+// h1.classList.toggle('main') // jodi main class item thake h1 er vitore tahole remove kore dau, r jodi na thake tahole add kore dau
 
 // CSSStyleDeclaration Object Properties and Methods (v.70)
 // The CSSStyleDeclaration object represents a collection of CSS Property-value pairs. It is used in API (mane CSSStyleDeclaration Object css er sob property er collection key value pair akare diye thake jar key hobe css property er camelCase and value hobe empty string "")
 
-// ai declaration er use 2 ta api kore thake 
+// ai declaration er use 2 ta api kore thake
 // 1. HTMLElement.style (inline)
 // 2. windwo.getComputedStyle() (internal and external)
 
-// amra jokhon element.style likhi tokhon seta ashole CSSStyleDeclaration Object ke point kore thake 
-
+// amra jokhon element.style likhi tokhon seta ashole CSSStyleDeclaration Object ke point kore thake
 
 // Some Properties and methods of CSSStyleDeclaration Object
 
-// Properties : 
+// Properties :
 // 1. cssText
 // 2. length
 // 3. parentRule
@@ -7019,32 +7016,28 @@
 // 4. setProperty(property,value,priority)
 // 5. item(index)
 
+// cssText
 
+// element.style return kore CSSStyleDeclaration Object and sei object e 2 ta property thake . 1. length 2. cssText
+// cssText holo oi element er sob inline css ke get and set korar jonno
 
-// cssText 
-
-// element.style return kore CSSStyleDeclaration Object and sei object e 2 ta property thake . 1. length 2. cssText 
-// cssText holo oi element er sob inline css ke get and set korar jonno 
-
-// <h1 style="color: green; font-size: 20px;">Hello World!</h1> 
+// <h1 style="color: green; font-size: 20px;">Hello World!</h1>
 
 // get cssText
 // const h1 = document.querySelector('h1')
 // console.log(h1.style.cssText) // color: green; font-size: 20px;
 
-// set cssText 
+// set cssText
 // console.log(h1.style.cssText) // color: green; font-size: 20px;
 // h1.style.cssText = 'background-color: blue; color: white; font-size: 25px;'
 // console.log(h1.style.cssText) // background-color: blue; color: white; font-size: 25px;
 
-// tar mane ager sob inline css ke overwrite kore dise 
+// tar mane ager sob inline css ke overwrite kore dise
 
-
-// length 
+// length
 // console.log(document.querySelector('h1').style.length ) // 2
 
-
-// now CSSStyleDeclaration Method 
+// now CSSStyleDeclaration Method
 
 // all methods :
 // 1. getPropertyValue(property)
@@ -7053,58 +7046,53 @@
 // 4. setProperty(property,value,priority)
 // 5. item(index)
 
-
 // item(index)
-// syntax : 
+// syntax :
 // element.style.item(index)
-// ai method diye oi element er inline style er moddhe sob css property ke index number diye access kora jay 
+// ai method diye oi element er inline style er moddhe sob css property ke index number diye access kora jay
 
 // Example :
-// <h1 style="color: green; font-size: 20px;">Hello World!</h1>  
+// <h1 style="color: green; font-size: 20px;">Hello World!</h1>
 // const h1 = document.querySelector('h1')
 // console.log(h1.style.item(1)) // font-size
 // console.log(h1.style.item(0)) // color
 
-
 // getPropertyValue(property)
 // ei method diye inline css e kono property er value ber kora hoy
 
-// syntax : 
+// syntax :
 // element.style.getPropertyValue('font-size')
 
 // Example :
-// <h1 style="color: green; font-size: 20px;">Hello World!</h1> 
+// <h1 style="color: green; font-size: 20px;">Hello World!</h1>
 // const h1 = document.querySelector('h1')
 // console.log(h1.style.getPropertyValue('font-size')) // 20px
 // console.log(h1.style.getPropertyValue('color')) // green
 
-
 // removeProperty()
-// kono css property remove korar jonno use hoy 
+// kono css property remove korar jonno use hoy
 
 // Example :
-// <h1 style="color: green; font-size: 20px;">Hello World!</h1> 
+// <h1 style="color: green; font-size: 20px;">Hello World!</h1>
 // const h1 = document.querySelector('h1')
 // h1.style.removeProperty('font-size')
 // console.log(h1.style.cssText) // color: green; (font-size removed!)
 
-
 // setProperty()
-// ei method diye kono element er inline e css property set kora jay . 
-// ai method er 3 ta parameter thake 
+// ei method diye kono element er inline e css property set kora jay .
+// ai method er 3 ta parameter thake
 // 1st parameter : css property
-// 2nd parameter : sei propertyr value 
+// 2nd parameter : sei propertyr value
 // 3rd parameter : 'important' , but this is optional parameter . 'important' dile css er important keyword er moto kaj kore . tar mane setar priority sobcheye beshi thake and sob jaygay apply hobe
 
-// Syntax : 
+// Syntax :
 // element.style.setProperty('property','value','priority')
 
 // Example :
-// <h1 style="color: green; font-size: 20px;">Hello World!</h1> 
+// <h1 style="color: green; font-size: 20px;">Hello World!</h1>
 // const h1 = document.querySelector('h1')
 // h1.style.setProperty('font-size','43px','important')
 // console.log(h1.style.cssText) // color: green; font-size: 43px !important;
-
 
 // Computed Style and getComputedStyle Method (v.71)
 
@@ -7114,30 +7102,28 @@
 
 // sob css compute kore final jei css output ashe setaii computed style
 
-// kono element er upor inline style thake , internal style thake , external style thake, browser er default style thake . erokom sob style eksathe kore oi element finally jei style e screen e show hocche setaii holo computed style 
+// kono element er upor inline style thake , internal style thake , external style thake, browser er default style thake . erokom sob style eksathe kore oi element finally jei style e screen e show hocche setaii holo computed style
 
 // element.style property represents only the CSS declarations set in the elements inline style attribute, not those that come from style rules elsewhere, such as style rules in the <head> section, or external style sheets or browser default. To get the values of all CSS properties for an element you should use window.getComputedStyle() instead.(tar mane holo element.style property only inline css er maddhome css property update kore . baki sob empty string thake . jodi oi element er parent element e kono style thake tahole se setake inherit kore na . browser er default style sei element.style property te thake na. only inline css style thake)
 
 // The return style is a live CSSStyleDeclaration object (The CSSStyleDeclaration object represents a collection of CSS property-value pairs), which updates itself automatically when the element's style is changed.
 
 // *******Important Notes***********
-// element.style return kore CSSStyleDeclaration Obj, same object return kore window.getComputedStyle() . kintu element.style jei CSSStyleDeclaration object return kore seta read write 2 tai kora jay . tar css property set and get 2 taii kora jay . kintu window.getComputedStyle() jei CSSStyleDeclaration object return kore seta only read kora jay . mane only get kora jay , set kora jay na 
+// element.style return kore CSSStyleDeclaration Obj, same object return kore window.getComputedStyle() . kintu element.style jei CSSStyleDeclaration object return kore seta read write 2 tai kora jay . tar css property set and get 2 taii kora jay . kintu window.getComputedStyle() jei CSSStyleDeclaration object return kore seta only read kora jay . mane only get kora jay , set kora jay na
 
 // Example :
 // const h1 = document.querySelector('h1')
 // const computedStyle = window.getComputedStyle(h1)
 // console.log(computedStyle) // all css style returned.. (joto inline, internal, extarnal , browser default sob eksathe return hoise)
 
-
-
 // Event start (v.82)
 
 // Event Binding with HTML Attribute (v.84)
-// These bindings are element attributes , such as onclick, onchange, oninput etc which can be set equal to javascript that is to be executed when the given event occurs at that object. 
-// Example : 
+// These bindings are element attributes , such as onclick, onchange, oninput etc which can be set equal to javascript that is to be executed when the given event occurs at that object.
+// Example :
 // <button onclick="alert('Button Clicked')">Click Me</button>
 
-// Example : 
+// Example :
 // <button onclick="helloEvent()">Click Me</button>
 // function helloEvent(){
 //   alert('Hello World!')
@@ -7146,13 +7132,13 @@
 // Event Binding with Javascript (v.85)
 // When we use this approach we can add or remove handlers dynamically as well as it improves the separation between the structure of document and its logic and presentation
 
-// Example : 
+// Example :
 // <button>Click Me</button>
 // document.querySelector('button').onclick = function(){
 //   alert('Hello World!')
 // }
 
-// Example : 
+// Example :
 // <button>Click Me</button>
 // const btn = document.querySelector('button')
 // function disp(){
@@ -7162,7 +7148,7 @@
 
 // OverWriting Event Handler (v.86)
 
-// Example : 
+// Example :
 // <button>Click Me</button>
 // function disp1(){
 //   alert("Alert 1")
@@ -7175,30 +7161,29 @@
 
 // ekhane disp2 display hobe . karon disp1 pore houyay seta overwrite hoye disp2 hoye gese . etakeii bole OverWriting event handler
 
-// ai problem ta kivabe solve korbo ? 
+// ai problem ta kivabe solve korbo ?
 // function disp(){
 //   alert("Hello 1")
 //   alert("Hello 2")
 // }
 // document.querySelector('button').onclick = disp
-// kintu ai approach ta best practice na . samne amra dekhbo new technique use kore amra easily sohoj syntax diye 2 ta event eksathe run korte pari 
-
+// kintu ai approach ta best practice na . samne amra dekhbo new technique use kore amra easily sohoj syntax diye 2 ta event eksathe run korte pari
 
 // addEventListener (v.87)
 
 // DOM Event Model
 // The DOM 2 Event Model specification describes a standard way to create, capture , handle and cancel event in a tree like structure such as an XHTML document's object hierarchy.
 
-// phases : 
+// phases :
 // 1. Capture Phase
 // 2. Target Phase
 // 3. Bubbling Phase
 // eta niye pore study hobe . Now addEventListener()...
 
-// addEventListener() method 
+// addEventListener() method
 // This method is introduced by DOM2, used to engage an event handler in a page
 
-// Syntax : 
+// Syntax :
 // Object.addEventListener(event,handler,capturePhase)
 
 // Object -- Object is the node node which the listener is to be bound
@@ -7206,7 +7191,7 @@
 // handler -- Handler is the function that should be called when the event occurs.
 // capturePhase -- CapturePhase is a Boolean indicating whether to use Bubbling(false) or Capture(True). This is optional. If you omit there is false by default.
 
-// Example : 
+// Example :
 // function show(){
 //   alert('hello')
 // }
@@ -7214,49 +7199,47 @@
 // btn.addEventListener('click',show, false)
 
 // *********Important Notes************
-// akhn porjonto amra onclick action old way te kore ashcilam . tahole keno amra new technique addEventListener use korbo ? ki amon facilities ase ekhane ? 
-// Why we should use addEventListener() ? 
-// Ans : 
-// 1st Reason : It allows you to bind multiple handlers to an object for the same event without overwriting 
-// Example of 1st Reason -- 
+// akhn porjonto amra onclick action old way te kore ashcilam . tahole keno amra new technique addEventListener use korbo ? ki amon facilities ase ekhane ?
+// Why we should use addEventListener() ?
+// Ans :
+// 1st Reason : It allows you to bind multiple handlers to an object for the same event without overwriting
+// Example of 1st Reason --
 // amra dekhechilam event overwriting concept . eta addEventListener diye easily solve kora jay . jemon..
 // const btn = document.querySelector('button')
 // btn.addEventListener('click',()=>{alert("Hello 1")})
 // btn.addEventListener('click',()=>{alert("Hello 2")})
-// ekhane prothome Hello 1 alert hobe then Hello 2 alert hobe 
+// ekhane prothome Hello 1 alert hobe then Hello 2 alert hobe
 
-// 2nd Reason : It enables you finer-grained control of the phase when the listener is activated(Capture or Bubbling) -- amra capture and bubbling 2 ta phase er shubidha pai jeta ager technique e petam na 
-
+// 2nd Reason : It enables you finer-grained control of the phase when the listener is activated(Capture or Bubbling) -- amra capture and bubbling 2 ta phase er shubidha pai jeta ager technique e petam na
 
 // 3rd Reason : It works on any DOM element, not just HTML elements.--- tar mane aita jekono node er upor kaj kore . jemon text node , comment node etc . not just element node, it use on text node, comment node etc
 
-
 // removeEventListener() method (v.88)
-// This method is used to remove handlers, with the same arguments given when the event was added. 
-// Example : 
+// This method is used to remove handlers, with the same arguments given when the event was added.
+// Example :
 // const btn = document.querySelector('button')
 
 // function show(){
 //   alert('Hello World')
 // }
-// btn.addEventListener('click',show,false) // 1st 
-// btn.addEventListener('click',show,true) // 2nd 
+// btn.addEventListener('click',show,false) // 1st
+// btn.addEventListener('click',show,true) // 2nd
 
-// btn.removeEventListener('click',show,true) // ekhane 1st event remove hobe na . 2nd event remove hobe . karon 2nd event er sob argument hubuhu mile jay removeEventListener er argument er sathe 
-
+// btn.removeEventListener('click',show,true) // ekhane 1st event remove hobe na . 2nd event remove hobe . karon 2nd event er sob argument hubuhu mile jay removeEventListener er argument er sathe
 
 // DOM Event Flow or Event Propagation (v.89)
 
 // DOM Event Flow
 // The DOM 2 Event Model specification describes a standard way to create, capture , handle and cancel event in a tree like structure such as an XHTML document's object hierarchy.
 
-// DOM Event Flow er 3 ta phase thake 
+// DOM Event Flow er 3 ta phase thake
 // 1. capture phase (event on top to bottom)
 // 2. target phase (event on exact target)
 // 3. bubbling phase (event on bottom to top) -- eta by default hoye thake
 
-// Example : 
-{/* <div id="one">
+// Example :
+{
+  /* <div id="one">
 1
 <div id="two">
   2
@@ -7267,41 +7250,42 @@
     </div>
   </div>
 </div>
-</div> */}
+</div> */
+}
 
-// Event Bubbling 
+// Event Bubbling
 // document.getElementById('one').addEventListener('click',()=>{console.log(1)}, false);
 // document.getElementById('two').addEventListener('click',()=>{console.log(2)}, false);
 // document.getElementById('three').addEventListener('click',()=>{console.log(3)}, false);
 // document.getElementById('four').addEventListener('click',()=>{console.log(4)}, false);
-// output : 
-// eta dekhbe jekhane take click kora hoise seta soho setar theke nicher dike kon kon jaygay click event ase . joto gula thakbe sob event run korbe . jemon div 3 te click korle answer : 3 2 1 . div 4 e click korle ashe 4 3 2 1 . div 2 te click korle 2 1 ashe . jodi div 1 er baire body or html tag e click event thakto tahole segulao run korto bottom to top serial onujayiii 
-// jemon 
+// output :
+// eta dekhbe jekhane take click kora hoise seta soho setar theke nicher dike kon kon jaygay click event ase . joto gula thakbe sob event run korbe . jemon div 3 te click korle answer : 3 2 1 . div 4 e click korle ashe 4 3 2 1 . div 2 te click korle 2 1 ashe . jodi div 1 er baire body or html tag e click event thakto tahole segulao run korto bottom to top serial onujayiii
+// jemon
 // document.querySelector('body').addEventListener('click',()=>{console.log('body')}, false)
 // document.querySelector('html').addEventListener('click',()=>{console.log('html')}, false)
 // document.getElementById('one').addEventListener('click',()=>{console.log(1)}, false);
 // document.getElementById('two').addEventListener('click',()=>{console.log(2)}, false);
 // document.getElementById('three').addEventListener('click',()=>{console.log(3)}, false);
 // document.getElementById('four').addEventListener('click',()=>{console.log(4)}, false);
-// output : 
+// output :
 // click on div 3 and result : 3 2 1 body html
-// click on div 1 and result : 1 body html 
+// click on div 1 and result : 1 body html
 // click on div 4 and result : 4 3 2 1 body html
 
-// tar mane jekhane click kora hobe sekhan theke shuru kore bottom to top serial maintain kore sob parent node e jay and check kore je click event ase kina . jodi thake tahole sei event run kore . 
+// tar mane jekhane click kora hobe sekhan theke shuru kore bottom to top serial maintain kore sob parent node e jay and check kore je click event ase kina . jodi thake tahole sei event run kore .
 
 // *** Important Notes ***
-// jodi bottom to top jauyar somoy kono ekta parent e click event na pay tahole se next parent e chole jay click event khujar jonno . jodi pay setao run kore . tar mane holo jodi body element e click event na ditam and html element e click event ditam taholeo bottom to top jauyar somoy body skip hoye html er click event run korto 
-// jemon 
+// jodi bottom to top jauyar somoy kono ekta parent e click event na pay tahole se next parent e chole jay click event khujar jonno . jodi pay setao run kore . tar mane holo jodi body element e click event na ditam and html element e click event ditam taholeo bottom to top jauyar somoy body skip hoye html er click event run korto
+// jemon
 // document.querySelector('html').addEventListener('click',()=>{console.log('html')}, false)
 // document.getElementById('one').addEventListener('click',()=>{console.log(1)}, false);
 // document.getElementById('two').addEventListener('click',()=>{console.log(2)}, false);
 // document.getElementById('three').addEventListener('click',()=>{console.log(3)}, false);
 // document.getElementById('four').addEventListener('click',()=>{console.log(4)}, false);
-// output : 
-// output : 
+// output :
+// output :
 // click on div 3 and result : 3 2 1 html
-// click on div 1 and result : 1 html 
+// click on div 1 and result : 1 html
 // click on div 4 and result : 4 3 2 1 html
 
 // ***** important notes ********
@@ -7314,33 +7298,32 @@
 // document.getElementById('two').addEventListener('click',()=>{console.log(2)}, true);
 // document.getElementById('three').addEventListener('click',()=>{console.log(3)}, true);
 // document.getElementById('four').addEventListener('click',()=>{console.log(4)}, true);
-// output : 
+// output :
 // click on div 3 and result : html body 1 2 3
 // click on div 1 and result : html body 1
 // click on div 4 and result : html body 1 2 3 4
 
-
 // Event Object (v.90)
-// DOM events pass an Event object as an argument to handlers . This object contains extra information about the event that occurred. 
+// DOM events pass an Event object as an argument to handlers . This object contains extra information about the event that occurred.
 
-// Example : 
+// Example :
 // addEventListener('click',(e)=>{....})
 // upore e holo event object
 // jokhon kono event fire hoy sei event er handler function er parameter e ekta object pass hoy . sei object ke bole event object . amra chaile sei object sei event handler function er vitor use korte pari .
 
 // document.querySelector('button').addEventListener('click',(e)=>{
 //   console.log(e) // return pointerEvent object , this is actually event object
-//   console.log(e.clientX) // jekhane click kortesi seta x okkhe koto pixel right side e seta ber kore 
-//   console.log(e.clientY)// jekhane click kortesi seta y okkhe koto pixel nicher side e seta ber kore 
+//   console.log(e.clientX) // jekhane click kortesi seta x okkhe koto pixel right side e seta ber kore
+//   console.log(e.clientY)// jekhane click kortesi seta y okkhe koto pixel nicher side e seta ber kore
 //   console.log(e.target) // <button>Click for Change</button>
 //   console.log(e.type) // click
 //   // and so on...
 // })
 
-
 // What is the difference between target and current target (v.91)
 
-{/* <div id="one">
+{
+  /* <div id="one">
 1
 <div id="two">
   2
@@ -7351,7 +7334,8 @@
     </div>
   </div>
 </div>
-</div> */}
+</div> */
+}
 
 // document.getElementById('one').addEventListener('click',(e)=>{
 //   console.log('1')
@@ -7374,17 +7358,17 @@
 //   console.log('Current Target = '+e.currentTarget.dataset.name)
 // },false)
 
-
 // Event methods stopPropagation and stopImmediatePropagation (v.92)
 
-// stopPropagation() method  --- Prevents further propagation of the current event in the capturing and bubbling phases. 
+// stopPropagation() method  --- Prevents further propagation of the current event in the capturing and bubbling phases.
 // Syntax : e.stopPropagation();
 
-// stopImmediagePropagation() --- Prevents other listeners of the same event from being called. 
+// stopImmediagePropagation() --- Prevents other listeners of the same event from being called.
 // Syntax : e.stopImmediatePropagation()
 
-// Example : 
-{/* <div id="one">
+// Example :
+{
+  /* <div id="one">
 1
 <div id="two">
   2
@@ -7392,13 +7376,14 @@
     3
   </div>
 </div>
-</div> */}
+</div> */
+}
 // function div1(e){
 //   this.style.backgroundColor = 'red'
 // }
 // function div2(e){
 //   this.style.backgroundColor = 'blue'
-//   e.stopPropagation() 
+//   e.stopPropagation()
 // }
 // function div2_2(e){
 //   this.style.width = '250px'
@@ -7417,35 +7402,32 @@
 // divThree.addEventListener('click',div3,false)
 
 // Notes about stopPropagation -----
-// amra bubbling phase e thakle target element theke top parent element e same event fire hote thake and capturing phase e thakle top parent element theke target element porjonto same event fire hote thake . kintu amra jodi parent er ai traversal kora obosthay kono ekta parent er moddhe e.stopPropagation() lagaiya dei tahole oi parent element er por r kono event fire hobe na . 
-// bubbling er khetre ami jodi div 3 te click kori and div 2 te stopPropagation() lagaiya dei tokhon div 3 er click event fire hobe , then div 2 er click event fire hobe kintu tarpor parent to parent element e jotoi click event thakuk seta r fire hobe na . tar mane div 2 er por r event propagate hobe na 
-// capturing er khetre ami jodi div 3 te click kori and div 2 te e.stopPropagation() lagaiya dei tahole seta parent html theke propagate hote hote jokhon div 2 te ashbe tokhon se dekhbe ekhane propagate stop kore deya hoyeche . then se div 3 te jabeii na 
-
-
+// amra bubbling phase e thakle target element theke top parent element e same event fire hote thake and capturing phase e thakle top parent element theke target element porjonto same event fire hote thake . kintu amra jodi parent er ai traversal kora obosthay kono ekta parent er moddhe e.stopPropagation() lagaiya dei tahole oi parent element er por r kono event fire hobe na .
+// bubbling er khetre ami jodi div 3 te click kori and div 2 te stopPropagation() lagaiya dei tokhon div 3 er click event fire hobe , then div 2 er click event fire hobe kintu tarpor parent to parent element e jotoi click event thakuk seta r fire hobe na . tar mane div 2 er por r event propagate hobe na
+// capturing er khetre ami jodi div 3 te click kori and div 2 te e.stopPropagation() lagaiya dei tahole seta parent html theke propagate hote hote jokhon div 2 te ashbe tokhon se dekhbe ekhane propagate stop kore deya hoyeche . then se div 3 te jabeii na
 
 // How to prevent Element default behavior (v.93)
-// jodi kono element er kono default behaviour thake tahole seta ke off kore dey 
+// jodi kono element er kono default behaviour thake tahole seta ke off kore dey
 
 // <a href="https://beautybooth.com.bd/">BeautyBooth</a>
-// a tag er ekta default behaviour holo ekhane click korleii automatically href link e chole jay . othocho ami a tag er upor kono click event lagai nai . eta a tag er ekta default behaviour . ami jodi chai se tar default behaviour off kore dek tahole use korbo e.preventDefault() method 
-// Example : 
+// a tag er ekta default behaviour holo ekhane click korleii automatically href link e chole jay . othocho ami a tag er upor kono click event lagai nai . eta a tag er ekta default behaviour . ami jodi chai se tar default behaviour off kore dek tahole use korbo e.preventDefault() method
+// Example :
 // const a = document.querySelector('a')
 // a.addEventListener('click',(e)=>{
 //   e.preventDefault()
 // },false)
-// akhn a te click korleo kothau redirect hobe na 
+// akhn a te click korleo kothau redirect hobe na
 
-// akhn ami eta ke manually click event dibo jate click korle href er action e chole jay 
+// akhn ami eta ke manually click event dibo jate click korle href er action e chole jay
 // const a = document.querySelector('a')
 // a.addEventListener('click',(e)=>{
 //   e.preventDefault()
 //   window.open('https://beautybooth.com.bd/')
 // },false)
 
-
 // Mouse Event (v.94)
 
-// 1. mousedown -- It fires when mouse button is pressed down. 
+// 1. mousedown -- It fires when mouse button is pressed down.
 // 2. mouseup -- It fires when the mouse button is released.
 // 3. click -- It fires when something is clicked. mousedown, mouseup and click events fires in sequence.
 // 4. dblclick -- It fires when something is clicked twice in rapid succession. mousedown, mouseup, click, mousedown, mouseup, click and dblclick events fires in sequence.
@@ -7454,55 +7436,45 @@
 // 7. mouseover -- It fires when mouse is hovering over some element.
 // 8. mouseout -- It fires when mouse leaves from hovering over some element.
 // 9. mousemove -- It fires when the mouse moves.
-// 10. contextmenu -- It fires when mouse right button is clicked. 
+// 10. contextmenu -- It fires when mouse right button is clicked.
 
-
-// 1. mousedown -- It fires when mouse button is pressed down. 
+// 1. mousedown -- It fires when mouse button is pressed down.
 // document.querySelector('button').addEventListener('mousedown',()=>{console.log('firing')})
-// jokhon mouse er right or left jekono ekta button click hoy tokhon fire hoye thake 
-
+// jokhon mouse er right or left jekono ekta button click hoy tokhon fire hoye thake
 
 // 2. mouseup -- It fires when the mouse button is released.
 // document.querySelector('button').addEventListener('mouseup',()=>{console.log('firing')})
-// mouse er right or left jekono ekta button click kore chere dile ai event fire hoy . 
-
+// mouse er right or left jekono ekta button click kore chere dile ai event fire hoy .
 
 // 3. click -- It fires when something is clicked. mousedown, mouseup and click events fires in sequence.
 // document.querySelector('button').addEventListener('click',()=>{console.log('firing')})
-// mouse er only left side click kore dhore rakhle fire hoy na . click kore chere dileii fire hoy . 
-
+// mouse er only left side click kore dhore rakhle fire hoy na . click kore chere dileii fire hoy .
 
 // 4. dblclick -- It fires when something is clicked twice in rapid succession. mousedown, mouseup, click, mousedown, mouseup, click and dblclick events fires in sequence.
 // document.querySelector('button').addEventListener('dblclick',()=>{console.log('firing')})
-// only left side er button 2 bar por por click kore chere dile ai event fire hoy 
-
+// only left side er button 2 bar por por click kore chere dile ai event fire hoy
 
 // 5. mouseenter -- It fires when a mouse starts to hover over some element. No bubble
 // document.querySelector('button').addEventListener('mouseenter',()=>{console.log('firing')})
-// jokhon ami mouse hover korbo tokhonii ei event fire hoy . kintu ai event er ekta bishoy hocche eta bubbling hoy na 
-
+// jokhon ami mouse hover korbo tokhonii ei event fire hoy . kintu ai event er ekta bishoy hocche eta bubbling hoy na
 
 // 6. mouseleave -- It fires when a mouse exits while hovering over some element. No bubble
 // document.querySelector('button').addEventListener('mouseleave',()=>{console.log('firing')})
-// jokhon ami mouse hover korbo tokhonii ei event fire hoy na. jokhon ami element theke mouse hover soraiya nibo tokhon aita fire hoy . kintu ai event er ekta bishoy hocche eta bubbling hoy na . 
-
+// jokhon ami mouse hover korbo tokhonii ei event fire hoy na. jokhon ami element theke mouse hover soraiya nibo tokhon aita fire hoy . kintu ai event er ekta bishoy hocche eta bubbling hoy na .
 
 // 7. mouseover -- It fires when mouse is hovering over some element.
 // document.querySelector('button').addEventListener('mouseover',()=>{console.log('firing')})
-// eta mouseenter er motoi . just parthokko hocche mouseenter e bubbling hoy na and mouseover e bubbling hoy 
-
+// eta mouseenter er motoi . just parthokko hocche mouseenter e bubbling hoy na and mouseover e bubbling hoy
 
 // 8. mouseout -- It fires when mouse leaves from hovering over some element.
 // document.querySelector('button').addEventListener('mouseout',()=>{console.log('firing')})
-// eta mouseleave er motoi . just parthokko hocche mouseleave e bubbling hoy na and mouseout e bubbling hoy 
-
+// eta mouseleave er motoi . just parthokko hocche mouseleave e bubbling hoy na and mouseout e bubbling hoy
 
 // 9. mousemove -- It fires when the mouse moves.
 // document.querySelector('button').addEventListener('mousemove',()=>{console.log('firing')})
 // element er upor mouse hover kore joto naraite thakbo toto event fire hoteii thakbe
 
-
-// 10. contextmenu -- It fires when mouse right button is clicked. 
+// 10. contextmenu -- It fires when mouse right button is clicked.
 // document.querySelector('button').addEventListener('contextmenu',(e)=>{
 //   e.preventDefault()
 //   console.log(e)
@@ -7513,18 +7485,15 @@
 //   box.style.left = e.offsetX
 // })
 
-
-
 // Focus Event
 
-// focus -- jokhon kono input or onno kono element e jekhane focus event lagano jay sekhane click korle focus event fire hoy . jemon input er vitor click korle focus event fire hoy . ei event bubbling hoy na 
+// focus -- jokhon kono input or onno kono element e jekhane focus event lagano jay sekhane click korle focus event fire hoy . jemon input er vitor click korle focus event fire hoy . ei event bubbling hoy na
 
-// blur -- jei element er upor blur event set kora jay sei event e blur event dile jodi ami sei element er baire click kori tahole blur event fire hoy . ei event bubbling hoy na 
+// blur -- jei element er upor blur event set kora jay sei event e blur event dile jodi ami sei element er baire click kori tahole blur event fire hoy . ei event bubbling hoy na
 
-// focusin -- eta similar focus event er . just eta bubbling hoy kintu focus e bubbling hoy na 
+// focusin -- eta similar focus event er . just eta bubbling hoy kintu focus e bubbling hoy na
 
-// focusout -- eta similar blur event er . just eta bubbling hoy kintu blur e bubbling hoy na 
-
+// focusout -- eta similar blur event er . just eta bubbling hoy kintu blur e bubbling hoy na
 
 // <input type="text" placeholder="focus event test">
 // const input = document.querySelector('input')
@@ -7537,94 +7506,84 @@
 // input.addEventListener('focus',fe,false)
 // input.addEventListener('blur',be,false)
 
-
-
 // Key Event (v.97)
 
 // 1. keydown -- It fires as a key is pressed down.
 
 // 2. keyup -- It fires as the key is released.
 
-// 3. keypress -- It fires after a key is pressed down(after keydown). It only works with printable characters. 
+// 3. keypress -- It fires after a key is pressed down(after keydown). It only works with printable characters.
 
 // document.querySelector('input').addEventListener('keypress',(e)=>{
 //   console.log(e)
 //   // console.log(e)
-//   // after press shift button : 
+//   // after press shift button :
 //   // console.log(e.key) // shift
-//   // after press alt button : 
+//   // after press alt button :
 //   // console.log(e.key) // Alt
-//   // after press h button : 
+//   // after press h button :
 //   // console.log(e.key) // h
 // })
-
 
 // Text Event (v.98)
 // textInput
 // document.querySelector('input').addEventListener('textInput',(e)=>{
-//   // after press a button : 
+//   // after press a button :
 //   console.log(e.data) // a
 // })
 
-
-
 // Window Object (v.98)
 
-// innerWidth and outerWidth 
-// innerWidth holo only browser screen er width jetay kono kichu display hoy and outerWidth holo full browser er width . 
+// innerWidth and outerWidth
+// innerWidth holo only browser screen er width jetay kono kichu display hoy and outerWidth holo full browser er width .
 
 // console.log(window.innerWidth)
 // console.log(window.outerWidth)
 
-// innerHeight and outerHeight 
+// innerHeight and outerHeight
 // innerHeight holo only browser screen er height and outerHeight holo full browser er height
 
 // console.log(window.innerHeight)
 // console.log(window.outerHeight)
 
-
-
 // Dialog Boxes (v.99)
-// It is used to provide some information to users. 
+// It is used to provide some information to users.
 
-// Type of Dialog box : 
-// 1. Alert 
+// Type of Dialog box :
+// 1. Alert
 // 2. Confirm
 // 3. Prompt
 
 // 1. Alert -- alert()
-// This window objects method is used to display data in alert dialog box. alert really should be used only when you truly want to stop everything and let the user know something. 
+// This window objects method is used to display data in alert dialog box. alert really should be used only when you truly want to stop everything and let the user know something.
 // jokhon alert() method run korbe tokhon user sei page e kichui korte parbe na jotokkhon na sei alert close kora hoy .
 
 // Syntax : window.alert() or alert()
 
-
-// 2. Confirm -- confirm() 
+// 2. Confirm -- confirm()
 // This window object's method is used to display a message for a user to respond to by pressing either an OK button to agree with the message to a Cancel button to disagree with the message. It returns true on OK and false on Cancel
 // etao alert() method er moto ok or cancel korar ag porjonto browser stop hoye thake , r kono kaj kora jay na.
 
 // syntax : window.confirm() or confirm()
-// Example : 
+// Example :
 // const isOkay = window.confirm("Are You Sure ?")
 // console.log(isOkay)
 
-// Example : 
+// Example :
 // if(confirm('Are You Sure?')){
 //   console.log("He is Confirmed!")
 // }else{
 //   console.log('Not Confirmed!')
 // }
 
-
-// 3. prompt() method 
-// Windwo objects method prompt() can be used to get input from the user, named prompt. The prompt() method displays displays a dialog box that prompts the visitor for input. 
-// Once the prompt function obtains input from the user, it returns that input. If the user press the cancel button in the dialog or close box, a value null will be returned. 
+// 3. prompt() method
+// Windwo objects method prompt() can be used to get input from the user, named prompt. The prompt() method displays displays a dialog box that prompts the visitor for input.
+// Once the prompt function obtains input from the user, it returns that input. If the user press the cancel button in the dialog or close box, a value null will be returned.
 
 // Syntax : prompt(text,defaultText)
-// Example : 
+// Example :
 // const inputText = prompt('Enter your name : ','name')
 // console.log(inputText)
-
 
 // open and close method (v.100)
 
@@ -7642,16 +7601,15 @@
 //   newWindow.close();
 // })
 
-
 // Form (v.111)
 
 // Accessing Forms (v.112)
-// kivabe amra form ke access korte pari 
-// document er vitor forms nam e ekta array ase . sei array te web page e joto gula form ase sob gula eksathe return hoy 
+// kivabe amra form ke access korte pari
+// document er vitor forms nam e ekta array ase . sei array te web page e joto gula form ase sob gula eksathe return hoy
 
 // const formOne = document.forms[0] // total form er first form ta return hoise
 // const formTwo = document.forms[1] // total form er second form ta return hoise
-// console.log(document.forms) // total joto gula form asi create korsi sob aisha porse 
+// console.log(document.forms) // total joto gula form asi create korsi sob aisha porse
 
 // Form access with name attribute
 // <form action="" name="formOne">...</form> and <form action="" name="formTwo">...</form>
@@ -7665,16 +7623,7 @@
 // console.log(formOne)
 // console.log(formTwo)
 
-
-
 // Accessing Form Fields (v.113)
-
-
-
-
-
-
-
 
 // What is Cookie and How it works  (v.115)
 // A cookie is a small piece of text data set by web server that resided on the client's machine. (cookie holo kichu text data jeta thake client machine er moddhe jemon google chrome , mozila or others browser or app. eta set kore dey web server . mane jei server e ai website ta thake sei server cookie set kore dey client er machine e jokhon client server er kase request pathay )
@@ -7683,51 +7632,46 @@
 
 // This allows the server to place value it wishes to 'remember' in the cookie, and have access to them when creating a response.
 
-// sudhu sei web server cookie ke access korte parbe jei cookie ta sei server nije set korse . A namok web server jei cookie ekjon client er machine e set korse sei cookie kokhonoii B , C , D... namok web server access korte parbe na 
-
+// sudhu sei web server cookie ke access korte parbe jei cookie ta sei server nije set korse . A namok web server jei cookie ekjon client er machine e set korse sei cookie kokhonoii B , C , D... namok web server access korte parbe na
 
 // mot kotha prottek ta request er sathe cookie automatic server er kase jay . jei cookie ta sei particular server set koreche
 
 // prottekta cookie er ekta expire date thake . eta server thik kore dey koto somoy porjonto cookie ta client machine e thakbe or kichu condition basaed cookie delete hoye thake . jemon jodi user browser close kore dey tokhon cookie delete hoye jabe , or jodi logout kore dey tahole cookie delete hoye jabe
 
-
 // Third Party Cookies
-// cookie kichu ta develop hoyeche . tai third party cookie ashe . 
-// age ki hoito ? age web server cookie banaito and seta client er server e set kore dito . kintu akhn server cookie banay na , server akhn ekta unique id banay . and sei unique id er sathe match kore ekta cookie create hoye sei cookie third party cookies er moddhe set hoye jay . ai third party cookie client er machine e thake na . eta alada ekta jaygay thake . jar karone client er machine e kono chap pore na and server onek onek cookie set korte pare ekta particular client er jonno 
+// cookie kichu ta develop hoyeche . tai third party cookie ashe .
+// age ki hoito ? age web server cookie banaito and seta client er server e set kore dito . kintu akhn server cookie banay na , server akhn ekta unique id banay . and sei unique id er sathe match kore ekta cookie create hoye sei cookie third party cookies er moddhe set hoye jay . ai third party cookie client er machine e thake na . eta alada ekta jaygay thake . jar karone client er machine e kono chap pore na and server onek onek cookie set korte pare ekta particular client er jonno
 
-// real world concept : 
-// dhoren ami beautybooth er website e ashi and kichu cart item add kori or onno kichu kori , tokhon beautybooth er server sei kajer vittite kichu cookie banaiya sei cookie third party cookies er moddhe set kore dey and ekta unique id client ke dey jate ai id diye third party cookies theke sei particular cookie ta ber kora jay .   
+// real world concept :
+// dhoren ami beautybooth er website e ashi and kichu cart item add kori or onno kichu kori , tokhon beautybooth er server sei kajer vittite kichu cookie banaiya sei cookie third party cookies er moddhe set kore dey and ekta unique id client ke dey jate ai id diye third party cookies theke sei particular cookie ta ber kora jay .
 
-
-// Types of Cookies : 
+// Types of Cookies :
 // 1. Session Cookies - Cookies that are set without the expires field are called session cookies. It is destroyed when the user quits the browser. (browser ke close korar sathe cookie delete hoye jay)
 // 2. Persistent Cookies - The browser keeps it up until their expiration date is reached.(ekta somoy set kora jay koto somoy porjonto cookie thakbe)
-
 
 // Cookies in Javascript (v.116)
 // cookies are exposed as the cookie property of the document object. This property is both readable and writeable.
 
 // You can see cookies in google chrome by following chrome://settings/content/cookies
 
-
 // How to Set Cookies into Client System using JavaScript (v.117)
 // When you assign a string to document.cookie, the browser parses it as a cookie and adds it to its list of cookies.
 //There are several parts to each cookies. many of them optional.
 
-// Syntax : 
+// Syntax :
 // document.cookie = "name=value";
 // document.cookie = "name=value; expires=date; domain=domain; path=path; secure";
 // document.cookie = "name=value; max-age=inSecond; domain=domain; path=path; secure";
 // ****Important Notes****
-// expires and max-age ai 2 ta attribute same kaj kore . kintu production e 2 ta attribute ee add kora hoy . karon onk browser e expires kaj kore na , abar onek browser e max-age kaj kore na . 
+// expires and max-age ai 2 ta attribute same kaj kore . kintu production e 2 ta attribute ee add kora hoy . karon onk browser e expires kaj kore na , abar onek browser e max-age kaj kore na .
 // name=value chara baki sob attribute optional . name diteii hobe . kintu name chara baki attribute jodi nao dei taholeo browser by default oi attribute e kichu value condition onujayii add kore dey.
 
-// Example : 
+// Example :
 // document.cookie = "userName=Tanvir"
 // document.cookie = "userName=Tanvir; expires=Sunday, 8-Sep-2024 08:10:00 UTC"
-// document.cookie = "userName=Tanver; max-age="+60*60*24*1; // ekhane max-age= sesh houyar por sathe sathe double quotes end kore deya hoy . karon nahole time er hishab ta stirng hishebe calculate hobe 
+// document.cookie = "userName=Tanver; max-age="+60*60*24*1; // ekhane max-age= sesh houyar por sathe sathe double quotes end kore deya hoy . karon nahole time er hishab ta stirng hishebe calculate hobe
 
-// Optional Cookies Attribute : 
+// Optional Cookies Attribute :
 // max-age
 // expires
 // domain
@@ -7736,13 +7680,11 @@
 
 // Whenever you omit the optional cookie fields, the browser fills them in automatically with reasonable defaults.
 
-
-
 // How to set Cookies max-age attribute (v.118)
-// It is used to create persistent cookie. It is supported by all modern browsers except IE. 
-// max-age only second e time set kore thake 
+// It is used to create persistent cookie. It is supported by all modern browsers except IE.
+// max-age only second e time set kore thake
 
-// Types of Cookies : 
+// Types of Cookies :
 // 1. Session Cookies - Cookies that are set without the expires field are called session cookies. It is destroyed when the user quits the browser. (browser ke close korar sathe cookie delete hoye jay)
 // 2. Persistent Cookies - The browser keeps it up until their expiration date is reached.(ekta somoy set kora jay koto somoy porjonto cookie thakbe)
 
@@ -7753,67 +7695,41 @@
 
 // alert(document.cookie) // all cookie ashbe
 
-
 // How to set expires date for cookie (v.119)
-// It is used to create persistent cookie. 
+// It is used to create persistent cookie.
 
-// Example : 
+// Example :
 // document.cookie = "username=tanvir; expires=Sun, 8-Sep-2024 08:57:00 UTC"
-
 
 // How to set Cookie domain path and secure (v.120)
 
 // domain
-// It specifies the domain for which the cookie is valid . If not specified, this defaults to the host portion of the current document location. If a domain is specified, subdomains are always included. 
+// It specifies the domain for which the cookie is valid . If not specified, this defaults to the host portion of the current document location. If a domain is specified, subdomains are always included.
 
-// Example :  
+// Example :
 // document.cookie = "username=tanvir; domain=tanvir.com";
 // ekhane tanvir.com domain er jonno ai cookie banano hoise . amra chaile ai domain er subdomain eo ai cookie ta access korte parbo . jemon code.tanvir.com or main.tavir.com etc . kintu subdomain e kono cookie set korle seta main domain e access kora jabe na or siblings kono domain e add kora jabe na . only sei subdomain er jodi kono child thake setate access kora jabe . tar mane parent to child access kora jabe kintu child to parent and siblings to siblings access kora jabe na . same concept path er khetreo . path bolte routing bujhaisi .
 
 // jodi domain kono kichu set na kori tahole jekhan theke cookie set kora hoise setaii domain deya hoy
 
-// path 
-// path o domain er moto behaviour kore 
+// path
+// path o domain er moto behaviour kore
 
 // Example :
-// document.cookie = "username=tanvir; path=/" 
+// document.cookie = "username=tanvir; path=/"
 // document.cookie = "username=tanvir; path=/category"
 // document.cookie = "username=geeky; path=/category/first"
 
-// first example e path=/ deya hoise . tar mane / er por jekono child route jemon /category/third/3 or /freegift/2 etc jekono route e jabe cookie ta . kintu / er kono parent route thakle sekhane jabe na . 
-// amnivabe 2nd or third example e cookie set hole kokhono tader parent route jemon / e cookie access kora jabe na 
-
+// first example e path=/ deya hoise . tar mane / er por jekono child route jemon /category/third/3 or /freegift/2 etc jekono route e jabe cookie ta . kintu / er kono parent route thakle sekhane jabe na .
+// amnivabe 2nd or third example e cookie set hole kokhono tader parent route jemon / e cookie access kora jabe na
 
 // secure
-// jei cookie te attribute secure set kore dibo seta https protocol e transmit hobe . ta chara onno kono protocol e transmit hobe na 
-
-
+// jei cookie te attribute secure set kore dibo seta https protocol e transmit hobe . ta chara onno kono protocol e transmit hobe na
 
 // How to Replace and Append Cookie (v.121)
 
-// tar mane kivabe amra existing cookie ke onno kono cookie dara replace korte pari and already kono cookie er vitor notun kichu append kora 
+// tar mane kivabe amra existing cookie ke onno kono cookie dara replace korte pari and already kono cookie er vitor notun kichu append kora
 
-// jodi amra same name diye 2 ba tar theke beshi cookie create kori tahole last name er value ta replace hobe kintu jodi name change kore create kori tahole append hobe 
-
-
-
+// jodi amra same name diye 2 ba tar theke beshi cookie create kori tahole last name er value ta replace hobe kintu jodi name change kore create kori tahole append hobe
 
 // How to Read Cookies (v.122)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
