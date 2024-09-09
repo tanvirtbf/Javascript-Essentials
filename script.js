@@ -1,5 +1,10 @@
 // String 
 
+// *********Important Notes***************
+// All string methods return a new string. They don't modify the original string.
+
+// All String Method... (total20)
+
 // 1. length
 
 // There are 4 methods for extracting string characters : 
@@ -12,6 +17,24 @@
 // 6. slice(start,end)
 // 7. substring(start,end)
 // 8. substr(start,length)
+
+// 9. toUpperCase()
+// 10. toLowerCase()
+// 11. concat()
+// 12. trim()
+// 13. trimStart()
+// 14. trimEnd()
+// 15. padStart()
+// 16. padEnd()
+// 17. repeat()
+// 18. replace()
+// 19. replaceAll()
+// 20. split()
+
+
+
+
+
 
 
 // 1. length
@@ -66,6 +89,7 @@
 // console.log(text[4]) // E
 
 
+
 // 6. slice(start,end)
 // slice() extracts a part of a string and returns the extracted part in a new string.
 // The method takes 2 parameters: start position, and end position (end not included).
@@ -104,6 +128,67 @@
 
 
 
+// 9. toUpperCase()
+// let text = 'Hello World!'
+// text.toUpperCase() // HELLO WORLD!
+// console.log(text) // Hello World!
+// // But..
+// let newText = text.toUpperCase()
+// console.log(newText) // HELLO WORLD!
+// console.log(text) // Hello World!
+
+
+
+// 10. toLowerCase()
+// let text = "Hello World!"
+// let newText = text.toLowerCase();  // hello world!
+// console.log(newText) // hello world!
+// console.log(text.toLowerCase()) // hello world!
+
+// 11. concat()
+// concat() joins two or more strings:
+
+// let text1 = 'Hello'
+// let text2 = 'World'
+// let text3 = text1.concat(' ',text2)
+// console.log(text3) // Hello World
+
+// let anotherText = text1.concat('My name is ',text2,' Tanvir Ahmed')
+// console.log(anotherText) //HelloMy name is World Tanvir Ahmed
+
+
+
+// 12. trim()
+// The trim() method removes whitespace from both sides of a string:
+
+// let text = '        Hello World          '
+// let trimedText = text.trim()
+// console.log(trimedText) // Hello World
+
+
+
+// 13. trimStart()
+// ECMAScript 2019 added the String method trimStart() to JavaScript.
+// The trimStart() method works like trim(), but removes whitespace only from the start of a string.
+
+// let text = '       Hello World        '
+// let trimStart = text.trimStart()
+// console.log(trimStart) // 'Hello World             '
+
+
+
+// 14. trimEnd()
+// ECMAScript 2019 added the string method trimEnd() to JavaScript.
+
+// The trimEnd() method works like trim(), but removes whitespace only from the end of a string.
+
+// let text = '       Hello World        '
+// let trimEnd = text.trimEnd()
+// console.log(trimEnd) // '             Hello World'
+
+
+
+// 15. padStart()
 
 
 
@@ -112,6 +197,25 @@
 
 
 
+
+
+
+
+
+// 16. padEnd()
+// 17. repeat()
+// 18. replace()
+// 19. replaceAll()
+// 20. split()
+
+
+
+
+// *********Important Notes***************
+
+// All string methods return a new string. They don't modify the original string.
+
+// *********Important Notes***************
 
 
 
