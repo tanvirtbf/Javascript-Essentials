@@ -3,6 +3,18 @@
 // *********Important Notes***************
 // All string methods return a new string. They don't modify the original string.
 
+// How i convert a number or others data type to string ?
+// using toString() method
+// let number = 123
+// console.log(typeof(number)) // number 
+// let str = number.toString() 
+// console.log(typeof(str)) // string
+
+// number.toString()
+// console.log(typeof(number)) // number
+
+
+
 // All String Method... (total20)
 
 // 1. length
@@ -189,20 +201,53 @@
 
 
 // 15. padStart()
+// The padStart() method pads a string from the start.
+// It pads a string with another string (multiple times) until it reaches a given length.
+// Examples:- Pad a string with "0" until it reaches the length 4:
+// let text = '5'
+// let newText = text.padStart(4,'0')
+// console.log(newText) // 0005
 
+// Example :- Pad a string with "x" until it reaches the length 4:
+// let text = "5";
+// let padded = text.padStart(4,"x");
 
-
-
-
-
-
-
-
+// some notes about padStart
+// The padStart() method is a string method.
+// To pad a number, convert the number to a string first.
+// See the example below.
+// let numb = 5;
+// let text = numb.toString();
+// let padded = text.padStart(4,"0");
 
 
 
 
 // 16. padEnd()
+// The padEnd() method pads a string from the end.
+// It pads a string with another string (multiple times) until it reaches a given length.
+
+// let text1 = '0131'
+// let lastText = text1.padEnd(11,'*')
+// console.log(lastText) // 0131*******
+
+// Some Notes about padEnd
+// The padEnd() method pads a string from the end.
+// It pads a string with another string (multiple times) until it reaches a given length.
+// See the example below.
+// let numb = 5;
+// let text = numb.toString();
+// let padded = text.padEnd(4,"0");
+
+
+
+
+
+
+
+
+
+
 // 17. repeat()
 // 18. replace()
 // 19. replaceAll()
