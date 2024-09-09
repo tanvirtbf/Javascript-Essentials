@@ -289,6 +289,46 @@
 
 
 
+// 21. includes()
+
+// The includes() method returns true if a string contains a specified string.
+// Otherwise it returns false.
+// The includes() method is case sensitive.
+
+// let text = "Hello world, welcome to the universe.";
+// let result = text.includes("world");
+// console.log(result) // true
+// console.log(text.includes('wo')) // true
+
+// includes method er second optional parameter holo index number . kon index number theke khuja start korbe seta sekhane deya hoy
+// Example :
+// console.log(text.includes('He',2)) // false
+// console.log(text.includes('He',0)) // true
+
+
+
+// 22. indexOf()
+
+// The indexOf() method returns the position of the first occurrence of a value in a string.
+// The indexOf() method returns -1 if the value is not found.
+// The indexOf() method is case sensitive.
+
+// let text = "Hello world, welcome to the universe.";
+// let result = text.indexOf("welcome");
+// console.log(result) // 13 (karon 13 number index theke 'welcome' string start hoise)
+
+// let text = "Hello world, welcome to the universe.";
+// let result = text.indexOf("Welcome");
+// console.log(result) // Welcome bolte kono string nei text variable er moddhe . karon indexOf method case sensitive
+
+
+// let text = "Hello world, welcome to the universe.";
+// let result = text.indexOf('e')
+// console.log(result) // 1 (first e paise 1 number index e . tai return 1)
+// console.log(text.indexOf("e")) // 1
+
+
+
 
 
 // *********Important Notes***************
