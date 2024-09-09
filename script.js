@@ -8,7 +8,10 @@
 // 4. at()
 // 5. []
 
-// 6. 
+// There are 3 methods for extracting a part of a string:
+// 6. slice(start,end)
+// 7. substring(start,end)
+// 8. substr(start,length)
 
 
 // 1. length
@@ -61,6 +64,54 @@
 // console.log(text[2]) // C
 // console.log(text[5]) // undefined
 // console.log(text[4]) // E
+
+
+// 6. slice(start,end)
+// slice() extracts a part of a string and returns the extracted part in a new string.
+// The method takes 2 parameters: start position, and end position (end not included).
+// slice method accept negative value or index in parameter
+
+// Example :- Slice out a portion of a string from position 7 to position 13:
+
+// let text = "Apple, Banana, Kiwi";
+// let part = text.slice(7,13)
+// console.log(part) // Banana
+// console.log(text.slice(1,4)) // ppl
+// console.log(text.slice(3,8)) // le, B
+
+
+
+// 7. substring(start,end)
+// substring() is similar to slice(). The difference is that start and end values less than 0 are treated as 0 in substring(). 
+// ekhane substring er ekta bishesh gun hocche jodi start position boro hoy and end position choto hoy, jemon text.slice(4,1) tahole substring automatic (4,1) ke (1,4) banaiya dibe and sei onujayii output dibe . kintu ai jinish ta slice method e nei .
+// arekta bishesh gun hocche jodi negative value deya hoy tahole substring automatic seta ke 0 hishebe count kore . tar mane text.substring(-3,2) dile seta actually text.substring(0,2) hishebe treat kore
+
+// let text = 'ABCDE'
+// console.log(text.substring(-4,2)) // AB (ekhane -4 ke 0 dhore nise and 0 theke 2 er ag porjonto mane 1 index porjonto character print korse)
+// console.log(text.substring(3,-2)) // ABC (ekhane -2 ke 0 dhore nise and 0 theke 2 porjonto character print korse)
+// console.log(text.substring(4,1)) 
+
+
+
+// 8. substr(start,length)
+
+// substr() is similar to slice(). The difference is that the second parameter specifies the length of the extracted part. (second parameter holo koyta character se nibe and first parameter holo koto number index theke neya start korbe)
+
+// let text = 'ABCDEFG'
+// console.log(text.substr(2,4)) // CDEF
+// console.log(text.substr(3,0)) // null
+// console.log(text.substr(3,1)) // D
+
+
+
+
+
+
+
+
+
+
+
 
 
 
