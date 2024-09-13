@@ -866,7 +866,7 @@
 // evabe copy korle somossha hocche obj1 e kichu change korle obj2 te change hoy, obj2 te kichu change korle obj1 eo change hoy . karon tara same memory address e point kora thake . karon obj2 = obj1 korar maddhome obj1 er memory address obj2 te store hoise .
 // kintu evabe copy korle to project e somossha hobe . tai amon vabe copy korte hobe jate obj1 change korle obj2 change na hoy, obj2 change korle jate obj1 change na hoy . tar jonno obj1 and obj2 alada alada memory te store korte hobe . tar jonno need shallow copy . shallow copy korle obj1 er same value obj2 te ashe kintu tara alada alada memory address e point kora thake
 // Deepy copy need :
-// shallow copy just 1 stage porjonto copy korte pare . kintu jokhon object er object thake, array er vitor array thake , or object er vitor array thake , mot kotha kono non-primitive er vitor arekta non-premitive thake tokhon setake copy korte pare na alada alada memory te rekhe . seikhetre vitorer sei non-premitive ke same memory address e rekhe dey . tai ektay change korle arektay o change hoye jay . ai problem solve korte ashe deep copy . deep copy diye vitorer nested sob non-premitive keo alada alada memory te rekehe copy korte pare
+// shallow copy just 1 stage porjonto copy korte pare . kintu jokhon object er vitor object thake, array er vitor array thake , or object er vitor array thake , mot kotha kono non-primitive er vitor arekta non-premitive thake tokhon setake copy korte pare na alada alada memory te rekhe . seikhetre vitorer sei non-premitive ke same memory address e rekhe dey . tai ektay change korle arektay o change hoye jay . ai problem solve korte ashe deep copy . deep copy diye vitorer nested sob non-premitive keo alada alada memory te rekehe copy korte pare
 
 // Shallow Copy with Object.assign(newItem,oldItem)
 // let obj1 = {
@@ -890,6 +890,7 @@
 // console.log(obj1===obj2) // false
 // tate obj1 er sob value obj2 te ashlo kintu alada alada memory address e point holo
 
+
 // Shallow Copy with spread operator
 // let obj1 = {
 //   fname : 'Tanvir',
@@ -903,6 +904,7 @@
 // let arr2 = [...arr1]
 // console.log(arr1 === arr2)
 
+
 // Shallow Copy with for loop
 // numbers = [1, 2, 3];
 // numbersCopy = [];
@@ -910,6 +912,8 @@
 // for (i = 0; i < numbers.length; i++) {
 //   numbersCopy[i] = numbers[i];
 // }
+
+
 
 //Shallow Copy with while loop
 // numbers = [1, 2, 3];
@@ -1373,6 +1377,11 @@
 // console.log(funName) // Ans : Tanvir Ahmed
 // ekhane let funName = fname jokhon kora hoy tokhon fname er value copy hoye funName er moddhe ashe . tai funName change korle fname er value change hoy na . abar fname er value change korle funName er value change hoy .
 
+
+
+
+
+
 // Execution Context (Tapas)
 // Tokenization in Javascript
 // javascript ekdom first e tar code gula ke tukra tukra kore vag kore . eta kei Tokenization bole
@@ -1487,16 +1496,16 @@
 
 //Lexical Position or Lexical Contaxt or Lexical Environment
 // prottekta single code er position keii lexical position bole . position bolte bujhano hoise ei particular code ta file er thik kothay ache .
-// const a = 10; // Lexical Position or Lexical context is line number 819
-// let b = 'Hello' // Lexical Position or Lexical context is line number 820
+// const a = 10; // Lexical Position or Lexical context is line number 1499
+// let b = 'Hello' // Lexical Position or Lexical context is line number 1500
 
-// function hello(){ // Lexical Position or Lexical context is line number 822-824
+// function hello(){ // Lexical Position or Lexical context is line number 1502-1504
 //   console.log('Hello World!')
 // }
 
-// let c = 11; // Lexical Position or Lexical context is line number 827
+// let c = 11; // Lexical Position or Lexical context is line number 1506
 
-// hello(); // Lexical Position or Lexical context is line number 829
+// hello(); // Lexical Position or Lexical context is line number 1508
 
 //Execution Contaxt understand by some text:
 // onk boro source code er moddhe onk lexical contaxt thake . prottekta lexical contaxt or prottekta particular code ke execute korar jonno javascript er ja ja dorkar tai holo oi particular code er jonno execution contaxt . line number 371 er jonno alada execution contaxt create hoy, line number 372 er jonno alada execution contaxt create hoy,line number 374-376  er jonno alada execution contaxt create hoy,evabe prottekta particular code er jonno alada alada execution contaxt create hoy
@@ -1506,11 +1515,11 @@
 // GEC 2 ta special jinish amader dey(jodio 0 line code thake)
 // 1. window 2. this (window === this => true) --> tar mane window and this same memory location point kore
 
-// GEC er 2 ta phase thake
+// GEC or jekono execution contaxt er 2 ta phase thake
 // 1. Creation phase
 // 2. Execution phase
 
-// Creation phase eii 2 ta special object peye thaki, 1. window(global object) 2. this (point on window)
+// GEC er Creation phase eii 2 ta special object peye thaki, 1. window(global object) 2. this (point on window)
 
 // Global execution contaxt er creation phase e ki ki hobe ? nicher coder er jonno..
 // var tom = 'Hello Tom'
@@ -1540,6 +1549,7 @@
 
 //GEC for test 1 =>
 //Creation phase :
+// jerry and helloJerry() er jonno memory allocated hobe
 //jerry : undefined
 //helloJerry : function helloJerry(){clg()}
 //Execution phase :
@@ -1547,16 +1557,21 @@
 //(in lexical position 420, execute a function . that's why create a new execution contaxt named function execution contaxt(FEC))
 
 // FEC for Lexical position 420
+
 //creation phase :
 //hi=undefined
+//define log function in memory but no execute
+
 //execution phase:
+// hi=1;
 //log() from console() (will create new execution contaxt FEC)
 
 // FEC for console.log()
 //Creation phase:
-//Execution phase: so on...
+//Execution phase:  
+// execute log function and print "Hello Jerry"
 
-//How Javascript Engine Managed execution contaxt tree ? Answer : Using Call Stack(last in first out)
+//How Javascript Engine Managed execution contaxt tree ? kivabe javascript ai execution contaxt gula manage kore ?  Answer : Using Call Stack(last in first out)
 
 //test 2 code
 // console.log("Inside global execution context")
@@ -1603,29 +1618,6 @@
 
 // Understand Stack and Heap Memory in video Tapas
 
-//Visualiza variable address
-
-// const firstName = 'Tanvir'
-// const lastName = 'Ahmed'
-// const userAge = 15
-// const isGraduated = false
-// const firstName2 = 'Tanvir'
-// const firstName2 = 'Tan'+'vir'
-// const isMale = !!0
-// const isFemale = true
-// const isNull = null
-// const isUndefined = undefined
-// const isEmptyString = ''
-
-// Execution Context Again
-//test code
-// var name = 'Tanvir'
-
-// function sayHi(){
-//   console.log(this.name)
-// }
-//NOW FEC (Function Execution Context)
-// sayHi()
 
 // Hoisting
 //1. Variable hoisting (variable create korar ageii oi variable ke use kora)
@@ -1640,7 +1632,8 @@
 // karon test ekta variable hishebe count hoise. test er value ekta function kintu test kono function na .
 
 // note for hoisting :
-// let and const er khetre variable hoisting possible na . karon var er khetre creation phase e undefined assign kora hoy kintu let and const er khetre kichuii assign kora hoy na . tai let and const er khetre hoisting korle error ashbe . tar mane javascript amader pressure dicche jate amra kono variable or function declare korar age execute na kori
+// let and const er khetre variable hoisting possible na . karon var er khetre creation phase e undefined assign kora hoy kintu let and const er khetre kichuii assign kora hoy na . tai let and const er khetre hoisting korle error ashbe . tar mane javascript let and const create kore amader pressure dicche jate amra kono variable or function declare korar age execute na kori
+// best practice holo hoisting avoid kora 
 
 // console.log(a) // undefined
 // var a = 'hello'
@@ -1660,13 +1653,13 @@
 //1. Global Scope
 // rules :  jodi kono function er vitor othoba kono block er vitor na thake tahole seta global scope . var let const jeta diyeii variable declare kori na kno seta global scope hoye jay .
 // rules : eta jekono function block everything sob jayga theke access hote pare
-// rules : global scope use korar ee dorkar nei . jodi use korteii hoy tahole const diye use korle valo . nahole variable override hoye jauyar chance thake
+// rules : global scope use korar ee dorkar nei . jodi use korteii hoy tahole const diye use korle valo . nahole variable overwrite hoye jauyar chance thake
 
-// Example of Block scope :
+// Example of Global scope :
+// const a = 10;
+// let b = 'hello'
+// var c = false
 // function sayHi(){
-//   const a = 10;
-//   let b = 'hello'
-//   var c = false
 //   function hello(){
 //     if(true){
 //       console.log(b) // hello
@@ -1680,10 +1673,24 @@
 //   hello();
 // }
 // sayHi()
+// {console.log(a)} // 10
+// if(!c) console.log(c) // false 
 
 //2. Local Scope or Functional Scope
 // rules : function er vitor var diye hok, let diye hok , const diye hok jeta diyeii variable declare kori na kno seta oi function er baire access kora jay na . etaii local scope or functional scope
 
+// Example 1 :
+// function hii(){
+//   const a = 10;
+//   let b = 20;
+//   var c = 30;
+//   console.log(a,b,c) // 10 , 20 , 30
+// }
+// console.log(a) // a is not defined
+// console.log(b) // b is not defined
+// console.log(c) // c is not defined
+
+// Example 2 :
 // function sayHi(){
 //   console.log(a) // error
 //   console.log(b) // error
@@ -1704,7 +1711,8 @@
 // sayHi()
 
 // Shadowing
-// jodi globally kono variable er same name diye locally kono variable declare kora hoy and tader value jodi change hoy tahole localscope e local variable value taii show hobe r global scope e global variable er value ta show hobe
+// jodi globally kono variable er same name diye locally kono variable declare kora hoy and tader value jodi same na hoy tahole localscope e local variable value taii show hobe r global scope e global variable er value ta show hobe
+
 // EX :
 // var a = 'hello'
 // function sayHi(){
@@ -1747,7 +1755,8 @@
 
 // Difference between var , let and const
 // var : var holo functional scope . function er baire access kora jay na . kintu block er baire access kora jay . karon var block scope na , var functional scope
-// let and const : kintu let and const block scope . block er baire access kora jay na
+// let and const : kintu let and const block scope . block er baire access kora jay na , tar sathe let and const jodi kono function er vitor declare kora hoy tahole seta function er baireo access kora jay na
+
 // EX :
 // if(true){
 //   let x = 10;
@@ -1771,6 +1780,7 @@
 // }
 // hello()
 // Ans : 10
+// upore clg(a) jokhon hoise tokhon a ke print korar jonno a er value khuja start hoy . a er value hello2() er moddhe na peye se tar parent hello1() er moddhe jay , sekhaneo jokhon na pay tokhon se hello1() er parent hello() er kase jay and sekhane a er value khuje pay
 
 // EX :
 // function hello(){
@@ -1789,7 +1799,7 @@
 
 // More about Scope Chain
 // lexical context or lexical scope
-// jokhon jei function or variable jekhane rakha hoy setai holo tar lexical scope or lexical context . aro bujhate gele bolte nicher example er jerry function er lexical scope hocche global scope, karon take globally placed kora hoyeche and tom function er vitor name variable er lexical scope or lexical context hocche tom function er functional scope, karon take tom function er vitore define kora hoyeche . abar tom function er lexical context or lexical scope hocche global scope , karon tom ke globally define kora hoyeche
+// jokhon jei function or variable jekhane rakha hoy setai holo tar lexical scope or lexical context . aro bujhate gele nicher example er jerry function er lexical scope hocche global scope, karon take globally placed kora hoyeche and tom function er vitor name variable er lexical scope or lexical context hocche tom function er functional scope, karon take tom function er vitore define kora hoyeche . abar tom function er lexical context or lexical scope hocche global scope , karon tom ke globally define kora hoyeche
 // function ke jekhanei call or invoked kora hok function er scope hocche jekhane take rakha hoyeche , orthat jei scoope e take rakha hoyeche . ai khetre niche jerry function ke tom function er vitore  call kora holeo jerry function er lexical context or lexical scope kintu tom function er baire global scope e .
 // Ex:
 // function jerry(){
@@ -1803,6 +1813,32 @@
 // tom()
 // ekhane jerry jokhon name pacchilo na tokhon se tar immidiate ager scope orthat global scope e khuje name er value 'cartoon' pay . tai se cartoon print kore dey . jerry kintu jekhane take call kora hoyeche sekhane khujeni , orthat tom function er vitore khujeni . karon take tom er vitor define kora hoy nai . just call kora hoyeche . tar mane call jekhaneii koruk function er definition jekhane ase setaii tar scope . sekhane na pele tar uporer scope e khujbe
 
+// Example : 
+// var a = 10;
+// function fun1(){
+
+//   function fun2(){
+
+//   }
+//   function fun3(){
+
+//     function fun4(){
+//       var a = 20;
+//       fun0()
+//     }
+//     fun4()
+//   }
+//   fun3()
+// }
+// fun1()
+// function fun0(){
+//   console.log(a)
+// }
+// // Ans : 10
+// upore fun0 ke call kora hoise fun4() er moddhe . sekhane kintu a = 20 deya hoise . kintu fun0() er moddhe clg(a) kintu a = 20 ney nai . a=10 nise . karon jokhonii fun0() ke call kora hoise tokhon pointer soja fun4() theke ber hoye fun0() jei location e ase sekhane chole jay and sekhan thekeii child to parent , parent to grandparent akare variable khujte thake...
+
+
+
 // closure
 // outer function inner function refreshment..
 // function outer(){
@@ -1813,13 +1849,16 @@
 //   inner()
 // }
 // outer() // inner call in outer
+// Answer : 
+// outer
+// inner
 
 // now outer function return inner function
-// function outer(){
-//   return function inner(){
-//     console.log('inner')
-//   }
-// }
+function outer(){
+  return function inner(){
+    console.log('inner')
+  }
+}
 // console.log(outer)
 // output :
 // ƒ outer(){
@@ -1832,6 +1871,7 @@
 // ƒ inner(){
 //   console.log('inner')
 // }
+// console.log(outer()()) // Ans : inner
 
 // function outer(){
 //   return function inner(){
@@ -1875,6 +1915,7 @@
 //     console.log(bari) // hellonikaton
 //   }
 //   chele()
+//   console.log(bari) // hellonikaton
 // }
 // baba()
 // ekhane chele tar babar sob property access korte pare and take change korte pare
@@ -1942,6 +1983,10 @@
 // amarChele() // myHome
 // baba function execute hoye jauyar pore to baba function er property bari callstack theke ber hoye jauyar kotha . kintu na . baba execute houyar poreo chele function ta babar property use korte parche , totokkhon use korte parbe jotokkhon chele purapuri vabe execute na hoy . ai jinishtaii closure . ekhane chele function taii closure . karon chele onno function er property use korte parche sei property jei function e ache sei function execute houyar poreo use korte parche . tai chele function taii closure
 
+// *******Important Notes******** 
+// tar mane amr bap moira jauyar poreo ami amar bap er shompotti use korte partesi jotokkhon na ami moira jaitesi etaii closure er concept and ami hoilam closure function
+
+
 // Some Example of Closure
 
 // Example 1 :
@@ -1972,7 +2017,7 @@
 // innerFunc() // Ans : 25
 // var x = 20 jokhon kora hoyeche tokhon ashole ager x er 10 value ke replace kore 20 kora hoyeche . r jehetu innerFunc() hoite hoite x er value 20 kora hoise tai x = 20 ei address e point kora chilo x er value
 
-// Very Important Note for Closure
+// ******Very Important Note for Closure********
 // closure jokhon kono variable ke close kore, orthat parent er kono variable ke nije use kore  tokhon sei variable er immidiate value ke dhore rakhe na . sei variable er memory address ke point kora thake . orthat jokhon closure function ta call kora hobe tokhon oi variable er present value show hobe . example niche deya holo
 // for(var i = 0; i<5; i++){
 //   setTimeout(function(){
@@ -1999,7 +2044,7 @@
 //   },1000)
 // }
 // Ans : 0 1 2 3 4
-// ekhane let use koray loop jotobar ghurche totobar notun i variable create korche notun notun memory address e rakhche . kintu var diye loop ghuranor somoy protibar same i er value change kora hocchilo jekhane let diye protibar notun i create kora hocchilo .
+// ********Important Note******* : ekhane let use koray loop jotobar ghurche totobar notun i variable create korche notun notun memory address e rakhche . kintu var diye loop ghuranor somoy protibar same i er value change kora hocchilo jekhane let diye protibar notun i create kora hocchilo .
 
 // Immutability and Mutability
 // definition : immutability mane jeta change kora jay na . mutability mane jeta change kora jay
@@ -2014,7 +2059,7 @@
 
 // Higher Order Function (HOC)
 // What is Higher Order Function
-// Ans : jokhon kono function er vitor onno kono function ke return kora hoy othoba function ke pass kora hoy tokhon seta Higher Order Function .  amra function ke call korar somoy tar parameter e string , integer , object , array etc onk dhoroner data type er data pathai . kintu function jokhon pathabo tokhon seta higher order function
+// Ans : jokhon kono function er parameter er vitor onno kono function ke return kora hoy othoba function ke pass kora hoy tokhon seta Higher Order Function .  amra function ke call korar somoy tar parameter e string , integer , object , array etc onk dhoroner data type er data pathai . kintu function jokhon pathabo tokhon seta higher order function
 
 // function sayHi(){
 //   console.log('Hiiii')
@@ -2047,25 +2092,46 @@
 // })
 // ekhane add() holo higher order function and add er vitor jei function pass kora hoise seta callback function
 
+
+// *****Important Note*********
+// function a(b){
+//   console.log('Hello')
+//   return b
+// }
+// function b(){
+//   console.log('hii')
+// }
+// const x = a(b)
+// x()
+// upore a function holo higher order function and b holo callback function
+
+
 // SetTimeout and SetInterval
 
 // setTimeout
 // setTimeout('console.log("Tanvir")') // Ans : Tanvir
 // ekhane javascript 'console.log(true)' ai string ta ke behind the scene javascript code er moto nicche . tai true print hocche
+
 // setTimeout('console.log("Tanvir"); console.log("Hello")') // Tanvir   Hello
 // setTimeout('var a = 10; console.log(a)') // 10
 // ekhane setTimeout er vitor javascript er sob code likha jay .
+
 // setTimeout('hiii') // Error : hiii is not defined
 // ekhane javascript hiii ke ekta variable hishebe dekhche tai jehetu hiii nam e kono variable nei tai error message ashce hiii is not defined
+
 // setTimeout("const hiii = 'Hello World'; console.log(hiii)") // Hello World
+
 // const hiii = 'Hello World!'
 // setTimeout('hiii') // Not Error
+
 //setTimeout with second parameter
 // setTimeout er first parameter holo jekono javascript code . and second parameter holo time in milisecond . ai time por first parameter e deya javascript code run korbe
 // second parameter holo time milisecond e . jei time por tar vitorer code run hobe
+// Example :
 // setTimeout('console.log("Hello World")', 2000) // Ans : Hello World (After 2 second)
 // setTimeout('console.log("hii"); console.log("hello")',3000) // Ans : hii hello (After 3 second)
 // setTimeout("console.log('Hello World')",3000) // Hello World (After 3 second)
+
 
 // In Browser console with clearTimeout
 // browser er console e setTimeout function likhe enter korle sathe sathe ekta random number ashe . seta hocche oi setTimeout er jonno timer id . jei id use kore ami sei setTimeout ke clear korte pari . karon clear na korle eta browser e theke jay
@@ -2113,6 +2179,15 @@
 // }
 
 // setTimeout and setInterval asynchronous code . tara task queue hoye call stack e ashe
+
+// function a(){
+//   console.log('Hello')
+// }
+// const timer1 = setTimeout(a,3000)
+// setTimeout(()=>{
+//   clearTimeout(timer1)
+// },2999)
+
 
 // const timer1 = setTimeout('console.log("set time 1")',0)
 // const timer2 = setTimeout('console.log("set time 2")')
@@ -2168,6 +2243,7 @@
 //   console.log('hello world')
 // }
 // func() // hello world
+
 // function declaration :
 // jokhon function keyword use kore function er ekta name diye jokhon kono function create kora hoy setake function declaration bole.
 // example :
@@ -2225,6 +2301,11 @@
 // console.log(random()) // 9
 // console.log(random()) // 1
 // tar mane ami chaile first breaket diye return keyword charai return korte pari
+
+// const random = () => (
+//   Math.floor(Math.random() * 10) + 1
+// )
+// random()
 
 // for of vs for in loop
 // let fruits = ['Mango','Banana','Jackfruits','Grapes']
@@ -2320,8 +2401,10 @@
 //   console.log(key + ' : ' + person[key]) // key value pair print korbe
 // }
 
+
 // ******Important Notes*****
 //kintu object ke evabe access korar jonno for in loop khubii time consume hoy . etar jonno best hocche Object.keys() or Object.values() or Object.entries() method
+
 
 // Object.keys()
 // const person = {
@@ -2650,6 +2733,43 @@
 // initialValue ja deya hoy seta diyeii nums er index 0 er 1 er sathe add kora theke shuru kore last value porjonto add kore
 
 // ekhane reduce method khub simple er moddhe dekhano hoise . baki ta pore dekhano hobe details
+
+
+// Some and Every Method 
+
+// Notes : 
+// some() method er moddhe callback function er moddhe jei condition return kora hobe prottekta iteration er jonno tar moddhe jodi jekono 1 ta iteration er belay jodi condition true hoy tahole pura some() method true return kore . and every() method ta some method er motoi, just true return kore jodi sob gula condition true hoy . jekono ekta false hoileii return korbe false
+
+
+
+// some() method 
+// The some() method checks if any array elements pass a test (provided as a callback function).
+// The some() method executes the callback function once for each array element.
+// The some() method returns true (and stops) if the function returns true for one of the array elements.
+// The some() method returns false if the function returns false for all of the array elements.
+// The some() method does not execute the function for empty array elements.
+// The some() method does not change the original array.
+
+// Example : 
+// const ages = [3, 10, 18, 20];
+// ages.some((item,i)=>{
+//   return item>=20
+// })
+
+// every() method 
+// The every() method executes a function for each array element.
+// The every() method returns true if the function returns true for all elements.
+// The every() method returns false if the function returns false for one element.
+// The every() method does not execute the function for empty elements.
+// The every() method does not change the original array
+
+
+// const ages = [3,10,23,32,54]
+// function checkAge(age){
+//   return age> 3
+// }
+// console.log(ages.every(checkAge)) // false
+
 
 //Browser Object Model (BOM)
 
