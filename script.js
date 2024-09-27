@@ -2525,6 +2525,35 @@ function outer(){
 // 1 'February'
 // 2 'March'
 
+// const myName = ['Tanvir','Sadia','Maymuna','Humaira','Ayesha']
+// for(let i of myName){
+//   console.log(i + ' = ' + myName[i])
+// }
+// const user = {
+//   firstName: 'Tanvir',
+//   lastName: 'Ahmed',
+//   age: 25,
+//   isActive: true,
+// }
+// //Object.keys
+// const keys = Object.keys(user)
+// console.log(keys)
+
+// //Object.values
+// const values = Object.values(user)
+// console.log(values)
+
+// //Object.entries
+// const entries = Object.entries(user)
+// console.log(entries)
+
+// for(let i in user){
+//   console.log(i + ' = ' + user[i])
+// }
+
+
+
+
 // Map, Filter and Reduce
 // map ekdom forEach er motoi . just forEach kichui return kore na , kintu map array return kore .
 
@@ -3584,6 +3613,10 @@ function outer(){
 
 // remove single data from localstorage
 // localStorage.removeItem('data') // data nam e ekta variable chilo localstorage e , seta delete hoye gese
+
+
+
+
 
 // XMLHttpRequest (XHR)
 // amra fetch diye kono api fetch kori , eta ashce 2015 shale . tar age manush api fetch korar jonno XMLHttpRequest (XHR) use korto
