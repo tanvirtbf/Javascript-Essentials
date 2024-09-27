@@ -1,5 +1,4 @@
-// String
-
+// String All Method
 // *********Important Notes***************
 // All string methods return a new string. They don't modify the original string.
 
