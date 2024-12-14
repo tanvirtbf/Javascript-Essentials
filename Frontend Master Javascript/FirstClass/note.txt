@@ -1,3 +1,23 @@
 1. kono html file jokhon browser e run kora hoy tokhon er sathe onk gula javascript file thakte pare . mone rakhte hobe browser sob somoy sobgula javascript file ke eksathe kore ekta file e aina download kore . jar karone kono ekta file e jodi same variable er kono variable onno kono file e hoy tahole tara overwrite hobe . eta bujhar jonno app.js er moddhe fileName ekta variable er data dilam 'Tanvir' and app2.js er moddhe fileName='Ahmed' dilam . akhn app2.js file er moddhe setTimeout e 2 second diye fileName console log korar por dekha jay app.js er filename er value ekhane print hocche . karon jotokkhon e app2.js file run hoise totokkhon porjonto app2.js suspend obosthay chilo. 
 
 2. jokhon var, let, const use na kore kono variable declare kora hoy tokhon seta window object er moddhe set hoy . jemon name='tanvir' ,, ekhane name variable ta window object e set hoise . akhn jodi ami console.log(window.name) dei tahole answer ashbe 'tanvir' . similerly var diyeo kono variable declare korle seta window object er moddhe set hoy . etai problem create kore karon ekta project er onk gula js file jehetu ekta single file er moddhe attach hoye browser e run kore tai browser sei single js file er jonno ektaii window object dibe . and sei js file gular moddhe variable overwrite houyar chance thake jehetu sob gulaii window object er moddhe save hobe
+
+3. let or const kokhono block scope e hoy na , borong let or const block scope create kore . jemon :=> 
+    function sayHi(){
+        if(true){
+            var helloWorld = 'Hello World!'
+        }
+        console.log(helloWorld)
+    }
+    sayHi()
+ai code tar 2 or 3 number line e debugger lagaiya jodi run kora hoy tokhon sources tab e giya dekha jabe only global scope and local scope ache . ekhane helloWorld variable ta local scope e ache karon var holo local scope . and global scope to always thakeii . kintu...
+    function sayHi(){
+        if(true){
+            var helloWorld = 'Hello World!'
+            let asd = 'asdfg'
+        }
+        console.log(helloWorld)
+    }
+    sayHi() 
+ai code run kore 2 number line e debugger lagaile sources tab er moddhe ekta arekta scope dekha jabe jar nam block scope . ekhane if() or for() or jekono block er jonno block scope create hoy na . borong let const er jonno block scope create hoy
+and jokhon debugger let asd = 'asdfg' line ta execute kore sathe sathe sekhan theke block scope chole jay 
