@@ -32,10 +32,65 @@ ekhane undefined and null holo special type er data type . undefined and null ma
 undefined and null er moddhe parthokko ki ? 
 undefined holo default value and null holo explicit value . tar mane ki ? tar mane holo jodi ekta variable declare kore sekhane kono value add na kori tahole by default sei variable er value undefined . and jodi amra explicitly kono variable er value null dei tokhon sei variable er valu null hobe . explicitly mane holo nije theke manually deya . kintu undefined maneo khali, null maneo khali . 
 
-undefined and null er moddhe arekta parthokko ase . seta holo jokhon kono variable er value undefined hoy tokhon javascript sei variable er jonno memory space rekhe dey . jokhonii eccha sei memory address e onno data add korte parbo . kintu null set korle javascript oi variable er jonno memory space rakhe na . jokhon data dhuke tokhon memory space create hoy . tar mane null er khetre jotokkhon porjonto khali thakbe or null thakbe totokkhon memory space nibe na . kintu undefined er khetre value na thakleo memory space niye rakhbe 
+null ভেরিয়েবলের জন্য মেমরি বরাদ্দ হয়, কারণ এটি অবজেক্ট টাইপের একটি মান।
+undefined-এর জন্যও মেমরি বরাদ্দ হয়, তবে এটি খুব সামান্য, কারণ এটি ডিফল্ট মান।
+
+1. null:
+null মানে হলো ইচ্ছাকৃতভাবে "কিছু নেই" সেট করা।
+এটি সাধারণত ব্যবহার করা হয় যখন আপনি কোনো ভেরিয়েবলের ভ্যালু খালি বা ফাঁকা রাখতে চান এবং তা স্পষ্টভাবে দেখাতে চান।
+উদাহরণ:
+let myVariable = null; // ইচ্ছাকৃতভাবে ফাঁকা করা হয়েছে
+কিছু বৈশিষ্ট্য:
+এটা একটা অবজেক্ট টাইপের মান। (হ্যাঁ, এটা মজার হলেও সত্যি!)
+এর মানে হলো "খালি" বা "অকার্যকর অবস্থা"।
+ব্যবহার:
+ডাটাবেজ থেকে ডাটা না পাওয়া গেলে সেটাকে null করা হয়।
+কোনো ভেরিয়েবল খালি বা রিসেট করতে হলে null সেট করা হয়।
+
+2. undefined:
+undefined মানে হলো ভেরিয়েবল ঘোষণা করা হয়েছে কিন্তু কোনো মান সেট করা হয়নি।
+এটি JavaScript ডিফল্টভাবে ব্যবহার করে যদি ভেরিয়েবলে কোনো মান অ্যাসাইন না করা হয়।
+উদাহরণ:
+let myVariable; // মান সেট করা হয়নি, তাই undefined
+console.log(myVariable); // undefined দেখাবে
+কিছু বৈশিষ্ট্য:
+এটা টাইপ হিসেবে undefined।
+যদি কোনো ফাংশন কিছু রিটার্ন না করে, তখন তা undefined রিটার্ন করে।
+ব্যবহার:
+ভেরিয়েবল ঘোষণা করা হয়েছে কিন্তু মান দেয়া হয়নি।
+অবজেক্টের এমন কোনো প্রপার্টি অ্যাক্সেস করা হলে যা নেই, তা undefined দেখাবে।
 
 
+মূল পার্থক্য টেবিল আকারে:
+বৈশিষ্ট্য        null	                            undefined
+অর্থ	      ইচ্ছাকৃতভাবে খালি করা।	            কোনো মান সেট করা হয়নি।
+টাইপ	     অবজেক্ট	                         undefined টাইপ
+ডিফল্ট মান?	  না, এটি ম্যানুয়ালি সেট করতে হয়।	      হ্যাঁ, ডিফল্ট মান।
+ব্যবহার	       ভেরিয়েবল বা অবজেক্ট ফাঁকা করতে।	    মান অ্যাসাইন করা হয়নি এমন ক্ষেত্রে।
+
+১. null এবং মেমরি স্পেস:
+যদি কোনো ভেরিয়েবলের মান null সেট করা হয়, তাহলে মেমরি স্পেস ব্যবহার করা হয়।
+
+null আসলে একটি স্পেশাল অবজেক্ট টাইপের মান।
+যখন ভেরিয়েবলে null রাখা হয়, তখন JavaScript সেই ভেরিয়েবলের জন্য রেফারেন্স টাইপ (যেমন অবজেক্ট) হিসেবে মেমরি বরাদ্দ করে।
+যদিও null কোনো ডাটা ধরে রাখে না, এটি স্পষ্টভাবে দেখায় যে ভেরিয়েবলটি ইচ্ছাকৃতভাবে "খালি" রাখা হয়েছে।
+এই কারণে null ভেরিয়েবলের জন্য কিছু মেমরি অ্যাসাইন হয়।
+উদাহরণ:
+let myVariable = null;
+// মেমরি বরাদ্দ হয়েছে কিন্তু মান নেই (খালি হিসেবে সেট করা হয়েছে)।
 
 
+২. undefined এবং মেমরি স্পেস:
+যদি কোনো ভেরিয়েবলের মান undefined হয়, তাহলে মেমরি স্পেস দখল হয়, তবে তা খুব সামান্য।
 
+undefined মানে হলো, ভেরিয়েবল ডিক্লেয়ার করা হয়েছে, কিন্তু এতে কোনো মান অ্যাসাইন করা হয়নি।
+JavaScript এই ভেরিয়েবলের জন্য মেমরি বরাদ্দ করে, কারণ ভেরিয়েবল ডিক্লেয়ার করা হয়েছে।
+মেমরিতে শুধুমাত্র একটি ডিফল্ট মান রাখা হয়, যা undefined।
+উদাহরণ:
+let myVariable;
+// মেমরি বরাদ্দ হয়েছে, কিন্তু কোনো মান সেট করা হয়নি, তাই undefined।
 
+উপসংহার:
+null ভেরিয়েবলের জন্য মেমরি বরাদ্দ হয়, কারণ এটি অবজেক্ট টাইপের একটি মান।
+undefined-এর জন্যও মেমরি বরাদ্দ হয়, তবে এটি খুব সামান্য, কারণ এটি ডিফল্ট মান।
+তবে বাস্তবে এই পার্থক্য খুব কমই গুরুত্বপূর্ণ হয়, কারণ আধুনিক JavaScript ইঞ্জিনগুলি মেমরি ব্যবস্থাপনায় অত্যন্ত দক্ষ।
