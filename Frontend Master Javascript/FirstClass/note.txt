@@ -21,3 +21,21 @@ ai code tar 2 or 3 number line e debugger lagaiya jodi run kora hoy tokhon sourc
     sayHi() 
 ai code run kore 2 number line e debugger lagaile sources tab er moddhe ekta arekta scope dekha jabe jar nam block scope . ekhane if() or for() or jekono block er jonno block scope create hoy na . borong let const er jonno block scope create hoy
 and jokhon debugger let asd = 'asdfg' line ta execute kore sathe sathe sekhan theke block scope chole jay 
+
+4. Data Types 
+
+# Primitive Data Types --- undefined, null, number, BigInt, Symbol, String, Boolean
+# Non-Primitive Data Types --- object
+
+ekhane undefined and null holo special type er data type . undefined and null majhe moddhe as a value treat hoye thake . 
+
+undefined and null er moddhe parthokko ki ? 
+undefined holo default value and null holo explicit value . tar mane ki ? tar mane holo jodi ekta variable declare kore sekhane kono value add na kori tahole by default sei variable er value undefined . and jodi amra explicitly kono variable er value null dei tokhon sei variable er valu null hobe . explicitly mane holo nije theke manually deya . kintu undefined maneo khali, null maneo khali . 
+
+undefined and null er moddhe arekta parthokko ase . seta holo jokhon kono variable er value undefined hoy tokhon javascript sei variable er jonno memory space rekhe dey . jokhonii eccha sei memory address e onno data add korte parbo . kintu null set korle javascript oi variable er jonno memory space rakhe na . jokhon data dhuke tokhon memory space create hoy . tar mane null er khetre jotokkhon porjonto khali thakbe or null thakbe totokkhon memory space nibe na . kintu undefined er khetre value na thakleo memory space niye rakhbe 
+
+
+
+
+
+
