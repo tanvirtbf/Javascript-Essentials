@@ -50,3 +50,53 @@ console.log("Hello" + 5); // Output: "Hello5"
 
 ##Important Notes : 
 + operator diye mainly 2 ta number add kora jay and 2 ta string concatination kora jay . jokhon string + number kora hoy tokhon type Conversion er khetre string beshi priority jay . tai sudhu sei khetre string hoye jay . jemon "2" + 3 = "23" kintu "2" - 1 = 1 hobe . 
+
+উদাহরণ ৩: Boolean থেকে Number
+console.log(true + 1); // Output: 2
+console.log(false + 1); // Output: 1
+কেন?
+true-কে 1 এবং false-কে 0 হিসেবে গণ্য করা হয়।
+
+
+# Explicit Type Conversion
+এটি তখন ঘটে যখন ডেভেলপার নিজে টাইপ পরিবর্তন করতে চান।
+
+উদাহরণ ১: String থেকে Number
+let str = "123";
+let num = Number(str);
+console.log(num); // Output: 123
+console.log(typeof num); // Output: number
+
+উদাহরণ ২: Number থেকে String
+let num = 123;
+let str = String(num);
+console.log(str); // Output: "123"
+console.log(typeof str); // Output: string
+
+উদাহরণ ৩: Boolean থেকে Number
+let isTrue = true;
+let num = Number(isTrue);
+console.log(num); // Output: 1
+
+উদাহরণ ৪: Number থেকে Boolean
+let num = 0;
+let bool = Boolean(num);
+console.log(bool); // Output: false
+
+## Type Conversion Table dekha jabe ./images/typeConversionTable.png file er moddhe
+
+
+কিছু গুরুত্বপূর্ণ পয়েন্ট
+Falsy Values: JavaScript-এ 0, null, undefined, false, "" (খালি স্ট্রিং), এবং NaN হলো "Falsy"।
+
+console.log(Boolean(0)); // Output: false
+console.log(Boolean("")); // Output: false
+Truthy Values: Falsy বাদে সবকিছু "Truthy"।
+
+console.log(Boolean(1)); // Output: true
+console.log(Boolean("Hello")); // Output: true
+NaN (Not-a-Number): যখন সংখ্যা হিসেবে কনভার্ট করা যায় না।
+
+let result = Number("abc");
+console.log(result); // Output: NaN
+এই বিষয়গুলো বোঝার মাধ্যমে JavaScript-এ টাইপ কনভার্শন আরও স্পষ্ট হবে।
