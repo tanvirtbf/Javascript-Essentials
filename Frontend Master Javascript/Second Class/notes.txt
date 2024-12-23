@@ -28,5 +28,25 @@ karon holo javascript kora hoise C and C++ diye . C and C++ er moddhe null er ty
 
 
 
+2. Type Conversion : 
 
+JavaScript-এ টাইপ কনভার্শন একটি গুরুত্বপূর্ণ বিষয়। টাইপ কনভার্শন মানে হল একটি ডেটা টাইপকে অন্য ডেটা টাইপে রূপান্তর করা। JavaScript-এ এটি দুইভাবে ঘটে:
 
+Implicit Type Conversion (Type Coercion): যখন JavaScript স্বয়ংক্রিয়ভাবে টাইপ কনভার্শন করে।
+Explicit Type Conversion: যখন ডেভেলপার সরাসরি টাইপ কনভার্শনের নির্দেশ দেন।
+
+# Implicit Type Conversion (Type Coercion)
+JavaScript কিছু অপারেশনের সময় ডেটার টাইপ স্বয়ংক্রিয়ভাবে পরিবর্তন করে।
+
+উদাহরণ ১: String থেকে Number
+console.log("5" - 2); // Output: 3
+কেন?
+"5" একটি স্ট্রিং, কিন্তু - অপারেটর ব্যবহার করার সময় JavaScript এটিকে Number-এ রূপান্তর করে।
+
+উদাহরণ ২: Number থেকে String
+console.log("Hello" + 5); // Output: "Hello5"
+কেন?
++ অপারেটর ব্যবহার করলে JavaScript সংখ্যাকে স্ট্রিং-এ রূপান্তর করে।
+
+##Important Notes : 
++ operator diye mainly 2 ta number add kora jay and 2 ta string concatination kora jay . jokhon string + number kora hoy tokhon type Conversion er khetre string beshi priority jay . tai sudhu sei khetre string hoye jay . jemon "2" + 3 = "23" kintu "2" - 1 = 1 hobe . 
