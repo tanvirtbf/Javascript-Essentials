@@ -1,0 +1,24 @@
+Ajker topic :=> 
+1. Dynamic Types
+2. typeOf
+3. NaN and -0
+4. Closure
+5. IIFE
+6. Curring
+7. Hoisting
+8. JS Engine
+
+
+
+1. Dynamic Types :
+amader world e 2 type er language ase . ekta hocche Dynamic Types language and arekta hocche Static Types language
+
+#Dynamic Types language : jei programming language e variable declare er somoy type declare korte hoy na setake bole Dynamic Types language . javascript ekta Dynamic types language . javascript compiler nijer value ta porjobekkhon kore decide kore ney sei variable er type ki hobe . jemon :
+let randomVariable = 2
+randomVariable = "h"
+randomVariable = true
+randomVariable = []
+jodio typescript aisha javascript er ai gap ta puron kore 
+
+#Static Types language : jei language e types declare kora hoy jemon C, C++ , Java etc...
+
