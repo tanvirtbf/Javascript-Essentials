@@ -13,3 +13,27 @@
 // console.log(false - 3) // -3
 
 // Explicit Type Conversion 
+
+// let str = "123"
+// console.log(typeof str) // string
+// let num = Number(str) 
+// console.log(num) // 123
+// console.log(typeof num) // number
+
+// let num = 123;
+// let str = String(num);
+// console.log(str); // Output: "123"
+// console.log(typeof str); // Output: string
+
+// let isTrue = true;
+// let num = Number(isTrue);
+// console.log(num); // Output: 1
+
+// let num = 0;
+// let bool = Boolean(num);
+// console.log(bool); // Output: false
+
+
+// let num = "8"
+// let result = 4 + num++
+// console.log(result) // 12
