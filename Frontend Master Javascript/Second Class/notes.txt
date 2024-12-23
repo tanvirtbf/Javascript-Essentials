@@ -1,12 +1,11 @@
 Ajker topic :=> 
 1. Dynamic Types
-2. typeOf
+2. Type Conversion
 3. NaN and -0
 4. Closure
 5. IIFE
 6. Curring
-7. Hoisting
-8. JS Engine
+
 
 
 
@@ -21,4 +20,13 @@ randomVariable = []
 jodio typescript aisha javascript er ai gap ta puron kore 
 
 #Static Types language : jei language e types declare kora hoy jemon C, C++ , Java etc...
+
+##Important Notes : 
+keno null er type object ? 
+amra jokhon typeof null dei tokhon output object ashe . karon ?
+karon holo javascript kora hoise C and C++ diye . C and C++ er moddhe null er type object hoye thake . tai sei same jinishtaii javascript e replicate hoise . eta ekta legecy bug 
+
+
+
+
 
