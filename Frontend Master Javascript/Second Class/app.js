@@ -37,3 +37,24 @@
 // let num = "8"
 // let result = 4 + num++
 // console.log(result) // 12
+
+
+
+
+
+
+
+
+
+
+
+
+// Closure 
+
+let myName = "js"
+let dept = "web"
+
+function show(){
+
+}
+console.dir(show)

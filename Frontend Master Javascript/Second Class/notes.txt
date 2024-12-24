@@ -100,3 +100,15 @@ NaN (Not-a-Number): যখন সংখ্যা হিসেবে কনভা
 let result = Number("abc");
 console.log(result); // Output: NaN
 এই বিষয়গুলো বোঝার মাধ্যমে JavaScript-এ টাইপ কনভার্শন আরও স্পষ্ট হবে।
+
+
+
+
+
+
+
+
+4. Closure 
+
+Definition : A function with some preservered values creates a closure. 
+A Closure is created when a function preserves variables outside of its scope
