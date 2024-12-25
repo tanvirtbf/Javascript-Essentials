@@ -115,20 +115,42 @@
 // Private Variable 
 // closure use kore amon ekta variable create korbo ja bairer code theke access kora jabe na 
 
-function person (name) {
+// function person (name) {
+//     let privateName = name
+//     return {
+//         getName : function(){
+//             return privateName
+//         }, 
+//         setName : function(newName) {
+//             privateName = newName
+//         }
+//     }
+// }
+
+// const personName = person("Tanvir")
+// console.log(personName.getName()) // Tanvir
+// personName.setName("Sadia")
+// console.log(personName.getName()) // Sadia
+
+
+
+// akhn closure diye private variable create korar kichu example deya holo...
+
+// 1. Setter and Getter
+function createPerson(name){
     let privateName = name
     return {
         getName : function(){
             return privateName
-        }, 
-        setName : function(newName) {
+        },
+        setName : function(newName){
             privateName = newName
         }
     }
 }
-
-const personName = person("Tanvir")
-console.log(personName.getName()) // Tanvir
-personName.setName("Sadia")
-console.log(personName.getName()) // Sadia
-
+const person = createPerson("Tanvir")
+console.log(person.getName())
+person.setName("Tanvir Ahmed")
+console.log(person.getName())
+// ব্যাখ্যা:
+// privateName ভেরিয়েবল createPerson ফাংশনের scope-এর মধ্যে encapsulated। শুধুমাত্র getName এবং setName ফাংশনের মাধ্যমে এটি অ্যাক্সেস করা যায়।

@@ -268,3 +268,34 @@ console.log(counter.decrement()); // 0
 ডেটা encapsulation মানে হলো ডেটাকে বাইরের অবাঞ্ছিত অ্যাক্সেস বা পরিবর্তন থেকে লুকিয়ে রাখা এবং নিয়ন্ত্রিত অ্যাক্সেসের ব্যবস্থা করা। এটি প্রোগ্রামের ডেটা সুরক্ষা এবং ব্যবস্থাপনাকে সহজ করে তোলে।
 
 
+
+
+#Important Note : akhn closure diye private variable create korar kichu example deya holo...
+
+
+Closure দিয়ে private variable তৈরি করার মাধ্যমে ডেটা encapsulation এবং সুরক্ষা নিশ্চিত করা যায়। এখানে সহজ থেকে কঠিন উদাহরণ দেওয়া হলো, যাতে আপনি বিভিন্ন ধাপে বিষয়টি ভালোভাবে বুঝতে পারেন।
+
+১. সহজ উদাহরণ: Name Setter এবং Getter
+javascript
+Copy code
+function createPerson(name) {
+    let privateName = name; // Private variable
+
+    return {
+        getName: function() {
+            return privateName;
+        },
+        setName: function(newName) {
+            privateName = newName;
+        }
+    };
+}
+
+const person = createPerson("Alice");
+console.log(person.getName()); // Alice
+person.setName("Bob");
+console.log(person.getName()); // Bob
+// console.log(person.privateName); // Access করতে পারবেন না
+
+ব্যাখ্যা:
+privateName ভেরিয়েবল createPerson ফাংশনের scope-এর মধ্যে encapsulated। শুধুমাত্র getName এবং setName ফাংশনের মাধ্যমে এটি অ্যাক্সেস করা যায়।
