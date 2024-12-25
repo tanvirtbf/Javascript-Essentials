@@ -264,3 +264,6 @@
 // myCart.addItem("maymuna")
 // myCart.addItem("humaira")
 // console.log(myCart.getItems())
+
+
+// 5. Authentication System 
