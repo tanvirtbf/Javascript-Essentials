@@ -231,4 +231,36 @@
 
 // 4. Shopping Cart System :
 
+function createCart(){
+    let items = []
 
+    return {
+        addItem : function(item){
+            items.push(item);
+            return `${item} added to the cart.`;
+        },
+        removeItem: function(item) {
+            const index = items.indexOf(item);
+            if (index > -1) {
+                items.splice(index, 1);
+                return `${item} removed from the cart.`;
+            } else {
+                return `${item} not found in the cart.`;
+            }
+        },
+        getItems : function(){
+            return [...items]
+        }
+    }
+}
+const myCart = createCart()
+
+myCart.addItem("tanvir")
+myCart.addItem("sadia")
+console.log(myCart.getItems())
+myCart.removeItem("tanvir")
+console.log(myCart.getItems())
+
+myCart.addItem("maymuna")
+myCart.addItem("humaira")
+console.log(myCart.getItems())
