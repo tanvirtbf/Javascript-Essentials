@@ -62,20 +62,37 @@
 // console.log(count)
 
 
-function createCounter(){
-    let count = 0
-    return function(){
-        count++
-        return count
+// function createCounter(){
+//     let count = 0
+//     return function(){
+//         count++
+//         return count
+//     }
+// }
+// const counter = createCounter()
+// console.log(counter)
+
+// const count = counter()
+// console.log(count) // 1
+
+// console.log(counter()) // 2
+// console.log(counter()) // 3
+// console.log(counter()) // 4
+
+const bankBalance = (amount) => {
+    let myAmount = amount
+    return {
+        deposite : function(amount) {
+            myAmount = myAmount + amount
+        },
+        withdraw : function(amount) {
+            if(amount<=myAmount){
+                myAmount = myAmount - amount
+            }
+        },
+        checkBalence : function(){
+            return myAmount
+        }
     }
 }
-const counter = createCounter()
-console.log(counter)
-
-const count = counter()
-console.log(count) // 1
-
-console.log(counter()) // 2
-console.log(counter()) // 3
-console.log(counter()) // 4
 
