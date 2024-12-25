@@ -159,33 +159,35 @@
 
 // 2. create a counter
 
-function createCounter(){
-    let count = 0
+// function createCounter(){
+//     let count = 0
 
-    return {
-        increment : function(){
-            count++
-        },
-        decrement : function(){
-            count--
-        },
-        getCount : function(){
-            return count
-        }
-    }
-}
-const counter = createCounter()
+//     return {
+//         increment : function(){
+//             count++
+//         },
+//         decrement : function(){
+//             count--
+//         },
+//         getCount : function(){
+//             return count
+//         }
+//     }
+// }
+// const counter = createCounter()
 
-counter.increment()
-counter.increment()
-counter.increment()
-console.log(counter.getCount()) // 3
+// counter.increment()
+// counter.increment()
+// counter.increment()
+// console.log(counter.getCount()) // 3
 
-counter.increment()
-console.log(counter.getCount()) // 4
+// counter.increment()
+// console.log(counter.getCount()) // 4
 
-counter.decrement()
-counter.decrement()
-counter.decrement()
-console.log(counter.getCount()) // 1
+// counter.decrement()
+// counter.decrement()
+// counter.decrement()
+// console.log(counter.getCount()) // 1
+
+
 
