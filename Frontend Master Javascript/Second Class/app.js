@@ -79,33 +79,35 @@
 // console.log(counter()) // 3
 // console.log(counter()) // 4
 
-const bankBalance = (amount) => {
-    let myAmount = amount
-    return {
-        deposite : function(amount) {
-            myAmount = myAmount + amount
-        },
-        withdraw : function(amount) {
-            if(amount<=myAmount){
-                myAmount = myAmount - amount
-            }else {
-                return "Insufficient Balance!"
-            }
-        },
-        checkBalence : function(){
-            return myAmount
-        }
-    }
-}
+// const bankBalance = (amount) => {
+//     let myAmount = amount
+//     return {
+//         deposite : function(amount) {
+//             myAmount = myAmount + amount
+//         },
+//         withdraw : function(amount) {
+//             if(amount<=myAmount){
+//                 myAmount = myAmount - amount
+//             }else {
+//                 return "Insufficient Balance!"
+//             }
+//         },
+//         checkBalence : function(){
+//             return myAmount
+//         }
+//     }
+// }
 
-const tanvir = bankBalance(2000)
-console.log(tanvir.checkBalence()) // 2000
+// const tanvir = bankBalance(2000)
+// console.log(tanvir.checkBalence()) // 2000
 
-tanvir.deposite(500)
-console.log(tanvir.checkBalence()) // 2500
+// tanvir.deposite(500)
+// console.log(tanvir.checkBalence()) // 2500
 
-tanvir.withdraw(1500)
-console.log(tanvir.checkBalence()) // 1000
+// tanvir.withdraw(1500)
+// console.log(tanvir.checkBalence()) // 1000
 
-console.log(tanvir.withdraw(1200)) // Insufficient Balance!
-console.log(tanvir.checkBalence())
+// console.log(tanvir.withdraw(1200)) // Insufficient Balance!
+// console.log(tanvir.checkBalence())
+
+
