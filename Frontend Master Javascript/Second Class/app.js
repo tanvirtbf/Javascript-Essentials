@@ -54,7 +54,6 @@
 let myName = "js"
 let dept = "web"
 
-function show(){
+function show(){}
 
-}
 console.dir(show)
