@@ -186,4 +186,85 @@ closure er moddhe ekta term ashe . seta holo ডেটা encapsulation . er man
 
 ডেটা ব্যবহারের জন্য নির্দিষ্ট মেথড বা API তৈরি করা হয়, যা ডেটাকে নিয়ম মেনে পড়তে বা পরিবর্তন করতে দেয়।
 
+mane holo amon ekta function jar scope er moddhe kono variable thakbe jeta shorashori function er baire keu access korte parbe na . jodi korte chay tahole take ekta rules follow korte hobe . jemon oi function kichu closure function diye dilo ja diye ami oi variable ke rules motabek update delete read korte pari . data read write update delete korar ai rules tai holo ডেটা encapsulation . 
+
+Example : 
+function BankAccount(initialBalance) {
+    let balance = initialBalance; // Private variable
+
+    return {
+        deposit: function(amount) {
+            if (amount > 0) {
+                balance += amount; // Balance update
+                return `Deposited: ${amount}, New Balance: ${balance}`;
+            } else {
+                return "Invalid deposit amount!";
+            }
+        },
+        getBalance: function() {
+            return balance; // Balance রিটার্ন
+        }
+    };
+}
+
+const account = BankAccount(1000);
+console.log(account.getBalance()); // 1000
+console.log(account.deposit(500)); // Deposited: 500, New Balance: 1500
+// console.log(account.balance); // Undefined, কারণ এটি encapsulated/private
+
+
+ekhane BankAccount er balance keu directly access korte pare na . jodi access korte chay tahole take kichu rules follow korte hobe . jemon balance dekhte chaile tar vitor getBalance method use korte hobe, balance er value update korte hobe deposit method use kora lagbe . ekhane ডেটা encapsulation toiri hoyeche
+
+ডেটা Encapsulation-এর সুবিধা
+সুরক্ষা: ডেটা সরাসরি বাইরের কোড থেকে পরিবর্তন করা সম্ভব নয়।
+যেমন: উপরের উদাহরণে কেউ সরাসরি balance পরিবর্তন করতে পারবে না।
+নিয়ন্ত্রিত অ্যাক্সেস: ডেটা ব্যবহারের জন্য মেথডের নিয়ম মেনে চলতে হয়।
+ডিবাগিং সহজ: ভুল বা অবাঞ্ছিত পরিবর্তন থেকে ডেটাকে সুরক্ষিত রাখার ফলে ডিবাগিং সহজ হয়।
+মডুলার ডিজাইন: কোডকে ছোট ছোট মডিউলে ভাগ করা যায়, যা ব্যবস্থাপনা সহজ করে।
+
+
+ডেটা Encapsulation না থাকলে কী সমস্যা হয়?
+
+function BankAccount(initialBalance) {
+    this.balance = initialBalance; // Public variable
+}
+
+const account = new BankAccount(1000);
+console.log(account.balance); // 1000
+account.balance = -500; // Balance সরাসরি পরিবর্তন করা হলো
+console.log(account.balance); // -500 (এটি ভুল ডেটা হতে পারে)
+
+এখানে balance public হওয়ায় যে কেউ সরাসরি এর মান পরিবর্তন করতে পারছে। এটি প্রোগ্রামের লজিক ভেঙে দিতে পারে।
+
+
+
+ক্লোজার দিয়ে ডেটা Encapsulation নিশ্চিত করা : 
+
+function Counter() {
+    let count = 0; // Private variable
+
+    return {
+        increment: function() {
+            count++;
+            return count;
+        },
+        decrement: function() {
+            count--;
+            return count;
+        },
+        getCount: function() {
+            return count;
+        }
+    };
+}
+
+const counter = Counter();
+console.log(counter.increment()); // 1
+console.log(counter.decrement()); // 0
+// console.log(counter.count); // Undefined
+
+
+সংক্ষেপে:
+ডেটা encapsulation মানে হলো ডেটাকে বাইরের অবাঞ্ছিত অ্যাক্সেস বা পরিবর্তন থেকে লুকিয়ে রাখা এবং নিয়ন্ত্রিত অ্যাক্সেসের ব্যবস্থা করা। এটি প্রোগ্রামের ডেটা সুরক্ষা এবং ব্যবস্থাপনাকে সহজ করে তোলে।
+
 
