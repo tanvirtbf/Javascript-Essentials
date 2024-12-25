@@ -51,15 +51,31 @@
 
 // Closure 
 
+// function createCounter(){
+//     let count = 0;
+//     return function(){
+//         return count
+//     }
+// }
+// const counter = createCounter()
+// let count = counter()
+// console.log(count)
+
+
 function createCounter(){
-    let count = 0;
+    let count = 0
     return function(){
+        count++
         return count
     }
 }
 const counter = createCounter()
-let count = counter()
-console.log(count)
+console.log(counter)
 
+const count = counter()
+console.log(count) // 1
 
+console.log(counter()) // 2
+console.log(counter()) // 3
+console.log(counter()) // 4
 
