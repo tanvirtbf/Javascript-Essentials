@@ -111,3 +111,24 @@
 // console.log(tanvir.checkBalence())
 
 
+
+// Private Variable 
+// closure use kore amon ekta variable create korbo ja bairer code theke access kora jabe na 
+
+function person (name) {
+    let privateName = name
+    return {
+        getName : function(){
+            return privateName
+        }, 
+        setName : function(newName) {
+            privateName = newName
+        }
+    }
+}
+
+const personName = person("Tanvir")
+console.log(personName.getName()) // Tanvir
+personName.setName("Sadia")
+console.log(personName.getName()) // Sadia
+
