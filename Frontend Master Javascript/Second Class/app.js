@@ -88,6 +88,8 @@ const bankBalance = (amount) => {
         withdraw : function(amount) {
             if(amount<=myAmount){
                 myAmount = myAmount - amount
+            }else {
+                return "Insufficient Balance!"
             }
         },
         checkBalence : function(){
@@ -96,3 +98,14 @@ const bankBalance = (amount) => {
     }
 }
 
+const tanvir = bankBalance(2000)
+console.log(tanvir.checkBalence()) // 2000
+
+tanvir.deposite(500)
+console.log(tanvir.checkBalence()) // 2500
+
+tanvir.withdraw(1500)
+console.log(tanvir.checkBalence()) // 1000
+
+console.log(tanvir.withdraw(1200)) // Insufficient Balance!
+console.log(tanvir.checkBalence())
