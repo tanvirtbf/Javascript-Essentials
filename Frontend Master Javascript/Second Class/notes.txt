@@ -136,3 +136,25 @@ const counter = createCounter();
 console.log(counter()); // 1
 console.log(counter()); // 2
 console.log(counter()); // 3
+
+
+
+Closure এর ব্যবহার:
+Private Variables: Closure ব্যবহার করে এমন ভেরিয়েবল তৈরি করা যায় যা বাইরের কোনো কোড থেকে অ্যাক্সেসযোগ্য নয়।
+
+function Person(name) {
+    let privateName = name; // Private variable
+    return {
+        getName: function() {
+            return privateName;
+        },
+        setName: function(newName) {
+            privateName = newName;
+        }
+    };
+}
+
+const person = Person("John");
+console.log(person.getName()); // John
+person.setName("Doe");
+console.log(person.getName()); // Doe
