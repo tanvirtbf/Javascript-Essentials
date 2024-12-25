@@ -137,20 +137,55 @@
 // akhn closure diye private variable create korar kichu example deya holo...
 
 // 1. Setter and Getter
-function createPerson(name){
-    let privateName = name
+// function createPerson(name){
+//     let privateName = name
+//     return {
+//         getName : function(){
+//             return privateName
+//         },
+//         setName : function(newName){
+//             privateName = newName
+//         }
+//     }
+// }
+// const person = createPerson("Tanvir")
+// console.log(person.getName())
+// person.setName("Tanvir Ahmed")
+// console.log(person.getName())
+// ব্যাখ্যা:
+// privateName ভেরিয়েবল createPerson ফাংশনের scope-এর মধ্যে encapsulated। শুধুমাত্র getName এবং setName ফাংশনের মাধ্যমে এটি অ্যাক্সেস করা যায়।
+
+
+
+// 2. create a counter
+
+function createCounter(){
+    let count = 0
+
     return {
-        getName : function(){
-            return privateName
+        increment : function(){
+            count++
         },
-        setName : function(newName){
-            privateName = newName
+        decrement : function(){
+            count--
+        },
+        getCount : function(){
+            return count
         }
     }
 }
-const person = createPerson("Tanvir")
-console.log(person.getName())
-person.setName("Tanvir Ahmed")
-console.log(person.getName())
-// ব্যাখ্যা:
-// privateName ভেরিয়েবল createPerson ফাংশনের scope-এর মধ্যে encapsulated। শুধুমাত্র getName এবং setName ফাংশনের মাধ্যমে এটি অ্যাক্সেস করা যায়।
+const counter = createCounter()
+
+counter.increment()
+counter.increment()
+counter.increment()
+console.log(counter.getCount()) // 3
+
+counter.increment()
+console.log(counter.getCount()) // 4
+
+counter.decrement()
+counter.decrement()
+counter.decrement()
+console.log(counter.getCount()) // 1
+
