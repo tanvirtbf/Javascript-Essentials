@@ -51,9 +51,15 @@
 
 // Closure 
 
-let myName = "js"
-let dept = "web"
+function createCounter(){
+    let count = 0;
+    return function(){
+        return count
+    }
+}
+const counter = createCounter()
+let count = counter()
+console.log(count)
 
-function show(){}
 
-console.dir(show)
+

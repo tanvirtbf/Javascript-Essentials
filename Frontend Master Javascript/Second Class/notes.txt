@@ -112,3 +112,27 @@ console.log(result); // Output: NaN
 
 Definition : A function with some preservered values creates a closure. 
 A Closure is created when a function preserves variables outside of its scope
+
+Closure হল প্রোগ্রামিংয়ের একটি ধারণা, যা একটি ফাংশনের সাথে তার lexical scope (যেখানে ফাংশনটি ডিফাইন করা হয়েছে) সংযুক্ত করে। Closure মূলত higher-order ফাংশন এবং functional programming-এ ব্যবহৃত হয়। এটি JavaScript সহ অনেক প্রোগ্রামিং ভাষায় পাওয়া যায়।
+
+Closure-এর বৈশিষ্ট্য:
+Lexical Scope Access: Closure একটি nested function, যা তার parent function-এর ভেরিয়েবল এবং scope-এ অ্যাক্সেস করতে পারে, এমনকি parent function-এর execution শেষ হওয়ার পরেও।
+
+State Preservation: Closure state (অবস্থা) সংরক্ষণ করতে পারে, যেমন একটি counter ফাংশনের ক্ষেত্রে।
+
+Encapsulation: Closure encapsulation করতে সাহায্য করে, যা private data তৈরি এবং ম্যানেজ করতে ব্যবহৃত হয়।
+
+Example : 
+function createCounter() {
+    let count = 0; // এটি parent scope-এর একটি ভেরিয়েবল
+    return function() {
+        count++; // nested ফাংশন এটি অ্যাক্সেস করতে পারে
+        return count;
+    };
+}
+
+const counter = createCounter();
+
+console.log(counter()); // 1
+console.log(counter()); // 2
+console.log(counter()); // 3
