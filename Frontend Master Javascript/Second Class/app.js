@@ -191,3 +191,39 @@
 
 
 
+
+// 3. Banking System 
+
+function bankAccount(initialBalance){
+    let balance = initialBalance
+    return {
+        deposit : function(amount){
+            if(amount > 0){
+                balance = balance + amount
+            } else {
+                return "Invalid deposit amount"
+            }
+        },
+        withdraw : function(amount){
+            if(amount > 0 && balance>=amount){
+                balance = balance - amount
+            }else {
+                return "Insufficient Balance for withdraw!"
+            }
+        },
+        getBalance : function(){
+            return balance
+        }
+    }
+}
+const myAccount = bankAccount(2000)
+
+myAccount.deposit(1000)
+console.log(myAccount.getBalance()) // 3000
+
+myAccount.withdraw(500)
+console.log(myAccount.getBalance()) // 2500
+
+myAccount.deposit(2)
+console.log(myAccount.getBalance()) // 2502
+
