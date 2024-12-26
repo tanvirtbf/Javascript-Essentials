@@ -287,3 +287,45 @@
 //   console.log("Hiii")
 // }())
 
+
+// (function(){
+//   var secret = 'Tanvir Ahmed'
+//   console.log(secret)
+// })()
+// console.log(secret) // secret is not defined
+
+
+// Module Pattern (IIFE)
+
+var counter = (function(){
+  var count = 0
+  return {
+    increment : function(){
+      count ++ 
+    },
+    decrement : function(){
+      count--
+    },
+    getCount : function(){
+      return count
+    }
+  }
+}())
+console.log(counter) // {increment: ƒ, decrement: ƒ}
+
+console.log(counter.getCount()) // 0
+
+counter.increment()
+counter.increment()
+
+console.log(counter.getCount()) // 2
+
+counter.decrement()
+
+console.log(counter.getCount()) // 1
+
+counter.increment()
+counter.increment()
+counter.increment()
+
+console.log(counter.getCount()) // 4
