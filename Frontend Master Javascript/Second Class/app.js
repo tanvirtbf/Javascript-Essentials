@@ -279,11 +279,11 @@
 
 // IIFE Example : 
 
-(function(){
-  console.log('HEllo')
-})()
+// (function(){
+//   console.log('HEllo')
+// })()
 
-(function(){
-  console.log("Hiii")
-}())
+// (function(){
+//   console.log("Hiii")
+// }())
 
