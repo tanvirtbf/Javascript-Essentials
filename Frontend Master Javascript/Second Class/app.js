@@ -344,14 +344,33 @@
 
 // Currying 
 
-function curryAdd(a){
-  return function(b){
-    return a*b
-  }
-}
-console.log(curryAdd(5)(5))
+// function curryAdd(a){
+//   return function(b){
+//     return a*b
+//   }
+// }
+// console.log(curryAdd(5)(5))
 
 
 
+// Example : 
+
+// function checkRole(role){
+//   return function(user){
+//     if(user.role === role){
+//       return true
+//     } else{
+//       return false
+//     }
+//   }
+// }
+// const user = {name: 'Tanvir', role:'admin'}
+// console.log(checkRole('admin')(user)) // true
+// console.log(checkRole('student')(user)) // false
+
+
+// const checkRole = a => b => a*b 
+// console.log(checkRole(2)(2)) // 4
+// console.log(checkRole(5)(2)) // 10
 
 

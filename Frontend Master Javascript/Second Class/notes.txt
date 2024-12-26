@@ -438,3 +438,37 @@ console.log(add5(3)); // আউটপুট: 8
 console.log(curryAdd(4)(6)); // আউটপুট: 10
 
 
+আরও ডিটেইল:
+Currying কিভাবে কাজ করে?
+১. Currying এর ফলে একটি ফাংশন শুধু তার একটি আর্গুমেন্ট নিয়ে কাজ করবে।
+২. যখন সমস্ত আর্গুমেন্ট প্রাপ্ত হয়, তখন ফাংশন মূল কাজটি সম্পন্ন করে।
+
+
+বাস্তব ব্যবহার:
+ধরা যাক, একটি প্রজেক্টে আপনাকে ইউজারের রোল চেক করতে হবে। Currying ব্যবহার করে এটি সহজে করা যায়:
+
+function checkRole(role) {
+    return function(user) {
+        return user.role === role;
+    };
+}
+
+const isAdmin = checkRole('admin');
+const isEditor = checkRole('editor');
+
+const user = { name: 'John', role: 'admin' };
+
+console.log(isAdmin(user)); // আউটপুট: true
+console.log(isEditor(user)); // আউটপুট: false
+
+
+আধুনিক সিনট্যাক্স:
+ES6 এর Arrow Function ব্যবহার করে Currying আরও সংক্ষিপ্তভাবে লেখা যায়:
+
+const curryMultiply = a => b => a * b;
+
+console.log(curryMultiply(2)(3)); // আউটপুট: 6
+
+
+উপসংহার:
+Currying জাভাস্ক্রিপ্টের একটি শক্তিশালী কনসেপ্ট যা ফাংশনাল প্রোগ্রামিং স্টাইলকে সহজ করে তোলে। এটি বড় ও জটিল সমস্যাগুলোকে ছোট ছোট অংশে ভাগ করে সমাধান করতে সাহায্য করে।
