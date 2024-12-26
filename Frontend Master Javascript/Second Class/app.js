@@ -333,14 +333,23 @@
 
 // Asynchronous Task Handling: 
 
-for(var i = 0; i<5; i++){
-  (function(index){
-    setTimeout(()=>{
-      console.log(index)
-    }, 5000)
-  }(i))
-}
+// for(var i = 0; i<5; i++){
+//   (function(index){
+//     setTimeout(()=>{
+//       console.log(index)
+//     }, 5000)
+//   }(i))
+// }
 
+
+// Currying 
+
+function curryAdd(a){
+  return function(b){
+    return a*b
+  }
+}
+console.log(curryAdd(5)(5))
 
 
 

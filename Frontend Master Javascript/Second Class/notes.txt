@@ -416,3 +416,25 @@ Currying এর মূল সুবিধা :
     কমপ্লেক্স লজিক সহজে হ্যান্ডেল করা যায়।
 
 
+উদাহরণ:
+
+সাধারণ ফাংশন:
+
+function add(a, b) {
+    return a + b;
+}
+console.log(add(5, 3)); // আউটপুট: 8
+Currying ফাংশন:
+
+function curryAdd(a) {
+    return function(b) {
+        return a + b;
+    };
+}
+
+const add5 = curryAdd(5); // প্রথম আর্গুমেন্ট ৫ সেট করা হলো
+console.log(add5(3)); // আউটপুট: 8
+
+console.log(curryAdd(4)(6)); // আউটপুট: 10
+
+
