@@ -267,3 +267,23 @@
 
 
 // 5. Authentication System 
+
+
+
+
+
+
+
+
+
+
+// IIFE Example : 
+
+(function(){
+  console.log('HEllo')
+})()
+
+(function(){
+  console.log("Hiii")
+}())
+

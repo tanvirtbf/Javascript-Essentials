@@ -299,3 +299,34 @@ console.log(person.getName()); // Bob
 
 ব্যাখ্যা:
 privateName ভেরিয়েবল createPerson ফাংশনের scope-এর মধ্যে encapsulated। শুধুমাত্র getName এবং setName ফাংশনের মাধ্যমে এটি অ্যাক্সেস করা যায়।
+
+
+
+
+
+// IIFE
+
+JavaScript এ IIFE (Immediately Invoked Function Expression) কী?
+IIFE মানে হলো এমন একটি Function যেটি ডিক্লেয়ার করার সাথে সাথে স্বয়ংক্রিয়ভাবে কল (invoke) হয়। এটি সাধারণত এমন কোড ব্লকে ব্যবহৃত হয় যেখানে আমরা কোনো কোডকে isolate করতে চাই বা একটি আলাদা scope তৈরি করতে চাই।
+
+IIFE এর বৈশিষ্ট্য:
+এটি একটি function expression হিসেবে লেখা হয়।
+এটি লেখা মাত্রই execute হয়ে যায়।
+Scope isolation এর জন্য এটি ব্যবহার করা হয়, অর্থাৎ, এর ভেতরের ভেরিয়েবল এবং কোড বাইরের কোনো কোডকে প্রভাবিত করে না এবং বাইরের কোডও এটিকে প্রভাবিত করতে পারে না।
+
+IIFE এর সিনট্যাক্স:
+IIFE সাধারণত দুটি পদ্ধতিতে লেখা হয়:
+
+১. Parentheses দিয়ে wrap করা:
+(function() {
+    console.log("IIFE is running!");
+})();
+
+২. Parentheses এর শেষে রাখে:
+(function() {
+    console.log("Another way of writing IIFE!");
+}());
+
+
+
+
