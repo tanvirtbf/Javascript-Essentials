@@ -1495,6 +1495,7 @@
 
 //Lexical Position or Lexical Contaxt or Lexical Environment
 // prottekta single code er position keii lexical position bole . position bolte bujhano hoise ei particular code ta file er thik kothay ache .
+
 // const a = 10; // Lexical Position or Lexical context is line number 1499
 // let b = 'Hello' // Lexical Position or Lexical context is line number 1500
 
@@ -1853,11 +1854,11 @@
 // inner
 
 // now outer function return inner function
-function outer(){
-  return function inner(){
-    console.log('inner')
-  }
-}
+// function outer(){
+//   return function inner(){
+//     console.log('inner')
+//   }
+// }
 // console.log(outer)
 // output :
 // ƒ outer(){
@@ -7443,7 +7444,7 @@ function outer(){
 // ***** important notes ********
 // bottom to top event chole karon addEventListener er third argument e false thake . eta by default false deya thake . kintu jodi bottom to top er bodole top to bottom korte chai tahole 3rd argument e true dite hobe . tokhon take event capturing bole
 
-// Event Capturing
+// Event Capturing 
 // document.querySelector('body').addEventListener('click',()=>{console.log('body')}, true)
 // document.querySelector('html').addEventListener('click',()=>{console.log('html')}, true)
 // document.getElementById('one').addEventListener('click',()=>{console.log(1)}, true);
@@ -7885,3 +7886,5 @@ function outer(){
 // jodi amra same name diye 2 ba tar theke beshi cookie create kori tahole last name er value ta replace hobe kintu jodi name change kore create kori tahole append hobe
 
 // How to Read Cookies (v.122)
+
+
