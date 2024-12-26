@@ -351,4 +351,54 @@ IIFE এর ব্যবহার:
 
 // console.log(secret); // Error: secret is not defined
 
+2. Module Pattern: মডিউল তৈরি করতে।
+
+var Counter = (function() {
+    var count = 0; // private variable
+
+    return {
+        increment: function() {
+            count++;
+            console.log(count);
+        },
+        reset: function() {
+            count = 0;
+            console.log("Counter reset!");
+        }
+    };
+})();
+
+Counter.increment(); // Output: 1
+Counter.increment(); // Output: 2
+Counter.reset();     // Output: Counter reset!
+
+
+
+3. Code Execution Without Polluting Global Scope:
+
+(function() {
+    var name = "John";
+    console.log("Hello, " + name);
+})();
+
+
+4. Asynchronous Task Handling:
+for (var i = 0; i < 3; i++) {
+    (function(index) {
+        setTimeout(function() {
+            console.log("Index: " + index);
+        }, 1000);
+    })(i);
+}
+// Output:
+// Index: 0
+// Index: 1
+// Index: 2
+
+
+কেন IIFE ব্যবহার করবেন?
+Global scope কে প্রভাবিত করা এড়াতে।
+Private variable এবং function তৈরি করতে।
+একটি সুনির্দিষ্ট কাজ করার জন্য স্বয়ংক্রিয় execution প্রয়োজন হলে।
+কোডকে আরও modular এবং maintainable করতে।
 

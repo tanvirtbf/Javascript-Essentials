@@ -297,35 +297,52 @@
 
 // Module Pattern (IIFE)
 
-var counter = (function(){
-  var count = 0
-  return {
-    increment : function(){
-      count ++ 
-    },
-    decrement : function(){
-      count--
-    },
-    getCount : function(){
-      return count
-    }
-  }
-}())
-console.log(counter) // {increment: ƒ, decrement: ƒ}
+// var counter = (function(){
+//   var count = 0
+//   return {
+//     increment : function(){
+//       count ++ 
+//     },
+//     decrement : function(){
+//       count--
+//     },
+//     getCount : function(){
+//       return count
+//     }
+//   }
+// }())
+// console.log(counter) // {increment: ƒ, decrement: ƒ}
 
-console.log(counter.getCount()) // 0
+// console.log(counter.getCount()) // 0
 
-counter.increment()
-counter.increment()
+// counter.increment()
+// counter.increment()
 
-console.log(counter.getCount()) // 2
+// console.log(counter.getCount()) // 2
 
-counter.decrement()
+// counter.decrement()
 
-console.log(counter.getCount()) // 1
+// console.log(counter.getCount()) // 1
 
-counter.increment()
-counter.increment()
-counter.increment()
+// counter.increment()
+// counter.increment()
+// counter.increment()
 
-console.log(counter.getCount()) // 4
+// console.log(counter.getCount()) // 4
+
+
+// Asynchronous Task Handling: 
+
+for(var i = 0; i<5; i++){
+  (function(index){
+    setTimeout(()=>{
+      console.log(index)
+    }, 5000)
+  }(i))
+}
+
+
+
+
+
+
