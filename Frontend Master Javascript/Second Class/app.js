@@ -442,18 +442,46 @@
 // 4. Custom Form Validation
 // A dynamic form validation system needs to be created.
 
-function validateField(type){
-    return function(fn){
-        return function(val){
-            const isValidate = fn(val)
-            return {type: type, value : val, isValidate }
+// function validateField(type){
+//     return function(fn){
+//         return function(val){
+//             const isValidate = fn(val)
+//             return {type: type, value : val, isValidate }
+//         }
+//     }
+// }
+// const email = validateField('email')(value=> value==='tanver018765@gmail.com')
+// console.log(email('tanver018765@gmail.com')) // { type: 'email', value: 'tanver018765@gmail.com', isValidate: true }
+
+// const password = validateField('password')(value => value === 'mypassword')
+// console.log(password('mypass')) // { type: 'password', value: 'mypass', isValidate: false }
+
+
+
+// 5. Data Sorting System 
+// Sorting a data set according to specific criteria.
+
+function sortData(sortingColumn){
+    return function(order){
+        return function(data){
+            return data.sort((a,b)=> order==='asc' ? a[sortingColumn] - b[sortingColumn] : b[sortingColumn] - a[sortingColumn])
         }
     }
 }
-const email = validateField('email')(value=> value==='tanver018765@gmail.com')
-console.log(email('tanver018765@gmail.com')) // { type: 'email', value: 'tanver018765@gmail.com', isValidate: true }
+const dataArr = [
+    {id: 1, name: 'Tanvir', age: 25, salary: 22000},
+    {id: 2, name: 'Sabbir', age: 15, salary: 18000},
+    {id: 3, name: 'Rifat', age: 18, salary: 26000},
+    {id: 4, name: 'Riduan', age: 17, salary: 28000},
+    {id: 5, name: 'Hasib', age: 16, salary: 35000},
+    {id: 6, name: 'Muntasin', age: 24, salary: 32000}
+]
 
-const password = validateField('password')(value => value === 'mypassword')
-console.log(password('mypass')) // { type: 'password', value: 'mypass', isValidate: false }
+const sortByAge = sortData('age')('asc')
+console.log(sortByAge(dataArr))
 
+const sortBySalary = sortData('salary')('desc')
+console.log(sortBySalary(dataArr))
 
+const sortByName = sortData('name')('asc')
+console.log(sortByName(dataArr))
