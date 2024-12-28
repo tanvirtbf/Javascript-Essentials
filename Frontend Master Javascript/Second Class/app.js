@@ -382,3 +382,16 @@
 
 // 1 . Login System Customization 
 // A logging system where each log message should be displayed with different levels (info, warning, error) and timestamps.
+
+function createLogger(state){
+    return function(time){
+        return function(logMessage){
+            return `[${state} :${time}] ${logMessage}`
+        }
+    }
+}
+
+const myLog = createLogger('info')(new Date().toISOString())
+console.log(myLog('This is Info Message!'))
+
+
