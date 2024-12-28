@@ -395,3 +395,18 @@ const myLog = createLogger('info')(new Date().toISOString())
 console.log(myLog('This is Info Message!'))
 
 
+// 2. Custom Discount System 
+// A system needs to be created where discounts will be applied according to the product.
+
+function applyDiscount(product){
+    return function(discountPercentage){
+        return function(price){
+            return (price - (price * discountPercentage)/100)
+        }
+    }
+}
+const myPurchase1 = applyDiscount('shirt')(10)
+console.log(myPurchase1(100))
+
+const myPurchase2 = applyDiscount('laptop')(20)
+console.log(myPurchase2(120000))
