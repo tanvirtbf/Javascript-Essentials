@@ -417,26 +417,26 @@
 // 3. Multi Level File Filter 
 // A file manager needs to be created where files will be filtered by type, size, and extension.
 
-function filterFiles(fileType){
-    return function(limit){
-        return function(fileExtention){
-            return function(files){
-                return files.filter((item) => item.fileType===fileType && item.length<=limit && item.fileExtention===fileExtention)
-            }
-        }
-    }
-}
+// function filterFiles(fileType){
+//     return function(limit){
+//         return function(fileExtention){
+//             return function(files){
+//                 return files.filter((item) => item.fileType===fileType && item.length<=limit && item.fileExtention===fileExtention)
+//             }
+//         }
+//     }
+// }
 
-const files = [
-    { id: 1, fileType : 'image', length: 30, fileExtention: '.jpg'},
-    { id: 2, fileType : 'video', length: 400, fileExtention: '.mp4'},
-    { id: 3, fileType : 'image', length: 300, fileExtention: '.jpg'},
-    { id: 4, fileType : 'image', length: 10, fileExtention: '.png'},
-    { id: 5, fileType : 'image', length: 70, fileExtention: '.jpg'},
-]
+// const files = [
+//     { id: 1, fileType : 'image', length: 30, fileExtention: '.jpg'},
+//     { id: 2, fileType : 'video', length: 400, fileExtention: '.mp4'},
+//     { id: 3, fileType : 'image', length: 300, fileExtention: '.jpg'},
+//     { id: 4, fileType : 'image', length: 10, fileExtention: '.png'},
+//     { id: 5, fileType : 'image', length: 70, fileExtention: '.jpg'},
+// ]
 
-const myfiles = filterFiles('image')(200)('.jpg')
-console.log(myfiles(files))
+// const myfiles = filterFiles('image')(200)('.jpg')
+// console.log(myfiles(files))
 
 
 // 4. Custom Form Validation
@@ -451,36 +451,38 @@ console.log(myfiles(files))
 //     }
 // }
 // const email = validateField('email')(value=> value==='tanver018765@gmail.com')
-// console.log(email('tanver018765@gmail.com')) // { type: 'email', value: 'tanver018765@gmail.com', isValidate: true }
+// console.log(email('tanver018765@gmail.com')) 
+// // { type: 'email', value: 'tanver018765@gmail.com', isValidate: true }
 
 // const password = validateField('password')(value => value === 'mypassword')
-// console.log(password('mypass')) // { type: 'password', value: 'mypass', isValidate: false }
+// console.log(password('mypass')) 
+// // { type: 'password', value: 'mypass', isValidate: false }
 
 
 
 // 5. Data Sorting System 
 // Sorting a data set according to specific criteria.
 
-function sortData(sortingColumn){
-    return function(order){
-        return function(data){
-            return data.sort((a,b)=> order==='asc' ? a[sortingColumn] - b[sortingColumn] : b[sortingColumn] - a[sortingColumn])
-        }
-    }
-}
-const dataArr = [
-    {id: 1, name: 'Tanvir', age: 25, salary: 22000},
-    {id: 2, name: 'Sabbir', age: 15, salary: 18000},
-    {id: 3, name: 'Rifat', age: 18, salary: 26000},
-    {id: 4, name: 'Riduan', age: 17, salary: 28000},
-    {id: 5, name: 'Hasib', age: 16, salary: 35000},
-    {id: 6, name: 'Muntasin', age: 24, salary: 32000}
-]
-const sortByAge = sortData('age')('asc')
-console.log(sortByAge(dataArr))
+// function sortData(sortingColumn){
+//     return function(order){
+//         return function(data){
+//             return data.sort((a,b)=> order==='asc' ? a[sortingColumn] - b[sortingColumn] : b[sortingColumn] - a[sortingColumn])
+//         }
+//     }
+// }
+// const dataArr = [
+//     {id: 1, name: 'Tanvir', age: 25, salary: 22000},
+//     {id: 2, name: 'Sabbir', age: 15, salary: 18000},
+//     {id: 3, name: 'Rifat', age: 18, salary: 26000},
+//     {id: 4, name: 'Riduan', age: 17, salary: 28000},
+//     {id: 5, name: 'Hasib', age: 16, salary: 35000},
+//     {id: 6, name: 'Muntasin', age: 24, salary: 32000}
+// ]
+// const sortByAge = sortData('age')('asc')
+// console.log(sortByAge(dataArr))
 
-const sortBySalary = sortData('salary')('desc')
-console.log(sortBySalary(dataArr))
+// const sortBySalary = sortData('salary')('desc')
+// console.log(sortBySalary(dataArr))
 
-const sortByName = sortData('name')('asc')
-console.log(sortByName(dataArr))
+// const sortByName = sortData('name')('asc')
+// console.log(sortByName(dataArr))
