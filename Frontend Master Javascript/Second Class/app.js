@@ -374,3 +374,11 @@
 // console.log(checkRole(5)(2)) // 10
 
 
+
+
+
+
+// Currying 10 problem solve : 
+
+// 1 . Login System Customization 
+// A logging system where each log message should be displayed with different levels (info, warning, error) and timestamps.
