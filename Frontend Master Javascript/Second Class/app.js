@@ -417,29 +417,40 @@
 // 3. Multi Level File Filter 
 // A file manager needs to be created where files will be filtered by type, size, and extension.
 
-function filterFiles(fileType){
-    return function(limit){
-        return function(fileExtention){
-            return function(files){
-                return files.filter((item) => item.fileType===fileType && item.length<=limit && item.fileExtention===fileExtention)
-            }
+// function filterFiles(fileType){
+//     return function(limit){
+//         return function(fileExtention){
+//             return function(files){
+//                 return files.filter((item) => item.fileType===fileType && item.length<=limit && item.fileExtention===fileExtention)
+//             }
+//         }
+//     }
+// }
+
+// const files = [
+//     { id: 1, fileType : 'image', length: 30, fileExtention: '.jpg'},
+//     { id: 2, fileType : 'video', length: 400, fileExtention: '.mp4'},
+//     { id: 3, fileType : 'image', length: 300, fileExtention: '.jpg'},
+//     { id: 4, fileType : 'image', length: 10, fileExtention: '.png'},
+//     { id: 5, fileType : 'image', length: 70, fileExtention: '.jpg'},
+// ]
+
+// const myfiles = filterFiles('image')(200)('.jpg')
+// console.log(myfiles(files))
+
+
+// 4. Custom Form Validation
+// A dynamic form validation system needs to be created.
+
+function validateField(fieldType){
+    return function(validateFunction){
+        return function(value){
+            const isValidate = validateFunction(value)
         }
     }
 }
-
-const files = [
-    { id: 1, fileType : 'image', length: 30, fileExtention: '.jpg'},
-    { id: 2, fileType : 'video', length: 400, fileExtention: '.mp4'},
-    { id: 3, fileType : 'image', length: 300, fileExtention: '.jpg'},
-    { id: 4, fileType : 'image', length: 10, fileExtention: '.png'},
-    { id: 5, fileType : 'image', length: 70, fileExtention: '.jpg'},
-]
-
-const myfiles = filterFiles('image')(200)('.jpg')
-console.log(myfiles(files))
-
-
-
+const myForm = validateField('email')(value => /\S+@\S+\.\S+/.test(value))
+console.log(myForm('tanvir@gmail.com'))
 
 
 
