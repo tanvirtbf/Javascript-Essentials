@@ -442,15 +442,18 @@
 // 4. Custom Form Validation
 // A dynamic form validation system needs to be created.
 
-function validateField(fieldType){
-    return function(validateFunction){
-        return function(value){
-            const isValidate = validateFunction(value)
+function validateField(type){
+    return function(fn){
+        return function(val){
+            const isValidate = fn(val)
+            return {type: type, value : val, isValidate }
         }
     }
 }
-const myForm = validateField('email')(value => /\S+@\S+\.\S+/.test(value))
-console.log(myForm('tanvir@gmail.com'))
+const email = validateField('email')(value=> value==='tanver018765@gmail.com')
+console.log(email('tanver018765@gmail.com')) // { type: 'email', value: 'tanver018765@gmail.com', isValidate: true }
 
+const password = validateField('password')(value => value === 'mypassword')
+console.log(password('mypass')) // { type: 'password', value: 'mypass', isValidate: false }
 
 
