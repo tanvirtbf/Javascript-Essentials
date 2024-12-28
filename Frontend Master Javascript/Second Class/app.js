@@ -378,7 +378,7 @@
 
 
 
-// Currying 10 problem solve : 
+// Currying 5 problem solve : 
 
 // 1 . Login System Customization 
 // A logging system where each log message should be displayed with different levels (info, warning, error) and timestamps.
@@ -395,8 +395,8 @@
 // console.log(myLog('This is Info Message!'))
 
 
-// 2. Custom Discount System 
-// A system needs to be created where discounts will be applied according to the product.
+// // 2. Custom Discount System 
+// // A system needs to be created where discounts will be applied according to the product.
 
 // function applyDiscount(product){
 //     return function(discountPercentage){
@@ -417,26 +417,26 @@
 // 3. Multi Level File Filter 
 // A file manager needs to be created where files will be filtered by type, size, and extension.
 
-// function filterFiles(fileType){
-//     return function(limit){
-//         return function(fileExtention){
-//             return function(files){
-//                 return files.filter((item) => item.fileType===fileType && item.length<=limit && item.fileExtention===fileExtention)
-//             }
-//         }
-//     }
-// }
+function filterFiles(fileType){
+    return function(limit){
+        return function(fileExtention){
+            return function(files){
+                return files.filter((item) => item.fileType===fileType && item.length<=limit && item.fileExtention===fileExtention)
+            }
+        }
+    }
+}
 
-// const files = [
-//     { id: 1, fileType : 'image', length: 30, fileExtention: '.jpg'},
-//     { id: 2, fileType : 'video', length: 400, fileExtention: '.mp4'},
-//     { id: 3, fileType : 'image', length: 300, fileExtention: '.jpg'},
-//     { id: 4, fileType : 'image', length: 10, fileExtention: '.png'},
-//     { id: 5, fileType : 'image', length: 70, fileExtention: '.jpg'},
-// ]
+const files = [
+    { id: 1, fileType : 'image', length: 30, fileExtention: '.jpg'},
+    { id: 2, fileType : 'video', length: 400, fileExtention: '.mp4'},
+    { id: 3, fileType : 'image', length: 300, fileExtention: '.jpg'},
+    { id: 4, fileType : 'image', length: 10, fileExtention: '.png'},
+    { id: 5, fileType : 'image', length: 70, fileExtention: '.jpg'},
+]
 
-// const myfiles = filterFiles('image')(200)('.jpg')
-// console.log(myfiles(files))
+const myfiles = filterFiles('image')(200)('.jpg')
+console.log(myfiles(files))
 
 
 // 4. Custom Form Validation
@@ -476,7 +476,6 @@ const dataArr = [
     {id: 5, name: 'Hasib', age: 16, salary: 35000},
     {id: 6, name: 'Muntasin', age: 24, salary: 32000}
 ]
-
 const sortByAge = sortData('age')('asc')
 console.log(sortByAge(dataArr))
 
