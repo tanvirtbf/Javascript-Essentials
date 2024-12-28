@@ -383,30 +383,63 @@
 // 1 . Login System Customization 
 // A logging system where each log message should be displayed with different levels (info, warning, error) and timestamps.
 
-function createLogger(state){
-    return function(time){
-        return function(logMessage){
-            return `[${state} :${time}] ${logMessage}`
-        }
-    }
-}
+// function createLogger(state){
+//     return function(time){
+//         return function(logMessage){
+//             return `[${state} :${time}] ${logMessage}`
+//         }
+//     }
+// }
 
-const myLog = createLogger('info')(new Date().toISOString())
-console.log(myLog('This is Info Message!'))
+// const myLog = createLogger('info')(new Date().toISOString())
+// console.log(myLog('This is Info Message!'))
 
 
 // 2. Custom Discount System 
 // A system needs to be created where discounts will be applied according to the product.
 
-function applyDiscount(product){
-    return function(discountPercentage){
-        return function(price){
-            return (price - (price * discountPercentage)/100)
+// function applyDiscount(product){
+//     return function(discountPercentage){
+//         return function(price){
+//             return (price - (price * discountPercentage)/100)
+//         }
+//     }
+// }
+// const myPurchase1 = applyDiscount('shirt')(10)
+// console.log(myPurchase1(100))
+
+// const myPurchase2 = applyDiscount('laptop')(20)
+// console.log(myPurchase2(120000))
+
+
+
+
+// 3. Multi Level File Filter 
+// A file manager needs to be created where files will be filtered by type, size, and extension.
+
+function filterFiles(fileType){
+    return function(limit){
+        return function(fileExtention){
+            return function(files){
+                return files.filter((item) => item.fileType===fileType && item.length<=limit && item.fileExtention===fileExtention)
+            }
         }
     }
 }
-const myPurchase1 = applyDiscount('shirt')(10)
-console.log(myPurchase1(100))
 
-const myPurchase2 = applyDiscount('laptop')(20)
-console.log(myPurchase2(120000))
+const files = [
+    { id: 1, fileType : 'image', length: 30, fileExtention: '.jpg'},
+    { id: 2, fileType : 'video', length: 400, fileExtention: '.mp4'},
+    { id: 3, fileType : 'image', length: 300, fileExtention: '.jpg'},
+    { id: 4, fileType : 'image', length: 10, fileExtention: '.png'},
+    { id: 5, fileType : 'image', length: 70, fileExtention: '.jpg'},
+]
+
+const myfiles = filterFiles('image')(200)('.jpg')
+console.log(myfiles(files))
+
+
+
+
+
+
