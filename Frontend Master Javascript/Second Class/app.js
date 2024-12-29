@@ -45,23 +45,16 @@
 
 // Closure 
 
-function show(){
-  let myName = 'Tanvir'
-  let dept = 'web'
-  function inner(){
-    console.log(myName)
-    console.log(dept)
-  }
-  console.dir(inner)
-}
-show()
-
-
-
-
-
-
-
+// function show(){
+//   let myName = 'Tanvir'
+//   let dept = 'web'
+//   function inner(){
+//     console.log(myName)
+//     console.log(dept)
+//   }
+//   console.dir(inner)
+// }
+// show()
 
 
 
@@ -282,7 +275,34 @@ show()
 // console.log(myCart.getItems())
 
 
-// 5. Authentication System 
+
+
+
+
+// 5 Hard Problem with Closure :
+
+// 1. Traffic Light Controller
+// A traffic light changes to different colors (red, green, yellow). Create a function that stores the current state of the light and will display the next light each time it is called.
+
+function trafficLight(){
+  let colors = ['green', 'red', 'yellow']
+  let indexNumber = 0
+
+  return {
+    changeLight : function(){
+      indexNumber = (indexNumber + 1) % colors.length
+      return `Current Light : ${colors[indexNumber]}`
+    }
+  }
+}
+const myLight = trafficLight()
+console.log(myLight.changeLight()) // Current Light : red
+console.log(myLight.changeLight()) // Current Light : yellow
+console.log(myLight.changeLight()) // Current Light : green
+console.log(myLight.changeLight()) // Current Light : red
+
+
+
 
 
 

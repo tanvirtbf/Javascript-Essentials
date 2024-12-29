@@ -120,7 +120,23 @@ function outer(){
         console.log(myName)
     }
 }
-ekhane outer function er variable myName inner function use kore . tai inner function er scope property te outer function er reference set kore dey javascript . jar fole jodi outer function execute complete hoyeo jay tokhono inner function er moddhe outer function er reference thake and sei outer function er variable myName inner function use korte pare . 
+ekhane outer function er variable myName inner function use kore . tai inner function er scope property te outer function er reference set kore dey javascript . jar fole jodi outer function execute complete hoyeo jay tokhono inner function er moddhe outer function er reference thake and sei outer function er variable myName inner function use korte pare . karon ami jodi nai ba jani amar moddhe ki ki ase tahole ami kivabe segula use korbo ?? jemon ami jodi outer function er reference na rakhi tahole kivabe ami outer function er variable myName use korbo ??
+
+function outer(){
+    let myName = 'tanvir'
+    let dept = 'cse'
+    function inner(){
+        console.log(myName)
+    }
+    console.dir(inner)
+}
+outer()
+ai code ta lekhar por inspect korle inner function er object rup aisha porbe . tokhon dekha jay scope nam e ekta property thake . sei scope er moddhe joto variable ai function access korte parbe sob gular list vibinno key er moddhe thake . to ekhane dhukle dekha jabe closure nam e ekta key ase . and key er moddhe myName ase . kintu dept nai . karon javascript onk smart je jei variable use hoise just oitaii add kora hobe closure er moddhe . scope er moddhe closure key er argument e dekhben outer function er reference pass kora . orthat myName kon function theke ashce setao ullekh kore dey . nahole myName kottheke ante hobe kivabe bujhbe . 
+
+ekhane inner function taii hocche closure . karon inner function tar scope er baire onno scope theke variable aina use korse .
+
+Important Note : inner function er moddhe myName variable ta kintu reference hishebe ashe . amon na je copy ashe . copy ashle to outer function er moddhe myName change korle inner er vitor change hoito na kingba inner er moddhe myName change korle outer e change hoito na . kintu erokom na . myName inner function e reference hishebe ashce . jar karone myName jekhanei change hobe sob jaygay changes ta ashbe...
+
 
 
 
