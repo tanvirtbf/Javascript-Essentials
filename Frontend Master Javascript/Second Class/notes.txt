@@ -113,6 +113,33 @@ console.log(result); // Output: NaN
 Definition : A function with some preservered values creates a closure. 
 A Closure is created when a function preserves variables outside of its scope
 
+javascript er moddhe jodi kono variable outside the function access kori tokhon javascript sei outside function er reference inner function er scope property te add kore ney . jemon :
+function outer(){
+    let myName = 'tanvir'
+    function inner(){
+        console.log(myName)
+    }
+}
+ekhane outer function er variable myName inner function use kore . tai inner function er scope property te outer function er reference set kore dey javascript . jar fole jodi outer function execute complete hoyeo jay tokhono inner function er moddhe outer function er reference thake and sei outer function er variable myName inner function use korte pare . 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Closure হল প্রোগ্রামিংয়ের একটি ধারণা, যা একটি ফাংশনের সাথে তার lexical scope (যেখানে ফাংশনটি ডিফাইন করা হয়েছে) সংযুক্ত করে। Closure মূলত higher-order ফাংশন এবং functional programming-এ ব্যবহৃত হয়। এটি JavaScript সহ অনেক প্রোগ্রামিং ভাষায় পাওয়া যায়।
 
 Closure-এর বৈশিষ্ট্য:
@@ -414,7 +441,6 @@ Currying এর মূল সুবিধা :
     কোড পুনঃব্যবহারযোগ্যতা বৃদ্ধি করে।
     ফাংশনকে সহজে কাস্টমাইজ করা যায়।
     কমপ্লেক্স লজিক সহজে হ্যান্ডেল করা যায়।
-
 
 উদাহরণ:
 

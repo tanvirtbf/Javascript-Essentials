@@ -43,13 +43,29 @@
 
 
 
-
-
-
-
-
-
 // Closure 
+
+function show(){
+  let myName = 'Tanvir'
+  let dept = 'web'
+  function inner(){
+    console.log(myName)
+    console.log(dept)
+  }
+  console.dir(inner)
+}
+show()
+
+
+
+
+
+
+
+
+
+
+
 
 // function createCounter(){
 //     let count = 0;
