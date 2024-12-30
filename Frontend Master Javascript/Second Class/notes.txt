@@ -515,7 +515,6 @@ Private variable এবং function তৈরি করতে।
 
 
 
-
 // Curring 
 
 // currying bujhar age ekta golpo shunai . amra jokhon restaurant e khabar khete jai tokhon amra order dile tara ranna kore amader jonno khabar niye ashe . kintu amra hoyto jani na tara customer ke jeno joto ta shomvob taratari khabar dite pare tar jonno age thekeii ordhek khabar ranna kora obosthay thake . baki ordhek order ashle kore . jate time save hoy . 
