@@ -323,7 +323,16 @@ for(var i = 0; i<10; i++){
   }, 1000)
 }
 // Output : 10 10 10 10 10 10 10 10 10 10 
+// kintu ami chai 1 2 3 4 5... evabe ashuk 
+// tahole eta let diyeo solve kora jay . jemon: 
+for(let i = 0; i<10; i++){
+  setTimeout(()=>{
+    console.log(i)
+  }, 1000)
+}
+// Output : 0 1 2 3 4 5 6 7 8 9
 
+// kintu evabe let diye korle prottekta iteration e new variable create hoye thake . eta onk memory consume kore . tahole kivabe eta solve kora jay ? 
 
 
 // IIFE Example : 
