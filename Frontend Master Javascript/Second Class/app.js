@@ -306,15 +306,15 @@
 // IIFE : 
 
 
-(function(){
-  var myName = 'Tanvir Ahmed'
-  function show(){
-    myName = 'Sadia Ahmed'
-    console.log('Show :', myName)
-  }
-  show()
-})();
-console.log(window.myName) // error
+// (function(){
+//   var myName = 'Tanvir Ahmed'
+//   function show(){
+//     myName = 'Sadia Ahmed'
+//     console.log('Show :', myName)
+//   }
+//   show()
+// })();
+// console.log(window.myName) // error
 
 
 
