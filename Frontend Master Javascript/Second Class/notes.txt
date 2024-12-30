@@ -388,6 +388,7 @@ Node js er prottekta file IIFE diye bind kora . react , nextjs or others library
 mot kotha IIFE amader private variable create korte help kore
 
 
+Classical interview question solve by IIFE : 
 
 
 
