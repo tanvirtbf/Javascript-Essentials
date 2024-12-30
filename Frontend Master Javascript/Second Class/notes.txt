@@ -390,30 +390,27 @@ mot kotha IIFE amader private variable create korte help kore
 
 Classical interview question solve by IIFE : 
 
-// for(var i = 0; i<10; i++){
-//   setTimeout(()=>{
-//     console.log(i)
-//   }, 1000)
-// }
-// Output : 10 10 10 10 10 10 10 10 10 10 
-// kintu ami chai 1 2 3 4 5... evabe ashuk 
-// tahole eta let diyeo solve kora jay . jemon: 
-// for(let i = 0; i<10; i++){
-//   setTimeout(()=>{
-//     console.log(i)
-//   }, 1000)
-// }
-// Output : 0 1 2 3 4 5 6 7 8 9
-// kintu evabe let diye korle prottekta iteration e new variable create hoye thake . eta onk memory consume kore . tahole kivabe eta solve kora jay ? 
-// Answer holo IIFE diye eta solve kora jay . eta onk popular ekta problem 
-// for(var i = 0; i<10; i++){
-//   (function(i){
-//     console.log(i)
-//   })(i)
-// }
-
-
-
+for(var i = 0; i<10; i++){
+  setTimeout(()=>{
+    console.log(i)
+  }, 1000)
+}
+Output : 10 10 10 10 10 10 10 10 10 10 
+kintu ami chai 1 2 3 4 5... evabe ashuk 
+tahole eta let diyeo solve kora jay . jemon: 
+for(let i = 0; i<10; i++){
+  setTimeout(()=>{
+    console.log(i)
+  }, 1000)
+}
+Output : 0 1 2 3 4 5 6 7 8 9
+kintu evabe let diye korle prottekta iteration e new variable create hoye thake . eta onk memory consume kore . tahole kivabe eta solve kora jay ? 
+Answer holo IIFE diye eta solve kora jay . eta onk popular ekta problem 
+for(var i = 0; i<10; i++){
+  (function(i){
+    console.log(i)
+  })(i)
+}
 
 
 
@@ -520,6 +517,22 @@ Private variable এবং function তৈরি করতে।
 
 
 // Curring 
+
+// currying bujhar age ekta golpo shunai . amra jokhon restaurant e khabar khete jai tokhon amra order dile tara ranna kore amader jonno khabar niye ashe . kintu amra hoyto jani na tara customer ke jeno joto ta shomvob taratari khabar dite pare tar jonno age thekeii ordhek khabar ranna kora obosthay thake . baki ordhek order ashle kore . jate time save hoy . 
+// ekii karone Currying use javascript e . currying darao ordhek kaj age kore rakha jay and baki ordhek kaj request er por hoy . 
+// jei function arekta function ke return kore sei function ke currying bole
+
+
+
+
+
+
+
+
+
+
+
+
 
 জাভাস্ক্রিপ্টে Currying হল একটি ফাংশনকে এমনভাবে রূপান্তরিত করা যাতে ফাংশনটি একাধিক আর্গুমেন্ট না নিয়ে বরং প্রতিটি আর্গুমেন্ট আলাদাভাবে গ্রহণ করে। এটি মূলত একটি ফাংশনকে এমন ফাংশনগুলোর শৃঙ্খলে রূপান্তরিত করে, যেখানে প্রতিটি ফাংশন একটি আর্গুমেন্ট গ্রহণ করে এবং একটি নতুন ফাংশন ফেরত দেয়, যা পরবর্তী আর্গুমেন্ট গ্রহণ করে।
 
