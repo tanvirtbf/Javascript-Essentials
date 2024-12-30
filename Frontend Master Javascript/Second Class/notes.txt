@@ -347,6 +347,53 @@ privateName ভেরিয়েবল createPerson ফাংশনের scope
 
 // IIFE
 
+Normal Javascript e 3 ta problem hoye thake . 
+
+First Problem :
+var myName = "hello"
+function show(){
+    myName = "Hiii"
+    console.log(myName) // Hiii
+}
+show()
+console.log(myName) // Hiii
+ekhane global scope e thaka variable myName er value local scope theke modify kora jacche . eta first problem 
+
+Second Problem : 
+amar kase 2 ta js file ase . jehetu javascipt jokhon browser e load hoy tokhon sob gula js file eksathe kore ekta file banaiya tarpor run hoy tokhon jei file pore import hoy setar priority beshi thake . dhori amar kase app1.js and app2.js file ase . 2 ta file er moddhei myName nam e variable ase . jodi app2.js last e import hoy tahole app1.js er moddhe thaka myName er value overwrite hoye jabe app2.js file e thaka myName variable er value er sathe . eta Second Problem 
+
+Third Problem : 
+dhori ami 1 hajar line er code likhe onno kauke disi, and bollam ai code ta tomar codebase er specific jaygay use koro . tokhon dekha gelo tar kono ekta variable er same name diye amio kono variable declare kore rakhsi . tokhon value overwrite hoye jabe . tokhon hoy amar variable rename  korte hobe noyto tar . eta third problem 
+
+ai 3 ta problem resolve kora jay IIFE diye . 
+
+amra IIFE use kore ekta local scope create kori . jate variable gula overwrite houyar chance na thake . 
+
+Example : 
+(function(){
+  var myName = 'Tanvir Ahmed'
+  function show(){
+    myName = 'Sadia Ahmed'
+    console.log('Show :', myName)
+  }
+  show()
+})();
+console.log(window.myName) // error
+
+ekhane var diyeii myName declare kora hoise tarporeo seta locally ase and jehetu IIFE instant execute hoye jay tai myName instant memory consume kore abar sathe sathe garbage collect hoye gese. 
+
+Important Note About IIFE :
+Node js er prottekta file IIFE diye bind kora . react , nextjs or others library and framwork er file gulao IIFE diye bind kora . jate ekta file er variable arekta file er same name variable er sathe overwrite na hoy . karon amra jani browser e load houyar somoy browser sob JavaScript file ke bind kore ekta javascipt file e convert kore run kore . tai aisob framwork or library er jonno IIFE onk important . 
+
+mot kotha IIFE amader private variable create korte help kore
+
+
+
+
+
+
+
+
 JavaScript এ IIFE (Immediately Invoked Function Expression) কী?
 IIFE মানে হলো এমন একটি Function যেটি ডিক্লেয়ার করার সাথে সাথে স্বয়ংক্রিয়ভাবে কল (invoke) হয়। এটি সাধারণত এমন কোড ব্লকে ব্যবহৃত হয় যেখানে আমরা কোনো কোডকে isolate করতে চাই বা একটি আলাদা scope তৈরি করতে চাই।
 

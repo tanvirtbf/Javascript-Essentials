@@ -284,28 +284,37 @@
 // 1. Traffic Light Controller
 // A traffic light changes to different colors (red, green, yellow). Create a function that stores the current state of the light and will display the next light each time it is called.
 
-function trafficLight(){
-  let colors = ['green', 'red', 'yellow']
-  let indexNumber = 0
+// function trafficLight(){
+//   let colors = ['green', 'red', 'yellow']
+//   let indexNumber = 0
 
-  return {
-    changeLight : function(){
-      indexNumber = (indexNumber + 1) % colors.length
-      return `Current Light : ${colors[indexNumber]}`
-    }
+//   return {
+//     changeLight : function(){
+//       indexNumber = (indexNumber + 1) % colors.length
+//       return `Current Light : ${colors[indexNumber]}`
+//     }
+//   }
+// }
+// const myLight = trafficLight()
+// console.log(myLight.changeLight()) // Current Light : red
+// console.log(myLight.changeLight()) // Current Light : yellow
+// console.log(myLight.changeLight()) // Current Light : green
+// console.log(myLight.changeLight()) // Current Light : red
+
+
+
+// IIFE : 
+
+
+(function(){
+  var myName = 'Tanvir Ahmed'
+  function show(){
+    myName = 'Sadia Ahmed'
+    console.log('Show :', myName)
   }
-}
-const myLight = trafficLight()
-console.log(myLight.changeLight()) // Current Light : red
-console.log(myLight.changeLight()) // Current Light : yellow
-console.log(myLight.changeLight()) // Current Light : green
-console.log(myLight.changeLight()) // Current Light : red
-
-
-
-
-
-
+  show()
+})();
+console.log(window.myName) // error
 
 
 
