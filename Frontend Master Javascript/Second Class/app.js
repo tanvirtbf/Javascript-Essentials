@@ -333,11 +333,11 @@
 // Output : 0 1 2 3 4 5 6 7 8 9
 // kintu evabe let diye korle prottekta iteration e new variable create hoye thake . eta onk memory consume kore . tahole kivabe eta solve kora jay ? 
 // Answer holo IIFE diye eta solve kora jay . eta onk popular ekta problem 
-for(var i = 0; i<10; i++){
-  (function(i){
-    console.log(i)
-  })(i)
-}
+// for(var i = 0; i<10; i++){
+//   (function(i){
+//     console.log(i)
+//   })(i)
+// }
 
 
 
