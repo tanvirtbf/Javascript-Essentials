@@ -37,3 +37,14 @@ tahole akhon porjonto code execute houyar ki ki process janlam ?
 5th -> tarpor AST er code gula Interpreter er kase jay . Interpreter code gula ke translate kore byte code e convert kore
 6th -> Byte code gulaii browser er giye execute hoye result show kore user er kase
 
+
+akhon porjonto jei jei process dekhlam egula 2008 porjonto use kora hoy . kintu tarpor ei process change hoy kichu ta. 2008 e chrome er v8 js engine niye ashe . 
+
+byte code er kichu limitation ase . jemon byte code kichu ta default behaviour kore . jemon apni jodi burger khete chan tahole ai type er burger khete hobe . nijer eccha moto burger customize kore khete parben na . aro kichu problem ase byte code er . tokhon v8 engine er js bole je tumi amader byte code gula ke diye deu segula browser er execute na kore . sei byte code gula ke ami compiler er moddhe diye run kori . 
+
+orthat v8 akhon byte code gula ke browser e execute hote na diye nijer kase niye ekta compiler er moddhe run kore . jar nam Turbo Fan 
+
+Turbo Fan compiler er kaj ki ?
+ai compiler byte code er vitor nojor rakhe je kon kon code gula amon ase jegula barbar use hocche. jodi compiler dekhe je kono specific code barbar call hocche tokhon ai compiler nijer moto kore seta ke optimized kore fast kore dibe. optimized korar somoy se user er hardware , os , software sob kichu bibechona kore optimized korbe . tar fole low configuration er hardware er moddheo javascript fast chole.
+ai karonei javascript ke bola hoy this is a interpreted and compiled language
+etaii pura process updated process !
