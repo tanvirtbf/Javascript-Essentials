@@ -48,3 +48,79 @@ Turbo Fan compiler er kaj ki ?
 ai compiler byte code er vitor nojor rakhe je kon kon code gula amon ase jegula barbar use hocche. jodi compiler dekhe je kono specific code barbar call hocche tokhon ai compiler nijer moto kore seta ke optimized kore fast kore dibe. optimized korar somoy se user er hardware , os , software sob kichu bibechona kore optimized korbe . tar fole low configuration er hardware er moddheo javascript fast chole.
 ai karonei javascript ke bola hoy this is a interpreted and compiled language
 etaii pura process updated process !
+
+
+Important Question : 
+jehetu node v8 engine er maddhome run hoy tahole ki same process nodejs er khetreo hoye thake?? 
+Answer is YES!
+
+
+Important Note: 
+javascript er ekta limitation chilo je javascript only browser e run kore . kintu node js sei limitation finish kore dey . karon google team jokhon dekhlo browser er jei specific code gula javascript run korar khetre use hoy sei code gula ke baire ber kore anleii javascript baire run hobe . kintu ekta challenge chilo seta hocche javascript kokhono operating system access korte pare na like file system or others access korte pare na jeta ekta backend language access korte pare like c, c++, java etc. jehetu v8 engine jetar upor javascript run hoito seta C++ diye likha . tai v8 engine er moddhe aro kichu C++ code add kore deya holo jate javascript aro kichu kaj korte pare jeta age parto na . jemon OS access and others . karon javascript OS access korte pare na to ki hoise? C++ to pare . jodio sei access er jonno javascript code likhte hobe but javascript er sei code ultimately C++ code e convert hoye kaj korbe . javascript just instruction dey and C++ segula invoked kore thake. evabei nodejs invent hoy .
+
+
+mot kotha interpreter amake ekta general code dey jegula kon machine e run hobe egula chinta na koreii banano hoy kintu compiler machine er configure dekhe code ke banay jate low configuration er machine eo fast vabe kaj kore
+
+majhe moddhe js engine code ke optimized korte giye aro beshi kharap kore dey tokhon fallback hoye thake . mane holo purana byte code ee tokhon run hoy . to erokom vabe switching cholteii thake
+
+
+
+
+
+
+
+
+
+
+
+
+১. JavaScript ফাইল ডাউনলোড (Streaming and Loading):
+যখন একটি HTML পেজে <script> ট্যাগের মাধ্যমে JavaScript ফাইল লোড হয়, ব্রাউজার HTTP/HTTPS প্রোটোকলের মাধ্যমে সেই ফাইলটি ডাউনলোড করে।
+এই ডাউনলোডিং প্রসেসটি streaming আকারে হয়, অর্থাৎ পুরো ফাইল শেষ হওয়ার আগেই ডেটার অংশ ব্রাউজারে আসতে শুরু করে।
+
+২. Tokens তৈরি (Tokenization):
+ডাউনলোড করা JavaScript কোড প্রথমে Lexer বা Tokenizer নামে একটি ধাপে যায়।
+এখানে কোডটি ছোট ছোট টুকরো (tokens) হিসেবে বিভক্ত হয়।
+উদাহরণস্বরূপ, কোড:
+let x = 10;
+Tokenization-এর পরে এটি এমন হয়:
+[ "let", "x", "=", "10", ";" ]
+
+৩. Parsing:
+Tokens থেকে একটি Abstract Syntax Tree (AST) তৈরি করা হয়।
+এটি একটি ডাটা স্ট্রাকচার যা কোডের লজিক্যাল স্ট্রাকচারকে তুলে ধরে।
+উদাহরণস্বরূপ, let x = 10; এর জন্য AST দেখতে এমন হতে পারে:
+VariableDeclaration
+ ├── Identifier: x
+ ├── Literal: 10
+
+৪. AST-এর উপর কাজ:
+AST তৈরি হওয়ার পরে JavaScript ইঞ্জিন এটি বিশ্লেষণ করে, syntax বা লজিক্যাল ভুল আছে কিনা তা যাচাই করে।
+
+৫. Interpreter এবং Bytecode:
+Interpreter (যেমন V8 ইঞ্জিনে Ignition) AST-কে দেখে লাইন বাই লাইন কোড execute করতে শুরু করে।
+Interpreter কোডটিকে Bytecode-এ রূপান্তর করে। Bytecode হলো একটি intermediate representation যা মেশিন কোডের চেয়ে সহজে পড়া যায়।
+
+৬. JIT (Just-In-Time) Compilation:
+TurboFan হলো V8 ইঞ্জিনের JIT Compiler, যা কোডকে দ্রুত execute করার জন্য ব্যবহৃত হয়।
+এটি Bytecode থেকে Highly Optimized Machine Code তৈরি করে।
+বারবার ব্যবহৃত কোড (hot code) দ্রুততর করতে TurboFan সেই অংশগুলিকে optimize করে।
+
+৭. Optimization এবং Deoptimization:
+যদি কোড রানটাইমে কোনো অপ্রত্যাশিত input পায় (যেমন data type ভিন্ন হয়), তখন JIT সেই optimization বাতিল করে আবার নতুনভাবে কোড execute করে। একে deoptimization বলা হয়।
+
+Execution Flow একত্রে:
+JavaScript ফাইল ডাউনলোড হয়।
+Tokens তৈরি হয় (Lexer)।
+Parsing-এর মাধ্যমে AST তৈরি হয়।
+Interpreter (Ignition) AST থেকে Bytecode তৈরি করে।
+Bytecode প্রথমে সরাসরি execute হয়।
+JIT Compiler (TurboFan) hot code-এর জন্য optimized machine code তৈরি করে।
+Execution শেষ হলে memory থেকে context গুলো clear করা হয়।
+
+কেন এই প্রসেস দরকার?
+Efficiency: AST এবং Bytecode ইন্টারমিডিয়েট লেভেলে কোডকে optimize করতে সাহায্য করে।
+Speed: JIT Compiler runtime-এ frequently-used কোড দ্রুত execute করে।
+Flexibility: Deoptimization runtime-এ dynamic typing handle করতে পারে।
+
+
