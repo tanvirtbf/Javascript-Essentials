@@ -1,0 +1,7 @@
+Hoisting ki ?
+javascript e code always 2 ta phase e run hoye thake . 
+1. parsing / memory allocation phase 
+2. execution phase
+
+1. parsing / memory allocation phase : 
+ai phase ta sobar age chole . ai phase e mainly 2 ta kaj hoye thake . first holo var diye declare kora sob variable er jonno default value 'undefined' boshaiya deya hoy and sob function gular body kono ekta memory te rakha hoy. and second holo 
