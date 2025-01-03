@@ -1,2 +1,14 @@
 akhn amra janbo javascript er code browser kivabe execute kore . ki ki process hoy segula . 
-jokhonii 
+jokhonii html file browser e load hoy tokhon sekhane <script src="app.js" ></script> dekhte pay . sekhan theke app.js file ta browser download korte thake . to browser js file ta ke stream akare download korte thake . i mean chunk type akare . jemon "12DF2123" etc . eta ke bole stream of data. tarpor stream er sahajje browser tokens create korte thake. tokhon ai token gula ke niye javascript engine ekta tree banay . setar nam AST(Abstract Syntex Tree) . jemon: 
+code : function hello(){
+    console.log('Hello World!')
+}
+hello()
+akhon javascript ai function er code gula ke evabe token e vag kore : 
+function keyword 
+hello() function name
+console.log function 
+'Hello World' printing text
+hello() function call 
+
+evabe code gula ke choto choto akare vag kore and prottekta vag ek ekta token hishebe count hoy . egula diyaii AST banano hoy
