@@ -12,3 +12,28 @@ console.log function
 hello() function call 
 
 evabe code gula ke choto choto akare vag kore and prottekta vag ek ekta token hishebe count hoy . egula diyaii AST banano hoy
+
+AST ki ? 
+AST amader code er ekta structure hoye thake.
+
+token and AST er moddhe ekta process hoye thake . tar nam parsing. 
+
+parsing er 2 ta phase thake :
+1. Syntax Checking (jodi code er syntax wrong hoy tahole parsing phase er moddhei detect hoye thake)
+2. Scope and initialization
+
+
+AST er por next ki ? 
+AST houyar por tarpor AST ke niye Interpreter er kase jauya hoy.
+
+Interpreter er kaj ki ?
+interpreter amader AST code ke translate kore. translate korar por byte code dey. and ai byte code tai browser e execute hoy . 
+
+tahole akhon porjonto code execute houyar ki ki process janlam ? 
+1st -> js file stream akare download
+2nd -> stream data gula ke token e vag kore neya
+3rd -> token gula ekta parsing phase diye jauya . ekhane onk dhoroner filtering hoy and onk kichu check kora hoy
+4th -> tarpor sei token gula diya ekta AST(Abstract Syntax Tree) banano hoy . jeta amader pura code er ekta structure.
+5th -> tarpor AST er code gula Interpreter er kase jay . Interpreter code gula ke translate kore byte code e convert kore
+6th -> Byte code gulaii browser er giye execute hoye result show kore user er kase
+
