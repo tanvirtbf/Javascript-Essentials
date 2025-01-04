@@ -1869,6 +1869,22 @@
 // Javascript kothay tar data ke store kore seta janar jonno amader Stack and Heap Memory niye kotha bolte hobe . 
 
 // Stack Memory : 
+// eta ke amra boli Last in First Out (LIFO). tar mane holo last e jei data stack e dhukbe etai sobar age stack theke ber hoye jabe.
+
+// kintu stack javascript kijonno use kore ? 
+// stack mainly static data or Primitive data store korar jonno use hoy 
+
+// Stack Kivabe kaj kore ?
+// const firstName = 'Tanvir'
+// const lastName = 'Ahmed'
+// const age = 25
+// const address = 'Dhaka'
+// ai code gular jonno obosshoi memory allocate kora hobe . eta stack memory te store kora hobe jeta kina last in first out process e chole . cholen dekhe nei kivabe eta dhuke and ber hoy 
+
+// jehetu javascript ekta interpreted language tai line by line run hobe. tai sobar age firstName er jonno memory allocate hobe . tai stack er moddhe sobar age firstName dhukbe, then stack e dhukbe lastName , then age and so on... 
+// Stack Memory holo ekta patil er moto . jeta age dhukano hoy seta niche pore thake and jeta sobar last e dhukano hoy seta sobar upore thake . tai jokhon variable gula memory theke free kora hobe tai sobar age address ke stack memory theke ber korbe , and tarpor age , then lastName and sobar pore ber kora hobe firstName ke . evabeii Stack memory te variable allocate and release hoy. 
+
+
 
 
 
