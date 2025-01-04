@@ -1889,6 +1889,22 @@
 // javascript e Stack er size kintu limited. ekta limit porjonto data store kore rakhe . tar jonnoi amra jokhon stack er moddhe onk beshi data dhukate chai tokhon ekta error ashe tar name holo stack overflow!
 
 
+// Heap Memory : 
+// head er moddhe amra only object store korte pari . orthat heap er moddhe only non-primitive data store kore. 
+// Heap ekta dynamic memory allocation 
+
+// Important Notes : 
+// stack er khetre ja hoy javascript age thekei jante pare stack er moddhe jei variable gula jacche segula koto size er data . and sei onujayii stack ready thake . jemon int variable nile 4 byte nibe and bigint nile 8 byte nibe. kintu heap er khetre ta hoy na . Heap jehetu ekta dynamic memory allocation tai javascript runtime eii bujhte pare je ekta particular object kototuku size nite parbe. tar mane heap er khetre kono fixed size deya hoy na object ke . kintu stack er khetre ami onk boro string nei r choto string nei string variable er jonno 4 byte fixed kora hoy. 
+
+
+// Compiled Time and Run Time er moddhe parthokko ki ? 
+
+// Compiled Time : 
+// javascript er code jokhon actually byte code(1010011100101) e convert hoy setake bole compiled time 
+
+// Run Time : 
+// Code gula Compiled hoye byte code e convert houyar pore sei byte code jokhon browser e run kore output pacchi setake bole Run Time
+
 
 
 
