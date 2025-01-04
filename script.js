@@ -1885,6 +1885,9 @@
 // Stack Memory holo ekta patil er moto . jeta age dhukano hoy seta niche pore thake and jeta sobar last e dhukano hoy seta sobar upore thake . tai jokhon variable gula memory theke free kora hobe tai sobar age address ke stack memory theke ber korbe , and tarpor age , then lastName and sobar pore ber kora hobe firstName ke . evabeii Stack memory te variable allocate and release hoy. 
 
 
+// Important Note: 
+// javascript e Stack er size kintu limited. ekta limit porjonto data store kore rakhe . tar jonnoi amra jokhon stack er moddhe onk beshi data dhukate chai tokhon ekta error ashe tar name holo stack overflow!
+
 
 
 
