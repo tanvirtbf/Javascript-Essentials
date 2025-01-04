@@ -4,4 +4,14 @@ javascript e code always 2 ta phase e run hoye thake .
 2. execution phase
 
 1. parsing / memory allocation phase : 
-ai phase ta sobar age chole . ai phase e mainly 2 ta kaj hoye thake . first holo var diye declare kora sob variable er jonno default value 'undefined' boshaiya deya hoy and sob function gular body kono ekta memory te rakha hoy. and second holo 
+ai phase ta sobar age chole . ai phase e mainly 2 ta kaj hoye thake . ta holo var diye declare kora sob variable er jonno default value 'undefined' boshaiya deya hoy and sob function gular body kono ekta memory te rakha hoy and check kora hoy syntax error ase kina 
+
+2. execution phase 
+ai phase e aisha sob variable gular actual value boshaiya deya hoy and function call gula execute kora hoy . 
+
+
+let and const er khetre ektra term ashe temporary dead zone . ai karoneii let and const diye variable declare korle variable hoist hoy na . orthat value declare er ageii access korte chaile error dekhabe
+
+Important Thing : 
+
+
