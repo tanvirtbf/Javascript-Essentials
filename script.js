@@ -1839,6 +1839,13 @@
 
 
 
+// JavaScript Memory Management 
+// amader kono application jokhon kono user tar system e run kore tokhon oita run korar jonno sei system theke memory niye sei memory te application run hoy . oi application er jonno jototuku memory dorkar tototuku jodi system memory te khali thake tahole shundor vabe application ta run kore . dhoren application e 545 MB memory space e run kore . akhn user er Ram er moddhe jodi 545MB khali thake tahole sei khali memory dokhol kore application ta run kore . tai amader memory management thik vabe kora dorkar . karon jodi amar application onek beshi memory consume kore tahole user er system jodi sei onujayi amake free memory na dite pare tahole oi user dekhbe application crash kortese . tai jekono developer er memory management thik vabe korte hobe. developer er first podokkhep thakbe je developer joto ta kom memory te application ta run koraite pare user er system e. 
+// jemon ekta int variable 4 byte memory dokhol kore, amni vabe ekta string variable o same 4 byte memory consume kore . evabe application e memory set hoye thake. 
+
+// onnanno programming language jemon C, C++ egular moddhe developer der manually memory niye kaj korte hoy . jemon memory consume kora or memory allocate kora, oi specific memory er kaj sesh hoye gele segula ke free kore deya ittadi . ai jonnoi sekhane alloc, malloc, free etc function use hoy . kintu javascript e memory developer maintain korte pare na . js engine eta nijeii control kore . kintu amader sudhu eta mathay rakhte hobe amar application kototuku memory nicche, kivabe optimized way te korle memory kom khoroch hobe ittadi mathay rekhe code korle application er memory management best hobe and kom memory te user er system e load hobe . fole user er system configuration kom thakleo application sohoje crash korbe na . 
+
+
 // closure
 // outer function inner function refreshment..
 // function outer(){
