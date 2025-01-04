@@ -1862,6 +1862,13 @@
 // 3. Memory Release Phase : 
 // jodi sei memory te thaka code er kaj sesh hoye jay tokhon ai phase e aisha sei memory space ke free kore dibe 
 
+// orthat amra jodi kolpona kori ekta variable declare kora hoise , sei variable er jonno javascript allocation phase er moddho diye jeye sei variable er jonno memory allocate kore . then sei variable jokhon use kora start hoy tokhon javascript memory usage phase diye jabe and sei variable ke use hote dibe sei memory er moddhe . and jokhon oi variable er use sesh hoye gese tokhon javascript Release or Free phase diye jabe and sei memory ta free kore dibe . evabeii cycle akare cholte thake....
+
+
+// Stack and Heap Memory 
+// Javascript kothay tar data ke store kore seta janar jonno amader Stack and Heap Memory niye kotha bolte hobe . 
+
+// Stack Memory : 
 
 
 
