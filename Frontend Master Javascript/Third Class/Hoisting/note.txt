@@ -12,6 +12,8 @@ ai phase e aisha sob variable gular actual value boshaiya deya hoy and function 
 
 let and const er khetre ektra term ashe temporary dead zone . ai karoneii let and const diye variable declare korle variable hoist hoy na . orthat value declare er ageii access korte chaile error dekhabe
 
-Important Thing : 
+
+
+
 
 
