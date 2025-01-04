@@ -1946,6 +1946,52 @@
 
 
 
+// Stack and Heap memory kivabe kaj kore setar ekta presentation : 
+// ./image/StackandHeap.png  aikhane gele pauya jabe 
+
+// bekkha : 
+
+const employee = {
+  id: 1, 
+  name: 'Tanvir',
+  salary : 37233,
+  deptId : 3,
+}
+
+const companyName = 'BeautyBooth'
+
+const department = {
+  id: 3, 
+  name : 'Sadia', 
+  location : 'remote'
+}
+
+function findDepartmentDfEmployee(employee){
+  return department.find(dept => {
+    return dept.id === employee.deptId
+  })
+}
+
+const anotherDepartment = department
+
+// ai code er jonno stack and heap sajano holo: StackandHeap.png
+
+// js jehetu interpreted language tai line by line code porte thakbe . employee jehetu ekta variable tai eta stack e jabe sobar age. kintu employee er value ekta non-primitive value . tai value ta heap memory te randomly ekta space e store hoye jabe. then companyName ekta variable jehetu ase seta stack e jabe and tar value o ekta primitive tai value soho stack e store hobe . then department nam e ekta variable stack e jabe and tar value jehetu non-primitive tai heap memory te add hobe. tokhon stack er jekhane department ase sekhan theke heap er memory er jekhane department er value rakha hoise sekhane point kora thakbe . then findDepartmentDfEmployee nam e ekta function heap memory te add hobe and tar name findDepartmentDfEmployee stack memory te thakbe . karon javascript internally function fn_name(){...} ke var fn_name = function(){...} evabe dekhe . tai function tao ekta variable er moddhe thakay function er nam stack e thakbe and sekhan theke heap er jekhane function er body store kora hoise sekhane point kora obosthay thake. then anotherDepartment name e ekta variable dekha jay jetar moddhe department variable er value assign kora hoise . tai stack er moddhe sobar last e anotherDepartment dhukano hoy and jehetu department er value assign kora hoise and department er value ekta non-primitive tai department er value jei heap memory te ase anotherDepartment er belay same jaygay point kora ase .  eta holo memory allocate phase 
+
+
+// akhon amra kivabe memory free hoy seta dekhbo 
+// jokhonii stack theke anotherDepartment ber hoye jabe execution sesh hole tokhon stack e anotherDepartment chole geleo heap memory te tar value theke jabe . karon ai value already arekjon use kortese . and seta holo department . tai anotherDepartment chole jauyar karone heap memory te kichuii ghotbe na . then jokhon findDepartmentOfEmployee stack theke ber hoye jabe tokhon gurbage collector aisha dekhbe heap e amon ekta data store ase jetar upor stack theke kono point kora nai . tokhon gurbage collector take muche diye oi memory free kore dibe. then department  jokhon ber hobe tokhon gurbage collector aisha dekhbe heap e amon ekta data ase jetar sathe stack er kono value er kono connection nai . tokhon seta oikhan theke muche jabe . evabe stack and heap allocate and free hoy . 
+
+
+
+
+
+
+
+
+
+
+
 
 // closure
 // outer function inner function refreshment..
