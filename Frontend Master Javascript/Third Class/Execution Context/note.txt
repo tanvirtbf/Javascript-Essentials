@@ -1,0 +1,21 @@
+Execution Context : 
+
+prothom jokhon project run hoy tokhon by default ekta Execution Context create hoy seta holo Global Execution Context . eta always stay thake . ai execution context er moddhei this and window object pauya jay . 
+
+function grandParent(){
+  function parent(){
+    let x = 10
+    function child(){
+      console.log(x)
+    }
+    function siblings(){
+
+    }
+    child()
+    siblings()
+  }
+  parent()
+}
+grandParent() // 10
+
+ai code er moddhe ja ja ghotche boltesi: ekdom first eii to global execution context create hobe jekhane window and this object thake . tarpor jokhon grandParent function er kache pointer ashe tokhon grandParent er jonno ekta function execution context create hoy . tarpor giye dekhlo er vitor arekta function parent ache . tokhon grandParent er vitoreii parent nam e ekta function execution context create hoy. then parent er moddhe x = 10 set kora hoy and child and siblings nam e 2 ta function execution context create hoy . akhn porjonto amar project e global -> grandParent -> parent -> [child, siblings] ei koyekta serial wise execution context choltese . to akhon child x variable access kortese jeta parent er execution context e exist korche . tai child seta access korte parche. bishoy ta hocche nested to nested jotoi nested hok execution context er upper level er sob property lower level er execution context wala ra use korte parbe. karon tara ekhane akhono exist korche . jokhoni kono function execution complete hoye jay tokhonii sathe sathe se sekhan theke muche jay . 
