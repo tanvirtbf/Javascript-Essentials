@@ -1846,6 +1846,32 @@
 // onnanno programming language jemon C, C++ egular moddhe developer der manually memory niye kaj korte hoy . jemon memory consume kora or memory allocate kora, oi specific memory er kaj sesh hoye gele segula ke free kore deya ittadi . ai jonnoi sekhane alloc, malloc, free etc function use hoy . kintu javascript e memory developer maintain korte pare na . js engine eta nijeii control kore . kintu amader sudhu eta mathay rakhte hobe amar application kototuku memory nicche, kivabe optimized way te korle memory kom khoroch hobe ittadi mathay rekhe code korle application er memory management best hobe and kom memory te user er system e load hobe . fole user er system configuration kom thakleo application sohoje crash korbe na . 
 
 
+// Memory Management Cycle : 
+// memory management e mainly 3 ta cycle thake 
+// 1. Memory Allocation phase
+// 2. Memory Usage phase
+// 3. Memory Release phase 
+
+
+// 1. Memory Allocation Phase : 
+// ai phase e javascript only kono particular variable or function er jonno memory allocate or free memory ke sei code er jonno assign kore dibe
+
+// 2. Memory Usage Phase : 
+// ai phase e javascript sei allocate kora memory space er moddhe sei code ta use korbe
+
+// 3. Memory Release Phase : 
+// jodi sei memory te thaka code er kaj sesh hoye jay tokhon ai phase e aisha sei memory space ke free kore dibe 
+
+
+
+
+
+
+
+
+
+
+
 // closure
 // outer function inner function refreshment..
 // function outer(){
