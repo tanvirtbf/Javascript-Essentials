@@ -2258,6 +2258,40 @@ const anotherDepartment = department
 // obj1 = null করলে, reference count হয় 1।
 // obj2 = null করলে, reference count হয় 0, এবং Garbage Collector সেটি মেমরি থেকে সরিয়ে ফেলে।
 
+// Circular Reference এর সমস্যা
+// Reference Counting Algorithm-এর বড় একটি সমস্যা হল Circular Reference। যখন দুই বা ততোধিক অবজেক্ট পরস্পরকে reference করে এবং তাদের reference count 0 না হয়, তখন Garbage Collector সেটিকে সাফ করতে পারে না।
+
+// Circular Reference Example:
+
+// function circularReference() {
+//   let obj1 = {};
+//   let obj2 = {};
+
+//   obj1.ref = obj2; // obj1 obj2 কে reference করে
+//   obj2.ref = obj1; // obj2 obj1 কে reference করে
+
+//   obj1 = null; // obj1 থেকে reference সরানো হলো
+//   obj2 = null; // obj2 থেকে reference সরানো হলো
+
+//   // Circular reference থাকার কারণে, obj1 এবং obj2 মেমরি থেকে সাফ হবে না।
+// }
+
+// Explanation:
+// obj1 এবং obj2 পরস্পরকে reference করে।
+// যদিও obj1 এবং obj2 null করা হয়, তবুও তারা একে অপরকে reference করার কারণে reference count 0 হয় না।
+// এই অবস্থা মেমরি লিক (Memory Leak) সৃষ্টি করে।
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
