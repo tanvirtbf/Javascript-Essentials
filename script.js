@@ -2240,6 +2240,30 @@ const anotherDepartment = department
 // যদি কোনো অবজেক্টের reference count 0 হয়, তাহলে সেটি মেমরি থেকে সরিয়ে ফেলা হয়।
 
 
+// Reference Counting Algorithm-এর উদাহরণ
+// Basic Example:
+// function referenceExample() {
+//   let obj1 = { name: "Alice" }; // obj1 এর reference count = 1
+//   let obj2 = obj1; // obj2 obj1 কে reference করে, count = 2
+
+//   obj1 = null; // obj1 থেকে reference সরানো হলো, count = 1
+//   obj2 = null; // obj2 থেকে reference সরানো হলো, count = 0
+
+//   // এখন obj1 এবং obj2 মেমরি থেকে সাফ হবে।
+// }
+
+// Explanation:
+// obj1 অবজেক্ট তৈরি করা হলে, তার reference count হয় 1।
+// obj2 = obj1 করলে, একই অবজেক্টের reference count হয় 2।
+// obj1 = null করলে, reference count হয় 1।
+// obj2 = null করলে, reference count হয় 0, এবং Garbage Collector সেটি মেমরি থেকে সরিয়ে ফেলে।
+
+
+
+
+
+
+
 // closure
 // outer function inner function refreshment..
 // function outer(){
