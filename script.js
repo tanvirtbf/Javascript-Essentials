@@ -2282,7 +2282,15 @@ const anotherDepartment = department
 // এই অবস্থা মেমরি লিক (Memory Leak) সৃষ্টি করে।
 
 
+// Reference Counting Algorithm-এর সীমাবদ্ধতা:
+// Circular Reference সমস্যা:
+// যেমন উপরের উদাহরণে, পরস্পরকে reference করা অবজেক্ট সাফ করা যায় না।
 
+// Performance Issue:
+// প্রতিটি অবজেক্টের reference count ট্র্যাক করা computationally expensive।
+
+// Large Data Structure:
+// বড় বড় ডেটা স্ট্রাকচারগুলির reference গুনে রাখা সময় সাপেক্ষ।
 
 
 
