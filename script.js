@@ -2293,13 +2293,38 @@ const anotherDepartment = department
 // বড় বড় ডেটা স্ট্রাকচারগুলির reference গুনে রাখা সময় সাপেক্ষ।
 
 
+// Modern Garbage Collector কেন Reference Counting ব্যবহার করে না?
+// Modern Garbage Collector (যেমন V8) Mark-and-Sweep Algorithm ব্যবহার করে, কারণ এটি Circular Reference-এর সমস্যাগুলি সমাধান করতে পারে। Reference Counting শুধুমাত্র সরল এবং নির্ভুল অবজেক্ট মেমরি ম্যানেজমেন্টে ভালো কাজ করে।
+
+// Reference Counting Algorithm এর ব্যবহারযোগ্যতা কোথায়?
+// Reference Counting এখনও কিছু ক্ষেত্রে ব্যবহৃত হয়:
+
+// Embedded Systems: যেসব সিস্টেমে সীমিত রিসোর্স থাকে।
+// Programming Languages: যেমন Python এর কিছু অংশ, C++-এ shared_ptr।
+// Small-Scale Applications: যেখানে Circular Reference এর সম্ভাবনা কম।
 
 
+// Reference Counting Algorithm ব্যবহার করলে কীভাবে Circular Reference সমস্যা সমাধান করা যায়?
+// Weak References ব্যবহার:
+// Modern JavaScript এ WeakMap এবং WeakSet ব্যবহার করে Circular Reference সমস্যা এড়ানো যায়।
 
 
+// function weakReferenceExample() {
+//   let obj1 = {};
+//   let obj2 = {};
+
+//   let weakMap = new WeakMap();
+//   weakMap.set(obj1, obj2); // WeakMap circular reference এড়ায়
+
+//   obj1 = null; // Garbage Collector obj2 কে সাফ করবে
+// }
 
 
-
+// Reference Counting Algorithm: মূল পয়েন্ট
+// Reference Counting অবজেক্টের reference সংখ্যা গুনে মেমরি ম্যানেজমেন্ট করে।
+// Circular Reference সমস্যা এটি সমাধান করতে পারে না।
+// Modern Garbage Collectors Mark-and-Sweep এবং Generational GC ব্যবহার করে এই সীমাবদ্ধতা দূর করেছে।
+// WeakMap এবং WeakSet Circular Reference সমস্যা সমাধানে কার্যকর।
 
 
 
