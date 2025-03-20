@@ -1,3 +1,13 @@
+
+
+
+
+
+
+
+
+
+
 1. kono html file jokhon browser e run kora hoy tokhon er sathe onk gula javascript file thakte pare . mone rakhte hobe browser sob somoy sobgula javascript file ke eksathe kore ekta file e aina download kore . jar karone kono ekta file e jodi same variable er kono variable onno kono file e hoy tahole tara overwrite hobe . eta bujhar jonno app.js er moddhe fileName ekta variable er data dilam 'Tanvir' and app2.js er moddhe fileName='Ahmed' dilam . akhn app2.js file er moddhe setTimeout e 2 second diye fileName console log korar por dekha jay app.js er filename er value ekhane print hocche . karon jotokkhon e app2.js file run hoise totokkhon porjonto app2.js suspend obosthay chilo. 
 
 2. jokhon var, let, const use na kore kono variable declare kora hoy tokhon seta window object er moddhe set hoy . jemon name='tanvir' ,, ekhane name variable ta window object e set hoise . akhn jodi ami console.log(window.name) dei tahole answer ashbe 'tanvir' . similerly var diyeo kono variable declare korle seta window object er moddhe set hoy . etai problem create kore karon ekta project er onk gula js file jehetu ekta single file er moddhe attach hoye browser e run kore tai browser sei single js file er jonno ektaii window object dibe . and sei js file gular moddhe variable overwrite houyar chance thake jehetu sob gulaii window object er moddhe save hobe
@@ -264,7 +274,6 @@ let randomItem = items[Math.floor(Math.random() * items.length)];
 console.log(randomItem); // উদাহরণ: "Banana"
 সারাংশ:
 Math.random() মেথড এলোমেলো সংখ্যা তৈরি করতে ব্যবহৃত হয়। এটি অনেক ক্ষেত্রে ব্যবহারযোগ্য, যেমন গেম, সিকিউরিটি কোড, এবং ডেটা নির্বাচন। নির্দিষ্ট রেঞ্জ বা পূর্ণসংখ্যা তৈরি করতে এটি অন্যান্য Math মেথডের সঙ্গে ব্যবহার করতে হয়।
-
 
 # Math.abs(x)
 
