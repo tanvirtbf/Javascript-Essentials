@@ -102,7 +102,22 @@ console.log(result); // Output: NaN
 এই বিষয়গুলো বোঝার মাধ্যমে JavaScript-এ টাইপ কনভার্শন আরও স্পষ্ট হবে।
 
 
+আমরা প্রতিদিন JavaScript-এ কোড লিখি, কিন্তু একবারও চিন্তা করি না যে, Primitive Data Type-এর সাথে Object-এর মতো Method Call করা কীভাবে সম্ভব?
+যেমন 
+const num = 10;
+num.toString() // '10'
+এখানে num তো একটা প্রিমিটিভ ডেটা টাইপ । তাহলে এখানে কিভাবে ডট দিয়ে toString() method call হলো ? 
+এটি সম্ভব হয় JavaScript-এর Boxing Feature-এর কারণে!!
 
+যখন আমরা 42.toString() কল করি, তখন JavaScript এর পেছনে কী করে? এটি Number, String, এবং Boolean-এর ক্ষেত্রে primitive value-কে স্বয়ংক্রিয়ভাবে temporary object-এ রূপান্তর করে। এরপর সেই Object-এর মেথড বা প্রোপার্টি অ্যাক্সেস করা হয়। কাজ শেষ হলে, Object-টি মুছে ফেলা হয়, এবং primitive value ফেরত দেওয়া হয়।
+একেই বলে Boxing Mechanism।
+
+Boxing কীভাবে কাজ করে?
+JavaScript-এ তিনটি built-in Object Wrapper আছে:
+১। new Number(value)
+২। new String(value)
+৩। new Boolean(value)
+যখন আমরা primitive values-এর উপর Object-এর মতো method ব্যবহার করি, তখন JavaScript internally এগুলোকে এই Object Wrapper দিয়ে Box করে নেয়।
 
 
 
