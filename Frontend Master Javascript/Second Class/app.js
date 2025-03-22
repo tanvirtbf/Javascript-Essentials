@@ -84,7 +84,15 @@
 // }
 // show()
 
-
+// function myAddress(){
+//     let address = 'Dhaka'
+//     let district = 'Comilla'
+//     function add(){
+//         let str = address + ' ' + district
+//     }
+//     console.dir(add)
+// }
+// myAddress()
 
 
 
