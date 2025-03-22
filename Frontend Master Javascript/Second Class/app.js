@@ -74,15 +74,15 @@
 // }
 // show()
 
-function show(){
-    let myName = "Tanvir"
-    let dept = 'Web'
-    function inner(){
-        console.log(myName)
-    }
-    console.dir(inner)
-}
-show()
+// function show(){
+//     let myName = "Tanvir"
+//     let dept = 'Web'
+//     function inner(){
+//         console.log(myName)
+//     }
+//     console.dir(inner)
+// }
+// show()
 
 
 
