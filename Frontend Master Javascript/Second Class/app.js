@@ -1,3 +1,10 @@
+// Type Conversion Code 
+
+// Implicit Type Conversion
+// console.log('5' - 2) // 3
+
+// console.log('Hello' - 2) // NaN (karon ekhane type conversion kora somvob na)
+// console.log('Hello' + 2) // Hello2 (ekhane type conversion somvob tai kore nise string e)
 
 // boolean to number
 // console.log(true + 1) // 2
@@ -30,6 +37,24 @@
 // let num = "8"
 // let result = 4 + num++
 // console.log(result) // 12
+
+// Javascript Array Data Type :=> 
+// JavaScript-এ Array কি সত্যিই Data Type? নাকি কিছুটা ভিন্ন? 
+// অন্যান্য অনেক প্রোগ্রামিং ভাষায় (C, Java, Python) Array একটি Data Type হিসেবে পরিচিত। কিন্তু JavaScript-এ? 
+// JavaScript-এ Array আসলে একটি Special Type of Object! কেন?
+// JavaScript-এ typeof array চেক করলে এটি"object" রিটার্ন করে! কারণ, JavaScript-এ Array আসলে Object-এর একটি ইনহেরিটেড ফর্ম, যেখানে index গুলো key হিসেবে এবং values গুলো object-এর property হিসেবে কাজ করে।
+// উদাহরণ দেখুন
+// const arr = [10, 20, 30];
+
+// console.log(typeof arr); // Output: "object"
+// console.log(Array.isArray(arr)); // Output: true
+
+// তাহলে JavaScript-এর Array আর সাধারণ Object-এর মধ্যে পার্থক্য কী?
+// 1. Array-এর length property থাকে, যা স্বয়ংক্রিয়ভাবে আপডেট হয়।
+// 2. Array-এর built-in methods (push, pop, map, filter) থাকে, যা সাধারণ Object-এ থাকে না।
+// 3. Array-এর index key হিসেবে সংখ্যা (0, 1, 2...) হয়, আর Object-এ key সাধারণত string হয়।
+
+// সংক্ষেপে বললে JavaScript-এ Array আসলে Object, কিন্তু এটি বিশেষভাবে Array-like behavior মেইনটেইন করে! 
 
 
 
