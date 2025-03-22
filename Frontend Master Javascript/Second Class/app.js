@@ -104,7 +104,6 @@
 // let count = counter()
 // console.log(count)
 
-
 // function createCounter(){
 //     let count = 0
 //     return function(){
