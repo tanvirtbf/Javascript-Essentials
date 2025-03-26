@@ -76,23 +76,23 @@
 
 
 // Example 
-function show(){
-  let name = 'Tanvir Ahmed'
-  return {
-    show : function(){
-      console.log(name)
-    },
-    update : function(val){
-      if(val.length>3){
-        name = val
-      }
-    }
-  }
-}
-const showNameFn = show()
-showNameFn.show()
-const updateName = showNameFn.update('Sadia')
-showNameFn.show()
+// function show(){
+//   let name = 'Tanvir Ahmed'
+//   return {
+//     show : function(){
+//       console.log(name)
+//     },
+//     update : function(val){
+//       if(val.length>3){
+//         name = val
+//       }
+//     }
+//   }
+// }
+// const showNameFn = show()
+// showNameFn.show()
+// const updateName = showNameFn.update('Sadia')
+// showNameFn.show()
 
 
 // function show(){
