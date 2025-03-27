@@ -359,6 +359,14 @@
 
 // IIFE : 
 
+for(var i=1; i<=10; i++){
+  (function(flag){
+    setTimeout(()=>{
+      console.log(flag)
+    }, 1000)
+  })(i)
+}
+
 
 // (function(){
 //   var myName = 'Tanvir Ahmed'
