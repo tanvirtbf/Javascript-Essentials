@@ -184,3 +184,18 @@
 // }
 
 // Interface
+
+interface parents {
+  name : String,
+  age : Number,
+  showName : Function
+}
+class Parent implements parents {
+  name = 'Tanvir'
+  age = 25
+  showName () {
+    console.log(this.name)
+  }
+}
+
+
