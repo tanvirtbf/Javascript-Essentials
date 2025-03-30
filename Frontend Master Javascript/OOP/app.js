@@ -176,11 +176,11 @@
 // console.log(parent.showName())
 
 // Private Variable and Method
-class Parent {
-  #myName = 'Tanvir'
-  #getName(){
-    console.log(this.#myName)
-  }
-}
+// class Parent {
+//   #myName = 'Tanvir'
+//   #getName(){
+//     console.log(this.#myName)
+//   }
+// }
 
 
