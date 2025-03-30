@@ -41,20 +41,20 @@
 
 
 // Inheritance
-class Parent {
-  myName = 'Tanvir'
-  myAge = 23
-  showName (){
-    console.log(this.myName)
-  }
-}
-const person1 = new Parent()
+// class Parent {
+//   myName = 'Tanvir'
+//   myAge = 23
+//   showName (){
+//     console.log(this.myName)
+//   }
+// }
+// const person1 = new Parent()
 
-class Child extends Parent {
+// class Child extends Parent {
 
-}
-const childOfPerson1 = new Child()
-console.log(childOfPerson1)
+// }
+// const childOfPerson1 = new Child()
+// console.log(childOfPerson1)
 
 
 
