@@ -164,3 +164,16 @@
 
 
 // Private 
+class Parent {
+  #myName = 'Tanvir Ahmed'
+
+  showName(){
+    return this.#myName
+  }
+
+}
+const parent = new Parent()
+console.log(parent.showName())
+
+
+
