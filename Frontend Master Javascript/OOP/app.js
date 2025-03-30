@@ -163,17 +163,24 @@
 
 
 
-// Private 
+// Private Variable
+// class Parent {
+//   #myName = 'Tanvir Ahmed'
+
+//   showName(){
+//     return this.#myName
+//   }
+
+// }
+// const parent = new Parent()
+// console.log(parent.showName())
+
+// Private Variable and Method
 class Parent {
-  #myName = 'Tanvir Ahmed'
-
-  showName(){
-    return this.#myName
+  #myName = 'Tanvir'
+  #getName(){
+    console.log(this.#myName)
   }
-
 }
-const parent = new Parent()
-console.log(parent.showName())
-
 
 
