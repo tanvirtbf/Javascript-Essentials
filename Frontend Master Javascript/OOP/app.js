@@ -57,4 +57,37 @@
 // console.log(childOfPerson1)
 
 
+// class Parent {
+//   constructor(){
+//     console.log('Parent Class Constructor!')
+//   }
+// }
+// class Child extends Parent {
+
+// }
+// const child1 = new Parent()
+
+
+// Super Keyword
+class Parent {
+  parentName = 'Tanvir'
+  constructor (name){
+    this.parentName = name
+  }
+  showParentName (){
+    console.log(this.parentName)
+  }
+}
+class Child extends Parent {
+  constructor (){
+    super("Tanvir Ahmed") 
+  }
+}
+
+const parent = new Parent()
+console.log(parent.showParentName())
+const child1 = new Child()
+console.log(child1.showParentName())
+console.log(parent.showParentName())
+
 
