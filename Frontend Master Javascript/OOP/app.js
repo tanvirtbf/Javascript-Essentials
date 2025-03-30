@@ -127,3 +127,38 @@
 // super inheritance ব্যবহারের ক্ষেত্রে অন্যতম গুরুত্বপূর্ণ একটি keyword।
 
 
+
+// Some Example of Super keyword
+class Parent {
+  myName = 'Tanvir'
+  myAge = 25
+  constructor(name, age){
+    this.myName = name
+    this.myAge = age
+  }
+
+  showName(){
+    console.log('Parent Name : ', this.myName)
+  }
+  showAge(){
+    console.log('Parent Age : ', this.myAge)
+  }
+}
+
+class Child extends Parent {
+  constructor(){
+    super("Tanvir Ahmed", 26)
+  }
+
+  showDetails(){
+    console.log(this.myName)
+    console.log(this.myAge)
+    this.showName()
+    this.showAge()
+  }
+}
+
+const child1 = new Child()
+console.log(child1.showDetails())
+
+
