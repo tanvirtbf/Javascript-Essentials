@@ -5710,6 +5710,24 @@ const anotherDepartment = department
 // }
 // ekhane jotogula user create korbo totogula object ekhane create kora lagtese . jodi 1 hajar user thake tahole 1 hajar ta object create kora lagtese . ei problem solve korar jonno factory function create hoise
 
+function createUser(fname,lname,age){
+  const user = {
+    firstName : fname,
+    lastName : lname,
+    age : age,
+    getAgeYear : function(){
+      return new Date().getFullYear() - user.age
+    }
+  }
+  return user
+}
+
+const user1 = createUser('Tanvir', 'Ahmed', 26)
+const user2 = createUser('Sadia', 'Khatun', 16)
+const user3 = createUser('Maymuna', 'Ahmed', 17)
+
+console.log(user1)
+
 // Create Factory function
 // function createUser(firstName,lastName,age){
 //   const user = {
