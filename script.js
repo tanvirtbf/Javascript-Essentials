@@ -5757,30 +5757,6 @@ const anotherDepartment = department
 // console.log(arr1.pop === arr2.pop) // true
 // tar mane arr1 and arr2 er khetre pop method same memory address e rakha hoyeche . erokom hajar ta array er jonno same memory location er pop method use kora hoyeche . er dara memory khoroch onk kombe . etaii constractor function diye kora jay
 
-function Animal(name) {
-    this.name = name;
-}
-
-Animal.prototype.makeSound = function() {
-    console.log("Some generic sound...");
-};
-
-function Dog(name, breed) {
-    Animal.call(this, name);
-    this.breed = breed;
-}
-
-Dog.prototype = Object.create(Animal.prototype);
-Dog.prototype.constructor = Dog;
-
-Dog.prototype.bark = function() {
-    console.log("Woof! Woof!");
-};
-
-const myDog = new Dog("Buddy", "Labrador");
-myDog.makeSound(); // Output: Some generic sound...
-myDog.bark();      // Output: Woof! Woof!
-
 
 // Constructor Function and new Keyword
 
