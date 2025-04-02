@@ -5757,9 +5757,26 @@ const anotherDepartment = department
 // console.log(arr1.pop === arr2.pop) // true
 // tar mane arr1 and arr2 er khetre pop method same memory address e rakha hoyeche . erokom hajar ta array er jonno same memory location er pop method use kora hoyeche . er dara memory khoroch onk kombe . etaii constractor function diye kora jay
 
-function getBirthYear () {
-  console.log(this)
+function createUser (fname,lname,age){
+  const user = {
+    firstName : fname,
+    lastName : lname,
+    age : age,
+    getBirthYear : createUser.commonMethods.getBirthYear
+  }
+  return user
 }
+
+createUser.commonMethods = {
+  getBirthYear () {
+    console.log(this)
+  }
+}
+
+const user1 = createUser('Tanvir', 'Ahmed', 26)
+const user2 = createUser('Sadia', 'Ahmed', 17)
+
+user2.getBirthYear()
 
 // Constructor Function and new Keyword
 
