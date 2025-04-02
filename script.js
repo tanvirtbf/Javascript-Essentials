@@ -5710,23 +5710,7 @@ const anotherDepartment = department
 // }
 // ekhane jotogula user create korbo totogula object ekhane create kora lagtese . jodi 1 hajar user thake tahole 1 hajar ta object create kora lagtese . ei problem solve korar jonno factory function create hoise
 
-function createUser(fname,lname,age){
-  const user = {
-    firstName : fname,
-    lastName : lname,
-    age : age,
-    getAgeYear : function(){
-      return new Date().getFullYear() - user.age
-    }
-  }
-  return user
-}
 
-const user1 = createUser('Tanvir', 'Ahmed', 26)
-const user2 = createUser('Sadia', 'Khatun', 16)
-const user3 = createUser('Maymuna', 'Ahmed', 17)
-
-console.log(user1)
 
 // Create Factory function
 // function createUser(firstName,lastName,age){
@@ -5772,6 +5756,10 @@ console.log(user1)
 // const arr2 = [4,5,6]
 // console.log(arr1.pop === arr2.pop) // true
 // tar mane arr1 and arr2 er khetre pop method same memory address e rakha hoyeche . erokom hajar ta array er jonno same memory location er pop method use kora hoyeche . er dara memory khoroch onk kombe . etaii constractor function diye kora jay
+
+function getBirthYear () {
+  console.log(this)
+}
 
 // Constructor Function and new Keyword
 
