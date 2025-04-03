@@ -5644,7 +5644,11 @@ const anotherDepartment = department
 // so ai term er sathe javascript er Boxing concept mishe ache . 
 
 // Boxing Concept 
-// jokhon premititve data type er upor kono property add kora hoy jemon "hello".toString() kora hoy tokhon javascript internally new String("hello") diye ekta string object create kore . and sei object tokhon tar parent Object String Object er sob property by default peye jay Prototype er moddhe . and sei property gula tokhon access kora jay . then kaj sesh hoye gele newly created object ta garbage collect hoye jay . ai concept taii Boxing concept . Boxing concept aro details chatgpt diye note kora hobe
+// jokhon premititve data type er upor kono property add kora hoy jemon "hello".toString() kora hoy tokhon javascript internally new String("hello") diye ekta string object create kore . and sei object tokhon tar parent Object String Object er sob property by default peye jay Prototype er moddhe . and sei property gula tokhon access kora jay . then kaj sesh hoye gele newly created object ta garbage collect hoye jay . ai concept taii Boxing concept . 
+
+// To premitive data type er upor amra jei property access korte pari seta ai karone na je sob premitive data type object hoye thake . aitar karon hocche Boxing . boxing er dara ekta sudden situation er jonno oi data type er object create hoye tar jonno javascript jei jei property rekheche seta inheritance er maddhome peye setar result samne aina abar se garbage collect hoye jay . tai amader kache mone hoy javascript e sob kichuii object . ashole sob kichu object na . borong sob kichu object houyar try kore . 
+
+// tahole javascript e ki sobkichu object ? answer is No . jodi sobkichuii object hoye thake tahole null.toString() access kora jeto . kintu eta kora jabe na . othoba undefined.toString() kora jeto . kintu eta somvob na . 
 
 
 
