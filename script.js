@@ -5791,25 +5791,27 @@ const anotherDepartment = department
 // akhon kotha hocche ai rules ki sudhu javascript er banano function er satheii ghote ? naki user er banano function er satheo ghote ? jodi ami ekta function banai createUser() and ai function ke jodi new keyword diye call kori tahole sei function er prototype er sathe oi particular object linked hobe ? answer is YES . karon amra jani prottekta function er ekta prototype key ase jekhane sei function er default functionality thake . jodi ami kono custom function create kori sekhaneo prototype key thake and sei prototype er moddhe dhukle dekha jay seta sesh porjonto giye Object() function er prototype er sathe link kora . tai amra bolte pari jekono function ke new keyword diye call korle sei function er prototype er sathe particular object er link hoye jay . jar karone oi object er [[Prototype]] e dhukle oi function er prototype linked obosthay dekha jay . and oi function er protoytpe er vitore dhukle , evabe vitore jaite jaite ekta somoy Object() function er prototype ke dekha jay . evabeii javascript e prototype kaj kore . 
 
 
-function createStudent(name, age){
-  const obj = Object.create(checkObj)
-  obj.name = name
-  obj.age = age
-  return obj
+// tahole new keyword diye amar ki lav hobe ? 
+// lav hobe je ami akhon dirctly createStudent function er prototype e checkObj ke rakhte parbo and createStudent dara joto gula object create hobe sob gula te access kora jabe 
+
+// Example : 
+function CreateStudent(name, age){
+  this.name = name
+  this.age = age
 }
 
-const checkObj = {
-  checkAge : function(){
-    if(this.age>20) return true
-    else return false
-  }
+CreateStudent.prototype.checkAge = function(){
+  if(this.age>20) return true
+  else return false
 }
 
-const stu1 = createStudent('Tanvir', 26)
-const stu2 = createStudent('Sadia', 17)
+const stu1 = new CreateStudent('Tanvir', 26)
+const stu2 = new CreateStudent('Sadia', 17)
 
 console.log(stu1.checkAge()) // true
 console.log(stu2.checkAge()) // false
+
+// akhn ami jotoii object create kori sob gulay checkAge function peye jabe . ekhane memory kom lagbe . ektaii function sobaii use korte parbe 
 
 
 
