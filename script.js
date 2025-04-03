@@ -5758,7 +5758,32 @@ const anotherDepartment = department
 // amra jokhon const arr = [] kori tokhon javascript internally new Array() call kore . tokhon Array() function er vitor jei prototype ase seta link hoye jay arr er moddhe thaka [[Prototype]] key er moddhe . sei [[Prototype]] er moddhe abar arekta [[Prototype]] key ase. sei [[Prototype]] key point kore thake Object function er prototype ke . karon Object hocche sob object function er parent. tarpore r kichuii nai . jemon amader babar baba , tar babar baba, then tar babar baba khujte khujte ekta somoy Adam nobir kase pouchaiya jabo and then tar pore r keu nai . temni Object function er pore r kichu nai . etaii console.dir() korle visualize hobe . 
 
 
-// __proto__ eta kono property or method na . eta holo getter and setter function 
+// Important Notes************
+// __proto__ eta kono property or method na . eta holo getter and setter function . cholen eta ektu bekkha kora jak 
+// Example : 
+function createStudent(name, age){
+  const obj = Object.create(checkObj)
+  obj.name = name
+  obj.age = age
+  return obj
+}
+
+const checkObj = {
+  checkAge : function(){
+    if(this.age>20) return true
+    else return false
+  }
+}
+
+const stu1 = createStudent('Tanvir', 26)
+const stu2 = createStudent('Sadia', 17)
+
+console.log(stu1.checkAge()) // true
+console.log(stu2.checkAge()) // false
+
+// ai example e internally onk kichu hoyeche . ami niche ta bekkha korchi.
+// first of all Object.create ekta inbuilt function ase jeta use kore 2 ta object er moddhe ami link korate parbo . uporer example e createStudent function er vitor obj object er sathe checkObj er link korano hoyeche Object.create() use kore . jodi Object.create(checkObj) kora na hoto tahole javascript internally ki korto ? tokhon obj.__proto__ = Object.prototype kora hoto . jar karone tokhon obj er vitor [[Prototype]] key to dhukle dekha jay Object function er prototype ke point kora ache . Object.create(checkObj) just sei point ta venge checkObj ke boshaiya dise . orthat obj.__proto__ = checkObj kora hoise . aijonno akhon obj er [[Prototype]] e checkObj er prototype ase . and sei checkObj er ekta method holo checkAge . tai amra obj object diye sorasori checkAge method call korte parbo . kintu tai bole ki obj object er sathe Object function er prototype er link bicchinno hoye gese ? answer is no . karon amra console.dir(obj) or console.dir(stu1) korle dekhbo je stu1 er [[Prototype]] er moddhe checkObj er link ase and sei checkObj er [[Prototype]] er moddhe abar Object function er prototype link ase . orthat seta ekta somoy obosshoi main Object e giye sesh hobe . Array(), String() etc er khetreo same kahini 
+
 
 
 // function createStudent(name,age){
@@ -5784,20 +5809,22 @@ const anotherDepartment = department
 // console.log(stu1.checkAge())
 
 // with new keyword 
-function CreateUser(name,age){
+// function CreateUser(name,age){
   
-  this.name = name
-  this.age = age
+//   this.name = name
+//   this.age = age
   
-}
+// }
 
-CreateUser.prototype.checkAge = function(){
-  if(this.age > 20) return true
-  else return false
-}
+// CreateUser.prototype.checkAge = function(){
+//   if(this.age > 20) return true
+//   else return false
+// }
 
-const user1 = new CreateUser('Tanvir', 26)
-const user2 = new CreateUser('Sadia', 17)
+// const user1 = new CreateUser('Tanvir', 26)
+// const user2 = new CreateUser('Sadia', 17)
+
+
 
 
 
