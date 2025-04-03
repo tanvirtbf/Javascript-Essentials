@@ -5749,8 +5749,11 @@ const anotherDepartment = department
 
 
 // Important Notes**********
-// constructor : const obj = {} te obj er moddhe constructor nam e ekta property thake . etar kaj ki ? etar kono special kaj nei . but etar dara ami dekhte parbo je amar ai object kon Object function er theke ashce . orthat jodi array hoye thake tahole const arr = [] arr er moddhe constructor er moddhe Array() function ase . jate bujhte pari arr array ta kono Object function theke ashce . eta Array() object function theke ashce . 
+// constructor : const obj = {} te obj er moddhe constructor nam e ekta property thake . etar kaj ki ? etar kono special kaj nei . but etar dara ami dekhte parbo je amar ai object kon Object function er theke ashce . orthat jodi array hoye thake tahole const arr = [] arr er moddhe constructor er moddhe Array() function ase . jate bujhte pari arr array ta kono Object function theke ashce . eta Array() object function theke ashce . othat child ke detect korar jonno je tar parent keda. ai kaj chara r kono functional benefit nai . 
 
+
+// Important notes***********
+// OOP te sob kichur ekta base class or object thake . ekhane Array(), String(), Number(), Set() etc onk Object function ase . egular base object hocche Object()
 
 // Object Oriented Programming
 
