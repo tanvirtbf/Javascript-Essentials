@@ -5726,6 +5726,13 @@ const anotherDepartment = department
 
 // kokhono ki chinta korechi je amra jokhon const obj = {} diye ekta object create kori tokhon kivabe sekhane toString() or others method call korte pari ? eta kivabe ashlo ? ami to banai nai ai object er upor ai method . tahole kivabe ashlo ? well. eta ashce Object er moddhe jei prototype property ase sekhan theke . console.dir(Object) korle sei prototype property dekha jay . jokhon amra notun kono object create kori tokhon javascript Object er sei prototype property er sathe newly created object er link koraiya dey jar karone amra amader banano object e prototype propertyr vitor sob method access korte pari . 
 
+// mot kotha amra jei object create kori sei object er sathe javascript internally Object er prototype property er sathe link koraiya dey jate amra amader banano object er sathe prototype er moddhe thaka method gula access korte pari . 
+
+
+// Ekta real life example diye amra prototypal inheritance ta bujhe nei . 
+// jokhon amader jonmo hoy tokhon amra onk kichuii by default amader father theke peye thaki . hoyto amar father kalo tai amio kalo hoyechi . hoyto uni lomba tai amio lomba hoyechi . kintu sobkichu tar moto pai na but kichu ongsho father er moto peye thaki . eta via DNA amader kache ashe . same jinish ghote jokhon amra object create kori . javascript amader jonno Object function create kore rekheche jeta kina sob object er root father . sei object er moddhe ekta special property ase jar nam prototype property . amra jokhon kono object create kori tokhon javascript sei Object function theke prototype property amader banano object e inject kore thake jate amra oi object er sathe onk dhoroner method niye kaj korte pari .
+// akhon question holo amader banano sei object er kothay prototype object rakha hoy ? well . Javascript internally amader banano object er moddhe [[Prototype]] nam e ekta hidden property add kore dey jar moddhe Object function theke inherit houya prototype object rakha hoy 
+
 
 // Object Oriented Programming
 
