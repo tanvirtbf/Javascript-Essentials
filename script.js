@@ -5651,6 +5651,9 @@ const anotherDepartment = department
 // tahole javascript e ki sobkichu object ? answer is No . jodi sobkichuii object hoye thake tahole null.toString() access kora jeto . kintu eta kora jabe na . othoba undefined.toString() kora jeto . kintu eta somvob na . 
 
 
+// 2. Birth Of An Object : 
+
+
 
 // Object Oriented Programming
 
