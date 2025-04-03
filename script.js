@@ -5813,6 +5813,8 @@ const anotherDepartment = department
 
 // akhn ami jotoii object create kori sob gulay checkAge function peye jabe . ekhane memory kom lagbe . ektaii function sobaii use korte parbe 
 
+// Now start understand deeply Prototypal Inheritance
+
 
 
 // function createStudent(name,age){
