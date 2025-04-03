@@ -5761,6 +5761,28 @@ const anotherDepartment = department
 // __proto__ eta kono property or method na . eta holo getter and setter function 
 
 
+function createStudent(name,age){
+  const obj = Object.create(checkAgeObj)
+  obj.name = name
+  obj.age = age
+  return obj
+}
+
+const checkAgeObj = {
+  checkAge (){
+    if(this.age>30){
+      return true
+    } else {
+      return false
+    }
+  }
+}
+
+const stu1 = createStudent('Tanvir', 332)
+const stu2 = createStudent('Sadia', 17)
+
+console.log(stu1.checkAge())
+
 
 
 
