@@ -5637,6 +5637,15 @@ const anotherDepartment = department
 // p1 5 second por resolve hobe, p2 hobe 3 second por . jotokkhon na sob gula promise resolve hocche totokkhon getData() function call stack e firbe na . tai ekhane total 5 second lagbe getData() function ta call stack e giya pura execute complete korte . karon p2 jodio 3 second e execute kore boshe ase kintu p1 to 5 second poreii execute hobe. that's why...
 
 
+// Prototypal Inheritance
+
+// part 1 : Is Everything in Javascript is an Object ?
+// amra jokhon kono string dekhi tokhon amra dekhte pai tar upor amra dot diye kono property add korte pari . jemon "hello".toString() or "s".length or etc . amader kase mone hoy tokhon javascript e sob kichuii object . ashole sob kichu object na . borong sob kichu object houyar try kore . eta amra pore details janbo kivabe sobkichu object houyar try kore . tai Right sentence ta hobe "Everything in Javascript tries to be an Object"
+// so ai term er sathe javascript er Boxing concept mishe ache . 
+
+// Boxing Concept 
+// jokhon premititve data type er upor kono property add kora hoy jemon "hello".toString() kora hoy tokhon javascript internally new String("hello") diye ekta string object create kore . and sei object tokhon tar parent Object String Object er sob property by default peye jay Prototype er moddhe . and sei property gula tokhon access kora jay . then kaj sesh hoye gele newly created object ta garbage collect hoye jay . ai concept taii Boxing concept . Boxing concept aro details chatgpt diye note kora hobe
+
 
 
 // Object Oriented Programming
