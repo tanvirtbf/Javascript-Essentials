@@ -5731,7 +5731,25 @@ const anotherDepartment = department
 
 // Ekta real life example diye amra prototypal inheritance ta bujhe nei . 
 // jokhon amader jonmo hoy tokhon amra onk kichuii by default amader father theke peye thaki . hoyto amar father kalo tai amio kalo hoyechi . hoyto uni lomba tai amio lomba hoyechi . kintu sobkichu tar moto pai na but kichu ongsho father er moto peye thaki . eta via DNA amader kache ashe . same jinish ghote jokhon amra object create kori . javascript amader jonno Object function create kore rekheche jeta kina sob object er root father . sei object er moddhe ekta special property ase jar nam prototype property . amra jokhon kono object create kori tokhon javascript sei Object function theke prototype property amader banano object e inject kore thake jate amra oi object er sathe onk dhoroner method niye kaj korte pari .
-// akhon question holo amader banano sei object er kothay prototype object rakha hoy ? well . Javascript internally amader banano object er moddhe [[Prototype]] nam e ekta hidden property add kore dey jar moddhe Object function theke inherit houya prototype object rakha hoy 
+// akhon question holo amader banano sei object er kothay prototype object rakha hoy ? well . Javascript internally amader banano object er moddhe [[Prototype]] nam e ekta hidden property add kore dey jar moddhe Object function theke inherit houya prototype object rakha hoy . javascript [[Prototype]] er moddhe default functionality inject kore dey.
+
+// amra jokhon const obj = {} kori tokhon javascript internally obj.[[Prototype]] = Object.prototype kore dey jar karone amra obj er moddhe [[Prototype]] er moddhe Object function er prototype object peye thaki . 
+// kintu amra kivabe eta access korbo ? amra jodi likhi console.log(obj["[[Prototype]]"]) tahole answer ashbe undefined. eta kivabe holo ? othocho ami jodi obj ke console kori sekhane [[Prototype]] peye thaki . tahole kivabe ami access korbo ? 
+// eta ashole ektu vinno way te access kora lage . eta access korte hole entry hoy __proto__ . amra jodi obj.__proto__ kori tokhon sei [[Prototype]] ke access korte parbo . 
+// obj.__proto__ === Object.prototype // true 
+// tar mane obj er moddhe jei default functionality ase seta Object function prototype thekeii ashe setaii proved kore . 
+
+// tahole main kotha holo amra jokhon kono object create kori tokhon javascript internally sei object er vitor [[Prototyep]] key create kore and javascript setar value Object function prototype er sathe attach kore dey. Object function er prototype jei memory te rakha hoyeche obj er [[Prototype]] sei memory teii point kora thake 
+
+
+// Important Notes************
+// amra jokhon kono object banai tokhon sei object internally oi function er sathe attached hoye jay jei function sei object ke baniyeche . 
+// javascript e object sobsomoy kono na kono function er maddhome toiri hoye thake . jemon Object(), String() , Number(), Array() etc. jokhon jei function er dara oi object create hoy tokhon sei function er prototype object er sathe link hoye jay . orthat amra jei object banaisi sei object er moddhe [[Prototype]] key er moddhe oi function er prototype er sathe link hoye jay . 
+// jokhon array create hoy tokhon Array() function er prototype er sathe link hoye jay . jokhon string data create hoy tokhon String() function er prototype er sathe link hoye jay . tar jonno string er prototype r Array er prototype same na . jar jonno jei jei method string e apply kora jay segula abar array te kora jay na . jodi sob object same function er prototype er sathe connected thakto tahole string er moddhe jei method access kora jeto seta array er moddheo kora jeto . 
+
+
+// Important Notes**********
+// constructor : const obj = {} te obj er moddhe constructor nam e ekta property thake . etar kaj ki ? etar kono special kaj nei . but etar dara ami dekhte parbo je amar ai object kon Object function er theke ashce . orthat jodi array hoye thake tahole const arr = [] arr er moddhe constructor er moddhe Array() function ase . jate bujhte pari arr array ta kono Object function theke ashce . eta Array() object function theke ashce . 
 
 
 // Object Oriented Programming
