@@ -5761,27 +5761,43 @@ const anotherDepartment = department
 // __proto__ eta kono property or method na . eta holo getter and setter function 
 
 
-function createStudent(name,age){
-  const obj = Object.create(checkAgeObj)
-  obj.name = name
-  obj.age = age
-  return obj
+// function createStudent(name,age){
+//   const obj = Object.create(checkAgeObj)
+//   obj.name = name
+//   obj.age = age
+//   return obj
+// }
+
+// const checkAgeObj = {
+//   checkAge (){
+//     if(this.age>30){
+//       return true
+//     } else {
+//       return false
+//     }
+//   }
+// }
+
+// const stu1 = createStudent('Tanvir', 332)
+// const stu2 = createStudent('Sadia', 17)
+
+// console.log(stu1.checkAge())
+
+// with new keyword 
+function CreateUser(name,age){
+  
+  this.name = name
+  this.age = age
+  
 }
 
-const checkAgeObj = {
-  checkAge (){
-    if(this.age>30){
-      return true
-    } else {
-      return false
-    }
-  }
+CreateUser.prototype.checkAge = function(){
+  if(this.age > 20) return true
+  else return false
 }
 
-const stu1 = createStudent('Tanvir', 332)
-const stu2 = createStudent('Sadia', 17)
-
-console.log(stu1.checkAge())
+const user1 = new CreateUser('Tanvir', 26)
+const user2 = new CreateUser('Sadia', 17)
 
 
 
