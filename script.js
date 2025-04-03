@@ -5795,21 +5795,21 @@ const anotherDepartment = department
 // lav hobe je ami akhon dirctly createStudent function er prototype e checkObj ke rakhte parbo and createStudent dara joto gula object create hobe sob gula te access kora jabe 
 
 // Example : 
-function CreateStudent(name, age){
-  this.name = name
-  this.age = age
-}
+// function CreateStudent(name, age){
+//   this.name = name
+//   this.age = age
+// }
 
-CreateStudent.prototype.checkAge = function(){
-  if(this.age>20) return true
-  else return false
-}
+// CreateStudent.prototype.checkAge = function(){
+//   if(this.age>20) return true
+//   else return false
+// }
 
-const stu1 = new CreateStudent('Tanvir', 26)
-const stu2 = new CreateStudent('Sadia', 17)
+// const stu1 = new CreateStudent('Tanvir', 26)
+// const stu2 = new CreateStudent('Sadia', 17)
 
-console.log(stu1.checkAge()) // true
-console.log(stu2.checkAge()) // false
+// console.log(stu1.checkAge()) // true
+// console.log(stu2.checkAge()) // false
 
 // akhn ami jotoii object create kori sob gulay checkAge function peye jabe . ekhane memory kom lagbe . ektaii function sobaii use korte parbe 
 
