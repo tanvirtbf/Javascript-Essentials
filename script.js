@@ -5754,6 +5754,21 @@ const anotherDepartment = department
 
 // Important notes***********
 // OOP te sob kichur ekta base class or object thake . ekhane Array(), String(), Number(), Set() etc onk Object function ase . egular base object hocche Object()
+// ai jinish ta amra ektu visualize korar try kori
+// amra jokhon const arr = [] kori tokhon javascript internally new Array() call kore . tokhon Array() function er vitor jei prototype ase seta link hoye jay arr er moddhe thaka [[Prototype]] key er moddhe . sei [[Prototype]] er moddhe abar arekta [[Prototype]] key ase. sei [[Prototype]] key point kore thake Object function er prototype ke . karon Object hocche sob object function er parent. tarpore r kichuii nai . jemon amader babar baba , tar babar baba, then tar babar baba khujte khujte ekta somoy Adam nobir kase pouchaiya jabo and then tar pore r keu nai . temni Object function er pore r kichu nai . etaii console.dir() korle visualize hobe . 
+
+
+// __proto__ eta kono property or method na . eta holo getter and setter function 
+
+
+
+
+
+
+
+
+
+
 
 // Object Oriented Programming
 
