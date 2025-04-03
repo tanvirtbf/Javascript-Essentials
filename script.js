@@ -5761,6 +5761,36 @@ const anotherDepartment = department
 // Important Notes************
 // __proto__ eta kono property or method na . eta holo getter and setter function . cholen eta ektu bekkha kora jak 
 // Example : 
+// function createStudent(name, age){
+//   const obj = Object.create(checkObj)
+//   obj.name = name
+//   obj.age = age
+//   return obj
+// }
+
+// const checkObj = {
+//   checkAge : function(){
+//     if(this.age>20) return true
+//     else return false
+//   }
+// }
+
+// const stu1 = createStudent('Tanvir', 26)
+// const stu2 = createStudent('Sadia', 17)
+
+// console.log(stu1.checkAge()) // true
+// console.log(stu2.checkAge()) // false
+
+// ai example e internally onk kichu hoyeche . ami niche ta bekkha korchi.
+// first of all Object.create ekta inbuilt function ase jeta use kore 2 ta object er moddhe ami link korate parbo . uporer example e createStudent function er vitor obj object er sathe checkObj er link korano hoyeche Object.create() use kore . jodi Object.create(checkObj) kora na hoto tahole javascript internally ki korto ? tokhon obj.__proto__ = Object.prototype kora hoto . jar karone tokhon obj er vitor [[Prototype]] key to dhukle dekha jay Object function er prototype ke point kora ache . Object.create(checkObj) just sei point ta venge checkObj ke boshaiya dise . orthat obj.__proto__ = checkObj kora hoise . aijonno akhon obj er [[Prototype]] e checkObj er prototype ase . and sei checkObj er ekta method holo checkAge . tai amra obj object diye sorasori checkAge method call korte parbo . kintu tai bole ki obj object er sathe Object function er prototype er link bicchinno hoye gese ? answer is no . karon amra console.dir(obj) or console.dir(stu1) korle dekhbo je stu1 er [[Prototype]] er moddhe checkObj er link ase and sei checkObj er [[Prototype]] er moddhe abar Object function er prototype link ase . orthat seta ekta somoy obosshoi main Object e giye sesh hobe . Array(), String() etc er khetreo same kahini 
+
+
+// ekhane amake manually Object.create() use kore link kora lagtese . eta notun developer der jonno bujhte para ta onk kothin . tai amra ekta optimized solution ber korte pari . seta hocche createStudent function ke call korbo amra new keyword diye . 
+
+// new keyword ki ? eta details explain apatoto korbo na . just etuku bolbo je amra age porechi je jokhon amra const obj = {} kori tokhon javascript internally new Object() diye seta create kore . aijonno Object function er prototype er sathe obj object linked hoye jay . jar karone obj er vitor [[Prototype]] key er moddhe Object function er prototype link hoye jay . abar jodi const arr = [] kori tokhon internally new Array() diye create hoy and Array() function er prototype er sathe arr er link hoy . jar karone arr er moddhe [[Prototype]] key te Array function er prototype link hoye jay . same thing String(), Number() or Set() er satheo hoy . Object(), String() , Array() etc javascript er banano kichu function jar moddhe javascript prototype key add koreche . sei prototype key te sei function er jonno default kichu functionality add kore diyeche . and sei function call kore with new keyword jei object create kore sei object er moddhe oi function er prototype link hoye jay . 
+// akhon kotha hocche ai rules ki sudhu javascript er banano function er satheii ghote ? naki user er banano function er satheo ghote ? jodi ami ekta function banai createUser() and ai function ke jodi new keyword diye call kori tahole sei function er prototype er sathe oi particular object linked hobe ? answer is YES . karon amra jani prottekta function er ekta prototype key ase jekhane sei function er default functionality thake . jodi ami kono custom function create kori sekhaneo prototype key thake and sei prototype er moddhe dhukle dekha jay seta sesh porjonto giye Object() function er prototype er sathe link kora . tai amra bolte pari jekono function ke new keyword diye call korle sei function er prototype er sathe particular object er link hoye jay . jar karone oi object er [[Prototype]] e dhukle oi function er prototype linked obosthay dekha jay . and oi function er protoytpe er vitore dhukle , evabe vitore jaite jaite ekta somoy Object() function er prototype ke dekha jay . evabeii javascript e prototype kaj kore . 
+
+
 function createStudent(name, age){
   const obj = Object.create(checkObj)
   obj.name = name
@@ -5780,9 +5810,6 @@ const stu2 = createStudent('Sadia', 17)
 
 console.log(stu1.checkAge()) // true
 console.log(stu2.checkAge()) // false
-
-// ai example e internally onk kichu hoyeche . ami niche ta bekkha korchi.
-// first of all Object.create ekta inbuilt function ase jeta use kore 2 ta object er moddhe ami link korate parbo . uporer example e createStudent function er vitor obj object er sathe checkObj er link korano hoyeche Object.create() use kore . jodi Object.create(checkObj) kora na hoto tahole javascript internally ki korto ? tokhon obj.__proto__ = Object.prototype kora hoto . jar karone tokhon obj er vitor [[Prototype]] key to dhukle dekha jay Object function er prototype ke point kora ache . Object.create(checkObj) just sei point ta venge checkObj ke boshaiya dise . orthat obj.__proto__ = checkObj kora hoise . aijonno akhon obj er [[Prototype]] e checkObj er prototype ase . and sei checkObj er ekta method holo checkAge . tai amra obj object diye sorasori checkAge method call korte parbo . kintu tai bole ki obj object er sathe Object function er prototype er link bicchinno hoye gese ? answer is no . karon amra console.dir(obj) or console.dir(stu1) korle dekhbo je stu1 er [[Prototype]] er moddhe checkObj er link ase and sei checkObj er [[Prototype]] er moddhe abar Object function er prototype link ase . orthat seta ekta somoy obosshoi main Object e giye sesh hobe . Array(), String() etc er khetreo same kahini 
 
 
 
