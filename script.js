@@ -5636,6 +5636,236 @@ const anotherDepartment = department
 // async await er khetre jokhon async function getData call hoy tokhon call stack e getData() ashe . then console.log('Hello World') print kore . jokhon porer line promise1 = await p1 execute korte jay tokhonii sathe sathe getData() function ta call stack theke ber hoye jay and tarpor joto gula promise ase await diye declare kore rakhse sob gula eksathe execute kore . jotokkhon porjonto kono await promise execute bad jabe totokkhon getData() call stack e jabe na . uporer example e p1 and p2 ai 2 ta promise await diye declare korse . tai jotokkhon porjonto ai 2 ta promise resolve na hocche totokkhon porjonto getData() function call stack e jabe na .
 // p1 5 second por resolve hobe, p2 hobe 3 second por . jotokkhon na sob gula promise resolve hocche totokkhon getData() function call stack e firbe na . tai ekhane total 5 second lagbe getData() function ta call stack e giya pura execute complete korte . karon p2 jodio 3 second e execute kore boshe ase kintu p1 to 5 second poreii execute hobe. that's why...
 
+
+// Prototypal Inheritance
+
+// part 1 : Is Everything in Javascript is an Object ?
+// amra jokhon kono string dekhi tokhon amra dekhte pai tar upor amra dot diye kono property add korte pari . jemon "hello".toString() or "s".length or etc . amader kase mone hoy tokhon javascript e sob kichuii object . ashole sob kichu object na . borong sob kichu object houyar try kore . eta amra pore details janbo kivabe sobkichu object houyar try kore . tai Right sentence ta hobe "Everything in Javascript tries to be an Object"
+// so ai term er sathe javascript er Boxing concept mishe ache . 
+
+// Boxing Concept 
+// jokhon premititve data type er upor kono property add kora hoy jemon "hello".toString() kora hoy tokhon javascript internally new String("hello") diye ekta string object create kore . and sei object tokhon tar parent Object String Object er sob property by default peye jay Prototype er moddhe . and sei property gula tokhon access kora jay . then kaj sesh hoye gele newly created object ta garbage collect hoye jay . ai concept taii Boxing concept . 
+
+// To premitive data type er upor amra jei property access korte pari seta ai karone na je sob premitive data type object hoye thake . aitar karon hocche Boxing . boxing er dara ekta sudden situation er jonno oi data type er object create hoye tar jonno javascript jei jei property rekheche seta inheritance er maddhome peye setar result samne aina abar se garbage collect hoye jay . tai amader kache mone hoy javascript e sob kichuii object . ashole sob kichu object na . borong sob kichu object houyar try kore . 
+
+// tahole javascript e ki sobkichu object ? answer is No . jodi sobkichuii object hoye thake tahole null.toString() access kora jeto . kintu eta kora jabe na . othoba undefined.toString() kora jeto . kintu eta somvob na . 
+
+// Boxing Concept with chatgpt
+// JavaScript-এ Boxing কনসেপ্ট সহজ ভাষায়
+// Boxing হলো Primitive Data Type (যেমন: string, number, boolean) কে Object-এ রূপান্তর করা।
+
+// JavaScript-এ Primitive Data Type-গুলো সাধারণত object-এর মতো আচরণ করে না। কিন্তু যখন আমরা এগুলোতে object-এর মতো method বা property অ্যাক্সেস করতে চাই, তখন JavaScript অটোমেটিকালি এগুলোকে object-এ রূপান্তর করে। এই প্রসেসকেই Boxing বলে।
+
+// 🛠 কীভাবে কাজ করে?
+// যখন আমরা কোনো primitive value-এর উপর object-এর মতো property বা method অ্যাক্সেস করি, তখন JavaScript সেটাকে temporary object-এ রূপান্তর করে এবং কাজ শেষ হলে সেটিকে আবার primitive-এ ফিরিয়ে আনে।
+
+// 🔹 উদাহরণ: String boxing
+// let text = "hello";
+// console.log(text.length); // Output: 5
+// console.log(text.toUpperCase()); // Output: "HELLO"
+// 👉 এখানে "hello" একটি primitive string, কিন্তু text.length এবং text.toUpperCase() কল করার সময় JavaScript automatically এটাকে String object-এ রূপান্তর করে।
+
+// 🔹 JavaScript যা করে:
+// let text = new String("hello"); // Boxing (Primitive → Object)
+// console.log(text.length);
+// console.log(text.toUpperCase());
+// এই object তৈরি হওয়ার পর কাজ শেষ হলে JavaScript এটাকে আবার primitive string-এ রূপান্তর করে।
+
+// 🔄 Unboxing (Object → Primitive)
+// যখন আমরা কোনো boxed object থেকে আবার primitive value নিতে চাই, তখন তাকে Unboxing বলে।
+
+// 🔹 উদাহরণ:
+// let strObj = new String("hello"); // String Object (Boxed)
+// console.log(typeof strObj); // "object"
+
+// let primitiveStr = strObj.valueOf(); // Unboxing
+// console.log(typeof primitiveStr); // "string"
+// 👉 valueOf() method ব্যবহার করলে আমরা মূল primitive value পেয়ে যাই।
+
+// 🔥 Boxing কোথায় কাজে লাগে?
+// যখন আমরা primitive values-এর উপর method/apply করতে চাই (যেমন: .length, .toUpperCase() ইত্যাদি)।
+
+// কখনও কখনও explicit boxing দরকার হয়, যদি object-এর মতো আচরণ দরকার হয়।
+
+// কিছু ক্ষেত্রে Type Coercion বা Implicit Conversion-এর মাধ্যমে JavaScript নিজেই boxing/unboxing করে।
+
+// ❌ সতর্কতা:
+// Explicit Boxing (new String, new Number) ব্যবহার করা খুব একটা ভালো চর্চা নয়, কারণ এটি প্রফর্মেন্স কমিয়ে দিতে পারে।
+
+// Comparison issue হতে পারে:
+
+// javascript
+// Copy
+// Edit
+// let str1 = "hello";
+// let str2 = new String("hello");
+
+// console.log(str1 === str2); // false (Primitive !== Object)
+// 👉 কারণ str1 একটি primitive string এবং str2 হলো একটি object।
+
+// ✅ সংক্ষেপে মনে রাখার জন্য:
+// কনসেপ্ট	প্রিমিটিভ	বক্সিং (Object)	আনবক্সিং
+// স্ট্রিং	"hello"	new String("hello")	strObj.valueOf()
+// নাম্বার	42	new Number(42)	numObj.valueOf()
+// বুলিয়ান	true	new Boolean(true)	boolObj.valueOf()
+// 📌 উপসংহার
+// Boxing = Primitive → Object
+
+// Unboxing = Object → Primitive
+
+// JavaScript নিজেই boxing করে যখন object-এর মতো আচরণ দরকার হয়।
+
+// Performance-এর জন্য প্রয়োজন না হলে new String(), new Number() ব্যবহার না করাই ভালো।
+
+
+// 2. Birth Of An Object : 
+// jokhon javascript er 0 line of code thake tokhono javascript e 2 ta jinish thake . oi 2 ta jinish diyeii sobkichu toiri hoye thake . sei 2 ta jinish holo : 1. Object Function and 2. Prototype (aita Object function ke help korar jonno
+
+// amra jodi console e Object likhe enter dei tahole amra dekhte pai Object ekta function . jemon : function Object(){...} . tar mane Object ashole Object na , seta ekta function Object . to jai hok eta bolar uddessho hoilo jokhon amra kono object create kori jemon const obj = {} tokhon javascript internally eta kore : const obj = new Object() . always se eta kore object create korar somoy . eta kno kore ? karon Object ekta function jar return value hocche Prototype object jeta amader helping er jonno onk property diye thake . amra jodi sei obj ke console.dir kori tokhon dekhte paro ekhane ase prototype . sei prototype er moddhe onk dhoroner method thake jeta amra object er moddhe chaliye thaki . jemon hasOwnProperty, isPrototypeOf etc . 
+// akhn kotha hocche amra object create korar somoy ai prototype object kottheke ashe ? eta capital Object theke ashe . amra jodi console.dir(Object) kori tahole onk gula property ashe . tar moddhe ekta hocche prototype property . ei prototype property sob user created object e deya hoy . tahole ai Object ki ? Object hocche sobcheye root level e thaka ekta property jetar dara sob object e property inherit hoye thake . ekdom low level property . 
+
+// kokhono ki chinta korechi je amra jokhon const obj = {} diye ekta object create kori tokhon kivabe sekhane toString() or others method call korte pari ? eta kivabe ashlo ? ami to banai nai ai object er upor ai method . tahole kivabe ashlo ? well. eta ashce Object er moddhe jei prototype property ase sekhan theke . console.dir(Object) korle sei prototype property dekha jay . jokhon amra notun kono object create kori tokhon javascript Object er sei prototype property er sathe newly created object er link koraiya dey jar karone amra amader banano object e prototype propertyr vitor sob method access korte pari . 
+
+// mot kotha amra jei object create kori sei object er sathe javascript internally Object er prototype property er sathe link koraiya dey jate amra amader banano object er sathe prototype er moddhe thaka method gula access korte pari . 
+
+
+// Ekta real life example diye amra prototypal inheritance ta bujhe nei . 
+// jokhon amader jonmo hoy tokhon amra onk kichuii by default amader father theke peye thaki . hoyto amar father kalo tai amio kalo hoyechi . hoyto uni lomba tai amio lomba hoyechi . kintu sobkichu tar moto pai na but kichu ongsho father er moto peye thaki . eta via DNA amader kache ashe . same jinish ghote jokhon amra object create kori . javascript amader jonno Object function create kore rekheche jeta kina sob object er root father . sei object er moddhe ekta special property ase jar nam prototype property . amra jokhon kono object create kori tokhon javascript sei Object function theke prototype property amader banano object e inject kore thake jate amra oi object er sathe onk dhoroner method niye kaj korte pari .
+// akhon question holo amader banano sei object er kothay prototype object rakha hoy ? well . Javascript internally amader banano object er moddhe [[Prototype]] nam e ekta hidden property add kore dey jar moddhe Object function theke inherit houya prototype object rakha hoy . javascript [[Prototype]] er moddhe default functionality inject kore dey.
+
+// amra jokhon const obj = {} kori tokhon javascript internally obj.[[Prototype]] = Object.prototype kore dey jar karone amra obj er moddhe [[Prototype]] er moddhe Object function er prototype object peye thaki . 
+// kintu amra kivabe eta access korbo ? amra jodi likhi console.log(obj["[[Prototype]]"]) tahole answer ashbe undefined. eta kivabe holo ? othocho ami jodi obj ke console kori sekhane [[Prototype]] peye thaki . tahole kivabe ami access korbo ? 
+// eta ashole ektu vinno way te access kora lage . eta access korte hole entry hoy __proto__ . amra jodi obj.__proto__ kori tokhon sei [[Prototype]] ke access korte parbo . 
+// obj.__proto__ === Object.prototype // true 
+// tar mane obj er moddhe jei default functionality ase seta Object function prototype thekeii ashe setaii proved kore . 
+
+// tahole main kotha holo amra jokhon kono object create kori tokhon javascript internally sei object er vitor [[Prototyep]] key create kore and javascript setar value Object function prototype er sathe attach kore dey. Object function er prototype jei memory te rakha hoyeche obj er [[Prototype]] sei memory teii point kora thake 
+
+
+// Important Notes************
+// amra jokhon kono object banai tokhon sei object internally oi function er sathe attached hoye jay jei function sei object ke baniyeche . 
+// javascript e object sobsomoy kono na kono function er maddhome toiri hoye thake . jemon Object(), String() , Number(), Array() etc. jokhon jei function er dara oi object create hoy tokhon sei function er prototype object er sathe link hoye jay . orthat amra jei object banaisi sei object er moddhe [[Prototype]] key er moddhe oi function er prototype er sathe link hoye jay . 
+// jokhon array create hoy tokhon Array() function er prototype er sathe link hoye jay . jokhon string data create hoy tokhon String() function er prototype er sathe link hoye jay . tar jonno string er prototype r Array er prototype same na . jar jonno jei jei method string e apply kora jay segula abar array te kora jay na . jodi sob object same function er prototype er sathe connected thakto tahole string er moddhe jei method access kora jeto seta array er moddheo kora jeto . 
+
+
+// Important Notes**********
+// constructor : const obj = {} te obj er moddhe constructor nam e ekta property thake . etar kaj ki ? etar kono special kaj nei . but etar dara ami dekhte parbo je amar ai object kon Object function er theke ashce . orthat jodi array hoye thake tahole const arr = [] arr er moddhe constructor er moddhe Array() function ase . jate bujhte pari arr array ta kono Object function theke ashce . eta Array() object function theke ashce . othat child ke detect korar jonno je tar parent keda. ai kaj chara r kono functional benefit nai . 
+
+
+// Important notes***********
+// OOP te sob kichur ekta base class or object thake . ekhane Array(), String(), Number(), Set() etc onk Object function ase . egular base object hocche Object()
+// ai jinish ta amra ektu visualize korar try kori
+// amra jokhon const arr = [] kori tokhon javascript internally new Array() call kore . tokhon Array() function er vitor jei prototype ase seta link hoye jay arr er moddhe thaka [[Prototype]] key er moddhe . sei [[Prototype]] er moddhe abar arekta [[Prototype]] key ase. sei [[Prototype]] key point kore thake Object function er prototype ke . karon Object hocche sob object function er parent. tarpore r kichuii nai . jemon amader babar baba , tar babar baba, then tar babar baba khujte khujte ekta somoy Adam nobir kase pouchaiya jabo and then tar pore r keu nai . temni Object function er pore r kichu nai . etaii console.dir() korle visualize hobe . 
+
+
+// Important Notes************
+// __proto__ eta kono property or method na . eta holo getter and setter function . cholen eta ektu bekkha kora jak 
+// Example : 
+// function createStudent(name, age){
+//   const obj = Object.create(checkObj)
+//   obj.name = name
+//   obj.age = age
+//   return obj
+// }
+
+// const checkObj = {
+//   checkAge : function(){
+//     if(this.age>20) return true
+//     else return false
+//   }
+// }
+
+// const stu1 = createStudent('Tanvir', 26)
+// const stu2 = createStudent('Sadia', 17)
+
+// console.log(stu1.checkAge()) // true
+// console.log(stu2.checkAge()) // false
+
+// ai example e internally onk kichu hoyeche . ami niche ta bekkha korchi.
+// first of all Object.create ekta inbuilt function ase jeta use kore 2 ta object er moddhe ami link korate parbo . uporer example e createStudent function er vitor obj object er sathe checkObj er link korano hoyeche Object.create() use kore . jodi Object.create(checkObj) kora na hoto tahole javascript internally ki korto ? tokhon obj.__proto__ = Object.prototype kora hoto . jar karone tokhon obj er vitor [[Prototype]] key to dhukle dekha jay Object function er prototype ke point kora ache . Object.create(checkObj) just sei point ta venge checkObj ke boshaiya dise . orthat obj.__proto__ = checkObj kora hoise . aijonno akhon obj er [[Prototype]] e checkObj er prototype ase . and sei checkObj er ekta method holo checkAge . tai amra obj object diye sorasori checkAge method call korte parbo . kintu tai bole ki obj object er sathe Object function er prototype er link bicchinno hoye gese ? answer is no . karon amra console.dir(obj) or console.dir(stu1) korle dekhbo je stu1 er [[Prototype]] er moddhe checkObj er link ase and sei checkObj er [[Prototype]] er moddhe abar Object function er prototype link ase . orthat seta ekta somoy obosshoi main Object e giye sesh hobe . Array(), String() etc er khetreo same kahini 
+
+
+// ekhane amake manually Object.create() use kore link kora lagtese . eta notun developer der jonno bujhte para ta onk kothin . tai amra ekta optimized solution ber korte pari . seta hocche createStudent function ke call korbo amra new keyword diye . 
+
+// new keyword ki ? eta details explain apatoto korbo na . just etuku bolbo je amra age porechi je jokhon amra const obj = {} kori tokhon javascript internally new Object() diye seta create kore . aijonno Object function er prototype er sathe obj object linked hoye jay . jar karone obj er vitor [[Prototype]] key er moddhe Object function er prototype link hoye jay . abar jodi const arr = [] kori tokhon internally new Array() diye create hoy and Array() function er prototype er sathe arr er link hoy . jar karone arr er moddhe [[Prototype]] key te Array function er prototype link hoye jay . same thing String(), Number() or Set() er satheo hoy . Object(), String() , Array() etc javascript er banano kichu function jar moddhe javascript prototype key add koreche . sei prototype key te sei function er jonno default kichu functionality add kore diyeche . and sei function call kore with new keyword jei object create kore sei object er moddhe oi function er prototype link hoye jay . 
+// akhon kotha hocche ai rules ki sudhu javascript er banano function er satheii ghote ? naki user er banano function er satheo ghote ? jodi ami ekta function banai createUser() and ai function ke jodi new keyword diye call kori tahole sei function er prototype er sathe oi particular object linked hobe ? answer is YES . karon amra jani prottekta function er ekta prototype key ase jekhane sei function er default functionality thake . jodi ami kono custom function create kori sekhaneo prototype key thake and sei prototype er moddhe dhukle dekha jay seta sesh porjonto giye Object() function er prototype er sathe link kora . tai amra bolte pari jekono function ke new keyword diye call korle sei function er prototype er sathe particular object er link hoye jay . jar karone oi object er [[Prototype]] e dhukle oi function er prototype linked obosthay dekha jay . and oi function er protoytpe er vitore dhukle , evabe vitore jaite jaite ekta somoy Object() function er prototype ke dekha jay . evabeii javascript e prototype kaj kore . 
+
+
+// tahole new keyword diye amar ki lav hobe ? 
+// lav hobe je ami akhon dirctly createStudent function er prototype e checkObj ke rakhte parbo and createStudent dara joto gula object create hobe sob gula te access kora jabe 
+
+// Example : 
+// function CreateStudent(name, age){
+//   this.name = name
+//   this.age = age
+// }
+
+// CreateStudent.prototype.checkAge = function(){
+//   if(this.age>20) return true
+//   else return false
+// }
+
+// const stu1 = new CreateStudent('Tanvir', 26)
+// const stu2 = new CreateStudent('Sadia', 17)
+
+// console.log(stu1.checkAge()) // true
+// console.log(stu2.checkAge()) // false
+
+// akhn ami jotoii object create kori sob gulay checkAge function peye jabe . ekhane memory kom lagbe . ektaii function sobaii use korte parbe 
+
+// Now start understand deeply Prototypal Inheritance
+
+
+
+// function createStudent(name,age){
+//   const obj = Object.create(checkAgeObj)
+//   obj.name = name
+//   obj.age = age
+//   return obj
+// }
+
+// const checkAgeObj = {
+//   checkAge (){
+//     if(this.age>30){
+//       return true
+//     } else {
+//       return false
+//     }
+//   }
+// }
+
+// const stu1 = createStudent('Tanvir', 332)
+// const stu2 = createStudent('Sadia', 17)
+
+// console.log(stu1.checkAge())
+
+// with new keyword 
+// function CreateUser(name,age){
+  
+//   this.name = name
+//   this.age = age
+  
+// }
+
+// CreateUser.prototype.checkAge = function(){
+//   if(this.age > 20) return true
+//   else return false
+// }
+
+// const user1 = new CreateUser('Tanvir', 26)
+// const user2 = new CreateUser('Sadia', 17)
+
+
+
+
+
+
+
+
+
+
+
+
 // Object Oriented Programming
 
 // 4 Pillars of Object Oriented Programming
@@ -5707,6 +5937,8 @@ const anotherDepartment = department
 // }
 // ekhane jotogula user create korbo totogula object ekhane create kora lagtese . jodi 1 hajar user thake tahole 1 hajar ta object create kora lagtese . ei problem solve korar jonno factory function create hoise
 
+
+
 // Create Factory function
 // function createUser(firstName,lastName,age){
 //   const user = {
@@ -5751,6 +5983,7 @@ const anotherDepartment = department
 // const arr2 = [4,5,6]
 // console.log(arr1.pop === arr2.pop) // true
 // tar mane arr1 and arr2 er khetre pop method same memory address e rakha hoyeche . erokom hajar ta array er jonno same memory location er pop method use kora hoyeche . er dara memory khoroch onk kombe . etaii constractor function diye kora jay
+
 
 // Constructor Function and new Keyword
 

@@ -74,6 +74,27 @@
 // }
 // show()
 
+
+// Example 
+// function show(){
+//   let name = 'Tanvir Ahmed'
+//   return {
+//     show : function(){
+//       console.log(name)
+//     },
+//     update : function(val){
+//       if(val.length>3){
+//         name = val
+//       }
+//     }
+//   }
+// }
+// const showNameFn = show()
+// showNameFn.show()
+// const updateName = showNameFn.update('Sadia')
+// showNameFn.show()
+
+
 // function show(){
 //     let myName = "Tanvir"
 //     let dept = 'Web'
@@ -338,6 +359,14 @@
 
 
 // IIFE : 
+
+for(var i=1; i<=10; i++){
+  (function(flag){
+    setTimeout(()=>{
+      console.log(flag)
+    }, 1000)
+  })(i)
+}
 
 
 // (function(){
