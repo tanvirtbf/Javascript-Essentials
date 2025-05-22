@@ -121,6 +121,7 @@
 // console.log(counter()) // 3
 // console.log(counter()) // 4
 
+
 // const bankBalance = (amount) => {
 //     let myAmount = amount
 //     return {
