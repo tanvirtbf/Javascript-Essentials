@@ -18,19 +18,19 @@
 
 
 // Promises code Example : 
-const promise = new Promise((res, rej) => {
-    setTimeout(() => {
-        res("Data Recieved Successfully")
-    }, 3000)
-})
+// const promise = new Promise((res, rej) => {
+//     setTimeout(() => {
+//         res("Data Recieved Successfully")
+//     }, 3000)
+// })
 
-let loading = true
+// let loading = true
 
-promise.then((data) => {
-    console.log(data, 'data')
-}).catch((err) => {
-    console.log(err, 'error')
-}).finally(() => {
-    loading=false
-    console.log("finally")
-})
+// promise.then((data) => {
+//     console.log(data, 'data')
+// }).catch((err) => {
+//     console.log(err, 'error')
+// }).finally(() => {
+//     loading=false
+//     console.log("finally")
+// })
