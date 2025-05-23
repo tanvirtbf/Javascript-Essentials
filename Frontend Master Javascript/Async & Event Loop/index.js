@@ -2,7 +2,7 @@
 const num = 500;
 function getData(callback){
     let i=0;
-    while (i>1000){
+    while (i<1000){
         i++
     }
     const num2 = i
