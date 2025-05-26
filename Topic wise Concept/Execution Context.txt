@@ -1,0 +1,105 @@
+// Globar Execution Contaxt (GEC)
+//jokhon javascript first time load hoy tokhon by default ekta execution contaxt create kore jar nam holo Global Execution Contaxt(GEC)
+// GEC 2 ta special jinish amader dey(jodio 0 line code thake)
+// 1. window 2. this (window === this => true) --> tar mane window and this same memory location point kore
+
+// GEC or jekono execution contaxt er 2 ta phase thake
+// 1. Creation phase
+// 2. Execution phase
+
+// GEC er Creation phase eii 2 ta special object peye thaki, 1. window(global object) 2. this (point on window)
+
+// Global execution contaxt er creation phase e ki ki hobe ? nicher coder er jonno..
+// var tom = 'Hello Tom'
+// function hiTom(){
+//   console.log(this.tom)
+// }
+// Global execution contaxt er creation phase e ja ja hobe....
+// 1. window (global object)
+// 2. this (window)
+// 3. tom and hiTom memory allocated(sob variable , function er jonno memory allocated korbe)
+// 3. tom = undefined (jodi kono variable thake tahole sekhane undefined diye dibe)
+// 4. hiTom = function hiTom(){
+//              console.log(this.tom)
+//             } (jodi kono function thake tahole function er definition ta tule hiTom e set kore dibe)
+
+// Global execution contaxt er creation phase sesh , akhn execution phase start hobe
+// 1. tom = "Hello Tom" (tom er vitor tar value assign kore deya hobe)
+// 2. (jehetu hiTom function ke call kora hoy nai tai tokhono ei function er jonno kono execution contaxt hobe na)
+
+// test 1 :
+// var jerry = "Hello Jerry"
+// function helloJerry(){
+//   let hi = 1;
+//   console.log('Hello Jerry')
+// }
+// helloJerry()
+
+//GEC for test 1 =>
+//Creation phase :
+// jerry and helloJerry() er jonno memory allocated hobe
+//jerry : undefined
+//helloJerry : function helloJerry(){clg()}
+//Execution phase :
+//jerry: "Hello Jerry"
+//(in lexical position 420, execute a function . that's why create a new execution contaxt named function execution contaxt(FEC))
+
+// FEC for Lexical position 420
+
+//creation phase :
+//hi=undefined
+//define log function in memory but no execute
+
+//execution phase:
+// hi=1;
+//log() from console() (will create new execution contaxt FEC)
+
+// FEC for console.log()
+//Creation phase:
+//Execution phase:  
+// execute log function and print "Hello Jerry"
+
+//How Javascript Engine Managed execution contaxt tree ? kivabe javascript ai execution contaxt gula manage kore ?  Answer : Using Call Stack(last in first out)
+
+//test 2 code
+// console.log("Inside global execution context")
+// var a = 5;
+// function testMe(){
+//   console.log("Inside testMe execution context")
+//   var b = 10;
+//   var user = {
+//     name:'tanvir',
+//     county:'Bangladesh',
+//   }
+//   function testAgain(){
+//     console.log("Inside testAgain execution context")
+//     console.log("Exiting testAgain execution context")
+//   }
+//   testAgain();
+//   console.log("Exiting global execution context")
+// }
+// testMe();
+// console.log("Exiting global execution context")
+
+// Now test 2 code Execution Context design:
+// GEC
+//   CP
+//     a:undefined
+//     testMe: function(){code...}
+//   EP
+//     a:5
+//     testMe: Execute
+
+//     FEC
+//       CP
+//         b: undefined
+//         user:undefined
+//         testAgain: function(){code...}
+//       EP
+//         b:10
+//         user:{name:'tanvir',...}
+//         testAgain: Execute...
+
+//         FEC
+//           CP
+//           EP
