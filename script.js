@@ -1397,12 +1397,13 @@
 
 //Abstract Syntex Tree
 // Tokenization complete houyar por javascript sob tukro tukro token gula ke niye ekta tree banay . jake bole Abstract Syntex Tree
-// tarpor Abstract Syntex Tree bananor por setake as a input hishebe niye javascript finally machine code e convart kore
-// let a = 99
-// function hello(){
-// 	return a;
-// }
-// hello()
+// tarpor Abstract Syntex Tree bananor por setake as a input hishebe niye javascript finally machine code e convart kor
+
+let a = 99
+function hello(){
+	return a;
+}
+hello()
 
 // AST JSON for that code
 // {
@@ -1549,7 +1550,97 @@
 // Lexical Environment আমাদের বলে দেয়— "এই স্কোপে কোনো ভেরিয়েবল না পেলে, বাইরে খোঁজো— যতদূর সম্ভব।"
 // এটাই Scope Chain এবং Closure এর ভিত্তি।
 
+// আমরা নিচে ৫-৬টা nested function এর একটা উদাহরণ দেবো, এবং সবথেকে ভিতরের (deepest nested) ফাংশনের Lexical Environment object আকারে ব্যাখ্যা করবো।
 
+// 🔸 Step 1: Code with Nested Functions
+// let globalVar = "I'm Global";
+
+// function one() {
+//     let a = 1;
+
+//     function two() {
+//         let b = 2;
+
+//         function three() {
+//             let c = 3;
+
+//             function four() {
+//                 let d = 4;
+
+//                 function five() {
+//                     let e = 5;
+
+//                     function six() {
+//                         let f = 6;
+//                         console.log(a, b, c, d, e, f, globalVar);
+//                     }
+
+//                     six();
+//                 }
+
+//                 five();
+//             }
+
+//             four();
+//         }
+
+//         three();
+//     }
+
+//     two();
+// }
+
+// one();
+
+// Step 2: six() ফাংশনের Lexical Environment Object আকারে
+// six() ফাংশনের Lexical Environment তৈরি হয় যখন সে execute হয়। তার ভিতরে যেসব variable/function আছে, এবং সে যেসব outer scope access করতে পারে, তা হলো:
+
+// LexicalEnvironment_six = {
+//   EnvironmentRecord: {
+//     f: 6
+//   },
+//   Outer: {
+//     EnvironmentRecord: {
+//       e: 5
+//     },
+//     Outer: {
+//       EnvironmentRecord: {
+//         d: 4
+//       },
+//       Outer: {
+//         EnvironmentRecord: {
+//           c: 3
+//         },
+//         Outer: {
+//           EnvironmentRecord: {
+//             b: 2
+//           },
+//           Outer: {
+//             EnvironmentRecord: {
+//               a: 1
+//             },
+//             Outer: {
+//               EnvironmentRecord: {
+//                 globalVar: "I'm Global"
+//               },
+//               Outer: null // Global scope-এর outer কিছু নেই
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+// এখানে কী হচ্ছে?
+// six() যখন রান হয়, তখন তার নিজের scope-এ শুধুমাত্র f আছে।
+// কিন্তু সে চেইন ধরে ধরে উপরের সব variable (e, d, c, b, a, globalVar) access করতে পারে।
+// এই পুরো চেইন-টাই হল Lexical Scope Chain।
+
+// ব্যাখ্যার সারাংশ:
+// প্রতিটি function call এর সময় একটি Lexical Environment Object তৈরি হয়।
+// এটি সেই scope এর ভেতরে থাকা variable/function গুলো ধরে রাখে (Environment Record)
+// এবং বাইরের scope এর Lexical Environment এর দিকে reference রাখে (Outer)
 
 
 
