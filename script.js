@@ -1381,7 +1381,7 @@
 
 
 
-// Execution Context (Tapas)
+// Execution Context 
 // Tokenization in Javascript
 // javascript ekdom first e tar code gula ke tukra tukra kore vag kore . eta kei Tokenization bole
 
@@ -1493,7 +1493,7 @@
 
 //Execution Contaxt start
 
-//Lexical Position or Lexical Contaxt or Lexical Environment
+// Lexical Position or Lexical Contaxt or Lexical Environment
 // prottekta single code er position keii lexical position bole . position bolte bujhano hoise ei particular code ta file er thik kothay ache .
 
 // const a = 10; // Lexical Position or Lexical context is line number 1499
@@ -1506,6 +1506,53 @@
 // let c = 11; // Lexical Position or Lexical context is line number 1506
 
 // hello(); // Lexical Position or Lexical context is line number 1508
+
+// Deep concept of Lexical Environment or Lexical scope and Lexical Environment chain
+
+// JavaScript-এ Lexical Environment হলো একটি ডেটা স্ট্রাকচার (data structure), যা বর্তমানে যেসব ভেরিয়েবল ও ফাংশন ডিক্লেয়ার করা আছে সেগুলো সংরক্ষণ করে। এর পাশাপাশি, এটি বাইরের সকল স্কোপের Reference-ও ধরে রাখে। এটিকে অনেক সময় Lexical Scope বলেও ডাকা হয়।
+
+// কবে তৈরি হয়?
+// Lexical Environment তখন তৈরি হয়, যখন একটি ফাংশন ডিফাইন করা হয় (মানে লেখা হয়)।
+// এই Environment ততক্ষণ পর্যন্ত টিকে থাকে, যতক্ষণ না সেই ফাংশন অথবা সেই ফাংশনের কোন Closure এক্সেসযোগ্য থাকে বা ব্যবহার করা যায়।
+
+// ভেরিয়েবল কিভাবে খুঁজে পাওয়া যায়?
+// JavaScript ইন্টারপ্রেটার যখন কোনো ভেরিয়েবলের নাম দেখে, তখন সে প্রথমে বর্তমান স্কোপের Lexical Environment-এ খোঁজে।
+// যদি সেই ভেরিয়েবল সেখানে না থাকে, তাহলে সে বাইরের স্কোপের Lexical Environment এ গিয়ে খোঁজে।
+// এভাবে খুঁজতে খুঁজতে সে সর্বোচ্চ Global Scope পর্যন্ত যায়।
+// যদি কোথাও ভেরিয়েবল না পায়, তাহলে JavaScript একটি ReferenceError ছুঁড়ে দেয়।
+
+// একটি উদাহরণ:
+// function outer() {
+//   var x = 10;
+//   function inner() {
+//     // inner() এর lexical environment-এ outer() এর x রয়েছে
+//     console.log(x);
+//   }
+//   inner();
+// }
+// outer();
+// এই উদাহরণে কী হচ্ছে?
+// যখন outer() ফাংশন লিখা হয়, তখন এর জন্য একটি Lexical Environment তৈরি হয় — যাতে ভেরিয়েবল x থাকে।
+// এরপর inner() ফাংশন যখন outer() এর ভিতরে ডিফাইন হয়, তখন inner() নিজের Lexical Environment তৈরি করে।
+// তবে, inner()-এর এই Environment-এর মধ্যে outer() এর Lexical Environment-এর একটা রেফারেন্স (Outer Environment) থাকে।
+// এজন্য inner() ফাংশন x ভেরিয়েবলকে এক্সেস করতে পারে, যদিও x তার নিজের স্কোপে নেই।
+
+// কেন এটা গুরুত্বপূর্ণ?
+// Lexical Environment-এর ধারণা বুঝলে JavaScript-এর Closures ভালোভাবে বোঝা যায়।
+// Closure হলো এমন একটি ফাংশন, যা তার outer scope-এর ভেরিয়েবল সংরক্ষণ করতে পারে, এমনকি outer function return করেও চলে যাওয়ার পরও।
+
+// উপসংহার:
+// Lexical Environment প্রথমে জটিল মনে হতে পারে, কিন্তু এটি JavaScript-এর একটি অত্যন্ত গুরুত্বপূর্ণ বিষয়।
+// আপনি যদি Lexical Environment ভালোভাবে বুঝে ফেলেন, তাহলে আপনি JavaScript-এ বিশ্বাসযোগ্য (reliable) এবং সহজে রক্ষণাবেক্ষণযোগ্য (maintainable) কোড লিখতে পারবেন।
+
+// মনে রাখার মতো কথা:
+// Lexical Environment আমাদের বলে দেয়— "এই স্কোপে কোনো ভেরিয়েবল না পেলে, বাইরে খোঁজো— যতদূর সম্ভব।"
+// এটাই Scope Chain এবং Closure এর ভিত্তি।
+
+
+
+
+
 
 // Globar Execution Contaxt (GEC)
 //jokhon javascript first time load hoy tokhon by default ekta execution contaxt create kore jar nam holo Global Execution Contaxt(GEC)
@@ -1835,7 +1882,6 @@
 // upore fun0 ke call kora hoise fun4() er moddhe . sekhane kintu a = 20 deya hoise . kintu fun0() er moddhe clg(a) kintu a = 20 ney nai . a=10 nise . karon jokhonii fun0() ke call kora hoise tokhon pointer soja fun4() theke ber hoye fun0() jei location e ase sekhane chole jay and sekhan thekeii child to parent , parent to grandparent akare variable khujte thake...
 
 
-
 // JavaScript Memory Management 
 // amader kono application jokhon kono user tar system e run kore tokhon oita run korar jonno sei system theke memory niye sei memory te application run hoy . oi application er jonno jototuku memory dorkar tototuku jodi system memory te khali thake tahole shundor vabe application ta run kore . dhoren application e 545 MB memory space e run kore . akhn user er Ram er moddhe jodi 545MB khali thake tahole sei khali memory dokhol kore application ta run kore . tai amader memory management thik vabe kora dorkar . karon jodi amar application onek beshi memory consume kore tahole user er system jodi sei onujayi amake free memory na dite pare tahole oi user dekhbe application crash kortese . tai jekono developer er memory management thik vabe korte hobe. developer er first podokkhep thakbe je developer joto ta kom memory te application ta run koraite pare user er system e. 
 // jemon ekta int variable 4 byte memory dokhol kore, amni vabe ekta string variable o same 4 byte memory consume kore . evabe application e memory set hoye thake. 
@@ -1983,28 +2029,28 @@
 
 
 
-const employee = {
-  id: 1, 
-  name: 'Tanvir',
-  salary : 37233,
-  deptId : 3,
-}
+// const employee = {
+//   id: 1, 
+//   name: 'Tanvir',
+//   salary : 37233,
+//   deptId : 3,
+// }
 
-const companyName = 'BeautyBooth'
+// const companyName = 'BeautyBooth'
 
-const department = {
-  id: 3, 
-  name : 'Sadia', 
-  location : 'remote'
-}
+// const department = {
+//   id: 3, 
+//   name : 'Sadia', 
+//   location : 'remote'
+// }
 
-function findDepartmentDfEmployee(employee){
-  return department.find(dept => {
-    return dept.id === employee.deptId
-  })
-}
+// function findDepartmentDfEmployee(employee){
+//   return department.find(dept => {
+//     return dept.id === employee.deptId
+//   })
+// }
 
-const anotherDepartment = department
+// const anotherDepartment = department
 
 // এই কোডটির Stack এবং Heap Memory Management নিয়ে বিশ্লেষণসহ একটি গভীর ব্যাখ্যা এবং উপস্থাপনা নিচে দেওয়া হলো।
 
