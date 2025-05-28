@@ -29,19 +29,31 @@
 
 // problem of setTimeout
 
-setTimeout(() =>{
-    console.log('setTimeout running!');
-}, 10)
+// setTimeout(() =>{
+//     console.log('setTimeout running!');
+// }, 10)
 
-let i=0
-while(i<1000000000){
-    i++
+// let i=0
+// while(i<1000000000){
+//     i++
+// }
+// let z=0
+// while(z<1000000000){
+//     z++
+// }
+// let a = 0
+// while(a<1000000000){
+//     a++
+// }
+
+// Higher order function 
+function hof(callback){
+    console.log('Hof');
+    callback()
 }
-let z=0
-while(z<1000000000){
-    z++
+
+function sum(){
+    console.log('Callback');
 }
-let a = 0
-while(a<1000000000){
-    a++
-}
+hof(sum)
+// --- ekhane hof holo Higher order function and sum hoilo callback function
