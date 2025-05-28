@@ -17,3 +17,32 @@ setTimeout(() =>{
 console.log(7)
 ---- ekhane prothomeii 1 and 7 print hobe then setTimeout er sobcheye kom somoyer code gula age print hobe then baki gual 
 result : 1 7 5 3 6 2 4 
+
+
+
+topic : Problem of setTimeout
+amra jokhon setTimeout e kono time set kori tokhon amra mone kori je oi time er por amar result output show hobe . but eta sotti na . output ashte aro delay hoite pare . jar karone amader expected result ashbe na . 
+example code : 
+setTimeout(() =>{
+    console.log('setTimeout running!');
+}, 10)
+
+let i=0
+while(i<100000000){
+    i++
+}
+let z=0
+while(z<100000000){
+    z++
+}
+let a = 0
+while(a<100000000){
+    a++
+} 
+-------- ai code run korle 1-2 second pore setTimeout er vitor console.log hobe . kintu time disilam matro 10 mili second
+
+
+
+Higher order function ki ? 
+jei function tar argument e onno ekta function ke recieve kore setaii holo higher order function and sei recieve kora function ta holo callback function .
+

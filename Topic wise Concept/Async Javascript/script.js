@@ -18,11 +18,30 @@
 // // result : 1 7 5 3 6 2 4 
 
 // Callback example 
-function sum(){
-    console.log('Hello World!');
-}
+// function sum(){
+//     console.log('Hello World!');
+// }
+// function message(callback){
+//     callback()
+// }
+// message(sum)
 
-function message(callback){
-    callback()
+
+// problem of setTimeout
+
+setTimeout(() =>{
+    console.log('setTimeout running!');
+}, 10)
+
+let i=0
+while(i<1000000000){
+    i++
 }
-message(sum)
+let z=0
+while(z<1000000000){
+    z++
+}
+let a = 0
+while(a<1000000000){
+    a++
+}
