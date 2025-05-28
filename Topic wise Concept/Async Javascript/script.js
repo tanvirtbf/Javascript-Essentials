@@ -9,15 +9,15 @@
 //     console.log(4)
 // }, 3000)
 // setTimeout(() =>{
-//      console.log(5)   
+//      console.log(5)
 // })
 // setTimeout(() =>{
 //     console.log(6)
 // }, 1500)
 // console.log(7)
-// // result : 1 7 5 3 6 2 4 
+// // result : 1 7 5 3 6 2 4
 
-// Callback example 
+// Callback example
 // function sum(){
 //     console.log('Hello World!');
 // }
@@ -25,7 +25,6 @@
 //     callback()
 // }
 // message(sum)
-
 
 // problem of setTimeout
 
@@ -46,7 +45,7 @@
 //     a++
 // }
 
-// // Higher order function 
+// // Higher order function
 // function hof(callback){
 //     console.log('Hof');
 //     callback()
@@ -57,3 +56,20 @@
 // }
 // hof(sum)
 // // --- ekhane hof holo Higher order function and sum hoilo callback function
+
+// Promise
+
+// Creation Phase
+const p1 = new Promise(function (resolve, reject) {
+  setTimeout(function () {
+    console.log("Done");
+    resolve("promise done");
+  }, 3000);
+});
+console.log(p1);
+// Consumption Phase
+p1.then((data) => console.log(data))
+  .catch((err) => console.log(err))
+  .finally(() => {
+    console.log("complete this promise");
+  });
