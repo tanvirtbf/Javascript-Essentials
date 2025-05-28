@@ -46,3 +46,6 @@ while(a<100000000){
 Higher order function ki ? 
 jei function tar argument e onno ekta function ke recieve kore setaii holo higher order function and sei recieve kora function ta holo callback function .
 
+
+Important Note for Promise : 
+kichu bochor ag porjonto Promise only browser er part chilo . kintu recent kichu somoy age Promise javascript er part hoye jay but still execution soho kichu task akhono browser handle kore 
