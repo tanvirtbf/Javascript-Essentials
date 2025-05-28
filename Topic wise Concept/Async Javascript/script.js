@@ -46,14 +46,14 @@
 //     a++
 // }
 
-// Higher order function 
-function hof(callback){
-    console.log('Hof');
-    callback()
-}
+// // Higher order function 
+// function hof(callback){
+//     console.log('Hof');
+//     callback()
+// }
 
-function sum(){
-    console.log('Callback');
-}
-hof(sum)
-// --- ekhane hof holo Higher order function and sum hoilo callback function
+// function sum(){
+//     console.log('Callback');
+// }
+// hof(sum)
+// // --- ekhane hof holo Higher order function and sum hoilo callback function
