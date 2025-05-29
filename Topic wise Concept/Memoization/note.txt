@@ -151,3 +151,16 @@ karon holo amader memory limited. amake think korte hobe kon data memoize korle 
 
 akhn amra dekhbo keno amra sob kichu memoize korte parbo na : 
 
+
+------------ 6. three ways to memoization in javascript --------------
+
+3 ta way holo : 
+1. Closures with addition variable
+2. HOF - Higher Order function
+3. HOF with default parameter
+
+1st way : Closures way
+
+
+
+
