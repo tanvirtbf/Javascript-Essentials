@@ -3,3 +3,35 @@ ami ekhane amar mental model thik korbo "Memoization" shomporke...
 What is Memoization ? 
 The answer is - It's all about Working Memory 
 ekhane "Working Memory" word ta related to Human Brains
+
+ami ai note e ki ki dekhabo ? 
+
+1. Working Memory
+
+2. What is Memoization ?  is it caching ? 
+
+3. Memoization vs Caching
+
+4. kon dhoroner data ke ami memoized korte parbo ? 
+
+5. then real life memoized example 
+
+6. three ways to memoization in javascript 
+
+7. Memoization Management Techniques
+
+8. How Much Memory we can use ? 
+
+9. Cost of Memory
+
+
+
+
+
+
+
+
+
+--------------1. Working Memory -----------------
+
+
