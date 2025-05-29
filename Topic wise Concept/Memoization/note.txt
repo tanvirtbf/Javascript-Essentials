@@ -34,4 +34,18 @@ ami ai note e ki ki dekhabo ?
 
 --------------1. Working Memory -----------------
 
+First e amra Human Brain diye Working memory ke judge kori : 
 
+Working Memory mane holo jei memory amader protidin kaj korar khetre lage . jeta useable . orthat amar kono past history keu jodi jigasha kore tahole ami jodi take bolte pari tar mane eta amar memory te chilo and workable . ami program likhchi karon amar memory te program er memory chilo karon ami egula sikhechi . orthat amra jibone protidin jai kori na kno sob gulaii amader memory theke serve hoy . jodi na hoito tahole amra komay chole jaitam . etaii working memory . 
+
+akhn bolbo je kivabe amader Working memory kaj kore , 
+dhoren ami ajk ekta jinish sikhlam othoba dekhlam . hoyto klk eta amar mone nao thakte pare . hoyto vule gesi . dhoren ammu bajare pathailo kichu ekta ante but ami vule gesi . eta hoy sobar khetreii . kintu kno hoy ? karon amader memory limited . amra sob kichu memory te rakhte parbo na . 
+
+Ekta test nei : ami 5 ta word bolbo , Mango , jupitar , Sunlight, Tisshu, Body Spray . then eta shunar por apnake bollam je bolen to 4*8 koto  ? then jigasha korlam klk ki diye vat khaiso ? then ami apnake previous 5 t word jigasha korlam . apni ki bolte parben 5 ta ? maximum manush mone rakhte parbe na sob gula . hoyto 3 ta or 4 ta bolte parbe . karon ki ? karon amadear memory short . tar upor oi 5 ta word shunar por amake aro 2 ta question jigasha kora hoisilo and ami segula niye memory te kaj korechi jar karone first 5 ta word memory theke onektai ber hoye gese . 
+etaii hocche Human er Memory work . amra computer er memory o sevabe kolpona korte pari 
+
+Memoization with Program : 
+manush tar pc te highest 32 gb , or 16 gb ram lagay . onekeii 8 gb or 4 gb o ram chalay . er moddhe OS chole , virus software chole , chrome chole soho aro onk software chole tar sathe tar nijossho kajer jonno kichu ram chole . etogula chalanor jonno nishchoy tar onk ram or memory lagbe . but memory to limited . oneker ektu beshi thake, oneker onk kom thake . kintu still Rom er moto 512 gb or 1 Terabyte to space pay na Ram . tai bola jay Ram Limited . 
+ai Limited memory te amra to sob kichu rakhte parbo na . jemon amader human brain er memory olpo . 
+
+Mot kotha software er kase khub kom memory hoye thake jinish gula ke memoize korar jonno . se kokhonoii sob kichu memoize kore rakhte parbe na . eta amar mathay valo moto dhukaiya nite hobe . 
