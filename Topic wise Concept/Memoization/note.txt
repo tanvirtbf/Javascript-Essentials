@@ -49,3 +49,15 @@ manush tar pc te highest 32 gb , or 16 gb ram lagay . onekeii 8 gb or 4 gb o ram
 ai Limited memory te amra to sob kichu rakhte parbo na . jemon amader human brain er memory olpo . 
 
 Mot kotha software er kase khub kom memory hoye thake jinish gula ke memoize korar jonno . se kokhonoii sob kichu memoize kore rakhte parbe na . eta amar mathay valo moto dhukaiya nite hobe . 
+
+
+
+-------------- 2. What is Memoization ?  is it caching ? -------------
+
+Memoization is a way to potentially make functions run faster 
+tar mane holo jodi kono function first e 10 milisecond time niye execute hoy then memoized korar por porer bar theke 1 mili second laglo . etaii memoization .
+
+tar mane amra Memoization use kore kono function er execution speed ke bariye thaki 
+
+jekono function ke apni memoized korte parben . kintu specially recursive function e amra memoization beshi dekhe thaki . karon ekhane ekta function ke barbar call kora hoy 
+
