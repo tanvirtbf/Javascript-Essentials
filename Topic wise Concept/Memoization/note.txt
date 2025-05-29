@@ -208,3 +208,35 @@ akhn apni same output paben but result akhn r global na . result ke keu change k
 
 akhn ami dynamic way te memoization kivabe kore seta dekhacchi : 
 
+function memoizedSum(){
+    let result = {}
+    return function(n1, n2){
+        if(result[`${n1},${n2}`]){
+            console.log("Cached");
+            return result[`${n1},${n2}`]
+        }
+
+        const sumResult = n1+n2;
+        result[`${n1},${n2}`] = sumResult;
+        return sumResult
+    }
+}
+
+const sum = memoizedSum()
+console.log(sum(2,3));
+console.log(sum(3,1));
+console.log(sum(3,1));
+console.log(sum(5,1));
+console.log(sum(4,2));
+console.log(sum(4,2));
+console.log(sum(4,2));
+console.log(sum(9,2));
+console.log(sum(1,1));
+
+ekhane dynamic way te memoized hoise . jokhon same arguments pass kora hocche tokhon niche jauyar ageii return hoye jacche . etay memoization achieve hoise . 
+
+kintu ami ai memoization Techniques use korte parbo na another function er jonno . 
+
+
+
+
