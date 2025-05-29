@@ -205,3 +205,6 @@ console.log(sum());
 
 akhn apni same output paben but result akhn r global na . result ke keu change korte parbe na . result akhn ekta private value . eta optimized way for memoization in javascript 
 
+
+akhn ami dynamic way te memoization kivabe kore seta dekhacchi : 
+
