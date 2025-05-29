@@ -133,3 +133,21 @@ question holo Memoization ki caching ? na . Memoization is a form of Caching . I
 kintu Memoization er sathe Caching er parthokko holo Memoization only kono variable er moddhe rakha hoy . r sei variable memory te store hoy . tar mane data store memory er moddhei thakbe . taholeii seta Memoization . 
 
 tahole Rules of Memoization holo data should be stored in variable(Memory)
+
+
+
+-------- 4. kon dhoroner data ke ami memoized korte parbo ?---------
+
+ami chaile jekono dhoroner data memoize korte pari . amonki jekono language e ami jekono data type er data memoize korte pari . 
+ami kichu possible data memoize korar list dicchi 
+1. Api result
+2. heavy calculation
+3. Settings and Preferences
+4. Form er Filled Values and so on...
+
+tar mane ki ami sob dhoroner data memoize krobo ? 
+The answer is NO. 
+karon holo amader memory limited. amake think korte hobe kon data memoize korle amar project er jonno benefit hobe 
+
+akhn amra dekhbo keno amra sob kichu memoize korte parbo na : 
+
