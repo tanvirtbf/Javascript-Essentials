@@ -123,4 +123,13 @@ console.log(sum());
 ekhn ami function ta ke memoized kore dilam . but eta optimized way na . jodio eta kaj korbe . ei code sob case eii kaj korbe . 
 
 
+------------------3. Memoization vs Caching--------------------
 
+
+akhn bolbo je Memoization vs Caching 
+
+question holo Memoization ki caching ? na . Memoization is a form of Caching . It's not exactly Caching . karon Caching onk boro ekta concept . onk jaygay amra caching korte pari jemon browser caching, localstorage , cookies , indexdDB. orthat ami jodi kono permanent storage e amar data store kori seta Caching . 
+
+kintu Memoization er sathe Caching er parthokko holo Memoization only kono variable er moddhe rakha hoy . r sei variable memory te store hoy . tar mane data store memory er moddhei thakbe . taholeii seta Memoization . 
+
+tahole Rules of Memoization holo data should be stored in variable(Memory)
