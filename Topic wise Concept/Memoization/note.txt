@@ -1,0 +1,5 @@
+ami ekhane amar mental model thik korbo "Memoization" shomporke...
+
+What is Memoization ? 
+The answer is - It's all about Working Memory 
+ekhane "Working Memory" word ta related to Human Brains
