@@ -61,3 +61,66 @@ tar mane amra Memoization use kore kono function er execution speed ke bariye th
 
 jekono function ke apni memoized korte parben . kintu specially recursive function e amra memoization beshi dekhe thaki . karon ekhane ekta function ke barbar call kora hoy 
 
+kivabe amra function ke memoize kori ? 
+amra prothome function call er result ke store kori kothau and porer bar theke first time setaii return kori jodi same argument niye oi function call hoy . jodi same input diye abar function ta call hoy tahole stored function result tai print kora hobe . jar karone function er body te thaka heavy calculation hobe na .
+example code : 
+function sum(){
+    let i=0;
+    while(i<1000000){
+        i++;
+    }
+    return 1+1;
+}
+console.log(sum());
+console.log(sum());
+console.log(sum());
+console.log(sum());
+console.log(sum());
+console.log(sum());
+console.log(sum());
+console.log(sum());
+console.log(sum());
+console.log(sum());
+console.log(sum());
+console.log(sum());
+
+ekhane sum function barbar call hocche but same output dicche karon tar argument same , sob gula call e same jinish return hocche . prottekbar function er vitor thaka while loop heavy calculation korche . kintu prottekbar heavy calculation er poreo same output dicche barbar . tahole eta to khubii kharap. amader eta memoized korte hobe jate 2nd bar theke r kono heavy calculation charai output diye dey karon function er input same .  tahole eta ke kivabe amra memoize korte pari ? 
+
+solution code : 
+var result = null
+
+function sum(){
+    if(result){
+        return result
+    }
+    let i=0;
+    while(i<1000000000){
+        i++;
+    }
+    result = 1+1
+    return 1+1
+}
+console.log(sum());
+console.log(sum());
+console.log(sum());
+console.log(sum());
+console.log(sum());
+console.log(sum());
+console.log(sum());
+console.log(sum());
+console.log(sum());
+console.log(sum());
+console.log(sum());
+console.log(sum());
+console.log(sum());
+console.log(sum());
+console.log(sum());
+console.log(sum());
+console.log(sum());
+console.log(sum());
+console.log(sum());
+
+ekhn ami function ta ke memoized kore dilam . but eta optimized way na . jodio eta kaj korbe . ei code sob case eii kaj korbe . 
+
+
+
