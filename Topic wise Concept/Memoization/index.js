@@ -22,54 +22,54 @@
 
 // Answer : 
 
-var result = null
+// var result = null
 
-function sum(){
-    if(result){
-        return result
-    }
-    let i=0;
-    while(i<1000000000){
-        i++;
-    }
-    result = 1+1
-    return 1+1
-}
-console.log(sum());
-console.log(sum());
-console.log(sum());
-console.log(sum());
-console.log(sum());
-console.log(sum());
-console.log(sum());
-console.log(sum());
-console.log(sum());
-console.log(sum());
-console.log(sum());
-console.log(sum());
-console.log(sum());
-console.log(sum());
-console.log(sum());
-console.log(sum());
-console.log(sum());
-console.log(sum());
-console.log(sum());
-console.log(sum());
-console.log(sum());
-console.log(sum());
-console.log(sum());
-console.log(sum());
-console.log(sum());
-console.log(sum());
-console.log(sum());
-console.log(sum());
-console.log(sum());
-console.log(sum());
-console.log(sum());
-console.log(sum());
-console.log(sum());
-console.log(sum());
-console.log(sum());
+// function sum(){
+//     if(result){
+//         return result
+//     }
+//     let i=0;
+//     while(i<1000000000){
+//         i++;
+//     }
+//     result = 1+1
+//     return 1+1
+// }
+// console.log(sum());
+// console.log(sum());
+// console.log(sum());
+// console.log(sum());
+// console.log(sum());
+// console.log(sum());
+// console.log(sum());
+// console.log(sum());
+// console.log(sum());
+// console.log(sum());
+// console.log(sum());
+// console.log(sum());
+// console.log(sum());
+// console.log(sum());
+// console.log(sum());
+// console.log(sum());
+// console.log(sum());
+// console.log(sum());
+// console.log(sum());
+// console.log(sum());
+// console.log(sum());
+// console.log(sum());
+// console.log(sum());
+// console.log(sum());
+// console.log(sum());
+// console.log(sum());
+// console.log(sum());
+// console.log(sum());
+// console.log(sum());
+// console.log(sum());
+// console.log(sum());
+// console.log(sum());
+// console.log(sum());
+// console.log(sum());
+// console.log(sum());
 
 // ekhn ami function ta ke memoized kore dilam . but eta optimized way na . jodio eta kaj korbe . 
 
@@ -83,7 +83,7 @@ function memoizedSum(){
     return function(){
         if(result) return result
         let i=0;
-        while(i<10000000){
+        while(i<10000000000){
             i++;
         }
         result = 1+1

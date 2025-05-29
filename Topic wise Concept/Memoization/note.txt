@@ -160,7 +160,48 @@ akhn amra dekhbo keno amra sob kichu memoize korte parbo na :
 3. HOF with default parameter
 
 1st way : Closures way
+tar age bole nei ami jei code ta memoization er jonno upore likhechilam setay ki ki somossha ase . somossha holo : 
 
+previous memoization code : 
+var result = null
+function sum(){
+    if(result){
+        return result
+    }
+    let i=0;
+    while(i<1000000000){
+        i++;
+    }
+    result = 1+1
+    return 1+1
+}
+ekhane result globally chilo . eta ke je keu baire theke change korte parto . but tate onk somossha create hobe . ei somossha solve kore Closures
 
+problem solve with closure : 
+function memoizedSum(){
+    let result = null
+    return function(){
+        if(result) return result
+        let i=0;
+        while(i<10000000000){
+            i++;
+        }
+        result = 1+1
+        return 1+1
+    }
+}
 
+const sum = memoizedSum()
+console.log(sum());
+console.log(sum());
+console.log(sum());
+console.log(sum());
+console.log(sum());
+console.log(sum());
+console.log(sum());
+console.log(sum());
+console.log(sum());
+console.log(sum());
+
+akhn apni same output paben but result akhn r global na . result ke keu change korte parbe na . result akhn ekta private value . eta optimized way for memoization in javascript 
 
