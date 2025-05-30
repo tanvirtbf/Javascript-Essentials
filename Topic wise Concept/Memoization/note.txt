@@ -238,5 +238,5 @@ ekhane dynamic way te memoized hoise . jokhon same arguments pass kora hocche to
 kintu ami ai memoization Techniques use korte parbo na another function er jonno . 
 
 
-
+2. HOF - Higher Order function
 
