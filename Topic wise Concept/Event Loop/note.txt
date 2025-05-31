@@ -38,3 +38,9 @@ some Browser Features :
 and so on..
 
 jar karone amra application e camera , mic or some Network features easily access korte pari with others work on application . karon egula Browser parrally manage kore , not singly. 
+
+
+setTimeout niye ekta big mistake or Myth akhn bolbo : 
+amra jani setTimeout er moddhe ekta time pass kora hoy and amra sobai mone kori ai time er pore execute hobeii hobe . kintu eta wrong . time ta aijonnoi set kora hocche ai time complete hoile Browser sei callback ta Web Apis e diye dibe and Web Apis sei callback code ta Task queue te diye rakhbe and wait korbe kokhon event loop take callstack e niye jabe . orthat time ta only Browser er jonno je ai time er por Browser code ta Web apis e diye dibe . 
+
+
