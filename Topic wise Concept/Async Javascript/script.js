@@ -118,23 +118,34 @@ const States = {
 }
 
 class MyPromise{
+
+  #promiseState=States.PENDING
+  #handlers = [];
+
   constructor(callback){
-    callback(this.resolve, this.reject)
+    callback(this.#resolve, this.#reject)
   }
 
   #resolve(value){
+    this.#promiseState= States.FULLFILLED;
 
+    this.#handlers.forEach((fns) =>{
+      fns(value)
+    })
   }
+
   #reject(value){
 
   }
 
   then(thenCallback){
-
+    this.#handlers.push(thenCallback)
   }
+
   catch(){
 
   }
+
   finally(){
 
   }
@@ -153,3 +164,4 @@ p1.then((data) =>{
 })
 
 console.log(p1);
+
