@@ -68,3 +68,7 @@ const p1 = new Promise(function(){
 ---- to ekhane Promise extra ki korlo ? karon ei jinish ta to ami setTimeout diyei korte partam . tahole Promise keno laglo ? actually setTimeout ai karoneii bad karon ekhane ekta time deya ase . hoyto sei kaj ta korte amr 1 second laglo but diye rakhsi 3 second , ekhane 2 second loss . hoyto ai kaj ta amar korte 5 second laglo but diye rakhsi 3 second . tate jodio 5 second poreii code ta run hote pare but amar thinking onujayii data tokhon pabo na . ei somossha ta solve kore promise 
 
 -- ek kothay just promise etaii setTimeout theke better je time er kono issue nai . jokhonii kaj complete hobe tokhon promise seta javascript ke janaiya dibe . ekhaneii promise better than setTimeout 
+
+
+ 
+

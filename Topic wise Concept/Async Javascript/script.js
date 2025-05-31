@@ -67,9 +67,44 @@
 //   }, 3000);
 // });
 // console.log(p1);
+
 // // Consumption Phase
 // p1.then((data) => console.log(data))
 //   .catch((err) => console.log(err))
 //   .finally(() => {
 //     console.log("complete this promise");
 //   });
+
+
+
+// Implement a Promise via Class
+
+class MyPromise{
+  constructor(callback){
+    callback(this.resolve, this.reject)
+  }
+
+  #resolve(){
+
+  }
+  #reject(){
+
+  }
+
+  then(){
+
+  }
+  catch(){
+
+  }
+  finally(){
+
+  }
+
+}
+
+const p1 = new MyPromise(function(res, rej) {
+
+})
+
+console.log(p1);
