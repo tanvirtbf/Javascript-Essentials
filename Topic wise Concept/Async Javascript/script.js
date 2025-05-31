@@ -281,3 +281,31 @@
 // })
 
 
+// akhn ami ekta interesting bishoy bolbo 
+// question is ami jodi chai je amar state jokhon catch e jabe tokhon jeno .then() er pore thaka .catch() e na jay . tahole kothay jabe ? 
+// then() er first argument holo ekta callback and second argument holo catch block . mane ? 
+// mane holo prottekta then() method er second argument holo ekta catch block . tahole jodi state reject e jay tahole .catch() e na jeye .then() er second argument e jabe and oitaii execute hobe .
+
+// Example :
+// const p1 = new Promise(function (resolve, reject) {
+//   setTimeout(() =>{
+//     console.log('Done');
+//     reject('Promise Done!')
+//   }, 3000)
+// })
+// p1.then((data) =>{
+//   console.log(data);
+//   return `${data}2`
+// }).then((data) => {
+//   console.log(data);
+//   return `${data}3`
+// }).catch((err) =>{
+//   console.log(err);
+//   return `${err}error1`
+// }).then((data) =>{
+//   console.log(data);
+// }).finally(() =>{
+//   console.log('Finally 1');
+// }).finally(() =>{
+//   console.log('Finally 2');
+// })
