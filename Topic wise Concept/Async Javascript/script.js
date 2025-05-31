@@ -187,6 +187,75 @@
 
 // Important notes ***********
 // prottekta then() method ekta Resolved Promise return kore . kon resolve promise ? jeta ami upore original promise er callback function e res(1) korchi setaii . karon ai res(1) dara sei p1 promise er first then e 1 chole jay using Resolved Promises. next then ke data dibe first then . evabeii chaining chole . so next then ke jodi first then kisu return nao kore taholeo internally "return Promise.resolve()" eta kore amader jonno . r jodi ami first then e return 2 kore dei tahole internally first then() method eta kore - "return Promise.resolve(2)" . r ei 2 data ta next then er arguments e chole jay .
+
 // mot kotha then() method always return a Resolve Promise
+
+
+
+// then(), catch(), finally() chaining ta kivabe chole ektu dekhai. 
+//Important notes*****
+//  amra upore manually Promise implement korar somoy dekhaisi je handlers nam e ekta array ase jekhane then() method er sob function push hocche . and ekta ekta kore call hocche. similerly catch() method er jonno o array thake jekhane catch er joto method ase sob push hoy and finally er khetreo same . 
+
+// Example : 
+// .then(){
+
+// }.then(){
+
+// }.catch(){
+
+// }.finally(){
+
+// }.finally(){
+
+// }
+// --- ekhane first 2 ta then cholbe and niche thaka catch ignore kore finally 2 ta cholbe . karon state is resolve . 
+// r jodi state is reject hoito tahole upore 2 ta then ignore hoito and nicher finally 2 ta call hoito . 
+
+// another example code : 
+// .then(){}
+// .then(){}
+// .catch(){}
+// .then(){}
+// .finally(){}
+// .finally(){}
+// ----- ekhane upore first 2 ta then ignore hobe . niche thaka catch() run hobe and tarpore thaka then o call hobe . tarpor 2 ta finally call hobe . 
+// jodi catch theke kichu return kori tahole porer line e thaka then seta recieve korte parbe 
+
+// Example : 
+// .then(){}
+// .then(){}
+// .catch(){
+//   return 2
+// }.then(data => {
+//   console.log(data); // 2
+// })
+// .finally(){}
+// .finally(){}
+
+// ekhane catch theke jeta return hoise seta then e dhorte parsi and run hoise 
+
+// Important notes*********  : 
+// catch er pore joto then ase sob call hobe but catch er age thaka kono then call hobe na 
+
+
+
+
+// Important Notes ************
+// catch er pore jodi arekta catch thake tahole seta call hobe na . catch only 1 taii call hobe . but catch er pore then thakle seta thiki call hobe 
+
+// Example : 
+// .then(){}
+// .then(){}
+// .then(){}
+// .catch(){}
+// .then(){}
+// .catch(){}
+// .finally(){}
+
+// -------- ekhane second catch call hobe na 
+
+
+// akhn ami ja ja sikhechi sob gula test korbo Promise diye 
+
 
 
