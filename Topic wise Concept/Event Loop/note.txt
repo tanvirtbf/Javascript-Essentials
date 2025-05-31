@@ -14,3 +14,13 @@ Some Popular Web Apis
 6. promises
 7. setTimeout
 8. geolocation
+
+Arekta Important Question : 
+Question : jokhon Browser er kaj sesh hobe then sekhane thaka callback ki Browser or Web Apis execute korte parbe ?
+Answer : NO . Web api or Browser setTimeout, promises, geolocation etc e thaka callback call or execute kore na . callback tai muloto callstack e dibe jeta callstack execute kore stack theke ber kore dibe 
+
+But arekta Important Question royeche . 
+Question : callstack directly Web Apis ke async code gula dey seta sotto and Web Apis directly seta Browser ke dey etao sotto but Browser jokhon kaj sesh kore Web Apis er kache code gula ferot dey or callback gula dey tokhon ki Web Apis directly callstack e diye dey ? 
+Answer : No . callstack hoyto tokhon busy thake onno task complete korar jonno . tai code ferot deyar khetre kokhonoii Web Apis callstack er sathe directly communication kore na . tokhon Web Apis Task Queue te diye dey . Task Queue tokhon Event loop er maddhome check kore je callstack khali kina or callstack free ase kina . jodi free thake tokhon event loop priority basis e callstack e push kore data . 
+
+
