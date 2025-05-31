@@ -72,3 +72,37 @@ const p1 = new Promise(function(){
 
  
 
+
+
+
+
+
+
+
+
+1. Promise.all()
+ব্যাখ্যা:
+Promise.all() একসাথে অনেকগুলো Promise নেয় এবং সবগুলো সফল হলে রেজাল্ট রিটার্ন করে। কিন্তু যেকোনো একটি Promise ব্যর্থ (reject) হলেই পুরোটা reject হয়ে যায়।
+
+Use-case:
+যখন আপনি একাধিক async কাজ একসাথে করতে চান, এবং সবগুলো সফল হলেই পরবর্তী ধাপে যেতে চান।
+
+Structure:
+Promise.all([promise1, promise2, promise3])
+    .then(results => {
+        console.log(results); // সবগুলোর রেজাল্টের অ্যারে
+    })
+    .catch(error => {
+        console.error(error); // যেকোনো একটি error পেলেই এখানে আসবে
+    });
+
+উদাহরণ:
+const p1 = Promise.resolve(" Apple");
+const p2 = Promise.resolve(" Banana");
+const p3 = Promise.resolve(" Orange");
+
+Promise.all([p1, p2, p3])
+  .then(result => {
+    console.log(result); // [" Apple", " Banana", " Orange"]
+  });
+Note: যদি কোনো একটি reject হয়, তাহলে আর অন্যগুলোর রেজাল্ট দেখা যাবে না।
