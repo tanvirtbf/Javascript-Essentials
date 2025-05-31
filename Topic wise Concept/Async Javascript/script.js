@@ -111,57 +111,57 @@
 
 // akhn ami ai MyPromise ke workable banabo real life Promise er motoi 
 
-const States = {
-  PENDING : "PENDING",
-  FULLFILLED : "FULLFILLED",
-  REJECTED : "REJECTED"
-}
+// const States = {
+//   PENDING : "PENDING",
+//   FULLFILLED : "FULLFILLED",
+//   REJECTED : "REJECTED"
+// }
 
-class MyPromise{
+// class MyPromise{
 
-  #promiseState=States.PENDING
-  #handlers = [];
+//   #promiseState=States.PENDING
+//   #handlers = [];
 
-  constructor(callback){
-    callback(this.#resolve, this.#reject)
-  }
+//   constructor(callback){
+//     callback(this.#resolve, this.#reject)
+//   }
 
-  #resolve(value){
-    this.#promiseState= States.FULLFILLED;
+//   #resolve(value){
+//     this.#promiseState= States.FULLFILLED;
 
-    this.#handlers.forEach((fns) =>{
-      fns(value)
-    })
-  }
+//     this.#handlers.forEach((fns) =>{
+//       fns(value)
+//     })
+//   }
 
-  #reject(value){
+//   #reject(value){
 
-  }
+//   }
 
-  then(thenCallback){
-    this.#handlers.push(thenCallback)
-  }
+//   then(thenCallback){
+//     this.#handlers.push(thenCallback)
+//   }
 
-  catch(){
+//   catch(){
 
-  }
+//   }
 
-  finally(){
+//   finally(){
 
-  }
+//   }
 
-}
+// }
 
-const p1 = new MyPromise(function(res, rej) {
-  setTimeout(() =>{
-    console.log('Time From MyPromise');
-  }, 3000)
-})
+// const p1 = new MyPromise(function(res, rej) {
+//   setTimeout(() =>{
+//     console.log('Time From MyPromise');
+//   }, 3000)
+// })
 
-p1.then((data) =>{
-  console.log("Data from Resolve", data);
-  console.log("I am Inside then Block");
-})
+// p1.then((data) =>{
+//   console.log("Data from Resolve", data);
+//   console.log("I am Inside then Block");
+// })
 
-console.log(p1);
+// console.log(p1);
 
