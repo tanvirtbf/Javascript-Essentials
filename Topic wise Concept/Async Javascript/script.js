@@ -168,17 +168,17 @@
 
 // How Then Works 
 
-const p1 = new Promise((res, rej) => {
-  setTimeout(() => {
-    res(1)
-  }, 2000)
-})
+// const p1 = new Promise((res, rej) => {
+//   setTimeout(() => {
+//     res(1)
+//   }, 2000)
+// })
 
-p1.then((data) => {
-  console.log(data);
-}).then((data2) =>{
-  console.log(data2);
-})
+// p1.then((data) => {
+//   console.log(data);
+// }).then((data2) =>{
+//   console.log(data2);
+// })
 // ekhane data2 console.log korle undefined ashe . kno ashlo ? first time then er somoy to data thiki ashce . 
 // karon ta holo p1.then() first time e take setTimeout theke resolve call kore 1 diye deya hoy res(1) evabe . but next then to ashce first then theke . sekhane kisuii return kora hoy na . 
 
