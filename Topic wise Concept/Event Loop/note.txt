@@ -1,0 +1,6 @@
+QUESTION : Web Apis ki ? 
+
+Answer : amader code sob callstack e jay . callstack holo one kind of javascript run time . tar mane javascript run time e callstack e perform hoy . javascript run time er somoy callstack e jodi setTimeout, promises, fetch, localstorage, session storage, document etc async code thake tokhon javascript run time seta Browser ke diya dey solve korar jonno . karon callstack seta solve korte pare na . egula Browser er part . kintu Browser ke kivabe dibe ? via Web Apis . Web Api er maddhome async code gula Browser e jay . Browser er kaj sesh hole segula abar callstack e ferot pathate hoy , karon sob kichu din sesh e callstack thekei execute hoy . sei somoy Browser Web Api ke call kore and Web Api er maddhome callstack e segula ferot pathano hoy . 
+
+ekhane Web Api er Api ta ki ? 
+Api holo 2 ta system er moddhe conncetion er maddhom ba Media . ekhane callstack er sathe Browser er connection e help korchi Web Api . tai take Api bola hoy 
