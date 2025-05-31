@@ -111,19 +111,25 @@
 
 // akhn ami ai MyPromise ke workable banabo real life Promise er motoi 
 
+const States = {
+  PENDING : "PENDING",
+  FULLFILLED : "FULLFILLED",
+  REJECTED : "REJECTED"
+}
+
 class MyPromise{
   constructor(callback){
     callback(this.resolve, this.reject)
   }
 
-  #resolve(){
+  #resolve(value){
 
   }
-  #reject(){
+  #reject(value){
 
   }
 
-  then(){
+  then(thenCallback){
 
   }
   catch(){
@@ -136,7 +142,14 @@ class MyPromise{
 }
 
 const p1 = new MyPromise(function(res, rej) {
+  setTimeout(() =>{
+    console.log('Time From MyPromise');
+  }, 3000)
+})
 
+p1.then((data) =>{
+  console.log("Data from Resolve", data);
+  console.log("I am Inside then Block");
 })
 
 console.log(p1);
