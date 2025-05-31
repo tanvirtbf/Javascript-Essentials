@@ -60,16 +60,16 @@
 // Promise
 
 // Creation Phase
-const p1 = new Promise(function (resolve, reject) {
-  setTimeout(function () {
-    console.log("Done");
-    resolve("promise done");
-  }, 3000);
-});
-console.log(p1);
-// Consumption Phase
-p1.then((data) => console.log(data))
-  .catch((err) => console.log(err))
-  .finally(() => {
-    console.log("complete this promise");
-  });
+// const p1 = new Promise(function (resolve, reject) {
+//   setTimeout(function () {
+//     console.log("Done");
+//     resolve("promise done");
+//   }, 3000);
+// });
+// console.log(p1);
+// // Consumption Phase
+// p1.then((data) => console.log(data))
+//   .catch((err) => console.log(err))
+//   .finally(() => {
+//     console.log("complete this promise");
+//   });
