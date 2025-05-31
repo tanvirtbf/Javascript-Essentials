@@ -24,3 +24,17 @@ Question : callstack directly Web Apis ke async code gula dey seta sotto and Web
 Answer : No . callstack hoyto tokhon busy thake onno task complete korar jonno . tai code ferot deyar khetre kokhonoii Web Apis callstack er sathe directly communication kore na . tokhon Web Apis Task Queue te diye dey . Task Queue tokhon Event loop er maddhome check kore je callstack khali kina or callstack free ase kina . jodi free thake tokhon event loop priority basis e callstack e push kore data . 
 
 
+Again a Question for see Browser Power 
+Question : jodi callstack single thread houyar karone heavy task gula Browser ke diye dey tahole Browser kivabe segula handle kore ? 
+Answer : Yes Browser khubii powerfull . karon Browser C++ diye lekha . C++ multi threaded language . tai Browser ekii sathe onk gula task korte pare but javascript run time single task complete kore at a time . 
+
+some Browser Features : 
+1. Rendering 
+2. Camera
+3. Mic
+4. Network Services
+5. GPU
+6. Sensors
+and so on..
+
+jar karone amra application e camera , mic or some Network features easily access korte pari with others work on application . karon egula Browser parrally manage kore , not singly. 
