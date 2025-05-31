@@ -257,27 +257,27 @@
 
 // akhn ami ja ja sikhechi sob gula test korbo Promise diye 
 
-const p1 = new Promise(function (resolve, reject) {
-  setTimeout(() =>{
-    console.log('Done');
-    reject('Promise Done!')
-  }, 3000)
-})
-p1.then((data) =>{
-  console.log(data);
-  return `${data}2`
-}).then((data) => {
-  console.log(data);
-  return `${data}3`
-}).catch((err) =>{
-  console.log(err);
-  return `${err}error1`
-}).then((data) =>{
-  console.log(data);
-}).finally(() =>{
-  console.log('Finally 1');
-}).finally(() =>{
-  console.log('Finally 2');
-})
+// const p1 = new Promise(function (resolve, reject) {
+//   setTimeout(() =>{
+//     console.log('Done');
+//     reject('Promise Done!')
+//   }, 3000)
+// })
+// p1.then((data) =>{
+//   console.log(data);
+//   return `${data}2`
+// }).then((data) => {
+//   console.log(data);
+//   return `${data}3`
+// }).catch((err) =>{
+//   console.log(err);
+//   return `${err}error1`
+// }).then((data) =>{
+//   console.log(data);
+// }).finally(() =>{
+//   console.log('Finally 1');
+// }).finally(() =>{
+//   console.log('Finally 2');
+// })
 
 
