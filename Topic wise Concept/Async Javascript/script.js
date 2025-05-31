@@ -165,3 +165,28 @@
 
 // console.log(p1);
 
+
+// How Then Works 
+
+const p1 = new Promise((res, rej) => {
+  setTimeout(() => {
+    res(1)
+  }, 2000)
+})
+
+p1.then((data) => {
+  console.log(data);
+}).then((data2) =>{
+  console.log(data2);
+})
+// ekhane data2 console.log korle undefined ashe . kno ashlo ? first time then er somoy to data thiki ashce . 
+// karon ta holo p1.then() first time e take setTimeout theke resolve call kore 1 diye deya hoy res(1) evabe . but next then to ashce first then theke . sekhane kisuii return kora hoy na . 
+
+// tahole kisui jodi return na hoy tahole ki actually kisuii return hoy na ? 
+// answer is NO . jodi ami kono then e kisu return nao kori tao Promise internally ekta resolve method return kore . 
+
+// Important notes ***********
+// prottekta then() method ekta Resolved Promise return kore . kon resolve promise ? jeta ami upore original promise er callback function e res(1) korchi setaii . karon ai res(1) dara sei p1 promise er first then e 1 chole jay using Resolved Promises. next then ke data dibe first then . evabeii chaining chole . so next then ke jodi first then kisu return nao kore taholeo internally "return Promise.resolve()" eta kore amader jonno . r jodi ami first then e return 2 kore dei tahole internally first then() method eta kore - "return Promise.resolve(2)" . r ei 2 data ta next then er arguments e chole jay .
+// mot kotha then() method always return a Resolve Promise
+
+
