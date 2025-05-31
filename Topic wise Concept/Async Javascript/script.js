@@ -309,3 +309,13 @@
 // }).finally(() =>{
 //   console.log('Finally 2');
 // })
+
+
+
+// Summary of Promises
+// 1. then finally and catch are returns a resolved promise
+// 2. you can have multiple then, multiple catch and multiple finally
+// 3. only first catch will get executed, other catch will ignored
+// 4. you can pass a 2nd argument to then block, which act as a catch function, priority will be give to this.
+
+
