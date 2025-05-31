@@ -79,6 +79,38 @@
 
 // Implement a Promise via Class
 
+// class MyPromise{
+//   constructor(callback){
+//     callback(this.resolve, this.reject)
+//   }
+
+//   #resolve(){
+
+//   }
+//   #reject(){
+
+//   }
+
+//   then(){
+
+//   }
+//   catch(){
+
+//   }
+//   finally(){
+
+//   }
+
+// }
+
+// const p1 = new MyPromise(function(res, rej) {
+
+// })
+
+// console.log(p1);
+
+// akhn ami ai MyPromise ke workable banabo real life Promise er motoi 
+
 class MyPromise{
   constructor(callback){
     callback(this.resolve, this.reject)
