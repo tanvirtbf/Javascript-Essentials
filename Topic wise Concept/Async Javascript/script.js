@@ -257,5 +257,18 @@
 
 // akhn ami ja ja sikhechi sob gula test korbo Promise diye 
 
+const p1 = new Promise(function (resolve, reject) {
+  setTimeout(() =>{
+    console.log('Done');
+    resolve('Promise Done!')
+  }, 3000)
+})
+p1.then((data) =>{
+  console.log(data);
+  return `${data}2`
+}).then((data) => {
+  console.log(data);
+  return `${data}3`
+})
 
 
