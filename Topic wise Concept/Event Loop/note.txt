@@ -255,3 +255,34 @@ function move(){
 }
 move()
 akhn eta pura page stop kore dise and just loading hocche, onno kono task hocche na eta diye 
+
+
+Topic : RFA(requestAnimationFrame) vs Macro(setTimeout)
+Example code : 
+-- Macro 
+setTimeout(() =>{
+    console.log(1)
+})
+-- RAF
+requestAnimationFrame(() =>{
+    console.log(2)
+})
+output : 
+1 
+2
+
+ekhane prothome 1 ashlo kno ? prothome to 2 ashar kotha . karon RAF er priority beshi macro theke . kintu kotha hocche requestAnimationFrame kokhonoii sathe sathe chole na . Browser khubii intelligent vabe only frame bananor somoy etake execute kore . amra age dekhechi je ideally 16ms por por execute hoy . tai 16ms er age se RAF queue te asheii nai . tai RAF 16ms er age khali chilo . but setTimeout ta hoyto 1-2 ms e macro task queue te aisha porse . tokhon event loop RAF er moddhe kichu na peye macro te giye setTimeout ke callstack e diye execute koraiya felse . tarpor ashe requestAnimationFrame . tai 1 age and pore 2 ashce . 
+
+ekhetre jodi setTimeout 16ms er beshi somoy nito or setTimeout er 2nd argument e time jodi ami 16ms er beshi ditam tokhon age requestAnimationFrame e thaka 2 print hoito and pore 1 print hoito 
+
+Example code : 
+setTimeout(() =>{
+    console.log(1)
+}, 200)
+requestAnimationFrame(() =>{
+    console.log(2)
+})
+result : 
+2
+1
+
