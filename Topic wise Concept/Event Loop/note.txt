@@ -216,3 +216,8 @@ ebar ashi janar try kori kon queue te ki ki jay ?
 3. Rendering Queue : Dom related jei changes , css change, text content change  etc mainly Dom related bishoy gula rendering queue handle kore 
 4. Macro Task Queue : setTimeout, setInterval, event listener(document.addEventListener)
 
+
+
+Topic : Event Loop 
+
+
