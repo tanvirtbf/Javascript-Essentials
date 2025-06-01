@@ -219,5 +219,9 @@ ebar ashi janar try kori kon queue te ki ki jay ?
 
 
 Topic : Event Loop 
+Definition of Event Loop : Event loop just ekta function jar kaj hocche always check kora je call stack khali hoise kina . jodi callstack khali pay tokhon se task queue te ashe and priority basis e vibinno task se callstack e dhukaite thake . just etaii event loop  
 
+
+Important Notes : 
+jokhon event loop task queue theke priority basis e task callstack e pass kore tokhon vibinno child task queue er jonno ek ek vabe kaj kore . 
 
