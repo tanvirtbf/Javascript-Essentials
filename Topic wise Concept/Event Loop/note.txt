@@ -351,6 +351,3 @@ output :
 kintu 2 er age 4 ashar kotha . kintu na . event loop jokhon RAF e ashbe tokhon dekhbe akhn ki ui update er somoy ? answer is no . karon tokhon 16ms hoy nai . karon browser kokhonoii sathe sathe ui update kore na . se changes gula batch kore rakhe and frame create er somoy ui update kore . kintu macro theke thaka setTimeout tokhon executable thakay seta age execute hoye gese 
 
 
-
-
-
