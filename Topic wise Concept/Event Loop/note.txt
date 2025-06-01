@@ -197,3 +197,22 @@ amra jodi requestAnimationFrame diye kono ui update korte chai , dhoren ekta box
 but setTimeout er belay erokom hoy na . setTimeout e jodi amra kono time set na kori tahole by default jokhonii call stack khali hoy tokhonii se callstack e jauyar jonno ready hoye jay and call stack e giye execute hoye jay . jodi dhoren setTimeout er kaj 2 ms e sesh hoye jay tahole 2ms poreii se 1 step right e chole jabe . 1 step = 1px hole 2ms por por se 1px kore right e jabe . eta requestAnimationFrame thekeo beshi fast e agabe . karon requestAnimationFrame joto jai hok 16ms poreii ui update kore . kintu setTimeout er belay jokhonii kaj sesh hoy tokhonii ui update koraiya dey . 
 kintu jodi setTimeout er vitorer code onk late kore execute hoy tahole se sei onujayii ui update kore . jodi execute hoite 50ms lage tahole 50ms por por 1px kore right e jay. ei khetre se requestAnimationFrame theke late kore ui update kore . 
 tar mane bujha gelo requestAnimationFrame ekdom loyal . se joto jai hok 16ms por por frame banay or ui update kore . but setTimeout er belay tar jokhonii kaj sesh hobe and callstack theke execute hoite parbe tokhonii ui update kore 
+
+
+
+Topic : Task Queue 
+
+Task Queue te onk gula child task queue thake . er moddhe sobcheye Popular 4 ta queue hocche : 
+1. Micro Task Queue 
+2. requestAnimationFrame callbacks (RAF) Queue
+3. Rendering Queue
+4. Macro Task Queue
+
+ekhane sobcheye beshi priority hocche micro , then requestAnimationFrame, then rendering q and last e macro q . 
+ebar ashi janar try kori kon queue te ki ki jay ? 
+
+1. Micro Task Queue : promises (then(), catch(), finally()) , MutationObserver (dom e kichu change hoise kina, ui change hoise kina jeta check korte thake)
+2. requestAnimationFrame : requestAnimationFrame er moddhe jei callback ta pass kora hoy and sei callback e jei ui changing code likha hoy seta 
+3. Rendering Queue : Dom related jei changes , css change, text content change  etc mainly Dom related bishoy gula rendering queue handle kore 
+4. Macro Task Queue : setTimeout, setInterval, event listener(document.addEventListener)
+
