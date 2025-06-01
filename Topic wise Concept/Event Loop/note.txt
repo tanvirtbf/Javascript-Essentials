@@ -286,3 +286,39 @@ result :
 2
 1
 
+
+
+Topic : Rendering vs requestAnimationFrame 
+
+Example : 
+function move(){
+    const box = document.getElementByClassName("box-r)[0];
+    box.style.backgroundColor = "red";
+
+    requestAnimationFrame(() =>{
+        box.style.backgroundColor = "blue"
+    })
+}
+ekhane ki print hobe ? 
+Answer is Blue 
+karon amra jokhon box.style.backgroundColor = "red" kori tokhon seta dom operation er moddhe jay . tar mane Rendering Queue te jay . tokhon Browser nijer kache note kore rakhe je accha thik ase frame creation er somoy ami box er backgroundColor red kore dibo . but jokhon Browser niche aisha dekhe je requestAnimationFrame call kora and callback er moddhe box er backgroundColor blue deya tokhon Browser bolbe je etar priority beshi tai ami box er backgroundColor blue korbo . tokhon note e thaka red delete kore dey and final ui er jonno box er color red rakhe . jokhon 16ms er moto hoy tokhon frame create korar somoy box er color red diye dey . 
+
+
+
+kintu ami jodi chai red color tao apply hok then blue hok tahole kivabe korbo ? 
+function move(){
+    const box = document.getElementByClassName("box-r)[0];
+    box.style.backgroundColor = "red";
+
+    requestAnimationFrame(() =>{
+        requestAnimationFrame(() =>{
+            box.style.backgroundColor = "blue"
+        })
+    })
+}
+ekhane requestAnimationFrame first time arekta requestAnimationFrame web api er throw te Browser ke pathay . tar mane event loop first cycle e requestAnimationFrame ui te kono change korte pare nai but first cycle e RAF na thakay priority basis e Rendering queue te thaka box.style.backgroundColor = "red" run kore . then second cycle e box.style.backgroundColor = "blue" run kore . tai ekta flickering dekhte pauya jay . 
+
+
+
+
+
