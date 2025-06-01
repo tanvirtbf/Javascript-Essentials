@@ -231,3 +231,16 @@ kintu Macro Task queue er belay erokom kore na . Macro task queue te jokhon even
 
 final kotha hocche : micro task queue er belay jotokkhon na micro task khali hocche totokkhon event loop r kono task queue te jay na . but macro task queue er belay single single kore macro theke task ney and prottebar deyar por abar micro theke start kore and micro khali thakle then macro te ashe . 
 
+Important Notes : 
+ami tahole ei tricks kaje lagaiya javascript diye infinite loop run korte pari without any problem . kintu kivabe ? 
+
+Example :
+function move(){
+    setTimeout(() =>{
+        console.log(1)
+        move()
+    })
+}
+move()
+ekhane ai function infinite loop hishebe choltei thakbe. kokhono thambe na . but ai karone page er baki kaj atke thakbe na . karon ? 
+karon holo callstack jotokkhon na khali hocche totokkhon event loop task queue te jabe na . jodi callstack khali hoy tar mane callstack er baki sob kaj sesh . then event loop always macro task queue te sobar last e jay . age sob task complete kore then macro theke setTimeout niye execute korar por amon jodi hoito je jotokkhon na macro task queue complete hoy totokkhon onno task queue te jabe na tahole somossha face hoito . karon jodi kono vabe micro, RFA or rendering e kono task aisha porto tahole segula wait korto . but wait kora lage na . because 1 ta macro theke task complete korar por event loop then abar first theke start kore , i mean micro task queue theke start kore sob khali kore abar ashe macro te . tai kono kaj er jonno atke thake na 
