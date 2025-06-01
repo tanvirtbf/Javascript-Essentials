@@ -190,3 +190,10 @@ ekhane ami firstHalf ke sathe sathe run korsi but heavy task jeta setTimeout e d
 
 requestAnimationFrame : 
 eta amader jonno best friend jokhon amra kono style change korbo ui te . karon requestAnimationFrame ke Browser provide kore for developers jeno tara style changes gula smoothly korte pare . requestAnimationFrame ui styles change er bishoy gula manage kore . Browser jokhonii dekhbe requestAnimationFrame tokhonii bujhe jabe amake ui te kono changes ante hobe . and Browser tokhonii ui update korbe jokhon update korar proyojon hobe. otherwise update korbe na . 
+
+
+RAF vs setTimeout 
+amra jodi requestAnimationFrame diye kono ui update korte chai , dhoren ekta box seta ekta button click er dara left theke right e niye jaite chai tokhon requestAnimationFrame always 16ms por por ui update korbe . tar mane holo 16ms por por se 1 step kore samne agabe . 1step = jodi 1px hoy tahole proti 16ms por por 1px kore right e jabe . 
+but setTimeout er belay erokom hoy na . setTimeout e jodi amra kono time set na kori tahole by default jokhonii call stack khali hoy tokhonii se callstack e jauyar jonno ready hoye jay and call stack e giye execute hoye jay . jodi dhoren setTimeout er kaj 2 ms e sesh hoye jay tahole 2ms poreii se 1 step right e chole jabe . 1 step = 1px hole 2ms por por se 1px kore right e jabe . eta requestAnimationFrame thekeo beshi fast e agabe . karon requestAnimationFrame joto jai hok 16ms poreii ui update kore . kintu setTimeout er belay jokhonii kaj sesh hoy tokhonii ui update koraiya dey . 
+kintu jodi setTimeout er vitorer code onk late kore execute hoy tahole se sei onujayii ui update kore . jodi execute hoite 50ms lage tahole 50ms por por 1px kore right e jay. ei khetre se requestAnimationFrame theke late kore ui update kore . 
+tar mane bujha gelo requestAnimationFrame ekdom loyal . se joto jai hok 16ms por por frame banay or ui update kore . but setTimeout er belay tar jokhonii kaj sesh hobe and callstack theke execute hoite parbe tokhonii ui update kore 
