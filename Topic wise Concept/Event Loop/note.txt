@@ -113,3 +113,74 @@ one Important things :
 Browser can wait for Rendering, and when it's right time to do the rendering, they do the rendering. 
 JavaScript will always run to completion before rendering can happen
 
+
+onekeii mone kore jodi ami dom diye kono ui change kori tahole seta satheii satheii hoye jay . kintu na . Browser wait kore thake . kotokkhon wait kore ? ideally 16ms. 
+kintu kivabe ? 
+majority of monitor that are calibrated. mane holo Monitor => 60FPS
+tar mane holo 
+1 second e 1000ms tai 1000/60 = 16ms
+Browser onk intelligent , karon se jane je ekta frame 16ms er poreii change hobe . tai ami ui ke 16ms er poreii update korbo .  
+tai techniqally developers 12-14ms er moddhe work kore . jodi amar kono function 12-14ms theke beshi time ney tahole amar ui tokhon legyness hoye jay, frames drop hoy . ai karone delay hoye thake . 
+eta kivabe solve korbo ? 
+amar code ke 2 ta part e vag korte pari . 
+function longRunningTask(){
+    firstHalf(){}
+    setTimeout(()=>{},1000)
+} 
+ekhane ami firstHalf ke sathe sathe run korsi but heavy task jeta setTimeout e diye disi jate kichukkhon pore run hoy . 
+
+
+Important : 
+akhn ami prothomeii 60FPS er bishoy ta clear korbo sathe Browser er bishoy gulao : 
+
+Question : ব্রাউজার কেন ১৬ms পর পর render করে? আর এর সাথে ৬০FPS-এর সম্পর্কটা কী?
+
+Step-by-step বোঝার চেষ্টা করি:
+1. Monitor কীভাবে কাজ করে?
+আপনি যে Monitor বা Screen ব্যবহার করছেন, সেটা প্রতি সেকেন্ডে নির্দিষ্ট সংখ্যক frame দেখায়।
+
+"Frame" মানে কী?
+একটা frame মানে একটা সম্পূর্ণ ছবি (snapshot) যেটা আপনার স্ক্রিনে আসে।
+
+Most monitors run at: 60Hz
+মানে হলো:
+প্রতি সেকেন্ডে ৬০টা frame display করতে পারে।
+
+তাহলে ১ সেকেন্ডে কয় ms?
+1 second = 1000 milliseconds
+তাহলে ৬০টি frame দেখাতে কত সময় লাগে?
+1000ms ÷ 60 = 16.67ms (প্রায় ১৬ms)
+অর্থাৎ, প্রতি ফ্রেমের জন্য ব্রাউজার/মোনিটরের কাছে সময় থাকে প্রায় 16ms।
+
+তাই ব্রাউজার কী ভাবে?
+“যেহেতু আমার স্ক্রিন প্রতি ১৬ms এ নতুন frame নেয়,
+তাই আমি প্রতি ১৬ms পর নতুন frame রেন্ডার করবো।
+না হলে frame drop হবে বা lag করবে।”
+
+Rendering Timeline : ./images/RenderingTimelin.png 
+---- ai image ta dekhte hobe images folder e giye..
+
+যদি আপনি 16ms এর বেশি সময় নিয়ে ফেলেন?
+ধরুন আপনি কোনো function এ 25ms সময় নিচ্ছেন (যেমন একটা heavy loop)।
+
+তখন কী হবে?
+
+1. আপনার কোড চলা শেষ না হওয়া পর্যন্ত render block হবে
+2. ব্রাউজার ১৬ms এর মধ্যে রেন্ডার করতে পারবে না
+3. তখন frame drop হবে
+4. UI laggy বা stuttered লাগবে
+
+এজন্যই performance guide বলে:
+"আপনার যেকোনো animation, UI update, বা heavy calculation এমনভাবে design করুন যেন ১৬ms এর মধ্যেই শেষ হয়।"
+
+এখন সংক্ষেপে বলি:
+60 FPS -> প্রতি সেকেন্ডে ৬০টা ছবি দেখানো (frame)
+1 Frame -> প্রায় ১৬ms সময় পায়
+ব্রাউজার ->	প্রতি ১৬ms পরে ১টা render টাইম ধরে
+কারণ ->	Monitor ঠিক ঐ ১৬ms পরে পরেই নতুন ছবি নেয়
+যদি দেরি হয় -> তাহলে Frame Drop হয় (Lag করে)
+
+তাই শেষ কথা:
+ব্রাউজার প্রতি ১৬ms এ রেন্ডার করে, কারণ আপনার মনিটর প্রতি ১৬ms এ একটা নতুন ছবি (frame) দেখাতে পারে। এই মিলেই তৈরি হয় 60FPS এর বাস্তবতা।
+
+
