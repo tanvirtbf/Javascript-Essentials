@@ -188,4 +188,5 @@ ekhane ami firstHalf ke sathe sathe run korsi but heavy task jeta setTimeout e d
 
 
 
-
+requestAnimationFrame : 
+eta amader jonno best friend jokhon amra kono style change korbo ui te . karon requestAnimationFrame ke Browser provide kore for developers jeno tara style changes gula smoothly korte pare . requestAnimationFrame ui styles change er bishoy gula manage kore . Browser jokhonii dekhbe requestAnimationFrame tokhonii bujhe jabe amake ui te kono changes ante hobe . and Browser tokhonii ui update korbe jokhon update korar proyojon hobe. otherwise update korbe na . 
