@@ -58,4 +58,58 @@ function demo(){
     box.style.backgroundColor = "maroon"
 
 }
+ekhane ami dom manupulation korechi .
+The Question is : 
+Question : jokhon ami dom manipulation kori tahole ki setao one by one hoye thake ? 
+Answer : No. eta kono javascript code na . eta web api . orthat ai code gula javascript bujhe na . jokhon airokom dom related code ashe javascript tokhon code gula ke web api te diye dey and web api Browser ke diye dey . 
+
+akhn kotha hocche ekhane box.style.backgroundColor onkbar kora hoise . tahole ki Browser sob gulaii ekta ekta kore korbe ? 
+Answer is NO. jokhon Browser dekhbe same kaj barbar chacchi tokhon Browser vabbe je mone hoy ami last attempt "maroon" setaii korte chacchi and setaii kore dibe and baki uporer gula delete kore dibe . tai jodi demo call kora hoy tokhon kokhonoii sob gula color ashe na . last color taii ashe . karon Browser uporer gula delete kore last er taii apply kore . 
+
+Important Notes : javascript code always runs to completion before any Rendering can happen . tar bangla ortho holo : JavaScript এর যেকোনো কোড একবার শুরু হলে, সেটা পুরোপুরি শেষ না হওয়া পর্যন্ত ব্রাউজার কিছু রেন্ডার করবে না।
+
+ধরুন আপনি লিখলেন:
+document.querySelector("div").style.backgroundColor = "blue";
+while (true) {}
+
+এখানে প্রথম লাইনে div এর ব্যাকগ্রাউন্ড কালার পরিবর্তনের জন্য বলা হয়েছে।
+কিন্তু দ্বিতীয় লাইনে একটা infinite loop দিয়ে JavaScript আটকে গেছে।
+
+এখন আপনি ভাবছেন — “ব্যাকগ্রাউন্ড তো বদলে যাওয়ার কথা!”
+কিন্তু তা হবে না, কারণ JavaScript প্রথমে পুরো কোডটা "run to completion" করবে — অর্থাৎ পুরো কাজ শেষ না হওয়া পর্যন্ত render (দেখানো) করবে না।
+
+
+Topic : RAF - requestAnimationFrame 
+function demo(){
+    const box = document.getElementByClassName("box-r")
+
+    box.style.backgroundColor = "blue"
+    box.style.backgroundColor = "red"
+    box.style.backgroundColor = "green"
+    box.style.backgroundColor = "yellow"
+    box.style.backgroundColor = "lime"
+    box.style.backgroundColor = "purple"
+    box.style.backgroundColor = "orange"
+    box.style.backgroundColor = "maroon"
+
+    requestAnimationFrame(()=>{
+        box.style.backgroundColor='aqua'
+    })
+
+}
+akhn ki hobe ? akhn color aqua dekhabe . not maroon 
+karon requestAnimationFrame has higher priority than other dom operations
+
+tar mane same kaj er belay jodi oi kaj requestAnimationFrame er callback e thake seta Browser dhore and baki gula skip kore setaii apply kore . 
+
+Important Notes : 
+first e requestAnimationFrame er callback run kore before any css or any layout thing can happen
+eta ekta order e chole - RAF -> CSS Calculation -> Layout Calculation -> Paint
+
+example : upore Browser ke instruction dey je box ke maroon color korte hobe . tar ageii Browser ke requestAnimationFrame bole dey je box ke aqua korte hobe . jehetu eta higher priority tai Browser bolbe je jehetu same task er jonno requestAnimationFrame theke instruction ashce tai etaii apply hobe . 
+
+
+one Important things : 
+Browser can wait for Rendering, and when it's right time to do the rendering, they do the rendering. 
+JavaScript will always run to completion before rendering can happen
 
