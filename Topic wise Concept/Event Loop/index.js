@@ -13,14 +13,19 @@
 // }
 
 
-// Infinite Loop
+// Infinite Loop with Macro (setTimeout)
+// function move(){
+//     setTimeout(() =>{
+//         let i=0
+//         while(i<1000000000){
+//             i++
+//         }
+//         console.log(1);
+//         move()
+//     })
+// }
+
+// Infinite Loop with Micro (promises)
 function move(){
-    setTimeout(() =>{
-        let i=0
-        while(i<1000000000){
-            i++
-        }
-        console.log(1);
-        move()
-    })
+    Promise.resolve().then(move)
 }

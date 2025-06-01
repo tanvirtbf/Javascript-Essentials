@@ -244,3 +244,14 @@ function move(){
 move()
 ekhane ai function infinite loop hishebe choltei thakbe. kokhono thambe na . but ai karone page er baki kaj atke thakbe na . karon ? 
 karon holo callstack jotokkhon na khali hocche totokkhon event loop task queue te jabe na . jodi callstack khali hoy tar mane callstack er baki sob kaj sesh . then event loop always macro task queue te sobar last e jay . age sob task complete kore then macro theke setTimeout niye execute korar por amon jodi hoito je jotokkhon na macro task queue complete hoy totokkhon onno task queue te jabe na tahole somossha face hoito . karon jodi kono vabe micro, RFA or rendering e kono task aisha porto tahole segula wait korto . but wait kora lage na . because 1 ta macro theke task complete korar por event loop then abar first theke start kore , i mean micro task queue theke start kore sob khali kore abar ashe macro te . tai kono kaj er jonno atke thake na 
+
+
+kintu same infinite call jodi setTimeout(macro) diye na kore promise(micro) diye korto ? 
+tahole sob kaj stop hoiya jaito and only loop cholto . r kono kaj korte partam na . keno ? karon jotokkhon na micro task queue khali na hoy totokkhon event loop onno task e jabeii na and sekhane jodi onno task ashe tahole suspand hoye thakbe . 
+
+example : 
+function move(){
+    Promise.resolve().then(move)
+}
+move()
+akhn eta pura page stop kore dise and just loading hocche, onno kono task hocche na eta diye 
