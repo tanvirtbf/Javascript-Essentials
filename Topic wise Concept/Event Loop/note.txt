@@ -66,6 +66,10 @@ Answer : No. eta kono javascript code na . eta web api . orthat ai code gula jav
 akhn kotha hocche ekhane box.style.backgroundColor onkbar kora hoise . tahole ki Browser sob gulaii ekta ekta kore korbe ? 
 Answer is NO. jokhon Browser dekhbe same kaj barbar chacchi tokhon Browser vabbe je mone hoy ami last attempt "maroon" setaii korte chacchi and setaii kore dibe and baki uporer gula delete kore dibe . tai jodi demo call kora hoy tokhon kokhonoii sob gula color ashe na . last color taii ashe . karon Browser uporer gula delete kore last er taii apply kore . 
 
+mot kotha Browser khubii intelligent . se jokhon dekhbe repeat task ache tokhon se sob gula korbe na . updated task taii korbe 
+
+
+
 Important Notes : javascript code always runs to completion before any Rendering can happen . tar bangla ortho holo : JavaScript এর যেকোনো কোড একবার শুরু হলে, সেটা পুরোপুরি শেষ না হওয়া পর্যন্ত ব্রাউজার কিছু রেন্ডার করবে না।
 
 ধরুন আপনি লিখলেন:
@@ -317,6 +321,34 @@ function move(){
     })
 }
 ekhane requestAnimationFrame first time arekta requestAnimationFrame web api er throw te Browser ke pathay . tar mane event loop first cycle e requestAnimationFrame ui te kono change korte pare nai but first cycle e RAF na thakay priority basis e Rendering queue te thaka box.style.backgroundColor = "red" run kore . then second cycle e box.style.backgroundColor = "blue" run kore . tai ekta flickering dekhte pauya jay . 
+
+
+Example : 
+
+console.log(1);
+
+setTimeout(() =>{
+    console.log(2);
+})
+
+Promise.resolve().then(() =>{
+    console.log(3);
+})
+
+requestAnimationFrame(() =>{
+    console.log(4);
+})
+
+console.log(5);
+
+output : 
+1
+5
+3
+2
+4
+
+kintu 2 er age 4 ashar kotha . kintu na . event loop jokhon RAF e ashbe tokhon dekhbe akhn ki ui update er somoy ? answer is no . karon tokhon 16ms hoy nai . karon browser kokhonoii sathe sathe ui update kore na . se changes gula batch kore rakhe and frame create er somoy ui update kore . kintu macro theke thaka setTimeout tokhon executable thakay seta age execute hoye gese 
 
 
 
