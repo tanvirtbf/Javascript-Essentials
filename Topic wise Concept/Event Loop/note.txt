@@ -224,4 +224,10 @@ Definition of Event Loop : Event loop just ekta function jar kaj hocche always c
 
 Important Notes : 
 jokhon event loop task queue theke priority basis e task callstack e pass kore tokhon vibinno child task queue er jonno ek ek vabe kaj kore . 
+jemon ? 
+micro task queue er belay ekrokom , macro task queue er belay arek rokom way te callstack e pathay . 
+Bekkha : jokhon callstack khali pay tokhon sathe sathei event loop task queue check kore . se sobar age micro task queue check kore . jodi oikhane kono kichu pay tahole segula callstack e diye abar callstack khali houyar jonno wait kore . callstack khali hoile event loop abaro micro task queue te khuje . evabe jotokkhon na micro task queue khali na hoy se niche thaka RFA , Rendering, Macro ei queue gula te jay na . jokhon dekhe micro task queue khali tokhon RFA (requestAnimationFrame) queue te aisha check kore ki ase . jodi pay tahole callstack e diye dey . evabe se nicher dike jay . 
+kintu Macro Task queue er belay erokom kore na . Macro task queue te jokhon event loop jay and sekhan theke code callstack e pathanor por abar sathe sathe macro task queue te ashe na . se abar micro task queue theke check kore . evabe similar vabe check korte korte last e macro task queue te ashe . 
+
+final kotha hocche : micro task queue er belay jotokkhon na micro task khali hocche totokkhon event loop r kono task queue te jay na . but macro task queue er belay single single kore macro theke task ney and prottebar deyar por abar micro theke start kore and micro khali thakle then macro te ashe . 
 
