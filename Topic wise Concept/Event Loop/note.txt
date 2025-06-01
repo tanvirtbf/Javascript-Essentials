@@ -114,22 +114,6 @@ Browser can wait for Rendering, and when it's right time to do the rendering, th
 JavaScript will always run to completion before rendering can happen
 
 
-onekeii mone kore jodi ami dom diye kono ui change kori tahole seta satheii satheii hoye jay . kintu na . Browser wait kore thake . kotokkhon wait kore ? ideally 16ms. 
-kintu kivabe ? 
-majority of monitor that are calibrated. mane holo Monitor => 60FPS
-tar mane holo 
-1 second e 1000ms tai 1000/60 = 16ms
-Browser onk intelligent , karon se jane je ekta frame 16ms er poreii change hobe . tai ami ui ke 16ms er poreii update korbo .  
-tai techniqally developers 12-14ms er moddhe work kore . jodi amar kono function 12-14ms theke beshi time ney tahole amar ui tokhon legyness hoye jay, frames drop hoy . ai karone delay hoye thake . 
-eta kivabe solve korbo ? 
-amar code ke 2 ta part e vag korte pari . 
-function longRunningTask(){
-    firstHalf(){}
-    setTimeout(()=>{},1000)
-} 
-ekhane ami firstHalf ke sathe sathe run korsi but heavy task jeta setTimeout e diye disi jate kichukkhon pore run hoy . 
-
-
 Important : 
 akhn ami prothomeii 60FPS er bishoy ta clear korbo sathe Browser er bishoy gulao : 
 
@@ -182,5 +166,26 @@ Rendering Timeline : ./images/RenderingTimelin.png
 
 তাই শেষ কথা:
 ব্রাউজার প্রতি ১৬ms এ রেন্ডার করে, কারণ আপনার মনিটর প্রতি ১৬ms এ একটা নতুন ছবি (frame) দেখাতে পারে। এই মিলেই তৈরি হয় 60FPS এর বাস্তবতা।
+
+
+
+onekeii mone kore jodi ami dom diye kono ui change kori tahole seta satheii satheii hoye jay . kintu na . Browser wait kore thake . kotokkhon wait kore ? ideally 16ms.
+kintu keno ? 
+majority of monitor that are calibrated. mane holo Monitor => 60FPS
+tar mane holo 
+1 second e 1000ms tai 1000/60 = 16ms
+tar mane holo 16ms por por screen e ekta kore frame ashe . eta eto druto ashe je amra bujhte pari na . tai bujhar bishoy holo proti 16ms por por Browser ui update kore frame banaiya seta display kore . 
+eta bujhar jonno aro deeply jodi boli frame mane holo ekta snapshot er moto . eta barbar 16ms por por ui te ashte thake tai amra bujhte pari na . amader kase mone hoy screen static. mane isthir . kintu eta barbar frame create kore dekhacche . proti bar Browser check kore je developer kono notun ui change korlo kina . se sei changes gula sathe sathe update kore na . seta ekta batch update er moddhe rakhe . mane holo sob kichu eksathe observe kore final ui ta ber kore and seta change kore 1 ta frame banay and ui te dekhay . 
+Browser onk intelligent , karon se jane je ekta frame 16ms er poreii change hobe . tai ami ui ke 16ms er poreii update korbo .  
+tai techniqally developers 12-14ms er moddhe work korte hobe. amar ui related functionality jeno 12-14 ms cross na kore . karon exactly 16ms pore Browser ke oi changes gula niye frame baniye ui te update korte hobe . tai amake 16ms er ageii orthat 12-14ms e kaj ta koraite hobe . jodi amar kono function 12-14ms theke beshi time ney tahole amar ui tokhon legyness hoye jay, frames drop hoy . ai karone delay hoye thake . 
+eta kivabe solve korbo ? 
+amar code ke 2 ta part e vag korte pari . 
+function longRunningTask(){
+    firstHalf(){}
+    setTimeout(()=>{},1000)
+} 
+ekhane ami firstHalf ke sathe sathe run korsi but heavy task jeta setTimeout e diye disi jate kichukkhon pore run hoy . tar karone amra ui ke freez na kore heavy task gula kichu ta delay koraiya show korai and frame 16ms por por ee cholte thake without any delay . 
+
+
 
 
