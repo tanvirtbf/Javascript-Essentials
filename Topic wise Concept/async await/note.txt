@@ -1,0 +1,7 @@
+Async Await Topic : 
+1. What problem it solves?
+2. What does Async function do?
+3. What does await keyword do?
+4. Error Handling in Async Await
+5. Top Level Await - What and Where it is supported?
+6. Key Points Every developer should know about Async Await
