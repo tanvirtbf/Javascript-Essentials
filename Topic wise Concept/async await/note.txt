@@ -5,3 +5,64 @@ Async Await Topic :
 4. Error Handling in Async Await
 5. Top Level Await - What and Where it is supported?
 6. Key Points Every developer should know about Async Await
+
+
+------- 1. What problem it solves? --------------
+First problem solve is "Flow Control"
+
+javascript e jodi amra kono async kaj korte jai tahole amader 3 ta options ase . 
+1. callbacks
+2. setTimeout
+3. promises
+
+ai 3 ta jinish amader async code likhte help kore . kintu ai 3 tar sathe jei problem seta holo Flow Control 
+
+kintu kivabe ? 
+
+callbacks er khetre kivabe Flow Control issue hoy seta dekhi : 
+
+example : 
+function test(){}
+function parent(callback){
+    // logic
+    callback()
+}
+parent(test)
+
+ekhane test function as a callback hishebe parent er kache jay and parent onk gula logic implement korar pore callback ke call kore . kintu as a human amar ai async code ta bujhte gele onk time dorkar, onk brain use kora dorkar, ai code bujhte gele already amake experience er dorkar . 
+but human brain always synchronously code porte pochondo kore . kintu ekhane test function parent er age declare korar poreo kokhon je call hobe tar kono thik thikana nai . ekhane Flow bujhte somossha hoy , ekhane Flow Control critical
+
+setTimeout er khetre kivabe Flow control isshue hoy seta dekhacchi : 
+
+example : 
+//code1
+setTimeout(() =>{
+    // logic
+}, 3000)
+//code2
+ekhane human brain jehetu synchronously code porte pochondo kore but setTimeout er belay eta hocche na . code1 run houyar por setTimeout run hobe na , chole jabe code2 te . setTimeout tar kaj + time sesh kore execute hobe . etaii Flow control isshue
+
+promises er khetre kivabe Flow control isshue hoy seta dekhacchi : 
+
+const p1 = new Promise((res, rej) =>{
+    res('Done')
+})
+p1.then(data => return data).
+    then(data2 => return data2).
+    catch(err => console.log(err)).
+    finally(() => console.log('final'))
+
+ekhane promise ekta chain banaiya felse, ai chain bujhata sobar jonno ektu kothin . flow control ta ektu difficult 
+
+
+
+tahole akhn question holo amra kivabe async await diye problem solve korte pari ? 
+amra jodi async await diye promise er code ta kortam tahole erokom dekhaito  :
+const data = await getData()
+const data2 = await getAnotherData(data)
+const data3 = await getDataAgain(data2)
+console.log(data3)
+
+ekhane amra Async code gula synchronous er moto likhsi but behind the scene this is not synchronous . but human er jonno synchronous mone hocche tai bujhte sohoj hocche . 
+
+eii problem solve kore  Async Await 
