@@ -66,3 +66,49 @@ console.log(data3)
 ekhane amra Async code gula synchronous er moto likhsi but behind the scene this is not synchronous . but human er jonno synchronous mone hocche tai bujhte sohoj hocche . 
 
 eii problem solve kore  Async Await 
+
+
+Async Await Syntex : 
+
+function fakeAxios(){
+    return new Promise(function (resolve) {
+        setTimeout(() =>{
+            resolve("Data Recieved")
+        }, 3000)
+    })
+}
+
+fakeAxios().then((data) =>{
+    console.log(data)
+})
+result : After 3 second conole e Data Recieved text print hobe 
+
+cholen etake amra Async Await e convert kori : 
+
+async function getData(){
+    const data = await fakeAxios();
+    console.log(data)
+}
+getData() // Data Recieved 
+
+tahole amra dekhte pacchi promise creation phase kokhonoii async await kore na . async await just consumpsion phase ke synchronous er moto kore . tar mane fakeAxios.then().catch().finally() --- ei chain ta ke just replace kore async await . 
+
+
+Important Notes : 
+amra jokhon kono function ke async function banai, mane async keyword diye jokhon kono function er body likhi tokhon by default oi function always ekta promise return kore . sei function e jodi kono kichu return kora na hoy tao promise return hobe . jokhon sei function ke call kora hobe tokhon sekhane tar sathe .then() .catch() .finally() egula use kora jabe . 
+
+example : 
+async function getData(){
+
+}
+console.log(getData().then(() => console.log('Then Block")))
+result : Promise , Then Block 
+
+
+Important Notes : 
+jodi kono async function non-promise kichu return kore tahole ki hobe ? 
+jokhon kono async function non-promise value jemon number string object array etc egula return kore tokhon behind the scene sei value ke ekta promise er moddhe wrap kore tarpor return kora hoy . tar jonnoi amra non-promise value return korar poreo .then() er moddhe take dhorte pari . 
+
+
+
+
