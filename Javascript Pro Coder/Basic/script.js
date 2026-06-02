@@ -1,5 +1,6 @@
-console.log('Hello World!')
+var firstName = "Tanvir";
+var lastName = "Ahmed";
+let age = 15;
+const yearOfBirth = 1999;
 
-for (let i=0; i<99999999; i++) {
-    
-}
+let userIntro = "Hi, my name is " + firstName + " " + lastName;
