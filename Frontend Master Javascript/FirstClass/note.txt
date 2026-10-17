@@ -883,3 +883,219 @@ Global Scope এবং Global Object এক জিনিস নয়।
 একটি Variable Global Scope-এ থাকতে পারে, কিন্তু Global Object-এর Property না-ও হতে পারে।
 
 এই পার্থক্যটি বুঝতে পারলে JavaScript-এর Scope, Global Environment এবং Variable Declaration আরও পরিষ্কার হবে।
+
+
+
+
+
+
+
+
+
+
+
+
+# JavaScript: Global var এবং window Object
+
+## 1. Classic JavaScript Script-এ Top-Level var
+
+Browser-এ সাধারণ JavaScript Script-কে Classic Script বলা হয়।
+
+যখন কোনো Classic Script-এর একদম Top-Level-এ `var` দিয়ে Variable Declare করা হয়, তখন সেটি সাধারণত Browser-এর Global Object `window`-এর Property হিসেবে তৈরি হয়।
+
+উদাহরণ:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Classic Script</title>
+</head>
+<body>
+
+    <script>
+        var firstName = "Tanvir";
+
+        console.log(firstName);
+        // Tanvir
+
+        console.log(window.firstName);
+        // Tanvir
+    </script>
+
+</body>
+</html>
+```
+
+Output:
+
+```text
+Tanvir
+Tanvir
+```
+
+ব্যাখ্যা:
+
+- `var firstName = "Tanvir"` একটি Global Variable তৈরি করেছে।
+- Classic Script-এর Top-Level-এ এই Declaration-এর ফলে `window` Object-এ `firstName` Property তৈরি হয়েছে।
+- তাই `firstName` এবং `window.firstName`—দুটিই `"Tanvir"` Value দেয়।
+
+মনে রাখবেন, এই নিয়মটি Classic Script-এর Top-Level-এর জন্য। Function-এর ভেতরে `var` Declare করলে সেটি সাধারণত `window`-এর Property হয় না।
+
+উদাহরণ:
+
+```js
+function greet() {
+    var message = "Hello";
+}
+
+greet();
+
+console.log(window.message);
+// undefined
+```
+
+এখানে `message` Function-এর Local Variable।
+
+---
+
+## 2. ES Module-এ Top-Level var
+
+HTML-এ যখন নিচের মতো করে JavaScript ফাইল যুক্ত করা হয়:
+
+```html
+<script type="module" src="./app.js"></script>
+```
+
+তখন JavaScript ফাইলটি ES Module হিসেবে Execute হয়।
+
+ES Module-এর Top-Level-এ `var` দিয়ে Variable Declare করলেও সেটি `window` Object-এর Property হয় না।
+
+উদাহরণ:
+
+HTML ফাইল:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ES Module</title>
+</head>
+<body>
+
+    <script type="module" src="./app.js"></script>
+
+</body>
+</html>
+```
+
+app.js:
+
+```js
+var firstName = "Tanvir";
+
+console.log(firstName);
+// Tanvir
+
+console.log(window.firstName);
+// undefined
+```
+
+Output:
+
+```text
+Tanvir
+undefined
+```
+
+ব্যাখ্যা:
+
+- `firstName` Module-এর ভেতরে Declare করা হয়েছে।
+- Module-এর ভেতরে `firstName` ব্যবহার করা যায়।
+- কিন্তু এটি `window` Object-এর Property নয়।
+- তাই `window.firstName` সাধারণত `undefined` দেয়, যদি আগে থেকে ওই Property তৈরি করা না থাকে।
+
+---
+
+## 3. Classic Script এবং ES Module-এর পার্থক্য
+
+| বিষয় | Classic Script | ES Module |
+|---|---|---|
+| Script যুক্ত করার পদ্ধতি | `<script src="app.js"></script>` | `<script type="module" src="app.js"></script>` |
+| Top-Level `var` | সাধারণত `window`-এর Property হয় | `window`-এর Property হয় না |
+| Top-Level `let` | `window`-এর Property হয় না | `window`-এর Property হয় না |
+| Top-Level `const` | `window`-এর Property হয় না | `window`-এর Property হয় না |
+| Module-এর মধ্যে `import` / `export` | সমর্থিত নয় | সমর্থিত |
+
+---
+
+## 4. একই কোড, ভিন্ন ফলাফল
+
+### Classic Script
+
+```html
+<script>
+    var name = "Tanvir";
+
+    console.log(name);
+    console.log(window.name);
+</script>
+```
+
+সাধারণ ফলাফল:
+
+```text
+Tanvir
+Tanvir
+```
+
+### ES Module
+
+```html
+<script type="module">
+    var name = "Tanvir";
+
+    console.log(name);
+    console.log(window.name);
+</script>
+```
+
+সাধারণ ফলাফল:
+
+```text
+Tanvir
+```
+
+দ্বিতীয় `console.log()`-এ `window.name` সাধারণত খালি String (`""`) দেখাতে পারে, কারণ Browser-এ `window.name` আগে থেকেই একটি বিদ্যমান Property। তাই `undefined`-এর বদলে খালি String দেখা সম্ভব।
+
+পরীক্ষার জন্য `firstName`-এর মতো একটি নতুন নাম ব্যবহার করা ভালো।
+
+---
+
+## 5. কেন এই পার্থক্য রয়েছে?
+
+Classic Script-এর Top-Level-এ `var` Declaration Global Environment-এর Object Environment Record-এর মাধ্যমে Global Object-এর Property-এর সঙ্গে সম্পর্কিত হয়।
+
+অন্যদিকে, ES Module-এর নিজস্ব Module Environment থাকে। Module-এর Top-Level-এর `var`, `let` এবং `const`—সবই Module-এর নিজস্ব Scope-এর মধ্যে থাকে।
+
+এ কারণে Module-এর Variable সরাসরি `window`-এর Property হয়ে যায় না।
+
+---
+
+## 6. গুরুত্বপূর্ণ সতর্কতা
+
+১. `var` দিয়ে Variable Declare করলেই সবসময় `window`-তে Property তৈরি হয় না। Declaration-টি কোথায় হয়েছে, তা গুরুত্বপূর্ণ।
+
+২. Classic Script-এর Top-Level `var` সাধারণত `window`-এর Property তৈরি করে।
+
+৩. ES Module-এর Top-Level `var` Module-এর নিজস্ব Scope-এ থাকে।
+
+৪. `let` ও `const` Classic Script-এর Top-Level-এ থাকলেও `window`-এর Property হয় না।
+
+৫. কোনো Property আগে থেকেই `window`-তে থাকলে একই নাম ব্যবহার করে পরীক্ষা করলে বিভ্রান্তিকর ফলাফল পাওয়া যেতে পারে।
+
+## মূল কথা
+
+Classic Script-এর Top-Level-এ `var` দিয়ে Declare করা Variable সাধারণত `window` Object-এর Property হয়।
+
+কিন্তু `<script type="module">` ব্যবহার করলে Top-Level-এর `var`-ও `window` Object-এর Property হয় না, কারণ ES Module-এর নিজস্ব Scope থাকে।

@@ -4,7 +4,16 @@
 // console.log(typeof undefined)
 // console.log(typeof null)
 
-var firstName = "Tanvir"
-let lastName = "Ahmed"
-console.log(firstName, lastName) // Tanvir Ahmed
-console.log(window.firstName, window.lastName) // Tanvir undefined
+// var firstName = "Tanvir"
+// let lastName = "Ahmed"
+// console.log(firstName, lastName) // Tanvir Ahmed
+// console.log(window.firstName, window.lastName) // Tanvir undefined
+
+
+
+// Module example
+
+var names = "Tanvir"
+console.log(names)
+console.log(window.names)
+
