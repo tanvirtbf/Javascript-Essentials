@@ -1099,3 +1099,34 @@ Classic Script-এর Top-Level-এ `var` Declaration Global Environment-এর 
 Classic Script-এর Top-Level-এ `var` দিয়ে Declare করা Variable সাধারণত `window` Object-এর Property হয়।
 
 কিন্তু `<script type="module">` ব্যবহার করলে Top-Level-এর `var`-ও `window` Object-এর Property হয় না, কারণ ES Module-এর নিজস্ব Scope থাকে।
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
