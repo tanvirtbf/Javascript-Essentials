@@ -528,3 +528,358 @@ Symbol JavaScript-এ একটি নতুন এবং শক্তিশা�
 JavaScript ইঞ্জিন এবং লাইব্রেরিগুলোর অভ্যন্তরীণ কাজকর্মে Symbol এর বিশেষ ভূমিকা রয়েছে।
 
 
+
+
+# JavaScript: Global Lexical Binding
+
+## 1. Binding কী?
+
+JavaScript-এ যখন আমরা কোনো Variable Declare করি, তখন একটি Identifier (নাম) তৈরি হয় এবং সেটির সঙ্গে একটি Value যুক্ত হয়।
+
+উদাহরণ:
+
+```js
+let name = "Tanvir";
+```
+
+এখানে:
+- `name` হলো Identifier।
+- `"Tanvir"` হলো Value।
+- Identifier-এর সঙ্গে Value-এর যে সম্পর্ক, তাকে সহজভাবে Binding বলা হয়।
+
+Binding কোনো সাধারণ JavaScript Object নয়। এটি JavaScript-এর Environment-এ একটি নামকে শনাক্ত করা এবং তার Value অ্যাক্সেস করার ব্যবস্থা।
+
+---
+
+## 2. Global Lexical Binding কী?
+
+Global Lexical Binding বোঝার জন্য শব্দগুলো আলাদা করে বুঝি।
+
+- Global: Global Scope থেকে অ্যাক্সেস করা যায়।
+- Lexical: কোডের কাঠামোর ওপর ভিত্তি করে Scope নির্ধারিত হয়।
+- Binding: Identifier-এর সঙ্গে Value-এর সম্পর্ক।
+
+সুতরাং, Global Lexical Binding হলো এমন Binding, যা Global Environment-এর Lexical অংশে তৈরি হয় এবং Global Scope থেকে অ্যাক্সেস করা যায়।
+
+উদাহরণ:
+
+```js
+let firstName = "Tanvir";
+const lastName = "Ahmed";
+
+console.log(firstName); // Tanvir
+console.log(lastName);  // Ahmed
+```
+
+Browser-এর একটি Classic Script-এর Top-Level-এ এই কোড লেখা হলে `firstName` এবং `lastName` Global Scope থেকে অ্যাক্সেস করা যায়।
+
+কিন্তু এগুলো `window` Object-এর Property নয়।
+
+```js
+console.log(window.firstName); // undefined
+console.log(window.lastName);  // undefined
+```
+
+এটাই Global Lexical Binding-এর গুরুত্বপূর্ণ বৈশিষ্ট্য।
+
+---
+
+## 3. Global Object Property কী?
+
+Browser-এ `window` হলো Global Object।
+
+Classic Script-এর Top-Level-এ `var` দিয়ে Variable Declare করলে সেটি সাধারণত Global Object-এর Property হয়।
+
+উদাহরণ:
+
+```js
+var firstName = "Tanvir";
+
+console.log(firstName);        // Tanvir
+console.log(window.firstName); // Tanvir
+```
+
+এখানে `firstName` শুধু Global Scope থেকে অ্যাক্সেসযোগ্য নয়, এটি `window`-এর Property হিসেবেও পাওয়া যায়।
+
+অন্যদিকে:
+
+```js
+let lastName = "Ahmed";
+
+console.log(lastName);        // Ahmed
+console.log(window.lastName); // undefined
+```
+
+এখানে `lastName` Global Lexical Binding তৈরি করেছে, কিন্তু `window`-এর Property তৈরি করেনি।
+
+মনে রাখতে হবে:
+
+Global Scope-এ থাকা এবং Global Object-এর Property হওয়া দুটি আলাদা বিষয়।
+
+---
+
+## 4. Global Environment কীভাবে কাজ করে?
+
+JavaScript-এর Specification অনুযায়ী, Global Environment-এর মধ্যে মূলত দুটি গুরুত্বপূর্ণ অংশ রয়েছে:
+
+1. Object Environment Record
+2. Declarative Environment Record
+
+### Object Environment Record
+
+Browser-এর Classic Script-এ Global Scope-এর `var` Declaration-এর Binding সাধারণত Global Object-এর Property-এর সঙ্গে সম্পর্কিত হয়।
+
+উদাহরণ:
+
+```js
+var age = 27;
+
+console.log(age);        // 27
+console.log(window.age); // 27
+```
+
+### Declarative Environment Record
+
+Global Scope-এ `let` এবং `const` দিয়ে Declare করা Variable-এর Binding এখানে সংরক্ষিত হয়।
+
+উদাহরণ:
+
+```js
+let city = "Dhaka";
+const country = "Bangladesh";
+
+console.log(city);            // Dhaka
+console.log(country);         // Bangladesh
+
+console.log(window.city);     // undefined
+console.log(window.country);  // undefined
+```
+
+এখানে `city` এবং `country` Global Scope থেকে অ্যাক্সেস করা যায়, কিন্তু `window`-এর Property নয়।
+
+সহজভাবে মনে রাখার জন্য:
+
+- `var` → Classic Script-এর Top-Level-এ সাধারণত Global Object-এর Property হয়।
+- `let` এবং `const` → Global Lexical Binding তৈরি করে।
+
+উপরের ব্যাখ্যাটি বোঝার সুবিধার জন্য সরলীকৃত। JavaScript-এর Global Environment-এর প্রকৃত কাঠামো Specification-এ আরও বিস্তারিতভাবে সংজ্ঞায়িত।
+
+---
+
+## 5. JavaScript `let` Variable খুঁজে পায় কীভাবে?
+
+ধরা যাক:
+
+```js
+let score = 100;
+
+console.log(score);
+```
+
+Output:
+
+```text
+100
+```
+
+JavaScript `score` Identifier-এর Binding খুঁজে তার Value বের করে।
+
+কিন্তু যখন লিখি:
+
+```js
+console.log(window.score);
+```
+
+Output:
+
+```text
+undefined
+```
+
+কারণ এখানে JavaScript `score` Identifier-এর Binding খুঁজছে না। বরং `window` Object-এর `score` Property খুঁজছে।
+
+দুটি Expression-এর পার্থক্য:
+
+- `score` → Identifier-এর Binding অ্যাক্সেস করে।
+- `window.score` → `window` Object-এর Property অ্যাক্সেস করে।
+
+তাই `score`-এর Value থাকা সত্ত্বেও `window.score`-এর Value `undefined` হতে পারে।
+
+---
+
+## 6. `let` কি শুধু Global Scope-এ Binding তৈরি করে?
+
+না। `let` বিভিন্ন Scope-এ Binding তৈরি করতে পারে।
+
+### Global Scope
+
+```js
+let name = "Tanvir";
+
+console.log(name); // Tanvir
+```
+
+Classic Script-এর Top-Level-এ থাকলে এটি Global Lexical Binding।
+
+### Block Scope
+
+```js
+{
+    let age = 27;
+
+    console.log(age); // 27
+}
+
+console.log(age); // ReferenceError
+```
+
+এখানে `age` শুধু Block-এর মধ্যে অ্যাক্সেস করা যায়।
+
+### Function Scope-এর ভেতরে Block-এর বাইরে
+
+```js
+function test() {
+    let value = 50;
+
+    console.log(value); // 50
+}
+
+test();
+
+console.log(value); // ReferenceError
+```
+
+এখানে `value` Function-এর Lexical Environment-এ তৈরি হয়েছে এবং Function-এর বাইরে অ্যাক্সেস করা যায় না।
+
+মনে রাখতে হবে:
+
+- Global-এর Top-Level-এ `let` → Global Lexical Binding।
+- Block-এর মধ্যে `let` → Block-এর Lexical Binding।
+- Function-এর মধ্যে `let` → Function-এর ভেতরের Lexical Binding।
+
+---
+
+## 7. `var`, `let` এবং `const`-এর তুলনা
+
+Browser-এর Classic Script-এর Top-Level-এর জন্য:
+
+```js
+var a = 10;
+let b = 20;
+const c = 30;
+
+console.log(a); // 10
+console.log(b); // 20
+console.log(c); // 30
+
+console.log(window.a); // 10
+console.log(window.b); // undefined
+console.log(window.c); // undefined
+```
+
+| বিষয় | var | let | const |
+|---|---|---|---|
+| Top-Level Global Scope | হ্যাঁ | হ্যাঁ | হ্যাঁ |
+| Global Lexical Binding | না, Object-এর সঙ্গে সম্পর্কিত | হ্যাঁ | হ্যাঁ |
+| Classic Script-এ সাধারণত `window` Property | হ্যাঁ | না | না |
+| Block Scope | না | হ্যাঁ | হ্যাঁ |
+| পুনরায় Declare করার নিয়ম | একই Scope-এ কিছু ক্ষেত্রে সম্ভব | একই Scope-এ নয় | একই Scope-এ নয় |
+| পুনরায় Assign করা যায় | হ্যাঁ | হ্যাঁ | না |
+
+বিশেষ দ্রষ্টব্য: `const` দিয়ে Declare করা Object-এর Property পরিবর্তন করা যায়, কিন্তু `const` Variable-টিকে নতুন Value-তে Reassign করা যায় না।
+
+---
+
+## 8. গুরুত্বপূর্ণ ব্যতিক্রম: ES Module
+
+আগের উদাহরণগুলো Browser-এর Classic Script-এর Top-Level-এর জন্য প্রযোজ্য।
+
+কিন্তু HTML-এ যদি লিখি:
+
+```html
+<script type="module" src="app.js"></script>
+```
+
+তাহলে এটি ES Module হিসেবে চলবে।
+
+Module-এর Top-Level-এ `var` দিয়েও Variable Declare করলে সেটি `window`-এর Property হয় না।
+
+উদাহরণ:
+
+```js
+// app.js
+
+var firstName = "Tanvir";
+let lastName = "Ahmed";
+
+console.log(firstName);        // Tanvir
+console.log(lastName);         // Ahmed
+
+console.log(window.firstName); // undefined
+console.log(window.lastName);  // undefined
+```
+
+অর্থাৎ, শুধু `var`, `let` এবং `const` নয়; কোডটি Classic Script নাকি ES Module, সেটিও গুরুত্বপূর্ণ।
+
+Node.js-এর CommonJS ফাইলের ক্ষেত্রেও Browser-এর Global Scope-এর নিয়ম সরাসরি প্রয়োগ করা উচিত নয়।
+
+---
+
+## 9. সম্পূর্ণ বিষয়টি একটি উদাহরণে
+
+Browser-এর Classic Script-এর Top-Level-এ:
+
+```js
+var firstName = "Tanvir";
+let lastName = "Ahmed";
+const country = "Bangladesh";
+
+console.log(firstName, lastName, country);
+// Tanvir Ahmed Bangladesh
+
+console.log(window.firstName);
+// Tanvir
+
+console.log(window.lastName);
+// undefined
+
+console.log(window.country);
+// undefined
+
+console.log("firstName" in window);
+// true
+
+console.log("lastName" in window);
+// false
+
+console.log("country" in window);
+// false
+```
+
+এখানে:
+
+- `firstName` Global Object-এর Property।
+- `lastName` Global Lexical Binding।
+- `country` Global Lexical Binding।
+- তিনটি Variable-ই Global Scope থেকে অ্যাক্সেস করা যায়।
+- কিন্তু সবগুলো `window`-এর Property নয়।
+
+---
+
+## 10. মূল বিষয়গুলো মনে রাখুন
+
+1. Binding হলো Identifier-এর সঙ্গে Value-এর সম্পর্ক।
+2. Global Scope থেকে অ্যাক্সেস করা যায় মানেই সেটি `window`-এর Property নয়।
+3. Browser-এর Classic Script-এর Top-Level-এ `var` সাধারণত Global Object-এর Property তৈরি করে।
+4. Top-Level-এর `let` এবং `const` Global Lexical Binding তৈরি করে।
+5. `variableName` এবং `window.variableName` একই ধরনের Access নয়।
+6. `let` ও `const` Block Scope-ও তৈরি করতে পারে।
+7. ES Module-এর Top-Level-এ `var`-ও `window`-এর Property হয় না।
+
+### সবচেয়ে গুরুত্বপূর্ণ লাইন
+
+Global Scope এবং Global Object এক জিনিস নয়।
+
+একটি Variable Global Scope-এ থাকতে পারে, কিন্তু Global Object-এর Property না-ও হতে পারে।
+
+এই পার্থক্যটি বুঝতে পারলে JavaScript-এর Scope, Global Environment এবং Variable Declaration আরও পরিষ্কার হবে।
